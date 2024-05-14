@@ -1,5 +1,5 @@
-id: ctf_archive
-name: CTF Archive
+id: ctf-preserved-archive
+name: CTF Preserved Archive
 type: archive
 award:
   emoji: 🏳️
