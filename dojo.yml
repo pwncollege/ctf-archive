@@ -4,4 +4,4 @@ type: archive
 award:
   emoji: 🏳️
 modules:
-  - id: 0CTF
+  - id: 0ctf
