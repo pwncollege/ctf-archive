@@ -1,7 +1,7 @@
 id: ctf-preserved-archive
 name: CTF Preserved Archive
 type: archive
-award: 🏁
-  emoji: 
+award:
+  emoji: 🏁
 modules:
   - id: 0ctf
