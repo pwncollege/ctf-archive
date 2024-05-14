@@ -1,0 +1,7 @@
+id: ctf_archive
+name: CTF Archive
+type: archive
+award:
+  emoji: 🏳️
+modules:
+  - id: 0CTF
