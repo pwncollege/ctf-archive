@@ -7,8 +7,8 @@ award:
 
 
 modules:
-  - id: 0ctf
-    name: 0ctf
+  - id: 0CTF
+    name: 0CTF
     description: |
       Archived 0CTF Challenges
     
