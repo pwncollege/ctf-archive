@@ -1,14 +1,17 @@
 id: ctf-preserved-archive
 name: CTF Preserved Archive
+
 type: archive
 award:
   emoji: 🏁
+
+
 modules:
   - id: 0ctf
-    name: 0CTF
+    name: 0ctf
     description: |
       Archived 0CTF Challenges
     
     challenges:
     - id: zerotask
-      name: zerotask
+      name: task
