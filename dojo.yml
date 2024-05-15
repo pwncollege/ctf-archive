@@ -11,5 +11,5 @@ modules:
     name: 0CTF
     
     challenges:
-    - id: zerotask
+    - id: task
       name: Task
