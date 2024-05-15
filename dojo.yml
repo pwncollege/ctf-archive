@@ -5,3 +5,10 @@ award:
   emoji: 🏁
 modules:
   - id: 0ctf
+    name: 0CTF
+    description: |
+      Archived 0CTF Challenges
+    
+    challenges:
+    - id: zerotask
+      name: zerotask
