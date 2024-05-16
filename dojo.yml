@@ -13,3 +13,10 @@ modules:
     challenges:
     - id: task
       name: Task
+  
+  - id: wtf
+    name: wtf
+    
+    challenges:
+    - id: MoM5m4g1C
+      name: MoM5m4g1C
