@@ -13,6 +13,9 @@ modules:
     challenges:
     - id: task
       name: Task
+
+    - id: babyheap2017
+      name: Babyheap 2017
   
   - id: wtfctf
     name: wtfctf
