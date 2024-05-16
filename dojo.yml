@@ -14,8 +14,8 @@ modules:
     - id: task
       name: Task
   
-  - id: wtf
-    name: wtf
+  - id: wtfCTF
+    name: wtfCTF
     
     challenges:
     - id: mom5m4g1c
