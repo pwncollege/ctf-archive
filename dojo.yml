@@ -23,3 +23,10 @@ modules:
     challenges:
     - id: mom5m4g1c
       name: mom5m4g1c
+  
+  - id: csaw
+    name: csaw
+    
+    challenges:
+    - id: scv
+      name: scv
