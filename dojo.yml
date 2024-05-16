@@ -30,3 +30,10 @@ modules:
     challenges:
     - id: scv
       name: scv
+
+  - id: hsctf
+    name: hsctf
+
+    challenges:
+    - id: caesars-revenge
+      name: caesars-revenge
