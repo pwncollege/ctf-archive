@@ -1,5 +1,9 @@
 # MoM5m4g1C Challenge Solution
 
+## Links
+Link to the challenge: https://ctftime.org/task/16184
+Link to the writeup: https://szymanski.ninja/en/ctfwriteups/2021/wtfctf/mom5m4g1c/
+
 ## Overview
 This repository contains the solution for the MoM5m4g1C CTF challenge, demonstrating a buffer overflow vulnerability exploitation using the `gets` function.
 
