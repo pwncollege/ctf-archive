@@ -73,9 +73,15 @@ modules:
     challenges:
     - id: guessinggame
       name: guessinggame
-
+      description: |
+        No one seems to be able to guess my favorite animal... Can you?
+      
     - id: printshop
       name: printshop
+      description: |
+        The bad guys are always watching. ALWAYS WATCHING. Never provide shell, only softshell. The only hint is how is argslen parsed vs args?
 
     - id: softshell
       name: softshell
+      description: |
+        That print shop down the road is useless, can you make it do something interesting?
