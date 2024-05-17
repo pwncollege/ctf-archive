@@ -54,7 +54,7 @@ modules:
       type: markdown
       content: |
         These are the binary files for the challenges.
-        [Binary Files]](https://github.com/sajjadium/ctf-archives/tree/main/ctfs/PatriotCTF/2023)
+        [Binary Files](https://github.com/sajjadium/ctf-archives/tree/main/ctfs/PatriotCTF/2023)
 
     - name: PatriotCTF Original Files
       type: markdown
