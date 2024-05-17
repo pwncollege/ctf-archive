@@ -47,3 +47,6 @@ modules:
 
     - id: printshop
       name: printshop
+
+    - id: softshell
+      name: softshell
