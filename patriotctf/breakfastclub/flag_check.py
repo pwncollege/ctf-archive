@@ -4,7 +4,7 @@ import os
 def get_actual_flag():
     """Read the actual flag using the `cat /flag.txt` command."""
     try:
-        with os.popen("cat /flag.txt") as f:
+        with os.popen("cat /challenge/flag.txt") as f:
             flag = f.read().strip()
         return flag
     except Exception as e:
