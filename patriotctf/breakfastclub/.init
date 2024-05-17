@@ -1,5 +1,6 @@
 #!/bin/bash
 
 exec > logfile.log 2>&1
-
+echo "Running .init script" >> /tmp/.dojo/entrypoint.log
 ln -sf /flag flag.txt
+echo "Running .init script" >> /tmp/.dojo/entrypoint.log
