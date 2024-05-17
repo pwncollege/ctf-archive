@@ -6,37 +6,6 @@ award:
   emoji: 🏁
 
 modules:
-  - id: 0ctf
-    name: 0CTF
-    
-    challenges:
-    - id: task
-      name: Task
-
-    - id: babyheap2017
-      name: Babyheap 2017
-  
-  - id: wtfctf
-    name: wtfctf
-    
-    challenges:
-    - id: mom5m4g1c
-      name: mom5m4g1c
-  
-  - id: csaw
-    name: csaw
-    
-    challenges:
-    - id: scv
-      name: scv
-
-  - id: hsctf
-    name: hsctf
-
-    challenges:
-    - id: caesars-revenge
-      name: caesars-revenge
-
   - id: patriotctf
     name: PatriotCTF
     
@@ -85,3 +54,34 @@ modules:
       name: softshell
       description: |
         The bad guys are always watching. ALWAYS WATCHING. Never provide shell, only softshell. The only hint is how is argslen parsed vs args?
+
+  - id: 0ctf
+    name: 0CTF
+    
+    challenges:
+    - id: task
+      name: Task
+
+    - id: babyheap2017
+      name: Babyheap 2017
+  
+  - id: wtfctf
+    name: wtfctf
+    
+    challenges:
+    - id: mom5m4g1c
+      name: mom5m4g1c
+  
+  - id: csaw
+    name: csaw
+    
+    challenges:
+    - id: scv
+      name: scv
+
+  - id: hsctf
+    name: hsctf
+
+    challenges:
+    - id: caesars-revenge
+      name: caesars-revenge
