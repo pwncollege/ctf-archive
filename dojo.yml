@@ -37,3 +37,10 @@ modules:
     challenges:
     - id: caesars-revenge
       name: caesars-revenge
+
+  - id: patriotctf
+    name: PatriotCTF
+
+    challenges:
+    - id: guessinggame
+      name: guessinggame
