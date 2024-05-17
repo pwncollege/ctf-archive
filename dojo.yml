@@ -45,15 +45,15 @@ modules:
     
     resources:
       - name: "PatriotCTF Writeups"
-        type: reading
+        type: lecture
         link: "https://ctftime.org/event/2030"
       
       - name: "PatriotCTF Binary File"
-        type: reading
+        type: lecture
         link: "https://github.com/sajjadium/ctf-archives/tree/main/ctfs/PatriotCTF/2023"
 
       - name: "PatriotCTF Original Files"
-        type: reading
+        type: lecture
         link: "https://github.com/prathamgupta36/ctf-preserved-archives/tree/main/patriotctf"
 
     challenges:
