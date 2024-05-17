@@ -79,9 +79,9 @@ modules:
     - id: printshop
       name: printshop
       description: |
-        The bad guys are always watching. ALWAYS WATCHING. Never provide shell, only softshell. The only hint is how is argslen parsed vs args?
+        That print shop down the road is useless, can you make it do something interesting?
 
     - id: softshell
       name: softshell
       description: |
-        That print shop down the road is useless, can you make it do something interesting?
+        The bad guys are always watching. ALWAYS WATCHING. Never provide shell, only softshell. The only hint is how is argslen parsed vs args?
