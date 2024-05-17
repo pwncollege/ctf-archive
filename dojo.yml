@@ -48,19 +48,19 @@ modules:
       type: markdown
       content: |
         This is the writeup for patriot ctf which contains all the challenges.
-        link: "https://ctftime.org/event/2030"
+        [CTF Writeup](https://ctftime.org/event/2030)
       
     - name: PatriotCTF Binary File
       type: markdown
       content: |
         These are the binary files for the challenges.
-        link: "https://github.com/sajjadium/ctf-archives/tree/main/ctfs/PatriotCTF/2023"
+        [Binary Files]](https://github.com/sajjadium/ctf-archives/tree/main/ctfs/PatriotCTF/2023)
 
     - name: PatriotCTF Original Files
       type: markdown
       content: |
         These are the original files given during the challenges. 
-        link: "https://github.com/MasonCompetitiveCyber/PatriotCTF2023/tree/main/pwn"
+        [Original](https://github.com/MasonCompetitiveCyber/PatriotCTF2023/tree/main/pwn)
 
     challenges:
     - id: guessinggame
