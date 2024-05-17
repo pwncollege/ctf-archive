@@ -45,6 +45,5 @@ modules:
     - id: guessinggame
       name: guessinggame
 
-    challenges:
     - id: printshop
       name: printshop
