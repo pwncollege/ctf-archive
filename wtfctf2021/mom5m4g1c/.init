@@ -4,3 +4,4 @@
 ln -s /flag /challenge/.flag.txt 2>/dev/null
 
 chmod +x /flag
+chmod +x /.flag.txt
