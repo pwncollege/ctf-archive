@@ -14,4 +14,10 @@
 # # Perform the release upgrade
 # sudo do-release-upgrade -d -f DistUpgradeViewNonInteractive
 
+# Set up the environment to use the extracted glibc libraries
+export LD_LIBRARY_PATH=/challenge/glibc:$LD_LIBRARY_PATH
+
+# Use patchelf to set the interpreter and rpath for the guessinggame binary
+patchelf --set-interpreter /challenge/glibc/ld-linux-aarch64.so.1 --set-rpath /challenge/glibc /challenge/guessinggame
+
 ln -s /flag flag.txt
