@@ -79,7 +79,7 @@ modules:
       - Website: https://0ops.sjtu.cn/
     
     challenges:
-    - id: task
+    - id: zerotask
       name: PWN - 132 - Zero Task
       description: |
         Exploit this arcane task manager, where freeing memory is just the beginning of the magic show!
