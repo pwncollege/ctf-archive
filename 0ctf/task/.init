@@ -1,12 +1,3 @@
 #!/bin/bash
-
-# Check if LD_LIBRARY_PATH already contains the /challenge directory
-if [[ ":$LD_LIBRARY_PATH:" != *":/challenge:"* ]]; then
-    # Append /challenge to the LD_LIBRARY_PATH environment variable
-    export LD_LIBRARY_PATH=/challenge:$LD_LIBRARY_PATH
-    
-    # Persist this setting by adding it to /challenge/.bashrc
-    echo "export LD_LIBRARY_PATH=/challenge:\$LD_LIBRARY_PATH" >> /challenge/.bashrc
-fi
-
-echo "LD_LIBRARY_PATH updated and set to persist in /challenge/.bashrc"
+exec > logfile.log 2>&1
+export LD_LIBRARY_PATH=/challenge:\$LD_LIBRARY_PATH
