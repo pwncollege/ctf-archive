@@ -2,8 +2,7 @@
 
 # Attempt to create a symbolic link
 ln -s /flag /challenge/flag.txt 2>/dev/null
-# if [ $? -eq 0 ]; then
-#     echo "$(date) - Symbolic link from /flag to /challenge/flag.txt created successfully" >> "$LOG_FILE"
-# else
-#     echo "$(date) - Failed to create symbolic link from /flag to /challenge/flag.txt" >> "$LOG_FILE"
-# fi
+
+chmod 644 challenge/flag.txt
+
+mv /challenge/flag.txt /challenge/.flag.txt
