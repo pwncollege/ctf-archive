@@ -1,4 +1,3 @@
 #!/bin/bash
-echo "Starting script execution" >> /challenge/logfile.log
-export LD_LIBRARY_PATH=/challenge:\$LD_LIBRARY_PATH
-echo "ending script execution" >> /challenge/logfile.log
+
+export LD_LIBRARY_PATH="/challenge:$LD_LIBRARY_PATH"
