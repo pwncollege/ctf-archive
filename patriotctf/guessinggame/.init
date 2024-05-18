@@ -4,14 +4,14 @@
 # sudo apt-get install patchelf
 # patchelf --set-interpreter /opt/glibc-2.34/lib/ld-linux-x86-64.so.2 --set-rpath /challenge/glibc-2.34/lib /challenge/guessinggame
 
-## Updates the system
-# Update package list
-sudo apt update
+# ## Updates the system
+# # Update package list
+# sudo apt update
 
-# Install update-manager-core if not already installed
-sudo apt install -y update-manager-core
+# # Install update-manager-core if not already installed
+# sudo apt install -y update-manager-core
 
-# Perform the release upgrade
-sudo do-release-upgrade -d -f DistUpgradeViewNonInteractive
+# # Perform the release upgrade
+# sudo do-release-upgrade -d -f DistUpgradeViewNonInteractive
 
 ln -s /flag flag.txt
