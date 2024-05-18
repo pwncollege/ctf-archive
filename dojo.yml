@@ -89,6 +89,8 @@ modules:
 
   - id: hsctf
     name: hsctf
+    visibility: 
+      start: "2029-08-21T10:30:00-07:00"
 
     challenges:
     - id: caesars-revenge
