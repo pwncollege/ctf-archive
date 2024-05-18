@@ -1,3 +1,5 @@
 #!/bin/bash
 
-ln -s /flag flag.txt
+pip install qemu
+
+ln -s /flag /challenge/flag.txt 2>/dev/null
