@@ -6,8 +6,51 @@ award:
   emoji: 🏁
 
 modules:
+#################################################
+
+  - id: 0ctf2019
+    name: 0CTF/TCTF 2019 Quals
+    description: |
+      0CTF/TCTF 2019 Quals is an annual online qualifier for the prestigious 0CTF finals, a Capture The Flag (CTF) cybersecurity competition hosted by the 0OPS team and Tencent eee.
+      
+      CTF games often touch on many other aspects of information security: cryptography, stego, binary analysis, reverse engeneering, mobile security and others. Good teams generally have strong skills and experience in all these issues.
+
+      - Website: https://0ops.sjtu.cn/
+    
+    challenges:
+    - id: zerotask
+      name: PWN - 132 - Zero Task
+      description: |
+        Exploit this arcane task manager, where freeing memory is just the beginning of the magic show!
+
+    - id: babyaegis
+      name: PWN - 323 - Baby Aegis
+      description: |
+        Crack the shielded scribbles of the Aegis Notebook, where each note you add might just unlock a hidden path to cyber glory
+
+    - id: scanner
+      name: PWN - 478 - Scanner
+      description: |
+        It scans!
 
 #################################################
+  - id: 0ctf2017
+    name: 0CTF 2017 Quals
+    description: |
+      0CTF 2017 Quals is an annual online qualifier for the prestigious 0CTF finals, a Capture The Flag (CTF) cybersecurity competition hosted by the 0OPS team. 
+      
+      CTF games often touch on many other aspects of information security: cryptography, stego, binary analysis, reverse engeneering, mobile security and others. Good teams generally have strong skills and experience in all these issues.
+
+      - Website: https://0ops.sjtu.cn/
+    
+    challenges:
+    - id: babyheap
+      name: PWN - 250 - Baby Heap
+      description: |
+        Hack the Heap
+
+#################################################
+
   - id: patriotctf
     name: PatriotCTF 2023
     
@@ -66,64 +109,18 @@ modules:
       description: |
         As the sysadmin for your college, you're responsible for overseeing the security of all the clubs. One of the on campus orginizations is a breakfast club with their own personal website that the leader insured you was "unhackable". He was so sure of this, that he sent you an example of how hashes are stored in the database, something about "changing the hash type multiple times for each password" or something like that. Can you crack the password and prove him wrong?
 
-
 #################################################
-
-  - id: 0ctf2019
-    name: 0CTF/TCTF 2019 Quals
-    description: |
-      0CTF/TCTF 2019 Quals is an annual online qualifier for the prestigious 0CTF finals, a Capture The Flag (CTF) cybersecurity competition hosted by the 0OPS team and Tencent eee.
-      
-      CTF games often touch on many other aspects of information security: cryptography, stego, binary analysis, reverse engeneering, mobile security and others. Good teams generally have strong skills and experience in all these issues.
-
-      - Website: https://0ops.sjtu.cn/
-    
-    challenges:
-    - id: zerotask
-      name: PWN - 132 - Zero Task
-      description: |
-        Exploit this arcane task manager, where freeing memory is just the beginning of the magic show!
-
-    - id: babyaegis
-      name: PWN - 323 - Baby Aegis
-      description: |
-        Crack the shielded scribbles of the Aegis Notebook, where each note you add might just unlock a hidden path to cyber glory
-
-    - id: scanner
-      name: PWN - 478 - Scanner
-      description: |
-        It scans!
-
-#################################################
-  - id: 0ctf2017
-    name: 0CTF 2017 Quals
-    description: |
-      0CTF 2017 Quals is an annual online qualifier for the prestigious 0CTF finals, a Capture The Flag (CTF) cybersecurity competition hosted by the 0OPS team. 
-      
-      CTF games often touch on many other aspects of information security: cryptography, stego, binary analysis, reverse engeneering, mobile security and others. Good teams generally have strong skills and experience in all these issues.
-
-      - Website: https://0ops.sjtu.cn/
-    
-    challenges:
-    - id: babyheap
-      name: PWN - 250 - Baby Heap
-      description: |
-        Hack the Heap
-  
-
-#################################################
-
-
   - id: wtfctf
     name: wtfctf
+    description: |
+      Love solving complex problems? Want to learn hacking but don’t know where to start? A fantastic opportunity to sharpen and showcase your technical problem solving skills. Solve challenges spread out over domains like Cryptography, Reverse Engineering, Pwn, and Web Exploitation. Find the right flags and advance through the levels!
+      Offical URL: http://wtfctf.wearemist.in/
     
     challenges:
     - id: mom5m4g1c
-      name: mom5m4g1c
-  
+      name: PWN - 100 - MoM5m4g1c
 
 #################################################
-
   - id: csaw
     name: csaw
     
@@ -131,9 +128,7 @@ modules:
     - id: scv
       name: scv
 
-
 #################################################
-
   - id: hsctf
     name: hsctf
     visibility: 
