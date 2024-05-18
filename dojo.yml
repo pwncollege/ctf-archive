@@ -79,7 +79,9 @@ modules:
     challenges:
     - id: mom5m4g1c
       name: mom5m4g1c
-  
+
+  visibility: 
+      start: "2029-08-21T10:30:00-07:00"
   - id: csaw
     name: csaw
     
@@ -89,8 +91,6 @@ modules:
 
   - id: hsctf
     name: hsctf
-    visibility: 
-      start: "2029-08-21T10:30:00-07:00"
 
     challenges:
     - id: caesars-revenge
