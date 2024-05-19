@@ -1,7 +1,5 @@
 id: ctf-archive
 name: CTF Archive
-# visibility: 
-#   start: "2024-05-17T17:00:00-06:00"
 description: |
   Welcome to CTF Archive! This is a comprehensive collection of challenges from past Capture The Flag competitions. 
 
@@ -12,6 +10,7 @@ description: |
   These modules serve as a valuable resource for cybersecurity enthusiasts and professionals alike, providing access to a wide array of meticulously preserved challenges that have been featured in previous CTF events. Whether you are looking to hone your skills, prepare for upcoming competitions, or simply explore the rich history of CTF challenges, this archive offers a robust platform for your endeavors.
 
   Explore the CTF Archive Module, where you can access, analyze, and learn from some of the most intriguing and educational challenges the cybersecurity community has encountered. 
+  
   Happy learning and hacking!
 
 type: public
@@ -19,148 +18,9 @@ award:
   emoji: 🏁
 
 modules:
-#################################################
-
   - id: 0ctf2019
-    name: 0CTF/TCTF 2019 Quals
-    description: |
-      0CTF/TCTF 2019 Quals is an annual online qualifier for the prestigious 0CTF finals, a Capture The Flag (CTF) cybersecurity competition hosted by the 0OPS team and Tencent eee.
-      
-      CTF games often touch on many other aspects of information security: cryptography, stego, binary analysis, reverse engeneering, mobile security and others. Good teams generally have strong skills and experience in all these issues.
-
-      - Website: https://0ops.sjtu.cn/
-    
-    challenges:
-    - id: zerotask
-      name: PWN - 132 - Zero Task
-      description: |
-        Exploit this arcane task manager, where freeing memory is just the beginning of the magic show!
-
-    - id: babyaegis
-      name: PWN - 323 - Baby Aegis
-      description: |
-        Crack the shielded scribbles of the Aegis Notebook, where each note you add might just unlock a hidden path to cyber glory
-
-    - id: scanner
-      name: PWN - 478 - Scanner
-      description: |
-        It scans!
-
-#################################################
   - id: 0ctf2017
-    name: 0CTF 2017 Quals
-    description: |
-      0CTF 2017 Quals is an annual online qualifier for the prestigious 0CTF finals, a Capture The Flag (CTF) cybersecurity competition hosted by the 0OPS team. 
-      
-      CTF games often touch on many other aspects of information security: cryptography, stego, binary analysis, reverse engeneering, mobile security and others. Good teams generally have strong skills and experience in all these issues.
-
-      - Website: https://0ops.sjtu.cn/
-    
-    challenges:
-    - id: babyheap
-      name: PWN - 250 - Baby Heap
-      description: |
-        Hack the Heap
-
-#################################################
-
   - id: patriotctf
-    name: PatriotCTF 2023
-    
-    description: |
-      PatriotCTF is a beginner-friendly capture-the-flag competition hosted by GMU's cybersecurity club, MasonCC. All are welcome to participate, including students and security professionals. Challenges will range from beginner to expert, so there should be something for everyone. This is a jeopardy-style CTF, meaning there will be various challenges from the different categories described below.
-      - **Cryptography**: Code breaking, cipher smashing, and math that fights back!
-      - **Reverse Engineering**: Figuring out how things work, then breaking those things!
-      - **Pwn**: Good old-fashioned binary exploitation
-      - **OSINT**: Who's shooting those cyber bullets at me?
-      - **Forensics**: PCAPs and file carving and memory dumps (oh my!)
-      - **Web**: The attack surface of the modern world!
-      - **Misc**: Programming, Scripting, ML & more!
-
-
-    resources:
-    - name: PatriotCTF Resources
-      type: markdown
-      content: |
-        These are the binary files for the challenges.
-        - [Binary Files](https://github.com/sajjadium/ctf-archives/tree/main/ctfs/PatriotCTF/2023)
-        
-        These are the original files given during the challenges. 
-        - [Original](https://github.com/MasonCompetitiveCyber/PatriotCTF2023/tree/main/pwn)
-
-    challenges:
-    - id: guessinggame
-      name: PWN - 100 - Guessing Game
-      visibility: 
-        start: "2029-08-21T10:30:00-07:00"
-      description: |
-        No one seems to be able to guess my favorite animal... Can you?
-      
-    - id: printshop
-      name: PWN - 166 - Print Shop
-      visibility: 
-        start: "2029-08-21T10:30:00-07:00"
-      description: |
-        That print shop down the road is useless, can you make it do something interesting?
-
-    - id: softshell
-      name: PWN - 494 - Soft Shell
-      visibility: 
-        start: "2029-08-21T10:30:00-07:00"
-      description: |
-        The bad guys are always watching. ALWAYS WATCHING. Never provide shell, only softshell. The only hint is how is argslen parsed vs args?
-
-    - id: notekeeper
-      name: PWN - 494 - Notekeeper
-      visibility: 
-        start: "2029-08-21T10:30:00-07:00"
-      description: |
-        I wrote a note taker app for my favorite architecture. Can you pwn it? (aarch64 pwn). Only hint is qemu-aarch64 can run the problem.
-   
-    - id: breakfastclub
-      name: CRYPTO - 166 - Breakfast Club
-      description: |
-        As the sysadmin for your college, you're responsible for overseeing the security of all the clubs. One of the on campus orginizations is a breakfast club with their own personal website that the leader insured you was "unhackable". He was so sure of this, that he sent you an example of how hashes are stored in the database, something about "changing the hash type multiple times for each password" or something like that. Can you crack the password and prove him wrong?
-
-#################################################
   - id: wtfctf2021
-    name: wtfCTF 2021
-    description: |
-      Love solving complex problems? Want to learn hacking but don’t know where to start? A fantastic opportunity to sharpen and showcase your technical problem solving skills. Solve challenges spread out over domains like Cryptography, Reverse Engineering, Pwn, and Web Exploitation. Find the right flags and advance through the levels!
-      
-      Offical URL: http://wtfctf.wearemist.in/
-    
-    challenges:
-    - id: mom5m4g1c
-      name: PWN - 100 - MoM5m4g1c
-
-    - id: prison
-      name: PWN - 506 - Prison
-
-#################################################
   - id: csaw2017
-    name: CSAW 2017 Quals
-    description: |
-      CSAW CTF is one of the oldest and biggest CTFs with 1216 teams with 1+ points in 2021. Designed as an entry-level, jeopardy-style CTF, this competition is for students who are trying to break into the field of security, as well as for advanced students and industry professionals who want to practice their skills.
-
-      Official Site: https://www.csaw.io/ctf
-    
-    challenges:
-    - id: scv
-      name: PWN - 100 - SCV
-
-    - id: auir
-      name: PWN - 200 - Auir
-
-
-#################################################
   - id: hsctf2019
-    name: HSCTF 2019
-    description: |
-      High School Capture the Flag (HSCTF) is an international online hacking competition designed to educate high schoolers in computer science. Teams of up to 5 students will be challenged to crack codes, reverse engineer, design algorithms, and master the internet.
-    
-    challenges:
-    - id: caesars-revenge
-      name: PWN - 424 - Caesar's Revenge
-      description: |
-        Julius Caesar's back, and he's not happy...
