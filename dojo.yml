@@ -150,11 +150,13 @@ modules:
 
 
 #################################################
-  - id: hsctf
-    name: hsctf
-    visibility: 
-      start: "2029-08-21T10:30:00-07:00"
-
+  - id: hsctf2019
+    name: High School Capture the Flag | HSCTF 2019
+    description: |
+      HSCTF is an international online hacking competition designed to educate high schoolers in computer science. Teams of up to 5 students will be challenged to crack codes, reverse engineer, design algorithms, and master the internet.
+    
     challenges:
     - id: caesars-revenge
-      name: caesars-revenge
+      name: PWN - 424 - Caesar's Revenge
+      description: |
+        Julius Caesar's back, and he's not happy...
