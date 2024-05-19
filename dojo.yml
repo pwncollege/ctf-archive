@@ -1,5 +1,7 @@
 id: ctf-preserved-archive
 name: CTF Preserved Archive
+visibility: 
+  start: "2024-05-18T17:00:00-06:00"
 
 type: archive
 award:
