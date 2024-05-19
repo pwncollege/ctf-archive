@@ -8,6 +8,11 @@ description: |
   - Website: https://0ops.sjtu.cn/
 
 challenges:
+  - id: easiestprintf
+    name: PWN - 150 - Easiest Printf
+    description: |
+      A traditional Format String Attack. It's running on Debian 8
+
   - id: babyheap
     name: PWN - 250 - Baby Heap
     description: |
