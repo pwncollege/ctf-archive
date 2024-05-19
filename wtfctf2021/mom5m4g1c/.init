@@ -1,7 +1,10 @@
 #!/bin/bash
 
-# Attempt to create a symbolic link
-ln -s /flag /challenge/.flag.txt 2>/dev/null
+# Create a symbolic link if it doesn't already exist
+if [ ! -L /challenge/.flag.txt ]; then
+    ln -s /flag /challenge/.flag.txt
+fi
 
-chmod +x /flag
-chmod +x /.flag.txt
+# Ensure the flag file and the symlink have the correct permissions
+chmod 644 /flag
+chmod 644 /challenge/.flag.txt
