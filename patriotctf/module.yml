@@ -16,21 +16,17 @@ challenges:
     name: PWN - 100 - Guessing Game
     visibility: 
       start: "2029-08-21T10:30:00-07:00"
-  
   - id: printshop
     name: PWN - 166 - Print Shop
     visibility: 
       start: "2029-08-21T10:30:00-07:00"
-
   - id: softshell
     name: PWN - 494 - Soft Shell
     visibility: 
       start: "2029-08-21T10:30:00-07:00"
-
   - id: notekeeper
     name: PWN - 494 - Notekeeper
     visibility: 
       start: "2029-08-21T10:30:00-07:00"
-
   - id: breakfastclub
     name: CRYPTO - 166 - Breakfast Club
