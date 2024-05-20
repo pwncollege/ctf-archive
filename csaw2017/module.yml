@@ -4,6 +4,5 @@ name: CSAW 2017 Quals
 challenges:
   - id: scv
     name: PWN - 100 - SCV
-
   - id: auir
     name: PWN - 200 - Auir

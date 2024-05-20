@@ -6,5 +6,7 @@ challenges:
     name: PWN - 132 - Zero Task
   - id: babyaegis
     name: PWN - 323 - Baby Aegis
+  - id: plang
+    name: PWN - 354 - Plang
   - id: scanner
     name: PWN - 478 - Scanner
