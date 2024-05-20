@@ -12,6 +12,6 @@ challenges:
     name: PWN - 542 - Aria Writer
 
   - id: caesars-revenge-wrapper
-    name: PWN - 542 - Aria Writer
+    name: PWN - 424 - Caesar's Revenge
     visibility: 
       start: "2029-08-21T10:30:00-07:00"
