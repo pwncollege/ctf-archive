@@ -10,15 +10,9 @@ description: |
 challenges:
   - id: zerotask
     name: PWN - 132 - Zero Task
-    description: |
-      Exploit this arcane task manager, where freeing memory is just the beginning of the magic show!
 
   - id: babyaegis
     name: PWN - 323 - Baby Aegis
-    description: |
-      Crack the shielded scribbles of the Aegis Notebook, where each note you add might just unlock a hidden path to cyber glory
 
   - id: scanner
     name: PWN - 478 - Scanner
-    description: |
-      It scans!
