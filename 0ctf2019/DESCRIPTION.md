@@ -2,5 +2,4 @@
 
 CTF games often touch on many other aspects of information security: cryptography, stego, binary analysis, reverse engineering, mobile security and others. Good teams generally have strong skills and experience in all these issues.
 
-- Website: https://0ops.sjtu.cn/
-
+[Official Website](https://0ops.sjtu.cn/)
