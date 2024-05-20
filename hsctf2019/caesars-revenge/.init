@@ -1,0 +1,9 @@
+#!/bin/bash
+echo "Running .init script"
+WRAPPER_PATH="/challenge/caesars-wrapper.sh"
+if [ -x "$WRAPPER_PATH" ]; then
+    "$WRAPPER_PATH"
+else
+    echo "Wrapper not found or not executable"
+    exit 1
+fi
