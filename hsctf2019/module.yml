@@ -2,6 +2,9 @@ id: hsctf2019
 name: HSCTF 2019
 
 challenges:
+  - id: byte
+    name: PWN - 179 - A Byte
+
   - id: caesars-revenge
     name: PWN - 424 - Caesar's Revenge
 
