@@ -1,5 +1,2 @@
-## Scanner
-
-### Overview
 It scans!
 
