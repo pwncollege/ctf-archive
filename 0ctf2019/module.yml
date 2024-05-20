@@ -4,9 +4,7 @@ name: 0CTF/TCTF 2019 Quals
 challenges:
   - id: zerotask
     name: PWN - 132 - Zero Task
-
   - id: babyaegis
     name: PWN - 323 - Baby Aegis
-
   - id: scanner
     name: PWN - 478 - Scanner
