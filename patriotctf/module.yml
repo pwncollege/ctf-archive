@@ -1,14 +1,5 @@
 id: patriotctf
 name: PatriotCTF 2023
-description: |
-  PatriotCTF is a beginner-friendly capture-the-flag competition hosted by GMU's cybersecurity club, MasonCC. All are welcome to participate, including students and security professionals. Challenges will range from beginner to expert, so there should be something for everyone. This is a jeopardy-style CTF, meaning there will be various challenges from the different categories described below.
-  - **Cryptography**: Code breaking, cipher smashing, and math that fights back!
-  - **Reverse Engineering**: Figuring out how things work, then breaking those things!
-  - **Pwn**: Good old-fashioned binary exploitation
-  - **OSINT**: Who's shooting those cyber bullets at me?
-  - **Forensics**: PCAPs and file carving and memory dumps (oh my!)
-  - **Web**: The attack surface of the modern world!
-  - **Misc**: Programming, Scripting, ML & more!
 
 resources:
   - name: PatriotCTF Resources
@@ -25,31 +16,21 @@ challenges:
     name: PWN - 100 - Guessing Game
     visibility: 
       start: "2029-08-21T10:30:00-07:00"
-    description: |
-      No one seems to be able to guess my favorite animal... Can you?
-
+  
   - id: printshop
     name: PWN - 166 - Print Shop
     visibility: 
       start: "2029-08-21T10:30:00-07:00"
-    description: |
-      That print shop down the road is useless, can you make it do something interesting?
 
   - id: softshell
     name: PWN - 494 - Soft Shell
     visibility: 
       start: "2029-08-21T10:30:00-07:00"
-    description: |
-      The bad guys are always watching. ALWAYS WATCHING. Never provide shell, only softshell. The only hint is how is argslen parsed vs args?
 
   - id: notekeeper
     name: PWN - 494 - Notekeeper
     visibility: 
       start: "2029-08-21T10:30:00-07:00"
-    description: |
-      I wrote a note taker app for my favorite architecture. Can you pwn it? (aarch64 pwn). Only hint is qemu-aarch64 can run the problem.
 
   - id: breakfastclub
     name: CRYPTO - 166 - Breakfast Club
-    description: |
-      As the sysadmin for your college, you're responsible for overseeing the security of all the clubs. One of the on campus organizations is a breakfast club with their own personal website that the leader insured you was "unhackable". He was so sure of this, that he sent you an example of how hashes are stored in the database, something about "changing the hash type multiple times for each password" or something like that. Can you crack the password and prove him wrong?
