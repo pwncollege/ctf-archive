@@ -8,3 +8,5 @@ challenges:
     name: PWN - 183 - Baby Heap
   - id: zerofs
     name: PWN - 478 - Zer0 FS
+    visibility: 
+      start: "2029-08-21T10:30:00-07:00"
