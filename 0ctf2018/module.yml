@@ -1,0 +1,8 @@
+id: 0ctf2018
+name: 0CTF/TCTF 2018
+
+challenges:
+  - id: freenote2018
+    name: PWN - Free Note
+  - id: babyaegis
+    name: PWN - 478 - Zer0 FS
