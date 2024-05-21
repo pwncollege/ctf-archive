@@ -1,0 +1,5 @@
+#!/bin/bash
+
+# Grant user permission to run zerofs as root
+echo "username ALL=(ALL) NOPASSWD: /challenge/zerofs" >> /etc/sudoers.d/ctf_zerofs
+chmod 440 /etc/sudoers.d/ctf_zerofs
