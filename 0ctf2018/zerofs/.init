@@ -5,3 +5,5 @@ echo "username ALL=(ALL) NOPASSWD: /challenge/zerofs" >> /etc/sudoers.d/ctf_zero
 chmod 440 /etc/sudoers.d/ctf_zerofs
 chmod +x /challenge/zerofs
 chmod +x /challenge/run.sh
+
+sudo -u root /challenge/zerofs
