@@ -4,6 +4,8 @@ name: HSCTF 2019
 challenges:
   - id: byte
     name: PWN - 179 - A Byte
+  - id: combo-chain-lite
+    name: PWN - 245 - Combo Chain Lite
   - id: combo-chain
     name: PWN - 367 - Combo Chain
   - id: caesars-revenge
