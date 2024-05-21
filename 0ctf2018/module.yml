@@ -6,6 +6,8 @@ challenges:
     name: PWN - Free Note
   - id: babyheap2018
     name: PWN - 183 - Baby Heap
+  - id: blackhole
+    name: PWN - 250 - Blackhole
   - id: zerofs
     name: PWN - 478 - Zer0 FS
     visibility: 
