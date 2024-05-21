@@ -10,5 +10,7 @@ challenges:
     name: PWN - 354 - Plang
   - id: scanner
     name: PWN - 478 - Scanner
+  - id: babyheap
+    name: PWN - 550 - Baby Heap
   - id: babysandbox
     name: PWN - 1000 - Baby Sandbox
