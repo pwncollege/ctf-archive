@@ -6,6 +6,7 @@ award:
 
 modules:
   - id: 0ctf2019
+  - id: 0ctf2018
   - id: 0ctf2017
   - id: patriotctf
   - id: wtfctf2021
