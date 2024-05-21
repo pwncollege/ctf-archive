@@ -8,6 +8,8 @@ challenges:
     name: PWN - 323 - Baby Aegis
   - id: plang
     name: PWN - 354 - Plang
+  - id: flropyd
+    name: PWN - 366 - Flropyd
   - id: scanner
     name: PWN - 478 - Scanner
   - id: babyheap
