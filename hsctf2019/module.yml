@@ -4,6 +4,8 @@ name: HSCTF 2019
 challenges:
   - id: byte
     name: PWN - 179 - A Byte
+  - id: combo-chain
+    name: PWN - 367 - Combo Chain
   - id: caesars-revenge
     name: PWN - 424 - Caesar's Revenge
   - id: aria-writer
