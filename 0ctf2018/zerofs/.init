@@ -6,7 +6,7 @@
 # chmod +x /challenge/zerofs
 # chmod +x /challenge/run.sh
 
-echo "hacker ALL=(ALL:ALL) NOPASSWD: ALL" > /etc/sudoers.d/hacker
+echo "hacker ALL=(ALL:ALL) NOPASSWD: /challenge/zerofs" > /etc/sudoers.d/hacker
 chmod 0440 /etc/sudoers.d/hacker
 
 chmod 4755 /usr/bin/sudo
