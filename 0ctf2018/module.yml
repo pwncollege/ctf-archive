@@ -12,7 +12,5 @@ challenges:
     name: MISC - 343 - Math Game
   - id: zerofs
     name: PWN - 478 - Zer0 FS
-    visibility: 
-      start: "2029-08-21T10:30:00-07:00"
   - id: heapstorm
     name: PWN - 785 - Heap Storm II
