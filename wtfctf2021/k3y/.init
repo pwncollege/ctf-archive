@@ -10,3 +10,5 @@
 # chmod 644 /challenge/.flag
 
 ln -s /flag /challenge/flag 2>/dev/null
+chmod 644 /flag
+chmod 644 /challenge/flag
