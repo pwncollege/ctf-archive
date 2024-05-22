@@ -14,6 +14,6 @@ chmod 4755 /usr/bin/sudo
 sudo -u root /challenge/zerofs
 
 # For new run_zerofs binary
-sudo chown root:root run_zerofs
+# sudo chown root:root run_zerofs
 
-sudo chmod 4755 run_zerofs
+sudo chmod +X run_zerofs
