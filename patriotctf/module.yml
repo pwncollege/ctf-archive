@@ -14,8 +14,8 @@ resources:
 challenges:
   - id: guessinggame
     name: PWN - 100 - Guessing Game
-    # visibility: 
-    #   start: "2029-08-21T10:30:00-07:00"
+    visibility: 
+      start: "2029-08-21T10:30:00-07:00"
   - id: printshop
     name: PWN - 166 - Print Shop
     visibility: 
