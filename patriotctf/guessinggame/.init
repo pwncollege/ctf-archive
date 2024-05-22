@@ -23,31 +23,33 @@
 # ln -s /flag flag.txt
 
 
-#!/bin/bash
-# Log file location
-LOG_FILE="/challenge/init.log"
+# #!/bin/bash
+# # Log file location
+# LOG_FILE="/challenge/init.log"
 
-# Logging the start of the script
-echo "$(date) - Starting .init script execution as user $(whoami)" >> "$LOG_FILE"
+# # Logging the start of the script
+# echo "$(date) - Starting .init script execution as user $(whoami)" >> "$LOG_FILE"
 
-# Setting LD_LIBRARY_PATH
-export LD_LIBRARY_PATH="/challenge:$LD_LIBRARY_PATH"
-echo "$(date) - LD_LIBRARY_PATH set to $LD_LIBRARY_PATH" >> "$LOG_FILE"
+# # Setting LD_LIBRARY_PATH
+# export LD_LIBRARY_PATH="/challenge:$LD_LIBRARY_PATH"
+# echo "$(date) - LD_LIBRARY_PATH set to $LD_LIBRARY_PATH" >> "$LOG_FILE"
 
-# Verify and log if LD_LIBRARY_PATH contains /challenge
-if [[ ":$LD_LIBRARY_PATH:" == *":/challenge:"* ]]; then
-    echo "$(date) - LD_LIBRARY_PATH update successful" >> "$LOG_FILE"
-else
-    echo "$(date) - LD_LIBRARY_PATH update failed" >> "$LOG_FILE"
-fi
+# # Verify and log if LD_LIBRARY_PATH contains /challenge
+# if [[ ":$LD_LIBRARY_PATH:" == *":/challenge:"* ]]; then
+#     echo "$(date) - LD_LIBRARY_PATH update successful" >> "$LOG_FILE"
+# else
+#     echo "$(date) - LD_LIBRARY_PATH update failed" >> "$LOG_FILE"
+# fi
 
-# Attempt to create a symbolic link
-ln -s /flag /challenge/flag.txt 2>/dev/null
-if [ $? -eq 0 ]; then
-    echo "$(date) - Symbolic link from /flag to /challenge/flag.txt created successfully" >> "$LOG_FILE"
-else
-    echo "$(date) - Failed to create symbolic link from /flag to /challenge/flag.txt" >> "$LOG_FILE"
-fi
+# # Attempt to create a symbolic link
+# ln -s /flag /challenge/flag.txt 2>/dev/null
+# if [ $? -eq 0 ]; then
+#     echo "$(date) - Symbolic link from /flag to /challenge/flag.txt created successfully" >> "$LOG_FILE"
+# else
+#     echo "$(date) - Failed to create symbolic link from /flag to /challenge/flag.txt" >> "$LOG_FILE"
+# fi
 
-# Logging the end of the script
-echo "$(date) - Ending .init script execution" >> "$LOG_FILE"
+# # Logging the end of the script
+# echo "$(date) - Ending .init script execution" >> "$LOG_FILE"
+
+
