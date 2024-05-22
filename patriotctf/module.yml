@@ -18,8 +18,6 @@ challenges:
     name: PWN - 166 - Print Shop
   - id: softshell
     name: PWN - 494 - Soft Shell
-    visibility: 
-      start: "2029-08-21T10:30:00-07:00"
   - id: notekeeper
     name: PWN - 494 - Notekeeper
     visibility: 
