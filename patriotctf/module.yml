@@ -18,6 +18,8 @@ challenges:
     name: PWN - 166 - Print Shop
   - id: bookshelf
     name: PWN - 166 - Book Shelf
+  - id: bookshelf2
+    name: PWN - 200 - Book Shelf 2
   - id: softshell
     name: PWN - 494 - Soft Shell
   - id: breakfastclub
