@@ -24,3 +24,5 @@ challenges:
     name: PWN - 494 - Soft Shell
   - id: breakfastclub
     name: CRYPTO - 166 - Breakfast Club
+  - id: flagfinder
+    name: MISC - 130 - Flag Finder
