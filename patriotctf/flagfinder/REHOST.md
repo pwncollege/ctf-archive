@@ -20,3 +20,5 @@ Then give it appropriate permissions:
 ```
 chmod +x bookshelf2
 ```
+
+Note: Since this challenge has its flag in the binary executable, I made a new file flag_check which just checks the flag that user gets from the challenge and calls the /flag to get the pwn.college flag.
