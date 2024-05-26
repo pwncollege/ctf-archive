@@ -21,9 +21,4 @@ Then give it appropriate permissions:
 chmod +x bookshelf
 ```
 
-### Flag Path Change
-Since the challenge calls flag.txt in the directory the challenge is in, we need to make sure the flag.txt is linked to /flag where our flag is:
-```
-ln -s /flag /challenge/flag.txt 2>/dev/null
-```
-This creates a symlink between the flag.txt which the challenge calls and /flag which is where the pwn.college flag is kept.
+Note: Since this challenge has its flag in the binary executable, I made a new file flag_check which just checks the flag that user gets from the challenge and calls the /flag to get the pwn.college flag.
