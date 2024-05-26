@@ -20,6 +20,8 @@ Then give it appropriate permissions:
 ```
 chmod +x guessinggame
 ```
+### Flag Length
+Since the flag that Patriot CTF uses is 35 characters long which is half of the pwn.college flag, so we need to change the variable length in the c file in two places. The first one is flag variable where the lenght is 35 to 65 and then the place where the system opens flag.
 
 ### Flag Path Change
 Note: I have these in the .init file as I want the link to be there everytime the environment is run.
