@@ -39,7 +39,7 @@ To contribute to the CTF Archive, please refer to our [CONTRIBUTING.md](CONTRIBU
 
 ## Rehosting Challenges
 
-If you want to rehost any of the challenges, detailed instructions are provided in the [REHOST.md](REHOST.md) file. This document includes step-by-step guidance on setting up the challenge environment from scratch, including necessary prerequisites, configuration, and troubleshooting tips.
+If you want to rehost any of the challenges, detailed instructions are provided in the `REHOST.md` file which is unique to each challenge so you can find that in the specific folder of the challenge. This document includes step-by-step guidance on setting up the challenge environment from scratch, including necessary prerequisites, configuration, and troubleshooting tips.
 
 ## Contact Information
 
