@@ -4,5 +4,7 @@ name: 0CTF 2017 Quals
 challenges:
   - id: easiestprintf
     name: PWN - 150 - Easiest Printf
+  - id: diethard
+    name: PWN - 183 - Diet Hard
   - id: babyheap
     name: PWN - 250 - Baby Heap
