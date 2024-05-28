@@ -18,3 +18,7 @@ challenges:
     name: ROP - 366 - Flropyd
   - id: elements
     name: REV - 107 - Elements
+  - id: babyrsa
+    name: CRYPTO - 107 - Baby RSA
+    visibility:
+      start: "2029-08-21T10:30:00-07:00"
