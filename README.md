@@ -12,7 +12,8 @@ Happy learning and hacking!
 1. [Getting Started](#getting-started)
 2. [Contributing](#contributing)
 3. [Rehosting Challenges](#rehosting-challenges)
-4. [Contact Information](#contact-information)
+4. [Hacking Challenges](#hacking-challenges)
+5. [Contact Information](#contact-information)
 
 ## Getting Started
 
@@ -41,9 +42,15 @@ To contribute to the CTF Archive, please refer to our [CONTRIBUTING.md](CONTRIBU
 
 If you want to rehost any of the challenges, detailed instructions are provided in the `REHOST.md` file which is unique to each challenge so you can find that in the specific folder of the challenge. This document includes step-by-step guidance on setting up the challenge environment from scratch, including necessary prerequisites, configuration, and troubleshooting tips.
 
+## Hacking Challenges
+If you want to solve the challenge without hosting it on your own, you can run the challenge and solve it for the flag on the pwn.college website:
+[CTF Archive](https://pwn.college/ctf-archive/)
+
 ## Contact Information
 
 For any questions or further assistance, please contact us:
 - GitHub Issues: [https://github.com/pwncollege/ctf-archive/issues](https://github.com/pwncollege/ctf-archive/issues)
 
-We hope you find the CTF Archive helpful and educational. Happy hacking!
+We hope you find the CTF Archive helpful and educational. 
+
+Happy hacking!
