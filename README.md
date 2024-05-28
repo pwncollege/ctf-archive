@@ -44,6 +44,7 @@ If you want to rehost any of the challenges, detailed instructions are provided 
 
 ## Hacking Challenges
 If you want to solve the challenge without hosting it on your own, you can run the challenge and solve it for the flag on the pwn.college website:
+
 [CTF Archive](https://pwn.college/ctf-archive/)
 
 ## Contact Information
