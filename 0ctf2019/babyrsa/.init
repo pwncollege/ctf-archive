@@ -1,0 +1,8 @@
+#!/bin/bash
+
+# Way 1- Change Path
+# patchelf --set-rpath /challenge /challenge/zerotask
+
+# Way 2- Move sage
+mv /challenge/sage /usr/bin/
+chmod +x /usr/bin/sage
