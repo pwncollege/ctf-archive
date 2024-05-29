@@ -10,5 +10,7 @@ challenges:
     name: PWN - 100 - CVV
   - id: auir
     name: PWN - 200 - Auir
+  - id: zone
+    name: PWN - 300 - Zone
   - id: minesweeper
     name: PWN - 500 - Minesweeper
