@@ -24,3 +24,5 @@ challenges:
     name: REV - 300 - Grumpcheck
   - id: bananascript
     name: REV - 450 - Banana Script
+  - id: almostxor
+    name: CRYPTO - 200 - Almost Xor
