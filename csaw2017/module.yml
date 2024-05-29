@@ -14,6 +14,8 @@ challenges:
     name: PWN - 300 - Zone
   - id: minesweeper
     name: PWN - 500 - Minesweeper
+  - id: serial
+    name: MISC - 50 - Serial
   - id: twitchplayspwnable
     name: MISC - 100 - twitchplayspwnable
   - id: prophecy
