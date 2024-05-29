@@ -6,6 +6,8 @@ challenges:
     name: PWN - 100 - SCV
   - id: pilot
     name: PWN - 100 - Pilot
+  - id: cvv
+    name: PWN - 100 - CVV
   - id: auir
     name: PWN - 200 - Auir
   - id: minesweeper
