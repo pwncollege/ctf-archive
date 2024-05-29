@@ -14,6 +14,8 @@ challenges:
     name: PWN - 300 - Zone
   - id: minesweeper
     name: PWN - 500 - Minesweeper
+  - id: tablez
+    name: REV - 100 - Tablez
   - id: prophecy
     name: REV - 200 - Prophecy
   - id: grumpcheck
