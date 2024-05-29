@@ -16,3 +16,5 @@ challenges:
     name: PWN - 500 - Minesweeper
   - id: twitchplayspwnable
     name: MISC - 100 - twitchplayspwnable
+  - id: bananaScript
+    name: REV - 450 - Banana Script
