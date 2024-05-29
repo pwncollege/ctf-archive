@@ -14,6 +14,8 @@ challenges:
     name: PWN - 542 - Aria Writer
   - id: forgotpassword
     name: REV - 465 - Forgot Your Password?
+  - id: hiddenflag
+    name: MISC - 290 - Hidden Flag
   - id: caesars-revenge-wrapper
     name: PWN - 424 - Caesar's Revenge
     visibility: 
