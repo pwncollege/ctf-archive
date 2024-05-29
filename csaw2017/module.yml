@@ -18,7 +18,5 @@ challenges:
     name: MISC - 100 - twitchplayspwnable
   - id: bananascript
     name: REV - 450 - Banana Script
-  # - id: gopherz
-  #   name: REV - 350 - Gopherz
-  #   flags:
-  #   - flag{python_doesnt_even_golang_here!}
+  - id: grumpcheck
+    name: REV - 300 - Grumpcheck
