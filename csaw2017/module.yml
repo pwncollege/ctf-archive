@@ -16,6 +16,8 @@ challenges:
     name: PWN - 500 - Minesweeper
   - id: twitchplayspwnable
     name: MISC - 100 - twitchplayspwnable
+  - id: prophecy
+    name: REV - 200 - Prophecy
   - id: grumpcheck
     name: REV - 300 - Grumpcheck
   - id: bananascript
