@@ -26,3 +26,5 @@ challenges:
     name: REV - 450 - Banana Script
   - id: almostxor
     name: CRYPTO - 200 - Almost Xor
+  - id: babycrypt
+    name: CRYPTO - 350 - Baby Crypt
