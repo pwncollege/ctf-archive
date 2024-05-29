@@ -1,0 +1,5 @@
+#!/bin/bash
+
+ln -s /flag /challenge/flag.txt
+
+
