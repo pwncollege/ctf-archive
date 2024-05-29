@@ -10,3 +10,10 @@ As the challenge uses two files to run the challenge, which are `monekyDo` and `
 ```
 monkeyDo banana.script
 ```
+
+## Flag Check
+As this challenge has its own custom flag so we use a simple flag check binary where the hacker can input the challenge flag and get the pwn.college flag.
+Command to run flag check-
+```
+/challenge/flagCheck
+```
