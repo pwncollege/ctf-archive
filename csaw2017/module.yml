@@ -8,3 +8,5 @@ challenges:
     name: PWN - 100 - Pilot
   - id: auir
     name: PWN - 200 - Auir
+  - id: minesweeper
+    name: PWN - 500 - Minesweeper
