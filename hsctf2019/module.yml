@@ -12,6 +12,8 @@ challenges:
     name: PWN - 424 - Caesar's Revenge
   - id: aria-writer
     name: PWN - 542 - Aria Writer
+  - id: daheck
+    name: REV - 295 - DaHeck
   - id: forgotpassword
     name: REV - 465 - Forgot Your Password?
   - id: hiddenflag
