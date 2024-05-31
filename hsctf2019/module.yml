@@ -22,7 +22,7 @@ challenges:
     name: REV - 465 - Forgot Your Password?
   - id: a-lost-cause
     name: CRYPTO - 196 - A Lost Cause
-  - id: a-lost-cause
+  - id: keith-logger
     name: WEB - 216 - Keith Logger
   - id: hiddenflag
     name: MISC - 290 - Hidden Flag
