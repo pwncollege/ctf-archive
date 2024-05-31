@@ -30,6 +30,8 @@ challenges:
     name: FORENSICS - 108 - Slap
   - id: fish
     name: FORENSICS - 235 - Fish
+  - id: verbose
+    name: MISC - 118 - Verbose
   - id: the-real-reversal
     name: MISC - 276 - The Real Reversal
   - id: hiddenflag
