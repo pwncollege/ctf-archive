@@ -1,0 +1,6 @@
+id: hsctf2019
+name: HSCTF 2019
+
+challenges:
+  - id: asm
+    name: PWN - 489 - ASM
