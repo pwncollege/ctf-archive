@@ -24,6 +24,8 @@ challenges:
     name: CRYPTO - 196 - A Lost Cause
   - id: keith-logger
     name: WEB - 216 - Keith Logger
+  - id: slap
+    name: FORENSICS - 108 - Slap
   - id: fish
     name: FORENSICS - 235 - Fish
   - id: hiddenflag
