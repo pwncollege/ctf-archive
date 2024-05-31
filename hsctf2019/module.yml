@@ -16,6 +16,8 @@ challenges:
     name: REV - 252 - License
   - id: daheck
     name: REV - 295 - DaHeck
+  - id: virtualjava
+    name: REV - 357 - VirtualJava
   - id: forgotpassword
     name: REV - 465 - Forgot Your Password?
   - id: hiddenflag
