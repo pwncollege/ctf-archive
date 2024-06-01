@@ -6,5 +6,7 @@ challenges:
     name: PWN - 489 - ASM
   - id: aes-1
     name: CRYPTO - 188 - Aes-1
+  - id: maas
+    name: CRYPTO - 410 - MaaS
   - id: to-the-moon
     name: BLOCKCHAIN - 495 - To the MOOON!
