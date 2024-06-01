@@ -4,3 +4,5 @@ name: n00bzCTF 2023
 challenges:
   - id: asm
     name: PWN - 489 - ASM
+  - id: to-the-moon
+    name: BLOCKCHAIN - 495 - To the MOOON!
