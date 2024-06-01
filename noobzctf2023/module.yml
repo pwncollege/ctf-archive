@@ -6,6 +6,8 @@ challenges:
     name: PWN - 489 - ASM
   - id: ezrev
     name: REV - 372 - EZrev
+  - id: mypin
+    name: REV - 460 - Mypin
   - id: aes-1
     name: CRYPTO - 188 - Aes-1
   - id: maas
