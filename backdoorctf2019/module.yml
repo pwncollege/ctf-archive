@@ -1,0 +1,16 @@
+id: noobzctf2023
+name: n00bzCTF 2023
+
+challenges:
+  - id: asm
+    name: PWN - 489 - ASM
+  - id: ezrev
+    name: REV - 372 - EZrev
+  - id: mypin
+    name: REV - 460 - Mypin
+  - id: aes-1
+    name: CRYPTO - 188 - Aes-1
+  - id: maas
+    name: CRYPTO - 410 - MaaS
+  - id: to-the-moon
+    name: BLOCKCHAIN - 495 - To the MOOON!
