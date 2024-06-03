@@ -1,13 +1,14 @@
 # REHOSTING
 
-Link to files: [n00bzCTF 2023](https://github.com/sajjadium/ctf-archives/blob/main/ctfs/n00bzCTF/2023/pwn/ASM/srop_me)
+Link to files: [BackdoorCTF 2019](https://github.com/sajjadium/ctf-archives/tree/main/ctfs/BackdoorCTF/2019/Baby_Tcache)
 
 ## Challenge Setup
-This challenge just has a binary execuatble file called `srop_me` which does not have any dependencies.
-
-## Flag Check
-As this challenge has its own custom flag so we use a simple flag check binary where the hacker can inputs the challenge flag and get the pwn.college flag.
-Command to run flag check-
+This challenge just has a binary execuatble file called `babyt_cache` which only has a `libc.so.6` dependency. To check for the same use this command:
 ```
-/challenge/flagCheck
+ldd babyt_cache
+```
+
+If the dependency does not exist use `patchelf` to change the dependecy location to `/challenge`. This command can be used:
+```
+patchelf --set-rpath /challenge /challenge/babyt_cache
 ```
