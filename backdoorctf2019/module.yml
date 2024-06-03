@@ -6,3 +6,5 @@ challenges:
     name: PWN - 201 - Babytcache
   - id: babyheapbackdoorctf
     name: PWN - 286 - Babyheap
+  - id: miscpwn
+    name: PWN - 405 - MiscPwn
