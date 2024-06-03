@@ -10,3 +10,6 @@ challenges:
     name: PWN - 286 - Babyheap
   - id: miscpwn
     name: PWN - 405 - MiscPwn
+  - id: rsanne
+    name: CRYTPO - 350 - RSANNE 
+
