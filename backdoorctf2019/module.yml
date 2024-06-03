@@ -2,5 +2,5 @@ id: backdoorctf2019
 name: BackdoorCTF 2019
 
 challenges:
-  - id: babyt_cache
+  - id: babytcache
     name: PWN - 201 - Babyt Cache
