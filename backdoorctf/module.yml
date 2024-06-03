@@ -1,5 +1,5 @@
-id: backdoorctf2019
-name: BackdoorCTF 2019
+id: backdoorctf
+name: BackdoorCTF
 
 challenges:
   - id: babytcache
