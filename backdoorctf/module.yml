@@ -4,6 +4,8 @@ name: BackdoorCTF
 challenges:
   - id: echo
     name: PWN - 100 - Echo
+  - id: forgot
+    name: PWN - 200 - Forgot
   - id: babytcache
     name: PWN - 201 - Babytcache
   - id: babyheapbackdoorctf
