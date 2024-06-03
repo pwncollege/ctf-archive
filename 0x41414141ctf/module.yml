@@ -1,0 +1,6 @@
+id: 0x41414141ctf
+name: 0x41414141 CTF
+
+challenges:
+  - id: soul
+    name: CRYPTO - 500 - Soul's Permutation Network
