@@ -4,5 +4,7 @@ name: 0x41414141 CTF
 challenges:
   - id: eazyrsa
     name: CRYPTO - 445 - Eazy RSA
+  - id: wallet
+    name: CRYPTO - 465 - Delegate Wallet
   - id: soul
     name: CRYPTO - 500 - Soul's Permutation Network
