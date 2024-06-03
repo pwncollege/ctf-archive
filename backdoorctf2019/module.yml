@@ -4,3 +4,5 @@ name: BackdoorCTF 2019
 challenges:
   - id: babytcache
     name: PWN - 201 - Babyt Cache
+  - id: babyheapbackdoorctf
+    name: PWN - 286 - Babyheap
