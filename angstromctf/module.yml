@@ -4,3 +4,5 @@ name: ångstromCTF
 challenges:
   - id: themectl
     name: PWN - 230 - themectl
+  - id: stacksort
+    name: PWN - 250 - Stacksort
