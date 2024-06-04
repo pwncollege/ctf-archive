@@ -2,6 +2,8 @@ id: angstromctf
 name: ångstromCTF
 
 challenges:
+  - id: exam
+    name: PWN - 50 - exam
   - id: og
     name: PWN - 130 - og
   - id: leftright
