@@ -1,0 +1,6 @@
+id: angstromctf
+name: ångstromCTF
+
+challenges:
+  - id: themectl
+    name: PWN - 230 - themectl
