@@ -19,6 +19,17 @@ ln -s /flag /challenge/flag.txt 2>/dev/null
 
 We have it in the `.init` file so the link is created between the files as soon as the challenge is started for each new environment.
 
+## Konsole Error
+This challenge's writeup talks about a konsole error which can be fixed by this code:
+```
+context.terminal=["konsole", "-e"]
+```
+or you can install konsole:
+```
+sudo apt-get install konsole
+```
+
+
 ## Dependency Troubleshooting
 If the libc files are used as dependencies by the challenge so we might runto problems where the files are not recognized so we can use this command to patch that:
 ```
