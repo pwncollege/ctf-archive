@@ -4,6 +4,8 @@ name: ångstromCTF
 challenges:
   - id: exam
     name: PWN - 50 - exam
+  - id: bap
+    name: PWN - 130 - Bap
   - id: og
     name: PWN - 130 - og
   - id: leftright
