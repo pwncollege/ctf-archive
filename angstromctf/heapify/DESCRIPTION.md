@@ -1,1 +1,1 @@
-check out my novel sorting algorithm!
+you can't heapsort without heapify
