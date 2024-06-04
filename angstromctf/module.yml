@@ -4,6 +4,7 @@ name: ångstromCTF
 challenges:
   - id: og
     name: PWN - 130 - og
+  - id: leftright
     name: PWN - 130 - leftright
   - id: heapify
     name: PWN - 220 - heapify
