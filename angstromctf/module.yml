@@ -2,6 +2,8 @@ id: angstromctf
 name: ångstromCTF
 
 challenges:
+  - id: heapify
+    name: PWN - 220 - Heapify
   - id: themectl
     name: PWN - 230 - themectl
   - id: stacksort
