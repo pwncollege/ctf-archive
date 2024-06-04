@@ -8,5 +8,7 @@ challenges:
     name: CRYPTO - 465 - Delegate Wallet
   - id: soul
     name: CRYPTO - 500 - Soul's Permutation Network
+  - id: pyjail
+    name: MISC - 437 - Pyjail
   - id: filereader
     name: MISC - 459 - File Reader
