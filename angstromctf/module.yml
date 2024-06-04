@@ -2,6 +2,8 @@ id: angstromctf
 name: ångstromCTF
 
 challenges:
+  - id: leftright
+    name: PWN - 130 - Left Right
   - id: heapify
     name: PWN - 220 - Heapify
   - id: themectl
