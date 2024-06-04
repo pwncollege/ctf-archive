@@ -16,3 +16,5 @@ challenges:
     name: PWN - 230 - themectl
   - id: stacksort
     name: PWN - 250 - stacksort
+  - id: tss2
+    name: CRYTPO - 200 - tss2
