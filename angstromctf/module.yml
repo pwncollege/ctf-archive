@@ -2,11 +2,12 @@ id: angstromctf
 name: ångstromCTF
 
 challenges:
-  - id: leftright
-    name: PWN - 130 - Left Right
+  - id: og
+    name: PWN - 130 - og
+    name: PWN - 130 - leftright
   - id: heapify
-    name: PWN - 220 - Heapify
+    name: PWN - 220 - heapify
   - id: themectl
     name: PWN - 230 - themectl
   - id: stacksort
-    name: PWN - 250 - Stacksort
+    name: PWN - 250 - stacksort
