@@ -18,6 +18,8 @@ challenges:
     name: PWN - 250 - stacksort
   - id: awman
     name: CRYTPO - 50 - aw-man
+  - id: simonsays
+    name: CRYTPO - 100 - Simon Says
   - id: tss1
     name: CRYTPO - 100 - tss1
   - id: tss2
