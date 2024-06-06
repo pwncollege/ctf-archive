@@ -10,6 +10,8 @@ challenges:
     name: PWN - 477 - The Pwn Inn
   - id: ret-of-the-rops
     name: PWN - 480 - Return Of The Rops
+  - id: x-and-or
+    name: REV - 392 - X AND OR
   - id: factorize
     name: CRYPTO - 232 - Factorize
   - id: staple-aes
