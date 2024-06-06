@@ -4,6 +4,8 @@ name: 0x41414141 CTF
 challenges:
   - id: moving-signals
     name: PWN - 442 - Moving signals
+  - id: external
+    name: PWN - 467 - External
   - id: the-pwn-inn
     name: PWN - 477 - The Pwn Inn
   - id: ret-of-the-rops
