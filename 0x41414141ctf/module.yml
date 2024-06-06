@@ -16,6 +16,8 @@ challenges:
     name: REV - 462 - Ware  
   - id: hash
     name: REV - 479 - Hash
+  - id: wrongdownload
+    name: REV - 475 - Wrong Download
   - id: client
     name: REV - 500 - cliBrowser  
   - id: factorize
