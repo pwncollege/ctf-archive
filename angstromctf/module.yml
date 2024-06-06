@@ -26,3 +26,5 @@ challenges:
     name: CRYTPO - 200 - tss2
   - id: layers
     name: MISC - 50 - layers
+  - id: snowman
+    name: MISC - 50 - do you wanna build a snowman?
