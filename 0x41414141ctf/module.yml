@@ -2,6 +2,8 @@ id: 0x41414141ctf
 name: 0x41414141 CTF
 
 challenges:
+  - id: moving-signals
+    name: PWN - 442 - Moving signals
   - id: eazyrsa
     name: CRYPTO - 445 - Eazy RSA
   - id: wallet
