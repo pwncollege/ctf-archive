@@ -1,6 +1,6 @@
 # REHOSTING
 
-No files available to dpownload on github. You can download the files from this ctf archive here:
+No files available to dpownload on github. You can download the files from this ctf archive here: https://github.com/pwncollege/ctf-archive/tree/main/0x41414141ctf/shjail 
 
 ## Challenge Setup
 Only one file for `shjail.sh`.
