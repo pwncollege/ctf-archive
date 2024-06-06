@@ -12,6 +12,8 @@ challenges:
     name: PWN - 480 - Return Of The Rops
   - id: factorize
     name: CRYPTO - 232 - Factorize
+  - id: staple-aes
+    name: CRYPTO - 445 - staple AES
   - id: eazyrsa
     name: CRYPTO - 445 - Eazy RSA
   - id: wallet
