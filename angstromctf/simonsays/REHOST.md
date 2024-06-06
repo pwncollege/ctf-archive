@@ -1,6 +1,6 @@
 # REHOSTING
 
-Files can be found here: [angstromctf](https://github.com/blairsec/challenges/tree/master/angstromctf/2024/crypto/layers)
+Files can be found here: [angstromctf](https://github.com/blairsec/challenges/tree/master/angstromctf/2023/misc/simon_says)
 
 ## Challenge Setup
 This challenge has two files `simon_says.py` which is the main file and uses `simon_says_out.txt`.
