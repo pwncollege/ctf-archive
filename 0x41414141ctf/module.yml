@@ -12,6 +12,8 @@ challenges:
     name: PWN - 480 - Return Of The Rops
   - id: x-and-or
     name: REV - 392 - X AND OR
+  - id: ware
+    name: REV - 462 - Ware  
   - id: client
     name: REV - 500 - cliBrowser  
   - id: factorize
