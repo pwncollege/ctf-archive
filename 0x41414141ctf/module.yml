@@ -34,3 +34,5 @@ challenges:
     name: MISC - 437 - Pyjail
   - id: filereader
     name: MISC - 459 - File Reader
+  - id: shjail
+    name: MISC - 492 - Shjail
