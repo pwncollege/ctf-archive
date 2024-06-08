@@ -1,0 +1,6 @@
+id: plaidctf2021
+name: PlaidCTF 2021
+
+challenges:
+  - id: liars-and-cheats
+    name: PWN = 390 = Liars And Cheats
