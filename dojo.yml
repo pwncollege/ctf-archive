@@ -16,3 +16,4 @@ modules:
   - id: backdoorctf
   - id: 0x41414141ctf
   - id: angstromctf
+  - id: plaidctf2021
