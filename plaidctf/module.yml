@@ -2,6 +2,8 @@ id: plaidctf
 name: PlaidCTF
 
 challenges:
+  - id: shop
+    name: PWN - 200 - Shop
   - id: liars-and-cheats
     name: PWN - 390 - Liars And Cheats
   - id: suffarring
