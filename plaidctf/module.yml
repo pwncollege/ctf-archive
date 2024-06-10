@@ -2,6 +2,8 @@ id: plaidctf
 name: PlaidCTF
 
 challenges:
+  - id: sandybox
+    name: PWN - 200 - SandyBox
   - id: shop
     name: PWN - 200 - Shop
   - id: emojidb
