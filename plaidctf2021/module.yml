@@ -6,3 +6,5 @@ challenges:
     name: PWN - 390 - Liars And Cheats
   - id: suffarring
     name: PWN - 500 - Suffarring
+  - id: potassium
+    name: PWN - 800 - Potassium
