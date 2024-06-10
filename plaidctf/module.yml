@@ -4,6 +4,8 @@ name: PlaidCTF
 challenges:
   - id: shop
     name: PWN - 200 - Shop
+  - id: emojidb
+    name: PWN - 250 - EmojiDB
   - id: liars-and-cheats
     name: PWN - 390 - Liars And Cheats
   - id: suffarring
