@@ -18,3 +18,4 @@ modules:
   - id: angstromctf
   - id: plaidctf
   - id: vsctf
+  - id: picoctf2019
