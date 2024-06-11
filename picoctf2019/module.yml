@@ -19,6 +19,8 @@ challenges:
   - id: asm2
     name: ASSEMBLY - 250 - asm2
   - id: asm3
-    name: ASSEMBLY - 250 - asm3
+    name: ASSEMBLY - 300 - asm3
+  - id: asm4
+    name: ASSEMBLY - 400 - asm4
   - id: seedspring
     name: RNG - 350 - Seed Spring
