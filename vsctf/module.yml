@@ -2,6 +2,8 @@ id: vsctf
 name: vsCTF
 
 challenges:
+  - id: tuningtest
+    name: PWN - 488 - Tuning Test
   - id: ezorange
     name: PWN - 490 - EzOrange
   - id: privatebank
