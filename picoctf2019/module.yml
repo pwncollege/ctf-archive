@@ -14,5 +14,7 @@ challenges:
     name: REV - 400 - Need For Speed
   - id: johnpollard
     name: REV - 500 - John Pollard
+  - id: asm1
+    name: ASSEMBLY - 200 - asm1
   - id: seedspring
     name: RNG - 350 - Seed Spring
