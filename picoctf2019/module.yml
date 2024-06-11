@@ -8,6 +8,8 @@ challenges:
     name: PWN - 500 - Zero To Hero
   - id: sicecream
     name: PWN - 500 - Sice Cream
+  - id: vaultdoor3
+    name: REV - 200 - Vault Door 3
   - id: asm1
     name: REV - 200 - asm1
   - id: asm2
