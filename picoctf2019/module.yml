@@ -4,7 +4,7 @@ name: picoCTF 2019
 challenges:
   - id: messymalloc
     name: PWN - 300 - Messy Malloc
-  - id: sice_cream
+  - id: sicecream
     name: PWN - 500 - Sice Cream
   - id: seedspring
     name: RNG - 350 - Seed Spring
