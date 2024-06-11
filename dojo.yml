@@ -17,3 +17,4 @@ modules:
   - id: 0x41414141ctf
   - id: angstromctf
   - id: plaidctf
+  - id: vsctf
