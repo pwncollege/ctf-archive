@@ -14,6 +14,10 @@ challenges:
     name: REV - 200 - asm1
   - id: asm2
     name: REV - 250 - asm2
+  - id: vaultdoor4
+    name: REV - 250 - Vault Door 4
+  - id: vaultdoor5
+    name: REV - 300 - Vault Door 5
   - id: asm3
     name: REV - 300 - asm3
   - id: reversecipher
