@@ -8,6 +8,8 @@ challenges:
     name: PWN - 500 - Zero To Hero
   - id: sicecream
     name: PWN - 500 - Sice Cream
+  - id: reversecipher
+    name: REV - 300 - Reverse Cipher
   - id: needforspeed
     name: REV - 400 - Need For Speed
   - id: seedspring
