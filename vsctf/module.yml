@@ -1,0 +1,6 @@
+id: vsctf
+name: vsCTF
+
+challenges:
+  - id: ezorange
+    name: PWN - 490 - EzOrange
