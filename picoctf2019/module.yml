@@ -12,5 +12,7 @@ challenges:
     name: REV - 300 - Reverse Cipher
   - id: needforspeed
     name: REV - 400 - Need For Speed
+  - id: johnpollard
+    name: REV - 500 - John Pollard
   - id: seedspring
     name: RNG - 350 - Seed Spring
