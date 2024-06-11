@@ -8,5 +8,7 @@ challenges:
     name: PWN - 500 - Zero To Hero
   - id: sicecream
     name: PWN - 500 - Sice Cream
+  - id: needforspeed
+    name: REV - 400 - Need For Speed
   - id: seedspring
     name: RNG - 350 - Seed Spring
