@@ -4,7 +4,7 @@ name: picoCTF 2019
 challenges:
   - id: messymalloc
     name: PWN - 300 - Messy Malloc
-  - id: zero_to_hero
+  - id: zerotohero
     name: PWN - 500 - Zero To Hero
   - id: sicecream
     name: PWN - 500 - Sice Cream
