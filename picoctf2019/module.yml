@@ -22,6 +22,8 @@ challenges:
     name: REV - 300 - asm3
   - id: reversecipher
     name: REV - 300 - Reverse Cipher
+  - id: vaultdoor6
+    name: REV - 350 - Vault Door 6
   - id: asm4
     name: REV - 400 - asm4
   - id: needforspeed
