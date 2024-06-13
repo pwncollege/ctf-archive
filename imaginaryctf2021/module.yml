@@ -8,3 +8,5 @@ challenges:
     name: PWN - 400 - Gotta Go Fast
   - id: notpwn
     name: REV - 250 - It's Not Pwn, I Swear!
+  - id: foliage
+    name: REV - 400 - Foliage
