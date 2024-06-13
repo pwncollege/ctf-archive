@@ -4,3 +4,5 @@ name: ImaginaryCTF 2021
 challenges:
   - id: notpwn
     name: REV - 250 - It's Not Pwn, I Swear!
+  - id: inkaphobia
+    name: PWN - 300 - Inkaphobia
