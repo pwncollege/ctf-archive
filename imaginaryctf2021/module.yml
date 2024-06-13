@@ -2,6 +2,8 @@ id: imaginaryctf2021
 name: ImaginaryCTF 2021
 
 challenges:
+  - id: linonophobia
+    name: PWN - 300 - linonophobia
   - id: inkaphobia
     name: PWN - 300 - Inkaphobia
   - id: gottagofast
