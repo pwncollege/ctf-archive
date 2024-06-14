@@ -2,6 +2,8 @@ id: imaginaryctf2022
 name: ImaginaryCTF 2022
 
 challenges:
+  - id: fmtfun
+    name: PWN - 200 - Format String Fun
   - id: desrever
     name: REV - 100 - Desrever
   - id: smoll
