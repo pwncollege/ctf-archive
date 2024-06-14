@@ -20,3 +20,4 @@ modules:
   - id: vsctf
   - id: picoctf2019
   - id: imaginaryctf2021
+  - id: imaginaryctf2022
