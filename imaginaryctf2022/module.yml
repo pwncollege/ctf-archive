@@ -14,6 +14,8 @@ challenges:
     name: CRYPTO - 100 - Smoll
   - id: secureencodinghex
     name: CRYPTO - 150 - Secure Encoding Hex
+  - id: otp
+    name: CRYPTO - 150 - OTP
   - id: hash
     name: CRYPTO - 150 - Hash
   - id: livingwithoutexpectations
