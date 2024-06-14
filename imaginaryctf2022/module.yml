@@ -2,6 +2,8 @@ id: imaginaryctf2022
 name: ImaginaryCTF 2022
 
 challenges:
+  - id: smoll
+    name: CRYPTO - 100 - Smoll
   - id: livingwithoutexpectations
     name: CRYPTO - 492 - Living Without Expectations
   - id: secureencoding
