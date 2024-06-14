@@ -8,6 +8,8 @@ challenges:
     name: REV - 100 - Desrever
   - id: stream
     name: CRYPTO - 50 - Stream
+  - id: emoji
+    name: CRYPTO - 50 - Emoji
   - id: smoll
     name: CRYPTO - 100 - Smoll
   - id: secureencodinghex
