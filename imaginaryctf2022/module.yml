@@ -8,6 +8,8 @@ challenges:
     name: REV - 100 - Desrever
   - id: smoll
     name: CRYPTO - 100 - Smoll
+  - id: secureencodinghex
+    name: CRYPTO - 150 - Secure Encoding Hex
   - id: livingwithoutexpectations
     name: CRYPTO - 492 - Living Without Expectations
   - id: secureencoding
