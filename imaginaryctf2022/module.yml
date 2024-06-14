@@ -18,6 +18,8 @@ challenges:
     name: CRYPTO - 150 - OTP
   - id: hash
     name: CRYPTO - 150 - Hash
+  - id: cbc
+    name: CRYPTO - 200 - CBC
   - id: livingwithoutexpectations
     name: CRYPTO - 492 - Living Without Expectations
   - id: secureencoding
