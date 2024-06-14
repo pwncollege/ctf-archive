@@ -6,6 +6,8 @@ challenges:
     name: PWN - 200 - Format String Fun
   - id: desrever
     name: REV - 100 - Desrever
+  - id: stream
+    name: CRYPTO - 50 - Stream
   - id: smoll
     name: CRYPTO - 100 - Smoll
   - id: secureencodinghex
