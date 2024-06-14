@@ -6,3 +6,5 @@ challenges:
     name: CRYPTO - 492 - Living Without Expectations
   - id: secureencoding
     name: CRYPTO - 492 - Secure Encoding Base64
+  - id: poker
+    name: CRYPTO - 495 - Poker
