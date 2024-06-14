@@ -4,3 +4,5 @@ name: ImaginaryCTF 2022
 challenges:
   - id: livingwithoutexpectations
     name: CRYPTO - 492 - Living Without Expectations
+  - id: secureencoding
+    name: CRYPTO - 492 - Secure Encoding Base64
