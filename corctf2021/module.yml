@@ -6,3 +6,5 @@ challenges:
     name: PWN - 394 - ChainBlock
   - id: cshell
     name: PWN - 459 - CShell
+  - id: babyrev
+    name: REV - 372 - BabyRev
