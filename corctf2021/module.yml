@@ -8,3 +8,5 @@ challenges:
     name: PWN - 459 - CShell
   - id: babyrev
     name: REV - 372 - BabyRev
+  - id: vmquack
+    name: REV - 499 - vmquack
