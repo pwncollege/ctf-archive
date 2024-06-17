@@ -8,5 +8,7 @@ challenges:
     name: REV - 100 - Juniperus
   - id: flagloader
     name: REV - 200 - Flag Loader
+  - id: flagchecker
+    name: REV - 491 - Flag Checker
   - id: breakme
     name: CRYPTO - 100 - Break Me!
