@@ -6,3 +6,5 @@ challenges:
     name: PWN - 100 - Babygame
   - id: juniperus
     name: REV - 100 - Juniperus
+  - id: flagloader
+    name: REV - 200 - Flag Loader
