@@ -1,0 +1,6 @@
+id: corctf2021
+name: corCTF 2021
+
+challenges:
+  - id: chainblock
+    name: PWN - 394 - ChainBlock
