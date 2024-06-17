@@ -1,0 +1,6 @@
+id: downunderctf2021
+name: DownUnderCTF 2021
+
+challenges:
+  - id: babygame
+    name: PWN - 100 - Babygame
