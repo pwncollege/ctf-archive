@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# Create a symbolic link if it doesn't already exist
+if [ ! -L /challenge/.flag.txt ]; then
+    ln -s /flag /challenge/.flag.txt
+fi
+
+# Ensure the flag file and the symlink have the correct permissions
+chmod 644 /flag
+chmod 644 /challenge/.flag.txt
