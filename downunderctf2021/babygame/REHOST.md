@@ -12,5 +12,5 @@ Checks if the file flag.txt exists and if not then it creates a link between fla
 #!/bin/bash
 
 # Create a symbolic link if it doesn't already exist
-ln -s /flag /challenge/.flag.txt
+ln -s /flag /challenge/flag.txt
 ```
