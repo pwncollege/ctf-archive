@@ -9,3 +9,9 @@ Use this:
 ```
 ldd blackhole
 ```
+
+## Dependency Troubleshooting
+If the libc files are used as dependencies by the challenge so we might runto problems where the files are not recognized so we can use this command to patch that:
+```
+patchelf --set-rpath /challenge /challenge/blackhole
+```
