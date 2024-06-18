@@ -1,0 +1,6 @@
+id: accessdeniedctf2022
+name: Access-Denied 2022
+
+challenges:
+  - id: binary
+    name: REV - 797 - Binary
