@@ -6,3 +6,5 @@ challenges:
     name: REV - 566 - Enormous
   - id: binary
     name: REV - 797 - Binary
+  - id: llvm
+    name: REV - 947 - LLVM
