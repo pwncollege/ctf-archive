@@ -12,6 +12,8 @@ challenges:
     name: CRYTPO - RSA-3
   - id: mitm2
     name: CRYTPO - MITM-2
+  - id: ecc
+    name: CRYTPO - ECC
   - id: smallkey
     name: CRYTPO - Small Key
   - id: enormous
