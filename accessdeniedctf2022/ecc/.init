@@ -1,0 +1,4 @@
+#!/bin/bash
+
+# Installing tinyec
+pip install tinyec
