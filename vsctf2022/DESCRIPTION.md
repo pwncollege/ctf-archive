@@ -1,5 +1,5 @@
 
-### Welcome to vsCTF
+### Welcome to vsCTF 2022
 
 vsCTF is a capture the flag competition organized by the team View Source. vsCTF includes challenges for players of all skill levels and everyone is welcome to participate and learn.
 
