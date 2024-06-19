@@ -23,3 +23,4 @@ modules:
   - id: imaginaryctf2022
   - id: downunderctf2021
   - id: corctf2021
+  - id: accessdeniedctf2022
