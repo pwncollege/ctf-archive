@@ -2,6 +2,8 @@ id: accessdeniedctf2022
 name: Access-Denied 2022
 
 challenges:
+  - id: ret2system
+    name: PWN - 722 - ret2system
   - id: enormous
     name: REV - 566 - Enormous
   - id: binary
