@@ -1,4 +1,4 @@
-# PatriotCTF
+# PatriotCTF 2023
 
 ## Overview
 PatriotCTF is a beginner-friendly capture-the-flag competition hosted by GMU's cybersecurity club, MasonCC. All are welcome to participate, including students and security professionals. Challenges will range from beginner to expert, so there should be something for everyone. This is a jeopardy-style CTF, meaning there will be various challenges from the different categories described below.
