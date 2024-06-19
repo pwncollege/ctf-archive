@@ -16,6 +16,8 @@ challenges:
     name: CRYTPO - ECC
   - id: smallkey
     name: CRYTPO - Small Key
+  - id: merklegoodman
+    name: CRYTPO - Merkle is a good man
   - id: enormous
     name: REV - 566 - Enormous
   - id: binary
