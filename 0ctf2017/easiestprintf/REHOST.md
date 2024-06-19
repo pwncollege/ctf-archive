@@ -13,5 +13,5 @@ ldd subtraction
 
 If the dependency does not exist use `patchelf` to change the dependecy location to `/challenge`. This command can be used:
 ```
-patchelf --set-rpath /challenge /challenge/babyheap
+patchelf --set-rpath /challenge /challenge/FILENAME
 ```
