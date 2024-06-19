@@ -4,6 +4,8 @@ name: Access-Denied 2022
 challenges:
   - id: ret2system
     name: PWN - 722 - ret2system
+  - id: rsa1
+    name: CRYTPO - RSA-1
   - id: enormous
     name: REV - 566 - Enormous
   - id: binary
