@@ -17,7 +17,7 @@ modules:
   - id: 0x41414141ctf
   - id: angstromctf2024
   - id: plaidctf
-  - id: vsctf
+  - id: vsctf2022
   - id: picoctf2019
   - id: imaginaryctf2021
   - id: imaginaryctf2022
