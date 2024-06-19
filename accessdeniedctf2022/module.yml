@@ -8,6 +8,8 @@ challenges:
     name: CRYTPO - RSA-1
   - id: rsa2
     name: CRYTPO - RSA-2
+  - id: rsa3
+    name: CRYTPO - RSA-3
   - id: enormous
     name: REV - 566 - Enormous
   - id: binary
