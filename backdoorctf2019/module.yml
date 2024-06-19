@@ -1,5 +1,5 @@
-id: backdoorctf
-name: BackdoorCTF
+id: backdoorctf2019
+name: BackdoorCTF 2019
 
 challenges:
   - id: echo
