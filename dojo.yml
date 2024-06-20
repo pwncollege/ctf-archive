@@ -24,3 +24,4 @@ modules:
   - id: downunderctf2021
   - id: corctf2021
   - id: accessdeniedctf2022
+  - id: hitcon2017quals
