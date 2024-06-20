@@ -10,5 +10,7 @@ challenges:
     name: REV - 271 - Seccomp
   - id: luaky
     name: CRYPTO - 257 - Luaky
+  - id: veryluaky
+    name: CRYPTO - 342 - Very Luaky
   - id: sssp
     name: CRYPTO - 400 - SSSP
