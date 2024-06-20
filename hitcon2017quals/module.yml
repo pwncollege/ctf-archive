@@ -8,3 +8,5 @@ challenges:
     name: PWN - 315 - Baby FS
   - id: seccomp
     name: REV - 271 - Seccomp
+  - id: sssp
+    name: CRYPTO - 400 - SSSP
