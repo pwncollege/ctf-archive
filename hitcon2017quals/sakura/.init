@@ -1,0 +1,4 @@
+#!/bin/bash
+
+# Making sure dependecies are met using patchelf
+patchelf --set-rpath /challenge /challenge/sakura
