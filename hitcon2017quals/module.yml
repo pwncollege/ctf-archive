@@ -4,6 +4,8 @@ name: HITCON 2017 Quals
 challenges:
   - id: artifact
     name: PWN - 192 - 完美無瑕~Impeccable Artifact~
+  - id: REEASY
+    name: PWN/MISC - 255 - RE easy to say
   - id: babyfs
     name: PWN - 315 - Baby FS
   - id: sakura
