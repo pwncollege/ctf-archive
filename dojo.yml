@@ -5,6 +5,7 @@ award:
   emoji: 🏁
 
 modules:
+  - id: csawctf2014
   - id: csaw2017
   - id: 0ctf2017
   - id: hitcon2017quals
