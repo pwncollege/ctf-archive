@@ -5,23 +5,24 @@ award:
   emoji: 🏁
 
 modules:
-  - id: 0ctf2019
-  - id: 0ctf2018
-  - id: 0ctf2017
-  - id: patriotctf2023
-  - id: wtfctf2021
   - id: csaw2017
-  - id: hsctf2019
-  - id: noobzctf2023
+  - id: 0ctf2017
+  - id: hitcon2017quals
+  - id: 0ctf2018
   - id: backdoorctf2019
-  - id: 0x41414141ctf2021
-  - id: angstromctf2024
-  - id: plaidctf
-  - id: vsctf2022
+  - id: 0ctf2019
+  - id: hsctf2019
   - id: picoctf2019
+  - id: 0x41414141ctf2021
   - id: imaginaryctf2021
-  - id: imaginaryctf2022
   - id: downunderctf2021
   - id: corctf2021
+  - id: wtfctf2021
+  - id: vsctf2022
+  - id: imaginaryctf2022
   - id: accessdeniedctf2022
-  - id: hitcon2017quals
+  - id: plaidctf
+  - id: patriotctf2023
+  - id: noobzctf2023
+  - id: angstromctf2024
+
