@@ -1,0 +1,6 @@
+id: csawctf2014
+name: CSAW CTF 2014
+
+challenges:
+  - id: aerosol
+    name: REV - 500 - aerosol can
