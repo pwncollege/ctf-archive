@@ -12,6 +12,8 @@ challenges:
     name: PWN - 315 - Baby FS
   - id: sakura
     name: REV - 218 - Sakura
+  - id: void
+    name: REV - 252 - 家徒四壁~Everlasting Imaginative Void~
   - id: seccomp
     name: REV - 271 - Seccomp
   - id: luaky
