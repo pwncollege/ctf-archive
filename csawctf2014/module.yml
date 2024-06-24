@@ -6,6 +6,8 @@ challenges:
     name: REV - 500 - aerosol can
   - id: bo
     name: EXPLOITATION - 100 - Bo
+  - id: ish
+    name: EXPLOITATION - 300 - Ish
   - id: cfbsum
     name: CRYPTO - 300 - cfbsum
   - id: feal
