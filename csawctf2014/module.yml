@@ -2,6 +2,8 @@ id: csawctf2014
 name: CSAW CTF 2014
 
 challenges:
+  - id: eggshells
+    name: REV - 100 - Egg Shells
   - id: aerosol
     name: REV - 500 - aerosol can
   - id: bo
