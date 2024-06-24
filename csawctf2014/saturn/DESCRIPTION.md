@@ -2,4 +2,6 @@ You have stolen the checking program for the CSAW Challenge-Response-Authenticat
 
 Written by crowell
 
+Note: The challenge has one dependency missing which is how the challenge is set up.
+
 `Use flagCheck to input the flag you get from the challenge to get the actual flag`
