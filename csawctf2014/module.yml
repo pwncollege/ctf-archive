@@ -10,6 +10,8 @@ challenges:
     name: EXPLOITATION - 300 - Ish
   - id: s3
     name: EXPLOITATION - 300 - S3
+  - id: saturn
+    name: EXPLOITATION - 400 - Saturn
   - id: cfbsum
     name: CRYPTO - 300 - cfbsum
   - id: feal
