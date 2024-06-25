@@ -20,3 +20,5 @@ challenges:
     name: CRYPTO - 300 - Feal
   - id: bigdata
     name: WEB - 100 - Big Data
+  - id: obscurity
+    name: FORENSICS - 200 - Obscurity
