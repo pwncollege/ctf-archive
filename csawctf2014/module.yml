@@ -20,7 +20,7 @@ challenges:
     name: CRYPTO - 300 - Feal
   - id: bigdata
     name: WEB - 100 - Big Data
-  - id: obscurity
-    name: FORENSICS - 200 - Obscurity
     visibility: 
       start: "2030-05-17T17:00:00-06:00"
+  - id: obscurity
+    name: FORENSICS - 200 - Obscurity
