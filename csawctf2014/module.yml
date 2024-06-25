@@ -18,3 +18,5 @@ challenges:
     name: CRYPTO - 300 - cfbsum
   - id: feal
     name: CRYPTO - 300 - Feal
+  - id: bigdata
+    name: WEB - 100 - Big Data
