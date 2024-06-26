@@ -1,0 +1,6 @@
+id: codegateprelims2014
+name: Codegate Preliminary CTF 2014
+
+challenges:
+  - id: 4stone
+    name: PWN - 300 - 4stone
