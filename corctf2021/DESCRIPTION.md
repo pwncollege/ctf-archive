@@ -1,5 +1,5 @@
 
-### Welcome to corCTF 2021
+## Welcome to corCTF 2021
 
 The first CTF organized by the Crusaders of Rust (aka Starrust Crusaders), an American and European collegiate team.
 
