@@ -8,6 +8,8 @@ challenges:
     name: PWN - 300 - 4stone
   - id: minibomb
     name: PWN - 400 - Minibomb
+  - id: weirdsnus
+    name: PWN - 450 - Weird_snus
   - id: hypercat
     name: PWN - 550 - Hypercat
   - id: dodosandbox
