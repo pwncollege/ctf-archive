@@ -5,6 +5,7 @@ award:
   emoji: 🏁
 
 modules:
+  - id: codegateprelims2014
   - id: csawctf2014
   - id: csaw2017
   - id: 0ctf2017
@@ -26,4 +27,3 @@ modules:
   - id: patriotctf2023
   - id: noobzctf2023
   - id: angstromctf2024
-
