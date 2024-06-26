@@ -4,3 +4,5 @@ name: Codegate CTF 2011
 challenges:
   - id: network100
     name: WEB - 100 - Network
+  - id: crypto200
+    name: CRYTPO - 200 
