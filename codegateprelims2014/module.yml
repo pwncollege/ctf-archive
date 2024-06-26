@@ -6,6 +6,8 @@ challenges:
     name: PWN - 250 - Angry Doraemon
   - id: 4stone
     name: PWN - 300 - 4stone
+  - id: minibomb
+    name: PWN - 400 - Minibomb
   - id: hypercat
     name: PWN - 550 - Hypercat
   - id: dodosandbox
