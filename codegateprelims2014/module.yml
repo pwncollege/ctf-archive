@@ -8,3 +8,5 @@ challenges:
     name: PWN - 300 - 4stone
   - id: automata
     name: REV - 400 - Automata
+  - id: chronological
+    name: LOGICAL - 300 - Chronological
