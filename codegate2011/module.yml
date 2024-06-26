@@ -1,0 +1,6 @@
+id: codegate2011
+name: Codegate CTF 2011
+
+challenges:
+  - id: network100
+    name: WEB - 100 - Network
