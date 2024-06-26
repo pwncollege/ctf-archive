@@ -5,6 +5,7 @@ award:
   emoji: 🏁
 
 modules:
+  - id: codegate2011
   - id: codegateprelims2014
   - id: csawctf2014
   - id: csaw2017
