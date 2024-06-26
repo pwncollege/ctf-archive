@@ -1,5 +1,5 @@
 
-### Welcome to ångstromCTF 2024
+## Welcome to ångstromCTF 2024
 
 A capture-the-flag (CTF) competition hosted and organized entirely by alumni and current students of Montgomery Blair High School! CTF cybersecurity competitions have become an increasingly popular way for students to learn more about cybersecurity and develop and refine their hacking skills. These competitions are designed to educate and inspire high school students through interactive hacking challenges.
 
