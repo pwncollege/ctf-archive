@@ -6,6 +6,8 @@ challenges:
     name: PWN - 250 - Angry Doraemon
   - id: 4stone
     name: PWN - 300 - 4stone
+  - id: crackme
+    name: REV - 200 - dodoCrackme
   - id: automata
     name: REV - 400 - Automata
   - id: chronological
