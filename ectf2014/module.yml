@@ -1,0 +1,6 @@
+id: ectf2014
+name: ECTF 2014
+
+challenges:
+  - id: knotty
+    name: EXPLOIT - 250 - Knotty
