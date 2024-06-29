@@ -6,3 +6,5 @@ challenges:
     name: EXPLOIT - 250 - Knotty
   - id: ectfhacked
     name: FORENSICS - 500 - ECTF Hacked?
+  - id: friendsofcrime
+    name: REV - 200 - Friends Of Crime
