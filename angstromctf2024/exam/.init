@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Attempt to create a symboliclink
-ln -s /flag flag.txt 2>/dev/null 
+ln -s /flag /flag.txt 2>/dev/null 
 
 # Attemp at konsole
 sudo apt-get install konsole
