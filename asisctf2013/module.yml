@@ -2,6 +2,8 @@ id: asisctf2013
 name: ASIS CTF 2013
 
 challenges:
+  - id: serialnumber
+    name: REV - 76 - Serial Number
   - id: licensekey
     name: REV - 155 - License Key
   - id: dice
