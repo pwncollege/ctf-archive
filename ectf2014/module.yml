@@ -10,5 +10,7 @@ challenges:
     name: FORENSICS - 500 - ECTF Hacked?
   - id: friendsofcrime
     name: REV - 200 - Friends Of Crime
+  - id: python
+    name: REV - 300 - Python
   - id: lowkey
     name: CRYPTO - 150 - Low Key
