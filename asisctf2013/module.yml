@@ -6,3 +6,5 @@ challenges:
     name: CRYTPO - 330 - RSANG
   - id: pcaps
     name: CRYTPO - 450 - PCAPS
+  - id: encoding
+    name: CRYTPO - Encoding
