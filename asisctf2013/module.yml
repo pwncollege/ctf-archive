@@ -16,3 +16,5 @@ challenges:
     name: CRYTPO - 450 - PCAPS
   - id: encoding
     name: CRYTPO - Encoding
+  - id: memdump
+    name: FORENSICS - 220 - memdump
