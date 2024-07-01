@@ -1,4 +1,4 @@
-![image](./I.png)
+![image](https://github.com/pwncollege/ctf-archive/blob/main/tamuctf2024/confinement/l.png)
 
 Author: nhwn
 
