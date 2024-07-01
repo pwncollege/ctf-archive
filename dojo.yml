@@ -6,6 +6,7 @@ award:
 
 modules:
   - id: codegate2011
+  - id: asisctf2013
   - id: codegateprelims2014
   - id: ectf2014
   - id: csawctf2014
