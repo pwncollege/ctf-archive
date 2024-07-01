@@ -4,6 +4,8 @@ name: ECTF 2014
 challenges:
   - id: knotty
     name: EXPLOIT - 250 - Knotty
+  - id: seddit
+    name: EXPLOIT - 400 - Seddit
   - id: hackermessage
     name: FORENSICS - 100 - H4cker Message
   - id: ectfhacked
