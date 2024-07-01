@@ -18,3 +18,5 @@ challenges:
     name: CRYTPO - Encoding
   - id: memdump
     name: FORENSICS - 220 - memdump
+  - id: inaccessible
+    name: FORENSICS - 312 - Inaccessible
