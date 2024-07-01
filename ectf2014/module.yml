@@ -2,6 +2,8 @@ id: ectf2014
 name: ECTF 2014
 
 challenges:
+  - id: sleepycoder
+    name: EXPLOIT - 150 - Sleepy Coder
   - id: knotty
     name: EXPLOIT - 250 - Knotty
   - id: seddit
