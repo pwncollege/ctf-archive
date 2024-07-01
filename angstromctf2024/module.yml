@@ -6,6 +6,8 @@ challenges:
     name: PWN - 50 - exam
   - id: bap
     name: PWN - 130 - Bap
+    visibility: 
+      start: "2029-08-21T10:30:00-07:00"
   - id: og
     name: PWN - 130 - og
   - id: leftright
