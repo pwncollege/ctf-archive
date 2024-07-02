@@ -47,6 +47,9 @@ To submit a pull request (PR):
    - A detailed description of your changes.
    - A reference to any related issues (e.g., "Closes #abc").
 
+### Questions/Discussions
+If you have any questions or would like to discuss something, please use the [GitHub Discussions](https://github.com/pwncollege/ctf-archive/discussions) for this repository. It's a great place to engage with the community and seek help or share ideas.
+
 ## Style Guides
 
 ### Coding Standards
