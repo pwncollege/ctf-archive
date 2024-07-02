@@ -1,0 +1,8 @@
+id: asisctf2013
+name: ASIS CTF 2013
+
+challenges:
+  - id: syscalls
+    name: REV - 76 - Serial Number
+    visibility: 
+      start: "2029-08-21T10:30:00-07:00"
