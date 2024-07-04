@@ -4,3 +4,5 @@ name: 29c3 CTF 2012
 challenges:
   - id: memcached
     name: memcached
+  - id: minesweeper
+    name: minesweeper
