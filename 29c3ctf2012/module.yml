@@ -1,0 +1,6 @@
+id: 29c3ctf2012
+name: 29c3 CTF 2012
+
+challenges:
+  - id: memcahed
+    name: memcached
