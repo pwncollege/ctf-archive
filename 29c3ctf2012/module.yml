@@ -14,7 +14,7 @@ challenges:
     name: EXPLOIT - 200 - ru1337
     visibility: 
       start: "2029-08-21T10:30:00-07:00"
-  - id: update_server
+  - id: updateserver
     name: EXPLOIT - 300 - Update Server
     visibility: 
       start: "2029-08-21T10:30:00-07:00"
