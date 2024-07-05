@@ -4,10 +4,10 @@ name: 29c3 CTF 2012
 challenges:
   - id: findthekey
     name: REV - 300 - Find the key
+  - id: minesweeper
+    name: EXPLOIT - 100 - minesweeper
   - id: memcached
     name: EXPLOIT - 600 - memcached
-  - id: minesweeper
-    name: minesweeper
   - id: ru1337
     name: EXPLOIT - 200 - ru1337
     visibility: 
