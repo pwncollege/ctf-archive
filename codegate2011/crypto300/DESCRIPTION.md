@@ -24,6 +24,7 @@ The given file is the dump file of sys.user$ table in oracle database.
 </p><p>
 Find the password of 'SYSTEM' account.
 </p>
+
 ```
 Note: This challenge has not been solved during the ctf.
 ```
