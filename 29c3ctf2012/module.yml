@@ -2,6 +2,8 @@ id: 29c3ctf2012
 name: 29c3 CTF 2012
 
 challenges:
+  - id: findthekey
+    name: REV - 300 - Find the key
   - id: memcached
     name: memcached
   - id: minesweeper
