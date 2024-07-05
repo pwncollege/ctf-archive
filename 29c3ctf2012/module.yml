@@ -6,6 +6,10 @@ challenges:
     name: memcached
   - id: minesweeper
     name: minesweeper
+  - id: ru1337
+    name: EXPLOIT - 200 - ru1337
+    visibility: 
+      start: "2029-08-21T10:30:00-07:00"
   - id: proxy
     name: EXPLOIT - 400 - Proxy
     visibility: 
