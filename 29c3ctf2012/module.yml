@@ -4,6 +4,8 @@ name: 29c3 CTF 2012
 challenges:
   - id: findthekey
     name: REV - 300 - Find the key
+  - id: maya
+    name: REV - 300 - Maya
   - id: minesweeper
     name: EXPLOIT - 100 - minesweeper
   - id: memcached
