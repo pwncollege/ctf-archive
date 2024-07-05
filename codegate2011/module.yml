@@ -6,5 +6,7 @@ challenges:
     name: WEB - 100 - Network
   - id: crypto200
     name: CRYTPO - 200
+  - id: crypto300
+    name: CRYTPO - 300
   - id: crypto500
     name: CRYTPO - 500 
