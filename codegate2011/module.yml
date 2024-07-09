@@ -12,5 +12,7 @@ challenges:
     name: CRYTPO - 400
   - id: crypto500
     name: CRYTPO - 500 
+  - id: binary100
+    name: BINARY - 100
   - id: binary200
     name: BINARY - 200
