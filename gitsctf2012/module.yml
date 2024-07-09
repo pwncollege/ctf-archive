@@ -8,3 +8,5 @@ challenges:
     name: PWN - 300
   - id: crypto250
     name: CRYPTO - 250
+  - id: rev400
+    name: REV - 400
