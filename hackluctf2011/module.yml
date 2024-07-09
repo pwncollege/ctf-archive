@@ -2,3 +2,5 @@ id: hackluctf2011
 name: Hack.lu CTF 2011
 
 challenges:
+  id: simplexor
+  name: CRYPTO - 200 - Simplexor
