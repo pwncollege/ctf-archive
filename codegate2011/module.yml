@@ -22,3 +22,5 @@ challenges:
     name: BINARY - 400
     visibility: 
       start: "2029-08-21T10:30:00-07:00"
+  - id: binary500
+    name: BINARY - 500
