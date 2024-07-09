@@ -6,3 +6,5 @@ challenges:
     name: PWN - 200
   - id: pwn300
     name: PWN - 300
+  - id: crypto250
+    name: CRYPTO - 250
