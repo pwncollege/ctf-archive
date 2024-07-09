@@ -24,3 +24,7 @@ challenges:
       start: "2029-08-21T10:30:00-07:00"
   - id: binary500
     name: BINARY - 500
+  - id: forensics200
+    name: FORENSICS - 200
+    visibility: 
+      start: "2029-08-21T10:30:00-07:00"
