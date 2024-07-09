@@ -32,3 +32,7 @@ challenges:
     name: FORENSICS - 300
     visibility: 
       start: "2029-08-21T10:30:00-07:00"
+  - id: forensics400
+    name: FORENSICS - 400
+    visibility: 
+      start: "2029-08-21T10:30:00-07:00"
