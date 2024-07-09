@@ -10,3 +10,5 @@ challenges:
     name: CRYPTO - 250
   - id: rev400
     name: REV - 400
+  - id: trivia25
+    name: TRIVIA - 25
