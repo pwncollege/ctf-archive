@@ -16,3 +16,5 @@ challenges:
     name: BINARY - 100
   - id: binary200
     name: BINARY - 200
+  - id: binary300
+    name: BINARY - 300
