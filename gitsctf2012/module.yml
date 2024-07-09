@@ -1,0 +1,6 @@
+id: gitsctf2012
+name: Ghost in the Shellcode 2012
+
+challenges:
+  - id: pwn200
+    name: PWN - 200
