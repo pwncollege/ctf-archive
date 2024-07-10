@@ -3,4 +3,6 @@ name: CSAW CTF 2011
 
 challenges:
   - id: crypto1
-    name: CRYPTO - 100
+    name: CRYPTO - 1 - 100
+  - id: crypto2
+    name: CRYPTO - 2 - 100
