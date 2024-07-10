@@ -8,6 +8,9 @@ Explore the CTF Archive Module, where you can access, analyze, and learn from so
 
 Happy learning and hacking!
 
+----
+**NOTE: This module is an archive of amazing work done by heroes of the CTF community, not an active competitive event!** Credit for the challenges goes to their individual authors, which we will strive to properly attribute wherever possible. This dojo's "scoreboard" is meant for you to track your own progress, not as a comparison against others.
+
 ## Table of Contents
 1. [Getting Started](#getting-started)
 2. [Contributing](#contributing)
