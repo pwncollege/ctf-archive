@@ -2,5 +2,5 @@ id: csawctf2011
 name: CSAW CTF 2011
 
 challenges:
-  - id: crypto100
+  - id: crypto1
     name: CRYPTO - 100
