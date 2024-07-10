@@ -8,3 +8,5 @@ challenges:
     name: CRYPTO - 2 - 100
   - id: crypto3
     name: CRYPTO - 3 - 100
+  - id: crypto4
+    name: CRYPTO - 4 - 100
