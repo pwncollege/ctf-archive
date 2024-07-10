@@ -12,3 +12,5 @@ challenges:
     name: CRYPTO - 4 - 100
   - id: crypto5
     name: CRYPTO - 5 - 200
+  - id: crypto6
+    name: CRYPTO - 6 - 200
