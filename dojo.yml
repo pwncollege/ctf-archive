@@ -5,6 +5,7 @@ award:
   emoji: 🏁
 
 modules:
+  - id: csawctf2011
   - id: codegate2011
   - id: hackluctf2011
   - id: 29c3ctf2012
