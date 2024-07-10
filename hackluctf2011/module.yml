@@ -6,6 +6,8 @@ challenges:
     name: CRYPTO - 200 - Simplexor
   - id: pycrackme
     name: REV - 100 - Python Crackme
+  - id: challengetorrent
+    name: FORENSICS - 100 - Challenge Torrent
   - id: mario
     name: MISC - 100 - Scotty's last signal
   - id: unknownplanet
