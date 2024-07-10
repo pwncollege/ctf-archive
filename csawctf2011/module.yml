@@ -18,3 +18,5 @@ challenges:
     name: CRYPTO - 200 - 7
   - id: networking101
     name: WEB - 100 - Networking 101
+  - id: net1
+    name: REV - 200 - NET1
