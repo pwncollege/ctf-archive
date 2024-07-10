@@ -4,7 +4,7 @@ Welcome to **CTF Archive**! This is a comprehensive collection of challenges fro
 
 These modules serve as a resource for cybersecurity enthusiasts, providing easy access to preserved challenges that have been featured in previous CTF events. Whether you are looking to hone your skills, prepare for upcoming competitions, or simply explore the rich history of CTF challenges, this archive offers a robust platform for your endeavors.
 
-Explore the CTF Archive Module, where you can access, analyze, and learn from some of the most intriguing and educational challenges the cybersecurity community has encountered.
+Explore the CTF Archive, where you can access, analyze, and learn from some of the most intriguing and educational challenges the cybersecurity community has encountered.
 
 Happy learning and hacking!
 
