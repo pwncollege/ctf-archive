@@ -6,3 +6,5 @@ challenges:
     name: CRYPTO - 200 - Simplexor
   - id: pycrackme
     name: REV - 100 - Python Crackme
+  - id: mario
+    name: MISC - 100 - Scotty's last signal
