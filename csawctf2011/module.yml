@@ -3,16 +3,18 @@ name: CSAW CTF 2011
 
 challenges:
   - id: crypto1
-    name: CRYPTO - 1 - 100
+    name: CRYPTO - 100 - 1
   - id: crypto2
-    name: CRYPTO - 2 - 100
+    name: CRYPTO - 100 - 2
   - id: crypto3
-    name: CRYPTO - 3 - 100
+    name: CRYPTO - 100 - 3
   - id: crypto4
-    name: CRYPTO - 4 - 100
+    name: CRYPTO - 100 - 4
   - id: crypto5
-    name: CRYPTO - 5 - 200
+    name: CRYPTO - 200 - 5
   - id: crypto6
-    name: CRYPTO - 6 - 200
+    name: CRYPTO - 200 - 6
   - id: crypto7
-    name: CRYPTO - 7 - 200
+    name: CRYPTO - 200 - 7
+  - id: networking101
+    name: CRYPTO - 100 - Networking 101
