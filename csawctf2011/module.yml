@@ -24,6 +24,8 @@ challenges:
     name: CRYPTO - 300 - 10
   - id: networking101
     name: WEB - 100 - Networking 101
+  - id: hardware
+    name: WEB - 200 - Hardware
   - id: evilburritos2
     name: WEB - 300 - Evil Burritos 2
   - id: loveletter
