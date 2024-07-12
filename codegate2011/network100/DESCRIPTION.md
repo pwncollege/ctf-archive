@@ -1,2 +1,1 @@
-
-`Use flagCheck to input the flag you get from the challenge to get the actual flag`
+`Use flagCheck to input the md5sum of a malicious file you get from the challenge to get the actual flag`
