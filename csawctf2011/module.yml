@@ -18,6 +18,8 @@ challenges:
     name: CRYPTO - 200 - 7
   - id: crypto8
     name: CRYPTO - 300 - 8
+  - id: crypto9
+    name: CRYPTO - 300 - 9
   - id: networking101
     name: WEB - 100 - Networking 101
   - id: net1
