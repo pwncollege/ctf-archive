@@ -13,6 +13,7 @@ Happy learning and hacking!
 ----
 **NOTE: This module is an archive of amazing work done by heroes of the CTF community, not an active competitive event!** Credit for the challenges goes to their individual authors, which we will strive to properly attribute wherever possible. This dojo's "scoreboard" is meant for you to track your own progress, not as a comparison against others.
 
+----
 **Other CTF preservation efforts!**
 - The [CryptoHack CTF Archive](https://cryptohack.org/challenges/ctf-archive/) maintains runnable cryptography challenges from past CTFs!
 - [Sajjadium's CTF Archives](https://github.com/sajjadium/ctf-archives) preserve challenge files from prior CTFs.
