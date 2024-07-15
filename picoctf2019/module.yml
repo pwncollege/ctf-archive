@@ -8,8 +8,6 @@ challenges:
     name: PWN - 500 - Zero To Hero
   - id: sicecream
     name: PWN - 500 - Sice Cream
-    visibility: 
-      start: "2029-08-21T10:30:00-07:00"
   - id: vaultdoor3
     name: REV - 200 - Vault Door 3
   - id: asm1
