@@ -12,3 +12,6 @@ might be of interest for your analysis.
 ```
 Note: This challenge has not been solved during the ctf.
 ```
+
+---
+**Author:** FluxFingers

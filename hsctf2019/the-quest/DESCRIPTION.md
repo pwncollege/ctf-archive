@@ -5,3 +5,6 @@ https://forms.gle/7pyAWuG3GvYL443NA
 ```
 
 Hint: Maybe you don't have to complete the challenges...
+
+---
+**Author:** HSN CS Club
