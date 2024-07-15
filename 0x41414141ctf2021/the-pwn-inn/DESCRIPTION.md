@@ -3,3 +3,6 @@ As we know that crypto is a hot potato right now, we wanted to welcome you to a 
 Welcome!
 
 `Use flagCheck to input the flag you get from the challenge to get the actual flag`
+
+---
+**Author:** Tango

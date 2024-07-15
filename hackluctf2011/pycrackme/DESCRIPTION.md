@@ -6,3 +6,6 @@ Commander Sheen is not WINNING. Can you help him? Solve the puzzle and find out 
 ```
 Note: This challenge has not been solved during the ctf.
 ```
+
+---
+**Author:** FluxFingers
