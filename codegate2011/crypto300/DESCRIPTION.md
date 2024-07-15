@@ -25,4 +25,8 @@ The given file is the dump file of sys.user$ table in oracle database.
 Find the password of 'SYSTEM' account.
 </p>
 
+
 `Use flagCheck to input the flag you get from the challenge to get the actual flag`
+
+---
+**Author:** Ministry of Science and ICT
