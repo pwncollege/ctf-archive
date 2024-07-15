@@ -16,3 +16,9 @@ to add more this year).
 More detail (as always) available at http://ghostintheshellcode.com/
 
 Any question can be directed to gits@ghostintheshellcode.com, and you can always follow us on twitter for more info http://twitter.com/shellghostcode.
+
+---
+**Original Date:** Fri, 06 Jan. 2012, 14:00 UTC — Sat, 07 Jan. 2012, 14:00 UTC<br>
+**Original URL:** [http://ghostintheshellcode.com/](http://ghostintheshellcode.com/)<br>
+**CTFtime Entry:** [Ghost in the Shellcode 2021](https://ctftime.org/event/27/)<br>
+**Organizing Team:** [ShellGhostCode](https://twitter.com/ShellGhostCode)

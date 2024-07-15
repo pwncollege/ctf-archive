@@ -5,3 +5,6 @@ Hint: Hint is implied in the question.
 ```
 Note: This challenge has not been solved during the ctf.
 ```
+
+---
+**Author:** National Institute of Technology Karnataka

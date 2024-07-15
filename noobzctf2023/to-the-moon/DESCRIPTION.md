@@ -9,3 +9,6 @@ Required Note 3: The flag "repeats" in the output you get, but it should be clea
 Note 4: If the output isn't wrapped in n00bz{...}. you may need to reload the page, and solve the chall in as few steps as possible. If it still isn't working but you have a solution, we'll give you the flag.
 
 Ex: If you get 0x7bff as the hash, you should xor "7bff"(as a string) with `575105531e4f120e1c6d115d5d126d5d4e3a43590f59074439425a525616515f5b4e4c5b000057434d475b416f4e5b57473c0848694158095b56173b170a5d51`(as hex). The output will already be wrapped in n00bz{...}l
+
+---
+**Author:** n00bzUnit3d

@@ -7,4 +7,9 @@ The video game aspect of picoCTF 2019 was incredibly well-received and besides a
 
 picoCTF 2019 improved upon the Classroom feature from the previous year, allowing instructors to create up to 20 classrooms and add students quickly using batch registration via a comma separated values file.
 
-Official URL: [https://2019game.picoctf.com/](https://2019game.picoctf.com/)
+---
+**Original Date:** Fri, 27 Sept. 2019, 12:00 UTC — Fri, 11 Oct. 2019, 12:00 UTC<br>
+**Original URL:** [https://2019game.picoctf.com/](https://2019game.picoctf.com/)<br>
+**CTFtime Entry:** [picoCTF 2019](https://ctftime.org/event/914/)<br>
+**Organizing Team:** [M^-4](https://ctftime.org/team/89760)<br>
+<!-- Official URL: [https://2019game.picoctf.com/](https://2019game.picoctf.com/) -->
