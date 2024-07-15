@@ -1,5 +1,0 @@
-#!/bin/bash
-
-patchelf --set-rpath /challenge /challenge/zero_to_hero
-# Attempt to create a symboliclink
-ln -s /flag /challenge/flag.txt 2>/dev/null 
