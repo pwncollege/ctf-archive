@@ -38,8 +38,6 @@ challenges:
       start: "2029-08-21T10:30:00-07:00"
   - id: asm4
     name: REV - 400 - asm4
-    visibility: 
-      start: "2029-08-21T10:30:00-07:00"
   - id: needforspeed
     name: REV - 400 - Need For Speed
     visibility: 
