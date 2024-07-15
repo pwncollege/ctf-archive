@@ -34,8 +34,6 @@ challenges:
     name: REV - 400 - Vault Door 8
   - id: johnpollard
     name: REV - 500 - John Pollard
-    visibility: 
-      start: "2029-08-21T10:30:00-07:00"
   - id: seedspring
     name: RNG - 350 - Seed Spring
     visibility: 
