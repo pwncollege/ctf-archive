@@ -13,7 +13,7 @@ challenges:
   - id: asm1
     name: REV - 200 - asm1
   - id: asm2
-    name: REV - 250 - asm2A
+    name: REV - 250 - asm2
   - id: vaultdoor4
     name: REV - 250 - Vault Door 4
     visibility: 
