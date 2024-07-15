@@ -36,8 +36,6 @@ challenges:
       start: "2029-08-21T10:30:00-07:00"
   - id: vaultdoor8
     name: REV - 400 - Vault Door 8
-    visibility: 
-      start: "2029-08-21T10:30:00-07:00"
   - id: johnpollard
     name: REV - 500 - John Pollard
     visibility: 
