@@ -11,3 +11,9 @@ Command to run flag check-
 ```
 /challenge/flagCheck
 ```
+
+### Flag Linking
+As the flag being called is `/challenge/flag.txt` but our pwn.college flag is in `/flag` so we use this command to create a link ebtween them.
+```
+ln -s /flag /challenge/flag.txt 2>/dev/null
+```
