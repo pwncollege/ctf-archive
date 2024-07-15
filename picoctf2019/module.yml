@@ -22,8 +22,6 @@ challenges:
     name: REV - 300 - asm3
   - id: reversecipher
     name: REV - 300 - Reverse Cipher
-    visibility: 
-      start: "2029-08-21T10:30:00-07:00"
   - id: vaultdoor6
     name: REV - 350 - Vault Door 6
   - id: vaultdoor7
