@@ -12,8 +12,6 @@ challenges:
     name: REV - 200 - Vault Door 3
   - id: asm1
     name: REV - 200 - asm1
-    visibility: 
-      start: "2029-08-21T10:30:00-07:00"
   - id: asm2
     name: REV - 250 - asm2
     visibility: 
