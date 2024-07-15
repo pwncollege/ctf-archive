@@ -3,3 +3,6 @@ Tired from all of the craziness in the Inner Sanctum, you decide to venture out 
 
 
 `Use flagCheck to input the flag you get from the challenge to get the actual flag`
+
+---
+**Author:** Plaid Parliament of Pwning

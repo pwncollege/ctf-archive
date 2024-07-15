@@ -2,3 +2,6 @@ It's late. You finally made it to town after a long day, and you decide to stop 
 
 
 `Use flagCheck to input the flag you get from the challenge to get the actual flag`
+
+---
+**Author:** Plaid Parliament of Pwning
