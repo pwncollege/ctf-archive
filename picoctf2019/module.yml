@@ -26,8 +26,6 @@ challenges:
       start: "2029-08-21T10:30:00-07:00"
   - id: vaultdoor6
     name: REV - 350 - Vault Door 6
-    visibility: 
-      start: "2029-08-21T10:30:00-07:00"
   - id: vaultdoor7
     name: REV - 400 - Vault Door 7
     visibility: 
