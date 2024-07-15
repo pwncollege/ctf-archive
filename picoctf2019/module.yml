@@ -30,8 +30,6 @@ challenges:
     name: REV - 400 - asm4
   - id: needforspeed
     name: REV - 400 - Need For Speed
-    visibility: 
-      start: "2029-08-21T10:30:00-07:00"
   - id: vaultdoor8
     name: REV - 400 - Vault Door 8
   - id: johnpollard
