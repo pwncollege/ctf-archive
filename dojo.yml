@@ -21,9 +21,7 @@ modules:
   - id: backdoorctf2019
   - id: 0ctf2019
   - id: hsctf2019
-  # - id: picoctf2019
-  #     visibility: 
-  #     start: "2029-08-21T10:30:00-07:00"
+  - id: picoctf2019
   - id: 0x41414141ctf2021
   - id: imaginaryctf2021
   - id: downunderctf2021
