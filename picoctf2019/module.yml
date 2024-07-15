@@ -24,8 +24,6 @@ challenges:
       start: "2029-08-21T10:30:00-07:00"
   - id: asm3
     name: REV - 300 - asm3
-    visibility: 
-      start: "2029-08-21T10:30:00-07:00"
   - id: reversecipher
     name: REV - 300 - Reverse Cipher
     visibility: 
