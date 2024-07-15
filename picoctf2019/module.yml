@@ -6,8 +6,6 @@ challenges:
     name: PWN - 300 - Messy Malloc
   - id: zerotohero
     name: PWN - 500 - Zero To Hero
-    visibility: 
-      start: "2029-08-21T10:30:00-07:00"
   - id: sicecream
     name: PWN - 500 - Sice Cream
     visibility: 
