@@ -10,3 +10,8 @@ PatriotCTF is a beginner-friendly capture-the-flag competition hosted by GMU's c
 - **Web**: The attack surface of the modern world!
 - **Misc**: Programming, Scripting, ML & more!
 
+---
+**Original Date:** Fri, 08 Sept. 2023, 21:00 UTC — Sun, 10 Sept. 2023, 21:00 UTC<br>
+**Original URL:** [https://pctf.competitivecyber.club/](https://pctf.competitivecyber.club/)<br>
+**CTFtime Entry:** [PatriotCTF 2023](https://ctftime.org/event/2030/)<br>
+**Organizing Team:** [Competitive Cyber at Mason](https://ctftime.org/team/176906)<br>
