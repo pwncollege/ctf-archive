@@ -28,8 +28,6 @@ challenges:
     name: REV - 350 - Vault Door 6
   - id: vaultdoor7
     name: REV - 400 - Vault Door 7
-    visibility: 
-      start: "2029-08-21T10:30:00-07:00"
   - id: asm4
     name: REV - 400 - asm4
   - id: needforspeed
