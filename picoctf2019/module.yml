@@ -1,40 +1,72 @@
 id: picoctf2019
 name: picoCTF 2019
-  visibility: 
-    start: "2029-08-21T10:30:00-07:00"
 
 challenges:
   - id: messymalloc
     name: PWN - 300 - Messy Malloc
+    visibility: 
+      start: "2029-08-21T10:30:00-07:00"
   - id: zerotohero
     name: PWN - 500 - Zero To Hero
+    visibility: 
+      start: "2029-08-21T10:30:00-07:00"
   - id: sicecream
     name: PWN - 500 - Sice Cream
+    visibility: 
+      start: "2029-08-21T10:30:00-07:00"
   - id: vaultdoor3
     name: REV - 200 - Vault Door 3
+    visibility: 
+      start: "2029-08-21T10:30:00-07:00"
   - id: asm1
     name: REV - 200 - asm1
+    visibility: 
+      start: "2029-08-21T10:30:00-07:00"
   - id: asm2
     name: REV - 250 - asm2
+    visibility: 
+      start: "2029-08-21T10:30:00-07:00"
   - id: vaultdoor4
     name: REV - 250 - Vault Door 4
+    visibility: 
+      start: "2029-08-21T10:30:00-07:00"
   - id: vaultdoor5
     name: REV - 300 - Vault Door 5
+    visibility: 
+      start: "2029-08-21T10:30:00-07:00"
   - id: asm3
     name: REV - 300 - asm3
+    visibility: 
+      start: "2029-08-21T10:30:00-07:00"
   - id: reversecipher
     name: REV - 300 - Reverse Cipher
+    visibility: 
+      start: "2029-08-21T10:30:00-07:00"
   - id: vaultdoor6
     name: REV - 350 - Vault Door 6
+    visibility: 
+      start: "2029-08-21T10:30:00-07:00"
   - id: vaultdoor7
     name: REV - 400 - Vault Door 7
+    visibility: 
+      start: "2029-08-21T10:30:00-07:00"
   - id: asm4
     name: REV - 400 - asm4
+    visibility: 
+      start: "2029-08-21T10:30:00-07:00"
   - id: needforspeed
     name: REV - 400 - Need For Speed
+    visibility: 
+      start: "2029-08-21T10:30:00-07:00"
   - id: vaultdoor8
     name: REV - 400 - Vault Door 8
+    visibility: 
+      start: "2029-08-21T10:30:00-07:00"
   - id: johnpollard
     name: REV - 500 - John Pollard
+    visibility: 
+      start: "2029-08-21T10:30:00-07:00"
   - id: seedspring
     name: RNG - 350 - Seed Spring
+    visibility: 
+      start: "2029-08-21T10:30:00-07:00"
