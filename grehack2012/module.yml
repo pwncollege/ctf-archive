@@ -1,0 +1,6 @@
+id: grehack2012
+name: GreHack-2012
+
+challenges:
+  - id: hackingfordummy
+    name: CRYPTO - 200 - Hacking For Dummy
