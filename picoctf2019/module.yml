@@ -36,5 +36,3 @@ challenges:
     name: REV - 500 - John Pollard
   - id: seedspring
     name: RNG - 350 - Seed Spring
-    visibility: 
-      start: "2029-08-21T10:30:00-07:00"
