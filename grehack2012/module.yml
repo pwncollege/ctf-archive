@@ -4,3 +4,5 @@ name: GreHack-2012
 challenges:
   - id: hackingfordummy
     name: CRYPTO - 200 - Hacking For Dummy
+  - id: amanfromhell
+    name: CRYPTO - 500 - A Man From Hell
