@@ -8,6 +8,7 @@ modules:
   - id: csawctf2011
   - id: codegate2011
   - id: hackluctf2011
+  - id: csawctf2012
   - id: grehack2012
   - id: 29c3ctf2012
   - id: gitsctf2012
