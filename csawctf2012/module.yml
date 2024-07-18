@@ -4,3 +4,7 @@ name: CSAW CTF 2012
 challenges:
   - id: rev400
     name: REV - 400
+  - id: exploit200
+    name: EXPLOIT - 200
+    visibility: 
+      start: "2029-08-21T10:30:00-07:00"
