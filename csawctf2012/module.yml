@@ -1,0 +1,6 @@
+id: csawctf2012
+name: CSAW CTF 2012
+
+challenges:
+  - id: rev400
+    name: REV - 400
