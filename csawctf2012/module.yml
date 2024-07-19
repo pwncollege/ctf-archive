@@ -4,6 +4,8 @@ name: CSAW CTF 2012
 challenges:
   - id: rev400
     name: REV - 400
+  - id: network100
+    name: WEB - 100
   - id: exploit200
     name: EXPLOIT - 200
     visibility: 
