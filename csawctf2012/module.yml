@@ -6,6 +6,10 @@ challenges:
     name: REV - 400
   - id: network100
     name: WEB - 100
+  - id: network200
+    name: WEB - 200
+    visibility: 
+      start: "2029-08-21T10:30:00-07:00"
   - id: exploit200
     name: EXPLOIT - 200
     visibility: 
