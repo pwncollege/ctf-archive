@@ -14,6 +14,10 @@ challenges:
     name: WEB - 300
     visibility: 
       start: "2029-08-21T10:30:00-07:00"
+  - id: networking400
+    name: WEB - 400
+    visibility: 
+      start: "2029-08-21T10:30:00-07:00"
   - id: exploit200
     name: EXPLOIT - 200
     visibility: 
