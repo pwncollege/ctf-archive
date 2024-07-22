@@ -20,6 +20,7 @@ modules:
   - id: 0ctf2017
   - id: hitcon2017quals
   - id: 0ctf2018
+  - id: angstromctf2018
   - id: backdoorctf2019
   - id: 0ctf2019
   - id: hsctf2019
