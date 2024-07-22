@@ -1,0 +1,19 @@
+id: downunderctf24
+name: DownUnderCTF 2024
+
+challenges:
+  - id: shufflebox
+    name: CRYPTO - 100 - Shufflebox
+  - id: myarraygenerator                        
+    name: CRYPTO - 200 - My Array Generator
+  - id: babysfirstforensics
+    name: FORENSICS - 100 - Baby's First Forensics
+  - id: badpolicies
+    name: MISC - 100 - Intercepted Transmissions   
+  - id: wackyreciepe
+    name: MISC - 141 - Wacky Recipe
+  - id: adorableencryptedanimal
+    name: REV - 449 - Adorable Encrypted Animal
+  - id: ternarybrained
+    name: REV - 335 - Ternary Brained
+  
