@@ -1,0 +1,6 @@
+id: angstromCTF2018
+name: angstrom CTF 2018
+
+challenges:
+  - id: rev1
+    name: REV - 60 - REV1
