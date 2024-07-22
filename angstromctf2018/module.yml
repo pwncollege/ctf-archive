@@ -4,3 +4,5 @@ name: angstrom CTF 2018
 challenges:
   - id: rev1
     name: REV - 60 - REV1
+  - id: rev2
+    name: REV - 80 - REV2
