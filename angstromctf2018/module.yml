@@ -6,3 +6,5 @@ challenges:
     name: REV - 60 - REV1
   - id: rev2
     name: REV - 80 - REV2
+  - id: rev3
+    name: REV - 100 - REV3
