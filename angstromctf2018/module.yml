@@ -10,6 +10,8 @@ challenges:
     name: REV - 100 - REV3
   - id: productkey
     name: REV - 200 - Product Key
+  - id: washington
+    name: REV - 200 - Washington
   - id: backtobasics
     name: CRYPTO - 20 - Back To Basics
   - id: xor
