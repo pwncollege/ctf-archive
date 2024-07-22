@@ -6,4 +6,5 @@ DownUnderCTF is the largest online Australian-run Capture The Flag (CTF) competi
 **Original Date:** Fri, 05 July 2024, 09:30 UTC — Sun, 07 July 2024, 09:30 UTC<br>
 **Original URL:** [https://play.duc.tf/](https://play.duc.tf/)<br>
 **CTFtime Entry:** [DownUnderCTF2024](https://ctftime.org/event/2284/)<br>
+**Organizing TeamL** [DownUnderCTF](https://ctftime.org/team/126400)<br>
 **Original Source Repository:** [https://github.com/DownUnderCTF/Challenges_2024_Public](https://github.com/DownUnderCTF/Challenges_2024_Public)<br>

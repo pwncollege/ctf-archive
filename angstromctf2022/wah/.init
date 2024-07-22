@@ -1,0 +1,4 @@
+#!/bin/bash
+
+ln -s /flag /challenge/flag.txt 2>/dev/null
+ln -sf /flag /home/hacker/flag.txt
