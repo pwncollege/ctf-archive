@@ -20,6 +20,8 @@ challenges:
     name: CRYPTO - 50 - Intro to RSA
   - id: accumulator
     name: BINARY - 50 - Accumulator
+  - id: bankroppery
+    name: BINARY - 250 - Bank Roppery
   - id: waldo2
     name: MISC - 30 - Waldo 2
   - id: weirdmessage
