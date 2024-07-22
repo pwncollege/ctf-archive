@@ -8,7 +8,7 @@ challenges:
     name: CRYPTO - 200 - My Array Generator
   - id: babysfirstforensics
     name: FORENSICS - 100 - Baby's First Forensics
-  - id: badpolicies
+  - id: interceptedtransmission
     name: MISC - 100 - Intercepted Transmissions   
   - id: wackyreciepe
     name: MISC - 141 - Wacky Recipe
