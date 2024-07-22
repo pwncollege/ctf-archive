@@ -20,3 +20,5 @@ challenges:
     name: BINARY - 50 - Accumulator
   - id: waldo2
     name: MISC - 30 - Waldo 2
+  - id: weirdmessage
+    name: MISC - 100 - Weird Message
