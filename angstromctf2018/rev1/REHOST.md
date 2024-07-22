@@ -7,7 +7,7 @@ This challenge has only one file which which is `rev1_32` which does not have an
 
 ## Flag Linking
 This challenge calls a flag file in the current directory so had to link the flag with /flag which is the pwn.college text:
-Checks if the file flag.txt exists and if not then it creates a link between flag.txt and /flag
+Checks if the file flag exists and if not then it creates a link between flag and /flag
 ```
 #!/bin/bash
 
