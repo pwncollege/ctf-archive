@@ -8,5 +8,7 @@ challenges:
     name: REV - 80 - REV2
   - id: rev3
     name: REV - 100 - REV3
+  - id: xor
+    name: CRYPTO - 40 - XOR
   - id: introtorsa
     name: CRYPTO - 50 - Intro to RSA
