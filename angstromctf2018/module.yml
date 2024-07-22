@@ -14,3 +14,5 @@ challenges:
     name: CRYPTO - 40 - XOR
   - id: introtorsa
     name: CRYPTO - 50 - Intro to RSA
+  - id: waldo2
+    name: MISC - 30 - Waldo 2
