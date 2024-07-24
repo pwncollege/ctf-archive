@@ -12,3 +12,15 @@ challenges:
     name: MISC - 70 - Shark 1
   - id: wah
     name: PWN - 100 - Wah
+  - id: reallyobnoxiousproblem
+    name: PWN - 140 - really obnoxious problem
+  - id: whatsmyname
+    name: PWN - 50 - whatsmyname
+  - id: numbergame
+    name: REV - 70 - Number Game
+  - id: dyn
+    name: REV - 100 - dyn
+  - id: uninspired
+    name: REV - 100 - uninspired
+  - id: baby3
+    name: REV - 40 - baby3

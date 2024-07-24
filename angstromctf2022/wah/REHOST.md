@@ -12,5 +12,6 @@ Checks if the file flag.txt exists and if not then it creates a link between fla
 #!/bin/bash
 
 # Attempt to create a symboliclink
-ln -s /flag /challenge/flag 2>/dev/null
+ln -s /flag /challenge/flag.txt 2>/dev/null
+ln -sf /flag /home/hacker/flag.txt
 ```
