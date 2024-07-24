@@ -31,6 +31,7 @@ modules:
   - id: corctf2021
   - id: wtfctf2021
   - id: vsctf2022
+  - id: angstromctf2022
   - id: imaginaryctf2022
   - id: accessdeniedctf2022
   - id: angstromctf2022
