@@ -4,6 +4,3 @@ One of these is not like the others.
 
 ---
 **Author:** JoshDaBosh
-
----
-Editor's NOTE: `amongus.tar.gz` the original zip is provided but we have set up the necessary files in the `out` folder.
