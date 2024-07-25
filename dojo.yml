@@ -22,6 +22,7 @@ modules:
   - id: 0ctf2018
   - id: angstromctf2018
   - id: backdoorctf2019
+  - id: justctf2019
   - id: 0ctf2019
   - id: hsctf2019
   - id: picoctf2019
