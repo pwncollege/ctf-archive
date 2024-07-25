@@ -34,7 +34,6 @@ modules:
   - id: angstromctf2022
   - id: imaginaryctf2022
   - id: accessdeniedctf2022
-  # - id: angstromctf2022
   - id: plaidctf
   - id: patriotctf2023
   - id: noobzctf2023
