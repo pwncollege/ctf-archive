@@ -2,8 +2,6 @@ id: angstromCTF2018
 name: ångstromCTF 2018
 
 challenges:
-  - id: warmup
-    name: Warmup
   - id: rev1
     name: REV - 60 - REV1
   - id: rev2
