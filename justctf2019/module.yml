@@ -1,0 +1,6 @@
+id: justCTF2019 
+name: justCTF2019
+
+challenges:
+  - id: atm
+    name: PWN - 394 - ATM
