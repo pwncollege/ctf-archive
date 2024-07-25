@@ -5,11 +5,11 @@ CTF event organized by justCatTheFish team.
 Introduction of justCatTheFish team:
 Hi! We are the best team from Poland and one of the top teams in the world (4th place in 2023).
 
-Our team emerged from two other teams with origins from AGH UST and UWr universities in Poland. Currently, we have members from different places in Poland but we are not limiting ourselves to only polish members.
+Our team emerged from two other teams with origins from AGH UST and UWr universities in Poland. Currently, we have members from different places in Poland but we are not limiting ourselves to only polish members.<br>
 
-Team captain: disconnect3d
-Vice captain: haqpl
-Co-founder: terjanq
+Team captain: disconnect3d<br>
+Vice captain: haqpl<br>
+Co-founder: terjanq<br>
 😺🐟
 
 ---
