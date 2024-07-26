@@ -6,6 +6,8 @@ challenges:
     name: CRYPTO - 91 - Triplet
   - id: wolf
     name: CRYPTO - 128 - Wolf
+  - id: frozen
+    name: CRYPTO - 142 - Frozen
   - id: elegant
     name: CRYPTO - 217 - Elegant Curve
   - id: trunc
