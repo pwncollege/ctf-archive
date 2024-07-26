@@ -16,8 +16,6 @@ challenges:
     name: CRYPTO - RSA5
   - id: crcconfusion
     name: FORENSICS - CRConfusion
-  - id: leet1
-    name: JAIL - Leet 1
   - id: pwn2038
     name: PWN - 2038
   - id: hexadecalingo
