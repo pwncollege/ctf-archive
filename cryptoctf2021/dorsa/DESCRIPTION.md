@@ -1,6 +1,10 @@
+Use the following command to execute the Python file:
 
-
-##### Use `sudo python elegant_curve.py` to run the python file.
+```bash
+sudo python elegant_curve.py
+```
 
 ---
+
 **Author:** CryptoCTF Team
+
