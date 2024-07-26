@@ -4,6 +4,8 @@ name: Crypto CTF 2021
 challenges:
   - id: triplet
     name: CRYPTO - 91 - Triplet
+  - id: wolf
+    name: CRYPTO - 128 - Wolf
   - id: elegant
     name: CRYPTO - 217 - Elegant Curve
   - id: trunc
