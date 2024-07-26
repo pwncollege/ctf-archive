@@ -9,7 +9,3 @@ chmod 0440 /etc/sudoers.d/hacker
 
 # Changes permissions of sudo to allow hacker to run it as root only for elegant_curve.py
 chmod 4755 /usr/bin/sudo
-
-# sudo -u root /challenge/elegant_curve.py
-
-# sudo chmod +x elegant_curve.py
