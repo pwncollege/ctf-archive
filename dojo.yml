@@ -31,6 +31,7 @@ modules:
   - id: downunderctf2021
   - id: corctf2021
   - id: wtfctf2021
+  - id: cryptoctf2021
   - id: vsctf2022
   - id: angstromctf2022
   - id: imaginaryctf2022
