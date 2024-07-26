@@ -2,6 +2,8 @@ id: cryptoctf2021
 name: Crypto CTF 2021
 
 challenges:
+  - id: hamul
+    name: CRYPTO - 83 - Hamul
   - id: triplet
     name: CRYPTO - 91 - Triplet
   - id: wolf
