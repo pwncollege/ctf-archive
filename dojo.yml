@@ -6,41 +6,42 @@ award:
 
 modules:
   - id: csawctf2011
-  - id: codegate2011
-  - id: hackluctf2011
   - id: csawctf2012
+  - id: csawctf2014
+  - id: csaw2017
+  - id: 0ctf2017
+  - id: 0ctf2018
+  - id: 0ctf2019
+  - id: codegate2011
+  - id: codegateprelims2014
+  - id: imaginaryctf2021
+  - id: imaginaryctf2022
+  - id: downunderctf2021
+  - id: downunderctf2024
+  - id: angstromctf2018
+  - id: angstromctf2022
+  - id: angstromctf2024
   - id: grehack2012
   - id: 29c3ctf2012
   - id: gitsctf2012
   - id: asisctf2013
-  - id: codegateprelims2014
   - id: ectf2014
-  - id: csawctf2014
-  - id: csaw2017
-  - id: 0ctf2017
+  - id: hackluctf2011
   - id: hitcon2017quals
-  - id: 0ctf2018
-  - id: angstromctf2018
   - id: backdoorctf2019
   - id: justctf2019
-  - id: 0ctf2019
   - id: hsctf2019
   - id: picoctf2019
   - id: 0x41414141ctf2021
-  - id: imaginaryctf2021
-  - id: downunderctf2021
   - id: corctf2021
   - id: wtfctf2021
   - id: cryptoctf2021
   - id: vsctf2022
-  - id: angstromctf2022
-  - id: imaginaryctf2022
   - id: accessdeniedctf2022
   - id: plaidctf
   - id: patriotctf2023
   - id: noobzctf2023
-  - id: angstromctf2024
-  - id: downunderctf2024
   - id: tamuctf2024
   - id: uiuctf2024
   - id: r3ctf2024
+  - id: byuctf2023
