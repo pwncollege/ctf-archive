@@ -4,5 +4,7 @@ name: Crypto CTF 2021
 challenges:
   - id: elegant
     name: CRYPTO - 217 - Elegant Curve
+  - id: trunc
+    name: CRYPTO - 334 - TRUNC
   - id: dorsa
     name: CRYPTO - 450 - DoRSA
