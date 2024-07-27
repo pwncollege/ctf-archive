@@ -8,6 +8,8 @@ challenges:
     name: CRYPTO - 83 - Hamul hyper_normal
   - id: triplet
     name: CRYPTO - 91 - Triplet
+  - id: improved
+    name: CRYPTO - 117 - Improved
   - id: wolf
     name: CRYPTO - 128 - Wolf
   - id: frozen
