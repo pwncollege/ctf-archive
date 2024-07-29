@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 import random
 from Crypto.Util.number import *
-flag = open('flag.txt').read()
+flag = open('/flag').read()
 alpha = 'abcdefghijklmnopqrstuvwxyz'.upper()
 to_guess = ''
 for i in range(16):

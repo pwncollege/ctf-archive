@@ -2,7 +2,7 @@ import binascii
 import random
 from Crypto.Util.number import isPrime
 
-flag = open("flag.txt", "rb").read().strip()
+flag = open("/flag", "rb").read().strip()
 m = int(binascii.hexlify(flag), 16)
 
 def genPrimes(size):
