@@ -1,0 +1,7 @@
+#!bin/bash
+
+cd /challenge
+
+unxz --force mem.dump.xz
+
+rm mem.dump.xz
