@@ -20,6 +20,8 @@ challenges:
     name: REV - 357 - VirtualJava
   - id: forgotpassword
     name: REV - 465 - Forgot Your Password?
+    visibility: 
+      start: "2029-08-21T10:30:00-07:00"
   - id: a-lost-cause
     name: CRYPTO - 196 - A Lost Cause
   - id: welcome-to-crypto-land
