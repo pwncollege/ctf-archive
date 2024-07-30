@@ -2,6 +2,8 @@
 
 cd /challenge
 
-unxz --force mem.dump.xz
+pip install pyliblzma
+
+sudo python lzma.py
 
 rm mem.dump.xz
