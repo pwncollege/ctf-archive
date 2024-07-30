@@ -1,9 +1,6 @@
 #!bin/bash
 
-cd /challenge
+sudo apt install xz-utils
 
-pip install pyliblzma
+xz --decompress --force /challenge/mem.dump.xz
 
-sudo python lzma.py
-
-rm mem.dump.xz
