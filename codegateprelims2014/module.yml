@@ -14,6 +14,8 @@ challenges:
     name: PWN - 550 - Hypercat
   - id: dodosandbox
     name: PWN - 600 - dodosandbox
+    visibility: 
+      start: "2029-08-21T10:30:00-07:00"
   - id: crackme
     name: REV - 200 - dodoCrackme
   - id: automata
