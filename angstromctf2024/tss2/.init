@@ -4,7 +4,7 @@
 ln -s /flag /challenge/flag.txt 2>/dev/null 
 
 # Attemp at konsole
-sudo apt-get install konsole
+pip install konsole
 
 # Install fastecdsa
 pip install fastecdsa
