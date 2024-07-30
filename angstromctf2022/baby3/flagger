@@ -1,6 +1,0 @@
-#!/bin/bash
-pip install pyinstaller
-pyinstaller --onefile flagCheck.py
-mv /challenge/dist/flagCheck /challenge/
-rm -r dist/ build/ flagCheck.spec
-
