@@ -10,7 +10,8 @@ So, you decide to dive into the sandbox. You remember that keeping your body fla
 Looking around your new surroundings, you’re in a tiny space with sand all around. You try to shake open your HUD, but it doesn’t work. With not much else you can do, you start digging your way out.
 
 
-`Only use flagCheck if you get a different flag than pwn.college{.....}, in which you input the flag you get from the challenge to get the actual flag`</br>
+`Only use flagCheck if you get a different flag than pwn.college{.....}, in which you input the flag you get from the challenge to get the actual flag`
+
 ---
 `Use sudo ./sandybox to run the challenge`
 ---
