@@ -22,6 +22,8 @@ challenges:
     name: CRYPTO - 217 - Tiny ECC
   - id: elegant
     name: CRYPTO - 217 - Elegant Curve
+  - id: ecchimera
+    name: CRYPTO - 271 - Ecchimera
   - id: trunc
     name: CRYPTO - 334 - TRUNC
   - id: dorsa
