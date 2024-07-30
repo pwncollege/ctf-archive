@@ -11,6 +11,7 @@ Looking around your new surroundings, you’re in a tiny space with sand all aro
 
 
 `Only use flagCheck if you get a different flag than pwn.college{.....}, in which you input the flag you get from the challenge to get the actual flag`
-
+---
+`Use sudo ./sandybox to run the challenge`
 ---
 **Author:** Plaid Parliament of Pwning
