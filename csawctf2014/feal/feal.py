@@ -1,7 +1,7 @@
 import os
 import array
 import binascii
-import SocketServer
+import socketserver
 import base64 as b64
 from hashlib import sha1
 DEBUG= False
@@ -40,18 +40,18 @@ def encrypt(plain,subkeys):
     cipherLeft = list_xor(R4L, fBox(list_xor(R4R, subkeys[3])))
     cipherRight = list_xor(cipherLeft, R4R)
     if DEBUG:
-        print "PL",pleft
-        print "PR",pright
-        print "L", left
-        print "R", right
-        print "R2R",R2R
-        print "R2L",R2L
-        print "R3R",R3R
-        print "R3L",R3L
-        print "R4R",R4R
-        print "R4L",R4L
-        print "CL",cipherLeft
-        print "CR",cipherRight
+        print ("PL",pleft)
+        print ("PR",pright)
+        print ("L", left)
+        print ("R", right)
+        print ("R2R",R2R)
+        print ("R2L",R2L)
+        print ("R3R",R3R)
+        print ("R3L",R3L)
+        print ("R4R",R4R)
+        print ("R4L",R4L)
+        print ("CL",cipherLeft)
+        print ("CR",cipherRight)
     return cipherLeft+cipherRight
 
 def decrypt(plain,subkeys):
@@ -76,32 +76,32 @@ def decrypt(plain,subkeys):
     pleft = list_xor(left, subkeys[4])
     pright = list_xor(right, subkeys[5])
     if DEBUG:
-        print "PL",pleft
-        print "PR",pright
-        print "L", left
-        print "R", right
-        print "R2R",R2R
-        print "R2L",R2L
-        print "R3R",R3R
-        print "R3L",R3L
-        print "R4R",R4R
-        print "R4L",R4L
-        print "CL",cipherLeft
-        print "CR",cipherRight
+        print ("PL",pleft)
+        print ("PR",pright)
+        print ("L", left)
+        print ("R", right)
+        print ("R2R",R2R)
+        print ("R2L",R2L)
+        print ("R3R",R3R)
+        print ("R3L",R3L)
+        print ("R4R",R4R)
+        print ("R4L",R4L)
+        print ("CL",cipherLeft)
+        print ("CR",cipherRight)
     return pleft+pright
 def genKeys():
     subkeys=[]
-    for x in xrange(6):
+    for x in range(6):
         subkeys.append(array.array("B",os.urandom(4)))
     return subkeys
 def genNull():
     subkeys=[]
-    for x in xrange(6):
+    for x in range(6):
         subkeys.append([0]*8)
     return subkeys
 
 
-class HandleCheckin(SocketServer.BaseRequestHandler):
+class HandleCheckin(socketserver.BaseRequestHandler):
     def handle(self):
         req = self.request
         proof = b64.b64encode(os.urandom(12))
@@ -122,7 +122,7 @@ class HandleCheckin(SocketServer.BaseRequestHandler):
         kp1="".join(map(chr,encrypt(kp1,key)))
         kp2="".join(map(chr,encrypt(kp2,key)))
         req.sendall("Please decrypt: "+binascii.hexlify(kp1)+binascii.hexlify(kp2)+"\n")
-        for x in xrange(2048):
+        for x in range(2048):
             toEnc=req.recv(8)
             if len(toEnc)!=8:
                 req.sendall("Goodbye")
@@ -131,7 +131,7 @@ class HandleCheckin(SocketServer.BaseRequestHandler):
             toEnc=array.array("B",toEnc)
             toSend=binascii.hexlify("".join(map(chr,encrypt(toEnc,key))))
             req.sendall(toSend+"\n")
-class ThreadedServer(SocketServer.ThreadingMixIn, SocketServer.TCPServer):
+class ThreadedServer(socketserver.ThreadingMixIn, socketserver.TCPServer):
     pass
 
 if __name__ == "__main__":
