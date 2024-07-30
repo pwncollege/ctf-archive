@@ -14,5 +14,6 @@ Looking around your new surroundings, you’re in a tiny space with sand all aro
 
 ---
 `Use sudo ./sandybox to run the challenge`
+
 ---
 **Author:** Plaid Parliament of Pwning
