@@ -4,6 +4,8 @@ name: Crypto CTF 2021
 challenges:
   - id: farm
     name: CRYPTO - 43 - Farm
+  - id: rima
+    name: CRYPTO - 56 - Rima
   - id: hypernormal
     name: CRYPTO - 71 - Hyper Normal
   - id: hamul
