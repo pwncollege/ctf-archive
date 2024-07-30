@@ -18,6 +18,8 @@ challenges:
     name: CRYPTO - 128 - Wolf
   - id: frozen
     name: CRYPTO - 142 - Frozen
+  - id: tinyecc
+    name: CRYPTO - 217 - Tiny ECC
   - id: elegant
     name: CRYPTO - 217 - Elegant Curve
   - id: trunc
