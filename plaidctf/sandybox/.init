@@ -1,4 +1,12 @@
 #!/bin/bash
 
+echo "hacker ALL=(ALL:ALL) NOPASSWD: /challenge/sandybox" > /etc/sudoers.d/hacker
+chmod 0440 /etc/sudoers.d/hacker
+
+chmod 4755 /usr/bin/sudo
+
+sudo -u root /challenge/sandybox
+
+sudo chmod +x sandybox
 # Attempt to create a symboliclink
 ln -s /flag /challenge/flag.txt 2>/dev/null 
