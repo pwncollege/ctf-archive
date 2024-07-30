@@ -2,10 +2,12 @@ id: cryptoctf2021
 name: Crypto CTF 2021
 
 challenges:
+  - id: farm
+    name: CRYPTO - 43 - Farm
   - id: hypernormal
     name: CRYPTO - 71 - Hyper Normal
   - id: hamul
-    name: CRYPTO - 83 - Hamul hyper_normal
+    name: CRYPTO - 83 - Hamul
   - id: triplet
     name: CRYPTO - 91 - Triplet
   - id: improved
