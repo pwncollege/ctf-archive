@@ -22,3 +22,5 @@ challenges:
     name: CRYPTO - 334 - TRUNC
   - id: dorsa
     name: CRYPTO - 450 - DoRSA
+  - id: lower
+    name: CRYPTO - Lower
