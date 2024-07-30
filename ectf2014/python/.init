@@ -1,3 +1,13 @@
 #!/bin/bash
 
-y | sudo apt-get install libncurses5 libncurses5:i386
+mv /challenge/i386/libncurses.so.5 /usr/lib/i386-linux-gnu/
+
+mv /challenge/x86/libncurses.so.5 /usr/lib/x86_64-linux-gnu/
+
+mv /challenge/i386/libtinfo.so.5 /usr/lib/i386-linux-gnu/
+
+mv /challenge/x86/libtinfo.so.5 /usr/lib/x86_64-linux-gnu/
+
+rm -r i386 x86
+
+# y | sudo apt-get install libncurses5 libncurses5:i386
