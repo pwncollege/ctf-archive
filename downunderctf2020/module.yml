@@ -1,0 +1,6 @@
+id: downunderctf2020 
+name: downunderctf2020
+
+challenges:
+  - id: 1337crypt
+    name: CRYPTO - 500 - 1337crypt
