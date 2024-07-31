@@ -1,5 +1,8 @@
 from Crypto.Util.number import getStrongPrime
-f = [REDACTED]
+
+with open('/flag','r') as file:
+    f = file.read().strip().encode()
+
 m = int.from_bytes(f,'big')
 p = getStrongPrime(512)
 q = getStrongPrime(512)
