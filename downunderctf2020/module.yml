@@ -6,6 +6,8 @@ challenges:
     name: PWN - 200 - Return Of What
   - id: returnofwharsrevenge
     name: PWN - 442 - Return Of Whats Revenge
+  - id: vecc
+    name: PWN - 499 - VECC
   - id: echos
     name: CRYPTO - 416 - my first echo server
   - id: 1337crypt
