@@ -4,6 +4,8 @@ name: DownUnderCTF 2020
 challenges:
   - id: returnofwhat
     name: PWN - 200 - Return Of What
+  - id: returnofwharsrevenge
+    name: PWN - 442 - Return Of Whats Revenge
   - id: echos
     name: CRYPTO - 416 - my first echo server
   - id: 1337crypt
