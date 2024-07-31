@@ -2,6 +2,8 @@ id: downunderctf2020
 name: DownUnderCTF 2020
 
 challenges:
+  - id: returnofwhat
+    name: PWN - 200 - Return Of What
   - id: echos
     name: CRYPTO - 416 - my first echo server
   - id: 1337crypt
