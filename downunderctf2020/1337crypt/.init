@@ -5,7 +5,3 @@ echo "hacker ALL=(ALL:ALL) NOPASSWD: /usr/bin/sage 1337crypt.sage" > /etc/sudoer
 chmod 0440 /etc/sudoers.d/hacker
 
 chmod 4755 /usr/bin/sudo
-
-sudo -u root /challenge/1337crypt.sage
-
-sudo chmod +x 1337crypt.sage
