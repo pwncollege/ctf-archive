@@ -7,7 +7,7 @@ import time
 import binascii
 import random
 
-flag = open("flag.txt", "rb").read().strip()
+flag = open("/flag", "rb").read().strip()
 
 class prng_lcg:
 
