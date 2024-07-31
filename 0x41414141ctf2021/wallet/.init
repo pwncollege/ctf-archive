@@ -10,7 +10,4 @@ chmod 4755 /usr/bin/sudo
 sudo -u root /challenge/main.py
 
 sudo chmod +x main.py
-
-# Attempt to create a symboliclink
-ln -s /flag /challenge/flag.txt 2>/dev/null
  
