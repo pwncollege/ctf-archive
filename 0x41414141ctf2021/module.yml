@@ -24,6 +24,8 @@ challenges:
     name: CRYPTO - 232 - Factorize
   - id: staple-aes
     name: CRYPTO - 445 - staple AES
+    visibility: 
+      start: "2029-08-21T10:30:00-07:00"
   - id: eazyrsa
     name: CRYPTO - 445 - Eazy RSA
   - id: wallet
