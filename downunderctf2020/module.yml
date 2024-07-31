@@ -2,5 +2,7 @@ id: downunderctf2020
 name: DownUnderCTF 2020
 
 challenges:
+  - id: echos
+    name: CRYPTO - 416 - my first echo server
   - id: 1337crypt
     name: CRYPTO - 500 - 1337crypt
