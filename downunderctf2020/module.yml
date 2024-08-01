@@ -26,5 +26,7 @@ challenges:
     name: CRYPTO - 500 - 1337crypt
   - id: impeccable
     name: CRYPTO - 500 - impECCable
+  - id: calcgame
+    name: CRYPTO - 500 - LSB||MSB Calculation Game
   - id: formatting
     name: REV - 100 - Formatting
