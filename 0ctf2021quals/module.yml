@@ -6,3 +6,7 @@ challenges:
     name: CRYPTO - Cloudpass
   - id: zer0lfsr
     name: CRYPTO - zer0lfsr
+  - id: listbook
+    name: PWN - 154 - Listbook
+    visibility:
+      start: "2029-08-21T10:30:00-07:00"
