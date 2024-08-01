@@ -1,11 +1,11 @@
-Can you solve my factorisation problem if I give you a hint?
+Can you crack this flawless ECC signature scheme?
 
 ---
-Use the following command to execute the Sage file:
+Use the following command to execute the Python file:
 
 ```bash
-sudo sage 1337crypt.sage
+sudo python server.py
 ```
 
 ---
-**Author:** joseph
+**Author:** joseph#8210
