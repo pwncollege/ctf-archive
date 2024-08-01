@@ -12,6 +12,7 @@ modules:
   - id: 0ctf2017
   - id: 0ctf2018
   - id: 0ctf2019
+  - id: 0ctf2021quals
   - id: codegate2011
   - id: codegateprelims2014
   - id: imaginaryctf2021
