@@ -18,8 +18,10 @@ challenges:
     name: CRYPTO - 416 - my first echo server
   - id: extracoolblockchaining
     name: CRYPTO - 422 - Extra Cool Block Chaining
+  - id: hexshiftcipher
+    name: CRYPTO - 445 - Hex Cipher Shift
   - id: ceebc
-    name: CRYPTO - 452 - CEEBC
+    name: CRYPTO - 452 - CEEBC 
   - id: 1337crypt
     name: CRYPTO - 500 - 1337crypt
   - id: formatting
