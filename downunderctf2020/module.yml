@@ -12,6 +12,8 @@ challenges:
     name: PWN - 499 - VECC
   - id: zombie
     name: PWN - 499 - Zombie
+  - id: roti
+    name: CRYPTO - 100 - ROT-I
   - id: babyrsa
     name: CRYPTO - 200 - BabyRSA
   - id: echos
