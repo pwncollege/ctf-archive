@@ -4,7 +4,7 @@ name: DownUnderCTF 2020
 challenges:
   - id: returnofwhat
     name: PWN - 200 - Return Of What
-  - id: returnofwharsrevenge
+  - id: returnofwhatsrevenge
     name: PWN - 442 - Return Of Whats Revenge
   - id: vecc
     name: PWN - 499 - VECC
