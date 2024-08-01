@@ -1,5 +1,5 @@
 id: greycattheflag2022
-name: greycattheflag2022
+name: Grey Cat The Flag 2022
 
 challenges:
   - id: baby
@@ -12,5 +12,3 @@ challenges:
     name: CRYPTO - Dot
   - id: calculator
     name: MISC - Calculator
-    
-  
