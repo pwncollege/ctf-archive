@@ -8,6 +8,8 @@ challenges:
     name: PWN - 442 - Return Of Whats Revenge
   - id: vecc
     name: PWN - 499 - VECC
+  - id: zombie
+    name: PWN - 499 - Zombie
   - id: echos
     name: CRYPTO - 416 - my first echo server
   - id: 1337crypt
