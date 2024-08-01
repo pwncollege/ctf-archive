@@ -1,6 +1,8 @@
 id: 0ctf2021quals
-name: 0CTF 2021 Quals
+name: 0CTF/TCTF 2021 Quals
 
 challenges:
   - id: cloudpass
     name: CRYPTO - Cloudpass
+  - id: zer0lfsr
+    name: CRYPTO - zer0lfsr
