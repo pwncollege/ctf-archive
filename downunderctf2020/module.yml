@@ -24,5 +24,7 @@ challenges:
     name: CRYPTO - 452 - CEEBC 
   - id: 1337crypt
     name: CRYPTO - 500 - 1337crypt
+  - id: impeccable
+    name: CRYPTO - 500 - impECCable
   - id: formatting
     name: REV - 100 - Formatting
