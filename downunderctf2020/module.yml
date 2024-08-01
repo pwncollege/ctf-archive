@@ -16,6 +16,8 @@ challenges:
     name: CRYPTO - 200 - BabyRSA
   - id: echos
     name: CRYPTO - 416 - my first echo server
+  - id: extracoolblockchaining
+    name: CRYPTO - 422 - Extra Cool Block Chaining
   - id: ceebc
     name: CRYPTO - 452 - CEEBC
   - id: 1337crypt
