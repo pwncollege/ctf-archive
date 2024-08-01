@@ -1,9 +1,7 @@
 
-## Welcome to 0CTF 2021 Quals
+## Welcome to 0CTF/TCTF 2021 Quals
 
-0CTF 2017 Quals is an annual online qualifier for the prestigious 0CTF finals, a Capture The Flag (CTF) cybersecurity competition hosted by the 0OPS team.
-
-CTF games often touch on many other aspects of information security: cryptography, stego, binary analysis, reverse engineering, mobile security and others. Good teams generally have strong skills and experience in all these issues.
+This is an online jeopardy-style CTF organized by 0ops and Tencent eee. We welcome CTF players all over the world!
 
 ---
 **Original Date:** Sat, 03 July 2021, 02:00 UTC — Mon, 05 July 2021, 02:00 UTC<br>
