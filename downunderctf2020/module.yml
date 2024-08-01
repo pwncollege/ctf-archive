@@ -12,6 +12,8 @@ challenges:
     name: PWN - 499 - VECC
   - id: zombie
     name: PWN - 499 - Zombie
+  - id: babyrsa
+    name: CRYPTO - 200 - BabyRSA
   - id: echos
     name: CRYPTO - 416 - my first echo server
   - id: ceebc
