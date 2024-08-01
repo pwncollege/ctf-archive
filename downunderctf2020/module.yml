@@ -16,3 +16,5 @@ challenges:
     name: CRYPTO - 416 - my first echo server
   - id: 1337crypt
     name: CRYPTO - 500 - 1337crypt
+  - id: formatting
+    name: REV - 100 - Formatting
