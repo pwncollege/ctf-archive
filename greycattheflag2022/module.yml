@@ -1,0 +1,16 @@
+id: greycattheflag2022
+name: greycattheflag2022
+
+challenges:
+  - id: baby
+    name: CRYPTO - baby
+  - id : block
+    name: CRYPTO - Block
+  - id: catino
+    name: CRYPTO - Catino
+  - id: dot
+    name: CRYPTO - Dot
+  - id: calculator
+    name: MISC - Calculator
+    
+  
