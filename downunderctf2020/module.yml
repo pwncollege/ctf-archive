@@ -14,6 +14,8 @@ challenges:
     name: PWN - 499 - Zombie
   - id: echos
     name: CRYPTO - 416 - my first echo server
+  - id: ceebc
+    name: CRYPTO - 452 - CEEBC
   - id: 1337crypt
     name: CRYPTO - 500 - 1337crypt
   - id: formatting
