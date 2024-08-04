@@ -6,6 +6,8 @@ challenges:
     name: CRYPTO - Cloudpass
   - id: zer0lfsr
     name: CRYPTO - zer0lfsr
+  - id: future
+    name: REV - Future
   - id: listbook
     name: PWN - 154 - Listbook
     visibility:
