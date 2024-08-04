@@ -8,6 +8,8 @@ challenges:
     name: CRYPTO - zer0lfsr
   - id: future
     name: REV - Future
+  - id: vp
+    name: REV - VP
   - id: listbook
     name: PWN - 154 - Listbook
     visibility:
