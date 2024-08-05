@@ -42,6 +42,7 @@ modules:
   - id: vsctf2022
   - id: accessdeniedctf2022
   - id: plaidctf
+  - id: patriotctf2022
   - id: patriotctf2023
   - id: noobzctf2023
   - id: tamuctf2024
@@ -49,4 +50,3 @@ modules:
   - id: r3ctf2024
   - id: byuctf2023
   - id: greycattheflag2022
-  - id: patriotctf2022
