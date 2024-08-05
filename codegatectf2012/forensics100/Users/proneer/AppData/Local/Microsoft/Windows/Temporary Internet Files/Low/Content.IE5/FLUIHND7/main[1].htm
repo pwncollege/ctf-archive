@@ -1,0 +1,558 @@
+
+
+
+
+	
+	
+	
+	
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	
+	
+
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>AhnLab - Antivirus Software and Security Solutions Provider</title>
+	<link rel="shortcut icon" href="http://image.ahnlab.com/ahnlab.ico" />
+	<link rel="stylesheet" type="text/css" href="/en/common/css/no-theme/jquery.ui.css" />
+	<link rel="stylesheet" type="text/css" href="/en/site/css/ahnlab.css" media="all" /> 
+	<link rel="stylesheet" type="text/css" href="/en/site/css/rowRegit.css" media="all" />
+	
+	<script language="javascript" type="text/javascript" src="/en/common/js/jquery.js"></script>
+	<script language="javascript" type="text/javascript" src="/en/common/js/jquery.validate.js"></script>
+	<script language="javascript" type="text/javascript" src="/en/common/js/jquery.ui.js"></script>
+	<script language="javascript" type="text/javascript" src="/en/common/js/common.js"></script>
+	<script language="javascript" type="text/javascript" src="/en/common/js/calendar.js"></script>
+
+	<script language="javascript" type="text/javascript" src="/en/site/js/common.js"></script>
+	<script language="javascript" type="text/javascript" src="/en/site/js/navi.js"></script>
+	
+	<script language="javascript" type="text/javascript" src="http://download.ahnlab.com/engver_script/global_ver.js"></script>
+	<script language="javascript">
+	<!--
+	$(document).ready(function() {
+		
+		curLevel();
+
+		$("#tab1").click(function() {
+	//		onTab(1);
+		});
+		$("#tab2").click(function() {
+	//		onTab(2);
+		});
+	});
+
+	function onTab(period) {
+
+		for(var i = 1; i < 3; i++) { 
+
+			if(i == period) {
+				$("#tab"+i+"").attr("src", "http://image.ahnlab.com/global/site/images/main/tab_0"+i+"_on.gif");
+				$("#press"+i+"").attr("style", "display:block");
+			}
+			else {
+				$("#tab"+i+"").attr("src", "http://image.ahnlab.com/global/site/images/main/tab_0"+i+".gif");
+				$("#press"+i+"").attr("style", "display:none");
+			}
+		}
+	}
+
+	function overBoard(type){
+		for(var i=1; i<=3; i++){
+			if(i == type){
+				$("#tab"+i+"").attr("src", "http://image.ahnlab.com/global/site/images/main/tab_0"+i+"_on.gif");
+				$("#press"+i+"").attr("style", "display:block");
+			}else{
+				$("#tab"+i+"").attr("src", "http://image.ahnlab.com/global/site/images/main/tab_0"+i+".gif");
+				$("#press"+i+"").attr("style", "display:none");
+			}
+		}
+	}
+	
+	function curLevel() {
+		
+		var no = $("#curLevel").val();
+
+		$("#riskLevel"+no+"").attr("style", "display:block");
+	}
+
+	// Go Virus Center
+	function getVirusCenter() {
+		
+		$("#mainForm").attr("action","/en/site/threat/viruscenter/virusList.do");
+		$("#mainForm").attr("target", "_self");
+		$("#mainForm").submit();		
+	}
+	
+	// Go Product Detail View
+	function getProdDetail(prod_class, prod_type, prod_seq) {
+
+		$("#prod_class").attr("value", prod_class);
+		$("#prod_type").attr("value", prod_type);
+		$("#prod_seq").attr("value", prod_seq);
+
+		$("#productForm").attr("action", "/en/site/product/productSubDetail.do");
+		$("#productForm").attr("target", "_self");
+		$("#productForm").submit();
+	}
+
+	// Go Product Renewal Page
+	function getRenewalList() {
+		
+		$("#mainForm").attr("action","/en/site/store/renewal/renewalList.do");
+		$("#mainForm").attr("target", "_self");
+		$("#mainForm").submit();
+	}
+
+	// Go Product Registration
+	function getProdregit() {
+		
+		$("#mainForm").attr("action","https://global.ahnlab.com/en/site/support/prodregit/prodregitArticle.do");
+		$("#mainForm").attr("target", "_self");
+		$("#mainForm").submit();
+	}
+
+	// Go Free Trial Downloads
+	function getFreeTrial() {
+		
+		$("#mainForm").attr("action","/en/site/download/engine/freeTrial.do");
+		$("#mainForm").attr("target", "_self");
+		$("#mainForm").submit();
+	}
+
+	// Go What to Do After Purchase! Guide Page
+	function getAfterPurchase() {
+		
+		$("#mainForm").attr("action","/en/site/etc/afterPurchase.do");
+		$("#mainForm").attr("target", "_self");
+		$("#mainForm").submit();
+	}
+
+	// Go Virus Report Center
+	function getVirusReport() {
+		
+		$("#mainForm").attr("action","/en/site/support/virusreport/virusReport.do");
+		$("#mainForm").attr("target", "_self");
+		$("#mainForm").submit();		
+	}
+
+	// Go Security Risk Level
+	function getRiskLevel() {
+
+		$("#mainForm").attr("action","/en/site/threat/html/secuRiskLevel.do");
+		$("#mainForm").attr("target", "_self");
+		$("#mainForm").submit();	
+	}
+	
+	// Go Press/Notice Detail
+	function getPressDetail(press_seq) {
+
+		if($("#tab1").attr("src").indexOf("tab_01_on") < 0)
+			$("#pressType").attr("value","001");
+		else
+			$("#pressType").attr("value","004");
+		
+		$("#press_seq").attr("value", press_seq);
+		$("#pressForm").attr("action", "/en/site/notice/noticeView.do");
+		$("#pressForm").attr("target", "_self");
+		$("#pressForm").submit();
+	}
+
+	// Go Press/Notice List
+	function getPressList() {
+
+		if($("#tab1").attr("src").indexOf("tab_01_on") < 0)
+			$("#pressType").attr("value","001");
+		else
+			$("#pressType").attr("value","004");
+		
+		$("#pressForm").attr("action", "/en/site/notice/noticeList.do");
+		$("#pressForm").attr("target", "_self");
+		$("#pressForm").submit();
+	}	
+	-->
+	</script>
+</head>
+
+<body>
+	<h1>AhnLab</h1>
+	<div id="accessibility">
+		<ul>
+			<li><a href="#contents">Main Contents</a></li>
+			<li><a href="#header">Global navigation Bar</a></li>
+			<li><a href="#leftMenu">Left navigation Bar</a></li>
+		</ul>
+	</div>
+	<div id="container">
+		<div id="header">
+			
+
+
+	<script language="javascript">
+	<!--
+		function fn_MainSearch(){
+
+			if($("#searchText").val() == "") {
+				alert("Please enter your search terms");
+				$("#searchText").focus();
+				return;
+			}
+
+			$("#Ahnform").attr("action", "/en/site/search/searchList.do");
+			$("#Ahnform").attr("target", "_self");
+			$("#Ahnform").submit();
+
+		}
+	//-->
+	</script>
+
+<div id="unbBox">
+	<p class="logo"><a href="javascript:mLink('000000');"><img src="http://image.ahnlab.com/global/site/images/common/layout/txt_logo.gif" alt="" /></a></p>
+	        
+<form id="Ahnform" name="Ahnform" onsubmit="fn_MainSearch();return false" action="/en/site/main.do" target="_self" method="post">
+	<p class="search">
+		<input type="text" name="searchText" value="" id="searchText"/>
+		<a href="javascript:fn_MainSearch();"><img src="http://image.ahnlab.com/global/site/images/common/btn/btns_search.gif" alt="" /></a>
+
+	</p>
+	</form>
+
+
+
+
+	<ul class="unb">
+		
+			<li><a href="javascript:mLink('070000');"><img src="http://image.ahnlab.com/global/site/images/common/layout/ut_login.gif" alt="Login" onmouseover="menuOver(this)" onmouseout="menuOut(this)" /></a></li>
+		
+		
+		<li><a href="javascript:mLink('080000');"><img src="http://image.ahnlab.com/global/site/images/common/layout/ut_myaccount.gif" alt="My Account" onmouseover="menuOver(this)" onmouseout="menuOut(this)" /></a></li>
+		<!--
+		<li><a href="http://shop.element5.com/cart.html?publisherid=200013181&cookies=1&currencies=USD&backlink=http%3A%2F%global.ahnlab.com"><img src="http://image.ahnlab.com/global/site/images/common/layout/ut_mycart.gif" alt="My Cart" onmouseover="menuOver(this)" onmouseout="menuOut(this)" /></a></li>
+		 -->
+		<li><a href="/en/site/store/mycart.do"><img src="http://image.ahnlab.com/global/site/images/common/layout/ut_mycart.gif" alt="My Cart" onmouseover="menuOver(this)" onmouseout="menuOut(this)" /></a></li>
+	</ul>
+</div>
+
+<ul class="gnbDep1">
+	<li class="mn1" onMouseOver="gnbPlNavi('gnbPl_1');" onMouseOut="gnbPlNavi(0);">
+		<a href="javascript:mLink('010000');" ><span>Products &amp; Services</span></a>
+		<div class="wrap" id="gnbPl_1" onMouseOut="gnbPlNavi(0);" style="display:none;">
+			<ul class="gnbDep2">
+				<li><a href="javascript:mLink('010100');">Home Products</a>
+					<ul class="gnbDep3">
+						<li><a href="javascript:mLink('010101');">- Desktop</a></li>
+						<li><a href="javascript:mLink('010102');">- Mobile</a></li>
+					</ul>
+				</li>
+				<li><a href="javascript:mLink('010200');">Business Products</a><!-- 선택시 a태그에 class="on" -->
+					<ul class="gnbDep3">
+						<li><a href="javascript:mLink('010201');">- Desktop</a></li><!-- 선택시 a태그에 class="on" -->
+						<li><a href="javascript:mLink('010202');">- File Server</a></li>
+						<li><a href="javascript:mLink('010203');">- Management</a></li>
+						<li><a href="javascript:mLink('010204');">- Network Appliance</a></li>
+						<li><a href="/en/site/product/productSubDetail.do?prod_type=NE&prod_class=N&prod_seq=9002">- Engine</a></li>
+					</ul>
+				</li>
+				<li class="last"><a href="javascript:mLink('010300');">Online Security Services</a>
+					<ul class="gnbDep3">
+						<li><a href="/en/site/product/productSubDetail.do?prod_type=P0&prod_class=P&prod_seq=9003">- AhnLab HackShield</a></li>
+						<li><a href="javascript:mLink('010302');">- AOS (AhnLab Online Security)</a></li>
+						<li><a href="javascript:mLink('010303');">- AOS Personal</a></li>
+						<li><a href="/en/site/product/productSubDetail.do?prod_type=P3&prod_class=P&prod_seq=1201">- AhnLab V3 365 Clinic</a></li>
+						<li><a href="/en/site/product/productSubDetail.do?prod_type=P4&prod_class=P&prod_seq=9004">- AhnLab Sefinity MSS</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</li>
+	<li class="mn2" onMouseOver="gnbPlNavi('gnbPl_2');" onMouseOut="gnbPlNavi(0);">
+		<a href="javascript:mLink('020000');" ><span>Downloads</span></a>
+		<div class="wrap" id="gnbPl_2" onMouseOut="gnbPlNavi(0);" style="display:none;">
+			<ul class="gnbDep2">
+				<li><a href="javascript:mLink('020100');">Free Trial Downloads</a></li>
+				<li><a href="javascript:mLink('020200');">Engine/Patch File Downloads</a></li>
+				<li><a href="javascript:mLink('020300');">Removal Tools</a></li>
+				<li><a href="javascript:mLink('020400');">Manual/CaseStudy Downloads</a></li>
+				<li class="last"><a href="javascript:mLink('020500');">Brochure Downloads</a></li>
+			</ul>
+		</div>
+	</li>
+	<li class="mn3" onMouseOver="gnbPlNavi('gnbPl_3');" onMouseOut="gnbPlNavi(0);">
+	<a href="javascript:mLink('030000');" ><span>Threats &amp; Solutions</span></a>
+		<div class="wrap" id="gnbPl_3" onMouseOut="gnbPlNavi(0);" style="display:none;">
+			<ul class="gnbDep2">
+				<li><a href="javascript:mLink('030100');">About ASEC</a></li>
+				<li><a href="javascript:mLink('030200');">ASEC Report</a></li>
+				<li><a href="javascript:mLink('030300');">Virus Center</a></li>
+				<li class="last"><a href="javascript:mLink('030400');">Security Risk Level</a></li>
+			</ul>
+		</div>
+	</li>
+	<li class="mn4" onMouseOver="gnbPlNavi('gnbPl_4');" onMouseOut="gnbPlNavi(0);">
+		<a href="javascript:mLink('040000');" ><span>Support</span></a>
+		<div class="wrap" id="gnbPl_4" onMouseOut="gnbPlNavi(0);" style="display:none;">
+			<ul class="gnbDep2">
+				<li><a href="javascript:mLink('040100');">Technical Support</a></li>
+				<li><a href="javascript:mLink('040200');">Customer Services</a></li>
+				<li><a href="javascript:mLink('040300');">Virus Report</a></li>
+				<li><a href="javascript:mLink('040400');">Virus FAQ</a></li>
+				<li><a href="javascript:mLink('040500');">Product FAQ</a></li>
+				<li><a href="javascript:mLink('040600');">Product Registration</a></li>
+				<li class="last"><a href="javascript:mLink('040700');">ID/Password Reminder</a></li>
+			</ul>
+		</div>
+	</li>
+	<li class="mn5">
+		<a href="javascript:mLink('060000','_blank');" ><span>About AhnLab</span></a>
+		<div class="wrap" id="gnbPl_5" onMouseOut="gnbPlNavi(0);" style="display:none;"></div>
+	</li>
+	<li class="mn6" onMouseOver="gnbPlNavi('gnbPl_6');" onMouseOut="gnbPlNavi(0);">
+		<a href="javascript:mLink('050000');" ><span>Store</span></a>
+		<div class="wrap" id="gnbPl_6" onMouseOut="gnbPlNavi(0);" style="display:none;">
+			<ul class="gnbDep2">
+				<li><a href="/en/site/store/storeHomeProductList.do">Home Products</a>
+					<ul class="gnbDep3">
+						<li><a href="/en/site/store/storeSubDetail.do?prod_type=CD&prod_class=C&prod_seq=5737">- AhnLab V3 Internet Security 8.0</a></li>
+						<li><a href="/en/site/store/storeSubDetail.do?prod_type=CD&prod_class=C&prod_seq=5791">- AhnLab V3 Internet Security 8.0 3PC</a></li>
+					</ul>
+				</li>
+				<li><a href="/en/site/store/storeBusinessProductList.do">Business Products</a>
+					<ul class="gnbDep3">
+						<li><a href="/en/site/store/storeSubDetail.do?prod_type=NF&prod_class=N&prod_seq=5738">- AhnLab V3Net for Windows <br />Server 7.0</a></li>
+						<li><a href="/en/site/store/storeSubDetail.do?prod_class=N&prod_type=NF&prod_seq=58051">- AhnLab V3 Internet Security<br />8.0  for Business 5 User</a></li>
+						<li><a href="/en/site/store/storeSubDetail.do?prod_class=N&prod_type=NF&prod_seq=58052">- AhnLab V3 Internet Security<br />8.0  for Business 10 User</a></li>
+						<li><a href="/en/site/store/storeSubDetail.do?prod_class=N&prod_type=NF&prod_seq=58053">- AhnLab V3 Internet Security<br />8.0  for Business 15 User</a></li>
+						<li><a href="/en/site/store/storeSubDetail.do?prod_class=N&prod_type=NF&prod_seq=58054">- AhnLab V3 Internet Security<br />8.0  for Business 30 User</a></li>
+						<li><a href="/en/site/store/storeSubDetail.do?prod_class=N&prod_type=NF&prod_seq=58055">- AhnLab V3 Internet Security<br />8.0  for Business 50 User</a></li>
+					</ul>
+				</li>
+				<li class="last"><a href="javascript:mLink('050300');">Renewal &amp; Upgrade Center</a></li>
+			</ul>
+		</div>
+	</li>
+</ul>
+
+		</div>
+ 
+		<div id="contents">
+			<!-- sub layout -->
+			<div id="mcontWrap">
+				<!-- Product Form -->
+				<form id="mainForm" name="mainForm" action="/en/site/main.do" method="post">
+					<input type="hidden" name="curLevel" value="2" id="curLevel"/>
+				</form>
+
+
+
+				
+				<form id="productForm" name="productForm" action="/en/site/main.do" method="get">
+					<input type="hidden" name="prod_class" value="" id="prod_class"/>
+					<input type="hidden" name="prod_type" value="" id="prod_type"/>
+					<input type="hidden" name="prod_seq" value="" id="prod_seq"/>
+				</form>
+
+
+
+
+				<form id="pressForm" name="pressForm" action="/en/site/main.do" method="post">
+					<input type="hidden" name="noticeVo.press_seq" value="" id="press_seq"/>
+					<input type="hidden" name="pressType" value="" id="pressType"/>
+				</form>
+
+
+
+				
+				
+				<div id="subMain">
+					<div class="mainSwf">
+						<script language="javascript" type="text/javascript">
+							// main_banner.swf?bannerXML=/en/site/main/mainXml.do // 차후 링크
+							swfprint('mainSwf','/en/site/swf/eMain_banner.swf?bannerXML=/en/site/main/mainXml.do','957px','195px','t');
+						</script>
+					</div>
+					<div class="fMain fixed">
+						<div class="leftWrap">
+						
+							<!-- Security Risk Level -->
+							<div class="levelBox">
+							
+								<p class="tit"><img src="http://image.ahnlab.com/global/site/images/main/tit_level.gif" alt="Security Risk Level" /></p>
+								<p class="warm"><a href="javascript:getRiskLevel();"><img src="http://image.ahnlab.com/global/site/images/common/blt/img_warning2.gif" alt="Level 2" /></a></p>
+								<ul>
+									<li><strong>V3</strong>
+										<a href="javascript:getRiskLevel();"><script type="text/javascript">document.write(ASEC_AUTOMADE_ENG_VER);</script></a>
+                      				</li>
+									<li><strong>SpyZero</strong>
+										<a href="javascript:getRiskLevel();"><script type="text/javascript">document.write(ASEC_AUTOMADE_ENG_VER);</script></a>
+									</li>
+								</ul>
+								<p class="link"><a href="javascript:getVirusCenter();">New Virus &amp; Spyware</a></p>
+							</div>
+							<!-- //Security Risk Level -->
+ 
+							<!-- Notice /  Release -->
+							<div class="bbsBox">
+								<ul class="tab">
+									<li class="first"><img src="http://image.ahnlab.com/global/site/images/main/tab_01_on.gif" alt="Notice" id="tab1" onmouseover="overBoard(1);"/></li>
+									<li><img src="http://image.ahnlab.com/global/site/images/main/tab_02.gif" alt="Press Room" id="tab2" onmouseover="overBoard(2);"/></li>
+								</ul>
+								<p class="more"><a href="javascript:getPressList();"><img src="http://image.ahnlab.com/global/site/images/common/btn/btns_more.gif" alt="more" /></a></p>
+
+								<ul class="tabList" id="press1" style="display:block;">
+									
+										<li><a href="javascript:getPressDetail('1507');">[Notice] Virus Reporting Cen..</a></li>
+									
+										<li><a href="javascript:getPressDetail('1506');">[Notice] Virus Reporting Cen..</a></li>
+									
+										<li><a href="javascript:getPressDetail('1502');">[Notice] Virus Reporting Cen..</a></li>
+									
+										<li><a href="javascript:getPressDetail('1497');">[Notice] 'ASEC Report' Cente..</a></li>
+									
+										<li><a href="javascript:getPressDetail('1496');">[Notice] V3 Internet Securit..</a></li>
+									
+								</ul>
+								<ul class="tabList" id="press2" style="display:none;">
+									
+										<li><a href="javascript:getPressDetail('1516');">AhnLab Delivers On-line Bank..</a></li>
+									
+										<li><a href="javascript:getPressDetail('1515');">AhnLab Announces Mobile Secu..</a></li>
+									
+										<li><a href="javascript:getPressDetail('1514');">AhnLab Announces its Top 7 S..</a></li>
+									
+										<li><a href="javascript:getPressDetail('1513');">Ahnlab announces 10 Security..</a></li>
+									
+										<li><a href="javascript:getPressDetail('1512');">AhnLab Achieves the Virus Bu..</a></li>
+									
+								</ul>								
+							</div>
+							<!-- //Notice / Press Release -->
+						</div>
+						<div class="centerWrap">
+							<dl class="fl">
+								<dt><img src="http://image.ahnlab.com/global/site/images/main/tit_prod01.gif" alt="Home Products" /></dt>
+								<dd>
+									<ul>
+										
+										<li class="first">
+											<a href="javascript:getProdDetail('C', 'CD', '9001');" class="centerimg">
+											<img src="http://image.ahnlab.com/global/upload/product/productmanagement/prodImg_9001" class="imgStore" alt="AhnLab SiteGuard" style="width:130px;height:95px;"/>
+											</a>
+											<p>
+											<a href="javascript:getProdDetail('C', 'CD', '9001');">
+												<strong class="bld"><strong class=bld2>AhnLab</strong> SiteGuard</strong>
+											</a>
+											</p>
+										</li>												
+										
+										<li >
+											<a href="javascript:getProdDetail('C', 'CD', '5791');" class="centerimg">
+											<img src="http://image.ahnlab.com/global/upload/product/productmanagement/prodImg_5791" class="imgStore" alt="AhnLab V3 Internet Security 8.0  3PC" style="width:130px;height:95px;"/>
+											</a>
+											<p>
+											<a href="javascript:getProdDetail('C', 'CD', '5791');">
+												<strong class="bld"><strong class=bld2>AhnLab</strong> V3 Internet Security 8.0  3PC</strong>
+											</a>
+											</p>
+										</li>												
+										
+									</ul>
+								</dd>
+							</dl>
+							<dl class="fr">
+								<dt><img src="http://image.ahnlab.com/global/site/images/main/tit_prod02.gif" alt="Business Products" /></dt>
+								<dd>
+									<ul>
+										
+										<li class="first">
+											<a href="javascript:getProdDetail('N', 'NA', '5690');" class="centerimg">
+											<img src="http://image.ahnlab.com/global/upload/product/productmanagement/prodImg_5690" class="imgStore" alt="AhnLab TrusGuard" style="width:130px;height:95px;"/>
+											</a>
+											<p>
+											<a href="javascript:getProdDetail('N', 'NA', '5690');">
+												<strong class="bld"><strong class=bld2>AhnLab</strong> TrusGuard</strong>
+											</a>
+											</p>
+										</li>												
+										
+										<li >
+											<a href="javascript:getProdDetail('N', 'ND', '5805');" class="centerimg">
+											<img src="http://image.ahnlab.com/global/upload/product/productmanagement/prodImg_5805" class="imgStore" alt="AhnLab V3 Internet Security 8.0 for Business" style="width:130px;height:95px;"/>
+											</a>
+											<p>
+											<a href="javascript:getProdDetail('N', 'ND', '5805');">
+												<strong class="bld"><strong class=bld2>AhnLab</strong> V3 Internet Security 8.0 for Business</strong>
+											</a>
+											</p>
+										</li>												
+										
+									</ul>
+								</dd>
+							</dl>
+						</div>
+						<div class="rightWrap">
+							<ul class="bnr">
+								<li class="first"><a href="javascript:getProdregit();"><img src="http://image.ahnlab.com/global/site/images/main/bnr_main01.gif" alt="Product Registration" /></a></li>
+								<li><a href="javascript:getRenewalList();"><img src="http://image.ahnlab.com/global/site/images/main/bnr_main02.gif" alt="Renewal & Upgrade Center" /></a></li>
+								<li><a href="javascript:getFreeTrial();"><img src="http://image.ahnlab.com/global/site/images/main/bnr_main03.gif" alt="Free Trial Downloads" /></a></li>
+							</ul>
+							<p class="bnr">
+								<a href="javascript:getVirusReport();"><img src="http://image.ahnlab.com/global/site/images/common/layout/bnr_virusreport.gif" alt="Virus Reporting Center" /></a>
+								<a href="javascript:getAfterPurchase();"><img src="http://image.ahnlab.com/global/site/images/common/layout/bnrs_afterpurchase.gif" alt="What You Need To DO - After Purchase!" /></a>
+							</p>
+						</div>
+					</div>
+ 
+				</div>
+				<!-- //real Contents -->
+			</div>
+			<!-- //sub layout -->
+		</div>
+
+		<div id="footer">
+			
+<div class="fWrap">
+	<div class="fLogo"><img src="http://image.ahnlab.com/global/site/images/common/layout/f_logo.gif" alt="AhnLab" /></div>
+	<div class="fMenu">
+		<ul>
+			<li><a href="javascript:mLink('100100')"><img src="http://image.ahnlab.com/global/site/images/common/layout/mn_foot1.gif" alt="Terms of Use" /></a></li>
+			<li><a href="javascript:mLink('100200')"><img src="http://image.ahnlab.com/global/site/images/common/layout/mn_foot2.gif" alt="Privacy & Security" /></a></li>
+			<li><a href="javascript:mLink('100300')"><img src="http://image.ahnlab.com/global/site/images/common/layout/mn_foot3.gif" alt="Contact Us" /></a></li>
+			<li><a href="javascript:mLink('100600','_blank')"><img src="http://image.ahnlab.com/global/site/images/common/layout/mn_foot5.gif" alt="Partners" /></a></li>
+			<li><a href="javascript:mLink('100400')"><img src="http://image.ahnlab.com/global/site/images/common/layout/mn_foot4.gif" alt="Sitemap" /></a></li>
+		</ul>
+	</div>
+	<div class="fSite">
+		<p id="fsbtn" class="btn" onclick="globalSite()">Global Site</p>
+		<div id="fsBox" class="fsList" style="display:none;">
+			<ul>
+				<li><a href="http://www.ahnlab.com/kr/site/main/main.do" target="_blank">Korean</a></li>
+				<li><a href="http://www.ahnlab.co.jp" target="_blank">Japanese</a></li>
+				<li><a href="http://www.ahn.com.cn/" target="_blank">Chinese</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="fCopy">
+		<p><img src="http://image.ahnlab.com/global/site/images/common/layout/txt_copyright.gif" alt="Copyright ⓒ AhnLab, Inc. 1988-2010 All rights reserved. " /></p>
+	</div>
+</div>
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-17204763-7']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+		</div>
+	</div>
+ 
+</body>
+</html>

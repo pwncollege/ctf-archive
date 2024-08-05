@@ -1,0 +1,396 @@
+﻿#panelcontainer
+{
+    margin-bottom:110px;
+}
+.pinningpanel
+{
+    width:200px;
+    height:104px;
+    float:left;
+    padding:8px 7px 10px 12px;
+}
+#panelcontainer div.left
+{
+    /*
+    border-radius:5px;
+    border:2px solid #C37469;
+    background-color:#FFFFFF;
+    background-image: -ms-linear-gradient(top, #FFFFFF 0%, #EFDCD9 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#FFFFFF', endColorstr='#EFDCD9',GradientType=0 ); 
+    background-image: -moz-linear-gradient(top, #FFFFFF 0%, #EFDCD9 100%);
+    background-image: -o-linear-gradient(top, #FFFFFF 0%, #EFDCD9 100%);
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #FFFFFF), color-stop(1, #EFDCD9));
+    background-image: -webkit-linear-gradient(top, #FFFFFF 0%, #EFDCD9 100%);  
+*/
+}
+#panelcontainer div.left img
+{
+  padding-right:32px; /*adjust for width of .num*/
+  display:block;
+  margin-left:auto;
+  margin-right:auto;
+}
+#panelcontainer div.num
+{
+    width:32px;
+    height:100%;
+    float:left;
+    color:#971906;
+    font-size:34px;
+    font-weight:bold;
+}
+#panelcontainer p
+{
+    margin-top:0px;
+}
+#holidaytag
+{
+    position:absolute;
+    z-index:1;
+    margin-top:-35px;
+    margin-left:-40px;
+}
+#panelcontainer #demoIcon
+{
+  width:150px;
+}
+#holiday_offers 
+{
+    color: #881B1A;
+    font-size: 11px;
+    left: 35px;
+    position: absolute;
+    top: 78px;
+}
+#holiday_offers strong 
+{
+    text-transform: uppercase;
+    font-size: 14px;
+    vertical-align: text-top;
+}
+#detail .trouble
+{
+    padding-top:45px;
+    padding-bottom:45px;
+}
+
+.snow-container {
+    bottom: 0;
+    height: 400px;
+    left: -200px;
+    overflow: hidden;
+    position: absolute;
+    width: 1800px;
+    z-index: 5;
+}
+
+#logo.holiday
+{
+    top: 20px!important;
+    right: 30px!important;
+}
+
+.section_pinned #holiday_tag 
+{
+        /*this is only ok because we are targeting ie9*/
+    margin-left: -26px;
+    margin-top:-28px;
+}
+
+#holiday_pane {
+    width:998px;
+    margin:15px auto 0px auto;
+    padding:10px 10px 10px 0px;
+    background-image: url("/assets/images/holiday/holiday_bg.png");
+    background-repeat: no-repeat;
+    height:291px;
+}
+
+#holiday_pane.hasIE9 .get_ie9_now {
+    display: none;
+}
+
+#holiday_pane.noIE9 .offer_details {
+    display: none;
+}
+
+#holiday_tag:hover
+{
+    cursor: pointer;
+}
+
+#holiday_tag 
+{
+    display: none;
+    width: 129px;
+    
+    background-image: url("/assets/images/content/holiday/smallHolidayTagBG.png");
+    background-repeat: no-repeat;
+    background-position: 10px 10px;
+    padding-bottom: 0px;
+    padding-left: 70px;
+    padding-right: 50px;
+}
+
+#holiday_tag span 
+{
+    font-family: 'Segoe Light', 'Segoe UI Light', Segoe, 'Segoe UI', Arial, sans-serif;
+    color: White;   
+    font-weight: lighter;
+    -ms-transform: rotate(12deg);
+}
+
+.us #holiday_tag 
+{
+    height: 98px;
+    padding-top: 45px;
+    font-size: 19px;
+}
+
+.cn #holiday_tag 
+{
+    font-size: 17px;
+    padding-top: 50px;
+    height: 93px;
+}
+
+#holiday_tag_big {
+    opacity:0;
+    background-repeat:no-repeat;
+    background-position: -55px -5px;
+    background-image:url('/assets/images/content/holiday/largeholidaytag_bg.png');
+    min-height:195px;
+    position:relative;
+}
+
+#holiday_tag_big h2 
+{
+    font-family: 'Segoe Light', 'Segoe UI Light', Segoe, 'Segoe UI', Arial, sans-serif;
+    color: White;   
+    font-weight: lighter;
+    position: absolute;
+    -ms-transform: rotate(12deg);
+}
+
+.us #holiday_tag_big h2 strong,
+.us #holiday_tag span strong 
+{
+    font-family: Segoe, 'Segoe UI', Arial, sans-serif;
+}
+
+.cn #holiday_tag_big h2 strong,
+.cn #holiday_tag span strong 
+{
+    font-weight: bold;
+}
+
+.us #holiday_tag_big h2 
+{
+    left: 89px;
+    top: 48px;
+    width: 180px;
+    left: 89px;   
+    font-size: 28px;
+}
+
+.cn #holiday_tag_big h2 
+{
+    left: 85px;
+    top: 56px;
+    width: 200px;
+    font-size: 26px;
+}
+
+.cn #holiday_tag_big h4 
+{
+    padding-left: 8px;
+}
+    
+
+#holiday_pane a {
+    color:#5598BE;
+}
+
+#holiday_pane a.hide_offers
+{
+    background-image: url("/assets/images/holiday/holiday_hide_arrow.png");
+    background-repeat: no-repeat;
+    background-position: 85px 0px;
+    font-size:16px;
+    text-decoration:none;
+    position:absolute;
+    top:-35px;
+    right:0;
+    display: block;
+    height: 30px;
+    width: 104px;
+    vertical-align: middle;
+    line-height: 26px;
+}
+
+#holiday_pane a.hide_offers:hover{
+    text-decoration:underline;
+}
+
+#holiday_pane div.holiday_pin_site_list{
+    margin:30px 0 0 325px;
+    overflow:hidden;
+}
+
+#holiday_pane div.holiday_pin_site_list h4{
+    font-size:24px;
+    color:#BB3011;
+}
+
+#holiday_pane div.holiday_pin_site_list ul{
+    overflow:hidden;
+    margin-top:15px;
+    width: 85%;
+}
+
+#holiday_pane div.holiday_pin_site_list ul li{
+    width:104px;
+    height:95px;
+    float:left;
+    margin:3px;  
+    background-repeat: no-repeat;
+    background-clip: border-box;
+}
+
+#holiday_pane div.holiday_pin_site_list ul.us li{
+    background-image: url("/assets/images/holiday/holidayTileBG.png");
+}
+
+
+#holiday_pane div.holiday_pin_site_list ul li:hover{
+    border-radius: 5px;
+    height: 93px;
+    width: 102px;
+    /*
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#ffffff', EndColorStr='#D8F6FD');
+    
+    background-image: -ms-linear-gradient(top, #ffffff, #D8F6FD); 
+    background-image: -o-linear-gradient(top, #ffffff, #D8F6FD); 
+    background-image: linear-gradient(top, #ffffff, #D8F6FD);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#D8F6FD)); 
+    background-image: -webkit-linear-gradient(top, #ffffff, #D8F6FD); 
+    background-image: -moz-linear-gradient(top, #ffffff, #D8F6FD);
+    */
+}
+
+#holiday_pane div.holiday_pin_site_list ul.us li:hover{
+    border: 1px solid #5598BE;
+}
+
+#holiday_pane div.holiday_pin_site_list ul.cn li:hover{
+    border: 1px solid white;
+}
+
+#holiday_pane div.holiday_pin_site_list ul li a{
+    background-repeat:no-repeat;
+    background-position:center center;
+    display:block;
+    width:100%;
+    height:100%;
+    position:relative;
+}
+
+#holiday_pane div.holiday_pin_site_list ul.us li:hover a
+{
+   background-position:center -25px;
+}
+
+#holiday_pane div.holiday_pin_site_list ul li.ticketmaster a{
+    background-image:url(/assets/images/content/holiday/ticketmaster.png);
+}
+
+#holiday_pane div.holiday_pin_site_list ul li.flixster a{
+    background-image:url(/assets/images/content/holiday/flixster.png);
+}
+
+#holiday_pane div.holiday_pin_site_list ul li.fandango a{
+    background-image:url(/assets/images/content/holiday/fandango.png);
+}
+
+#holiday_pane div.holiday_pin_site_list ul li.slacker a{
+    background-image:url(/assets/images/content/holiday/slacker.png);
+}
+
+#holiday_pane div.holiday_pin_site_list ul li.grooveshark a{
+    background-image:url(/assets/images/content/holiday/grooveshark.png);
+}
+
+#holiday_pane div.holiday_pin_site_list ul li.pandora a{
+    background-image:url(/assets/images/content/holiday/pandora.png);
+}
+
+#holiday_pane div.holiday_pin_site_list ul li.vimeo a{
+    background-image:url(/assets/images/content/holiday/vimeo.png);
+}
+
+#holiday_pane div.holiday_pin_site_list ul li.zynga a{
+    background-image:url(/assets/images/content/holiday/zynga.png);
+}
+
+#holiday_pane div.holiday_pin_site_list ul li.hulu a{
+    background-image:url(/assets/images/content/holiday/hulu.png);
+}
+
+#holiday_pane div.holiday_pin_site_list ul li.aolradio a{
+    background-image:url(/assets/images/content/holiday/aolradio.png);
+}
+
+/* China */
+
+#holiday_pane div.holiday_pin_site_list ul li.meituan a{
+    background-image:url(/assets/images/content/holiday/meituan.png);
+}
+
+#holiday_pane div.holiday_pin_site_list ul li.pcbeta a{
+    background-image:url(/assets/images/content/holiday/pcbeta.png);
+}
+
+#holiday_pane div.holiday_pin_site_list ul li.pptv a{
+    background-image:url(/assets/images/content/holiday/pptv.png);
+}
+
+#holiday_pane div.holiday_pin_site_list ul li.iqiyi a{
+    background-image:url(/assets/images/content/holiday/iqiyi.png);
+}
+
+#holiday_pane div.holiday_pin_site_list ul li.tudou a{
+    background-image:url(/assets/images/content/holiday/tudou.png);
+}
+
+#holiday_pane div.holiday_pin_site_list ul li.yoka a{
+    background-image:url(/assets/images/content/holiday/yoka.png);
+}
+
+#holiday_pane div.holiday_pin_site_list ul li.zol a{
+    background-image:url(/assets/images/content/holiday/zol.png);
+}
+
+#holiday_pane div.holiday_pin_site_list ul li a strong{
+    display:block;
+    text-align:center;
+    width:100%;
+    font-size:15px;
+    position:absolute;
+    bottom:13px;
+    visibility:hidden;
+}
+
+#holiday_pane div.holiday_pin_site_list ul li:hover a strong{
+    visibility: visible;
+}
+
+.browseTag 
+{
+    position:absolute;
+    z-index:5;
+    top:-5px;
+    left:-10px;
+    height:121px;
+    width:82px;
+    border-width:0px;
+}

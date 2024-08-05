@@ -1,0 +1,901 @@
+@import url(eventCatalog.css);
+
+/* /////////  Template Styles  ///////// */
+#printView{
+  margin:10px;
+  font-size: 8pt;
+  background: none;
+  text-align: left; 
+}
+#printView #badge_print{
+	width: 3in;
+	border-right: 1pt dashed #ccc;
+	padding-right: 2pt;
+}
+#print_header{
+	
+}
+#print_header h1{
+	font-size: 12pt;
+	margin: 0;
+	padding: 0;
+	line-height: 18pt;
+}
+#print_header h2{
+	font-size: 10pt;
+	line-height: 16pt;
+	margin:0;
+	padding:0 0 4pt;
+}
+#print_time{
+	float:right;
+	font-size: 10pt;
+}
+#print_name{
+	float:right;
+	font-size: 12pt;
+}
+#intro_copy{
+	margin-bottom: 0;
+	padding-bottom: 4pt;
+/* 	border-bottom: 1px solid grey; */
+}
+
+#print_container{
+
+}
+#print_container table{
+	width: 100%;
+	margin-bottom: 1pt;
+}
+#print_container table th{
+	background: #efefef;
+	padding: 0;
+	line-height: 18pt;
+	color:#555;
+	font-style: italic;
+	border:none;
+	padding-left: 4pt;	
+}
+#print_container table td{
+	font-size: 8pt;
+	padding: 2pt;
+	border-bottom: 1px dotted #ccc;
+	vertical-align: top;
+}
+#print_container td.sess_time{
+	white-space: nowrap;
+}
+#print_container .start_time{
+	font-weight: bold;	
+}
+.start_time em,
+.end_time em{
+	display: none;
+}
+#print_container .end_time{
+
+}
+#print_container td.sess_room{
+	font-weight: bold;
+	width: 30%;
+/* 	white-space: nowrap; */
+}
+#print_container .room_name{
+	font-weight: normal;
+}
+#print_container td.sess_title{
+
+}
+#sess_legend{
+	padding: 0;
+	margin: 0;
+	padding-top: 8pt;
+	clear:both;
+	line-height: 16px;
+	color: #666;
+}
+#sess_legend span{
+	padding-right: 20pt;
+}
+
+/**********************************************************************
+
+*/
+
+.sessionTypeColumn-off{
+  display:none;
+}
+ul.speakersList{
+  list-style:none;
+  padding:0 10px;
+  margin:3px 0 15px 0;
+  float:left;
+}
+ul.speakersList li{
+  display:block;
+  float:left;
+  width:250px;
+}
+ul.speakersList li .note{
+  display:block;
+  height:10px;
+}
+
+#staticSessionDetailsContainer td.formPromptTd{width: auto;}
+#staticSessionDetailsContainer td.formElementTd{text-align: left;}
+
+/**********************************************************************
+images classes
+*/
+img.iconStar{
+  background: url(../images/icon_star.gif) no-repeat bottom;
+  height:12px;
+  width:11px;
+}
+
+.imageAdd,
+.imageSessionFull,
+.imageCheck,
+.imageWaiting,
+.imageWaitingAdd,
+.imageWaitingDelete,
+.imageDelete,
+.imageEdit,
+.imagePersonal,
+.imageInterest,
+.imageShoppingCart,
+.imagePast,
+.imageSpeaker,
+.imageReplace,
+.imagePodcast
+{
+	background-position:center;
+	background-repeat:no-repeat;
+	vertical-align:middle;
+	width:22px;
+	height:22px;
+	margin:2px 4px;
+}
+.imageAdd{
+	background-image:url(../images/icon_add.gif);
+}
+.imagePodcast{
+  background-image:url(../images/icon_podcast.png);
+}
+.imageAddSmall{
+	background-image:url(../images/add_small.gif);
+	background-position:center center;
+	background-repeat:no-repeat;
+	vertical-align:middle;
+	width:13px;
+	height:13px;
+	margin-right:6px;
+}
+.imageAddP{
+	background-image:url(../images/circle_p.gif);
+	background-position:center center;
+	background-repeat:no-repeat;
+	vertical-align:middle;
+	width:13px;
+	height:13px;
+	margin-right:6px;
+	margin-top:6px;
+}
+.imagePast{
+	background-image:url(../images/past.gif);
+}
+.imageCheck{
+	background-image:url(../images/icon_scheduled.gif);
+}
+.imageWaiting{
+	background-image:url(../images/icon_waiting.gif);
+}
+.imageWaitingAdd{
+	background-image:url(../images/waiting_add.gif);
+}
+.imageSessionFull{
+	background-image:url(../images/full.gif);
+}
+.imageReplace{
+	background-image:url(../images/icon_replace.gif);
+}
+.imageDelete,
+.imageWaitingDelete{
+	background-image:url(../images/icon_delete.gif);
+}
+.imageEdit{
+	background-image:url(../images/icon_edit.png);
+}
+.imagePersonal{
+	background-image:url(../images/personal.gif);
+}
+.imageSpeaker{
+	background-image:url(../images/icon_speaker.gif);
+}
+.imageInterest{
+  background-image:url(../images/icon_interested.gif);
+}
+.imageShoppingCart{
+	background-image:url(../images/cart.gif);
+}
+.imageColumnSort_asc{
+	background-image:url(../images/sort_arrow.gif);
+	background-position:center center;
+	background-repeat:no-repeat;
+	width:13px;
+	height:13px;
+/* 	margin-right:2px; */
+	margin-left:2px;
+	vertical-align:middle;
+	float:left;
+}
+.imageColumnSort_desc{
+	background-image:url(../images/sort_arrow_reverse.gif);
+	background-position:center center;
+	background-repeat:no-repeat;
+	width:13px;
+	height:13px;
+/* 	margin-right:2px; */
+	margin-left:2px;
+	vertical-align:middle;
+	float:left;
+}
+.imagePDF{
+	background-image:url(../images/pdf.png);
+	background-position:center center;
+	background-repeat:no-repeat;
+	width:16px;
+	height:16px;
+}
+.imagePrinter{
+	background-image:url(../images/printer.gif);
+	background-position:center center;
+	background-repeat:no-repeat;
+	width:20px;
+	height:20px;
+	vertical-align:middle;
+	margin-right:4px;
+}
+.imageArrowNext{
+	background-image:url(../images/arrow_right.gif);
+	background-position:center center;
+	background-repeat:no-repeat;
+	width:13px;
+	height:13px;
+	vertical-align:middle;
+}
+.imageArrowPrev{
+	background-image:url(../images/arrow_left.gif);
+	background-position:center center;
+	background-repeat:no-repeat;
+	width:13px;
+	height:13px;
+	vertical-align:middle;
+}
+.imageAutoSchedulerHead{
+	background-image:url(../images/autoscheduler_head.gif);
+	background-position:center center;
+	background-repeat:no-repeat;
+}
+.imagePersonalTimeHead{
+	background-image:url(../images/personaltime_head.gif);
+	background-position:center center;
+	background-repeat:no-repeat;
+}
+.imageCheckRedRemove{
+	background-image:url(../images/checkred_remove.gif);
+	background-position:center center;
+	background-repeat:no-repeat;
+}
+
+/**********************************************************************
+event guide classes
+*/
+.formatRoom{
+  background-color:#eeeeee;
+  border-bottom:1px solid #FCCCB4;
+  border-right:1px solid #FCCCB4;
+  padding:3px;
+  vertical-align:top;
+}
+.formatEvent{
+  background-color:#ffffdd;
+  border-right:1px solid #FCCCB4;
+  border-bottom:1px solid #FCCCB4;
+  padding:3px;
+}
+.formatOfftime{
+  background-color:#ffffff;
+  padding:3px;
+}
+.formatSpacerRowTd{
+  width:13px;
+}
+.formatMoreInfo{
+  background-image:url(../images/glass.gif);
+  width:22px;
+  height:22px;
+  background-repeat:no-repeat;
+  background-position:center center;
+  vertical-align:middle;
+  margin-top:-4px;
+  margin-left:-4px;
+  margin-bottom:-4px;
+  margin-right:4px;
+  padding:0px;
+  background-color:#E2E2BE;
+}
+.formatOfftime{
+  padding-left:3px;
+  border-right:1px solid #FCCCB4;
+  border-bottom:1px solid #FCCCB4;
+}
+.fontHomeHeader {
+	margin-top:15px;
+	font-size:13px;
+	font-weight:bold;
+	color:#000000;
+}
+
+/**********************************************************************
+schedule classes
+*/
+.scheduleImage {
+	width:12px;
+	height:12px;
+  vertical-align: middle;
+}
+.scheduleEnrolled,.scheduleWaiting,.schedulePersonal,.scheduleSpeaker{
+	border:1px solid black;
+}
+
+.dataTable .scheduleItem{
+  white-space:nowrap;
+	border:2px solid #000;
+  padding:0px;
+}
+.dataTable .scheduleItem,
+.dataTable .scheduleItem .title a{
+  font-weight:bold;
+  color:#fff;
+}
+.dataTable .waiting,
+.dataTable .waiting .title a{
+  color:#555;
+}
+.dataTable .waiting .content,
+.dataTable .waiting .content a{
+  color:#999;
+}
+.dataTable .scheduleItem .title{
+  padding:3px;
+  font-size:12px;
+  margin:0;
+}
+.dataTable .scheduleItem .title a{
+  display: block;
+}
+.dataTable a.editLink{
+  float:right;
+  font-size:11px;
+}
+.dataTable .scheduleItem .content {
+  padding:3px;
+}
+.dataTable .enrolled .title,
+.dataTable .meeting .title {
+  background:#82bb31;
+}
+.dataTable .waiting .title {
+  background:#ddd;
+}
+.dataTable .personal .title {
+  background:#2f80d4;
+}
+.dataTable .speaker .title {
+  background:#f88a00;
+}
+.dataTable tr.even td.enrolled,
+.dataTable tr.odd td.enrolled,
+.dataTable tr.even td.meeting,
+.dataTable tr.odd td.meeting,
+.scheduleEnrolled{
+	background-color:#93cb43;
+}
+.dataTable tr.even td.waiting,
+.dataTable tr.odd td.waiting,
+.scheduleWaiting{
+	background-color:#F0F0F0;
+}
+.dataTable tr.even td.personal,
+.dataTable tr.odd td.personal,
+.schedulePersonal{
+	background-color:#4f98e6;
+}
+.dataTable tr.even td.speaker,
+.dataTable tr.odd td.speaker,
+.scheduleSpeaker{
+	background-color:#fdad4a;
+}
+.scheduleBlankTd{
+
+}
+.scheduleRowEven {
+	background-color:#f0f0f0;
+}
+.scheduleRowOdd {
+	background-color:#FFFFFF;
+}
+.scheduleHeaderTd {
+	background-color:#E0E0E0;
+	font-weight:bold;
+}
+.imageAddSmall{
+  width:12px;
+  height:12px;
+  margin:0px;
+  margin-right:5px;
+	background-image:url(../images/icon_add_tiny.gif);
+}
+
+.schedulePendingMeeting {
+  background-color: #f8f1d7;
+}
+.scheduleAddSession {
+  font-size:11px;
+  vertical-align:top;
+  white-space:nowrap;
+}
+/***********************************************************************
+tab classes
+*/
+.formatTabLeft-on,.formatTabLeft-off,
+.formatTabRight-on,.formatTabRight-off,
+.formatTabLeft-on img,.formatTabLeft-off img,
+.formatTabRight-on img,.formatTabRight-off img{
+  width:5px;
+}
+.formatTabLeft-on img,.formatTabLeft-off img,
+.formatTabRight-on img,.formatTabRight-off img{
+  display:block;
+}
+.formatTabLeft-on,.formatTabLeft-off{
+	background:url(../images/tableftendon.gif) no-repeat top right;
+}
+.formatTabLeft-off{
+	background-image:url(../images/tableftendoff.gif);
+  border-bottom:1px solid #ccc;
+}
+.formatTabText-on,.formatTabText-off{
+	background: url(../images/tabbgon.gif) repeat-x top;
+	padding:5px 3px 3px;
+	font-size:12px;
+}
+.formatTabText-off{
+	background-image:url(../images/tabbgoff.gif);
+  border-bottom:1px solid #ccc;
+}
+.formatTabRight-on,.formatTabRight-off{
+	background: url(../images/tabrightendon.gif) no-repeat top left;
+}
+.formatTabRight-off{
+	background-image:url(../images/tabrightendoff.gif);
+  border-bottom:1px solid #ccc;
+}
+.tabSpacer{
+  border-bottom:1px solid #ccc;
+  width:99%;
+}
+.formatSpacerSpan {
+	width:20px;
+}
+.formatChooseLanguageDiv {
+	margin-bottom:15px;
+	margin-top:15px;
+	margin-left:10px;
+}
+
+
+/***** help classes *****/
+.linkSubNav,.linkSubNav:visited {
+	color:#008051;
+	font-size:9px;
+
+	text-decoration:none;
+}
+.linkSubNav:hover {
+	color:#999966;
+	text-decoration:underline;
+}
+.formatPopupPoweredBy {
+	background-color:#EFF0F0;
+	width:155px;
+	background-image:url(../images/powered_by_wingateweb.gif);
+	background-position: center center;
+	background-repeat:no-repeat;
+	margin-top:20px;
+}
+.formatNavSubLink {
+	color:white;
+	margin-left:12px;
+	margin-bottom:6px;
+}
+
+/***** other classes *****/
+
+.linkTableHeaderTd,.linkTableHeaderTd-on {
+	background-color:#E8EBEF;
+	font-weight:bold;
+	border-top:1px solid #AAB3B3;
+	border-bottom:1px solid #AAB3B3;
+	border-right:1px solid #CED6D6;
+	font-size:11px;
+}
+.linkTableHeaderTd-on {
+	background-color:white;
+	font-weight:bold;
+}
+.linkResultSort,.linkResultSort:link,.linkResultSort:visited,.linkResultSort:hover {
+	font-size:11px;
+	font-weight:bold;
+	text-decoration:underline;
+}
+.formatPopupTitle {
+	padding:10px;
+	padding-left:30px;
+	color:#999999;
+	font-size:30px;
+	background-color:#EFF0F0;
+}
+.fontExecutiveBio {
+  font-size:13px;
+}
+
+.fontSpeakerName {
+}
+.fontSpeakerDetail {
+	padding-left:10px;
+	color:#666666;
+}
+.fontNoWrap {
+	white-space:nowrap;
+}
+.formatSearchHighlight, .formatNewOrChanged{
+  color:#e00000;
+  font-weight:bold;
+}
+
+#scheduleDay .scheduleItem{
+  width:46%;
+}
+
+#legend{
+  float:right;
+  width:65%;
+  list-style: none;
+  margin:0;
+  padding:7px 0;
+}
+#legend li{
+  float:right;
+  display:block;
+  padding:2px;
+  width:105px;
+}
+
+#legendParent{
+  clear:both;
+}
+
+#symbolKeyLegend{
+	line-height: 20px;
+	margin-right: 5px;
+	margin-top: -32px;
+}
+#symbolKeyLegend div {
+	margin-top: 5px;
+	padding-left: 25px;
+	margin-left: -10px;
+}
+
+#legendTitle{
+	padding-left: 0px !important;
+	font-weight: bold;
+	font-size: 1.4em;
+}
+#legendInterests{
+	background: url(../images/icon_interest.png) no-repeat bottom left;
+}
+#legendScheduledSession{
+	background: url(../images/icon_schedule.png) no-repeat bottom left;
+}
+
+#legendSession {
+	background: url(../images/icon_session-mobile-red.png) no-repeat bottom left;
+}
+#legendExhibitor {
+	background: url(../images/icon_exhibitor-mobile-red.png) no-repeat bottom left;
+}
+#legendSpeaker{
+	background: url(../images/icon_speaker.png) no-repeat bottom left;
+}
+#legendTopRated {
+	background: url(../images/icon_star.png) no-repeat 5px center;
+}
+#legendPodcast {
+	background: url(../images/icon_podcast.png) no-repeat bottom left;
+}
+#legendPresentation {
+	background: url(../images/pdf.png) no-repeat bottom left;
+}
+
+a.topRated {
+	padding-left: 15px;
+	background: url(../images/icon_star.png) no-repeat left top;
+	display: inline-block;
+}
+a.regularSpeaker {
+	display: block;
+}
+
+/**********Styles for ModifySession**********/
+#tabs a{
+	color:#07B;
+}
+/* //////////////  Meeting Sytles  //////////// */
+.legendBox{
+  height:12px;
+  width: 12px;
+  float:left;
+  border: 1px solid #333;
+  margin-right:8px;
+}
+
+/* //////////// Slide Grid /////////// */
+.scheduleGrid{
+	text-align:left;
+}
+.scheduleGrid table.gridHeader{
+	border:1px solid #ccc;
+	border-bottom:none;
+	background:#e0e0e0 url(../images/columnheader.gif) repeat-x;
+}
+.scheduleGrid table.gridHeader th{
+	padding:5px 0;
+	text-align: center;
+	font-weight: bold;
+}
+.scheduleGrid table.gridHeader th span{
+	display:block;
+	height:25px;
+	overflow:hidden;
+	padding:0 8px;
+	font-size:8pt;
+	line-height:9pt;
+	*background:#e0e0e0 url(../images/columnheader.gif) repeat-x;
+}
+.scheduleGrid table.gridHeader th a{
+  text-decoration: none;
+	display:block;
+}
+.scheduleGrid table.gridHeader th.buttonLeft,
+.scheduleGrid table.gridHeader th.buttonRight{
+	padding:0;
+}
+.scheduleGrid table.gridHeader th.buttonLeft a img{
+	float: right;
+}
+.scheduleGrid table.gridHeader .ui-state-default,
+.scheduleGrid table.gridHeader .ui-state-hover,
+.scheduleGrid table.gridHeader .ui-state-active,
+.scheduleGrid div.pagination .ui-state-default,
+.scheduleGrid div.pagination .ui-state-hover,
+.scheduleGrid div.pagination .ui-state-active{
+	border: none;
+	background:none;
+}
+
+.scheduleGrid div.pagination{
+	border:1px solid #ccc;
+	border-top:none;
+	background:#e0e0e0 url(../images/columnheader.gif) repeat-x;
+	text-align: center;
+	height:20px;
+	padding-top:3px;
+}
+.scheduleGrid div.pagination .ui-icon{
+	position: relative;
+	top:2px;
+	border:none;
+	display: inline-block;
+	*float:left;
+}
+.scheduleGrid div.pagination a.prev img{
+	*margin-left:2px;
+}
+.scheduleGrid div.pagination a.next img{
+	*float:right;
+	*margin-right:2px;
+}
+
+.scheduleGrid div.pageDots{
+	font-family: Helvetica, Arial, Tahoma, Verdana;
+	display:inline-block;
+	padding:0 15px;
+	font-size: 11pt;
+}
+.scheduleGrid div.pageDots a{
+	text-decoration: none;
+	color:#333;
+}
+.scheduleGrid div.pageDots a.number{
+	margin:0 5px;
+	*background:#e0e0e0 url(../images/columnheader.gif) repeat-x 0 -5px;
+}
+.scheduleGrid div.pageDots a.active{
+	font-weight: bold;
+}
+
+
+table.grid{
+	width:100%;
+}
+table.grid tr.odd td{
+	background: #f7f7f7;
+}
+table.grid td{
+	border-right:1px solid #ddd;
+	border-bottom:1px solid #ddd;	
+	height:25px;
+}
+table.grid,
+table.grid td{
+	border-color:#ccc;
+}
+table.grid td.time{
+	font-size:0.8em;
+	color:#bbb;
+	padding:2px 3px;
+	width:60px;
+	border-color:#ddd;
+	vertical-align: top;
+}
+table.grid td.hour{
+	font-size:0.9em;
+	color:#777;
+}
+table.grid tr td.selected{
+	background:#ffa;
+}
+
+.scheduleGrid .scheduleItem{
+	font-size:0.8em;
+	border:1px solid #888;
+	overflow: hidden;
+	position:absolute;
+}
+.scheduleItem .title{
+	display: block;
+	overflow: hidden;
+	white-space: nowrap;
+	padding: 3px;
+	color: #fff;
+	font-family: "Arial";
+	font-size: 1.1em;
+	font-weight: bold;
+	margin-bottom:3px;
+}
+.scheduleItem .iconCheckmark{
+	height:9px;
+	width:12px;
+	background: url(../images/icon_checkmark_white.png) no-repeat center;
+	margin:2px 1px 0 0;
+	float: right;
+}
+.scheduleItem .content{
+	display: block;
+	padding:0 3px;
+}
+.scheduleItem .gripHandle{
+	position:absolute;
+	left:50%;
+	bottom:-3px;
+	margin-left:-9px;
+}
+.scheduleItem .ui-resizable-n{
+	top:-6px;
+}
+.scheduleItem .ui-resizable-s{
+	height: 10px;
+}
+
+.removeImage, .removeImage-over{
+	height:11px;
+	width: 11px;
+	background: url(../images/icon_remove.gif) no-repeat 0 0;
+	float: right;
+	border: 1px solid red;
+	border:0;
+	margin-left:3px;
+}
+.removeImage-over{
+	background-position: 0 -11px;
+}
+
+.itemStyle { background-color: #cee; }
+.itemStyle .title{ background-color: #399; }
+.itemStyle_1{ background-color: #ae9; }
+.itemStyle_1 .title{ background-color: #2a0; }
+.itemStyle_2{ background-color: #fcc; }
+.itemStyle_2 .title{ background-color: #e33; }
+.itemStyle_3{ background-color: #abf; }
+.itemStyle_3 .title{ background-color: #24e; }
+.itemStyle_4{ background-color: #ffd; }
+.itemStyle_4 .title{ background-color: #fd0; color:#444; }
+.itemStyle_5{ background-color: #fea; }
+.itemStyle_5 .title{ background-color: #f90; }
+.itemStyle_6{ background-color: #eee; }
+.itemStyle_6 .title{ background-color: #999; }
+.itemStyle_7{ background-color: #edf; }
+.itemStyle_7 .title{ background-color: #72a; }
+
+img.status, img.scheduled {
+	height: 20px;
+	width: 20px;
+	cursor: pointer;
+}
+#shoppingCartForm .status{
+	background-image:url(../images/icon_schedule.png);
+}
+#shoppingCartForm tr.demo .status,
+#shoppingCartForm tr.exhibitor .status{
+	visibility: hidden;
+}
+#shoppingCartForm li.scheduled img,
+#shoppingCartForm .scheduled{
+	background-position: bottom;
+	background-image:url(../images/icon_schedule.png);
+}
+#scheduleIconDescription {
+	background-image: url("../images/icon_schedule.png");
+/* 	background-position: center bottom; */
+	height:20px;
+	width:20px;
+}
+#interestIconDescription {
+	background-image: url("../images/icon_interest.png");
+/* 	background-position: center bottom; */
+	height:20px;
+	width:20px;
+}
+
+.templateContentDiv .interest,
+.templateContentDiv .status{
+	width:20px;
+	height:20px;
+	margin:4px 2px 0;
+	cursor: pointer;
+	background:url(../images/icon_interest.png) no-repeat top;
+}
+.templateContentDiv .interest{
+	background-position: top;
+}
+.templateContentDiv li.interest img{
+	background:url(../images/icon_interest.png) no-repeat bottom;
+}
+.templateContentDiv .interestOn{
+	background-position: bottom;
+}
+.templateContentDiv .status{
+	background-image:url(../images/icon_schedule.png);
+}
+.templateContentDiv tr.demo .status,
+.templateContentDiv tr.exhibitor .status{
+	visibility: hidden;
+}
+.templateContentDiv li.scheduled img,
+.templateContentDiv .scheduled{
+	background-position: bottom;
+	background-image:url(../images/icon_schedule.png);
+}

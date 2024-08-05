@@ -1,0 +1,144 @@
+#TITLE=XHTML
+; EditPlus Auto-completion File v1.0 written by ES-Computing.
+; This file is intended to be used by HTML Toolbar of EditPlus.
+; <WARNING>
+; This file is required for EditPlus to run correctly.
+; You can modify only the content of each entry.
+; Do not add/remove any entry.
+; Do not modify title of each entry.
+
+#CASE=y
+
+#T=B
+<b>^!</b>
+#T=I
+<i>^!</i>
+#T=U
+<u>^!</u>
+#T=H1
+<h1>^!</h1>
+#T=H2
+<h2>^!</h2>
+#T=H3
+<h3>^!</h3>
+#T=H4
+<h4>^!</h4>
+#T=H5
+<h5>^!</h5>
+#T=H6
+<h6>^!</h6>
+#T=BR
+<br />
+#T=P
+<p>^!</p>
+#T=nb
+&nbsp;
+#T=A
+<a href="">^!</a>
+#T=HR
+<hr />
+#T=IMG
+<img src="" width="" height="" alt="^!" />
+#T=CENTER
+<center>^!</center>
+#T=BLOCKQUOTE
+<blockquote>^!</blockquote>
+#T=PRE
+<pre>^!</pre>
+#T=<!
+<!-- ^! -->
+#T=UL
+<ul>
+	<li>^!</li>
+	<li></li>
+</ul>
+#T=OL
+<ol>
+	<li>^!</li>
+	<li></li>
+</ol>
+#T=DL
+<dl>
+	<dt>^!</dt>
+	<dd></dd>
+</dl>
+#T=FORM
+<form method="post" action="">
+	^!
+</form>
+#T=FRAME
+<frameset rows="^!," cols=",">
+	<frame src="" id="" />
+	<frame src="" id="" />
+</frameset>
+#T=MAP
+<map id="^!">
+	<area shape="" href="" coords="" alt="" />
+</map>
+#T=SCRIPT
+<script type="text/javascript">
+<!--
+	^!
+//-->
+</script>
+#T=APPLET
+<applet code="^!" width="" height="">
+</applet>
+#T=TEXT
+<input type="text" id="^!" />
+#T=SELECT
+<select id="">
+	<option value="" selected="selected">^!</option>
+	<option value=""></option>
+</select>
+#T=RADIO
+<input type="radio" id="^!" />
+#T=CHECKBOX
+<input type="checkbox" id="^!" />
+#T=TEXTAREA
+<textarea id="" rows="" cols="">^!</textarea>
+#T=RESET
+<input type="reset" />
+#T=SUBMIT
+<input type="submit" />
+#T=PASSWORD
+<input type="password" id="^!" />
+#T=HIDDEN
+<input type="hidden" id="^!" />
+#T=FORMIMAGE
+<input type="image" src="^!" />
+#T=BUTTON
+<input type="button" value="^!" onclick="" />
+#T=FONT
+<font size="" color="">^!</font>
+#T=TABLE
+<table>
+
+#T=TABLE2
+</table>
+#T=TR
+	<tr>
+
+#T=TR2
+	</tr>
+
+#T=TD
+		<td>^!</td>
+
+#T=TD2
+		<td></td>
+
+#T=OBJECT
+<object id="%s" width="^!" height="" classid="clsid:%s">
+</object>
+#T=STYLE
+<style type="text/css">
+	^!
+</style>
+#T=DIV
+<div id="" class="">
+	^!
+</div>
+#T=SPAN
+<span class="">^!</span>
+#

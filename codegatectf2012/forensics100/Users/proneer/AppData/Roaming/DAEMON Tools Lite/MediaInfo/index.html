@@ -1,0 +1,535 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Media Info</title>
+<link rel="stylesheet" type="text/css" href="css/mediainfo.css" />
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+<script type="text/javascript" src="js/lib/jquery.js"></script>
+<script type="text/javascript" src="js/lib/mootools-class.js"></script>
+<script type="text/javascript" src="js/lib/json2.js"></script>
+<script type="text/javascript" src="js/lib/md5.js"></script>
+<script type="text/javascript" src="js/lib/pure.js"></script>
+<script type="text/javascript" src="js/lib/datejs/datejs-core.js"></script>
+<script type="text/javascript" src="js/lib/datejs/datejs-en-US.js"></script>
+<script type="text/javascript" src="js/lib/datejs/datejs-parser.js"></script>
+<script type="text/javascript" src="js/app/DT/DTMediaInfo.js"></script>
+<script type="text/javascript" src="js/app/MediaInfo.js"></script>
+<script type="text/javascript" src="js/app/MediaInfo/Log.js"></script>
+<script type="text/javascript" src="js/app/MediaInfo/Config.js"></script>
+<script type="text/javascript" src="js/app/MediaInfo/Cache.js"></script>
+<script type="text/javascript" src="js/app/MediaInfo/Translation.js"></script>
+<script type="text/javascript" src="js/app/MediaInfo/Url.js"></script>
+<script type="text/javascript" src="js/app/MediaInfo/Ajax.js"></script>
+<script type="text/javascript" src="js/app/MediaInfo/IntPacker.js"></script>
+<script type="text/javascript" src="js/app/MediaInfo/Statistics.js"></script>
+<script type="text/javascript" src="js/app/MediaInfo/Page.js"></script>
+<script type="text/javascript" src="js/app/MediaInfo/Page/PageAbstract.js"></script>
+<script type="text/javascript" src="js/app/MediaInfo/Page/Welcome.js"></script>
+<script type="text/javascript" src="js/app/MediaInfo/Page/Loading.js"></script>
+<script type="text/javascript" src="js/app/MediaInfo/Page/InfoNotFound.js"></script>
+<script type="text/javascript" src="js/app/MediaInfo/Page/NoInternet.js"></script>
+<script type="text/javascript" src="js/app/MediaInfo/Page/Album.js"></script>
+<script type="text/javascript" src="js/app/MediaInfo/Page/AlbumList.js"></script>
+<script type="text/javascript" src="js/app/MediaInfo/Page/Game.js"></script>
+<script type="text/javascript" src="js/app/MediaInfo/Page/Soft.js"></script>
+<script type="text/javascript" src="js/app/MediaInfo/Page/Other.js"></script>
+<script type="text/javascript" src="js/app/MediaInfo/Page/RequiredPassword.js"></script>
+<script type="text/javascript" src="js/app/MediaInfo/Page/FileNotFound.js"></script>
+<script type="text/javascript" src="js/app/MediaInfo/Page/InvalidImage.js"></script>
+<script type="text/javascript" src="js/app/MediaInfo/PageManager.js"></script>
+<script type="text/javascript" src="js/app/MediaInfo/PageManager/Queue.js"></script>
+<script type="text/javascript" src="js/app/MediaInfo/ImageInfoLoader.js"></script>
+<script type="text/javascript" src="js/app/DT/dteventhandlers.js"></script>
+<script type="text/javascript" src="js/app/languages.js"></script>
+<script type="text/javascript" src="js/app/translations.js"></script>
+<script type="text/javascript" src="js/app/stylefixes.js"></script>
+<script type="text/javascript" src="js/app/MediaInfo/Bootstrap.js"></script>
+<!--[if lt IE 9]><script language="javascript" type="text/javascript" src="http://www.mountspace.com/img/js/jqplot/excanvas.js"></script><![endif]-->
+<link href="js/lib/jqplot/jquery.jqplot.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/lib/jqplot/jquery.jqplot.min.js"></script>
+<script type="text/javascript" src="js/lib/jqplot/jqplot.highlighter.min.js"></script>
+<script type="text/javascript" src="js/lib/jqplot/jqplot.dateAxisRenderer.min.js"></script>
+</head>
+<body class="page-welcome" oncontextmenu="return $.browser.msie? false: true">
+
+<div id="log"></div>
+
+<!-- Page: Welcome -->
+<div class="page showed" id="page-welcome"></div>
+<div class="template" id="page-welcome-template">
+	<div class="main_div">
+		<div class="content">
+			<div class="padding_left7 padding_right7">
+				<a class="logo_link" href="#" onclick="return false"><img class="logo_horizontal" src="img/1.gif" border="0" alt=""/></a>
+				<br/><br/>
+				<span class="slogan translate tconstant_slogan">Find out more information about your disc images. Select an image...</span>
+				<br/><br/>
+			</div>
+			<div class="tops_block"></div>
+		</div>
+	</div>
+</div>
+
+<!-- Page: Loading -->
+<div class="page" id="page-loading"></div>
+<div class="template" id="page-loading-template">
+	<div class="main_div">
+			<div class="content">
+				<div class="align_center">
+					<a class="logo_link" href="#" onclick="return false"><img class="logo" src="img/1.gif" alt=""/></a><br/><br/><br/><br/><br/>
+					<div class="margin_top20 translate tconstant_loading_message">Wait...</div>
+					<img src="img/loader.gif" height="20" width="215" alt=""/>
+				</div>
+			</div>
+	</div>
+</div>
+
+<!-- Page: No Internet Connection -->
+<div class="page" id="page-no-internet"></div>
+<div class="template" id="page-no-internet-template">
+	<div class="main_div">
+		<div class="align_center">
+			<a class="logo_link" href="#" onclick="return false"><img class="logo" src="img/1.gif" alt=""/></a>
+			<br/><br/><br/><br/><br/>
+		</div>
+		<div class="connection-not-found">
+			<img class="connection-icon" src="img/1.gif" align="absmiddle" alt=""/><span class="translate tconstant_no_internet_connection">No Internet Connection</span>
+			<span class="refresh_button"><img src="img/1.gif" class="refresh-icon" align="absmiddle" alt=""/></span>
+		</div>
+	</div>
+</div>
+
+<!-- Page: Album list -->
+<div class="page" id="page-album-list"></div>
+<div class="template" id="page-album-list-template">
+	<div class="main_div">
+		<div class="header_select">
+			<div class="padding_left7">
+				<div class="title translate tconstant_album_list_page_header">Please try to help us to select correct media info for you image</div>
+				<div class="bt">
+					<div class="bt_yellow floatLeft back" onmouseout="$(this).removeClass('hover')"
+					onmouseover="$(this).addClass('hover')">
+						<div class="bt_left floatLeft">
+							<div class="bt_right floatLeft">
+								<div class="bt_middle floatLeft">
+									<img class="icon_arrow" src="img/1.gif" align="absmiddle" alt="" />
+									<span class="translate tconstant_album_list_back">Back</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="clear"></div>
+				</div>
+				<div><img src="img/1.gif" height="20" alt=""/></div>
+			</div>
+		</div>
+
+		<div class="content">
+			<div class="scroller_select">
+			<div class="album_title padding_left7 margin_top10 translate tconstant_album_list_albums_header">Albums</div>
+				<!-- Albums Template -->
+				<table width="100%" cellpadding="0" cellspacing="0" class="margin_top10 albums">
+					<tr class="item">
+						<td class="name_song">
+							<label>
+								<input type="radio" class="radio_select" name="album" /><span class="title ftAlbumLinkForSelect"></span>
+							</label>
+						</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- Page: Album -->
+<div class="page" id="page-album"></div>
+<div class="template" id="page-album-template">
+	<div class="main_div">
+		<div class="header">
+			<div class="title">&nbsp;</div>
+			<div class="info">
+				<div class="cover floatLeft">
+				<div class="centered_img">
+					<div class="img_shadow">
+						<img class="img_cover ftAlbumPicture" src="" alt=""/>
+					</div>
+				</div>
+				</div>
+				<div class="cover_info">
+					<div class="album_game_info">
+						<a class="album ftAlbumLink" href="#"></a>&nbsp;<span class="refresh_button"><img src="img/1.gif" class="refresh-icon" align="absmiddle" alt=""/></span><br/>
+					 	 <a class="artist ftArtistLink" href="#"></a>
+					</div>
+					<div class="genre ftGenres"></div>
+					<div class="bt">
+						<div class="bt_yellow floatLeft select_albums" onmouseout="$(this).removeClass('hover')"
+						onmouseover="$(this).addClass('hover')">
+							<div class="bt_left floatLeft">
+								<div class="bt_right floatLeft">
+									<div class="bt_middle floatLeft">
+										<img class="icon_select" src="img/1.gif" align="absmiddle" alt=""/>
+										<span class="translate tconstant_album_select_album_button">Select album</span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="clear"></div>
+					</div>
+				</div>
+				<div class="clear"></div>
+
+			</div>
+		</div>
+		<div class="content">
+			<div class="scroller">
+				<table class="tracks" width="100%" cellpadding="0" cellspacing="0" border="0">
+					<tr class="item">
+						<td class="name_song"></td>
+						<td class="duration"></td>
+					</tr>
+				</table>
+
+				<div class="bt_yellow floatLeft margin_top20 margin-bottom120 padding_left7 album_top_button ftAudioTopLink" onmouseout="$(this).removeClass('hover')" onmouseover="$(this).addClass('hover')" >
+					<div class="bt_left floatLeft">
+						<div class="bt_right floatLeft">
+							<div class="bt_middle floatLeft translate tconstant_album_top_music_button">Top music</div>
+						</div>
+					</div>
+				</div>
+				<div class="clear"></div>
+			</div>
+
+			<div class="see_more margin_top20">
+				<div class="see_more_table">
+					<div class="translate tconstant_see_more_description">Discover popular music, games and software.</div>
+					<div><img src="img/1.gif" height="10" alt=""/></div>
+					<div class="bt_green floatLeft see_more_button ftDiskLink" onmouseout="$(this).removeClass('hover')"
+							onmouseover="$(this).addClass('hover')">
+								<div class="bt_left floatLeft">
+									<div class="bt_right floatLeft">
+										<div class="bt_middle floatLeft translate tconstant_see_more_button">See more</div>
+									</div>
+								</div>
+					</div>
+					<div class="clear"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- Page: Game -->
+<div class="page" id="page-game"></div>
+<div class="template" id="page-game-template">
+	<div class="main_div">
+		<div class="header">
+			<div class="title">&nbsp;</div>
+			<div class="info margin_bottom10">
+				<div class="cover floatLeft">
+					<div class="centered_img">
+						<div class="img_shadow">
+							<img class="img_cover ftDiskImage" src="" alt=""/>
+						</div>
+					</div>
+				</div>
+				<div class="cover_info">
+					<div class="album_game_info">
+						<a class="game_name ftDiskLink" href="#"></a>
+						<span class="refresh_button"><img src="img/1.gif" class="refresh-icon" align="absmiddle" alt=""/></span>
+					</div>
+					<div class="genre"></div>
+					<div class="bt"><img src="img/1.gif" height="20" alt=""/></div>
+				</div>
+				<div class="clear"></div>
+			</div>
+		</div>
+		<div class="content">
+			<div class="scroller">
+				<div class="description_block">
+					<div class="title_little translate tconstant_disc_description">Description</div>
+					<div class="description_game padding_left7 padding_right7"></div>
+				</div>
+
+				<div class="features_block">
+					<div class="title_little margin_top20 translate tconstant_disc_features">Features</div>
+					<div class="description_features padding_left7 padding_right7">
+						<div class="inf"></div>
+					</div>
+				</div>
+
+				<div class="bt_yellow floatLeft margin_top20 margin-bottom120 padding_left7 games_top_button ftGamesTopLink" onmouseout="$(this).removeClass('hover')" onmouseover="$(this).addClass('hover')" >
+				<div class="bt_left floatLeft">
+					<div class="bt_right floatLeft">
+						<div class="bt_middle floatLeft translate tconstant_game_top_games_button">Top games</div>
+					</div>
+				</div>
+			</div>
+			<div class="clear"></div>
+			</div>
+
+			<div class="see_more margin_top20">
+				<div class="see_more_table">
+					<div class="translate tconstant_see_more_description">Discover popular music, games and software.</div>
+					<div><img src="img/1.gif" height="10" alt=""/></div>
+					<div class="bt_green floatLeft see_more_button ftDiskLink" onmouseout="$(this).removeClass('hover')"
+							onmouseover="$(this).addClass('hover')">
+								<div class="bt_left floatLeft">
+									<div class="bt_right floatLeft">
+										<div class="bt_middle floatLeft translate tconstant_see_more_button">See more</div>
+									</div>
+								</div>
+					</div>
+					<div class="clear"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- Page: Soft -->
+<div class="page" id="page-soft"></div>
+<div class="template" id="page-soft-template">
+	<div class="main_div">
+		<div class="header">
+			<div class="title">&nbsp;</div>
+			<div class="info margin_bottom10">
+				<div class="cover floatLeft">
+					<div class="centered_img">
+						<div class="img_shadow">
+							<img class="img_cover ftDiskImage" src="" alt=""/>
+						</div>
+					</div>
+				</div>
+				<div class="cover_info">
+					<div class="album_game_info">
+						<a class="game_name ftDiskLink" href="#"></a>
+						<span class="refresh_button"><img src="img/1.gif" class="refresh-icon" align="absmiddle" alt=""/></span>
+					</div>
+					<div class="genre"></div>
+					<div class="bt"><img src="img/1.gif" height="20" alt=""/></div>
+				</div>
+				<div class="clear"></div>
+			</div>
+		</div>
+		<div class="content">
+			<div class="scroller">
+				<div class="description_block">
+					<div class="title_little translate tconstant_disc_description">Description</div>
+					<div class="description_game padding_left7 padding_right7"></div>
+				</div>
+
+				<div class="features_block">
+					<div class="title_little margin_top20 translate tconstant_disc_features">Features</div>
+					<div class="description_features padding_left7 padding_right7">
+						<div class="inf"></div>
+					</div>
+				</div>
+<!--
+				<div class="bt_yellow floatLeft margin_top20 margin-bottom120 padding_left7 soft_top_button ftSoftTopLink" onmouseout="$(this).removeClass('hover')" onmouseover="$(this).addClass('hover')" >
+				<div class="bt_left floatLeft">
+					<div class="bt_right floatLeft">
+						<div class="bt_middle floatLeft translate tconstant_soft_top_soft_button">Top soft</div>
+					</div>
+				</div>
+ -->
+			</div>
+			<div class="clear"></div>
+
+			</div>
+
+			<div class="see_more margin_top20">
+				<div class="see_more_table">
+					<div class="translate tconstant_see_more_description">Discover popular music, games and software.</div>
+					<div><img src="img/1.gif" height="10" alt=""/></div>
+					<div class="bt_green floatLeft see_more_button ftDiskLink" onmouseout="$(this).removeClass('hover')"
+							onmouseover="$(this).addClass('hover')">
+								<div class="bt_left floatLeft">
+									<div class="bt_right floatLeft">
+										<div class="bt_middle floatLeft translate tconstant_see_more_button">See more</div>
+									</div>
+								</div>
+					</div>
+					<div class="clear"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- Page: Other -->
+<div class="page" id="page-other"></div>
+<div class="template" id="page-other-template">
+	<div class="main_div">
+		<div class="header">
+			<div class="title">&nbsp;</div>
+			<div class="info margin_bottom10">
+
+				<div class="cover_info">
+					<div class="album_game_info">
+						<a class="game_name ftDiskLink" href="#"></a>
+						<span class="refresh_button"><img src="img/1.gif" class="refresh-icon" align="absmiddle" alt=""/></span>
+					</div>
+					<div class="genre"></div>
+					<div class="bt"><img src="img/1.gif" height="20" alt=""/></div>
+				</div>
+				<div class="clear"></div>
+			</div>
+		</div>
+		<div class="content">
+			<div class="scroller">
+				<div class="description_game padding_left7 padding_right7"></div>
+			</div>
+
+			<div class="see_more margin_top20">
+				<div class="see_more_table">
+					<div class="translate tconstant_see_more_description">Discover popular music, games and software.</div>
+					<div><img src="img/1.gif" height="10" alt=""/></div>
+					<div class="bt_green floatLeft see_more_button ftDiskLink" onmouseout="$(this).removeClass('hover')"
+							onmouseover="$(this).addClass('hover')">
+								<div class="bt_left floatLeft">
+									<div class="bt_right floatLeft">
+										<div class="bt_middle floatLeft translate tconstant_see_more_button">See more</div>
+									</div>
+								</div>
+					</div>
+					<div class="clear"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<!-- Page: Info not found -->
+<div class="page" id="page-info-not-found"></div>
+<div class="page" id="page-info-not-found-template">
+	<div class="main_div">
+		<div class="header">
+			<div class="title">&nbsp;</div>
+			<div class="info margin_bottom10">
+				<div class="cover floatLeft">
+					<div class="centered_img">
+						<div class="img_shadow">
+							<img class="img_cover ftDiskImage" src="http://www.mountspace.com/img/img/no_image_soft_75.jpg" alt=""/>
+						</div>
+					</div>
+				</div>
+				<div class="cover_info">
+					<div class="album_game_info">
+						<span class="font18 dropshadow translate tconstant_info_not_found_title">Image Info</span>
+					</div>
+					<div class="genre"></div>
+					<div class="bt"><span class="translate tconstant_info_not_found_description">Sorry, there is no description of this disc image yet</span>...</div>
+				</div>
+				<div class="clear"></div>
+			</div>
+		</div>
+		<div class="content">
+			<div class="scroller">
+				<div class="diagram-wrap">
+					<span class="translate tconstant_diagram title">Daily active user count for selected image</span>
+					<div id="disc_diagram_active" class="diagram"></div>
+				</div>
+				<div class="tops_block"></div>
+			</div>
+
+			<div class="see_more margin_top20">
+				<div class="see_more_table">
+					<div class="translate tconstant_see_more_description">Discover popular music, games and software.</div>
+					<div><img src="img/1.gif" height="10" alt=""/></div>
+					<div class="bt_green floatLeft other_statistics_button ftDiskLink" onmouseout="$(this).removeClass('hover')"
+							onmouseover="$(this).addClass('hover')">
+								<div class="bt_left floatLeft">
+									<div class="bt_right floatLeft">
+										<div class="bt_middle floatLeft translate tconstant_other_statistics_button"></div>
+									</div>
+								</div>
+					</div>
+					<div class="clear"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- Page: Required Password -->
+<div class="page" id="page-required-password"></div>
+<div class="page" id="page-required-password-template">
+	<div class="main_div">
+		<div class="align_center">
+			<a class="logo_link" href="#" onclick="return false"><img class="logo" src="img/1.gif" alt=""/></a>
+			<br/><br/><br/><br/><br/>
+		</div>
+		<div class="info-not-found">
+			<img class="info-icon" src="img/1.gif" align="absmiddle" alt=""/><span class="translate tconstant_required_password"></span>
+		</div>
+	</div>
+</div>
+
+<!-- Page: File Not Found -->
+<div class="page" id="page-file-not-found"></div>
+<div class="page" id="page-file-not-found-template">
+	<div class="main_div">
+		<div class="align_center">
+			<a class="logo_link" href="#" onclick="return false"><img class="logo" src="img/1.gif" alt=""/></a>
+			<br/><br/><br/><br/><br/>
+		</div>
+		<div class="info-not-found">
+			<img class="info-icon" src="img/1.gif" align="absmiddle" alt=""/><span class="translate tconstant_file_not_found"></span>
+		</div>
+	</div>
+</div>
+
+<!-- Page: Invalid Image -->
+<div class="page" id="page-invalid-image"></div>
+<div class="page" id="page-invalid-image-template">
+	<div class="main_div">
+		<div class="align_center">
+			<a class="logo_link" href="#" onclick="return false"><img class="logo" src="img/1.gif" alt=""/></a>
+			<br/><br/><br/><br/><br/>
+		</div>
+		<div class="info-not-found">
+			<img class="info-icon" src="img/1.gif" align="absmiddle" alt=""/><span class="translate tconstant_invalid_image"></span>
+		</div>
+	</div>
+</div>
+
+<!-- Message Box -->
+<div class="info-msg">
+	<div class="info-msg-box">
+		<img class="connection-icon" src="img/1.gif" align="absmiddle" alt=""/><span class="message"></span>
+	</div>
+	<div class="box-disable">
+		<img src="img/1.gif" alt="" height="1"/>
+	</div>
+</div>
+
+<!-- Test features block -->
+<div class="test-features-block">
+	<form class="switch_to_image" action="">
+	<div>
+		Image id: <input class="text image_id" type="text" value="" />
+		<input class="button show_image_info_button" type="submit" value="Go" />
+	</div>
+	</form>
+</div>
+
+<!-- Widget Template: TOPs -->
+<div class="template" id="widget-tops-template">
+	<div class="container">
+		<div class="top">
+			<div class="top_title">
+				<span class="font18 title">Games →</span> <a href="#" class="view_all textlink"><span class="translate tconstant_view_top">view top</span> 100</a>
+			</div>
+			<ol>
+				<li><a href="#"></a></li>
+			</ol>
+		</div>
+	</div>
+</div>
+
+
+</body>
+</html>

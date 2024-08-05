@@ -1,0 +1,297 @@
+<!DOCTYPE HTML><html lang="ko"><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"> <meta name="description" content="Chrome&#51008; &#45800;&#49692;&#54620; &#46356;&#51088;&#51064;&#50640; &#48736;&#47476;&#44256; &#50504;&#51204;&#54616;&#44256; &#49772;&#50868; &#52572;&#52392;&#45800; &#50937; &#44160;&#49353; &#44592;&#49696;&#51060; &#44396;&#54788;&#46108; &#48652;&#46972;&#50864;&#51200;&#51077;&#45768;&#45796;."> <meta name="keywords" content="&#48652;&#46972;&#50864;&#51200;, &#48652;&#46972;&#50864;&#51669;, &#50937;&#48652;&#46972;&#50864;&#51200;, &#51064;&#53552;&#45367; &#48652;&#46972;&#50864;&#51200;, &#47924;&#47308; &#48652;&#46972;&#50864;&#51200;, &#50937; &#50528;&#54540;&#47532;&#52992;&#51060;&#49496;, &#50937;&#50528;&#54540;&#47532;&#52992;&#51060;&#49496;, &#48513;&#47560;&#53356;, &#50937; &#50528;&#54540;&#47532;&#52992;&#51060;&#49496;, &#44160;&#49353;&#52285;, &#50937; &#53456;&#49353;, browser, browsing, web browser, internet browser, free browser, web applications, web apps, bookmark, web applications, search box, navigate the web"> <meta name="verify-v1" content="xEPPbenuuXOnglQ/Cym63Ml0dnjiSNpzPK7UUlgrDbw="> <script type="text/javascript">
+_utcp = "/chrome";
+</script> <script type="text/javascript">
+function utmx_section(){}function utmx(){}
+
+</script> <script type="text/javascript">utmx_section("CSS")</script> <link href="/tools/dlpage/res/chrome/css/chrome-dlpage.css" rel="stylesheet" type="text/css"> </noscript>   <link rel="icon" type="image/ico" href="//www.google.com/images/icons/product/chrome-16.png"> <title>Chrome - &#49549;&#46020;&#44032; &#48736;&#47480; PC, Mac, Linux&#50857; &#52572;&#49888; &#48652;&#46972;&#50864;&#51200;&#47484; &#47564;&#45208;&#48372;&#49464;&#50836;.</title> <script type="text/javascript">
+  function setHl(newHl) {
+    var query = location.search;
+    if (query.length == 0) {
+      location.search = "?hl=" + newHl;
+      return;
+    }
+    if (-1 == query.indexOf("hl=")) {
+      location.search = query + "&hl=" + newHl;
+      return;
+    }
+    location.search = query.replace(/hl=[^&]*/, "hl=" + newHl);
+  }
+</script> <script type="text/javascript" src="/tools/dlpage/res/c/gu-util.js">
+  
+</script> <script type="text/javascript">
+  
+  
+  function runTagParamsHook(tag, opt_guid) {return tag;}
+  
+  function runThankYouQueryHook(query) {return query;}
+  
+  function runGetAppsPageHook(apps) {return apps;}
+
+  
+  var referer = "http://www.google.co.kr/url?sa\x3dt\x26rct\x3dj\x26q\x3dchrome\x26source\x3dweb\x26cd\x3d1\x26ved\x3d0CE8QFjAA\x26url\x3dhttp%3A%2F%2Fwww.google.de%2Fchrome%2F%3Fhl%3Dko\x26ei\x3dOjQ2T5CXAfGOiAeWptW7DA\x26usg\x3dAFQjCNGhFPd-nzZSA-wVxKxsfhZupsT7WA\x26cad\x3drjt";
+  function resetButtons(name) {
+    var buttons = document.getElementsByName(name);
+    for (i = 0; i < buttons.length; ++i) {
+      buttons[i].disabled = false;
+    }
+  }
+  function showThrobber(isVisible) {
+    var divThrobber = document.getElementById('throbber');
+    var imgThrobber = document.getElementById('throbber-img');
+    if (!divThrobber || !imgThrobber) {
+      return;
+    }
+    if (!isVisible) {
+      divThrobber.style.display = 'none';
+    }
+    
+    imgThrobber.src = isVisible ?
+      
+        "/tools/dlpage/res/chrome/images/chrome_throbber_fast_16.gif"
+      
+        : "";
+    if (isVisible) {
+      divThrobber.style.display = 'inline';
+    }
+  }
+  
+  function getThankyouUrl(extraQuery) {
+    var thankYouPath = "thankyou.html";
+    if (areStatsEnabled()) {
+      extraQuery += '&statcb=';
+    }
+    var query = "?hl\x3dko" + extraQuery;
+    if (query.length > 0 && query.charAt(0) != '?') {
+      query = '?' + query;
+    }
+    query = runThankYouQueryHook(query);
+    return thankYouPath + query;
+  }
+  function queueThankyou(timeout, queryString, opt_navDocument) {
+    var page = getThankyouUrl(queryString);
+    var doc = opt_navDocument || this.document;
+    setTimeout(function() {showThrobber(false);
+                           resetButtons("submitbutton");
+                           doc.location.href = page}, timeout);}
+  function getApps() {
+    var apps = new Array();
+    
+    
+    
+    
+      apps.push(_GU_createAppInfo(
+          "{8A69D345-D564-463C-AFF1-A69D9E530F96}",
+          "Chrome",
+          "false",
+          runTagParamsHook(
+              "",
+              "{8A69D345-D564-463C-AFF1-A69D9E530F96}")));
+    
+    
+    
+    
+    return runGetAppsPageHook(apps);
+  }
+  function areStatsEnabled() {
+    var statcb = document.getElementById("statcb");
+    return (statcb && statcb.checked);
+  }
+  function isDownloadTaggingEnabled() {
+    
+    return true;
+  }
+  function getDownloadPath() {
+    
+      
+        return "/update2/installers/ChromeSetup.exe";
+      
+    
+  }
+  function downloadInstaller(statEnable, opt_buildDownloadPath, opt_filePath) {
+    var defaultDownloadPath = isDownloadTaggingEnabled() ?
+        _GU_buildDlPath : _GU_buildDlPathNoTag;
+    var buildDownloadPath = opt_buildDownloadPath || defaultDownloadPath;
+    var filePath = opt_filePath || getDownloadPath();
+
+     
+      var dlServer =
+      
+        "https://dl.google.com";
+      
+    location.href =
+        buildDownloadPath(getApps(),
+                          "ko",
+                          statEnable,
+                          dlServer,
+                          filePath);
+     
+  }
+  function installViaDownload(opt_navDocument) {
+    queueThankyou(4000, '', opt_navDocument);
+    downloadInstaller(areStatsEnabled());
+    
+    showThrobber(true);
+  }
+  function isClickOnceEnabled() {
+    
+    return true;
+  }
+  function isOneClickEnabled() {
+    return true;
+  }
+  function installViaClickOnce(opt_navDocument) {
+    
+    queueThankyou(10000, '\x26clickonceinstalled=', opt_navDocument);
+    
+    downloadInstaller(areStatsEnabled(), _GU_buildClickOncePath, "/update2/installers/clickonce/GoogleInstaller_ko.application");
+    
+    showThrobber(true);
+  }
+  function installViaOneClick(opt_navDocument) {
+    showThrobber(true);
+    window.google.update.oneclick.install(
+      getApps(),
+      "ko",
+      areStatsEnabled(),
+      function() {queueThankyou(4000, '\x26oneclickinstalled=', opt_navDocument);},
+      function(hr) {installViaDownload(opt_navDocument);});
+  }
+  function getInstallSource() {
+    
+      if (isOneClickEnabled() && _GU_isOneClickAvailable()) {
+        return 'oneclick';
+      } else if (isClickOnceEnabled() && _GU_isClickOnceAvailable()) {
+        return 'clickonce';
+      } else {
+        return 'download';
+      }
+    
+  }
+  function installApp(opt_navDocument) {
+    sendDlPagePing("install", getInstallSource());
+    
+
+    var method = getInstallSource();
+    if (method === 'oneclick') {
+      installViaOneClick(opt_navDocument);
+    } else if (method === 'clickonce') {
+      installViaClickOnce(opt_navDocument);
+    } else {
+      installViaDownload(opt_navDocument);
+    }
+  }
+  
+  function sendDlPagePing(stage, installSource) {
+    var img = new Image();
+    var extra = GU_buildGlobalExtra(
+          "ko", areStatsEnabled());
+    var tag = GU_BuildTag(getApps(), extra);
+    img.src = '//tools.google.com/service/update2/dlpageping?' +
+        tag +
+        '&stage=' + stage +
+        '&installsource=' + installSource;
+  }
+  
+  
+  _GU_OnloadHandlerAdd(
+    function() {
+      if (isOneClickEnabled()) {
+      _GU_SetupOneClick();
+      }
+    }, 0); // front of list
+  
+  _GU_OnloadHandlerAdd(
+    function(pagename) {
+      sendDlPagePing(pagename, getInstallSource());
+    });  // added to end of body.onload handler list
+
+
+function runGetAppsPageHook(apps) {
+  try {
+    var app = apps[0];
+    if (_GU_isOneClickAvailable() &&
+        window.google.update.oneclick.getInstalledVersion(app.guid, true)) {
+      app.needsAdmin = true;
+    }
+  } catch (err) {
+  }
+  return apps;
+}
+
+</script>  <script type="text/javascript">
+  function goCancelled() {
+    this.document.location.href =
+      "index.html?hl\x3dko";
+  }
+</script>  </head> <body onload="_GU_OnloadBody(&#39;index&#39;);"><div id="c-doc"><div id="c-header"><a id="logo" href="//www.google.com/chrome"><img class="logo" src="//www.google.com/intl/ko/images/logos/chrome_logo.gif" alt="Google Chrome"></a> <script type="text/javascript">utmx_section("Top Nav")</script> <ul id="c-nav"><li></li> </ul> </noscript> <div id="lang-select"><select onchange="javascript:setHl(this.options[this.selectedIndex].value);" title="&#50616;&#50612;"><option value="">Select a language</option> <option value="ar">&#8235;&#1575;&#1604;&#1593;&#1585;&#1576;&#1610;&#1577;&#8236;</option> <option value="bg">&#8234;&#1073;&#1098;&#1083;&#1075;&#1072;&#1088;&#1089;&#1082;&#1080;&#8236;</option> <option value="bn">&#8234;&#2476;&#2494;&#2434;&#2482;&#2494;&#8236;</option> <option value="ca">&#8234;catal&agrave;&#8236;</option> <option value="cs">&#8234;&#269;e&scaron;tina&#8236;</option> <option value="da">&#8234;dansk&#8236;</option> <option value="de">&#8234;Deutsch&#8236;</option> <option value="el">&#8234;&Epsilon;&lambda;&lambda;&eta;&nu;&iota;&kappa;&#940;&#8236;</option> <option value="en">&#8234;English&#8236;</option> <option value="en-GB">&#8234;English (UK)&#8236;</option> <option value="es">&#8234;espa&ntilde;ol&#8236;</option> <option value="es-419">&#8234;espa&ntilde;ol (Latinoam&eacute;rica y el Caribe)&#8236;</option> <option value="et">&#8234;eesti&#8236;</option> <option value="fi">&#8234;suomi&#8236;</option> <option value="fil">&#8234;Filipino&#8236;</option> <option value="fr">&#8234;fran&ccedil;ais&#8236;</option> <option value="gu">&#8234;&#2711;&#2753;&#2716;&#2736;&#2750;&#2724;&#2752;&#8236;</option> <option value="hi">&#8234;&#2361;&#2367;&#2306;&#2342;&#2368;&#8236;</option> <option value="hr">&#8234;hrvatski&#8236;</option> <option value="hu">&#8234;magyar&#8236;</option> <option value="id">&#8234;Bahasa Indonesia&#8236;</option> <option value="it">&#8234;italiano&#8236;</option> <option value="iw">&#8235;&#1506;&#1489;&#1512;&#1497;&#1514;&#8236;</option> <option value="ja">&#8234;&#26085;&#26412;&#35486;&#8236;</option> <option value="kn">&#8234;&#3221;&#3240;&#3277;&#3240;&#3233;&#8236;</option> <option value="ko" selected>&#8234;&#54620;&#44397;&#50612;&#8236;</option> <option value="lt">&#8234;lietuvi&#371;&#8236;</option> <option value="lv">&#8234;latvie&scaron;u&#8236;</option> <option value="ml">&#8234;&#3374;&#3378;&#3375;&#3390;&#3379;&#3330;&#8236;</option> <option value="mr">&#8234;&#2350;&#2352;&#2366;&#2336;&#2368;&#8236;</option> <option value="nl">&#8234;Nederlands&#8236;</option> <option value="no">&#8234;norsk bokm&aring;l&#8236;</option> <option value="pl">&#8234;polski&#8236;</option> <option value="pt-BR">&#8234;portugu&ecirc;s (Brasil)&#8236;</option> <option value="pt-PT">&#8234;portugu&ecirc;s (Portugal)&#8236;</option> <option value="ro">&#8234;rom&acirc;n&#259;&#8236;</option> <option value="ru">&#8234;&#1088;&#1091;&#1089;&#1089;&#1082;&#1080;&#1081;&#8236;</option> <option value="sk">&#8234;slovensk&yacute;&#8236;</option> <option value="sl">&#8234;sloven&scaron;&#269;ina&#8236;</option> <option value="sr">&#8234;&#1057;&#1088;&#1087;&#1089;&#1082;&#1080;&#8236;</option> <option value="sv">&#8234;svenska&#8236;</option> <option value="sw">&#8234;Kiswahili&#8236;</option> <option value="ta">&#8234;&#2980;&#2990;&#3007;&#2996;&#3021;&#8236;</option> <option value="te">&#8234;&#3108;&#3142;&#3122;&#3137;&#3095;&#3137;&#8236;</option> <option value="th">&#8234;&#3652;&#3607;&#3618;&#8236;</option> <option value="tr">&#8234;T&uuml;rk&ccedil;e&#8236;</option> <option value="uk">&#8234;&#1091;&#1082;&#1088;&#1072;&#1111;&#1085;&#1089;&#1100;&#1082;&#1072;&#8236;</option> <option value="vi">&#8234;Ti&#7871;ng Vi&#7879;t&#8236;</option> <option value="zh-CN">&#8234;&#31616;&#20307;&#20013;&#25991;&#8236;</option> <option value="zh-HK">&#8234;&#32321;&#39636;&#20013;&#25991; (&#39321;&#28207;)&#8236;</option> <option value="zh-TW">&#8234;&#32321;&#39636;&#20013;&#25991; (&#21488;&#28771;)&#8236;</option></select></div></div> <noscript><div class="pagewarning">크롬 다운로드에는 자바스크립트가 지원되는 브라우저가 필요합니다. 브라우저에서 자바스크립트를 사용하도록 설정하는 방법은 <a href="http://www.google.com/support/bin/answer.py?answer=23852&hl=ko">여기에서 알아보세요.</a></div></noscript>  <div id="c-main"><div id="main-content"><div id="action" class="c-button"><div class="button"><span><span><a id="button" href="eula.html?hl=ko" onclick="if (_gaq) {_gaq.push([&#39;_trackPageview&#39;, &#39;/chrome/eula-lightbox&#39;]);}"><script type="text/javascript">utmx_section("Button Text")</script> Chrome &#45796;&#50868;&#47196;&#46300; </noscript></a></span></span></div> <p>순식간에 설치할 수 있는 <strong>무료</strong> 웹브라우저</p> <p>Windows XP, Vista 및 Windows 7용</p></div> <script type="text/javascript">utmx_section("Bullets")</script> <div class="feature-list"><p><strong>빠른 실행</strong><br /> Chrome은 즉시 실행됩니다.</p> <p><strong>빠른 로딩</strong><br /> Chrome은 웹페이지를 빠르게 로드합니다.</p> <p><strong>빠른 검색</strong><br /> 검색주소창에서 직접 웹을 검색할 수 있습니다.</p></div> </noscript> <div class="more-links"><p><a href="/chrome/intl/ko/more/index.html?hl=ko">Chrome 정보 &raquo;</a></p></div></div></div> <script type="text/javascript" src="/tools/dlpage/res/chrome/scripts/dlpage-ui.js">
+    
+  </script> <div id="intro"> <script type="text/javascript">utmx_section("Subtitle")</script> <p>&#48736;&#47476;&#44256; &#47924;&#47308;&#51064; &#50937;&#48652;&#46972;&#50864;&#51200;&#47484; &#49324;&#50857;&#54644; &#48372;&#49464;&#50836;.</p> </noscript></div> <div id="jewel"><script type="text/javascript">utmx_section("Jewel")</script> 
+    <img src="//ssl.gstatic.com/chrome/betterweb/download/images/pc/resolve_static.png" alt="Chrome" style="margin-left:-7px;">
+       </noscript></div>  <div id="c-footer"><script type="text/javascript">utmx_section("Footer Secondary")</script>  </noscript> <div class="c-footer-links"><p>&copy; Google   &middot; <a href="/chrome/intl/ko/privacy.html?hl=ko">&#44060;&#51064;&#51221;&#48372; &#48372;&#54840;&#51221;&#52293;</a> &middot; <a href="//www.google.com/support/chrome/?hl=ko">&#46020;&#50880;&#47568;</a> </p> <p><a href="/chrome?platform=mac&hl=ko">Mac</a> 또는 <a href="/chrome?platform=linux&hl=ko">Linux</a>용 Chrome</p></div></div></div> <div style="display:none;" id="eula-overlay"></div> <div id="c-eula" style="display:none;" role="dialog"><div id="eulabox"><img class="logo" src="//www.google.com/intl/ko/images/logos/chrome_logo.gif" alt="Google Chrome"> <h2>Google이 만든 정말 빠른 무료 웹브라우저</h2>   <iframe frameborder="0" src="/chrome/intl/ko/eula_text.html" title="Windows&#50857; Chrome - &#51060;&#50857;&#50557;&#44288;"></iframe> <p class="eula-pf"><a target="_blank" href="/chrome/intl/ko/eula_text.html">&#51064;&#49604;&#54616;&#44592;</a></p>  <form action="" method="GET" class="config-options" name="configOptions"> <ul><li><label><input type="checkbox" name="cboption1" checked value="set"> Chrome&#51012; &#44592;&#48376; &#48652;&#46972;&#50864;&#51200;&#47196; &#49444;&#51221;</label></li></ul></form> <p class="statusage"><input type="checkbox" name="checkbox" id="statcb"> <label for="statcb"><b>선택사항:</b> 사용 통계 및 충돌 보고서가 Google로 자동 전송되도록 선택하시면 Google 크롬 개선에 도움이 됩니다. <a href="//www.google.com/support/chrome/bin/answer.py?answer=96817&amp;hl=ko">&#51088;&#49464;&#55176; &#50508;&#50500;&#48372;&#44592;</a></label></p>  <div class="eula-action"><div class="c-button eula-input" id="accept"><div class="button"><span><span><input id="submit1" name="submitbutton" type="button" onclick="this.disabled=true;installApp();" value="&#46041;&#51032; &#48143; &#49444;&#52824;"></span></span></div> <div id="throbber"><span><img id="throbber-img" width="16" height="16" alt="Throbber" src="/tools/dlpage/res/chrome/images/chrome_throbber_fast_16.gif"></span></div></div> <input name="Button" type="button" class="cancel eula-input" id="cancel" onclick="goCancelled();" value="&#52712;&#49548;"></div></div></div> 
+<script>
+  var eulaModal = new cdl.Eula(
+      'eula-overlay',
+      'c-eula',
+      'submit1',
+      'button',
+      'cancel',
+      ['lang-select']
+  );
+
+  function getConfigOptions(tag) {
+    try {
+      if (tag.match(/installdataindex=([^&]+)/) && document.configOptions
+          && document.configOptions.cboption1.checked) {
+        return tag.replace(/installdataindex=([^&]+)/,
+            'installdataindex=$1-defaultbrowser');
+      } else if (document.configOptions
+          && document.configOptions.cboption1.checked) {
+        return tag + '\x26installdataindex\x3d' + 'defaultbrowser';
+      } else {
+        return tag;
+      }
+    } catch (e) {
+      return tag;
+    }
+  }
+  function runTagParamsHook(tag, opt_guid) {
+    return getConfigOptions(tag);
+  }
+  function runThankYouQueryHook(query) {
+    query = query || '\x3f';
+    return getConfigOptions(query);
+  }
+</script>
+   
+<!--
+Start of DoubleClick Floodlight Tag: Please do not remove
+Activity name of this tag: Chrome: Landing Page - 2011
+URL of the webpage where the tag is expected to be placed: http://www.google.com/chrome
+This tag must be placed between the <body> and </body> tags, as close as possible to the opening tag.
+Creation Date: 04/28/2011
+-->
+<script type="text/javascript">
+var axel = Math.random() + "";
+var a = axel * 10000000000000;
+document.write(unescape('%3Ciframe src="//fls.doubleclick.net/activityi;src=2542116;type=clien612;cat=chrom0;ord=' + a + '?" width="1" height="1" frameborder="0" style="display:none"%3E%3C/iframe%3E'));
+</script>
+<noscript>
+<iframe src="//fls.doubleclick.net/activityi;src=2542116;type=clien612;cat=chrom0;ord=1?" width="1" height="1" frameborder="0" style="display:none"></iframe>
+</noscript>
+<!-- End of DoubleClick Floodlight Tag: Please do not remove -->
+  <script type="text/javascript">
+    
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', "UA-4436568-1"]);
+      _gaq.push(['_setCookiePath', "/chrome"]);
+      _gaq.push(['_trackPageview']);
+      
+      
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') +
+            '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    
+  </script></body></html>

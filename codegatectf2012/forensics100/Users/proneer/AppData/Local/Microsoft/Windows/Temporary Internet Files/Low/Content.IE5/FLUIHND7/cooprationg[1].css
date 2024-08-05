@@ -1,0 +1,271 @@
+/*  style
+------------------------------------------------------------------- */
+* { margin:0px; padding:0px }
+body {font:12px/160% ;font-family:Verdana, Arial; color:#000; background:#fff;}
+textarea, input { padding:0 2px; }
+textarea { padding:2px; }
+form { display:inline; }
+dl, ul { list-style:none; }
+a { text-decoration:none; color:#000; }
+a:hover { text-decoration:underline; }
+img { border:0; vertical-align:middle}
+h1,h2,h3{display:inline;}
+.clearfix:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
+.clearfix { display: inline-block; }
+.clearfix { display: block; }
+.clear { clear:both; }
+.cBlue2, a.cBlue2:link,a.cBlue2:visited{text-decoration:none;color:#0066cc;}
+a.cBlue2:active,a.cBlue2:hover{text-decoration:underline;color:#ff6600;}
+.ls a:link,.ls a:visited{text-decoration:none;color:#0066cc;}
+.ls a:active,.ls a:hover{text-decoration:underline;color:#ff6600;}
+.cWhite, a.cWhite:link, a.cWhite:visited { color:#fff; text-decoration:none }
+.cCate, a.cCate:link,a.cCate:visited{text-decoration:none;color:#0066cc;}
+a.cCate:active,a.cCate:hover{text-decoration:underline;color:#ff6600;}
+.cCate2, a.cCate2:link,a.cCate2:visited{text-decoration:underline;color:#0066cc;}
+a.cCate2:active,a.cCate2:hover{text-decoration:underline;color:#ff6600;}
+.bordr-right{ border-right:1px dotted #d7d7d7}
+.left1{ margin-left:10px;}
+.cf12{ font-size:12px; }
+
+
+
+
+
+/*#layout
+------------------------------------------------------------*/
+#layout{ width:950px; margin:10px auto; zoom:1;overflow:hidden;}
+#layout #left{ width:180px; float:left; }
+#layout #right,#layout #right .area{ width:745px; float:right;}
+
+
+/*left
+------------------------------------------------------------*/
+#layout #left .left_titl{background:url(http://img.brothersoft.com/v1/coopration_images/bg.gif) no-repeat left -86px; height:34px; line-height:34px; text-align:center; vertical-align:middle; width:180px; }
+#layout #left .left_titl h2{  font-size:13px; color:#fff; font-weight:bold}
+
+
+/*free
+------------------------------------------------------------*/
+.free{ width:180px; float:left}
+.free .con_free{ width:178px; border-left:1px  solid #d4d1cc; border-right:1px solid #d4d1cc; background:#fef6e1;  padding-top:10px; float: left; }
+.free .con_free input{ width:130px; float:left; margin-left:6px;}
+.free .con_free .left_go{ margin-left:5px; float:left;} 
+.free .con_free h3{ color:#cc0000; font-size:14px; font-weight:bold; background:url(http://img.brothersoft.com/v1/coopration_images/icon_star.gif) no-repeat 2px 5px; padding-left:20px; margin-top:5px; margin-left:6px; float: left; }
+.free .con_free ul{ width:150px; margin-left:10px; float:left}
+.free .con_free li{ background:url(http://img.brothersoft.com/v1/coopration_images/icon1.gif) no-repeat 2px 7px; line-height:20px; padding-left:8px; font-size:10px; font-weight: normal}
+.free .free_bottom{ width:180px; float:left; background:url(http://img.brothersoft.com/v1/coopration_images/bg.gif) no-repeat left -120px; height:12px;}
+
+
+
+/*Categories
+------------------------------------------------------------*/
+.Categories{ width:180px; float:left;}
+#layout #left .Categories .cate_title{ color:#fff; background: url(http://img.brothersoft.com/v1/coopration_images/bg.gif) no-repeat left -55px; text-align:left; width:170px; line-height:30px; font-size:18px; font-weight:bold; padding-left:10px; }
+.Categories .cate_con{ width:178px; float:left; border-left:1px solid #dee4d8; border-right:1px solid #dee4d8; border-bottom:1px solid #dee4d8}
+
+.Categories .cate_con dt{ padding-left:8px; width:163px; font-weight:bold;background:url(http://img.brothersoft.com/v1/coopration_images/a18.gif) no-repeat 2px 8px;border-top:1px solid #EDF1E9;padding-left:15px; font-size: 14px; font-family: "Trebuchet MS"; height: 22px; padding-top: 5px; }
+
+.Categories .cate_con dt a, .Categories .cate_con dt a:link,.Categories .cate_con dt a:visited{text-decoration:none;color:#0066cc;}
+.Categories .cate_con dt a:active,.Categories .cate_con dt a:hover{text-decoration:underline;color:#ff6600;}
+ .Categories .cate_con dd{ font-size:10px; background:#f7ffef; width:170px; padding-left:4px; padding-right:4px; border-bottom:1px solid #ecf2e8; line-height: 14px; }
+ .Categories .cate_con dd a, .Categories .cate_con dd a:link,.Categories .cate_con dd a:visited{text-decoration:none;color:#0066cc;}
+.Categories .cate_con dd a:active,.Categories .cate_con dd a:hover{text-decoration:underline;color:#ff6600;}
+ 
+ 
+/*Categories
+------------------------------------------------------------*/ 
+#layout #left .left_ad{ margin-top:20px; width:180px; margin-bottom:20px; float:left; text-align:center}
+
+
+
+
+
+
+ 
+/*search 
+------------------------------------------------------------*/ 
+.search{ width:745px;}
+.search .search_con1{ background:url(http://img.brothersoft.com/v1/coopration_images/bg.gif) no-repeat left -132px; height:31px; width:412px; float:left; font-size:12px; font-weight:bold; padding-left:10px; padding-top:8px;} 
+
+.search .search_con1 #textfield{ width:280px; height:19px;}
+
+.search .search_con2{ background:url(http://img.brothersoft.com/v1/coopration_images/bg.gif) no-repeat left -172px; width:290px; height:42px; float:right; padding-left:10px; color:#0066cc; font-size:11px; padding-top:5px; line-height: 150%; }
+.search .search_con2 a{}
+.search .search_con2 a, .search .search_con2 a:link,.search .search_con2 a:visited{text-decoration:none;color:#0066cc;}
+.search .search_con2 a:active,.search .search_con2 a:hover{text-decoration:underline;color:#ff6600;}
+
+.search .search_con1 img{vertical-align:middle;}
+* html .search .search_con1 img{position:relative;top:-5px;}
+*+html .search .search_con1 img{position:relative;top:-3px;*top:-5px;}
+ 
+ 
+/*editor
+------------------------------------------------------------*/ 
+.editor{ width:745px; float:right; position: relative; }
+.editor .topti{ width:725px;  background:url(http://img.brothersoft.com/v1/coopration_images/bg.gif) no-repeat left -219px; height:44px; margin-top:10px; padding-left:20px;}
+ .editor .topti h2{font-size:18px; }
+
+
+.editor .editor_con{ width:743px; border-left:1px solid #e4e4e4; border-right:1px solid #e4e4e4; float: left }
+.editor .editor_con .editor_img{ margin-left:10px; float:left; display:inline; width:360px; padding-top:10px; font-size: 12px; }
+.editor .editor_con .editor_img .img{ width:100px; height:100px; float:left}
+.editor .editor_con .editor_img dl{ width:250px; float:right}
+.editor .editor_con .editor_img dt{ font-size:14px; font-weight:bold; color:#0066cc}
+ .editor .editor_bottom{ background:url(http://img.brothersoft.com/v1/coopration_images/bg.gif) no-repeat left -263px; width:744px; height:20px; float:left}
+ 
+ 
+/*col1
+------------------------------------------------------------*/ 
+#layout #right .area .col1{ width:336px; float:left; overflow: hidden; }
+.col1 .ad_col1{ width:420px; margin:20px auto }
+.ceti{ height:18px; padding-bottom:22px; padding-left:15px; padding-top:12px; line-height:18px; background: url(http://img.brothersoft.com/v1/coopration_images/a25.gif) no-repeat bottom; width:405px;}
+.ceti h2{font-size:18px;font-family:Trebuchet MS;}
+.celi dl{border-bottom:#dedede 1px dotted;padding-top:9px;padding-bottom:9px;height:34px;}
+.celi img{width:32px;height:32px;}
+.celi dl dd{float:left;width:57px;text-align:center;height:34px;}
+.celi dl dt{float:left;width:358px;height:34px;overflow:hidden; font-size:10px; font-weight:normal}
+.celi dl dt b{display:block;line-height:17px; font-size:12px; font-weight:bold}
+.cemore{ text-align:right; padding:8px 5px 5px 0px; font-size: 11px; }
+.ceti1{ height:38px; padding-left:15px; padding-top:6px; background: url(http://img.brothersoft.com/v1/coopration_images/bg.gif) no-repeat left -293px; width:405px; }
+.celi1{border-left:#e4e4e4 1px solid;border-right:#e4e4e4 1px solid;}
+.celi1 li{ width:410px; margin:0 auto; padding-top:4px; padding-bottom:4px; border-bottom:#ececec 1px dotted; font-size:10px; color:#424242; }
+ .celi1 li a,.celi1 li a:link, .celi1 li a:visited{text-decoration:none;color:#0066cc;font-weight:bold;font-size:11px;}
+.celi1 li a:active,.celi1 li a:hover{text-decoration:underline;color:#ff6600;font-weight:bold;font-size:11px;}
+
+
+
+.csri{float:right;font-size:10px;padding-top:4px;padding-right:4px;}
+.cemore1{ background:url(http://img.brothersoft.com/v1/coopration_images/bg.gif) no-repeat left -345px; height:26px; text-align:right; padding:8px 10px 5px 0px; font-size: 11px; }
+.cslf{float:left;font-size:18px;font-family:Trebuchet MS;}
+
+
+/*col2
+------------------------------------------------------------*/ 
+#layout #right .area .col2{ width:336px; float:right; }
+
+.riti{background:url(http://img.brothersoft.com/v1/coopration_images/bg.gif) no-repeat left -383px;height:26px;font-family:Trebuchet MS;color:#ffffff;padding-left:10px;padding-top:6px;margin-top:20px;font-weight:bold;font-size:18px;}
+.rititop{margin-top:0px;}
+.rili{background:#f6f6f6;text-align:center;padding:5px;line-height:250%;font-size:11px;}
+
+   .area .col2 .rili a , .area .col2 .rili a:link, .area .col2 .rili a:visited{text-decoration:none;color:#0066cc;}
+.area .col2 .rili a:active,.area .col2 .rili a:hover{text-decoration:underline;color:#ff6600;}
+.rili b{font-size:18px;}
+ 
+ 
+ 
+/*right_ad
+------------------------------------------------------------*/ 
+ .col2 .right_ad{ width:300px; float:left; margin:20px auto 0px auto }
+ 
+ 
+ /*riti
+------------------------------------------------------------*/ 
+ .riti1{ background:url(http://img.brothersoft.com/v1/coopration_images/a37.gif) no-repeat; height:30px; padding-left:10px; margin-top:25px; width:290px; overflow: hidden; float: left; font-size: 18px; padding-top: 10px; }
+ .col2 .riti h2{font-family:Trebuchet MS;font-weight:bold; font-size:18px;}
+.area .col2 .top{ width:300px; background:url(http://img.brothersoft.com/v1/coopration_images/a38.gif) no-repeat; height:120px; margin-top:3px; margin-bottom:3px; float: left; }
+  .area .col2 .top b a, .area .col2 .top b a:link, .area .col2 .top b a:visited{ color:#0066cc; text-decoration:none} 
+  
+  
+.col2 .top dd{ width:32px; float:left}
+.col2 .top dl dd{float:left;width:46px;text-align:center;padding-top:11px;height:40px;}
+.col2 .top dl dt{ float:left; width:248px; font-size:12px; line-height:17px; padding-top:10px; font-size:11px; }
+.col2 .top dl dt b{display:block;width:240px;overflow:hidden;white-space:nowrap;text-overflow:clip;font-size:18px;}
+.col2 .top li{padding-left:10px;background:url(http://img.brothersoft.com/v1/coopration_images/a39.gif) no-repeat 0px 8px;}
+.col2 .top .xhx{display:block;padding-left:17px;background:url(http://img.brothersoft.com/v1/coopration_images/a24.gif) no-repeat 0px 4px;font-style: normal;font-weight:bold;font-size:17px;}
+
+
+/*share
+------------------------------------------------------------*/ 
+ .col2 .share{ width:300px; background:#f6f6f6; float:left; font-size:11px; }
+ .col2 .share ul{ background:url(http://img.brothersoft.com/v1/coopration_images/a40.gif) no-repeat 8px 5px; padding-left:30px;margin-top:5px; margin-bottom:5px; }
+ .col2 .share li{ line-height:22px;}
+ .share li a, .share li a:link,.share li a:visited{text-decoration:none;color:#0066cc;}
+.share li a:active,  .col2 .share li a:hover{text-decoration:underline;color:#ff6600;}
+ 
+ 
+ /*bottom
+------------------------------------------------------------*/  
+#layout .bottom{ width:950px; margin:20px auto; float:left; clear:both}
+ #layout .bottom .bottom_title{ background:url(http://img.brothersoft.com/v1/coopration_images/bg.gif) no-repeat left top; width:950px; height:34px; float:left}
+.bottom .bottom_title li{ width:185px; float:left; margin-top:10px; margin-left:4px; height:12px; font-weight:bold; font-size:11px; }
+ .bottom .bottom_con{ width:948px; background:#f8f8f8; border-left:1px solid #ededed; border-right:1px solid #ededed; float: left; }
+.bottom .bottom_con dl{ width:189px; border-right:1px solid #e4e4e4; font-size:11px; line-height:16px; float:left }
+ .bottom .bottom_con dd{width:120px;margin-left:20px;  }
+.bottom .bottom_con dd a, .bottom .bottom_con dd a:link,  .bottom .bottom_con dd a:visited{text-decoration:none;color:#0066cc;}
+.bottom .bottom_con dd a:active,   .bottom .bottom_con dd a:hover{text-decoration:underline;color:#ff6600;}
+ .bottom .bottom_con .dl2{border:0px; width:150px;}
+ .bottom .bottom_bot{ width: 949px; height:21px; background:url(http://img.brothersoft.com/v1/coopration_images/bg.gif) no-repeat left -34px; float:left }
+
+
+/*copyright*/
+.copy{background:url(http://img.brothersoft.com/v1/img/a6.gif);height:38px;}
+.copy1{color:#999999;width:1000px;margin:0 auto;padding-top:10px;font-size:11px;text-align:center;}
+.copy1 a{color:#fff;}
+
+
+
+/*footer
+--------------------------------------------------*/
+.footer{ background:url(http://img.brothersoft.com/v1/img/bottom_bg222.gif) repeat-x; height:40px; margin:0px auto; color:#999; padding-top:15px;text-align:center; }
+.footer a{color:#fff}
+.footer img{ margin-left:5px;}
+
+.searchbd1{height:34px;padding-left:63px;padding-top:8px;background:url(http://img.brothersoft.com/v1/coopration_images/a45.gif) no-repeat;margin-bottom:20px;}
+.searchtxt1{ border:#dfdfdf 1px solid; width:75px; }
+.isnow{height:30px;font-size:14px;}
+.isnow h1{font-size:14px;font-weight:bold;}
+#layout #right .editor .topti2{ width:725px; height:87px;margin-top:40px; padding-left:20px; background-image: url(http://img.brothersoft.com/v1/coopration_images/top_bg.gif); background-repeat: no-repeat; position:relative }
+ .editor .topti2 h2{ font-size:18px; position: absolute; left:15px; top: -32px; }
+ #layout #right .editor .topti2 .top_img{ float:left;width:32px; height:33px; position:relative; bottom:10px;}
+#layout #right .editor .topti2 span{float:left; margin-left:8px;position:relative; bottom:10px;}
+#layout #right .editor .topti2 b{font-size:11px; font-weight:normal}
+#layout #right .editor .editor_content{ width:745px; float:left; position:absolute; left: 10px; top:60px; }
+#layout #right .editor .editor_content dt{ font-size:18px; font-weight:bold; margin-bottom: 8px; }
+#layout #right .editor .editor_content dd{ font-size:11px; font-weight:normal}
+#layout #right .download{ width:725px; height:108px; float:left; background:url(http://img.brothersoft.com/v1/coopration_images/right_bg2.gif) no-repeat; margin:10px auto; padding:20px 10px}
+#layout #right .download ul{ font-size:11px;float:left; padding-right:5px;}
+#layout #right .download .r_border{ border-right:1px solid #ede2d8; line-height:150%; height:114px; margin-right:10px; line-height:30px; }
+.cRed,a.cRed:link,a.cRed:visited{ color:Red; }
+#layout #right .download .cRed strong{font-size:12px;}
+#layout #right .download .down_href , #layout #right .download .down_href a{ color:#0066cc; font-size:24px; padding-top:20px; font-weight:bold; }
+#layout #right .download .icon_down{ float:left; margin-right:5px; }
+.riti{background:url(http://img.brothersoft.com/v1/coopration_images/bg.gif) no-repeat left -383px;height:26px;font-family:Trebuchet MS;color:#ffffff;padding-left:10px;padding-top:6px;margin-top:20px;font-weight:bold;font-size:18px;}
+.rititop{margin-top:0px;}
+.rili2{ background:url(http://img.brothersoft.com/v1/coopration_images/down_bg.gif) repeat-x;text-align:center;padding:5px;line-height:250%;font-size:11px; margin-top:1px;}
+ .area .col2 .rili2 a , .area .col2 .rili2 a:link, .area .col2 .rili2 a:visited{text-decoration:none;color:#0066cc;}
+.area .col2 .rili2 a:active,.area .col2 .rili2 a:hover{text-decoration:underline;color:#ff6600;}
+.rili2 b{font-size:18px;}
+#layout #right .area .col1 .co1_tit{ background:url(http://img.brothersoft.com/v1/coopration_images/down_tit.gif) no-repeat; height:70px; font-size:16px; float:left; width:410px; margin-top:20px; font-weight:bold; padding-left:10px; }
+#layout #right .area .col1 .co1_tit span{ font-size:12px;}
+#layout #right .area .col1 .img_ad{ float:left;}
+
+.celi2 li{width:398px;margin:0 auto;padding-top:10px;padding-bottom:10px;border-bottom:#bcbcbc 1px dotted;font-size:10px;color:#424242;line-height:14px; float:left}
+.celi2 li a{font-size:12px;}
+ 
+ .cemore{text-align:right;padding:8px 5px 5px 0px; float: left; width:420px;}
+ .xhx a:link,.xhx a:visited{text-decoration:underline;}
+.xhx a:active,.xhx a:hover{text-decoration:underline;}
+
+
+*html #layout #right .download .r_border li{ padding-bottom:8px; padding-top:8px;}
+
+.cebody{margin:0 auto;width:1000px;}
+.cebody1{background:url(http://img.brothersoft.com/v1/img/a7.gif) repeat-x bottom;}
+.bodys{margin:0 auto;width:1000px;background:#ffffff;}
+.bodys1{margin:0 auto;width:949px;padding-top:26px;}
+.bodys2{margin:0 auto;width:949px;padding-top:15px;}
+.jd{overflow:hidden;white-space:nowrap;text-overflow:clip;}
+
+
+
+
+.bottom_con{width:949px;margin:10px 0;float:left;}
+.bottom_title{width:949px;float:left;height:34px;background:url(http://img.brothersoft.com/v1/coopration_images/down_b_title.jpg) 0 0 no-repeat;}
+.bottom_title ul{width:940px;float:left;_display:inline;margin-left:5px;margin-top:8px;}
+.bottom_title li{font-weight:bold;font-size:10px; width:185px;float:left;text-indent:6px;}
+.bottom_list{width:949px;background:url(http://img.brothersoft.com/v1/coopration_images/bottom_d_img.jpg) 0 0 repeat-y;float:left;font-size:11px;}
+.bottom_list dl{width:188px;float:left;text-indent:10px;padding-bottom:10px;}
+.bottom_list dd,.bottom_list dd a:link,.bottom_list dd a:visited{overflow:hidden;white-space:nowrap;text-overflow:clip;color:#0066CC;
+text-decoration:none;font-size:11px;}
+.bottom_list dd a:hover,.bottom_list dd a:active{text-decoration:underline;color:#FF6600;}
+.bottom_bot{width:949px;background:url(http://img.brothersoft.com/v1/coopration_images/bottom_bot.jpg) 0 0 no-repeat;float:left;height:13px;}

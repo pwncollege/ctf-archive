@@ -1,0 +1,196 @@
+//-----------------------------------
+//--- 010 Editor v2.0 Binary Template
+//
+// File:     ZIPTemplate.bt
+// Author:   SweetScape Software
+// Revision: 2.2
+// Purpose:  Defines a template for
+//    parsing ZIP files.
+// Changes:  
+// 2.1 (SweetScape): 
+//   - Added write function for ZIPFILERECORD structure.
+// 2.2 (S.Gibson, KPMG LLP): 
+//   - Fix for entry comment field
+//   - Fix for parsing data descriptors
+//-----------------------------------
+
+// Define structures used in ZIP files
+
+//enum used for compression format
+typedef enum <short> { 
+    COMP_STORED    = 0,
+    COMP_SHRUNK    = 1,
+    COMP_REDUCED1  = 2,
+    COMP_REDUCED2  = 3,
+    COMP_REDUCED3  = 4,
+    COMP_REDUCED4  = 5,
+    COMP_IMPLODED  = 6,
+    COMP_TOKEN     = 7,
+    COMP_DEFLATE   = 8,
+    COMP_DEFLATE64 = 9    
+} COMPTYPE;
+ 
+// Defines a file record
+typedef struct {
+    // Header for the file
+    char     frSignature[4];    //0x04034b50
+    ushort   frVersion;
+    ushort   frFlags;
+    COMPTYPE frCompression;
+    DOSTIME  frFileTime;
+    DOSDATE  frFileDate;
+    uint     frCrc     <format=hex>;
+    uint     frCompressedSize;
+    uint     frUncompressedSize;
+    ushort   frFileNameLength;
+    ushort   frExtraFieldLength;
+    if( frFileNameLength > 0 )
+        char     frFileName[ frFileNameLength ];
+    if( frExtraFieldLength > 0 )
+        uchar    frExtraField[ frExtraFieldLength ];
+
+    // Compressed data
+    SetBackColor( cNone );
+    if( frCompressedSize > 0 )
+        uchar    frData[ frCompressedSize ];
+
+} ZIPFILERECORD <read=ReadZIPFILERECORD, write=WriteZIPFILERECORD>;
+
+// Defines an entry in the directory table
+typedef struct {
+    char     deSignature[4];     //0x02014b50
+    ushort   deVersionMadeBy;
+    ushort   deVersionToExtract;
+    ushort   deFlags;
+    COMPTYPE deCompression;
+    DOSTIME  deFileTime;
+    DOSDATE  deFileDate;
+    uint     deCrc     <format=hex>;
+    uint     deCompressedSize;
+    uint     deUncompressedSize;
+    ushort   deFileNameLength;
+    ushort   deExtraFieldLength;
+    ushort   deFileCommentLength;
+    ushort   deDiskNumberStart;
+    ushort   deInternalAttributes;
+    uint     deExternalAttributes;
+    uint     deHeaderOffset;
+    if( deFileNameLength > 0 )
+        char     deFileName[ deFileNameLength ];
+    if( deExtraFieldLength > 0 )
+        uchar    deExtraField[ deExtraFieldLength ];
+    if( deFileCommentLength > 0 )
+        uchar    deFileComment[ deFileCommentLength ];
+} ZIPDIRENTRY <read=ReadZIPDIRENTRY>;
+
+// Defines the digital signature
+typedef struct {
+    char     dsSignature[4];    //0x05054b50
+    ushort   dsDataLength;
+    if( dsDataLength > 0 )
+        uchar    dsData[ dsDataLength ];
+} ZIPDIGITALSIG;
+        
+// Defintes the Data descriptor
+typedef struct {
+    char ddSignature[4]; //0x08074b50
+    uint ddCRC <format=hex>;
+    uint ddCompressedSize;
+    uint ddUncompressedSize;
+} ZIPDATADESCR;
+
+// Defines the end of central directory locator
+typedef struct {
+    char     elSignature[4];    //0x06054b50
+    ushort   elDiskNumber;
+    ushort   elStartDiskNumber;
+    ushort   elEntriesOnDisk;
+    ushort   elEntriesInDirectory;
+    uint     elDirectorySize;
+    uint     elDirectoryOffset;
+    ushort   elCommentLength;
+    if( elCommentLength > 0 )
+        char    elComment[ elCommentLength ];
+} ZIPENDLOCATOR;
+
+//--------------------------------------------
+
+// Custom read functions that allows the name of the
+//  of the file to appear in the Template Results.
+
+string ReadZIPFILERECORD( ZIPFILERECORD &file )
+{
+    if( exists( file.frFileName ) )
+        return file.frFileName;
+    else
+        return "";
+}
+
+string ReadZIPDIRENTRY( ZIPDIRENTRY &entry )
+{
+    if( exists( entry.deFileName ) )
+        return entry.deFileName;
+    else
+        return "";
+}
+
+// Custom write function that allows changing
+//  the name of the file - note that the file
+//  name size cannot be increased
+
+void WriteZIPFILERECORD( ZIPFILERECORD &file, string s )
+{
+    local int len = Strlen( s );
+    if( exists( file.frFileName ) )
+    {
+        Strncpy( file.frFileName, s, file.frFileNameLength );
+        if( len < file.frFileNameLength )
+            file.frFileName[len] = 0; //null terminate        
+    }
+}
+
+//--------------------------------------------
+
+// Define the file
+local uint tag;
+LittleEndian(); 
+while( !FEof() )
+{
+    // Read a tag
+    tag = ReadUInt( FTell() );
+
+    // Read data depending upon tag - should start with 'PK'.
+    // Note that when duplicate variables are defined, they
+    // are made into an array (see 'Using Templates and Structs'
+    // in the help file).
+    if( tag == 0x04034b50 )
+    {
+        SetBackColor( cLtGray );
+        ZIPFILERECORD record;
+    }
+    else if( tag == 0x08074b50 )
+    {
+        SetBackColor( cLtGreen );
+        ZIPDATADESCR dataDescr;
+    }
+    else if( tag == 0x02014b50 )
+    {
+        SetBackColor( cLtPurple );
+        ZIPDIRENTRY dirEntry;
+    }
+    else if( tag == 0x05054b50 )
+    {
+        SetBackColor( cLtBlue );
+        ZIPDIGITALSIG digitalSig;
+    }
+    else if( tag == 0x06054b50 )
+    {
+        SetBackColor( cLtYellow );
+        ZIPENDLOCATOR endLocator;
+    }
+    else
+    {
+        Warning( "Unknown ZIP tag encountered. Template stopped." );
+        return -1;
+    }
+}

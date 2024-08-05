@@ -1,0 +1,13 @@
+/* 60:40 AOBI */
+
+div.wolBody div.section_oly-aml-near,
+div.section_oly-aml-near
+{
+    width: 60%;
+}
+div.wolBody div.section_oly-aml-far,
+div.section_oly-aml-far
+{
+    left: 40%; 
+    width: 60%;
+}

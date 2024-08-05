@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="VCMergeModules" type="VCMergeModulesType" />
+	<xs:complexType name="VCMergeModulesType">
+		<xs:sequence>
+			<xs:element name="VCMergeModule" minOccurs="0" maxOccurs="unbounded">
+				<xs:complexType>
+					<xs:sequence minOccurs="0" maxOccurs="unbounded">
+						<xs:element name="File" minOccurs="0" maxOccurs="unbounded">
+							<xs:complexType>
+								<xs:attribute name="Name" type="xs:string" use="required" />
+							</xs:complexType>
+						</xs:element>
+					</xs:choice>
+					<xs:attribute name="Name" type="xs:string" use="required" />
+					<xs:attribute name="Path" type="xs:string" use="required" />
+					<xs:attribute name="Architecture" type="xs:string" use="required" />
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute name="Version" use="optional" default="8.00">
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="8.00" />
+					<xs:enumeration value="8,00" />
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+	</xs:complexType>
+</xs:schema>

@@ -1,0 +1,419 @@
+
+<!DOCTYPE html>
+
+
+
+
+<html lang="en" data-rootlocation="en/"
+    xmlns="http://www.w3.org/1999/xhtml" 
+    xmlns:fb="http://www.facebook.com/2008/fbml" 
+    xmlns:og="http://opg.me/ns#" 
+	xmlns:wl="http://apis.live.net/js/2010">
+
+<head><meta charset="utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=9" /><title>
+	Internet Explorer Gallery
+</title><link rel="stylesheet" href="/assets/css/screen.css" type="text/css" media="screen" /><link rel="stylesheet" href="/assets/css/holiday.css" type="text/css" media="screen" />
+	<script src="/assets/js/html5.js" type="text/javascript"></script>
+	<script src="/assets/js/main.js" type="text/javascript"></script>
+	<script src="/assets/js/hoverintent.js" type="text/javascript"></script>	
+	<script src="/assets/js/interactions.js" type="text/javascript"></script>
+	<script src="/assets/js/modernizr.js" type="text/javascript"></script>
+    <script src="/assets/js/s_code.js" type="text/javascript"></script>
+    <script src="/assets/js/analytics.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        IE9GETIE9 = "Site pinning requires Internet Explorer 9.  Download Now.";
+        IE9GETWIN7 = "Site pinning requires Windows 7.  Learn more.";
+        IE9GETBOTH = "Site pinning requires Windows 7 and Internet Explorer 9.  Learn more.";
+        
+        var ua = $.browser;
+        if (ua.msie && ua.version.slice(0, 1) == "7") {
+
+            $("html").addClass("ie7");
+        }
+
+        //maybe this can find a home somewhere
+        $(document).ready(function () {
+
+            var locale = 'en' + '-' + 'us';
+            var language = 'en'
+
+            setIE9DownloadLink(locale);
+            if (ua.msie && ua.version.slice(0, 1) == "7") {
+                document.getElementById("nav_home_link").href = document.getElementById("nav_addons_link").href;
+                $("#nav_pinning").addClass("nodisplay");
+                $("#nav_addons").addClass("nodisplay");
+                $("#nav_control").addClass("nodisplay");
+            }
+
+            $('#signoutlink').click(function (e) {
+                e.preventDefault();
+                jQuery.ajaxSetup({ async: false });
+                $.get('/en/signout.aspx', function (data) { });
+                jQuery.ajaxSetup({ async: true });
+
+                if (document.URL.toLowerCase().indexOf('/admin/') > -1)
+                    window.location = "/";
+                else
+                    window.location.reload();
+            });
+
+            if (language != "en") {
+                $('#logo_html5').hide();
+                $('#hosted_on').hide();
+                $('#logo_azure').hide();
+            }
+
+        });
+
+    </script>
+
+    <meta id="og_title" class="og_title" property="og:title" content="Internet Explorer Gallery" /><meta id="og_image" class="og_image" property="og:image" content="http://www.iegallery.com/assets/images/layout/socialImg-ieGallery.png" /><meta id="og_url" class="og_url" property="og:url" content="http://www.iegallery.com" /><meta id="og_desc" class="og_desc" property="og:description" content="Get started pinning your favorite sites to your Windows 7 taskbar." /><meta id="fb_admin" class="fb_admin" property="fb:admins" content="100002427053794" /><meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Internet Explorer Gallery" />
+
+    
+<script type="text/javascript">
+
+    function swapIEDownloadLink() {
+        var useBingMsnDownload = $('#bing_msn_default').attr('checked');
+
+        
+        if (useBingMsnDownload == true) {
+            $("#set_defaults_legal").attr('class', 'legal_stuff');
+        }
+        else {
+            $("#set_defaults_legal").attr('class', 'legal_stuff_nodisplay');
+        };
+
+        var locale = 'en' + '-' + 'us';
+        
+        //Adding for story 70, Denmark campaign.  Remove after campaign is over.
+        if (CURRENT_LOCALE == "da") {
+            setIE9OneClickDownloadForDenmark($('#download_ie9_modal a.button'));
+        }
+        else {
+           setIE9OneClickDownload($('#download_ie9_modal a.button'), useBingMsnDownload, locale);
+        };
+
+    }
+
+    $(document).ready(function () {
+
+        //Adding for story 70, Denmark campaign.  Remove after campaign is over.
+        if (CURRENT_LOCALE == "da" || CURRENT_LOCALE == "uk") {
+            $("#bing_msn_default").removeAttr('checked');
+            $(".bing_msn_defaults").hide();
+            $("#set_defaults_legal").hide();
+        }
+
+        if (isVista) {
+            $('#os').html('Windows Vista');
+        }
+        else if (isWin7) {
+            $('#os').html('Windows 7');
+        }
+        else {
+            $('#windows').hide();
+            $('#nowindows').show();
+        };
+
+        if (is64Bit) {
+            $('#arch').html('64-bit');
+        }
+        else if (is32Bit) {
+            $('#arch').html('32-bit');
+        };
+
+        var useBingMsnDownload = $('#bing_msn_default').attr('checked');
+        var locale = 'en' + '-' + 'us';
+
+        //Adding for story 70, Denmark campaign.  Remove after campaign is over.
+        if (CURRENT_LOCALE == "da") {
+            setIE9OneClickDownloadForDenmark($('#download_ie9_modal a.button'));
+        }
+        else {
+           setIE9OneClickDownload($('#download_ie9_modal a.button'), useBingMsnDownload, locale);
+        };
+
+
+    });
+
+</script>
+
+</head>
+
+<body id="BodyTag" class="section_home">
+    <div id="wrapper" class="us">
+		<div id="wrapper_inner">
+			<header class="global" role="banner">
+				<div>
+					<nav id="nav_main" role="navigation">
+						<ul>
+							<li id="nav_home" class="icon"><a id="nav_home_link" href="/us/">Home</a></li>
+                            <li id="nav_pinning"><a href="/us/pinnedsites/default.aspx">Pinned Sites</a></li>
+                            <li id="nav_addons"><a id="nav_addons_link" href="/us/addons/default.aspx">Add-ons</a></li>
+                            <li id="nav_control"><a href="/us/trackingprotectionlists/default.aspx">Tracking Protection Lists</a></li>
+						</ul>
+					</nav>
+					<aside id="social_page" class="social_media">
+						<ul id="manage"> 
+                            <!--
+							<li>IsAuthenticated: False | </li>
+						    -->
+                        	<li id="choose_locale"><a title="Choose Locale" href="#">United States (English)</a>
+								<div id="language_choices">
+									<script type="text/javascript">
+									    function rewriteUrlLanguage(lang) {
+									        var url = window.location.href.replace('/' + window.location.href.replace('http://', '').split('/')[1] + '/', '/' + lang + '/');
+									        var lang_change_var = "lc=1";
+
+									        if (window.location.search) {
+									            if (window.location.search.indexOf(lang_change_var) == -1) {
+									                url += "&" + lang_change_var;
+									            }
+									        }
+									        else {
+									            url += "?" + lang_change_var;
+									        }
+
+									        return url;
+									    }
+                                    </script>
+                                    <ol>
+                                        
+                                                <li id="LanguageList_LangListElement_0" class="c0"><a id="LanguageList_LanguageTitle_0" onclick="this.href=(&#39;/&#39; + &#39;il&#39; + &#39;/&#39;); return true;" title="Choose Site Language: (עברית (ישראל" href="#">(עברית (ישראל</a></li>
+                                            
+                                                <li id="LanguageList_LangListElement_1" class="c0"><a id="LanguageList_LanguageTitle_1" onclick="this.href=(&#39;/&#39; + &#39;ar&#39; + &#39;/&#39;); return true;" title="Choose Site Language: (العربية( العربية" href="#">(العربية( العربية</a></li>
+                                            
+                                                <li id="LanguageList_LangListElement_2" class="c0"><a id="LanguageList_LanguageTitle_2" onclick="this.href=(&#39;/&#39; + &#39;au&#39; + &#39;/&#39;); return true;" title="Choose Site Language: Australia (English)" href="#">Australia (English)</a></li>
+                                            
+                                                <li id="LanguageList_LangListElement_3" class="c0"><a id="LanguageList_LanguageTitle_3" onclick="this.href=(&#39;/&#39; + &#39;bd&#39; + &#39;/&#39;); return true;" title="Choose Site Language: Belgie (Dutch)" href="#">Belgie (Dutch)</a></li>
+                                            
+                                                <li id="LanguageList_LangListElement_4" class="c0"><a id="LanguageList_LanguageTitle_4" onclick="this.href=(&#39;/&#39; + &#39;bf&#39; + &#39;/&#39;); return true;" title="Choose Site Language: Belgique (Français)" href="#">Belgique (Français)</a></li>
+                                            
+                                                <li id="LanguageList_LangListElement_5" class="c0"><a id="LanguageList_LanguageTitle_5" onclick="this.href=(&#39;/&#39; + &#39;br&#39; + &#39;/&#39;); return true;" title="Choose Site Language: Brasil (Português)" href="#">Brasil (Português)</a></li>
+                                            
+                                                <li id="LanguageList_LangListElement_6" class="c0"><a id="LanguageList_LanguageTitle_6" onclick="this.href=(&#39;/&#39; + &#39;ca&#39; + &#39;/&#39;); return true;" title="Choose Site Language: Canada (English)" href="#">Canada (English)</a></li>
+                                            
+                                                <li id="LanguageList_LangListElement_7" class="c0"><a id="LanguageList_LanguageTitle_7" onclick="this.href=(&#39;/&#39; + &#39;cs&#39; + &#39;/&#39;); return true;" title="Choose Site Language: Česka Republika (Česky)" href="#">Česka Republika (Česky)</a></li>
+                                            
+                                                <li id="LanguageList_LangListElement_8" class="c0"><a id="LanguageList_LanguageTitle_8" onclick="this.href=(&#39;/&#39; + &#39;da&#39; + &#39;/&#39;); return true;" title="Choose Site Language: Danmark (Dansk)" href="#">Danmark (Dansk)</a></li>
+                                            
+                                                <li id="LanguageList_LangListElement_9" class="c0"><a id="LanguageList_LanguageTitle_9" onclick="this.href=(&#39;/&#39; + &#39;de&#39; + &#39;/&#39;); return true;" title="Choose Site Language: Deutschland (Deutsch)" href="#">Deutschland (Deutsch)</a></li>
+                                            
+                                                <li id="LanguageList_LangListElement_10" class="c0"><a id="LanguageList_LanguageTitle_10" onclick="this.href=(&#39;/&#39; + &#39;et&#39; + &#39;/&#39;); return true;" title="Choose Site Language: Eesti (Eesti)" href="#">Eesti (Eesti)</a></li>
+                                            
+                                                <li id="LanguageList_LangListElement_11" class="c0"><a id="LanguageList_LanguageTitle_11" onclick="this.href=(&#39;/&#39; + &#39;es&#39; + &#39;/&#39;); return true;" title="Choose Site Language: España (Español)" href="#">España (Español)</a></li>
+                                            
+                                                <li id="LanguageList_LangListElement_12" class="c0"><a id="LanguageList_LanguageTitle_12" onclick="this.href=(&#39;/&#39; + &#39;fr&#39; + &#39;/&#39;); return true;" title="Choose Site Language: France (Français)" href="#">France (Français)</a></li>
+                                            
+                                                <li id="LanguageList_LangListElement_13" class="c0"><a id="LanguageList_LanguageTitle_13" onclick="this.href=(&#39;/&#39; + &#39;hr&#39; + &#39;/&#39;); return true;" title="Choose Site Language: Hrvatska (Hrvatski)" href="#">Hrvatska (Hrvatski)</a></li>
+                                            
+                                                <li id="LanguageList_LangListElement_14" class="c1 reset"><a id="LanguageList_LanguageTitle_14" onclick="this.href=(&#39;/&#39; + &#39;in&#39; + &#39;/&#39;); return true;" title="Choose Site Language: India (English)" href="#">India (English)</a></li>
+                                            
+                                                <li id="LanguageList_LangListElement_15" class="c1"><a id="LanguageList_LanguageTitle_15" onclick="this.href=(&#39;/&#39; + &#39;it&#39; + &#39;/&#39;); return true;" title="Choose Site Language: Italia (Italiano)" href="#">Italia (Italiano)</a></li>
+                                            
+                                                <li id="LanguageList_LangListElement_16" class="c1"><a id="LanguageList_LanguageTitle_16" onclick="this.href=(&#39;/&#39; + &#39;la&#39; + &#39;/&#39;); return true;" title="Choose Site Language: Latin America (Español)" href="#">Latin America (Español)</a></li>
+                                            
+                                                <li id="LanguageList_LangListElement_17" class="c1"><a id="LanguageList_LanguageTitle_17" onclick="this.href=(&#39;/&#39; + &#39;hu&#39; + &#39;/&#39;); return true;" title="Choose Site Language: Magyarország (Magyar)" href="#">Magyarország (Magyar)</a></li>
+                                            
+                                                <li id="LanguageList_LangListElement_18" class="c1"><a id="LanguageList_LanguageTitle_18" onclick="this.href=(&#39;/&#39; + &#39;mx&#39; + &#39;/&#39;); return true;" title="Choose Site Language: Mexico (Español)" href="#">Mexico (Español)</a></li>
+                                            
+                                                <li id="LanguageList_LangListElement_19" class="c1"><a id="LanguageList_LanguageTitle_19" onclick="this.href=(&#39;/&#39; + &#39;nl&#39; + &#39;/&#39;); return true;" title="Choose Site Language: Nederland (Dutch)" href="#">Nederland (Dutch)</a></li>
+                                            
+                                                <li id="LanguageList_LangListElement_20" class="c1"><a id="LanguageList_LanguageTitle_20" onclick="this.href=(&#39;/&#39; + &#39;no&#39; + &#39;/&#39;); return true;" title="Choose Site Language: Norge (Norsk)" href="#">Norge (Norsk)</a></li>
+                                            
+                                                <li id="LanguageList_LangListElement_21" class="c1"><a id="LanguageList_LanguageTitle_21" onclick="this.href=(&#39;/&#39; + &#39;pl&#39; + &#39;/&#39;); return true;" title="Choose Site Language: Polska (Polski)" href="#">Polska (Polski)</a></li>
+                                            
+                                                <li id="LanguageList_LangListElement_22" class="c1"><a id="LanguageList_LanguageTitle_22" onclick="this.href=(&#39;/&#39; + &#39;ro&#39; + &#39;/&#39;); return true;" title="Choose Site Language: România (Română)" href="#">România (Română)</a></li>
+                                            
+                                                <li id="LanguageList_LangListElement_23" class="c1"><a id="LanguageList_LanguageTitle_23" onclick="this.href=(&#39;/&#39; + &#39;ch&#39; + &#39;/&#39;); return true;" title="Choose Site Language: Schweiz (Deutsch)" href="#">Schweiz (Deutsch)</a></li>
+                                            
+                                                <li id="LanguageList_LangListElement_24" class="c1"><a id="LanguageList_LanguageTitle_24" onclick="this.href=(&#39;/&#39; + &#39;sl&#39; + &#39;/&#39;); return true;" title="Choose Site Language: Slovenija (Slovenščina)" href="#">Slovenija (Slovenščina)</a></li>
+                                            
+                                                <li id="LanguageList_LangListElement_25" class="c1"><a id="LanguageList_LanguageTitle_25" onclick="this.href=(&#39;/&#39; + &#39;sk&#39; + &#39;/&#39;); return true;" title="Choose Site Language: Slovensko (Slovenčina)" href="#">Slovensko (Slovenčina)</a></li>
+                                            
+                                                <li id="LanguageList_LangListElement_26" class="c1"><a id="LanguageList_LanguageTitle_26" onclick="this.href=(&#39;/&#39; + &#39;fi&#39; + &#39;/&#39;); return true;" title="Choose Site Language: Suomi (Suomi)" href="#">Suomi (Suomi)</a></li>
+                                            
+                                                <li id="LanguageList_LangListElement_27" class="c1"><a id="LanguageList_LanguageTitle_27" onclick="this.href=(&#39;/&#39; + &#39;se&#39; + &#39;/&#39;); return true;" title="Choose Site Language: Sverige (Svenska)" href="#">Sverige (Svenska)</a></li>
+                                            
+                                                <li id="LanguageList_LangListElement_28" class="c2 reset"><a id="LanguageList_LanguageTitle_28" onclick="this.href=(&#39;/&#39; + &#39;tr&#39; + &#39;/&#39;); return true;" title="Choose Site Language: Türkiye (Türkçe)" href="#">Türkiye (Türkçe)</a></li>
+                                            
+                                                <li id="LanguageList_LangListElement_29" class="c2"><a id="LanguageList_LanguageTitle_29" onclick="this.href=(&#39;/&#39; + &#39;gb&#39; + &#39;/&#39;); return true;" title="Choose Site Language: UK &amp; Ireland (English)" href="#">UK & Ireland (English)</a></li>
+                                            
+                                                <li id="LanguageList_LangListElement_30" class="c2"><a id="LanguageList_LanguageTitle_30" class=" currentsort" onclick="this.href=(&#39;/&#39; + &#39;en&#39; + &#39;/&#39;); return true;" title="Choose Site Language: United States (English)" href="#">United States (English)</a></li>
+                                            
+                                                <li id="LanguageList_LangListElement_31" class="c2"><a id="LanguageList_LanguageTitle_31" onclick="this.href=(&#39;/&#39; + &#39;el&#39; + &#39;/&#39;); return true;" title="Choose Site Language: Ελλάδα (Ελληνικά)" href="#">Ελλάδα (Ελληνικά)</a></li>
+                                            
+                                                <li id="LanguageList_LangListElement_32" class="c2"><a id="LanguageList_LanguageTitle_32" onclick="this.href=(&#39;/&#39; + &#39;bg&#39; + &#39;/&#39;); return true;" title="Choose Site Language: България (Български)" href="#">България (Български)</a></li>
+                                            
+                                                <li id="LanguageList_LangListElement_33" class="c2"><a id="LanguageList_LanguageTitle_33" onclick="this.href=(&#39;/&#39; + &#39;ru&#39; + &#39;/&#39;); return true;" title="Choose Site Language: Россия (Pусский)" href="#">Россия (Pусский)</a></li>
+                                            
+                                                <li id="LanguageList_LangListElement_34" class="c2"><a id="LanguageList_LanguageTitle_34" onclick="this.href=(&#39;/&#39; + &#39;uk&#39; + &#39;/&#39;); return true;" title="Choose Site Language: Україна (Українська)" href="#">Україна (Українська)</a></li>
+                                            
+                                                <li id="LanguageList_LangListElement_35" class="c2"><a id="LanguageList_LanguageTitle_35" onclick="this.href=(&#39;/&#39; + &#39;kr&#39; + &#39;/&#39;); return true;" title="Choose Site Language: 대한민국 (한국어)" href="#">대한민국 (한국어)</a></li>
+                                            
+                                                <li id="LanguageList_LangListElement_36" class="c2"><a id="LanguageList_LanguageTitle_36" onclick="this.href=(&#39;/&#39; + &#39;cn&#39; + &#39;/&#39;); return true;" title="Choose Site Language: 中国 (简体中文)" href="#">中国 (简体中文)</a></li>
+                                            
+                                                <li id="LanguageList_LangListElement_37" class="c2"><a id="LanguageList_LanguageTitle_37" onclick="this.href=(&#39;/&#39; + &#39;jp&#39; + &#39;/&#39;); return true;" title="Choose Site Language: 日本 (日本語)" href="#">日本 (日本語)</a></li>
+                                            
+                                                <li id="LanguageList_LangListElement_38" class="c2"><a id="LanguageList_LanguageTitle_38" onclick="this.href=(&#39;/&#39; + &#39;ct&#39; + &#39;/&#39;); return true;" title="Choose Site Language: 臺灣 (繁體中文)" href="#">臺灣 (繁體中文)</a></li>
+                                            
+                                                <li id="LanguageList_LangListElement_39" class="c2"><a id="LanguageList_LanguageTitle_39" onclick="this.href=(&#39;/&#39; + &#39;hk&#39; + &#39;/&#39;); return true;" title="Choose Site Language: 香港 (繁體中文)" href="#">香港 (繁體中文)</a></li>
+                                              
+									</ol>
+								</div>
+							</li>
+							<li>
+								
+                                        <a id="LoginView1_SignInLink" href="https://internetexplorergallery.accesscontrol.windows.net:443/v2/wsfederation?wa=wsignin1.0&amp;wtrealm=http%3a%2f%2fwww.iegallery.com%2f">Sign In</a>
+                                    
+                            </li>
+						</ul>
+                        
+					</aside>
+				</div>
+			</header>
+
+			<div id="new_since_beta">
+			    <div>
+
+			    </div>
+			</div>
+            <div class="logo">
+                <div id="logo">
+	                <img src="/assets/images/logo-ie9.png" alt="Windows&copy; Internet Explorer 9" id="ie9logo" />
+	                <div id="message_download">
+	                    <a class="download" href="http://microsoft.com/ie9" aria-label="Download Windows&copy; Internet Explorer 9 Now" onclick="Analytics.trackIEDownload();"
+	                        accesskey="1">Download Now</a>
+	                </div>
+	                <div id="message_feedback">
+	                    <strong></strong>
+	                </div>
+	            </div>
+            </div>
+			
+    <div id="content" class="tplContent" role="main" aria-live="assertive" aria-relevant="additions text" aria-atomic="false">
+				
+		<!--<header class="page">
+			<h1><strong>Internet Explorer Gallery</strong>&nbsp;<br /><span>Download IE9</span></h1>
+            <h2><a href="#" class="download">Downlad Now</a></h2>
+        </header>-->
+        
+        <section id="download_ie9_modal" class="pane">
+            <div id="download_ie9_modal_inner">
+               <img src="/assets/images/logo-ie9.png" alt="IE9 Logo" />
+
+               <div id="windows">
+               <p><a id="getIE9_link" class="button blue_gradient" onclick="Analytics.trackIEOneClickDownload(document.getElementById('bing_msn_default').checked);document.getElementById('download_trouble').style.display = 'block'">Download Now</a></p>
+               <div id="other_versions">
+               <span id="os">OS</span> <span id="arch">ARCH</span> - <a href="http://windows.microsoft.com/en-us/internet-explorer/downloads/ie-9/worldwide-languages" target="_blank">Other versions and languages</a>
+               </div>
+               <p id="input_p"><div class="bing_msn_defaults">
+                    <input type="checkbox" id="bing_msn_default" checked="checked" name="bing_msn_default" onclick="swapIEDownloadLink();" />
+                    <label for="bing_msn_default">I would also like Bing and MSN defaults</label>
+                    <img src="/assets/images/content/icon_bing1.png" alt="bing icon" />
+                    <img src="/assets/images/content/icon_msn.png" alt="msn icon" />
+               </div></p>
+               <p id="download_trouble" style="display:none;text-align:center;">If your having trouble with this download, <a href="http://microsoft.com/ie9" target="_blank">click here</a>.</p>
+               <p class="legal_stuff">Clicking "Download Now" means that you agree to the <a href="http://go.microsoft.com/fwlink/?linkid=190256" target="_blank">Internet Explorer software license terms</a>.<br />Read the <a href="http://go.microsoft.com/fwlink/?linkid=178608 " target="_blank">Internet Explorer privacy statement</a> | <a href="http://windows.microsoft.com/ie9-system-requirements">System requirements.</a></p>
+               <p class="legal_stuff" id="set_defaults_legal">By checking the box above, you agree to have your default homepage and search engine settings changed.</p>
+               </div>
+               <div id="nowindows">
+               <p>Internet Explorer is available only on PCs running Windows.</p>
+               <p><a href="http://windows.microsoft.com/en-us/windows7/products/home" target="_blank">Find out what Windows 7 has to offer</a></p>
+               <p><a href="http://www.beautyoftheweb.com/#/intro/os_other" target="_blank">Find out what Internet Explorer has to offer</a></p>
+               </div>
+            </div>
+        </section>
+
+        <div class="clear">&nbsp;</div>
+				
+	</div>
+
+
+
+		</div>
+	</div>
+	<footer class="global" role="contentinfo">
+		<div>
+			<a href="http://www.microsoft.com/windows/"><img src="/assets/images/layout/logo_windows.png" alt="Windows" class="logo_windows" /></a>
+			<ul>
+				<li><a href="http://support.microsoft.com/contactus/?ws=mscom" target="_blank">Contact Us</a></li>
+				<li><a href="http://explore.live.com/microsoft-service-agreement?ref=none&mkt=en-us" id="termsLink" target="_blank">Terms of Use</a></li>
+				<li><a href="http://www.microsoft.com/About/Legal/EN/US/IntellectualProperty/Trademarks/EN-US.aspx" target="_blank">Trademarks</a></li>
+				<li><a href="http://privacy.microsoft.com/en-us/default.mspx" target="_blank">Privacy Statement</a></li>
+				<li>
+                        <a id="LoginView2_SubmitLink" href="https://internetexplorergallery.accesscontrol.windows.net:443/v2/wsfederation?wa=wsignin1.0&amp;wtrealm=http%3a%2f%2fwww.iegallery.com%2f">Submit to Gallery</a>
+                    
+                </li>
+                <li><a class="news_center" href="http://www.microsoft.com/presspass/presskits/internetexplorer/" target="_blank">News Center</a></li>
+			</ul>
+			&copy; 2012 Microsoft
+		</div>
+        
+		<div>
+            <span class="logo_html5" id="logo_html5"><img src="/assets/images/layout/icon_html5shield.png" /></span> 
+            <span class="hosted_on" id="hosted_on">Hosted on</span>
+            <span class="logo_azure" id="logo_azure"><a href="http://www.microsoft.com/windowsazure/" target="_blank"><img src="/assets/images/layout/logo_azure.png" /></a></span> 
+			<a href="http://www.microsoft.com"><img src="/assets/images/layout/logo_microsoft.png" alt="Microsoft" class="logo_microsoft" /></a>
+		</div>
+        
+	</footer>
+
+	<div id="overlay"></div>
+    <script type="text/javascript">
+        BrowserDetectionPinnedSites();
+        //every page should display ie9 download/thankyou link.  Unfortunately I had to place it down here to be functional.
+    </script>
+
+<!-- SiteCatalyst code version: H.17.
+Copyright 1997-2008 Omniture, Inc. More info available at
+http://www.omniture.com -->
+<script type="text/javascript" src="/assets/js/s_code.js"></script>
+<script type="text/javascript">//<![CDATA[
+/* You may give each page an identifying name, server, and channel on
+the next lines. */
+try {
+s.account="";
+s.pageName=" / en-us / http://www.iegallery.com/getie9.aspx?mainlang=en&amp;maincountry=us&amp;";
+s.server=""
+s.channel="";
+s.pageType="normal";
+s.prop1="";
+s.prop2="";
+s.prop3="";
+s.prop4="";
+s.prop5="";
+s.prop6="";
+s.prop7="";
+s.prop8="";
+s.prop9="";
+s.prop10="en-us";
+/* Conversion Variables */
+s.campaign="";
+s.state="";
+s.zip="";
+s.events="";
+s.products="";
+s.purchaseID="";
+s.charSet="utf-8";
+s.eVar1="";
+s.eVar2="";
+s.eVar3="";
+s.eVar4="";
+s.eVar5="";
+s.eVar6="";
+s.eVar7="";
+s.eVar8="";
+s.eVar9="";
+s.eVar11="";
+s.eVar13="";
+s.eVar15="";
+/************* DO NOT ALTER ANYTHING BELOW THIS LINE ! **************/
+s.t();
+} catch(e) { }
+
+//]]></script>
+<!-- End SiteCatalyst code version: H.17. -->
+</body>
+</html>

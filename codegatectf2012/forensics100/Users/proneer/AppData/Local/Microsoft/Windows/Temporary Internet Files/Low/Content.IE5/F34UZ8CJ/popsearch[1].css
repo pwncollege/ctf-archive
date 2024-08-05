@@ -1,0 +1,141 @@
+body {font: 12px Arial, Helvetica, sans-serif;margin:0;padding:0;background:#fff url(http://img.informer.com/images/header2.png) top repeat-x;position:relative}
+#ftr_bg {background: url(http://img.informer.com/images/base-lines.png) 0 -177px repeat-x;height:58px;width:100%}
+#wrapper {width:990px; margin:0 auto}
+#body {width:990px;font-size:12px;font-weight:normal;/*background:url(http://img.informer.com/images/header.png) top repeat-x;*/z-index:1}
+#section_a {margin:0;padding:0;width:990px}
+#section_b{padding:0;border:0;float:left;margin:0 10px 10px 23px;width:710px}
+#section_c {clear:both; z-index:1;background-color:#fff;position:absolute;height:73px;top:0px;width:980px;margin:0;padding:0;border:0}
+#section_b h1 {float:right;height:20px;padding:0 0 0 2px;margin:0;font-size:12px;font-weight:normal}
+.path {margin: 0 10px 1px;display:inline-block;width:3px;height:5px;background:url(http://img.informer.com/images/popsearch.png) no-repeat -204px -345px}
+a{color:#4a7eb7;text-decoration:underline;cursor:pointer}
+a:hover {color:#ea9617}
+.rprog_rvw {padding:0 0 0 46px;}
+
+#search{float:left;width:994px;height:47px}
+.main{clear:both;float:left;width:990px; margin-top:75px;}
+.h3{display:inline;font-size:13px;font-weight:bold}
+.h1{display:inline;font-size:30px; margin:0px}
+.h2{display:inline;font-size:17px;font-weight:bold}
+#section_b h1.h4{display:inline;font-size:12px;font-weight:normal;padding:0;float:none}
+.column_right {float:right;width:207px; height:auto;padding:15px 0;vertical-align:top; margin:/*73px*/0 10px 0 0;}
+
+#bottom {width:950px;height:18px; padding:20px;margin:0 auto}
+.content {float:left;width:764px;height: auto;background:transparent url(http://img.informer.com/images/base-lines.png) 0 -367px repeat-x;padding:15px 0;vertical-align:top; margin-top:/*73px*/0; margin-right:9px;}
+form#ask { margin: 0 5px 0 0;}
+
+.ttl1 {float:left; width:730px; margin:0px; padding: 10px 10px 10px 23px; font-size:30px;overflow:hidden; white-space:normal}
+.ttl {font-size:20px;font-weight:bold; float:left; width:720px; padding:20px 10px 15px 23px;}
+.ttl .h2{ display:inline; font-size:20px; font-weight: bold;}
+.ttl3 {font-size:22px;font-weight:bold; float:left; width:720px;padding:3px;text-align:center;background-color:#f0f0f0}
+.ttl3 h3, .ttl3 h2{font-size:22px}
+.ttl .h3{display:inline;font-size:16px;font-weight:bold}
+.tbl_ttl span, .tbl_intr span{padding-right:15px;color:#777}
+h2.rprog{display:inline;font-size:14px}
+.sub {padding:20px 0 20px 25px;font-size:16px}
+.tbl_ttl, .tbl_dsc, .tbl_intr{float:left;width:700px;border-collapse:collapse;margin:0 10px 0 23px}
+#rltd a{padding-left:8px;padding-right:8px}
+.adv1{padding:0 0 20px 40px}
+.a_black a{color:#000}
+.a_black a:hover {color:#ea9617}
+.icon48{width:48px;height:48px;margin-right:10px;*behavior:url(/style/iepngfix.htc)}
+.icon32{width:32px;height:32px;margin-right:10px;*behavior:url(/style/iepngfix.htc)}
+.tbl_ttl span.icon32_bg, .tbl_intr span.icon32_bg {display:inline-block;width:32px;height:32px;margin-right:10px;vertical-align:middle;padding:0;background:url(http://img.informer.com/images/popsearch.png) no-repeat -175px -303px}
+.spnsrd {width:91px;height:13px;display:block;margin:auto;background:url(http://img.informer.com/images/popsearch.png) 0 -335px no-repeat}
+.tbl_ttl span.stars, .tbl_intr span.stars {position:relative;top:1px;display:inline-block;width:68px;height:12px;background:url(http://img.informer.com/images/popsearch.png) no-repeat; padding:0}
+/*.stars0 { background-position:0 0;}*/
+.tbl_ttl span.stars1, .tbl_intr span.stars1 { background-position:0 -199px;}
+.tbl_ttl span.stars2, .tbl_intr span.stars2 { background-position:0 -227px;}
+.tbl_ttl span.stars3, .tbl_intr span.stars3 { background-position:0 -255px;}
+.tbl_ttl span.stars4, .tbl_intr span.stars4 { background-position:0 -283px;}
+.tbl_ttl span.stars5, .tbl_intr span.stars5 { background-position:0 -311px;}
+.tbl_ttl span.developer, .tbl_intr span.developer {display:inline-block;width:11px;height:11px;background:url(http://img.informer.com/images/popsearch.png) no-repeat -196px -199px; padding:0}
+.tbl_ttl span.user, .tbl_intr span.user {display:inline-block;width:9px;height:11px;background:url(http://img.informer.com/images/popsearch.png) no-repeat -198px -225px; padding:0}
+.tbl_ttl span.license, .tbl_intr span.license {display:inline-block;width:10px;height:11px;background:url(http://img.informer.com/images/popsearch.png) no-repeat -197px -251px; padding:0}
+.tbl_ttl span.filesize, .tbl_intr span.filesize {display:inline-block;width:10px;height:11px;background:url(http://img.informer.com/images/popsearch.png) no-repeat -197px -277px; padding:0}
+
+#header {height:73px;background:url(http://img.informer.com/images/base-lines.png) 0 -89px repeat-x;width:980px;padding:0px;border:0px;border-collapse:collapse;margin:0px}
+#header div, #header form{padding:0px;border:0px;border-collapse:collapse;margin:0px}
+#header img{border:none}
+#header div#logo{float:left;height:73px}
+#header div#logout{text-align:right;padding:6px 0 0 0;height:27px;width:723px;float:right}
+#header div#logout span{padding:0 20px}
+#header div#logout a{text-decoration:none;color:#3c3c3c}
+#header div#logout .slct_menu a{color:#0e529a}
+#header div#logout img{margin:0 3px -3px 0}
+#logout span.brd_gray {border-right: 1px solid #c9c9c9}
+#logout span.brd_white {border-left: 1px solid #fff;padding-right:7px}
+#logout span.brd_fix {margin-right: -3px;padding-right:20px}
+#header div#logout .brd_gray span,#header div#logout .brd_white span{display:inline-block;padding:0;margin:0 3px -3px 0;height:16px;width:16px;overflow:hidden;background:transparent url(http://img.informer.com/images/header_btn.png) no-repeat}
+#header div#logout .brd_gray span.menu_win {background-position:0 -314px}
+#header div#logout .brd_gray span.menu_mac {background-position:0 -284px}
+#header div#logout .brd_white span.menu_forum {background-position:0 -253px}
+#logout a:hover,#reg a:hover{color:#ea9617}
+#header #menu{text-align:right;padding:10px 18px 0 5px;vertical-align:top;float:right}
+#header #menu a{margin-left:15px}
+#menu a span {display:inline-block;padding:0;margin:0;height:14px;overflow:hidden;background:transparent url(http://img.informer.com/images/header_btn.png) no-repeat}
+#menu a span.menu_home {width:60px;background-position:0 0;}
+#menu a span.menu_home:hover, #menu a span.menu_home.sel {background-position:0 -28px;}
+#menu a span.menu_soft {width:82px;background-position:0 -56px;}
+#menu a span.menu_soft:hover, #menu a span.menu_soft.sel {background-position:0 -84px;}
+#menu a span.menu_devel {width:93px;background-position:0 -112px;}
+#menu a span.menu_devel:hover, #menu a span.menu_devel.sel {background-position:0 -140px;}
+#menu a span.menu_users {width:56px;background-position:0 -168px;}
+#menu a span.menu_users:hover, #menu a span.menu_users.sel {background-position:0 -193px;}
+
+#header #search {padding:5px 5px 0 0;width:202px;vertical-align:top;float:right}
+#header #search .txt {border: 1px inset; width:142px;}
+#header #search input#go {background:transparent url(http://img.informer.com/images/header_btn.png) 0 -219px no-repeat;*behavior:url(/style/iepngfix.htc);height:21px;	width:49px;	border:none;margin-left:4px;cursor:pointer}
+
+.column_right div{margin-bottom:15px}
+.column_right .block{border:1px solid #bdd3e5;padding:17px 13px 0px;width:179px;overflow:hidden}
+.column_right .user_name{font-size:14px;position:relative;white-space:nowrap}
+.user_name a{text-decoration:none}
+.user_name b{display: inline-block;margin-bottom:-2px; max-width:150px;overflow:hidden;white-space:nowrap}
+.column_right .user_login {background:transparent url(http://img.informer.com/images/base-lines.png) 0 -383px repeat-x;padding-top:10px;padding-bottom:15px;overflow:inherit}
+.user_login a, #profile p a {color:#397eb4}
+.user_login .a_black a {color:#000;}
+.user_login .a_black a:hover,.user_login a:hover, .column_right #profile p a:hover {color:#ea9617}
+.user_login .down {display:inline-block;width:15px;height:15px;background:url(http://img.informer.com/images/header_btn.png) 0 -416px no-repeat;position:relative;top:1px;cursor:pointer}
+.user_login .down_navy {background-position:0 -446px}
+#chat_link, .recom_notify {display:inline-block;background:url(http://img.informer.com/images/header_btn.png) -78px -414px no-repeat;padding-left:20px;font-size:11px;line-height:1.5}
+.recom_notify {background-position: -79px -445px}
+.column_right .user_login div#profile {padding-bottom:30px}
+.ul_logout {border-top: 1px solid #D7D7D7;display:block;left:0;position:absolute;width:100%;margin-top:5px}
+.column_right #profile .ul_logout a{margin-left:10px}
+.column_right div#profile {background:none #EAEAEA;border:1px solid #A6A6A6;font-size:11px;height:auto;left:-11px;line-height:2;padding:0 15px 10px 10px;position:absolute;text-align:left;top:-7px;z-index:1000000}
+.column_right #profile p, .column_right #profile a{white-space:nowrap;margin:0}
+.column_right #profile a{text-decoration:underline}
+.column_right #profile p a{text-decoration: none;}
+.column_right #profile b{font-size:14px;line-height:1.8;margin-bottom:-6px}
+.column_right .tgs,.column_right .rltdsrch{padding-bottom:20px;line-height:1.6}
+.column_right .rltdsrch{font-size:14px}
+.column_right .tgs a,.column_right .rltdsrch a{margin-right:10px}
+.column_right .tgs br,.column_right .rltdsrch br{height:0;margin:0;padding:0;display:none;width:0}
+.column_right .clmn_h {background: url(http://img.informer.com/images/popsearch.png) no-repeat;display:block;height:31px;margin:0;padding:0;width:207px}
+.column_right .clmn_h.thl {height:32px;}
+.column_right .clmn_h.rltd_srch { background-position:0 -107px}
+.column_right .clmn_h.srchmost { background-position:0 -153px}
+.column_right .clmn_h.notify {background-position:0 -47px;height:45px}
+/*.column_right #notifications input.btncancel {background:url(http://img.informer.com/images/btncancel.png) no-repeat;*behavior:url(/style/iepngfix.htc);height:21px;width:76px;border:none;cursor:pointer}*/
+.column_right #notifications table {border-collapse:collapse}
+/*.column_right #notifications div.user{background: none}*/
+.column_right #notifications div.user a:hover{color:#EA9617}
+/*.column_right #notifications div.user p span.gray{color: #888}*/
+.column_right .notification{border-color:#dadada;border-top:none;padding:0 13px 10px}
+/*.column_right .notification td div.select{background:url(http://img.informer.com/images/listactivitysel.gif) left no-repeat}*/
+.column_right .notification .add_fr{background: url(http://img.informer.com/images/header_btn.png) -79px -360px no-repeat;display:inline-block;width:14px;height:13px;margin-top: 3px}
+.column_right .notification .btnclose {background: url(http://img.informer.com/images/header_btn.png) 0 -379px no-repeat;*behavior:url(/style/iepngfix.htc);height: 21px;width: 75px;border: none;cursor: pointer}
+.column_right .notification td.notify_text{padding-left:5px}
+.column_right .notification table tr td {padding:2px 0 5px 0}
+.column_right .notification table tr.notify_ava td {padding-bottom: 2px}
+/*.column_right .notification input.btnclose{background: url(http://img.informer.com/images/btnclose.png) no-repeat;*behavior:url(/style/iepngfix.htc);height: 21px;width: 75px;border: none;cursor: pointer}*/
+.column_right .notification a{color:#314b84}
+.column_right .notification a:hover{color:#ea9617}
+.column_right .srch_most{font-size:12px;line-height:1.7;padding-bottom:20px}
+.column_right .srch_most span{color:#4A7EB7;font-weight:bold}
+.column_right .srch_most a{margin-right:10px;color:#666}
+.column_right .srch_most a:hover{color:#ea9617}
+
+#bottom div.ftr_l{width:35%;float:left;padding-top:4px}
+#bottom div.ftr_r{width:55%;float:right}
+#bottom div span {padding:0 10px}

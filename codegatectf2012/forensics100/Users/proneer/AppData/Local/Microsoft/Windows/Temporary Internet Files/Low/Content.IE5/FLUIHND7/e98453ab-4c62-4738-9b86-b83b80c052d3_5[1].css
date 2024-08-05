@@ -1,0 +1,3 @@
+table.table_fakeFooter { width: 100%; }
+table.table_fakeFooter td { vertical-align: middle; text-align: right; }
+table.table_fakeFooter td img { display: block; text-align: left; }

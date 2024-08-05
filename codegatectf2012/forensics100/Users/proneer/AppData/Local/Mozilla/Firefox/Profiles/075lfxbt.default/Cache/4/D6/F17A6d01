@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<gallery y="20" width="775" height="250" image_width="155" vertical_spacing="10" bar_thickness="10">
+  <image url="/SystemFiles/Images/Banner/Buyuk/tika.jpg" link="http://www.tika.gov.tr/" />
+  <image url="/SystemFiles/Images/Banner/Buyuk/btk2.jpg" link="http://btk.gov.tr/" />
+  <image url="/SystemFiles/Images/Banner/Buyuk/tbb.jpg" link="http://www.tbb.org.tr" />
+  <image url="/SystemFiles/Images/Banner/Buyuk/bkm.jpg" link="http://www.bkm.com.tr/"/>
+  <image url="/SystemFiles/Images/Banner/Buyuk/isaca.jpg" link="https://www.isaca.org/Pages/default.aspx"/>
+  <image url="/SystemFiles/Images/Banner/Buyuk/t.jpg" link="http://www.teid.org.tr/tr/"/>
+  <image url="/SystemFiles/Images/Banner/Buyuk/AdliTipK.jpg" link="http://www.atk.gov.tr/"/>
+  <image url="/SystemFiles/Images/Banner/Buyuk/Polis.jpg" link="http://www.kpl.gov.tr/"/>
+  <image url="/SystemFiles/Images/Banner/Buyuk/NFSA.jpg" link="http://www.nfsa.gov.pk"/>
+  <image url="/SystemFiles/Images/Banner/Buyuk/forensicpeoplelogo.jpg" link="http://www.forensicpeople.com"/>
+  <image url="/SystemFiles/Images/Banner/Buyuk/agilent.jpg" link="http://www.home.agilent.com"/>
+  <image url="/SystemFiles/Images/Banner/Buyuk/Guidance.jpg" link="http://www.guidancesoftware.com"/>
+  <image url="/SystemFiles/Images/Banner/Buyuk/labware.jpg" link="http://www.labware.com"/>
+  <image url="/SystemFiles/Images/Banner/Buyuk/Microsoft.jpg" link="http://www.microsoft.com/en-us/default.aspx"/>
+  <image url="/SystemFiles/Images/Banner/Buyuk/JADsoftware.jpg" link="http://www.jadsoftware.com"/>
+  <image url="/SystemFiles/Images/Banner/Buyuk/Loquendo.jpg" link="http://www.loquendo.com"/>
+  <image url="/SystemFiles/Images/Banner/Buyuk/Nuance.jpg" link="http://www.loquendo.com"/>
+  <image url="/SystemFiles/Images/Banner/Buyuk/AGT.jpg" link="http://www.agt-technology.com"/>
+  <image url="/SystemFiles/Images/Banner/Buyuk/Attestor.jpg" link="http://www.attestor-forensics.com"/>
+  <image url="/SystemFiles/Images/Banner/Buyuk/Aware.jpg" link="http://www.aware.com"/>
+  <image url="/SystemFiles/Images/Banner/Buyuk/Belkasoft.jpg" link="http://www.belkasoft.com"/>
+  <image url="/SystemFiles/Images/Banner/Buyuk/ctech.jpg" link="http://www.ctech.com.tr"/>
+  <image url="/SystemFiles/Images/Banner/Buyuk/cognitec.jpg" link="http://www.cognitec.com"/>
+  <image url="/SystemFiles/Images/Banner/Buyuk/Elcomsoft.jpg" link="http://www.elcomsoft.com"/>
+  <image url="/SystemFiles/Images/Banner/Buyuk/FosterFreeman.jpg" link="http://www.fosterfreeman.com"/>
+  <image url="/SystemFiles/Images/Banner/Buyuk/Genomed.jpg" link="http://www.genomed.com.tr"/>
+  <image url="/SystemFiles/Images/Banner/Buyuk/logicube.jpg" link="http://www.logicube.com"/>
+  <image url="/SystemFiles/Images/Banner/Buyuk/mhlogo.jpg" link="http://www.mh-service.de"/>
+  <image url="/SystemFiles/Images/Banner/Buyuk/micro_systemation.jpg" link="http://www.msab.com"/>
+  <image url="/SystemFiles/Images/Banner/Buyuk/Net_iletisim.jpg" link="http://www.netiletisim.net"/>
+  <image url="/SystemFiles/Images/Banner/Buyuk/Oretech.jpg" link="http://www.oratech.com.tr"/>
+  <image url="/SystemFiles/Images/Banner/Buyuk/oxygen_forensic.jpg" link="http://www.oxygen-forensic.com"/>
+  <image url="/SystemFiles/Images/Banner/Buyuk/SS8.jpg" link="http://www.ss8.com"/>
+  <image url="/SystemFiles/Images/Banner/Buyuk/VERISIS_LOGO.jpg" link="http://www.verisis.com.tr"/>
+    <image url="/SystemFiles/Images/Banner/Buyuk/tika.jpg" link="http://www.tika.gov.tr/" />
+  <image url="/SystemFiles/Images/Banner/Buyuk/btk2.jpg" link="http://btk.gov.tr/" />
+  <image url="/SystemFiles/Images/Banner/Buyuk/tbb.jpg" link="http://www.tbb.org.tr" />
+  <image url="/SystemFiles/Images/Banner/Buyuk/bkm.jpg" link="http://www.bkm.com.tr/"/>
+  <image url="/SystemFiles/Images/Banner/Buyuk/isaca.jpg" link="https://www.isaca.org/Pages/default.aspx"/>
+  <image url="/SystemFiles/Images/Banner/Buyuk/t.jpg" link="http://www.teid.org.tr/tr/"/>
+  <image url="/SystemFiles/Images/Banner/Buyuk/AdliTipK.jpg" link="http://www.atk.gov.tr/"/>
+  <image url="/SystemFiles/Images/Banner/Buyuk/Polis.jpg" link="http://www.kpl.gov.tr/"/>
+  <image url="/SystemFiles/Images/Banner/Buyuk/NFSA.jpg" link="http://www.nfsa.gov.pk"/>
+  <image url="/SystemFiles/Images/Banner/Buyuk/forensicpeoplelogo.jpg" link="http://www.forensicpeople.com"/>
+  <image url="/SystemFiles/Images/Banner/Buyuk/agilent.jpg" link="http://www.home.agilent.com"/>
+  <image url="/SystemFiles/Images/Banner/Buyuk/Guidance.jpg" link="http://www.guidancesoftware.com"/>
+  <image url="/SystemFiles/Images/Banner/Buyuk/labware.jpg" link="http://www.labware.com"/>
+  <image url="/SystemFiles/Images/Banner/Buyuk/Microsoft.jpg" link="http://www.microsoft.com/en-us/default.aspx"/>
+  <image url="/SystemFiles/Images/Banner/Buyuk/JADsoftware.jpg" link="http://www.jadsoftware.com"/>
+  <image url="/SystemFiles/Images/Banner/Buyuk/Loquendo.jpg" link="http://www.loquendo.com"/>
+  <image url="/SystemFiles/Images/Banner/Buyuk/Nuance.jpg" link="http://www.loquendo.com"/>
+  <image url="/SystemFiles/Images/Banner/Buyuk/AGT.jpg" link="http://www.agt-technology.com"/>
+  <image url="/SystemFiles/Images/Banner/Buyuk/Attestor.jpg" link="http://www.attestor-forensics.com"/>
+  <image url="/SystemFiles/Images/Banner/Buyuk/Aware.jpg" link="http://www.aware.com"/>
+  <image url="/SystemFiles/Images/Banner/Buyuk/Belkasoft.jpg" link="http://www.belkasoft.com"/>
+  <image url="/SystemFiles/Images/Banner/Buyuk/ctech.jpg" link="http://www.ctech.com.tr"/>
+  <image url="/SystemFiles/Images/Banner/Buyuk/cognitec.jpg" link="http://www.cognitec.com"/>
+  <image url="/SystemFiles/Images/Banner/Buyuk/Elcomsoft.jpg" link="http://www.elcomsoft.com"/>
+  <image url="/SystemFiles/Images/Banner/Buyuk/FosterFreeman.jpg" link="http://www.fosterfreeman.com"/>
+  <image url="/SystemFiles/Images/Banner/Buyuk/Genomed.jpg" link="http://www.genomed.com.tr"/>
+  <image url="/SystemFiles/Images/Banner/Buyuk/logicube.jpg" link="http://www.logicube.com"/>
+  <image url="/SystemFiles/Images/Banner/Buyuk/mhlogo.jpg" link="http://www.mh-service.de"/>
+  <image url="/SystemFiles/Images/Banner/Buyuk/micro_systemation.jpg" link="http://www.msab.com"/>
+  <image url="/SystemFiles/Images/Banner/Buyuk/Net_iletisim.jpg" link="http://www.netiletisim.net"/>
+  <image url="/SystemFiles/Images/Banner/Buyuk/Oretech.jpg" link="http://www.oratech.com.tr"/>
+  <image url="/SystemFiles/Images/Banner/Buyuk/oxygen_forensic.jpg" link="http://www.oxygen-forensic.com"/>
+  <image url="/SystemFiles/Images/Banner/Buyuk/SS8.jpg" link="http://www.ss8.com"/>
+  <image url="/SystemFiles/Images/Banner/Buyuk/VERISIS_LOGO.jpg" link="http://www.verisis.com.tr"/>
+
+  <image url="/SystemFiles/Images/Banner/Buyuk/tika.jpg" link="http://www.tika.gov.tr/" />
+  <image url="/SystemFiles/Images/Banner/Buyuk/btk2.jpg" link="http://btk.gov.tr/" />
+  <image url="/SystemFiles/Images/Banner/Buyuk/tbb.jpg" link="http://www.tbb.org.tr" />
+  <image url="/SystemFiles/Images/Banner/Buyuk/bkm.jpg" link="http://www.bkm.com.tr/"/>
+  <image url="/SystemFiles/Images/Banner/Buyuk/isaca.jpg" link="https://www.isaca.org/Pages/default.aspx"/>
+  <image url="/SystemFiles/Images/Banner/Buyuk/t.jpg" link="http://www.teid.org.tr/tr/"/>
+  <image url="/SystemFiles/Images/Banner/Buyuk/AdliTipK.jpg" link="http://www.atk.gov.tr/"/>
+  <image url="/SystemFiles/Images/Banner/Buyuk/Polis.jpg" link="http://www.kpl.gov.tr/"/>
+  <image url="/SystemFiles/Images/Banner/Buyuk/NFSA.jpg" link="http://www.nfsa.gov.pk"/>
+  <image url="/SystemFiles/Images/Banner/Buyuk/forensicpeoplelogo.jpg" link="http://www.forensicpeople.com"/>
+  <image url="/SystemFiles/Images/Banner/Buyuk/agilent.jpg" link="http://www.home.agilent.com"/>
+  <image url="/SystemFiles/Images/Banner/Buyuk/Guidance.jpg" link="http://www.guidancesoftware.com"/>
+  <image url="/SystemFiles/Images/Banner/Buyuk/labware.jpg" link="http://www.labware.com"/>
+  <image url="/SystemFiles/Images/Banner/Buyuk/Microsoft.jpg" link="http://www.microsoft.com/en-us/default.aspx"/>
+  <image url="/SystemFiles/Images/Banner/Buyuk/JADsoftware.jpg" link="http://www.jadsoftware.com"/>
+  <image url="/SystemFiles/Images/Banner/Buyuk/Loquendo.jpg" link="http://www.loquendo.com"/>
+  <image url="/SystemFiles/Images/Banner/Buyuk/Nuance.jpg" link="http://www.loquendo.com"/>
+  <image url="/SystemFiles/Images/Banner/Buyuk/AGT.jpg" link="http://www.agt-technology.com"/>
+  <image url="/SystemFiles/Images/Banner/Buyuk/Attestor.jpg" link="http://www.attestor-forensics.com"/>
+  <image url="/SystemFiles/Images/Banner/Buyuk/Aware.jpg" link="http://www.aware.com"/>
+  <image url="/SystemFiles/Images/Banner/Buyuk/Belkasoft.jpg" link="http://www.belkasoft.com"/>
+  <image url="/SystemFiles/Images/Banner/Buyuk/ctech.jpg" link="http://www.ctech.com.tr"/>
+  <image url="/SystemFiles/Images/Banner/Buyuk/cognitec.jpg" link="http://www.cognitec.com"/>
+  <image url="/SystemFiles/Images/Banner/Buyuk/Elcomsoft.jpg" link="http://www.elcomsoft.com"/>
+  <image url="/SystemFiles/Images/Banner/Buyuk/FosterFreeman.jpg" link="http://www.fosterfreeman.com"/>
+  <image url="/SystemFiles/Images/Banner/Buyuk/Genomed.jpg" link="http://www.genomed.com.tr"/>
+  <image url="/SystemFiles/Images/Banner/Buyuk/logicube.jpg" link="http://www.logicube.com"/>
+  <image url="/SystemFiles/Images/Banner/Buyuk/mhlogo.jpg" link="http://www.mh-service.de"/>
+  <image url="/SystemFiles/Images/Banner/Buyuk/micro_systemation.jpg" link="http://www.msab.com"/>
+  <image url="/SystemFiles/Images/Banner/Buyuk/Net_iletisim.jpg" link="http://www.netiletisim.net"/>
+  <image url="/SystemFiles/Images/Banner/Buyuk/Oretech.jpg" link="http://www.oratech.com.tr"/>
+  <image url="/SystemFiles/Images/Banner/Buyuk/oxygen_forensic.jpg" link="http://www.oxygen-forensic.com"/>
+  <image url="/SystemFiles/Images/Banner/Buyuk/SS8.jpg" link="http://www.ss8.com"/>
+  <image url="/SystemFiles/Images/Banner/Buyuk/VERISIS_LOGO.jpg" link="http://www.verisis.com.tr"/>
+
+  <image url="/SystemFiles/Images/Banner/Buyuk/tika.jpg" link="http://www.tika.gov.tr/" />
+  <image url="/SystemFiles/Images/Banner/Buyuk/btk2.jpg" link="http://btk.gov.tr/" />
+  <image url="/SystemFiles/Images/Banner/Buyuk/tbb.jpg" link="http://www.tbb.org.tr" />
+  <image url="/SystemFiles/Images/Banner/Buyuk/bkm.jpg" link="http://www.bkm.com.tr/"/>
+  <image url="/SystemFiles/Images/Banner/Buyuk/isaca.jpg" link="https://www.isaca.org/Pages/default.aspx"/>
+  <image url="/SystemFiles/Images/Banner/Buyuk/t.jpg" link="http://www.teid.org.tr/tr/"/>
+  <image url="/SystemFiles/Images/Banner/Buyuk/AdliTipK.jpg" link="http://www.atk.gov.tr/"/>
+  <image url="/SystemFiles/Images/Banner/Buyuk/Polis.jpg" link="http://www.kpl.gov.tr/"/>
+  <image url="/SystemFiles/Images/Banner/Buyuk/NFSA.jpg" link="http://www.nfsa.gov.pk"/>
+  <image url="/SystemFiles/Images/Banner/Buyuk/forensicpeoplelogo.jpg" link="http://www.forensicpeople.com"/>
+  <image url="/SystemFiles/Images/Banner/Buyuk/agilent.jpg" link="http://www.home.agilent.com"/>
+  <image url="/SystemFiles/Images/Banner/Buyuk/Guidance.jpg" link="http://www.guidancesoftware.com"/>
+  <image url="/SystemFiles/Images/Banner/Buyuk/labware.jpg" link="http://www.labware.com"/>
+  <image url="/SystemFiles/Images/Banner/Buyuk/Microsoft.jpg" link="http://www.microsoft.com/en-us/default.aspx"/>
+  <image url="/SystemFiles/Images/Banner/Buyuk/JADsoftware.jpg" link="http://www.jadsoftware.com"/>
+  <image url="/SystemFiles/Images/Banner/Buyuk/Loquendo.jpg" link="http://www.loquendo.com"/>
+  <image url="/SystemFiles/Images/Banner/Buyuk/Nuance.jpg" link="http://www.loquendo.com"/>
+  <image url="/SystemFiles/Images/Banner/Buyuk/AGT.jpg" link="http://www.agt-technology.com"/>
+  <image url="/SystemFiles/Images/Banner/Buyuk/Attestor.jpg" link="http://www.attestor-forensics.com"/>
+  <image url="/SystemFiles/Images/Banner/Buyuk/Aware.jpg" link="http://www.aware.com"/>
+  <image url="/SystemFiles/Images/Banner/Buyuk/Belkasoft.jpg" link="http://www.belkasoft.com"/>
+  <image url="/SystemFiles/Images/Banner/Buyuk/ctech.jpg" link="http://www.ctech.com.tr"/>
+  <image url="/SystemFiles/Images/Banner/Buyuk/cognitec.jpg" link="http://www.cognitec.com"/>
+  <image url="/SystemFiles/Images/Banner/Buyuk/Elcomsoft.jpg" link="http://www.elcomsoft.com"/>
+  <image url="/SystemFiles/Images/Banner/Buyuk/FosterFreeman.jpg" link="http://www.fosterfreeman.com"/>
+  <image url="/SystemFiles/Images/Banner/Buyuk/Genomed.jpg" link="http://www.genomed.com.tr"/>
+  <image url="/SystemFiles/Images/Banner/Buyuk/logicube.jpg" link="http://www.logicube.com"/>
+  <image url="/SystemFiles/Images/Banner/Buyuk/mhlogo.jpg" link="http://www.mh-service.de"/>
+  <image url="/SystemFiles/Images/Banner/Buyuk/micro_systemation.jpg" link="http://www.msab.com"/>
+  <image url="/SystemFiles/Images/Banner/Buyuk/Net_iletisim.jpg" link="http://www.netiletisim.net"/>
+  <image url="/SystemFiles/Images/Banner/Buyuk/Oretech.jpg" link="http://www.oratech.com.tr"/>
+  <image url="/SystemFiles/Images/Banner/Buyuk/oxygen_forensic.jpg" link="http://www.oxygen-forensic.com"/>
+  <image url="/SystemFiles/Images/Banner/Buyuk/SS8.jpg" link="http://www.ss8.com"/>
+  <image url="/SystemFiles/Images/Banner/Buyuk/VERISIS_LOGO.jpg" link="http://www.verisis.com.tr"/>
+
+  <image url="/SystemFiles/Images/Banner/Buyuk/tika.jpg" link="http://www.tika.gov.tr/" />
+  <image url="/SystemFiles/Images/Banner/Buyuk/btk2.jpg" link="http://btk.gov.tr/" />
+  <image url="/SystemFiles/Images/Banner/Buyuk/tbb.jpg" link="http://www.tbb.org.tr" />
+  <image url="/SystemFiles/Images/Banner/Buyuk/bkm.jpg" link="http://www.bkm.com.tr/"/>
+  <image url="/SystemFiles/Images/Banner/Buyuk/isaca.jpg" link="https://www.isaca.org/Pages/default.aspx"/>
+  <image url="/SystemFiles/Images/Banner/Buyuk/t.jpg" link="http://www.teid.org.tr/tr/"/>
+  <image url="/SystemFiles/Images/Banner/Buyuk/AdliTipK.jpg" link="http://www.atk.gov.tr/"/>
+  <image url="/SystemFiles/Images/Banner/Buyuk/Polis.jpg" link="http://www.kpl.gov.tr/"/>
+  <image url="/SystemFiles/Images/Banner/Buyuk/NFSA.jpg" link="http://www.nfsa.gov.pk"/>
+  <image url="/SystemFiles/Images/Banner/Buyuk/forensicpeoplelogo.jpg" link="http://www.forensicpeople.com"/>
+  <image url="/SystemFiles/Images/Banner/Buyuk/agilent.jpg" link="http://www.home.agilent.com"/>
+  <image url="/SystemFiles/Images/Banner/Buyuk/Guidance.jpg" link="http://www.guidancesoftware.com"/>
+  <image url="/SystemFiles/Images/Banner/Buyuk/labware.jpg" link="http://www.labware.com"/>
+  <image url="/SystemFiles/Images/Banner/Buyuk/Microsoft.jpg" link="http://www.microsoft.com/en-us/default.aspx"/>
+  <image url="/SystemFiles/Images/Banner/Buyuk/JADsoftware.jpg" link="http://www.jadsoftware.com"/>
+  <image url="/SystemFiles/Images/Banner/Buyuk/Loquendo.jpg" link="http://www.loquendo.com"/>
+  <image url="/SystemFiles/Images/Banner/Buyuk/Nuance.jpg" link="http://www.loquendo.com"/>
+  <image url="/SystemFiles/Images/Banner/Buyuk/AGT.jpg" link="http://www.agt-technology.com"/>
+  <image url="/SystemFiles/Images/Banner/Buyuk/Attestor.jpg" link="http://www.attestor-forensics.com"/>
+  <image url="/SystemFiles/Images/Banner/Buyuk/Aware.jpg" link="http://www.aware.com"/>
+  <image url="/SystemFiles/Images/Banner/Buyuk/Belkasoft.jpg" link="http://www.belkasoft.com"/>
+  <image url="/SystemFiles/Images/Banner/Buyuk/ctech.jpg" link="http://www.ctech.com.tr"/>
+  <image url="/SystemFiles/Images/Banner/Buyuk/cognitec.jpg" link="http://www.cognitec.com"/>
+  <image url="/SystemFiles/Images/Banner/Buyuk/Elcomsoft.jpg" link="http://www.elcomsoft.com"/>
+  <image url="/SystemFiles/Images/Banner/Buyuk/FosterFreeman.jpg" link="http://www.fosterfreeman.com"/>
+  <image url="/SystemFiles/Images/Banner/Buyuk/Genomed.jpg" link="http://www.genomed.com.tr"/>
+  <image url="/SystemFiles/Images/Banner/Buyuk/logicube.jpg" link="http://www.logicube.com"/>
+  <image url="/SystemFiles/Images/Banner/Buyuk/mhlogo.jpg" link="http://www.mh-service.de"/>
+  <image url="/SystemFiles/Images/Banner/Buyuk/micro_systemation.jpg" link="http://www.msab.com"/>
+  <image url="/SystemFiles/Images/Banner/Buyuk/Net_iletisim.jpg" link="http://www.netiletisim.net"/>
+  <image url="/SystemFiles/Images/Banner/Buyuk/Oretech.jpg" link="http://www.oratech.com.tr"/>
+  <image url="/SystemFiles/Images/Banner/Buyuk/oxygen_forensic.jpg" link="http://www.oxygen-forensic.com"/>
+  <image url="/SystemFiles/Images/Banner/Buyuk/SS8.jpg" link="http://www.ss8.com"/>
+  <image url="/SystemFiles/Images/Banner/Buyuk/VERISIS_LOGO.jpg" link="http://www.verisis.com.tr"/>
+
+  <image url="/SystemFiles/Images/Banner/Buyuk/tika.jpg" link="http://www.tika.gov.tr/" />
+  <image url="/SystemFiles/Images/Banner/Buyuk/btk2.jpg" link="http://btk.gov.tr/" />
+  <image url="/SystemFiles/Images/Banner/Buyuk/tbb.jpg" link="http://www.tbb.org.tr" />
+  <image url="/SystemFiles/Images/Banner/Buyuk/bkm.jpg" link="http://www.bkm.com.tr/"/>
+  <image url="/SystemFiles/Images/Banner/Buyuk/isaca.jpg" link="https://www.isaca.org/Pages/default.aspx"/>
+  <image url="/SystemFiles/Images/Banner/Buyuk/t.jpg" link="http://www.teid.org.tr/tr/"/>
+  <image url="/SystemFiles/Images/Banner/Buyuk/AdliTipK.jpg" link="http://www.atk.gov.tr/"/>
+  <image url="/SystemFiles/Images/Banner/Buyuk/Polis.jpg" link="http://www.kpl.gov.tr/"/>
+  <image url="/SystemFiles/Images/Banner/Buyuk/NFSA.jpg" link="http://www.nfsa.gov.pk"/>
+  <image url="/SystemFiles/Images/Banner/Buyuk/forensicpeoplelogo.jpg" link="http://www.forensicpeople.com"/>
+  <image url="/SystemFiles/Images/Banner/Buyuk/agilent.jpg" link="http://www.home.agilent.com"/>
+  <image url="/SystemFiles/Images/Banner/Buyuk/Guidance.jpg" link="http://www.guidancesoftware.com"/>
+  <image url="/SystemFiles/Images/Banner/Buyuk/labware.jpg" link="http://www.labware.com"/>
+  <image url="/SystemFiles/Images/Banner/Buyuk/Microsoft.jpg" link="http://www.microsoft.com/en-us/default.aspx"/>
+  <image url="/SystemFiles/Images/Banner/Buyuk/JADsoftware.jpg" link="http://www.jadsoftware.com"/>
+  <image url="/SystemFiles/Images/Banner/Buyuk/Loquendo.jpg" link="http://www.loquendo.com"/>
+  <image url="/SystemFiles/Images/Banner/Buyuk/Nuance.jpg" link="http://www.loquendo.com"/>
+  <image url="/SystemFiles/Images/Banner/Buyuk/AGT.jpg" link="http://www.agt-technology.com"/>
+  <image url="/SystemFiles/Images/Banner/Buyuk/Attestor.jpg" link="http://www.attestor-forensics.com"/>
+  <image url="/SystemFiles/Images/Banner/Buyuk/Aware.jpg" link="http://www.aware.com"/>
+  <image url="/SystemFiles/Images/Banner/Buyuk/Belkasoft.jpg" link="http://www.belkasoft.com"/>
+  <image url="/SystemFiles/Images/Banner/Buyuk/ctech.jpg" link="http://www.ctech.com.tr"/>
+  <image url="/SystemFiles/Images/Banner/Buyuk/cognitec.jpg" link="http://www.cognitec.com"/>
+  <image url="/SystemFiles/Images/Banner/Buyuk/Elcomsoft.jpg" link="http://www.elcomsoft.com"/>
+  <image url="/SystemFiles/Images/Banner/Buyuk/FosterFreeman.jpg" link="http://www.fosterfreeman.com"/>
+  <image url="/SystemFiles/Images/Banner/Buyuk/Genomed.jpg" link="http://www.genomed.com.tr"/>
+  <image url="/SystemFiles/Images/Banner/Buyuk/logicube.jpg" link="http://www.logicube.com"/>
+  <image url="/SystemFiles/Images/Banner/Buyuk/mhlogo.jpg" link="http://www.mh-service.de"/>
+  <image url="/SystemFiles/Images/Banner/Buyuk/micro_systemation.jpg" link="http://www.msab.com"/>
+  <image url="/SystemFiles/Images/Banner/Buyuk/Net_iletisim.jpg" link="http://www.netiletisim.net"/>
+  <image url="/SystemFiles/Images/Banner/Buyuk/Oretech.jpg" link="http://www.oratech.com.tr"/>
+  <image url="/SystemFiles/Images/Banner/Buyuk/oxygen_forensic.jpg" link="http://www.oxygen-forensic.com"/>
+  <image url="/SystemFiles/Images/Banner/Buyuk/SS8.jpg" link="http://www.ss8.com"/>
+  <image url="/SystemFiles/Images/Banner/Buyuk/VERISIS_LOGO.jpg" link="http://www.verisis.com.tr"/>
+    </gallery>

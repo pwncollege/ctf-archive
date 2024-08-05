@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- Copyright (C) 2008-2010 APN, LLC. All rights reserved -->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>New browser tab</title> 
+    <link rel="stylesheet" type="text/css" href="chrome://asktoolbar/skin/newtab.css" />
+    <script type="text/javascript" src="chrome://asktoolbar/content/newtab.js"></script>
+</head>
+<body>
+    <div id="container">
+        <div id="title"></div>
+        
+        <div id="search">
+            <div id="search-box">
+                <form id="search-form" action="web">
+                        <input id="search-input" name="q" type="text" value=""/>
+                        <input id="search-submit" type="submit" value="Search" />
+                </form>
+                <div id="tagline"></div>
+            </div>
+        </div>
+        
+        <div id="content">
+            <div id="history">
+                <div id="history-title" class="content-title"></div>
+                <div id="locations">
+                    <!--
+                    <div class="location">
+                        <img class="location-icon" src="moz-anno:favicon:http://www.google.com/favicon.ico"/>
+                        <a class="location-link" href="http://www.google.com/firefox?client=firefox-a&rls=org.mozilla:en-US:official">Mozilla Firefox Start Page</a>
+                    </div>
+                    -->
+                </div>
+                <div id="more-history">
+                    <a id="more-link" href="#">more</a>
+                </div>
+                
+            </div>
+            <div id="weather">
+                <div id="weather-title" class="content-title"></div>
+                <form id="weather-form" action="web">
+                    <img id="weather-icon" src="chrome://asktoolbar/skin/weather.png"/>
+                    <label for="zip" id="zip-input-label"></label>
+                    <input id="zip-input" channel="weather-channel" name="zip" type="text" value=""/>
+                    <input id="zip-submit" name="go" type="submit" value="Go"/>
+                </form>
+            </div>
+        </div>
+        
+        <div id="footer">
+            <span id="footer-title"></span>
+            <!--  Also see &#9679; &#9642; &#8729; &bull; -->
+            <span>&middot;</span>
+            <span><a id="disable-link" href="#"></a></span>
+        </div>
+    </div>
+    
+</body>
+</html>

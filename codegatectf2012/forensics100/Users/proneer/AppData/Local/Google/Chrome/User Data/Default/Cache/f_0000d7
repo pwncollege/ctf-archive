@@ -1,0 +1,736 @@
+
+#welcome {
+        margin-bottom:0;
+        font-family:Myriad,sans-serif;
+        color:#444;
+        font-size:10pt;
+        line-height:1.3em;
+        padding-bottom:10px;
+        }
+
+a.welcome-findout {
+        font-family:Myriad Pro,sans-serif;
+        font-weight:bold;
+        float:left;
+        position:relative;
+        display:inline;
+        margin:15px 0 10px 0;
+        }
+
+a.welcome-findout:hover {
+        text-decoration:underline;
+        }
+
+#fe_quote {
+        position:relative;
+        float:right;
+        clear:both;
+        margin-top:-45px;
+        left:-10px;
+        width:336px;
+        height:45px;
+        background-image: url('/images/home/training/fe_quote1.jpg');
+        background-repeat: no-repeat;
+        }
+
+#fe_section {
+        position:relative;
+        width:790px;
+        height:100px;
+        padding:15px 0 20px 0;
+        }
+
+a#fe_ad {
+        position:relative;
+        display:block;
+        width:790px;
+        height:100px;
+        text-decoration:none;
+        }
+
+#big-buttons {
+        clear:both;
+        }
+
+a#big-location { 
+        position:relative;
+        left:-4px;
+        float:left;
+        display:block;
+        width:260px;
+        height:170px;
+        background-image: url('/images/home/training/big_btn_by_location.jpg');
+        background-repeat: no-repeat;
+        }
+
+a#big-location:hover {
+        background-position: -260px 0;
+        text-decoration:none;
+        }
+
+a#big-course {
+        position:relative;
+        left:-4px;
+        float:left;
+        display:block;
+        width:267px;
+        height:170px;
+        background-image: url('/images/home/training/big_btn_by_course.jpg');
+        background-repeat: no-repeat;
+        }
+
+a#big-course:hover {
+        background-position: -267px 0;
+        text-decoration:none;
+        }
+
+a#big-style {
+        position:relative;
+        left:-4px;
+        float:left;
+        display:block;
+        width:260px;
+        height:170px;
+        background-image: url('/images/home/training/big_btn_by_style.jpg');
+        background-repeat: no-repeat;
+        }
+
+a#big-style:hover {
+        background-position: -260px 0;
+        text-decoration:none;
+        }
+
+a#big-dm {
+        position:relative;
+        left:-4px;
+        float:left;
+        display:block;
+        width:260px;
+        height:170px;
+        background-image: url('/images/home/training/big_btn_by_dm.jpg');
+        background-repeat: no-repeat;
+        }
+
+a#big-dm:hover {
+        background-position: -260px 0;
+        text-decoration:none;
+        }
+
+
+a#little-giac {
+        position:relative;
+        float:left;
+        left:-2px;
+        margin:10px 7px 10px -1px;
+        display:block;
+        width:250px;
+        height:130px;
+        background-image: url('/images/home/little_btn_giac.jpg');
+        background-repeat: no-repeat;
+        }
+
+a#little-giac:hover {
+        background-position: -250px 0;
+        text-decoration:none;
+        }
+
+
+#little-webcasts {
+        position:relative;
+        float:left;
+        margin:10px 7px 10px 10px;
+        display:block;
+        width:250px;
+        height:125px;
+        background-image: url('/images/home/training/little_btn_webcasts.jpg');
+        background-repeat: no-repeat;
+        text-decoration:none;
+        }
+
+#little-webcasts:hover {
+        background-position:-250px 0;
+        }
+
+a#wc {
+        display:block;
+        width:250px;
+        height:125px;
+        text-decoration:none;
+}
+
+a#webcasts-link {
+        position:absolute;
+        top:68px;
+        left:15px;
+        width:220px;
+        text-align:center;
+        color:#CCC;
+        }
+
+a#webcasts-link:hover {
+        color:#F7C73E;
+        text-decoration:none;
+        }
+
+a#little-college {
+        position:relative;
+        float:left;
+        margin:10px 0 10px 12px;
+        display:block;
+        width:250px;
+        height:130px;
+        background-image: url('/images/home/little_btn_college.jpg');
+        background-repeat: no-repeat;
+        }
+
+a#little-college:hover {
+        background-position: -250px 0;
+        text-decoration:none;
+        }
+
+a#little-special {
+        position:relative;
+        float:left;
+        margin:10px 0 10px 12px;
+        display:block;
+        width:250px;
+        height:130px;
+        }
+
+
+
+/* style section */
+
+.style-block {
+        clear:both;           
+        margin-bottom:10px;
+        }
+
+.style-desc {
+        margin-bottom:10px;
+        padding:10px 0 0 135px;
+        }
+
+#event-style a {
+        position:relative;
+        float:left;
+        display:block;
+        width:125px;
+        height:125px;
+        margin:25px 10px 5px 0;
+        background-image: url('/images/home/training/event_style.jpg');
+        background-repeat: no-repeat;
+        text-decoration:none;
+        }
+
+#event-style a:hover {
+        background-position:-125px 0;
+        }
+
+#community-style a {
+        position:relative;
+        float:left;
+        display:block;
+        width:125px;
+        height:125px;
+        margin:25px 10px 5px 0;
+        background-image: url('/images/home/training/community_style.jpg');
+        background-repeat: no-repeat;
+        text-decoration:none;
+        }
+
+#community-style a:hover {
+        background-position:-125px 0;
+        }
+
+
+#ondemand-style a {
+        position:relative;
+        float:left;
+        display:block;
+        width:125px;
+        height:125px;
+        margin:25px 10px 5px 0;
+        background-image: url('/images/home/training/ondemand_style.jpg');
+        background-repeat: no-repeat;
+        text-decoration:none;
+        }
+
+#ondemand-style a:hover {
+        background-position:-125px 0;
+        }
+
+#onsite-style a {
+        position:relative;
+        float:left;
+        display:block;
+        width:125px;
+        height:125px;
+        margin:25px 10px 5px 0;
+        background-image: url('/images/home/training/onsite_style.jpg');
+        background-repeat: no-repeat;
+        text-decoration:none;
+        }
+
+#onsite-style a:hover {
+        background-position:-125px 0;
+        }
+
+
+#mentor-style a {
+        position:relative;
+        float:left;
+        display:block;
+        width:125px;
+        height:125px;
+        margin:25px 10px 5px 0;
+        background-image: url('/images/home/training/mentor_style.jpg');
+        background-repeat: no-repeat;
+        text-decoration:none;
+        }
+
+#mentor-style a:hover {
+        background-position:-125px 0;
+        }
+
+#staysharp-style a {
+        position:relative;
+        float:left;
+        display:block;
+        width:125px;
+        height:125px;
+        margin:25px 10px 5px 0;
+        background-image: url('/images/home/training/staysharp_style.jpg');
+        background-repeat: no-repeat;
+        text-decoration:none;
+        }
+
+#staysharp-style a:hover {
+        background-position:-125px 0;
+        }
+
+
+
+#vlive-style a {
+        position:relative;
+        float:left;
+        display:block;
+        width:125px;
+        height:125px;
+        margin:25px 10px 5px 0;
+        background-image: url('/images/home/training/vlive_style.jpg');
+        background-repeat: no-repeat;
+        text-decoration:none;
+        }
+
+#vlive-style a:hover {
+        background-position:-125px 0;
+        }
+
+
+
+#summit-style a {
+        position:relative;
+        float:left;
+        display:block;
+        width:125px;
+        height:125px;
+        margin:25px 10px 5px 0;
+        background-image: url('/images/home/training/summit_style.jpg');
+        background-repeat: no-repeat;
+        text-decoration:none;
+        }
+
+#summit-style a:hover {
+        background-position:-125px 0;
+        }
+
+
+
+#partnership-style a {
+        position:relative;
+        float:left;
+        display:block;
+        width:125px;
+        height:125px;
+        margin:25px 10px 5px 0;
+        background-image: url('/images/home/training/partnership_style.jpg');
+        background-repeat: no-repeat;
+        text-decoration:none;
+        }
+
+#partnership-style a:hover {
+        background-position:-125px 0;
+        }
+
+#self-style a {
+        position:relative;
+        float:left;
+        display:block;
+        width:125px;
+        height:125px;
+        margin:25px 10px 5px 0;
+        background-image: url('/images/home/training/self_style.jpg');
+        background-repeat: no-repeat;
+        text-decoration:none;
+        }
+
+#self-style a:hover {
+        background-position:-125px 0;
+        }
+
+
+#college-style a {
+        position:relative;
+        float:left;
+        display:block;
+        width:125px;
+        height:125px;
+        margin:25px 10px 5px 0;
+        background-image: url('/images/home/training/college_style.jpg');
+        background-repeat: no-repeat;
+        text-decoration:none;
+        }
+
+#college-style a:hover {
+        background-position:-125px 0;
+        }
+
+#voucher a {
+        position:relative;
+        left:-5px;
+        clear:both;
+        width:787px;
+        height:47px;
+        display:block;
+        background-image: url('/images/home/training/voucher_btn.jpg');
+        background-repeat: no-repeat;
+        margin:0 0 5px 0;
+        }
+
+#voucher a:hover {
+        background-position: 0 -50px;
+        text-decoration:none;
+        }
+
+.te-table {
+        position:relative;
+        top:0px;
+        float:left;
+        padding:10px 5px 5px 0;
+        width:789px;
+        }
+
+.te-table table{
+        margin:0 0 25px 0;
+        }
+
+.te-table table th{
+        color:#1C4A72;
+        background-color:#EEE;
+        border:1px solid #DDD;
+        }
+
+
+.te-table table td{
+        border-bottom:1px solid #EEE;
+        border-right:1px solid #DDD;
+        }
+
+td.te-events-table {
+        padding:0;
+        background-color:#00456C;
+        vertical-align:top;
+        text-align:center;
+        min-height:160px;
+        border-right:1px solid #DDD;
+        background-image: url('/images/home/training/te_logo_box.jpg');
+        background-repeat: repeat-y;
+        }
+
+
+td.te-events-table a.bg {
+        width:135px;
+        height:135px;
+        display:block;
+        background-image: url('/images/home/training/te_logo_circle.jpg');
+        background-repeat: no-repeat;
+        text-decoration:none;
+        }
+
+td.te-events-table a {
+        color:#F7C73E;
+        text-decoration:none;
+        }
+
+td.te-events-table a:hover {
+        color:#FFF;
+        text-decoration:none;
+        }
+
+
+td.te-softwaresecurity-table {
+        padding:0;
+        background-color:#721D69;
+        vertical-align:top;
+        text-align:center;
+        min-height:160px;
+        border-right:1px solid #DDD;
+        background-image: url('/images/home/training/te_logo_box.jpg');
+        background-repeat: repeat-y;
+        }
+
+
+td.te-softwaresecurity-table a.bg {
+        width:135px;
+        height:135px;
+        display:block;
+        background-image: url('/images/home/training/software_logo_circle.jpg');
+        background-repeat: no-repeat;
+        text-decoration:none;
+        }
+
+td.te-softwaresecurity-table a {
+        color:#F7C73E;
+        text-decoration:none;
+        }
+
+td.te-softwaresecurity-table a:hover {
+        color:#FFF;
+        text-decoration:none;
+        }
+
+
+td.te-workshopseries-table { 
+        padding:0;
+        background-color:#721D69;
+        vertical-align:top;
+        text-align:center;
+        min-height:160px;
+        border-right:1px solid #DDD;
+        background-image: url('/images/home/training/te_logo_box.jpg');
+        background-repeat: repeat-y;
+        }
+
+
+td.te-workshopseries-table a.bg {
+        width:135px;
+        height:135px;
+        display:block;
+        background-image: url('/images/home/training/workshop_logo_circle.jpg');
+        background-repeat: no-repeat;
+        text-decoration:none;
+        }
+
+td.te-workshopseries-table a {
+        color:#F7C73E;
+        text-decoration:none;
+        }
+
+td.te-workshopseries-table a:hover {
+        color:#FFF;
+        text-decoration:none;
+        }
+
+td.te-community-table {
+        padding:0;
+        background-color:#721D69;
+        vertical-align:top;
+        text-align:center;
+        min-height:160px;
+        border-right:1px solid #DDD;
+        background-image: url('/images/home/training/te_logo_box.jpg');
+        background-repeat: repeat-y;
+        }
+
+
+td.te-community-table a.bg {
+        width:135px;
+        height:135px;
+        display:block;
+        background-image: url('/images/home/training/community_logo_circle.jpg');
+        background-repeat: no-repeat;
+        text-decoration:none;
+        }
+
+td.te-community-table a {
+        color:#F7C73E;
+        text-decoration:none;
+        }
+
+td.te-community-table a:hover {
+        color:#FFF;
+        text-decoration:none;
+        }
+
+td.te-mentor-table {
+        padding:0;
+        background-color:#006259;
+        vertical-align:top;
+        text-align:center;
+        min-height:160px;
+        border-right:1px solid #DDD;
+        background-image: url('/images/home/training/te_logo_box.jpg');
+        background-repeat: repeat-y;
+        }
+
+
+td.te-mentor-table a.bg {
+        width:135px;
+        height:135px;
+        display:block;
+        background-image: url('/images/home/training/mentor_logo_circle.jpg');
+        background-repeat: no-repeat;
+        text-decoration:none;
+        }
+
+td.te-mentor-table a {
+        color:#F7C73E;
+        text-decoration:none;
+        }
+
+td.te-mentor-table a:hover {
+        color:#FFF;
+        text-decoration:none;
+        }
+
+td.te-staysharp-table {
+        padding:0;
+        background-color:#FDBD1B;
+        vertical-align:top;
+        text-align:center;
+        min-height:160px;
+        border-right:1px solid #DDD;
+        background-image: url('/images/home/training/te_logo_box.jpg');
+        background-repeat: repeat-y;
+        }
+
+
+td.te-staysharp-table a.bg {
+        width:135px;
+        height:135px;
+        display:block;
+        background-image: url('/images/home/training/staysharp_logo_circle.jpg');
+        background-repeat: no-repeat;
+        text-decoration:none;
+        }
+
+td.te-staysharp-table a {
+        color: #A02237;
+        text-decoration:none;
+        }
+
+td.te-staysharp-table a:hover {
+        color:#FFFFFF;
+        text-decoration:none;
+        }
+
+td.te-sah-table {
+        padding:0;
+        background-color:#122E46;
+        vertical-align:top;
+        text-align:center;
+        min-height:160px;
+        border-right:1px solid #DDD;
+        background-image: url('/images/home/training/te_logo_box.jpg');
+        background-repeat: repeat-y;
+        }
+
+
+td.te-sah-table a.bg {
+        width:135px;
+        height:135px;
+        display:block;
+        background-image: url('/images/home/training/vlive_logo_circle.jpg');
+        background-repeat: no-repeat;
+        text-decoration:none;
+        }
+
+td.te-sah-table a {
+        color:#F7C73E;
+        text-decoration:none;
+        }
+
+td.te-sah-table a:hover {
+        color:#FFF;
+        text-decoration:none;
+        }
+
+td.te-ondemand-table {
+        padding:0;
+        background-color:#9B1E2D;
+        vertical-align:top;
+        text-align:center;
+        height:200px;
+        border-right:1px solid #DDD;
+        background-image: url('/images/home/training/te_logo_box.jpg');
+        background-repeat: repeat-y;
+        }
+
+
+td.te-ondemand-table a.bg {
+        width:135px;
+        height:135px;
+        display:block;
+        background-image: url('/images/home/training/ondemand_logo_circle.jpg');
+        background-repeat: no-repeat;
+        text-decoration:none;
+        }
+
+td.te-ondemand-table a {
+        color:#F7C73E;
+        text-decoration:none;
+        }
+
+td.te-ondemand-table a:hover {
+        color:#FFF;
+        text-decoration:none;
+        }
+
+td.te-selfstudy-table {
+        padding:0;
+        background-color:#ee6500;
+        vertical-align:top;
+        text-align:center;
+        height:200px;
+        border-right:1px solid #DDD;
+        background-image: url('/images/home/training/te_logo_box.jpg');
+        background-repeat: repeat-y;
+        }
+
+
+td.te-selfstudy-table a.bg {
+        width:135px;
+        height:135px;
+        display:block;
+        background-image: url('/images/home/training/selfstudy_logo_circle.jpg');
+        background-repeat: no-repeat;
+        text-decoration:none;
+        }
+
+td.te-selfstudy-table a {
+        color:#F7C73E;
+        text-decoration:none;
+        }
+
+td.te-selfstudy-table a:hover {
+        color:#FFF;
+        text-decoration:none;
+        }
+
+#simulcast-style a {
+        position:relative;
+        float:left;
+        display:block;
+        width:125px;
+        height:125px;
+        margin:25px 10px 5px 0;
+        background-image: url('/images/home/training/simulcast_logos.jpg');
+        background-repeat: no-repeat;
+        text-decoration:none;
+        }
+
+#simulcast-style a:hover {
+        background-position:-125px 0;
+        }
+

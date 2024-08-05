@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<!DOCTYPE bindings PUBLIC "-//MOZILLA//DTD XBL V1.0//EN" "http://www.mozilla.org/xbl">
+
+<bindings
+    xmlns="http://www.mozilla.org/xbl"
+    xmlns:xbl="http://www.mozilla.org/xbl"
+    xmlns:html="http://www.w3.org/1999/xhtml"
+    xmlns:xul="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+    <binding id="toolbar"
+             extends="chrome://global/content/bindings/toolbar.xml#toolbar">
+        <handlers>
+            <handler event="click" phase="capturing" action="ATB.Core.reportAnalyticsIfNeeded(event);"/>
+        </handlers>
+    </binding>
+
+    <binding id="asktb-searchbox"
+             extends="chrome://global/content/bindings/autocomplete.xml#autocomplete">
+        <!-- Borrowed from http://mxr.mozilla.org/mozilla1.9.2/source/toolkit/content/widgets/autocomplete.xml#57
+             See https://jira.jeeves.ask.info/browse/TLBR-4313 for details. -->
+        <content sizetopopup="pref">
+          <xul:hbox class="autocomplete-textbox-container" flex="1" xbl:inherits="focused">
+            <children includes="image|deck|stack|box">
+              <xul:image class="autocomplete-icon" allowevents="true"/>
+            </children>
+    
+            <xul:hbox anonid="textbox-input-box" class="textbox-input-box" flex="1" xbl:inherits="tooltiptext=inputtooltiptext">
+              <children/>
+              <html:input anonid="input" class="autocomplete-textbox textbox-input"
+                          flex="1" allowevents="true"
+                          xbl:inherits="tooltiptext=inputtooltiptext,onfocus,onblur,value,type,maxlength,disabled,size,readonly"/>
+            </xul:hbox>
+            <children includes="hbox"/>
+          </xul:hbox>
+    
+          <xul:dropmarker anonid="historydropmarker" class="autocomplete-history-dropmarker"
+                          allowevents="true"
+                          xbl:inherits="open,enablehistory,parentfocused=focused"/>
+    
+          <xul:popupset anonid="popupset" class="autocomplete-result-popupset"/>
+        </content>
+    </binding>
+</bindings>

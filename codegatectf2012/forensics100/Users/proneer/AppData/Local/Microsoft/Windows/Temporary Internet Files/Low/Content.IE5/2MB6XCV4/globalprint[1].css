@@ -1,0 +1,39 @@
+#printbar {display: block !important;}
+#tabs, #footer, .hide {display: none;}
+
+/* retail */
+.sessiondescription {display: block; font-weight: normal !important;}
+#calendarweek td {font-size: 6pt;}
+#calendarmonth td {font-size: 6pt; height: 20px;}
+
+/* eMac */
+#bodyemac #header {border: 0;}
+
+/* Mac mini */
+#bodymacmini #header {border: 4px solid #d0d2d4;}
+#bodymacmini #header img {border: 0;}
+
+/* Mac OS X */
+#bodymacosx, #bodymacosx #main, #bodymacosx #header, #bodymacosx #sidebar .box, #bodymacosx #sidebar .box div, #sidebar #centers .box, #sidebar #centers .box .inside, #bodymacosx #sidebar .box h2, #bodymacosx #breadcrumb {background-image: none; background-color: #fff; color: #000;}
+#bodymacosx #sidebar #buynow {background-color: #a1a5a9;}
+#bodymacosx #sidebar .box h2 {font-size: 12px; color: #76797c;}
+#bodymacosx #sidebar .box .subhead {display: none;}
+#sidebar #downloads, #sidebar #downloads a {color: #000;}
+
+/* Final Cut Express */
+#bodyfce #header {border-bottom: 1px solid #a1a5a9;}
+
+/* Pro */
+#bodyfinalcutpro .sideleft, #bodyfinalcutpro .sideright, #bodyfinalcutpro #header, #bodyfinalcutpro #globalnav, #bodyfinalcutpro #localnav, #bodyfinalcutpro #sidebtm {display: none;}
+#bodysoundtrackpro .sideleft, #bodysoundtrackpro .sideright, #bodysoundtrackpro #header, #bodysoundtrackpro #globalnav, #bodysoundtrackpro #localnav, #bodysoundtrackpro #sidebtm {display: none;}
+#bodymotion .sideleft, #bodymotion .sideright, #bodymotion #header, #bodymotion #globalnav, #bodymotion #localnav, #bodymotion #sidebtm {display: none;}
+#bodydvdstudiopro .sideleft, #bodydvdstudiopro .sideright, #bodydvdstudiopro #header, #bodydvdstudiopro #globalnav, #bodydvdstudiopro #localnav, #bodydvdstudiopro #sidebtm {display: none;}
+#bodyshake .sideleft, #bodyshake .sideright, #bodyshake #header, #bodyshake #globalnav, #bodyshake #localnav, #bodyshake #sidebtm {display: none;}
+#bodylogic .sideleft, #bodylogic .sideright, #bodylogic #header, #bodylogic #globalnav, #bodylogic #localnav, #bodylogic #sidebtm {display: none;}
+#bodyprotraining .sideleft, #bodyprotraining .sideright, #bodyprotraining #header, #bodyprotraining #globalnav, #bodyprotraining #localnav, #bodyprotraining #sidebtm {display: none;}
+
+#bodyfinalcutpro #features dd, #bodysoundtrackpro #features dd, #bodymotion #features dd, #bodydvdstudiopro #features dd, #bodyshake #features dd, #bodylogic #features dd {display: block}
+
+#bodyfinalcutstudio #swf, #bodyfinalcutpro #swf, #bodysoundtrackpro #swf, #bodymotion #swf, #bodydvdstudiopro #swf, #bodyshake #swf, #bodylogic #swf {display: none; visibility: hidden;}
+#bodyfinalcutstudio #swfprint, #bodyfinalcutpro #swfprint, #bodysoundtrackpro #swfprint, #bodymotion #swfprint, #bodydvdstudiopro #swfprint, #bodyshake #swfprint, #bodylogic #swfprint {display: block;}
+

@@ -1,0 +1,418 @@
+<!DOCTYPE HTML><html lang="ko"><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"> <link href="/tools/dlpage/res/chrome/css/chrome-dlpage.css" rel="stylesheet" type="text/css">   <link rel="icon" type="image/ico" href="//www.google.com/images/icons/product/chrome-16.png"> <title>Windows&#50857; Chrome - &#51060;&#50857;&#54644; &#51452;&#49492;&#49436; &#44048;&#49324;&#54633;&#45768;&#45796;.</title> <script type="text/javascript" src="/tools/dlpage/res/c/gu-util.js">
+  
+</script> <script type="text/javascript">
+  
+  
+  function runTagParamsHook(tag, opt_guid) {return tag;}
+  
+  function runThankYouQueryHook(query) {return query;}
+  
+  function runGetAppsPageHook(apps) {return apps;}
+
+  
+  var referer = null;
+  function resetButtons(name) {
+    var buttons = document.getElementsByName(name);
+    for (i = 0; i < buttons.length; ++i) {
+      buttons[i].disabled = false;
+    }
+  }
+  function showThrobber(isVisible) {
+    var divThrobber = document.getElementById('throbber');
+    var imgThrobber = document.getElementById('throbber-img');
+    if (!divThrobber || !imgThrobber) {
+      return;
+    }
+    if (!isVisible) {
+      divThrobber.style.display = 'none';
+    }
+    
+    imgThrobber.src = isVisible ?
+      
+        "/tools/dlpage/res/chrome/images/chrome_throbber_fast_16.gif"
+      
+        : "";
+    if (isVisible) {
+      divThrobber.style.display = 'inline';
+    }
+  }
+  
+  function getThankyouUrl(extraQuery) {
+    var thankYouPath = "thankyou.html";
+    if (areStatsEnabled()) {
+      extraQuery += '&statcb=';
+    }
+    var query = "?hl\x3dko\x26clickonceinstalled\x3d\x26installdataindex\x3ddefaultbrowser" + extraQuery;
+    if (query.length > 0 && query.charAt(0) != '?') {
+      query = '?' + query;
+    }
+    query = runThankYouQueryHook(query);
+    return thankYouPath + query;
+  }
+  function queueThankyou(timeout, queryString, opt_navDocument) {
+    var page = getThankyouUrl(queryString);
+    var doc = opt_navDocument || this.document;
+    setTimeout(function() {showThrobber(false);
+                           resetButtons("submitbutton");
+                           doc.location.href = page}, timeout);}
+  function getApps() {
+    var apps = new Array();
+    
+    
+    
+    
+      apps.push(_GU_createAppInfo(
+          "{8A69D345-D564-463C-AFF1-A69D9E530F96}",
+          "Chrome",
+          "false",
+          runTagParamsHook(
+              "\x26installdataindex\x3ddefaultbrowser",
+              "{8A69D345-D564-463C-AFF1-A69D9E530F96}")));
+    
+    
+    
+    
+    return runGetAppsPageHook(apps);
+  }
+  function areStatsEnabled() {
+    var statcb = document.getElementById("statcb");
+    return (statcb && statcb.checked);
+  }
+  function isDownloadTaggingEnabled() {
+    
+    return true;
+  }
+  function getDownloadPath() {
+    
+      
+        return "/update2/installers/ChromeSetup.exe";
+      
+    
+  }
+  function downloadInstaller(statEnable, opt_buildDownloadPath, opt_filePath) {
+    var defaultDownloadPath = isDownloadTaggingEnabled() ?
+        _GU_buildDlPath : _GU_buildDlPathNoTag;
+    var buildDownloadPath = opt_buildDownloadPath || defaultDownloadPath;
+    var filePath = opt_filePath || getDownloadPath();
+
+     
+      var dlServer =
+      
+        "https://dl.google.com";
+      
+    location.href =
+        buildDownloadPath(getApps(),
+                          "ko",
+                          statEnable,
+                          dlServer,
+                          filePath);
+     
+  }
+  function installViaDownload(opt_navDocument) {
+    queueThankyou(4000, '', opt_navDocument);
+    downloadInstaller(areStatsEnabled());
+    
+    showThrobber(true);
+  }
+  function isClickOnceEnabled() {
+    
+    return true;
+  }
+  function isOneClickEnabled() {
+    return true;
+  }
+  function installViaClickOnce(opt_navDocument) {
+    
+    queueThankyou(10000, '\x26clickonceinstalled=', opt_navDocument);
+    
+    downloadInstaller(areStatsEnabled(), _GU_buildClickOncePath, "/update2/installers/clickonce/GoogleInstaller_ko.application");
+    
+    showThrobber(true);
+  }
+  function installViaOneClick(opt_navDocument) {
+    showThrobber(true);
+    window.google.update.oneclick.install(
+      getApps(),
+      "ko",
+      areStatsEnabled(),
+      function() {queueThankyou(4000, '\x26oneclickinstalled=', opt_navDocument);},
+      function(hr) {installViaDownload(opt_navDocument);});
+  }
+  function getInstallSource() {
+    
+      
+      
+        return 'clickonce';
+      
+    
+  }
+  function installApp(opt_navDocument) {
+    sendDlPagePing("install", getInstallSource());
+    
+
+    var method = getInstallSource();
+    if (method === 'oneclick') {
+      installViaOneClick(opt_navDocument);
+    } else if (method === 'clickonce') {
+      installViaClickOnce(opt_navDocument);
+    } else {
+      installViaDownload(opt_navDocument);
+    }
+  }
+  
+  function sendDlPagePing(stage, installSource) {
+    var img = new Image();
+    var extra = GU_buildGlobalExtra(
+          "ko", areStatsEnabled());
+    var tag = GU_BuildTag(getApps(), extra);
+    img.src = '//tools.google.com/service/update2/dlpageping?' +
+        tag +
+        '&stage=' + stage +
+        '&installsource=' + installSource;
+  }
+  
+  
+  _GU_OnloadHandlerAdd(
+    function() {
+      if (isOneClickEnabled()) {
+      _GU_SetupOneClick();
+      }
+    }, 0); // front of list
+  
+  _GU_OnloadHandlerAdd(
+    function(pagename) {
+      sendDlPagePing(pagename, getInstallSource());
+    });  // added to end of body.onload handler list
+
+
+function runGetAppsPageHook(apps) {
+  try {
+    var app = apps[0];
+    if (_GU_isOneClickAvailable() &&
+        window.google.update.oneclick.getInstalledVersion(app.guid, true)) {
+      app.needsAdmin = true;
+    }
+  } catch (err) {
+  }
+  return apps;
+}
+
+</script> <script type="text/javascript">
+  var pageTracker;  
+  function doSubmit() {
+    var installMethod = getInstallSource();
+    var hasStatcb =
+    
+      false;
+    
+    
+    setTimeout(function() {downloadInstaller(hasStatcb);}, 100);
+    if (_gaq) {
+      _gaq.push(['_trackPageview'], '/ty/retry_' + installMethod);
+    }
+    sendDlPagePing("retry", installMethod);
+  }
+  
+  
+</script></head> <body onload="_GU_OnloadBody(&#39;thankyou&#39;);"><div id="c-doc" class="thankyou-page"><noscript><div class="pagewarning">크롬 다운로드에는 자바스크립트가 지원되는 브라우저가 필요합니다. 브라우저에서 자바스크립트를 사용하도록 설정하는 방법은 <a href="http://www.google.com/support/bin/answer.py?answer=23852&hl=ko">여기에서 알아보세요.</a></div></noscript> <div id="c-main"><div class="ty-head"><img class="icon" src="//www.google.com/images/icons/product/chrome-128.png" alt=""> <h1></h1> <h2>Chrome&#51012; &#51060;&#50857;&#54644; &#51452;&#49492;&#49436; &#44048;&#49324;&#54633;&#45768;&#45796;.</h2></div> <div class="ty-body"> <p>"이 소프트웨어를 실행하시겠습니까?"라는 메시지가 나타나면 <b>실행을 클릭</b>합니다.</p> <p>다운로드에 문제가 있으면 <a id="resubmit" href="javascript:doSubmit();">여기를 클릭</a>하세요.</p> <p><strong>곧 Chrome 설치 프로그램이 완료되며 Chrome이 자동으로 시작됩니다.</strong></p>  </div></div> <div id="c-footer"><div class="c-footer-links"><p>&copy; Google   &middot; <a href="/chrome/intl/ko/privacy.html?hl=ko&amp;clickonceinstalled=&amp;installdataindex=defaultbrowser">&#44060;&#51064;&#51221;&#48372; &#48372;&#54840;&#51221;&#52293;</a> &middot; <a href="//www.google.com/support/chrome/?hl=ko">&#46020;&#50880;&#47568;</a></p></div></div></div> 
+<script language="JavaScript" type="text/javascript">
+<!--
+var google_conversion_id = 1053965053;
+var google_conversion_language = "en_US";
+var google_conversion_format = "1";
+var google_conversion_color = "ffffff";
+var google_conversion_label = "ccg4CP-QThD99cj2Aw";
+//-->
+</script>
+<script language="JavaScript" src="//www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+<img height="1" width="1" border="0" src="//www.googleadservices.com/pagead/conversion/1053965053/?label=ccg4CP-QThD99cj2Aw&amp;script=0"/>
+</noscript>
+
+<script language="JavaScript" type="text/javascript">
+<!--
+var google_conversion_id = 1052826178;
+var google_conversion_language = "en_US";
+var google_conversion_format = "1";
+var google_conversion_color = "ffffff";
+var google_conversion_label = "2EgJCKb8RBDCtIP2Aw";
+//-->
+</script>
+<script language="JavaScript" src="//www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+<img height="1" width="1" border="0" src="//www.googleadservices.com/pagead/conversion/1052826178/?label=2EgJCKb8RBDCtIP2Aw&amp;script=0"/>
+</noscript>
+
+<script language="JavaScript" type="text/javascript">
+<!--
+var google_conversion_id = 1052825908;
+var google_conversion_language = "en_US";
+var google_conversion_format = "1";
+var google_conversion_color = "ffffff";
+var google_conversion_label = "3fY3CID9RBC0soP2Aw";
+//-->
+</script>
+<script language="JavaScript" src="//www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+<img height="1" width="1" border="0" src="//www.googleadservices.com/pagead/conversion/1052825908/?label=3fY3CID9RBC0soP2Aw&amp;script=0"/>
+</noscript>
+
+<script language="JavaScript" type="text/javascript">
+<!--
+var google_conversion_id = 1052825818;
+var google_conversion_language = "en_US";
+var google_conversion_format = "1";
+var google_conversion_color = "ffffff";
+var google_conversion_label = "jdqrCNr9RBDasYP2Aw";
+//-->
+</script>
+<script language="JavaScript" src="//www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+<img height="1" width="1" border="0" src="//www.googleadservices.com/pagead/conversion/1052825818/?label=jdqrCNr9RBDasYP2Aw&amp;script=0"/>
+</noscript>
+
+<script language="JavaScript" type="text/javascript">
+<!--
+var google_conversion_id = 1052825728;
+var google_conversion_language = "en_US";
+var google_conversion_format = "1";
+var google_conversion_color = "ffffff";
+var google_conversion_label = "Y0s1CLT-RBCAsYP2Aw";
+//-->
+</script>
+<script language="JavaScript" src="//www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+<img height="1" width="1" border="0" src="//www.googleadservices.com/pagead/conversion/1052825728/?label=Y0s1CLT-RBCAsYP2Aw&amp;script=0"/>
+</noscript>
+
+<script language="JavaScript" type="text/javascript">
+<!--
+var google_conversion_id = 1052825638;
+var google_conversion_language = "en_US";
+var google_conversion_format = "1";
+var google_conversion_color = "ffffff";
+var google_conversion_label = "f7npCI7_RBCmsIP2Aw";
+//-->
+</script>
+<script language="JavaScript" src="//www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+<img height="1" width="1" border="0" src="//www.googleadservices.com/pagead/conversion/1052825638/?label=f7npCI7_RBCmsIP2Aw&amp;script=0"/>
+</noscript>
+
+<script type="text/javascript">
+<!--
+var google_conversion_id = 995583530;
+var google_conversion_language = "pt";
+var google_conversion_format = "2";
+var google_conversion_color = "ffffff";
+var google_conversion_label = "KIqYCJb6kQIQqszd2gM";
+var google_conversion_value = 0;
+//-->
+</script>
+<script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+<img height="1" width="1" style="border-style:none;" alt="" src="//www.googleadservices.com/pagead/conversion/995583530/?label=KIqYCJb6kQIQqszd2gM&amp;guid=ON&amp;script=0"/>
+</noscript>
+
+<script type="text/javascript">
+<!--
+var google_conversion_id = 1063752865;
+var google_conversion_language = "zh_TW";
+var google_conversion_format = "1";
+var google_conversion_color = "ffffff";
+var google_conversion_label = "UjAZCP-R-gEQoame-wM";
+var google_conversion_value = 0;
+//-->
+</script>
+<script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+<img height="1" width="1" style="border-style:none;" alt="" src="//www.googleadservices.com/pagead/conversion/1063752865/?label=UjAZCP-R-gEQoame-wM&amp;guid=ON&amp;script=0"/>
+</noscript>
+
+<!--
+Start of DoubleClick Floodlight Tag: Please do not remove
+Activity name of this tag: Chrome: Download Thank You
+URL of the webpage where the tag is expected to be placed: http://www.google.com/chrome/thankyou.html
+This tag must be placed between the <body> and </body> tags, as close as possible to the opening tag.
+Creation Date: 04/28/2011
+-->
+<script language="JavaScript" type="text/javascript">
+function getParam(name) {
+  var re = new RegExp('[&?]' + name + '=([a-zA-Z0-9]+)');
+  var match = window.location.href.match(re);
+  return match && match[1] || '';
+}
+var refid = getParam('refid');
+var sourceid = getParam('sourceid');
+var axel = Math.random() + "";
+var a = axel * 10000000000000;
+document.write(unescape('%3Ciframe src="//fls.doubleclick.net/activityi;src=2542116;type=clien612;cat=chromx;u2=' + sourceid + ';u1=' + refid + ';ord=1;num=' + a + '?" width="1" height="1" frameborder="0" style="display:none"%3E%3C/iframe%3E'));
+</script>
+<noscript>
+<iframe src="//fls.doubleclick.net/activityi;src=2542116;type=clien612;cat=chromx;u2=[sourceid];u1=[refid];ord=1;num=1?" width="1" height="1" frameborder="0" style="display:none"></iframe>
+</noscript>
+<!-- End of DoubleClick Floodlight Tag: Please do not remove -->
+
+<!--
+Start of DoubleClick Floodlight Tag: Please do not remove
+Activity name of this tag: OneChrome Education - Browser Download MSI - Thank you
+URL of the webpage where the tag is expected to be placed: https://www.google.com/chrome/thankyou.html?msi=true
+This tag must be placed between the <body> and </body> tags, as close as possible to the opening tag.
+Creation Date: 01/12/2012
+-->
+<script type="text/javascript">
+var axel = Math.random() + "";
+var a = axel * 10000000000000;
+document.write('<iframe src="https://fls.doubleclick.net/activityi;src=2542116;type=onech747;cat=onech469;ord=' + a + '?" width="1" height="1" frameborder="0" style="display:none"></iframe>');
+</script>
+<noscript>
+<iframe src="https://fls.doubleclick.net/activityi;src=2542116;type=onech747;cat=onech469;ord=1?" width="1" height="1" frameborder="0" style="display:none"></iframe>
+</noscript>
+<!-- End of DoubleClick Floodlight Tag: Please do not remove -->
+
+<!--
+Start of DoubleClick Floodlight Tag: Please do not remove
+Activity name of this tag: OneChrome Business - Browser - Download MSI
+URL of the webpage where the tag is expected to be placed: https://www.google.com/chrome/thankyou.html
+This tag must be placed between the <body> and </body> tags, as close as possible to the opening tag.
+Creation Date: 01/12/2012
+-->
+<script type="text/javascript">
+var axel = Math.random() + "";
+var a = axel * 10000000000000;
+document.write('<iframe src="https://fls.doubleclick.net/activityi;src=2542116;type=onech682;cat=onech516;ord=' + a + '?" width="1" height="1" frameborder="0" style="display:none"></iframe>');
+</script>
+<noscript>
+<iframe src="https://fls.doubleclick.net/activityi;src=2542116;type=onech682;cat=onech516;ord=1?" width="1" height="1" frameborder="0" style="display:none"></iframe>
+</noscript>
+<!-- End of DoubleClick Floodlight Tag: Please do not remove -->
+
+  <script type="text/javascript">
+    
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', "UA-4436568-1"]);
+      _gaq.push(['_setCookiePath', "/chrome"]);
+      _gaq.push(['_trackPageview']);
+      
+      
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') +
+            '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    
+  </script> <script type="text/javascript">
+  
+  
+    if (_gaq) _gaq.push(['_trackPageview'], '/ty/install_' + getInstallSource());
+  
+</script></body></html>

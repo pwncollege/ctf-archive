@@ -1,0 +1,325 @@
+
+/*Donate*/
+/* ----------------------------------------------------------*/
+#donorsContainer{
+	width:960px;
+	line-height:20px;
+	margin:0 auto;
+	padding:0px 0px 0px 0px;
+}
+
+#donorsMainBox{
+	width:900px;
+	line-height:20px;
+	padding:0;
+	margin:0 auto;
+}
+
+#donorsCountBox dl{
+	margin:0;
+	padding:0;
+
+	}
+#donorsCountBox dl dd{
+	margin:0 0 0 0;
+	padding:0;
+	}
+#donorsCountBox dl dd a{
+	color:#0088cc;
+	text-decoration:none;
+	line-height:20px;
+	}
+#donorsCountBox dl dd a:hover{
+	color:#0088cc;
+	text-decoration:underline;
+	line-height:20px;
+	}
+
+ #donorsBannerBox{
+	width:900px;
+	padding:25px 0px 25px 0px;
+	margin:0 auto;
+	border:1px solid red;
+	}
+
+#donorsContentsBox{
+	width:900px;
+	padding:0px 30px 0px 30px;
+	margin:0 auto;
+	}
+#donorsContentsBox h2{
+	font-size:1.8em;
+	font-family:Arial;
+	font-weight:bold;
+	color:#000000;
+	margin:0;
+	padding:0;
+	}
+#donorsContentsBox p{
+	color:#333333
+	line-height:18px;
+	}
+#donorsContentsBox a{
+	color:#0088cc;
+	text-decoration:none;
+	line-height:18px;
+	}
+#donorsContentsBox a{
+	color:#0088cc;
+	text-decoration:underline;
+	line-height:18px;
+	}
+
+#DonorsBanner{
+	width:900px;
+	text-align:center;
+	margin:0;
+	padding:0;
+	}
+
+
+#donateNow{
+	width:900px;
+	padding:0;
+	margin:0;
+	}
+#donateNow table{
+	width:100%;
+	padding:0;
+	margin:0;
+	}
+
+#donateComment{
+	margin:15px 0px 15px 0px;
+	width:900px;
+	border:1px solid #d1d1d1;
+	padding:15px 0px 15px 0px;
+	background-color:#f2f2f2;
+	}
+#donateComment table{
+	width:100%;
+	margin:0;
+	padding:0;
+	background-color:#f2f2f2;
+	}
+
+.donateheader{
+	font-weight:bold;
+	float:right;
+	}
+
+
+#Thank_you{
+	width:900px;
+	margin:0 auto;
+}
+#Thank_you h1{
+	font-size:2.1em;
+	margin:0;
+	padding:0;
+	color:black;
+	font-weight:bold;
+}
+#Thank_you h2{
+	font-size:12pt;
+	margin:0;
+	padding:0;
+	color:black;
+	font-weight:bold;
+}
+#Thank_you a{
+	line-height:18px;
+	color:#0088cc;
+	text-decoration:none;
+}
+#Thank_you a:hover{
+	line-height:18px;
+	color:#0088cc;
+	text-decoration:underline;
+}
+
+.donorsBtn{
+	font-size:12pt;
+	width:120px;
+	height:35px;
+	margin-top:7px;
+	margin-left:7px;
+}
+/* ####################thanks to donors##################### */
+#MainBodyFrame #DonorIndex { float:left; height:48px; margin-top:16px; display:block; width:730px;}
+#MainBodyFrame #DonorIndex span.leftthanks{background:url(img/donation/thanksto_01.gif) no-repeat; height:48px; width:140px; float:left;}
+#MainBodyFrame #DonorIndex dl.left01{float:left; background:#FFECE1 url(img/donation/thanksto_02.gif) no-repeat bottom; border-bottom:1px solid #FFC29E; border-top:1px solid #FFC29E; height:46px; width:546px; }
+#MainBodyFrame #DonorIndex dl.left01 dt{background:#fff; border:1px solid #FFC29E; margin:4px 8px 0 0; height:13px; padding:6px 10px; font:normal 11px Verdana; display:block; color:#333;}
+#MainBodyFrame #DonorIndex dl.left01 dt p {}
+#MainBodyFrame #DonorIndex dl.left02{float: right;}
+
+#thankyou {float:left; width:730px;}
+#thankyou input.emailinput{ background:#FFF9F9; border:1px solid #CCC; padding:0 2px;}
+#thankyou span { color:#ED1C24; font:normal 11px Verdana}
+#thankyou strong { color:#ED1C24; font:bold 12px Verdana}
+
+input.iputBTN { background:#757575; font:bold 16px Arial; color:#fff; padding:3px 6px; margin:6px 0 0 10px;}
+textarea.textareaA {border:1px solid #ccc; width:540px; height:30px; padding:4px; float:left; margin:6px 0 0 0;}
+
+#DonorsAmount { background: url(../img/donation/DonorsAmount_bg.gif) repeat-y; height:54px; clear:both; width:535px;margin-left:190px;}
+#DonorsAmount dl.pAmount01{ background:#888 url(../img/donation/DonorsAmount_01.gif) no-repeat; width:338px; height:54px;float:left; border:1px solid #888;}
+#DonorsAmount dl.pAmount02{ background: #D9D9D9 url(../img/donation/DonorsAmount_02.gif) no-repeat left; float:left; border-bottom:1px solid #888; border-top:1px solid #888; text-align:right; border-right:1px solid #888;}
+#DonorsAmount dl.pAmount02 dd{ width:194px; height:54px; ppadding:20px 20px 0 70px; background: url(../img/donation/DonorsAmount_04.gif) no-repeat 70px 14px; text-align:right}
+#DonorsAmount dl.pAmount02 dd ul{ list-style:none; text-align:right; padding:22px 30px 0 0}
+#DonorsAmount dl.pAmount02 dd li.pAmount_Num{ background: url(../img/donation/DonorsAmount_03.gif) repeat-x; padding:2px 4px; float:right; border:1px solid #1C1C1C; margin:0 2px; font:bold 14px Verdana; color:#333;}
+#DonorsAmount dl.pAmount02 dd li.pAmount_point{ font:bold 14px Verdana; color:#333; padding:6px 0 0 0; float:right; }
+#pAmount_update { font:normal 10px Verdana; clear:both; margin-bottom:10px;margin-left:548px;}
+#donate { border:1px solid #CCC; background:#f7f7f7; padding:5px; margin:10px 0; width:523px; float:left;}
+#donate dl{ background:#fff; width:513px; padding:10px 0 0 10px; height:80px}
+#donate dl strong{ color:#ED1C24; font-size:12px; padding:0 4px 0 0;}
+#donate dl dd{ float:left; width:380px;}
+#donate dl dt{ float:left; width:107px; height:47px; font:bold 14px Arial; text-transform:uppercase; margin:14px 0 0 10px; letter-spacing:-1px;}
+#donate dl dt a {background:url(../img/donation/donate_btn01.gif) no-repeat bottom; display:block; width:107px; height:31px; text-align:center; color:#ED1C24; padding:16px 0 0 0;text-decoration:none; margin:0; line-height:14px}
+#donate dl dt a:hover {background:url(../img/donation/donate_btn01.gif) no-repeat top; display:block; width:107px; height:31px; color:#000; padding:16px 0 0 0;}
+
+/* bbs table style */
+#table_bbs2 {text-align:center; width:535px;}
+#bbs2 { margin:0 0 10px 0}
+#bbs2 th { color:#666; font-size:12px; font-weight: bold; padding:6px 0 6px 0; border-bottom:1px solid #666; text-align:left; padding-left:7px; }
+#bbs2 tr {  }
+#bbs2 td { padding:6px 0 8px 0; line-height:15px; border-bottom:1px solid #E4E4E5; }
+#bbs2 td.sect1 { font-size:11px; text-align:left; padding-left:7px; line-height:17px; width:120px}
+#bbs2 td.sect2 { font-size:11px; text-align:left; padding-left:7px; line-height:17px; width:345px}
+#bbs2 td.sect3 { font-size:11px; text-align:right; padding-right:7px; line-height:17px; width:48px}
+#bbs2 td.sectAll { text-align:center; font-size:11px; padding-right:7px; line-height:17px; width:513px; height:200px;}
+
+/*scroller*/
+#pscroller{width: 370px; height: 14px; font:normal 11px Verdana; float:left;}
+#pscroller a{ text-decoration: none;}
+.someclass{ //class to apply to your scroller(s) if desired}
+
+/* 091105 */ 
+#MainBodyFrame #agree { padding-top:10px;}
+#MainBodyFrame #agree h1.title{ margin:10px 0 4px 0; font-size:1.1em; color:#333; font-weight:normal}
+/* 091105 */ 
+
+/* ----------------------------------------------------------*/
+
+
+#donorsBBS {
+	clear:both;
+	width:100%;
+	margin:0 auto;
+}
+
+#donorsBBS table {
+ font-family: MS PGothic,ＭＳ Ｐゴシック,Arial, Helvetica, verdana sans-serif;
+ background-color:#fff;
+ border-collapse: collapse;
+ width:100%;
+}
+#donorsBBS caption {
+ font-size:12px;
+ color:#4D4D4D;
+ font-weight: bold;
+ text-align: left;
+  /* background: url(header_bg.jpg) no-repeat top left; */
+ padding: 20px 0px 0px 0px;
+ margin-bottom: 2px;
+}
+#donorsBBS thead th {
+ text-align:center;
+ padding:2px;
+ text-transform:uppercase;
+ height:26px;
+ background-color: #717171;
+ font-weight: normal;
+ border:1px solid #ffffff;
+ color:#fff;
+ font-weight:bold;
+ }
+#donorsBBS tfoot {
+ padding:2px;
+ text-transform:uppercase;
+ font-size:9pt; 
+ margin-top:6px;
+ background-color: #ffffff;
+ text-align:right;
+ font-weight:bold;
+
+}
+
+
+#donorsBBS tfoot td{
+ padding:7px;
+ font-size:11pt;
+ line-height:18pt;
+}
+
+
+#donorsBBS tbody tr {
+ background-color:#ffffff;
+ border-bottom: 1px solid #f0f0f0;
+}
+#donorsBBS tbody td {
+ padding:5px 15px 5px 15px;
+ text-align:left;
+ line-height:17px;
+}
+#donorsBBS tbody th {
+ text-align:left;
+ padding:2px;
+ border-bottom: 1px solid #e2e2e2;
+}
+#donorsBBS tbody td a, tbody th a {
+color: #000;
+ text-decoration:none;
+ font-weight:normal; 
+ display:block; 
+ padding-left:0px;
+
+}
+
+#donorsBBS tbody td a:hover, tbody th a:hover {
+color:#0088cc;
+text-decoration:none;
+}
+
+#donorsBBS tfoot td a:hover, tfoot th a:hover {
+color: #000;
+text-decoration:underline;
+}
+
+#donorsBBS tfoot td a {
+color: #000;
+text-decoration:none;
+}
+
+#donorsBBS tfoot td a:hover {
+color:#0088cc;
+text-decoration:underline;
+}
+
+#donorsBBS .odd {
+/* 2目のライン   */
+background:#f5f5f5;
+}
+
+#donorsBBS tbody tr:hover {
+/* tableにRolloverの際  */
+background: #f5f5f5;
+color: #000000;
+}
+
+#donorsBBS tbody tr:hover th,
+#donorsBBS tbody tr.odd:hover th {
+/* tableにRolloverの際  */
+background: #f5f5f5;
+color: #f4f4f4;
+	text-decoration:none;
+}
+
+#donorsBBS .txtalign_center {
+	text-align:center;
+}
+
+#donorsBBS .bbs_selected {
+	color:#0088cc;
+	text-decoration:underline;
+}
+

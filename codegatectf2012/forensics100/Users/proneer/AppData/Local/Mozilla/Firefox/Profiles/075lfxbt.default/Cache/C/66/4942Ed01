@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>슬랙스킷 (Slackskit) | FORENSIC-PROOOF</title>
+<link rel="shortcut icon" href="http://forensic-proof.com/wp-content/uploads/2011/10/search.ico" type="image/x-icon" />
+<link rel="profile" href="http://gmpg.org/xfn/11" />
+<!--[if lt IE 8]> <script src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE8.js"></script> <![endif]--><link rel="alternate" type="application/rss+xml" title="FORENSIC-PROOOF &raquo; Feed" href="http://forensic-proof.com/feed" />
+<link rel="alternate" type="application/rss+xml" title="FORENSIC-PROOOF &raquo; Comments Feed" href="http://forensic-proof.com/comments/feed" />
+				
+	<script type="text/javascript">//<![CDATA[
+	// Google Analytics for WordPress by Yoast v4.2.3 | http://yoast.com/wordpress/google-analytics/
+	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount','UA-20479500-1']);
+	_gaq.push(['_trackPageview']);
+	(function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	})();
+	//]]></script>
+<link rel="alternate" type="application/rss+xml" title="FORENSIC-PROOOF &raquo; 슬랙스킷 (Slackskit) Comments Feed" href="http://forensic-proof.com/archives/3026/feed" />
+	<style type="text/css">
+	.wp-pagenavi{float:left !important; }
+	</style>
+  <link rel='stylesheet' id='pagelines-pro-css'  href='http://forensic-proof.com/wp-content/themes/platformpro/pro/pro.css?ver=153-10091170509' type='text/css' media='all' />
+<link rel='stylesheet' id='pagelines-stylesheet-css'  href='http://forensic-proof.com/wp-content/themes/platformpro/style.css?ver=153-011412125209' type='text/css' media='all' />
+<!--[if IE 7]>
+<link rel='stylesheet' id='ie7-style-css'  href='http://forensic-proof.com/wp-content/themes/platformpro/css/ie7.css?ver=1.5.3' type='text/css' media='all' />
+<![endif]-->
+<link rel='stylesheet' id='thickbox-css'  href='http://forensic-proof.com/wp-includes/js/thickbox/thickbox.css?ver=20111117' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-pagenavi-style-css'  href='http://forensic-proof.com/wp-content/plugins/wp-pagenavi-style/css/white_blue.css?ver=1.0' type='text/css' media='all' />
+<script type='text/javascript' src='http://forensic-proof.com/wp-includes/js/jquery/jquery.js?ver=1.7.1'></script>
+<script type='text/javascript' src='http://forensic-proof.com/wp-includes/js/comment-reply.js?ver=20090102'></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://forensic-proof.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://forensic-proof.com/wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='DFRWS 2012 포렌식 챌린지' href='http://forensic-proof.com/archives/3011' />
+<link rel='next' title='디지털포렌식 행사 (Digital Forensics Events)' href='http://forensic-proof.com/archives/3067' />
+<meta name="generator" content="WordPress 3.3.1" />
+<link rel='shortlink' href='http://forensic-proof.com/?p=3026' />
+
+<!-- All in One SEO Pack 1.6.13.8 by Michael Torbert of Semper Fi Web Design[123,154] -->
+<meta name="keywords" content="slack,slackskit" />
+<link rel="canonical" href="http://forensic-proof.com/archives/3026" />
+<!-- /all in one seo pack -->
+	<style type="text/css">
+	 .wp-pagenavi
+	{
+		font-size:12px !important;
+	}
+	</style>
+	<link rel="stylesheet" id="dynamic-css" href="http://forensic-proof.com/wp-content/themes/platformpro/css/dynamic.css?ver=153-11061155655" type="text/css" media="all" />
+	<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+<script type="text/javascript">
+//<![CDATA[
+	var screen_res = "1280 x 800"; 
+//]]>
+</script>
+<meta id="syntaxhighlighteranchor" name="syntaxhighlighter-version" content="3.1.3" />
+</head>
+<body class="single single-post postid-3026 single-format-standard canvas ttype-single tmain-single">
+<div id="site" class="one-sidebar-right"> <!-- #site // Wraps #header, #page-main, #footer - closed in footer -->
+	<div id="page"> <!-- #page // Wraps #header, #page-main - closed in footer -->
+		<div id="page-canvas">
+						<div id="header" class="container-group fix">
+				<div class="outline">
+					<div id="branding" class="container fix">
+	<div class="texture">
+		<div class="content">
+			<div class="content-pad">
+<div class="branding_wrap">
+	<a class="mainlogo-link" href="http://forensic-proof.com" title="FORENSIC-PROOOF"><img class="mainlogo-img" src="http://forensic-proof.com/wp-content/uploads/2011/11/fp_logo.png" alt="FORENSIC-PROOOF" /></a>		
+	
+	<div class="icons" style="bottom: 21px; right: 1px;">
+
+				<a target="_blank" href="http://forensic-proof.com/feed" class="rsslink"></a>
+				
+											<a target="_blank" href="http://twitter.com/pr0neer" class="twitterlink"></a>
+									<a target="_blank" href="http://facebook.com/proneer" class="facebooklink"></a>
+																
+	</div>
+</div>
+				<div class="clear"></div>
+			</div>
+		</div>
+	</div>
+</div>
+<div id="secondnav" class="container fix">
+	<div class="texture">
+		<div class="content">
+			<div class="content-pad">
+				<div class="clear"></div>
+			</div>
+		</div>
+	</div>
+</div>
+				</div>
+			</div>
+						<div id="page-main" class="container-group fix"> <!-- #page-main // closed in footer -->
+				<div id="dynamic-content" class="outline fix">
+					<div id="maincontent" class="container fix">
+	<div class="texture">
+		<div class="content">
+			<div class="content-pad">
+<div id="pagelines_content" class="one-sidebar-right fix">
+	
+		<div id="column-wrap" class="fix">
+		
+				<div id="column-main" class="mcolumn fix">
+			<div class="mcolumn-pad" >
+				<div id="postnav" class="copy fix">
+	<div class="copy-pad">
+   			<div class="post-nav fix"> 
+			<span class="previous"><a href="http://forensic-proof.com/archives/3011" rel="prev">DFRWS 2012 포렌식 챌린지</a></span> 
+			<span class="next"><a href="http://forensic-proof.com/archives/3067" rel="next">디지털포렌식 행사 (Digital Forensics Events)</a></span>
+		</div>
+		<div class="clear"></div>
+	</div>
+</div>
+<div id="theloop" class="copy fix">
+	<div class="copy-pad">
+<div class="post-3026 post type-post status-publish format-standard hentry category-data-forensics tag-slack tag-slackskit fpost" id="post-3026">
+				
+				
+					
+						<div class="post-meta fix">	
+							<div class="post-header fix post-nothumb"  >
+																<div class="post-title-section fix">
+
+									<div class="post-title fix">
+										
+										<h1 class="entry-title">슬랙스킷 (Slackskit)</h1>
+<div class="metabar"><em><span class="sword">By</span> <span class="author vcard"><span class="fn"><a href="http://forensic-proof.com/archives/author/proneer" title="Posts by proneer" rel="author">proneer</a></span></span> <span class="sword">On</span> <span class="date time published" title="2012-01-27T08:56:45+0000">January 27, 2012</span>  &middot; <span class="post-comments"><a href="http://forensic-proof.com/archives/3026#comments"><span class="dsq-postid" rel="3026 http://forensic-proof.com/?p=3026">Leave a Comment</span></a></span>  </em></div>										
+									</div>
+
+
+								</div>
+							</div>				
+						</div>
+					
+					  	
+						<div class="entry_wrap fix">
+						
+							<div class="entry_content">
+								<p>슬랙스킷(Slackskit)은 슬랙을 이용하는 악성코드를 통칭하여 부르는 말이다. 하지만, 아직까지 공식적으로 불려진 적이 없다. 최근에 커피를 마시다가 hojinpk의 조언과 함께 만든 이름이기 때문이다. 슬랙스킷은 새로운 악성코드는 아니다. 이미 슬랙을 이용하는 악성코드는 많이 나왔지만, 악성코드 명칭은 은닉 장소보다는 대부분 행위에 기반하여 붙이는 경향이 있다. 루트킷(Rootkit), 부트킷(Bootkit) 처럼 말이다.</p>
+<p>슬랙 공간의 활용은 이미 포렌식 분야에서는 오래된 주제이다. 하지만, 악성코드의 변천사를 보면 이미 지난 기술을 활용할 정도로 너무 늦게 활용되고 있다. 그럴 수 밖에 없는 것이 현재의 은닉 기술로도 충분한데 새로운걸 만든 필요는 없기 때문이다. 백신업체들이 현재의 은닉 기술을 완벽하게 대응한다면 또 다시 새로운 영역으로 옮겨갈 것이다.</p>
+<p>갑자기 슬랙스킷에 대해서 이야기하는 이유는 이전부터 관심을 가지고 있었지만, 최근에 연구를 집중해보려고 하는 분야이기 때문이다. 그리고 악성코드가 나온 이후에 대응하기보다는 악성코드가 활용할 장소를 미리 살펴보고 방법도 연구해본다면, 악성코드가 악명을 떨칠 때, 급한 단발성 대응보다는 큰 대응 프레임워크를 가지고 가볼 수 있지 않을까 하는 거창한 생각때문이다.</p>
+<p><span style="color: #800080;"> </span></p>
+<p>그렇다면 간단하게 슬랙스킷의 변천사를 살펴보자.</p>
+<p><span style="color: #800080;"><strong>ADS (Alternate Data Stream)</strong></span><br />
+ADS는 굳이 따지자면 슬랙 공간이라고 할 수는 없다. 파일시스템의 정상적인 구조이고, 운영체제의 많은 부분에 활용되고 있기 때문이다. 하지만, 많이 사용하지 않는 공간을 이용한다는 의미에서 슬랙스킷에 포함시켜 보았다. ADS를 활용한 유명한 악성코드로는 2005년 12월 초에 처음 나온 Rustock 이다. Rustock는 커널 스팸메일러로 2006년 7월까지 총 4차례의 버전 업데이트가 이루어진 다형성 바이러스이다.</p>
+<p><span style="color: #800080;"><strong>MBR 슬랙</strong></span><br />
+MBR 슬랙은 초기 트랙 당 섹터 수가 63섹터일 때, MBR이 기록되는 트랙은 MBR의 안정성을 위해 MBR만 사용하도록 구성해 놓았다. MBR은 보통 1섹터만 사용하기 때문에 나머지 62섹터는 그냥 빈 공간으로 저장매체에 존재한다(디스크 방식의 경우에만). 이 62섹터의 MBR 슬랙 공간이 악성코드에 의해 활용되기 시작했다. 2008년 초부터 많이 발생한 MBR 루트킷에 의해 많이 활용되는데, 보통 MBR 슬랙 공간에 코드를 올려 놓고 MBR 부트 코드를 조작하여 올린 코드로 점프하도록 구성을 하곤 한다.</p>
+<p><span style="color: #800080;"><strong>시스템 예약 공간 (8MB, 동적디스크 설정 정보)</strong></span><br />
+2009년 말에 처음 등장한 TDL3는 저장매체 마지막 부분의 8MB 공간을 사용한다. 이 공간은 저장매체를 동적디스크로 변경할 때 필요한 설정정보를 저장하기 위해 운영체제가 예약해둔 공간이다. 운영체제 설치 시 저장매체를 포맷해보면 아무리 최대로 파티션을 잡아도 잡히지 않는 8MB 공간이 있을 것이다. 이 공간이 동적디스크 설정 정보를 저장하기 위해 예약해둔 공간이다. TDL3, 4에서는 이 공간을 이용해 악성코드를 감염시킨다.</p>
+<p><span style="color: #800080;"> </span></p>
+<p>앞서 살펴본 슬랙 공간 외에도 많은 슬랙 공간이 존재한다. 살펴본 것은 대표적으로 나름 유명했던 악성코드가 사용했던 공간이다. 물론, 다른 슬랙 공간도 많이 사용됐지만 악성코드 변천사에서 큰 역할을 수행하지 못한 안타까운(?) 결과로 주목받지 못한체 지나가버렸다.</p>
+<p>악성코드가 슬랙 공간을 사용하는 이유는 무엇일까? 가장 큰 이유는 백신을 우회하여 자신을 잘 숨길 수 있기 때문이다. 백신은 파일 단위의 탐지 기법을 많이 쓴다. 하지만 슬랙은 파일시스템의 구조에서 낭비되는 공간이므로 파일 단위의 탐지 기법으로는 탐지해내기 어렵다. 그리고 현실적으로 파일시스템에 존재하는 수많은 슬랙을 다 검사하는 것은 백신의 성능도 문제지만, 배보다 배꼽이 더 큰 경우이다. 이 때문에 의심되는 일부 슬랙을 검사하거나 알려진 악성코드가 사용했던 부분만 검사하는데 그칠 수 밖에 없다.</p>
+<p><span style="color: #800080;"> </span></p>
+<p>그렇다면 악성코드가 활용할만한 슬랙 공간은 어떤 것들이 있을까?</p>
+<p><span style="color: #800080;"><strong>파일 슬랙(램 슬랙 + 드라이브 슬랙)</strong></span><br />
+파일 슬랙은 클러스터를 사용하는(리눅스는 블록) 특성 때문에 논리적인 데이터를 저장매체에 쓸 때, 물리적으로 크기가 잡혀버려서 낭비되는 공간이다. 이 공간도 일반적으로 접근할 수가 없기 때문에 악성코드에 의해 활용될 수 있다. 파일 슬랙의 강점은 대부분의 슬랙은 API로 접근하기 어렵기 때문에 저장매체를 열고, 파일시스템을 해석하여 슬랙을 찾아야 한다. 하지만 파일 슬랙은 파일 뒷부분에 낭비되는 공간이기 때문에 간단히 해당 파일의 물리적 위치를 API로 얻은 다음, 쉽게 원하는 코드를 삽입하거나 가져올 수 있다.</p>
+<p><span style="color: #800080;"><strong>파일시스템 슬랙, 볼륨 슬랙</strong></span><br />
+파일시스템과 볼륨 슬랙도 구조 상의 문제점으로 인해 낭비되는 공간이다. 이 부분도 현재 저장매체의 파티션 구조나 클러스터 크기를 알고 있다면 쉽게 해당 위치에 원하는 코드를 삽입하거나 가져올 수 있다. 슬랙에 대해서 좀 더 세부적인 설명을 원하면 다음을 참고하자.<br />
+<a  href="http://forensic-proof.com/archives/363" target="_blank">http://forensic-proof.com/archives/363</a></p>
+<p>이외에도 파일시스템에 낭비되는 공간은 매우 많다. 다음 링크에서 &#8220;파일시스템 포렌식 분석&#8221; 슬라이드를 살펴보면 좀 더 자세히 알 수 있다.<br />
+<a  href="http://forensic-proof.com/archives/2424" target="_blank">http://forensic-proof.com/archives/2424</a></p>
+<p><span style="color: #800080;"> </span></p>
+<p>아직까지 슬랙의 활용성이 많이 때문에 쉽게 새로운 분야로 넘어가지는 않겠지만, 다음 대상은 무엇이 될까? 다음은 아마도 이런 부분이 은닉 장소가 될 것이다.</p>
+<p><span style="color: #800080;"><strong>HPA &amp; DCO 영역</strong></span><br />
+HPA(Host Protected Area)나 DCO(Device Configuration Overlay)는 ATA 기반의 저장매체에서 저장매체에 일정 영역을 특수 목적(시스템 진단 유틸리티, 시스템 복구 영역 등)으로 이용해보고자 벤더들의 요청으로 ATA-4, ATA-6에서 추가된 기능이다. 이 영역은 파일시스템 수준의 영역이나 운영체제 수준의 영역이 아니다. ATA는 저장매체 인터페이스를 이르는 말이다. 말 그대로 장치의 규격이기 때문에 이 영역을 악성코드로 활용하면 운영체제 단에서 쉽게 접근할 수가 없다. </p>
+<p>백신의 악성코드 대응 방안은 우선 감염된 근원을 찾아 해당 코드를 분석한 후, 감염시킨 정보들을 다시 원래로 복원시키는 것이다. 하지만, HPA, DCO에 코드를 숨긴다면 증상은 있지만, 증상을 발생시킨 근원(코드)를 찾지 못하기 때문에 대응에 어려움이 발생할 수 있다. 물론, 이 영역을 이용한 악성코드도 해외에서는 발견됐다는 얘기는 있다. 다만, 악성코드 변천사에서 아직 큰 역할을 못했을 뿐이다. 사람이나 악성코드나 이름을 날리려면 뭔가 큰일을 해야만 하니깐 말이다. HPA, DCO에 대한 추가적인 정보는 다음을 참고하기 바란다.<br />
+<a  href="http://forensic-proof.com/archives/284" target="_blank">http://forensic-proof.com/archives/284</a></p>
+<p><span style="color: #800080;"><strong>EFI BIOS 영역</strong></span><br />
+MBR 구조에서는 파티션의 섹터 수를 지정하는 바이트 수가 4바이트라서, 2TB(2^32 * 512) 이상의 파티션은 만들 수가 없다. 즉, 2TB 이상의 저장매체가 나와도 MBR 구조를 사용하면 2TB 밖에 못쓰게 된다는 것이다. 이런 문제점을 해결하고자 나온 구조가 GPT(GUID Partition Table)이다. GPT 구조는 EFI BIOS가 장착된 메인보드를 구입하게 되면 경험해 볼 수 있다. 현재 최신의 메인보드는 대부분 EFI BIOS가 장착되어 출시되고 있다. GPT에 대해서도 자세한 내용을 원하면 다음 링크의 &#8220;파일시스템 -MBR, GPT&#8221; 슬라이드를 확인하자.<br />
+<a  href="http://forensic-proof.com/archives/2424" target="_blank">http://forensic-proof.com/archives/2424</a></p>
+<p>해당 슬라이드에서 GPT 구조를 살펴보면 MBR과 다르게 부트 코드가 들어가는 영역이 없다. 그렇다면 어떻게 부팅이 될 것인가? GPT의 부트 코드는 EFI BIOS 내에 존재한다. 그렇다면, MBR에서 GPT로 넘어가면 부트킷은 없어지는 것인가? 아마도 그 때가 되면 EFI BIOS를 공격하는 악성코드들이 많이 나올 것이다. 현재도 BIOS를 공격하는 악성코드들이 없는 것은 아니지만 영향이 크지 않기 때문에 아직 빛을 발휘 못하고 있다.</p>
+<p><span style="color: #800080;"> </span></p>
+<p>다음 세대에 악성코드가 주로 노릴 은닉 장소는 어디가 될까? 그때가서 대비하기 보다는 사전에 연구해본다면, 실제 악성코드에 의해 큰 문제가 발생했을 때 제대로 된 대응 방안을 내 놓을 수 있지 않을까?</p>
+									<div class="clear"></div> 
+																</div>	
+							<div class="tags">
+								Tagged with: <a href="http://forensic-proof.com/archives/tag/slack" rel="tag">Slack</a> &bull; <a href="http://forensic-proof.com/archives/tag/slackskit" rel="tag">slackskit</a><br />&nbsp;
+							</div>
+						</div>
+								</div>
+
+	<div class="clear"></div>
+	</div>
+</div>
+<div id="sharebar" class="copy fix">
+	<div class="copy-pad">
+			<div class="post-footer">
+
+					<div class="left">
+						If you enjoyed this article, please consider sharing it!	
+					</div>
+					<div class="right">
+																				
+															<a href="http://www.facebook.com/sharer.php?u=http://forensic-proof.com/archives/3026&amp;t=%EC%8A%AC%EB%9E%99%EC%8A%A4%ED%82%B7+%28Slackskit%29" title="Share on Facebook" rel="nofollow" target="_blank"><img src="http://forensic-proof.com/wp-content/themes/platformpro/images/ico-facebook.png" alt="Facebook" /></a>
+							 
+
+																							<a href="http://twitter.com/?status=슬랙스킷 (Slackskit) - http://forensic-proof.com/archives/3026" title="Share on Twitter" rel="nofollow" target="_blank"><img src="http://forensic-proof.com/wp-content/themes/platformpro/images/ico-twitter.png" alt="Twitter" /></a>
+							 
+
+														
+														
+														
+												</div>
+				<div class="clear"></div>
+			</div>
+	
+	<div class="clear"></div>
+	</div>
+</div>
+<div id="pl_comments" class="copy fix">
+	<div class="copy-pad">
+
+<div id="disqus_thread">
+    </div>
+
+<script type="text/javascript">
+/* <![CDATA[ */
+    var disqus_url = 'http://forensic-proof.com/archives/3026';
+    var disqus_identifier = '3026 http://forensic-proof.com/?p=3026';
+    var disqus_container_id = 'disqus_thread';
+    var disqus_domain = 'disqus.com';
+    var disqus_shortname = 'forensicproof';
+    var disqus_title = "슬랙스킷 (Slackskit)";
+        var disqus_config = function () {
+        var config = this; // Access to the config object
+
+        /*
+           All currently supported events:
+            * preData — fires just before we request for initial data
+            * preInit - fires after we get initial data but before we load any dependencies
+            * onInit  - fires when all dependencies are resolved but before dtpl template is rendered
+            * afterRender - fires when template is rendered but before we show it
+            * onReady - everything is done
+         */
+
+        config.callbacks.preData.push(function() {
+            // clear out the container (its filled for SEO/legacy purposes)
+            document.getElementById(disqus_container_id).innerHTML = '';
+        });
+                config.callbacks.onReady.push(function() {
+            // sync comments in the background so we don't block the page
+            DISQUS.request.get('?cf_action=sync_comments&post_id=3026');
+        });
+                    };
+    var facebookXdReceiverPath = 'http://forensic-proof.com/wp-content/plugins/disqus-comment-system/xd_receiver.htm';
+/* ]]> */
+</script>
+
+<script type="text/javascript">
+/* <![CDATA[ */
+    var DsqLocal = {
+        'trackbacks': [
+        ],
+        'trackback_url': "http:\/\/forensic-proof.com\/archives\/3026\/trackback"    };
+/* ]]> */
+</script>
+
+<script type="text/javascript">
+/* <![CDATA[ */
+(function() {
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = 'http://' + disqus_shortname + '.' + disqus_domain + '/embed.js?pname=wordpress&pver=2.70';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+/* ]]> */
+</script>
+	<div class="clear"></div>
+	</div>
+</div>
+<div id="pagination" class="copy fix">
+	<div class="copy-pad">
+				
+		<div class="clear"></div>
+	</div>
+</div>
+			</div>
+		</div>
+		
+				
+	</div>	
+	
+	
+	<div id="sidebar-wrap" class="fix">
+			<div id="sidebar1" class="scolumn fix" >
+				<div class="scolumn-pad">
+					<div id="sidebar_primary" class="copy fix">
+	<div class="copy-pad">
+	<ul id="list_sidebar_primary" class="sidebar_widgets fix">
+		<li id="search-3" class="widget_search widget fix"><div class="widget-pad"><form method="get" class="searchform" action="http://forensic-proof.com/" onsubmit="this.submit();return false;">
+	<fieldset>
+		<input type="text" value="Search" name="s" class="searchfield" onfocus="if (this.value == 'Search') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Search';}" />
+
+		<input type="image" class="submit btn" name="submit" src="http://forensic-proof.com/wp-content/themes/platformpro/images/search-btn.png" alt="Go" />
+	</fieldset>
+</form>
+</div></li><li id="categories-3" class="widget_categories widget fix"><div class="widget-pad"><h3 class="widget-title">Categories</h3>		<ul>
+	<li class="cat-item cat-item-5"><a href="http://forensic-proof.com/archives/category/forensic-news" title="View all posts filed under 0&#215;01 News">0&#215;01 News</a> (15)
+</li>
+	<li class="cat-item cat-item-6"><a href="http://forensic-proof.com/archives/category/fundamentals" title="View all posts filed under 0&#215;02 Fundamentals">0&#215;02 Fundamentals</a> (11)
+</li>
+	<li class="cat-item cat-item-7"><a href="http://forensic-proof.com/archives/category/data-forensics" title="View all posts filed under 0&#215;03 Data Forensics">0&#215;03 Data Forensics</a> (8)
+</li>
+	<li class="cat-item cat-item-8"><a href="http://forensic-proof.com/archives/category/storage-forensics" title="View all posts filed under 0&#215;04 Storage Forensics">0&#215;04 Storage Forensics</a> (12)
+</li>
+	<li class="cat-item cat-item-9"><a href="http://forensic-proof.com/archives/category/filesystem-forensics" title="View all posts filed under 0&#215;05 File System Forensics">0&#215;05 File System Forensics</a> (31)
+</li>
+	<li class="cat-item cat-item-10"><a href="http://forensic-proof.com/archives/category/windows-forensics" title="View all posts filed under 0&#215;06 Windows Forensics">0&#215;06 Windows Forensics</a> (17)
+</li>
+	<li class="cat-item cat-item-11"><a href="http://forensic-proof.com/archives/category/nix-forensics" title="View all posts filed under 0&#215;07 *nix Forensics">0&#215;07 *nix Forensics</a> (1)
+</li>
+	<li class="cat-item cat-item-13"><a href="http://forensic-proof.com/archives/category/web-forensics-2" title="View all posts filed under 0&#215;09 Web Forensics">0&#215;09 Web Forensics</a> (5)
+</li>
+	<li class="cat-item cat-item-14"><a href="http://forensic-proof.com/archives/category/virtual-forensics" title="View all posts filed under 0x0A Virtual Forensics">0x0A Virtual Forensics</a> (5)
+</li>
+	<li class="cat-item cat-item-15"><a href="http://forensic-proof.com/archives/category/forensic-challenges" title="View all posts filed under 0x0B Forensic Challenges">0x0B Forensic Challenges</a> (15)
+</li>
+	<li class="cat-item cat-item-16"><a href="http://forensic-proof.com/archives/category/forensic-education" title="View all posts filed under 0x0C Forensic Education">0x0C Forensic Education</a> (8)
+</li>
+	<li class="cat-item cat-item-17"><a href="http://forensic-proof.com/archives/category/encase" title="View all posts filed under 0x0D EnCase">0x0D EnCase</a> (12)
+</li>
+	<li class="cat-item cat-item-18"><a href="http://forensic-proof.com/archives/category/forensic-tools" title="View all posts filed under 0x0E Forensic Tools">0x0E Forensic Tools</a> (8)
+</li>
+	<li class="cat-item cat-item-244"><a href="http://forensic-proof.com/archives/category/slides-2" title="View all posts filed under 0x0F Slides">0x0F Slides</a> (24)
+</li>
+		</ul>
+</div></li>	        <li id="wp-cumulus" class="wp_cumulus_widget widget fix"><div class="widget-pad">						<!-- SWFObject embed by Geoff Stearns geoff@deconcept.com http://blog.deconcept.com/swfobject/ --><script type="text/javascript" src="http://forensic-proof.com/wp-content/plugins/wp-cumulus/swfobject.js"></script><div id="wpcumuluswidgetcontent4060324"><p><a href='http://forensic-proof.com/archives/tag/addressing' class='tag-link-22' title='1 topic' style='font-size: 8pt;'>addressing</a>
+<a href='http://forensic-proof.com/archives/tag/artifacts' class='tag-link-24' title='1 topic' style='font-size: 8pt;'>artifacts</a>
+<a href='http://forensic-proof.com/archives/tag/bios' class='tag-link-27' title='1 topic' style='font-size: 8pt;'>BIOS</a>
+<a href='http://forensic-proof.com/archives/tag/boot-code' class='tag-link-29' title='1 topic' style='font-size: 8pt;'>boot code</a>
+<a href='http://forensic-proof.com/archives/tag/boot-process' class='tag-link-30' title='1 topic' style='font-size: 8pt;'>boot process</a>
+<a href='http://forensic-proof.com/archives/tag/challenge' class='tag-link-37' title='6 topics' style='font-size: 14.814159292pt;'>challenge</a>
+<a href='http://forensic-proof.com/archives/tag/cluster' class='tag-link-39' title='1 topic' style='font-size: 8pt;'>Cluster</a>
+<a href='http://forensic-proof.com/archives/tag/codegate' class='tag-link-41' title='7 topics' style='font-size: 15.4336283186pt;'>Codegate</a>
+<a href='http://forensic-proof.com/archives/tag/cookie' class='tag-link-45' title='1 topic' style='font-size: 8pt;'>cookie</a>
+<a href='http://forensic-proof.com/archives/tag/data-carving' class='tag-link-48' title='1 topic' style='font-size: 8pt;'>Data Carving</a>
+<a href='http://forensic-proof.com/archives/tag/data-recovery' class='tag-link-49' title='1 topic' style='font-size: 8pt;'>Data recovery</a>
+<a href='http://forensic-proof.com/archives/tag/dc3' class='tag-link-50' title='1 topic' style='font-size: 8pt;'>DC3</a>
+<a href='http://forensic-proof.com/archives/tag/dco' class='tag-link-52' title='1 topic' style='font-size: 8pt;'>DCO</a>
+<a href='http://forensic-proof.com/archives/tag/defcon' class='tag-link-53' title='9 topics' style='font-size: 16.6725663717pt;'>defcon</a>
+<a href='http://forensic-proof.com/archives/tag/encase-2' class='tag-link-66' title='12 topics' style='font-size: 18.0353982301pt;'>ENCASE</a>
+<a href='http://forensic-proof.com/archives/tag/ence' class='tag-link-67' title='7 topics' style='font-size: 15.4336283186pt;'>EnCE</a>
+<a href='http://forensic-proof.com/archives/tag/encoding' class='tag-link-68' title='2 topics' style='font-size: 10.2300884956pt;'>encoding</a>
+<a href='http://forensic-proof.com/archives/tag/enscript' class='tag-link-69' title='1 topic' style='font-size: 8pt;'>EnScript</a>
+<a href='http://forensic-proof.com/archives/tag/exfat' class='tag-link-70' title='1 topic' style='font-size: 8pt;'>exFAT</a>
+<a href='http://forensic-proof.com/archives/tag/fat' class='tag-link-71' title='9 topics' style='font-size: 16.6725663717pt;'>FAT</a>
+<a href='http://forensic-proof.com/archives/tag/file-system' class='tag-link-77' title='26 topics' style='font-size: 22pt;'>File System</a>
+<a href='http://forensic-proof.com/archives/tag/forensic-challenge' class='tag-link-83' title='1 topic' style='font-size: 8pt;'>Forensic Challenge</a>
+<a href='http://forensic-proof.com/archives/tag/ftk' class='tag-link-90' title='1 topic' style='font-size: 8pt;'>FTK</a>
+<a href='http://forensic-proof.com/archives/tag/guid' class='tag-link-97' title='1 topic' style='font-size: 8pt;'>GUID</a>
+<a href='http://forensic-proof.com/archives/tag/hardware' class='tag-link-99' title='4 topics' style='font-size: 12.9557522124pt;'>hardware</a>
+<a href='http://forensic-proof.com/archives/tag/hidden-partition' class='tag-link-102' title='1 topic' style='font-size: 8pt;'>hidden partition</a>
+<a href='http://forensic-proof.com/archives/tag/history' class='tag-link-103' title='1 topic' style='font-size: 8pt;'>history</a>
+<a href='http://forensic-proof.com/archives/tag/imaging' class='tag-link-109' title='2 topics' style='font-size: 10.2300884956pt;'>imaging</a>
+<a href='http://forensic-proof.com/archives/tag/live-forensics' class='tag-link-118' title='2 topics' style='font-size: 10.2300884956pt;'>Live Forensics</a>
+<a href='http://forensic-proof.com/archives/tag/mbr' class='tag-link-127' title='2 topics' style='font-size: 10.2300884956pt;'>mbr</a>
+<a href='http://forensic-proof.com/archives/tag/network' class='tag-link-134' title='2 topics' style='font-size: 10.2300884956pt;'>network</a>
+<a href='http://forensic-proof.com/archives/tag/ntfs' class='tag-link-136' title='14 topics' style='font-size: 18.9026548673pt;'>ntfs</a>
+<a href='http://forensic-proof.com/archives/tag/padocon' class='tag-link-141' title='3 topics' style='font-size: 11.7168141593pt;'>padocon</a>
+<a href='http://forensic-proof.com/archives/tag/process' class='tag-link-146' title='2 topics' style='font-size: 10.2300884956pt;'>process</a>
+<a href='http://forensic-proof.com/archives/tag/raid' class='tag-link-148' title='3 topics' style='font-size: 11.7168141593pt;'>RAID</a>
+<a href='http://forensic-proof.com/archives/tag/recycle-bin' class='tag-link-151' title='3 topics' style='font-size: 11.7168141593pt;'>Recycle Bin</a>
+<a href='http://forensic-proof.com/archives/tag/scsi' class='tag-link-158' title='3 topics' style='font-size: 11.7168141593pt;'>SCSI</a>
+<a href='http://forensic-proof.com/archives/tag/signature' class='tag-link-160' title='3 topics' style='font-size: 11.7168141593pt;'>signature</a>
+<a href='http://forensic-proof.com/archives/tag/slack' class='tag-link-161' title='2 topics' style='font-size: 10.2300884956pt;'>Slack</a>
+<a href='http://forensic-proof.com/archives/tag/slide' class='tag-link-163' title='16 topics' style='font-size: 19.5221238938pt;'>slide</a>
+<a href='http://forensic-proof.com/archives/tag/timeline' class='tag-link-168' title='2 topics' style='font-size: 10.2300884956pt;'>timeline</a>
+<a href='http://forensic-proof.com/archives/tag/timestamp' class='tag-link-169' title='4 topics' style='font-size: 12.9557522124pt;'>timestamp</a>
+<a href='http://forensic-proof.com/archives/tag/virtual-forensics-2' class='tag-link-179' title='3 topics' style='font-size: 11.7168141593pt;'>virtual forensics</a>
+<a href='http://forensic-proof.com/archives/tag/wdfs' class='tag-link-183' title='2 topics' style='font-size: 10.2300884956pt;'>WDFS</a>
+<a href='http://forensic-proof.com/archives/tag/writeup' class='tag-link-194' title='13 topics' style='font-size: 18.5309734513pt;'>writeup</a></p><p>WP Cumulus Flash tag cloud by <a href="http://www.roytanck.com" rel="nofollow">Roy Tanck</a> requires <a href="http://www.macromedia.com/go/getflashplayer">Flash Player</a> 9 or better.</p></div><script type="text/javascript">var widget_so3928500 = new SWFObject("http://forensic-proof.com/wp-content/plugins/wp-cumulus/tagcloud.swf?r=8763273", "tagcloudflash", "160", "160", "9", "#ffffff");widget_so3928500.addParam("allowScriptAccess", "always");widget_so3928500.addVariable("tcolor", "0x333333");widget_so3928500.addVariable("tcolor2", "0x333333");widget_so3928500.addVariable("hicolor", "0x000000");widget_so3928500.addVariable("tspeed", "100");widget_so3928500.addVariable("distr", "true");widget_so3928500.addVariable("mode", "tags");widget_so3928500.addVariable("tagcloud", "%3Ctags%3E%3Ca+href%3D%27http%3A%2F%2Fforensic-proof.com%2Farchives%2Ftag%2Faddressing%27+class%3D%27tag-link-22%27+title%3D%271+topic%27+style%3D%27font-size%3A+8pt%3B%27%3Eaddressing%3C%2Fa%3E%0A%3Ca+href%3D%27http%3A%2F%2Fforensic-proof.com%2Farchives%2Ftag%2Fartifacts%27+class%3D%27tag-link-24%27+title%3D%271+topic%27+style%3D%27font-size%3A+8pt%3B%27%3Eartifacts%3C%2Fa%3E%0A%3Ca+href%3D%27http%3A%2F%2Fforensic-proof.com%2Farchives%2Ftag%2Fbios%27+class%3D%27tag-link-27%27+title%3D%271+topic%27+style%3D%27font-size%3A+8pt%3B%27%3EBIOS%3C%2Fa%3E%0A%3Ca+href%3D%27http%3A%2F%2Fforensic-proof.com%2Farchives%2Ftag%2Fboot-code%27+class%3D%27tag-link-29%27+title%3D%271+topic%27+style%3D%27font-size%3A+8pt%3B%27%3Eboot+code%3C%2Fa%3E%0A%3Ca+href%3D%27http%3A%2F%2Fforensic-proof.com%2Farchives%2Ftag%2Fboot-process%27+class%3D%27tag-link-30%27+title%3D%271+topic%27+style%3D%27font-size%3A+8pt%3B%27%3Eboot+process%3C%2Fa%3E%0A%3Ca+href%3D%27http%3A%2F%2Fforensic-proof.com%2Farchives%2Ftag%2Fchallenge%27+class%3D%27tag-link-37%27+title%3D%276+topics%27+style%3D%27font-size%3A+14.814159292pt%3B%27%3Echallenge%3C%2Fa%3E%0A%3Ca+href%3D%27http%3A%2F%2Fforensic-proof.com%2Farchives%2Ftag%2Fcluster%27+class%3D%27tag-link-39%27+title%3D%271+topic%27+style%3D%27font-size%3A+8pt%3B%27%3ECluster%3C%2Fa%3E%0A%3Ca+href%3D%27http%3A%2F%2Fforensic-proof.com%2Farchives%2Ftag%2Fcodegate%27+class%3D%27tag-link-41%27+title%3D%277+topics%27+style%3D%27font-size%3A+15.4336283186pt%3B%27%3ECodegate%3C%2Fa%3E%0A%3Ca+href%3D%27http%3A%2F%2Fforensic-proof.com%2Farchives%2Ftag%2Fcookie%27+class%3D%27tag-link-45%27+title%3D%271+topic%27+style%3D%27font-size%3A+8pt%3B%27%3Ecookie%3C%2Fa%3E%0A%3Ca+href%3D%27http%3A%2F%2Fforensic-proof.com%2Farchives%2Ftag%2Fdata-carving%27+class%3D%27tag-link-48%27+title%3D%271+topic%27+style%3D%27font-size%3A+8pt%3B%27%3EData+Carving%3C%2Fa%3E%0A%3Ca+href%3D%27http%3A%2F%2Fforensic-proof.com%2Farchives%2Ftag%2Fdata-recovery%27+class%3D%27tag-link-49%27+title%3D%271+topic%27+style%3D%27font-size%3A+8pt%3B%27%3EData+recovery%3C%2Fa%3E%0A%3Ca+href%3D%27http%3A%2F%2Fforensic-proof.com%2Farchives%2Ftag%2Fdc3%27+class%3D%27tag-link-50%27+title%3D%271+topic%27+style%3D%27font-size%3A+8pt%3B%27%3EDC3%3C%2Fa%3E%0A%3Ca+href%3D%27http%3A%2F%2Fforensic-proof.com%2Farchives%2Ftag%2Fdco%27+class%3D%27tag-link-52%27+title%3D%271+topic%27+style%3D%27font-size%3A+8pt%3B%27%3EDCO%3C%2Fa%3E%0A%3Ca+href%3D%27http%3A%2F%2Fforensic-proof.com%2Farchives%2Ftag%2Fdefcon%27+class%3D%27tag-link-53%27+title%3D%279+topics%27+style%3D%27font-size%3A+16.6725663717pt%3B%27%3Edefcon%3C%2Fa%3E%0A%3Ca+href%3D%27http%3A%2F%2Fforensic-proof.com%2Farchives%2Ftag%2Fencase-2%27+class%3D%27tag-link-66%27+title%3D%2712+topics%27+style%3D%27font-size%3A+18.0353982301pt%3B%27%3EENCASE%3C%2Fa%3E%0A%3Ca+href%3D%27http%3A%2F%2Fforensic-proof.com%2Farchives%2Ftag%2Fence%27+class%3D%27tag-link-67%27+title%3D%277+topics%27+style%3D%27font-size%3A+15.4336283186pt%3B%27%3EEnCE%3C%2Fa%3E%0A%3Ca+href%3D%27http%3A%2F%2Fforensic-proof.com%2Farchives%2Ftag%2Fencoding%27+class%3D%27tag-link-68%27+title%3D%272+topics%27+style%3D%27font-size%3A+10.2300884956pt%3B%27%3Eencoding%3C%2Fa%3E%0A%3Ca+href%3D%27http%3A%2F%2Fforensic-proof.com%2Farchives%2Ftag%2Fenscript%27+class%3D%27tag-link-69%27+title%3D%271+topic%27+style%3D%27font-size%3A+8pt%3B%27%3EEnScript%3C%2Fa%3E%0A%3Ca+href%3D%27http%3A%2F%2Fforensic-proof.com%2Farchives%2Ftag%2Fexfat%27+class%3D%27tag-link-70%27+title%3D%271+topic%27+style%3D%27font-size%3A+8pt%3B%27%3EexFAT%3C%2Fa%3E%0A%3Ca+href%3D%27http%3A%2F%2Fforensic-proof.com%2Farchives%2Ftag%2Ffat%27+class%3D%27tag-link-71%27+title%3D%279+topics%27+style%3D%27font-size%3A+16.6725663717pt%3B%27%3EFAT%3C%2Fa%3E%0A%3Ca+href%3D%27http%3A%2F%2Fforensic-proof.com%2Farchives%2Ftag%2Ffile-system%27+class%3D%27tag-link-77%27+title%3D%2726+topics%27+style%3D%27font-size%3A+22pt%3B%27%3EFile+System%3C%2Fa%3E%0A%3Ca+href%3D%27http%3A%2F%2Fforensic-proof.com%2Farchives%2Ftag%2Fforensic-challenge%27+class%3D%27tag-link-83%27+title%3D%271+topic%27+style%3D%27font-size%3A+8pt%3B%27%3EForensic+Challenge%3C%2Fa%3E%0A%3Ca+href%3D%27http%3A%2F%2Fforensic-proof.com%2Farchives%2Ftag%2Fftk%27+class%3D%27tag-link-90%27+title%3D%271+topic%27+style%3D%27font-size%3A+8pt%3B%27%3EFTK%3C%2Fa%3E%0A%3Ca+href%3D%27http%3A%2F%2Fforensic-proof.com%2Farchives%2Ftag%2Fguid%27+class%3D%27tag-link-97%27+title%3D%271+topic%27+style%3D%27font-size%3A+8pt%3B%27%3EGUID%3C%2Fa%3E%0A%3Ca+href%3D%27http%3A%2F%2Fforensic-proof.com%2Farchives%2Ftag%2Fhardware%27+class%3D%27tag-link-99%27+title%3D%274+topics%27+style%3D%27font-size%3A+12.9557522124pt%3B%27%3Ehardware%3C%2Fa%3E%0A%3Ca+href%3D%27http%3A%2F%2Fforensic-proof.com%2Farchives%2Ftag%2Fhidden-partition%27+class%3D%27tag-link-102%27+title%3D%271+topic%27+style%3D%27font-size%3A+8pt%3B%27%3Ehidden+partition%3C%2Fa%3E%0A%3Ca+href%3D%27http%3A%2F%2Fforensic-proof.com%2Farchives%2Ftag%2Fhistory%27+class%3D%27tag-link-103%27+title%3D%271+topic%27+style%3D%27font-size%3A+8pt%3B%27%3Ehistory%3C%2Fa%3E%0A%3Ca+href%3D%27http%3A%2F%2Fforensic-proof.com%2Farchives%2Ftag%2Fimaging%27+class%3D%27tag-link-109%27+title%3D%272+topics%27+style%3D%27font-size%3A+10.2300884956pt%3B%27%3Eimaging%3C%2Fa%3E%0A%3Ca+href%3D%27http%3A%2F%2Fforensic-proof.com%2Farchives%2Ftag%2Flive-forensics%27+class%3D%27tag-link-118%27+title%3D%272+topics%27+style%3D%27font-size%3A+10.2300884956pt%3B%27%3ELive+Forensics%3C%2Fa%3E%0A%3Ca+href%3D%27http%3A%2F%2Fforensic-proof.com%2Farchives%2Ftag%2Fmbr%27+class%3D%27tag-link-127%27+title%3D%272+topics%27+style%3D%27font-size%3A+10.2300884956pt%3B%27%3Embr%3C%2Fa%3E%0A%3Ca+href%3D%27http%3A%2F%2Fforensic-proof.com%2Farchives%2Ftag%2Fnetwork%27+class%3D%27tag-link-134%27+title%3D%272+topics%27+style%3D%27font-size%3A+10.2300884956pt%3B%27%3Enetwork%3C%2Fa%3E%0A%3Ca+href%3D%27http%3A%2F%2Fforensic-proof.com%2Farchives%2Ftag%2Fntfs%27+class%3D%27tag-link-136%27+title%3D%2714+topics%27+style%3D%27font-size%3A+18.9026548673pt%3B%27%3Entfs%3C%2Fa%3E%0A%3Ca+href%3D%27http%3A%2F%2Fforensic-proof.com%2Farchives%2Ftag%2Fpadocon%27+class%3D%27tag-link-141%27+title%3D%273+topics%27+style%3D%27font-size%3A+11.7168141593pt%3B%27%3Epadocon%3C%2Fa%3E%0A%3Ca+href%3D%27http%3A%2F%2Fforensic-proof.com%2Farchives%2Ftag%2Fprocess%27+class%3D%27tag-link-146%27+title%3D%272+topics%27+style%3D%27font-size%3A+10.2300884956pt%3B%27%3Eprocess%3C%2Fa%3E%0A%3Ca+href%3D%27http%3A%2F%2Fforensic-proof.com%2Farchives%2Ftag%2Fraid%27+class%3D%27tag-link-148%27+title%3D%273+topics%27+style%3D%27font-size%3A+11.7168141593pt%3B%27%3ERAID%3C%2Fa%3E%0A%3Ca+href%3D%27http%3A%2F%2Fforensic-proof.com%2Farchives%2Ftag%2Frecycle-bin%27+class%3D%27tag-link-151%27+title%3D%273+topics%27+style%3D%27font-size%3A+11.7168141593pt%3B%27%3ERecycle+Bin%3C%2Fa%3E%0A%3Ca+href%3D%27http%3A%2F%2Fforensic-proof.com%2Farchives%2Ftag%2Fscsi%27+class%3D%27tag-link-158%27+title%3D%273+topics%27+style%3D%27font-size%3A+11.7168141593pt%3B%27%3ESCSI%3C%2Fa%3E%0A%3Ca+href%3D%27http%3A%2F%2Fforensic-proof.com%2Farchives%2Ftag%2Fsignature%27+class%3D%27tag-link-160%27+title%3D%273+topics%27+style%3D%27font-size%3A+11.7168141593pt%3B%27%3Esignature%3C%2Fa%3E%0A%3Ca+href%3D%27http%3A%2F%2Fforensic-proof.com%2Farchives%2Ftag%2Fslack%27+class%3D%27tag-link-161%27+title%3D%272+topics%27+style%3D%27font-size%3A+10.2300884956pt%3B%27%3ESlack%3C%2Fa%3E%0A%3Ca+href%3D%27http%3A%2F%2Fforensic-proof.com%2Farchives%2Ftag%2Fslide%27+class%3D%27tag-link-163%27+title%3D%2716+topics%27+style%3D%27font-size%3A+19.5221238938pt%3B%27%3Eslide%3C%2Fa%3E%0A%3Ca+href%3D%27http%3A%2F%2Fforensic-proof.com%2Farchives%2Ftag%2Ftimeline%27+class%3D%27tag-link-168%27+title%3D%272+topics%27+style%3D%27font-size%3A+10.2300884956pt%3B%27%3Etimeline%3C%2Fa%3E%0A%3Ca+href%3D%27http%3A%2F%2Fforensic-proof.com%2Farchives%2Ftag%2Ftimestamp%27+class%3D%27tag-link-169%27+title%3D%274+topics%27+style%3D%27font-size%3A+12.9557522124pt%3B%27%3Etimestamp%3C%2Fa%3E%0A%3Ca+href%3D%27http%3A%2F%2Fforensic-proof.com%2Farchives%2Ftag%2Fvirtual-forensics-2%27+class%3D%27tag-link-179%27+title%3D%273+topics%27+style%3D%27font-size%3A+11.7168141593pt%3B%27%3Evirtual+forensics%3C%2Fa%3E%0A%3Ca+href%3D%27http%3A%2F%2Fforensic-proof.com%2Farchives%2Ftag%2Fwdfs%27+class%3D%27tag-link-183%27+title%3D%272+topics%27+style%3D%27font-size%3A+10.2300884956pt%3B%27%3EWDFS%3C%2Fa%3E%0A%3Ca+href%3D%27http%3A%2F%2Fforensic-proof.com%2Farchives%2Ftag%2Fwriteup%27+class%3D%27tag-link-194%27+title%3D%2713+topics%27+style%3D%27font-size%3A+18.5309734513pt%3B%27%3Ewriteup%3C%2Fa%3E%3C%2Ftags%3E");widget_so3928500.write("wpcumuluswidgetcontent4060324");</script>	        </div></li>		<li id="twitter-tools" class="aktt_widget widget fix"><div class="widget-pad"><h3 class="widget-title">What I'm Doing...</h3><div class="aktt_tweets">
+	<ul>
+		<li>E-Evidence Info 문서가 1월 31일에 업데이트 되었었군요. 
+흥미로운 문서가 많이 보이네요. 
+<a href="http://t.co/x9xNaFC6" rel="nofollow">http://t.co/x9xNaFC6</a> <a href="http://twitter.com/pr0neer/statuses/167819139086422016" class="aktt_tweet_time">2 days ago</a></li>
+		<li>Virtuoso, 2011년에 발표한 논문의 내용을 구현했네요. 발상이 신선하네요. 
+<a href="http://t.co/xqXGHjAH" rel="nofollow">http://t.co/xqXGHjAH</a> <a href="http://twitter.com/pr0neer/statuses/167786372827054080" class="aktt_tweet_time">2 days ago</a></li>
+		<li>흥미로운 도구가 많이 보이네요. 볼라틸리티 플러그인도 있는데 pstotal은 이미 볼라틸리티에 있는 패턴매칭 방식과 무슨 차이가 있을지 궁금하네요. 차이는 없을것 같은데..
+<a href="http://t.co/MQx8XlI3" rel="nofollow">http://t.co/MQx8XlI3</a> <a href="http://twitter.com/pr0neer/statuses/167777156347346944" class="aktt_tweet_time">2 days ago</a></li>
+		<li class="aktt_more_updates"><a href="http://twitter.com/pr0neer">More updates...</a></li>
+</ul></div></div></li>		<li id="recent-posts-3" class="widget_recent_entries widget fix"><div class="widget-pad">		<h3 class="widget-title">Recent Posts</h3>		<ul>
+				<li><a href="http://forensic-proof.com/archives/3067" title="디지털포렌식 행사 (Digital Forensics Events)">디지털포렌식 행사 (Digital Forensics Events)</a></li>
+				<li><a href="http://forensic-proof.com/archives/3026" title="슬랙스킷 (Slackskit)">슬랙스킷 (Slackskit)</a></li>
+				<li><a href="http://forensic-proof.com/archives/3011" title="DFRWS 2012 포렌식 챌린지">DFRWS 2012 포렌식 챌린지</a></li>
+				<li><a href="http://forensic-proof.com/archives/2975" title="윈도우 7 시스템 예약 파티션 (System Reserved Partition)">윈도우 7 시스템 예약 파티션 (System Reserved Partition)</a></li>
+				<li><a href="http://forensic-proof.com/archives/2958" title="활성데이터 수집 시 윈도우 Vista/7에서 고려할 점 (A point to be considered in live forensics)">활성데이터 수집 시 윈도우 Vista/7에서 고려할 점 (A point to be considered in live forensics)</a></li>
+				</ul>
+		</div></li><li id="popular-posts" class="widget_rrm_popular_posts widget fix"><div class="widget-pad"><h3 class="widget-title">Most Popular Posts</h3><ul><li><a href="http://forensic-proof.com/archives/276" rel="bookmark" title="October 9, 2009">Mounted Devices GUID Analysis</a></li>
+
+<li><a href="http://forensic-proof.com/archives/1834" rel="bookmark" title="June 13, 2011">윈도우 폴더 구조 (Windows Folder Structure)</a></li>
+
+<li><a href="http://forensic-proof.com/archives/2266" rel="bookmark" title="September 1, 2011">포렌식 도구 모음 (Digital Forensics Tools)</a></li>
+
+<li><a href="http://forensic-proof.com/archives/2975" rel="bookmark" title="January 13, 2012">윈도우 7 시스템 예약 파티션 (System Reserved Partition)</a></li>
+
+<li><a href="http://forensic-proof.com/archives/2922" rel="bookmark" title="January 3, 2012">프린트 스풀러 포렌식 분석 (Print Spooler Forensics)</a></li>
+</ul><!-- popular Posts took 8.207 ms --></div></li><li id="recent-comments-3" class="widget_recent_comments widget fix"><div class="widget-pad"><h3 class="widget-title">Recent Comments</h3><ul id="recentcomments"><li class="recentcomments"><a href="http://www.facebook.com/proneer" onclick="javascript:_gaq.push(['_trackEvent','outbound-commentauthor','http://www.facebook.com']);"  rel='external nofollow' class='url'>Jinkook Kim</a> on <a href="http://forensic-proof.com/archives/3011#comment-439">DFRWS 2012 포렌식 챌린지</a></li><li class="recentcomments">퍼다우크 on <a href="http://forensic-proof.com/archives/3011#comment-438">DFRWS 2012 포렌식 챌린지</a></li><li class="recentcomments"><a href="http://www.facebook.com/proneer" onclick="javascript:_gaq.push(['_trackEvent','outbound-commentauthor','http://www.facebook.com']);"  rel='external nofollow' class='url'>Jinkook Kim</a> on <a href="http://forensic-proof.com/archives/3011#comment-437">DFRWS 2012 포렌식 챌린지</a></li><li class="recentcomments"><a href="http://twitter.com/ChatNoirNo1" onclick="javascript:_gaq.push(['_trackEvent','outbound-commentauthor','http://twitter.com']);"  rel='external nofollow' class='url'>Chang-Bae Jeon</a> on <a href="http://forensic-proof.com/archives/3011#comment-436">DFRWS 2012 포렌식 챌린지</a></li><li class="recentcomments"><a href="http://www.facebook.com/proneer" onclick="javascript:_gaq.push(['_trackEvent','outbound-commentauthor','http://www.facebook.com']);"  rel='external nofollow' class='url'>Jinkook Kim</a> on <a href="http://forensic-proof.com/archives/2975#comment-435">윈도우 7 시스템 예약 파티션 (System Reserved Partition)</a></li></ul></div></li><li id="wassup-widget" class="wassup_widget widget fix"><div class="widget-pad"><h3 class="widget-title"> Last referers </h3><ul class='links'><li>- <a href='http://androidanch.info/sitemap245.html' target='_blank' rel='nofollow'>androidan(...)p245.html</a></li><li>- <a href='http://youhtclus.info/sitemap14.html' target='_blank' rel='nofollow'>youhtclus(...)ap14.html</a></li><li>- <a href='http://androidanch.info/sitemap238.html' target='_blank' rel='nofollow'>androidan(...)p238.html</a></li><li>- <a href='http://androidanch.info/sitemap231.html' target='_blank' rel='nofollow'>androidan(...)p231.html</a></li><li>- <a href='http://grilomlia.over-blog.com' target='_blank' rel='nofollow'>grilomlia.over-blog.com</a></li></ul><h3 class="widget-title">Visitors Online</h3><ul class='links'><li><strong style='padding:0 4px 0 4px;background:#ddd;color:#777'>03</strong> visitor(s) online</li><li style='font-size:6pt; color:#bbb;'>powered by <a style='color:#777;' href='http://www.wpwp.org' title='WassUp - Real Time Visitors Tracking'>WassUp</a></li></ul></div></li>	</ul>
+	<div class="clear"></div>
+	</div>
+</div>
+	
+				</div>
+			</div>
+			</div>		
+
+</div>				<div class="clear"></div>
+			</div>
+		</div>
+	</div>
+</div>
+</div> <!-- END #dynamic-content -->
+
+<div id="morefoot_area"><div id="twitterbar" class="container fix">
+	<div class="texture">
+		<div class="content">
+			<div class="content-pad">
+<div class="tbubble"><span class="twitter">"RT @newstapa: 뉴스타파 3회 지금 http://t.co/7yoFXPDn 에서 보실 수 있습니다. #뉴스타파 무한RT 부탁~&mdash;&nbsp;<a class="twitteraccount" href="http://twitter.com/#!/pr0neer">pr0neer</a></span></div>				<div class="clear"></div>
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+<div class="clear"></div>
+				
+</div> <!-- END #page-main from header -->
+</div> <!-- END #page-canvas from header -->
+</div> <!-- END #page from header -->
+
+<div  id="footer">
+	<div class="outline fix"><div id="footcols" class="container fix">
+	<div class="texture">
+		<div class="content">
+			<div class="content-pad">
+			<div id="fcolumns_container" class="dcol_container_5 fix">
+				
+									<div class="dcol_5 dcol">
+						<div class="dcol-pad">
+															<a class="home" href="http://forensic-proof.com" title="Home">
+									<img src="http://forensic-proof.com/wp-content/uploads/2011/10/finger.png" alt="FORENSIC-PROOOF" />
+								</a>
+													</div>
+					</div>
+					<div class="dcol_5 dcol">
+						<div class="dcol-pad">
+							<h3 class="widget-title">Pages</h3>
+								<div class="footer-links list-links"></div>
+
+						</div>
+					</div>
+					<div class="dcol_5 dcol">
+						<div class="dcol-pad">
+							<h3 class="widget-title">The Latest</h3>
+								<ul class="latest_posts">
+																		<li class="list-item fix">
+											<div class="list_item_text">
+												<h5><a class="list_text_link" href="http://forensic-proof.com/archives/3067"><span class="list-title">디지털포렌식 행사 (Digital Forensics Events)</span></a></h5>
+												<div class="list-excerpt">IT 분야에 들어서면서 가장 큰 재미는 한 순간도 안주할 수 없다는 것이다.&nbsp;[&hellip;]</div>
+											</div>
+										</li>
+								</ul>
+						</div>
+					</div>
+					<div class="dcol_5 dcol">
+						<div class="dcol-pad">
+							<h3 class="widget-title">More</h3>
+							<div class="findent footer-more">
+								Thanks for dropping by! Feel free to join the discussion by leaving comments, and stay updated by subscribing to the <a href='http://forensic-proof.com/?feed=rss2'>RSS feed</a>.							</div>
+						</div>
+					</div>
+					<div class="dcol_5 dcol">
+						<div class="dcol-pad">
+							<div class="findent terms">
+								© 2011 FORENSIC-PROOOF							</div>
+						</div>
+					</div>
+							</div>	
+			<div class="clear"></div>
+						<div class="clear"></div>
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+</div>
+</div>
+<!--
+<p class="small"> WassUp 1.8.3 timestamp: 2012-02-12 05:44:59AM UTC (02:44PM)<br />
+If above timestamp is not current time, this page is cached.</p> -->
+<script type='text/javascript'>
+/* <![CDATA[ */
+var thickboxL10n = {"next":"Next >","prev":"< Prev","image":"Image","of":"of","close":"Close","noiframes":"This feature requires inline frames. You have iframes disabled or your browser does not support them.","loadingAnimation":"http:\/\/forensic-proof.com\/wp-includes\/js\/thickbox\/loadingAnimation.gif","closeImage":"http:\/\/forensic-proof.com\/wp-includes\/js\/thickbox\/tb-close.png"};;
+var thickboxL10n = {"next":"Next >","prev":"< Prev","image":"Image","of":"of","close":"Close"};
+try{convertEntities(thickboxL10n);}catch(e){};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://forensic-proof.com/wp-includes/js/thickbox/thickbox.js?ver=3.1-20111117'></script>
+
+<script type="text/javascript">
+var tb_pathToImage = "http://forensic-proof.com/wp-includes/js/thickbox/loadingAnimation.gif";
+var tb_closeImage = "http://forensic-proof.com/wp-includes/js/thickbox/tb-close.png";
+</script>
+</body>
+</html>

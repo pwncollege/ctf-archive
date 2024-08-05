@@ -1,0 +1,85 @@
+/* Ensure that our assumptions about the default browser colors are correct. */
+BODY { color: #000000; background-color: #FFFFFF; }
+BODY a:link { color: #0000FF; }
+BODY a:hover { color: #0000FF; }
+BODY a:active { color: #0000FF; }
+BODY a:visited { color: #800080; }
+
+BODY {
+  margin: 4px;
+}
+DIV#content {
+  font: 12px Arial;
+}
+DIV#insert {
+  display: none;
+}
+
+/* Two ways to do icons with these rules:
+   <img class='icon' src='%userIconPath%'>
+   <div class='icon'><div style='height:1px;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="%userIconPath%")'></div></div>
+*/
+
+DIV.1st {
+  padding-top: 4px;
+}
+
+DIV.chat {
+  padding: 5px 0px;
+}
+DIV.chat .icon-o {
+  /*background-color: white;
+  border: 1px solid #6B2C29;
+  padding: 2px;*/
+  margin: 3px 5px 0px 2px;
+  float: left;
+}
+DIV.chat .icon-i {
+  /*background-color: white;
+  border: 1px solid #29416B;
+  padding: 2px;*/
+  margin: 3px 5px 0px 2px;
+  float: left;
+}
+DIV.chat SPAN.salutation-o {
+  display: block;
+  background-color: #DED3D6;
+  color: #6B2C29;
+  padding: 1px 0px 0px 0px;
+  margin: 0px 0px 1px 0px;
+  text-align: right;
+}
+DIV.chat SPAN.salutation-i {
+  display: block;
+  background-color: #D6DBDE;
+  color: #29416B;
+  padding: 1px 0px 0px 0px;
+  margin: 0px 0px 1px 0px;
+  text-align: right;
+}
+DIV.chat DIV.Nth {
+  margin: 0px 2px;
+}
+DIV.chat DIV.Nth {
+  margin: 5px 2px 0px 2px;
+}
+DIV.out {
+  text-align: left;
+  height: 1px;
+}
+DIV.in {
+  text-align: left;
+  height: 1px;
+}
+
+DIV.clear {
+  clear: both;
+  height: 1px;
+  overflow: hidden;
+}
+
+DIV.break {
+  height: 1px;
+  margin: 3px 0px 0px 0px;
+  overflow: hidden;
+}

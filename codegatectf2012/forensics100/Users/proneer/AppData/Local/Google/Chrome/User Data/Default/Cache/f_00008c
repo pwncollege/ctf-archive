@@ -1,0 +1,2642 @@
+﻿(function($) {
+	$.fn.ListHeader = function(id, options) {
+		var handlers = {}, pageState = {}
+		var selectedFullAttributesDataObject = null;
+
+		$.extend(handlers, options.handler);
+
+		var $header = $(this);
+		// tab : Tab을 제어, viewtype : ViewType을 제어, pagesizer : PageSizer을 제어, sorttype : SortType을 제어, producttype : 상품검색 제어, 
+		// searchline:검색조건 제어, tableheader : 리스트형 헤더를 제어하는 Method 객체
+		var g = null, tab = null, viewtype = null, pagesizer = null, sorttype = null, producttype = null, searchline = null, tableheader = null, pagestate = null, defaultstate = null;
+
+		g = {
+			copyToPageState: function(gPageState) {
+
+				if (gPageState != null && typeof gPageState != "object") {
+					return;
+				}
+
+				// dataobject에 있는 속성값을 가지고 gPageState값을 설정한다. (ListHeader에서 사용하는 것 제외)
+				pagestate.fetchFromAttributeObject();
+
+				if (selectedFullAttributesDataObject != null) {
+					pagestate.setSelectedAttributes(selectedFullAttributesDataObject.outData());
+				}
+
+				$.extend(gPageState, pageState);
+			},
+
+			setAttributes: function(gPageState) {
+
+				if (gPageState == null || typeof gPageState === "undefined" || gPageState.SelectedAttributes == null || typeof gPageState.SelectedAttributes === "undefined") {
+					return;
+				}
+
+				pagestate.set(gPageState);
+				// 탭 셋팅 수정
+				tab.select(pagestate.getFindingType());
+				searchline.setAttributes(decodeURIComponent(gPageState.SelectedAttributes));
+			}
+		};
+
+		defaultstate = {
+			dataObject: null,
+
+			init: function(selectedAttributes) {
+				defaultstate.dataObject = new AttributeDataObject({ "InputData": selectedAttributes });
+			},
+
+			contains: function(attributeID, attributeElementID) {
+				if (defaultstate.dataObject == null || defaultstate.dataObject.arrayObjectSet == null || defaultstate.dataObject.arrayObjectSet.length == 0) {
+					return false;
+				}
+
+				var attribute = null;
+
+				for (var index = 0; index < defaultstate.dataObject.arrayObjectSet.length; index++) {
+					attribute = defaultstate.dataObject.arrayObjectSet[index];
+
+					if (attribute == null) {
+						return false;
+					}
+
+					if (attribute.AttributeID == attributeID && attribute.AttributeElementID == attributeElementID) {
+						return true;
+					}
+				}
+
+				return false;
+			}
+		};
+
+		pagestate = {
+			init: function(gPageState) {
+				if (gPageState != null && typeof gPageState != "object") {
+					return;
+				}
+
+				if (pageState == null || typeof pageState === "undefined") {
+					pageState = new Object();
+				}
+
+				pageState.Keyword = gPageState.Keyword;
+
+				pageState.FindingType = gPageState.FindingType;
+				pageState.ViewType = gPageState.ViewType;
+				pageState.PageIndex = gPageState.PageIndex;
+				pageState.PageSize = gPageState.PageSize;
+				pageState.SortType = gPageState.SortType;
+				pageState.IsDcCard = gPageState.IsDcCard;
+				pageState.IsStyleSearch = gPageState.IsStyleSearch;
+				pageState.IsSoldOut = gPageState.IsSoldOut;
+				pageState.IsSellingPlan = gPageState.IsSellingPlan;
+				pageState.IsShippingPriceFree = gPageState.IsShippingPriceFree;
+				pageState.HasNointerestData = gPageState.HasNointerestData;
+				pageState.HasCouponData = gPageState.HasCouponData;
+				pageState.HasEventData = gPageState.HasEventData;
+				pageState.HasPoint = gPageState.HasPoint;
+				pageState.SelectedAttributes = gPageState.SelectedAttributes;
+
+				pageState.VItemAttrs = gPageState.VItemAttrs;
+				pageState.MinVItemPrice = gPageState.MinVItemPrice;
+				pageState.MaxVItemPrice = gPageState.MaxVItemPrice;
+				pageState.BrandIDs = gPageState.BrandIDs;
+				pageState.MakerIDs = gPageState.MakerIDs;
+				pageState.MallIDs = gPageState.MallIDs;
+				pageState.MinPBPRate = gPageState.MinPBPRate;
+				pageState.MaxPBPRate = gPageState.MaxPBPRate;
+				pageState.ImageColorMask = gPageState.ImageColorMask;
+				pageState.ImageGroupID = gPageState.ImageGroupID;
+			},
+
+			fetchFromAttributeObject: function() {
+				var state = {};
+
+				if (selectedFullAttributesDataObject != null) {
+					selectedFullAttributesDataObject.copyToPageState(state);
+
+					pageState.VItemAttrs = state.VItemAttrs;
+					pageState.MinVItemPrice = state.MinVItemPrice;
+					pageState.MaxVItemPrice = state.MaxVItemPrice;
+					pageState.BrandIDs = state.BrandIDs;
+					pageState.MakerIDs = state.MakerIDs;
+					pageState.MallIDs = state.MallIDs;
+					pageState.MinPBPRate = state.MinPBPRate;
+					pageState.MaxPBPRate = state.MaxPBPRate;
+					pageState.ImageColorMask = state.ImageColorMask;
+					pageState.ImageGroupID = state.ImageGroupID;
+				}
+			},
+
+			set: function(gPageState) {
+				if (gPageState != null && typeof gPageState != "object") {
+					return;
+				}
+
+				pageState.Keyword = gPageState.Keyword;
+
+				pageState.FindingType = gPageState.FindingType;
+				pageState.ViewType = gPageState.ViewType;
+				pageState.PageIndex = gPageState.PageIndex;
+				pageState.PageSize = gPageState.PageSize;
+				pageState.SortType = gPageState.SortType;
+				pageState.IsStyleSearch = gPageState.IsStyleSearch;
+				pageState.IsSoldOut = gPageState.IsSoldOut;
+				pageState.IsSellingPlan = gPageState.IsSellingPlan;
+				pageState.IsShippingPriceFree = gPageState.IsShippingPriceFree;
+				pageState.HasNointerestData = gPageState.HasNointerestData;
+				pageState.HasCouponData = gPageState.HasCouponData;
+				pageState.HasEventData = gPageState.HasEventData;
+				pageState.HasPoint = gPageState.HasPoint;
+				pageState.SelectedAttributes = gPageState.SelectedAttributes;
+
+				pageState.VItemAttrs = gPageState.VItemAttrs;
+				pageState.MinVItemPrice = gPageState.MinVItemPrice;
+				pageState.MaxVItemPrice = gPageState.MaxVItemPrice;
+				pageState.BrandIDs = gPageState.BrandIDs;
+				pageState.MakerIDs = gPageState.MakerIDs;
+				pageState.MallIDs = gPageState.MallIDs;
+				pageState.MinPBPRate = gPageState.MinPBPRate;
+				pageState.MaxPBPRate = gPageState.MaxPBPRate;
+				pageState.ImageColorMask = gPageState.ImageColorMask;
+				pageState.ImageGroupID = gPageState.ImageGroupID;
+			},
+
+			setFindingType: function(findingType) {
+				if (findingType == null || typeof findingType === "undefined")
+					return;
+
+				if (pageState == null || typeof pageState === "undefined") {
+					pageState = new Object();
+				}
+
+				pageState.FindingType = findingType;
+				pageState.PageIndex = 0;
+			},
+
+			getFindingType: function() {
+
+				if (pageState == null || typeof pageState.FindingType === "undefined") {
+					return null;
+				}
+
+				return pageState.FindingType;
+			},
+
+			setViewType: function(viewType) {
+				if (viewType == null || typeof viewType === "undfined")
+					return;
+
+				if (pageState == null || typeof pageState === "undefined") {
+					pageState = new Object();
+				}
+
+				pageState.ViewType = viewType;
+			},
+
+			getViewType: function() {
+
+				if (pageState == null || typeof pageState.ViewType === "undefined") {
+					return null;
+				}
+
+				return pageState.ViewType;
+			},
+
+			setPageSize: function(pageSize) {
+				if (pageSize == null || typeof pageSize === "undefined" || isNaN(pageSize))
+					return;
+
+				if (pageState == null || typeof pageState === "undefined") {
+					pageState = new Object();
+				}
+
+				pageState.PageIndex = 0;
+				pageState.PageSize = pageSize;
+			},
+
+			getPageSize: function() {
+
+				if (pageState == null || typeof pageState.PageSize === "undefined") {
+					return 0;
+				}
+
+				return pageState.PageSize;
+			},
+
+			setSortType: function(sortType) {
+				if (sortType == null || typeof sortType === "undefined")
+					return;
+
+				if (pageState == null || typeof pageState === "undefined") {
+					pageState = new Object();
+				}
+
+				pageState.PageIndex = 0;
+				pageState.SortType = sortType;
+			},
+
+			getSortType: function() {
+
+				if (pageState == null || typeof pageState.SortType === "undefined") {
+					return;
+				}
+
+				return pageState.SortType;
+			},
+
+			setIsDcCard: function(isDcCard) {
+				if (isDcCard == null || typeof isDcCard === "undefined")
+					return;
+
+				if (pageState == null || typeof pageState === "undefined") {
+					pageState = new Object();
+				}
+
+				if (isDcCard) {
+					pageState.IsDcCard = "True";
+				}
+				else {
+					pageState.IsDcCard = "Unknown";
+				}
+			},
+
+			getIsDcCard: function() {
+
+				if (pageState == null || typeof pageState.IsDcCard === "undefined") {
+					return false;
+				}
+
+				return pageState.IsDcCard == "True";
+			},
+
+			setIsStyleSearch: function(isStyleSearch) {
+				if (isStyleSearch == null || typeof isStyleSearch === "undefined")
+					return;
+
+				if (pageState == null || typeof pageState === "undefined") {
+					pageState = new Object();
+				}
+
+				if (isStyleSearch) {
+					pageState.IsStyleSearch = "True";
+				}
+				else {
+					pageState.IsStyleSearch = "Unknown";
+				}
+			},
+
+			getIsStyleSearch: function() {
+
+				if (pageState == null || typeof pageState.IsStyleSearch === "undefined") {
+					return false;
+				}
+
+				return pageState.IsStyleSearch == "True";
+			},
+
+			setIsSoldOut: function(isSoldOut) {
+				if (isSoldOut == null || typeof isSoldOut === "undefined")
+					return;
+
+				if (pageState == null || typeof pageState === "undefined") {
+					pageState = new Object();
+				}
+
+				if (isSoldOut) {
+					pageState.IsSoldOut = "True";
+				}
+				else {
+					pageState.IsSoldOut = "Unknown";
+				}
+			},
+
+			getIsSoldOut: function() {
+				if (pageState == null || typeof pageState.IsSoldOut === "undefined") {
+					return false;
+				}
+
+				return pageState.IsSoldOut == "True";
+			},
+
+			setIsSellingPlan: function(isSellingPlan) {
+				if (isSellingPlan == null || typeof isSellingPlan === "undefined")
+					return;
+
+				if (pageState == null || typeof pageState === "undefined") {
+					pageState = new Object();
+				}
+
+				if (isSellingPlan) {
+					pageState.IsSellingPlan = "True";
+				}
+				else {
+					pageState.IsSellingPlan = "Unknown";
+				}
+			},
+
+			getIsSellingPlan: function() {
+				if (pageState == null || typeof pageState.IsSellingPlan === "undefined") {
+					return false;
+				}
+
+				return pageState.IsSellingPlan == "True";
+			},
+
+			setIsShippingPriceFree: function(isShippingPriceFree) {
+				if (isShippingPriceFree == null || typeof isShippingPriceFree === "undefined")
+					return;
+
+				if (pageState == null || typeof pageState === "undefined") {
+					pageState = new Object();
+				}
+
+				if (isShippingPriceFree) {
+					pageState.IsShippingPriceFree = "True";
+				}
+				else {
+					pageState.IsShippingPriceFree = "Unknown";
+				}
+			},
+
+			getIsShippingPriceFree: function() {
+				if (pageState == null || typeof pageState.IsShippingPriceFree === "undefined") {
+					return false;
+				}
+
+				return pageState.IsShippingPriceFree == "True";
+			},
+
+			setHasNointerestData: function(hasNointerestData) {
+				if (hasNointerestData == null || typeof hasNointerestData === "undefined")
+					return;
+
+				if (pageState == null || typeof pageState === "undefined") {
+					pageState = new Object();
+				}
+
+				if (hasNointerestData) {
+					pageState.HasNointerestData = "True";
+				}
+				else {
+					pageState.HasNointerestData = "Unknown";
+				}
+			},
+
+			getHasNointerestData: function() {
+				if (pageState == null || typeof pageState.HasNointerestData === "undefined") {
+					return false;
+				}
+
+				return pageState.HasNointerestData == "True";
+			},
+
+			setHasCouponData: function(hasCouponData) {
+
+				if (hasCouponData == null || typeof hasCouponData === "undefined")
+					return;
+
+				if (pageState == null || typeof pageState === "undefined") {
+					pageState = new Object();
+				}
+
+				if (hasCouponData) {
+					pageState.HasCouponData = "True";
+				}
+				else {
+					pageState.HasCouponData = "Unknown";
+				}
+			},
+
+			getHasCouponData: function() {
+				if (pageState == null || typeof pageState.HasCouponData === "undefined") {
+					return false;
+				}
+
+				return pageState.HasCouponData;
+			},
+
+			setHasEventData: function(hasEventData) {
+				if (hasEventData == null || typeof hasEventData === "undefined")
+					return;
+
+				if (pageState == null || typeof pageState === "undefined") {
+					pageState = new Object();
+				}
+
+				if (hasEventData) {
+					pageState.HasEventData = "True";
+				}
+				else {
+					pageState.HasEventData = "Unknown";
+				}
+			},
+
+			getHasEventData: function() {
+				if (pageState == null || typeof pageState.HasEventData === "undefined") {
+					return false;
+				}
+
+				return pageState.HasEventData == "True";
+			},
+
+			setHasPoint: function(hasPoint) {
+				if (hasPoint == null || typeof hasPoint === "undefined")
+					return;
+
+				if (pageState == null || typeof pageState === "undefined") {
+					pageState = new Object();
+				}
+
+				if (hasPoint) {
+					pageState.HasPoint = "True";
+				}
+				else {
+					pageState.HasPoint = "Unknown";
+				}
+			},
+
+			getHasPoint: function() {
+				if (pageState == null || typeof pageState.HasPoint === "undefined") {
+					return false;
+				}
+
+				return pageState.HasPoint == "True";
+			},
+
+			setSelectedAttributes: function(selectedAttributes) {
+				if (selectedAttributes == null || typeof selectedAttributes === "undefined")
+					return;
+
+				if (pageState == null || typeof pageState === "undefined") {
+					pageState = new Object();
+				}
+
+				pageState.SelectedAttributes = encodeURIComponent(selectedAttributes);
+			},
+
+			getSelectedAttributes: function() {
+				if (pageState == null || typeof pageState.SelectedAttributes === "undefined") {
+					return "";
+				}
+
+				return decodeURIComponent(pageState.SelectedAttributes);
+			},
+
+			setKeyword: function(keyword) {
+				if (keyword == null || typeof keyword === "undefined")
+					return;
+
+				if (pageState == null || typeof pageState === "undefined") {
+					pageState = new Object();
+				}
+
+				pageState.Keyword = keyword;
+				pageState.PageIndex = 0;
+			},
+
+			getKeyword: function() {
+
+				if (pageState == null || typeof pageState.Keyword === "undefined") {
+					return null;
+				}
+
+				return pageState.Keyword;
+			}
+		};
+
+		tab = {
+			wrapper: null,
+
+			init: function() {
+				tab.wrapper = $header.find("#" + id + "_hdivFindingTypes");
+
+				// 전체상품
+				tab.wrapper.find("#" + id + "_hliAll").bind("click", function(e) {
+
+					if (!tab.select($(this).attr("findingtype")))
+						return;
+
+					if (handlers != null && typeof handlers.hliAll_OnClick === "function") {
+						g.copyToPageState(e);
+						handlers.hliAll_OnClick(this, e);
+					}
+				});
+				// 전체상품
+				tab.wrapper.find("#" + id + "_hliAllMItem").bind("click", function(e) {
+
+					if (!tab.select($(this).attr("findingtype")))
+						return;
+
+					if (handlers != null && typeof handlers.hliAllMItem_OnClick === "function") {
+						g.copyToPageState(e);
+						handlers.hliAllMItem_OnClick(this, e);
+					}
+				});
+				// 전체상품(LP, SRP, AboutPlus, 백화점), 일반상품(백화점, 해외쇼핑)
+				tab.wrapper.find("#" + id + "_hliMItem").bind("click", function(e) {
+
+					if (!tab.select($(this).attr("findingtype")))
+						return;
+
+					if (handlers != null && typeof handlers.hliMItem_OnClick === "function") {
+						g.copyToPageState(e);
+						handlers.hliMItem_OnClick(this, e);
+					}
+				});
+				// 가격비교
+				tab.wrapper.find("#" + id + "_hliCatalog").bind("click", function(e) {
+
+					if (!tab.select($(this).attr("findingtype")))
+						return;
+
+					if (handlers != null && typeof handlers.hliCatalog_OnClick === "function") {
+						g.copyToPageState(e);
+						handlers.hliCatalog_OnClick(this, e);
+					}
+				});
+				// 가격비교 가능상품
+				tab.wrapper.find("#" + id + "_hliMItemMatched").bind("click", function(e) {
+
+					if (!tab.select($(this).attr("findingtype")))
+						return;
+
+					if (handlers != null && typeof handlers.hliMItemMatched_OnClick === "function") {
+						g.copyToPageState(e);
+						handlers.hliMItemMatched_OnClick(this, e);
+					}
+				});
+				// 일반상품
+				tab.wrapper.find("#" + id + "_hliMItemUnmatched").bind("click", function(e) {
+
+					if (!tab.select($(this).attr("findingtype")))
+						return;
+
+					if (handlers != null && typeof handlers.hliMItemUnmatched_OnClick === "function") {
+						g.copyToPageState(e);
+						handlers.hliMItemUnmatched_OnClick(this, e);
+					}
+				});
+				// 중고상품
+				tab.wrapper.find("#" + id + "_hliMItemUsed").bind("click", function(e) {
+
+					if (!tab.select($(this).attr("findingtype")))
+						return;
+
+					if (handlers != null && typeof handlers.hliMItemUsed_OnClick === "function") {
+						g.copyToPageState(e);
+						handlers.hliMItemUsed_OnClick(this, e);
+					}
+				});
+				// 관련기획전
+				tab.wrapper.find("#" + id + "_hliPromotion").bind("click", function(e) {
+
+					if (!tab.select($(this).attr("findingtype")))
+						return;
+
+					if (handlers != null && typeof handlers.hliPromotion_OnClick === "function") {
+						g.copyToPageState(e);
+						handlers.hliPromotion_OnClick(this, e);
+					}
+				});
+				// iPay 상품
+				tab.wrapper.find("#" + id + "_hliMItemIPay").bind("click", function(e) {
+
+					if (!tab.select($(this).attr("findingtype")))
+						return;
+
+					if (handlers != null && typeof handlers.hliMItemIPay_OnClick === "function") {
+						g.copyToPageState(e);
+						handlers.hliMItemIPay_OnClick(this, e);
+					}
+				});
+				// 연관상품
+				tab.wrapper.find("#" + id + "_hliRelated").bind("click", function(e) {
+
+					if (!tab.select($(this).attr("findingtype")))
+						return;
+
+					if (handlers != null && typeof handlers.hliRelated_OnClick === "function") {
+						g.copyToPageState(e);
+						handlers.hliRelated_OnClick(this, e);
+					}
+				});
+			},
+
+			select: function(findingType) {
+				if (findingType == null || typeof findingType === "undefined")
+					return false;
+
+				var $tab = tab.wrapper.find("#" + id + "_hli" + findingType);
+
+				if ($tab.hasClass("on"))
+					return false;
+
+				$tab.parent().find("li.on").removeClass("on");
+				$tab.addClass("on");
+
+				// 상품유형
+				producttype.unSelect(["IsStyleSearch", "IsSoldOut", "IsSellingPlan"]);
+				tableheader.select("All");
+
+				switch (findingType) {
+					case "All":
+					case "AllMItem":
+						// 묶어보기 노출
+						viewtype.show();
+						viewtype.show("GroupedCatalogView");
+						// 페이징 사이즈
+						pagesizer.show();
+						// 검색조건
+						searchline.show();
+						// 정렬방식
+						sorttype.show(["Popular", "Price", "SalesPopularScore", "NewProduct", "Review", "ExpertReviewCount", "ShoppingMall"]);
+						sorttype.hide(["InsDate", "ToDate"]);
+						if (sorttype.isSelect("InsDate") || sorttype.isSelect("ToDate")) {
+							pagestate.setSortType(sorttype.first());
+							sorttype.select(pagestate.getSortType());
+						}
+						// 상품유형
+						producttype.show(["IsStyleSearch", "IsSoldOut", "IsSellingPlan"]);
+						// 테이블헤더
+						tableheader.show("Compare");
+						break;
+					case "MItem":
+						// 묶어보기 노출
+						viewtype.show();
+						viewtype.hide("GroupedCatalogView");
+						if (viewtype.isSelect("GroupedCatalogView")) {
+							pagestate.setViewType(viewtype.first());
+							viewtype.select(pagestate.getViewType());
+						}
+						// 페이징 사이즈
+						pagesizer.show();
+						// 검색조건
+						searchline.show();
+						// 정렬방식 없앰
+						sorttype.show(["Popular", "Price", "SalesPopularScore", "NewProduct", "Review"]);
+						sorttype.hide(["ExpertReviewCount", "ShoppingMall", "InsDate", "ToDate"]);
+						if (sorttype.isSelect("ExpertReviewCount") || sorttype.isSelect("ShoppingMall") || sorttype.isSelect("InsDate") || sorttype.isSelect("ToDate")) {
+							pagestate.setSortType(sorttype.first());
+							sorttype.select(pagestate.getSortType());
+						}
+						// 상품유형
+						producttype.show("IsStyleSearch");
+						producttype.hide(["IsSoldOut", "IsSellingPlan"]); // 순서보장
+						// 테이블헤더
+						tableheader.show();
+						tableheader.hide("Compare");
+						break;
+					case "Catalog":
+						// 묶어보기 노출
+						viewtype.show();
+						viewtype.show("GroupedCatalogView");
+						// 페이징 사이즈
+						pagesizer.show();
+						// 검색조건
+						searchline.show();
+						// 정렬방식
+						sorttype.show(["Popular", "Price", "SalesPopularScore", "NewProduct", "Review", "ExpertReviewCount", "ShoppingMall"]);
+						sorttype.hide(["InsDate", "ToDate"]);
+						if (sorttype.isSelect("InsDate") || sorttype.isSelect("ToDate")) {
+							pagestate.setSortType(sorttype.first());
+							sorttype.select(pagestate.getSortType());
+						}
+						// 상품유형
+						producttype.show(["IsStyleSearch", "IsSoldOut", "IsSellingPlan"]);
+						// 테이블헤더
+						tableheader.show("Compare");
+						break;
+					case "MItemMatched":
+						// 묶어보기 노출
+						viewtype.show();
+						viewtype.hide("GroupedCatalogView");
+						if (viewtype.isSelect("GroupedCatalogView")) {
+							pagestate.setViewType(viewtype.First());
+							viewtype.select(pagestate.GetViewType());
+						}
+						// 페이징 사이즈
+						pagesizer.show();
+						// 검색조건
+						searchline.show();
+						// 정렬방식 노출
+						sorttype.show(["Popular", "Price", "SalesPopularScore", "NewProduct", "Review"]);
+						sorttype.hide(["ExpertReviewCount", "ShoppingMall", "InsDate", "ToDate"]);
+						if (sorttype.isSelect("ExpertReviewCount") || sorttype.isSelect("ShoppingMall") || sorttype.isSelect("InsDate") || sorttype.isSelect("ToDate")) {
+							pagestate.setSortType(sorttype.first());
+							sorttype.select(pageState.getSortType());
+						}
+						// 상품유형
+						producttype.show("IsStyleSearch");
+						producttype.hide(["IsSoldOut", "IsSellingPlan"]); // 순서보장
+						// 테이블헤더
+						tableheader.show();
+						tableheader.hide("Compare");
+						break;
+					case "MItemUnmatched":
+						// 묶어보기 형식 없앰
+						viewtype.show();
+						viewtype.hide("GroupedCatalogView");
+						if (viewtype.isSelect("GroupedCatalogView")) {
+							pagestate.setViewType(viewtype.first());
+							viewtype.select(pagestate.getViewType());
+						}
+						// 페이징 사이즈
+						pagesizer.show();
+						// 검색조건
+						searchline.show();
+						// 정렬방식 노출
+						sorttype.show(["Popular", "Price", "SalesPopularScore", "NewProduct", "Review"]);
+						sorttype.hide(["ExpertReviewCount", "ShoppingMall", "InsDate", "ToDate"]);
+						if (sorttype.isSelect("ExpertReviewCount") || sorttype.isSelect("ShoppingMall") || sorttype.isSelect("InsDate") || sorttype.isSelect("ToDate")) {
+							pagestate.setSortType(sorttype.first());
+							sorttype.select(pagestate.getSortType());
+						}
+						// 상품유형
+						producttype.show("IsStyleSearch");
+						producttype.hide(["IsSoldOut", "IsSellingPlan"]); // 순서보장
+						// 테이블헤더
+						tableheader.show();
+						tableheader.hide("Compare");
+						break;
+					case "MItemUsed":
+						// 묶어보기 형식 없앰
+						viewtype.show();
+						viewtype.hide("GroupedCatalogView");
+						if (viewtype.isSelect("GroupedCatalogView")) {
+							pagestate.setViewType(viewtype.first());
+							viewtype.select(pagestate.getViewType());
+						}
+						// 페이징 사이즈
+						pagesizer.show();
+						// 검색조건
+						searchline.show();
+						// 정렬방식 노출
+						sorttype.show(["Popular", "Price", "NewProduct"]);
+						sorttype.hide(["SalesPopularScore", "Review", "ShoppingMall", "InsDate", "ToDate"]);
+						if (!(sorttype.isSelect("Popular") || sorttype.isSelect("LowestPriceFirst") || sorttype.isSelect("HighestPriceFirst") || sorttype.isSelect("NewProduct"))) {
+							pagestate.setSortType(sorttype.first());
+							sorttype.select(pagestate.getSortType());
+						}
+						// 상품유형
+						producttype.show("IsStyleSearch");
+						producttype.hide(["IsSoldOut", "IsSellingPlan"]); // 순서보장
+						// 테이블헤더
+						tableheader.show();
+						tableheader.hide("Compare");
+						break;
+					case "Promotion":
+						// 뷰형식 없앰
+						viewtype.hide();
+						// 페이징 사이즈
+						pagesizer.hide();
+						// 검색조건
+						searchline.hide();
+						// 정렬방식 노출
+						sorttype.show(["InsDate", "ToDate"]);
+						sorttype.hide(["Popular", "Price", "SalesPopularScore", "NewProduct", "Review", "ShoppingMall"]);
+						if (!(sorttype.isSelect("InsDate") || sorttype.isSelect("ToDate"))) {
+							pagestate.setSortType(sorttype.first());
+							sorttype.select(pagestate.getSortType());
+						}
+						// 상품유형
+						producttype.hide(); // 순서보장
+						// 테이블헤더
+						tableheader.hide();
+						break;
+					case "QnA":
+						// 묶어보기 형식 없앰
+						viewtype.hide();
+						// 페이징 사이즈
+						pagesizer.hide();
+						// 검색조건
+						searchline.hide();
+						// 정렬방식 노출
+						sorttype.hide();
+
+						producttype.hide(); // 순서보장
+						// 테이블헤더
+						tableheader.hide();
+						break;
+					case "MItemIPay":
+						// 묶어보기 노출
+						viewtype.show();
+						viewtype.show("GroupedCatalogView");
+						// 페이징 사이즈
+						pagesizer.show();
+						// 검색조건
+						searchline.show();
+						// 정렬방식 노출
+						sorttype.show(["Popular", "Price", "SalesPopularScore", "NewProduct", "Review"]);
+						sorttype.hide(["ExpertReviewCount", "ShoppingMall", "InsDate", "ToDate"]);
+						if (sorttype.isSelect("ExpertReviewCount") || sorttype.isSelect("ShoppingMall") || sorttype.isSelect("InsDate") || sorttype.isSelect("ToDate")) {
+							pagestate.setSortType(sorttype.first());
+							sorttype.select(pageState.getSortType());
+						}
+						// 상품유형
+						producttype.show(["IsStyleSearch", "IsSoldOut", "IsSellingPlan"]);
+						// 테이블헤더
+						tableheader.show("Compare");
+						break;
+					case "Related":
+						// 묶어보기 형식 노출
+						viewtype.show();
+						// 페이징 사이즈 숨김
+						pagesizer.hide();
+						// 검색조건 숨김
+						searchline.hide();
+						// 정렬방식
+						sorttype.hide();
+						if (sorttype.isSelect("InsDate") || sorttype.isSelect("ToDate")) {
+							pagestate.setSortType(sorttype.first());
+							sorttype.select(pagestate.getSortType());
+						}
+						// 상품유형 숨김
+						producttype.hide(["IsStyleSearch", "IsSoldOut", "IsSellingPlan", "IsDcCard"]);
+						// 테이블헤더
+						tableheader.show("Compare");
+						tableheader.hide(["IsShippingPriceFree", "HasNointerestData", "HasCouponData", "HasEventData", "HasPoint"]);
+						break;
+					default:
+						break;
+				}
+
+				pagestate.setFindingType(findingType);
+
+				return true;
+			},
+
+			setCounts: function(counts) {
+				var $em = null;
+				var $tab = null;
+
+				// 전체상품
+				$em = tab.wrapper.find("#" + id + "_hemAll");
+				if (($em != null && $em.size() > 0) && (counts != null && counts.All != null)) {
+					$em.text("(" + utils.commaNumber(counts.All) + ")");
+				}
+				$em = tab.wrapper.find("#" + id + "_hemAllMItem");
+				if (($em != null && $em.size() > 0) && (counts != null && counts.AllMItem != null)) {
+					$em.text("(" + utils.commaNumber(counts.AllMItem) + ")");
+				}
+				// 전체상품
+				$em = tab.wrapper.find("#" + id + "_hemMItem");
+				if (($em != null && $em.size() > 0) && (counts != null && counts.MItem != null)) {
+					$em.text("(" + utils.commaNumber(counts.MItem) + ")");
+				}
+				// 가격비교
+				$em = tab.wrapper.find("#" + id + "_hemCatalog");
+				if (($em != null && $em.size() > 0) && (counts != null && counts.Catalog != null)) {
+					$em.text("(" + utils.commaNumber(counts.Catalog) + ")");
+				}
+				// 가격비교 가능상품
+				$em = tab.wrapper.find("#" + id + "_hemMItemMatched");
+				if (($em != null && $em.size() > 0) && (counts != null && counts.MItemMatched != null)) {
+					$em.text("(" + utils.commaNumber(counts.MItemMatched) + ")");
+				}
+				// 일반상품
+				$em = tab.wrapper.find("#" + id + "_hemMItemUnmatched");
+				if (($em != null && $em.size() > 0) && (counts != null && counts.MItemUnmatched != null)) {
+					$em.text("(" + utils.commaNumber(counts.MItemUnmatched) + ")");
+				}
+				// 중고상품
+				$em = tab.wrapper.find("#" + id + "_hemMItemUsed");
+				if (($em != null && $em.size() > 0) && (counts != null && counts.MItemUsed != null)) {
+					$em.text("(" + utils.commaNumber(counts.MItemUsed) + ")");
+				}
+				$tab = tab.wrapper.find("#" + id + "_hliMItemUsed");
+				if (counts != null && counts.MItemUsed != null && counts.MItemUsed > 0)
+					$tab.show();
+				// 관련기획전
+				$em = tab.wrapper.find("#" + id + "_hemPromotion");
+				if (($em != null && $em.size() > 0) && (counts != null && counts.Promotion != null)) {
+					$em.text("(" + utils.commaNumber(counts.Promotion) + ")");
+				}
+				$tab = tab.wrapper.find("#" + id + "_hliPromotion");
+				if (counts != null && counts.Promotion != null && counts.Promotion > 0)
+					$tab.show();
+				// QnA
+				$em = tab.wrapper.find("#" + id + "_hemQnA");
+				if (($em != null && $em.size() > 0) && (counts != null && counts.QnA != null)) {
+					$em.text("(" + utils.commaNumber(counts.QnA) + ")");
+				}
+				$tab = tab.wrapper.find("#" + id + "_hliQnA");
+				if (counts != null && counts.QnA != null && counts.QnA > 0)
+					$tab.show();
+				// iPay 상품
+				$em = tab.wrapper.find("#" + id + "_hemMItemIPay");
+				if (($em != null && $em.size() > 0) && (counts != null && counts.MItemIPay != null)) {
+					$em.text("(" + utils.commaNumber(counts.MItemIPay) + ")");
+				}
+				$tab = tab.wrapper.find("#" + id + "_hliMItemIPay");
+				if (counts != null && counts.MItemIPay != null && counts.MItemIPay > 0)
+					$tab.show();
+			},
+
+			setCount: function(findingType, count) {
+
+				var $em = null;
+				$em = tab.wrapper.find("#" + id + "_hem" + findingType);
+
+				if (($em != null && $em.size() > 0) && count != null) {
+					$em.text("(" + utils.commaNumber(count) + ")");
+				}
+			},
+
+			setTitle: function(findingType, title) {
+				var $span = tab.wrapper.find("#" + id + "_hli" + findingType).find("span"), element = null;
+
+				if ($span.size() > 0) {
+					element = $span.get(0);
+
+					for (var i = 0; i < element.childNodes.length; i++) {
+						if (element.childNodes[i].nodeType == 3) {
+							element.childNodes[i].nodeValue = title;
+						}
+					}
+				}
+			},
+
+			show: function(findingType) {
+				if (findingType == null || typeof findingType === "undefined")
+					return;
+
+				if (findingType != null && typeof findingType === "object") {
+					$(findingType).each(function(index, type) {
+						tab.wrapper.find("#" + id + "_hli" + type).show();
+					});
+				}
+				else {
+					tab.wrapper.find("#" + id + "_hli" + findingType).show();
+				}
+			},
+
+			hide: function(findingType) {
+				tab.wrapper.find("#" + id + "_hli" + findingType).hide();
+			}
+		};
+
+		viewtype = {
+			wrapper: null,
+
+			init: function() {
+				viewtype.wrapper = $header.find("#" + id + "_hdivViewType");
+
+				// 리스트형
+				viewtype.wrapper.find("#" + id + "_haListView").bind("click", function(e) {
+
+					if (!viewtype.select($(this).attr("viewtype")))
+						return;
+
+					if (handlers != null && typeof handlers.haListView_OnClick === "function") {
+						g.copyToPageState(e);
+						handlers.haListView_OnClick(this, e);
+					}
+				});
+				// 이미지형
+				viewtype.wrapper.find("#" + id + "_haImageView").bind("click", function(e) {
+
+					if (!viewtype.select($(this).attr("viewtype")))
+						return;
+
+					if (handlers != null && typeof handlers.haImageView_OnClick === "function") {
+						g.copyToPageState(e);
+						handlers.haImageView_OnClick(this, e);
+					}
+				});
+				// 중이미지형
+				viewtype.wrapper.find("#" + id + "_haMiddleImageView").bind("click", function(e) {
+
+					if (!viewtype.select($(this).attr("viewtype")))
+						return;
+
+					if (handlers != null && typeof handlers.haMiddleImageView_OnClick === "function") {
+						g.copyToPageState(e);
+						handlers.haMiddleImageView_OnClick(this, e);
+					}
+				});
+				// 2단이미지형
+				viewtype.wrapper.find("#" + id + "_haTwoColumnView").bind("click", function(e) {
+
+					if (!viewtype.select($(this).attr("viewtype")))
+						return;
+
+					if (handlers != null && typeof handlers.haTwoColumnView_OnClick === "function") {
+						g.copyToPageState(e);
+						handlers.haTwoColumnView_OnClick(this, e);
+					}
+				});
+				// 묶어보기형
+				viewtype.wrapper.find("#" + id + "_haGroupedCatalogView").bind("click", function(e) {
+
+					if (!viewtype.select($(this).attr("viewtype")))
+						return;
+
+					if (handlers != null && typeof handlers.haGroupedCatalogView_OnClick === "function") {
+						g.copyToPageState(e);
+						handlers.haGroupedCatalogView_OnClick(this, e);
+					}
+				});
+			},
+
+			select: function(viewType) {
+				if (viewType == null || typeof viewType === "undefined")
+					return false;
+
+				var $viewtype = viewtype.wrapper.find("#" + id + "_ha" + viewType);
+
+				if ($viewtype.hasClass("on"))
+					return false;
+
+				$viewtype.parent().find("a.on").removeClass("on");
+				$viewtype.addClass("on");
+
+				if (viewType == "ListView" || viewType == "GroupedCatalogView") {
+					tableheader.removeClass("imgTitleN");
+				}
+				else {
+					tableheader.addClass("imgTitleN");
+				}
+
+				pagestate.setViewType(viewType);
+
+				return true;
+			},
+
+			show: function(viewType) {
+
+				viewtype.wrapper.show();
+
+				if (viewType == null || typeof viewType === "undefined") {
+					viewtype.wrapper.find("#" + id + "_hdivViewType").find("a").show();
+				}
+				else if (viewType != null && typeof viewType === "object") {
+					viewtype.wrapper.find("#" + id + "_hdivViewType").show();
+					$(viewType).each(function(index, type) {
+						viewtype.wrapper.find("#" + id + "_ha" + type).show();
+					});
+				}
+				else {
+					viewtype.wrapper.find("#" + id + "_hdivViewType").show();
+					viewtype.wrapper.find("#" + id + "_ha" + viewType).show();
+				}
+			},
+
+			hide: function(viewType) {
+				if (viewType == null || typeof viewType === "undefined") {
+					viewtype.wrapper.hide();
+				}
+				else if (viewType != null && typeof viewType === "object") {
+					viewtype.wrapper.show();
+					$(viewType).each(function(index, type) {
+						viewtype.wrapper.find("#" + id + "_ha" + type).hide();
+					});
+				}
+				else {
+					viewtype.wrapper.show();
+					viewtype.wrapper.find("#" + id + "_ha" + viewType).hide();
+				}
+			},
+
+			isSelect: function(viewType) {
+				return viewtype.wrapper.find("a.on").attr("viewtype") == viewType;
+			},
+
+			first: function() {
+				return viewtype.wrapper.find("a:visible:first").attr("viewtype");
+			}
+		};
+
+		pagesizer = {
+			wrapper: null,
+
+			init: function() {
+				pagesizer.wrapper = $header.find("#" + id + "_hdivPageSizeControl");
+
+				pagesizer.wrapper.find("#" + id + "_hselPageSize").bind("change", function(e) {
+
+					pagestate.setPageSize($(this).val());
+
+					if (handlers != null && typeof handlers.hselPageSize_OnChange === "function") {
+						g.copyToPageState(e);
+						handlers.hselPageSize_OnChange(this, e);
+					}
+				});
+			},
+
+			setPageSize: function(pageSize) {
+				var $pageSizer = pagesizer.wrapper.find("#" + id + "_hselPageSize");
+
+				$pageSizer.val(pageSize);
+				pagesizer.wrapper.find("#" + id + "_hspnPageSizeText").html($pageSizer.find(":selected").text());
+
+				pagestate.setPageSize(pageSize);
+			},
+
+			show: function() {
+				pagesizer.wrapper.filter(":hidden").show();
+			},
+
+			hide: function() {
+				pagesizer.wrapper.filter(":visible").hide();
+			}
+		};
+
+		sorttype = {
+			wrapper: null,
+
+			init: function() {
+				sorttype.wrapper = $("#" + id + "_hdivSortType");
+
+				sorttype.wrapper.find("#" + id + "_hliPopular").bind("mouseenter", function(e) {
+					$(this).find("div").show();
+				});
+
+				sorttype.wrapper.find("#" + id + "_hliPopular").bind("mouseleave", function(e) {
+					$(this).find("div").hide();
+				});
+
+				sorttype.wrapper.find("#" + id + "_hdivPrice").bind("mouseenter", function(e) {
+					$(this).find("ul").show();
+				});
+
+				sorttype.wrapper.find("#" + id + "_hdivPrice").bind("mouseleave", function(e) {
+					$(this).find("ul").hide();
+				});
+
+				sorttype.wrapper.find("#" + id + "_hdivReview").bind("mouseenter", function(e) {
+					$(this).find("ul").show();
+				});
+
+				sorttype.wrapper.find("#" + id + "_hdivReview").bind("mouseleave", function(e) {
+					$(this).find("ul").hide();
+				});
+
+				// 인기순
+				sorttype.wrapper.find("#" + id + "_haPopular").bind("click", function(e) {
+					var $sorttype = $(this);
+					if ($sorttype.hasClass("on"))
+						return;
+
+					sorttype.select($sorttype.attr("sorttype"));
+
+					if (handlers != null && typeof handlers.hliPopular_OnClick === "function") {
+						g.copyToPageState(e);
+						handlers.hliPopular_OnClick(this, e);
+					}
+				});
+				// 낮은가격순
+				sorttype.wrapper.find("#" + id + "_hchbLowestPriceFirst").bind("click", function(e) {
+					var $checkbox = $(this); $sorttype = $checkbox.parent(), $target = $("#" + $sorttype.attr("target"));
+					if (!$checkbox.attr("checked")) {
+						$checkbox.attr("checked", true);
+						return;
+					}
+
+					// default : 유사도 우선 정렬
+					sorttype.select($sorttype.attr("sorttype") + "RS");
+
+					if (handlers != null && typeof handlers.hchbLowestPriceFisrt_OnClick === "function") {
+						g.copyToPageState(e);
+						handlers.hchbLowestPriceFisrt_OnClick(this, e);
+					}
+				});
+				// 높은가격순
+				sorttype.wrapper.find("#" + id + "_hchbHighestPriceFirst").bind("click", function(e) {
+					var $checkbox = $(this); $sorttype = $checkbox.parent(), $target = $("#" + $sorttype.attr("target"));
+					if (!$checkbox.attr("checked")) {
+						$checkbox.attr("checked", true);
+						return;
+					}
+
+					// default : 유사도 우선 정렬
+					sorttype.select($sorttype.attr("sorttype") + "RS");
+
+					if (handlers != null && typeof handlers.hchbHighestPriceFisrt_OnClick === "function") {
+						g.copyToPageState(e);
+						handlers.hchbHighestPriceFisrt_OnClick(this, e);
+					}
+				});
+				// 가격순 정확도 옵션
+				sorttype.wrapper.find("#" + id + "_haPriceOptionRS").bind("click", function(e) {
+					var $optionbox = $(this); $checkboxarea = $(this).parent().parent().find("div"), checkbox = $checkboxarea.find("input[checked]");
+
+					if (checkbox.length < 1)
+						return;
+
+					$sorttype = checkbox.parent();
+
+					if ($optionbox.hasClass("on")) {
+						$optionbox.removeClass("on");
+						sorttype.select($sorttype.attr("sorttype"));
+					}
+					else {
+						$optionbox.addClass("on")
+						sorttype.select($sorttype.attr("sorttype") + "RS");
+					}
+
+					if ($sorttype.attr("sorttype") == "LowestPriceFirst") {
+						if (handlers != null && typeof handlers.hchbLowestPriceFisrt_OnClick === "function") {
+							g.copyToPageState(e);
+							handlers.hchbLowestPriceFisrt_OnClick(this, e);
+						}
+					}
+					else if ($sorttype.attr("sorttype") == "HighestPriceFirst") {
+						if (handlers != null && typeof handlers.hchbHighestPriceFisrt_OnClick === "function") {
+							g.copyToPageState(e);
+							handlers.hchbHighestPriceFisrt_OnClick(this, e);
+						}
+					}
+				});
+
+				// 판매순
+				sorttype.wrapper.find("#" + id + "_haSalesPopularScore").bind("click", function(e) {
+					var $sorttype = $(this);
+					if ($sorttype.hasClass("on"))
+						return;
+
+					// default : 유사도 우선 정렬
+					sorttype.select($sorttype.attr("sorttype") + "RS");
+
+					if (handlers != null && typeof handlers.hliSalesPopularScore_OnClick === "function") {
+						g.copyToPageState(e);
+						handlers.hliSalesPopularScore_OnClick(this, e);
+					}
+				});
+				// 판매순 정확도 옵션
+				sorttype.wrapper.find("#" + id + "_haSalesPopularScoreOptionRS").bind("click", function(e) {
+					var $optionbox = $(this); $sorttype = $optionbox.parent().parent().find("a[sorttype]");
+
+					if (!$sorttype.parent().hasClass("on"))
+						return;
+
+					if ($optionbox.hasClass("on")) {
+						$optionbox.removeClass("on");
+						sorttype.select($sorttype.attr("sorttype"));
+					}
+					else {
+						$optionbox.addClass("on")
+						sorttype.select($sorttype.attr("sorttype") + "RS");
+					}
+
+					if (handlers != null && typeof handlers.hliSalesPopularScore_OnClick === "function") {
+						g.copyToPageState(e);
+						handlers.hliSalesPopularScore_OnClick(this, e);
+					}
+				});
+
+				// 신상품순
+				sorttype.wrapper.find("#" + id + "_haNewProduct").bind("click", function(e) {
+					var $sorttype = $(this);
+					if ($sorttype.hasClass("on"))
+						return;
+
+					// default : 유사도 우선 정렬
+					sorttype.select($sorttype.attr("sorttype") + "RS");
+
+					if (handlers != null && typeof handlers.hliNewProduct_OnClick === "function") {
+						g.copyToPageState(e);
+						handlers.hliNewProduct_OnClick(this, e);
+					}
+				});
+				// 신상품순 정확도 옵션
+				sorttype.wrapper.find("#" + id + "_haNewProductOptionRS").bind("click", function(e) {
+					var $optionbox = $(this); $sorttype = $optionbox.parent().parent().find("a[sorttype]");
+
+					if (!$sorttype.parent().hasClass("on"))
+						return;
+
+					if ($optionbox.hasClass("on")) {
+						$optionbox.removeClass("on");
+						sorttype.select($sorttype.attr("sorttype"));
+					}
+					else {
+						$optionbox.addClass("on")
+						sorttype.select($sorttype.attr("sorttype") + "RS");
+					}
+
+					if (handlers != null && typeof handlers.hliNewProduct_OnClick === "function") {
+						g.copyToPageState(e);
+						handlers.hliNewProduct_OnClick(this, e);
+					}
+				});
+
+				// 상품평 많은순
+				sorttype.wrapper.find("#" + id + "_hchbReviewCount").bind("click", function(e) {
+					var $checkbox = $(this); $sorttype = $checkbox.parent(), $target = $("#" + $sorttype.attr("target"));
+					if (!$checkbox.attr("checked")) {
+						$checkbox.attr("checked", true);
+						return;
+					}
+
+					// default : 유사도 우선 정렬
+					sorttype.select($sorttype.attr("sorttype") + "RS");
+
+					if (handlers != null && typeof handlers.hchbReviewCount_OnClick === "function") {
+						g.copyToPageState(e);
+						handlers.hchbReviewCount_OnClick(this, e);
+					}
+				});
+				// 전문가리뷰 많은순
+				sorttype.wrapper.find("#" + id + "_hchbExpertReviewCount").bind("click", function(e) {
+					var $checkbox = $(this); $sorttype = $checkbox.parent(), $target = $("#" + $sorttype.attr("target"));
+					if (!$checkbox.attr("checked")) {
+						$checkbox.attr("checked", true);
+						return;
+					}
+
+					// default : 유사도 우선 정렬
+					sorttype.select($sorttype.attr("sorttype") + "RS");
+
+					if (handlers != null && typeof handlers.hchbExpertReviewCount_OnClick === "function") {
+						g.copyToPageState(e);
+						handlers.hchbExpertReviewCount_OnClick(this, e);
+					}
+				});
+				// 평점많은순
+				sorttype.wrapper.find("#" + id + "_hchbReviewPoint").bind("click", function(e) {
+					var $checkbox = $(this); $sorttype = $checkbox.parent(), $target = $("#" + $sorttype.attr("target"));
+					if (!$checkbox.attr("checked")) {
+						$checkbox.attr("checked", true);
+						return;
+					}
+
+					// default : 유사도 우선 정렬
+					sorttype.select($sorttype.attr("sorttype") + "RS");
+
+					if (handlers != null && typeof handlers.hchbReviewPoint_OnClick === "function") {
+						g.copyToPageState(e);
+						handlers.hchbReviewPoint_OnClick(this, e);
+					}
+				});
+				// 상품평/리뷰순 정확도 옵션
+				sorttype.wrapper.find("#" + id + "_haReviewOptionRS").bind("click", function(e) {
+					var $optionbox = $(this); $checkboxarea = $(this).parent().parent().find("div"), checkbox = $checkboxarea.find("input[checked]");
+
+					if (checkbox.length < 1)
+						return;
+
+					$sorttype = checkbox.parent();
+
+					if ($optionbox.hasClass("on")) {
+						$optionbox.removeClass("on");
+						sorttype.select($sorttype.attr("sorttype"));
+					}
+					else {
+						$optionbox.addClass("on")
+						sorttype.select($sorttype.attr("sorttype") + "RS");
+					}
+
+					if ($sorttype.attr("sorttype") == "ReviewCount") {
+						if (handlers != null && typeof handlers.hchbReviewCount_OnClick === "function") {
+							g.copyToPageState(e);
+							handlers.hchbReviewCount_OnClick(this, e);
+						}
+					}
+					else if ($sorttype.attr("sorttype") == "ExpertReviewCount") {
+						if (handlers != null && typeof handlers.hchbExpertReviewCount_OnClick === "function") {
+							g.copyToPageState(e);
+							handlers.hchbExpertReviewCount_OnClick(this, e);
+						}
+					}
+					else if ($sorttype.attr("sorttype") == "ReviewPoint") {
+						if (handlers != null && typeof handlers.hchbReviewPoint_OnClick === "function") {
+							g.copyToPageState(e);
+							handlers.hchbReviewPoint_OnClick(this, e);
+						}
+					}
+				});
+
+				// 판매샵많은순
+				sorttype.wrapper.find("#" + id + "_haShoppingMall").bind("click", function(e) {
+					var $sorttype = $(this);
+					if ($sorttype.hasClass("on"))
+						return;
+
+					// default : 유사도 우선 정렬
+					sorttype.select($sorttype.attr("sorttype") + "RS");
+
+					if (handlers != null && typeof handlers.hliShoppingMall_OnClick === "function") {
+						g.copyToPageState(e);
+						handlers.hliShoppingMall_OnClick(this, e);
+					}
+				});
+				// 판매샵많은순 정확도 옵션
+				sorttype.wrapper.find("#" + id + "_haShoppingMallOptionRS").bind("click", function(e) {
+					var $optionbox = $(this); $sorttype = $optionbox.parent().parent().find("a[sorttype]");
+
+					if (!$sorttype.parent().hasClass("on"))
+						return;
+
+					if ($optionbox.hasClass("on")) {
+						$optionbox.removeClass("on");
+						sorttype.select($sorttype.attr("sorttype"));
+					}
+					else {
+						$optionbox.addClass("on")
+						sorttype.select($sorttype.attr("sorttype") + "RS");
+					}
+
+					if (handlers != null && typeof handlers.hliShoppingMall_OnClick === "function") {
+						g.copyToPageState(e);
+						handlers.hliShoppingMall_OnClick(this, e);
+					}
+				});
+
+				// 신규등록순 - 관련기획전
+				sorttype.wrapper.find("#" + id + "_haInsDate").bind("click", function(e) {
+					var $sorttype = $(this);
+					if ($sorttype.hasClass("on"))
+						return;
+
+					sorttype.select($sorttype.attr("sorttype"));
+
+					if (handlers != null && typeof handlers.hliInsDate_OnClick === "function") {
+						g.copyToPageState(e);
+						handlers.hliInsDate_OnClick(this, e);
+					}
+				});
+				// 마감임박순 - 관련기획전
+				sorttype.wrapper.find("#" + id + "_haToDate").bind("click", function(e) {
+					var $sorttype = $(this);
+					if ($sorttype.hasClass("on"))
+						return;
+
+					sorttype.select($sorttype.attr("sorttype"));
+
+					if (handlers != null && typeof handlers.hliToDate_OnClick === "function") {
+						g.copyToPageState(e);
+						handlers.hliToDate_OnClick(this, e);
+					}
+				});
+			},
+
+			select: function(sortType) {
+				if (sortType == null || typeof sortType === "undefined")
+					return false;
+
+				var $checkbox = null; $sorttype = null, $target = null; $optionRS = null; $isOptionRS = false;
+
+				// 유사도 옵션여부 체크
+				if ((RSindex = sortType.indexOf("RS")) > 0) {
+					$isOptionRS = true;
+					sortType = sortType.substr(0, RSindex);
+				}
+
+				if (sortType == "LowestPriceFirst" || sortType == "HighestPriceFirst" || sortType == "ReviewCount" || sortType == "ExpertReviewCount" || sortType == "ReviewPoint") {
+					$checkbox = sorttype.wrapper.find("#" + id + "_hchb" + sortType);
+					$sorttype = $checkbox.parent();
+					$target = sorttype.wrapper.find("#" + $sorttype.attr("target"));
+					sorttype.wrapper.find("input:checked").not($checkbox).attr("checked", false);
+					$optionRS = $target.find("a.accu");
+
+					if (sortType == "LowestPriceFirst") {
+						$target.find("a.sort_more").html("&darr; 가격순");
+					}
+					else if (sortType == "HighestPriceFirst") {
+						$target.find("a.sort_more").html("&uarr; 가격순");
+					}
+					else {
+						$target.find("a.sort_more").html($sorttype.text());
+					}
+				}
+				else {
+					$sorttype = sorttype.wrapper.find("#" + id + "_hli" + sortType);
+					sorttype.wrapper.find("input:checked").attr("checked", false);
+					$target = $sorttype;
+					$optionRS = $target.find("a.accu");
+				}
+
+				$target.parent().find("li.on").removeClass("on");
+				$target.parent().find("a.accu.on").removeClass("on");
+				$target.parent().find("a.accu").hide();
+				if (!(sortType == "LowestPriceFirst" || sortType == "HighestPriceFirst")) {
+					$("#" + id + "_haPrice").html("가격순");
+				}
+
+				if (!(sortType == "ReviewCount" || sortType == "ExpertReviewCount" || sortType == "ReviewPoint")) {
+					$("#" + id + "_haReview").html("상품평/리뷰순");
+				}
+
+				$target.addClass("on");
+				$optionRS.attr("style", "cursor:pointer;");
+
+				if ($isOptionRS) {
+					$optionRS.addClass("on");
+					pagestate.setSortType(sortType + "RS");
+				}
+				else pagestate.setSortType(sortType);
+			},
+
+			show: function(sortType) {
+				if (sortType == null || typeof sortType === "undefined") {
+					sorttype.wrapper.filter(":hidden").show();
+				}
+				else {
+					sorttype.wrapper.filter(":hidden").show();
+
+					if (sortType != null && typeof sortType === "object") {
+						$(sortType).each(function(index, type) {
+							sorttype.wrapper.find("#" + id + "_hli" + type).show();
+						});
+					}
+					else {
+						sorttype.wrapper.find("#" + id + "_hli" + sortType).show();
+					}
+
+					if (!sorttype.wrapper.find("ul.cost-sort>li:visible:last").hasClass("last")) {
+						sorttype.wrapper.find("li.last").removeClass("last");
+						sorttype.wrapper.find("ul.cost-sort>li:visible:last").addClass("last")
+					}
+				}
+			},
+
+			hide: function(sortType) {
+				if (sortType == null || typeof sortType === "undefined") {
+					sorttype.wrapper.filter(":visible").hide();
+				}
+				else {
+					if (sortType != null && typeof sortType === "object") {
+						$(sortType).each(function(index, type) {
+							sorttype.wrapper.find("#" + id + "_hli" + type).hide();
+						});
+					}
+					else {
+						sorttype.wrapper.find("#" + id + "_hli" + sortType).hide();
+					}
+
+					if (!sorttype.wrapper.find("ul.cost-sort>li:visible:last").hasClass("last")) {
+						sorttype.wrapper.find("li.last").removeClass("last");
+						sorttype.wrapper.find("ul.cost-sort>li:visible:last").addClass("last")
+					}
+				}
+			},
+
+			isSelect: function(sortType) {
+				if (sortType == null || typeof sortType === "undefined")
+					return false;
+
+				if (sortType == "LowestPriceFirst" || sortType == "HighestPriceFirst" || sortType == "ReviewCount" || sortType == "ExpertReviewCount" || sortType == "ReviewPoint") {
+					return sorttype.wrapper.find("#" + id + "_hchb" + sortType).attr("checked");
+				}
+				else {
+					return sorttype.wrapper.find("#" + id + "_hli" + sortType).hasClass("on");
+				}
+			},
+
+			first: function() {
+				return sorttype.wrapper.find("li:visible:first").attr("sorttype");
+			}
+		};
+
+		producttype = {
+			wrapper: null,
+
+			init: function() {
+				producttype.wrapper = $header.find("#" + id + "_hdivProductType");
+
+				// 카드할인상품
+				producttype.wrapper.find("#" + id + "_hchbIsDcCard").bind("click", function(e) {
+
+					var $checkbox = $(this);
+					e.IsDcCard = $checkbox.attr("checked");
+
+					if (e.IsDcCard) {
+						producttype.set("IsDcCard");
+					}
+					else {
+						producttype.unSet("IsDcCard");
+					}
+
+					if (handlers != null && typeof handlers.hchbIsDcCard_OnClick === "function") {
+						g.copyToPageState(e);
+						handlers.hchbIsDcCard_OnClick(this, e);
+					}
+
+				});
+				// 이미지검색
+				producttype.wrapper.find("#" + id + "_hchbIsStyleSearch").bind("click", function(e) {
+
+					var $checkbox = $(this);
+					e.IsStyleSearch = $checkbox.attr("checked");
+
+					if (e.IsStyleSearch) {
+						producttype.set("IsStyleSearch");
+					}
+					else {
+						producttype.unSet("IsStyleSearch");
+					}
+
+					if (handlers != null && typeof handlers.hchbIsStyleSearch_OnClick === "function") {
+						g.copyToPageState(e);
+						handlers.hchbIsStyleSearch_OnClick(this, e);
+					}
+
+				});
+				// 판매중단상품
+				producttype.wrapper.find("#" + id + "_hchbIsSoldOut").bind("click", function(e) {
+					var $checkbox = $(this);
+					e.IsSoldOut = $checkbox.attr("checked");
+
+					if (e.IsSoldOut) {
+						producttype.set("IsSoldOut");
+						sorttype.select("Popular");
+					}
+					else {
+						producttype.unSet("IsSoldOut");
+					}
+
+					if (handlers != null && typeof handlers.hchbIsSoldOut_OnClick === "function") {
+						g.copyToPageState(e);
+						handlers.hchbIsSoldOut_OnClick(this, e);
+					}
+				});
+				// 판매예정상품
+				producttype.wrapper.find("#" + id + "_hchbIsSellingPlan").bind("click", function(e) {
+					var $checkbox = $(this);
+					e.IsSellingPlan = $checkbox.attr("checked");
+
+					if (e.IsSellingPlan) {
+						producttype.set("IsSellingPlan");
+						sorttype.select("Popular");
+					}
+					else {
+						producttype.unSet("IsSellingPlan");
+					}
+
+					if (handlers != null && typeof handlers.hchbIsSellingPlan_OnClick === "function") {
+						g.copyToPageState(e);
+						handlers.hchbIsSellingPlan_OnClick(this, e);
+					}
+				});
+			},
+
+			select: function(productType) {
+
+				if (productType == null || typeof productType === "undefined")
+					return;
+
+				if (productType != null && typeof productType === "object") {
+					$(productType).each(function(index, type) {
+						producttype.wrapper.find("#" + id + "_hchb" + type).attr("checked", true);
+						producttype.set(type);
+					});
+				}
+				else {
+					producttype.wrapper.find("#" + id + "_hchb" + productType).attr("checked", true);
+					producttype.set(productType);
+				}
+			},
+
+			set: function(productType) {
+				if (productType == null || typeof productType === "undefined")
+					return;
+
+				if (productType != null && typeof productType === "object") {
+					$(productType).each(function(index, type) {
+						if (type == "IsDcCard") {
+							pagestate.setIsDcCard(true);
+							searchline.pushAttribute("IsDcCard");
+						}
+						else if (type == "IsStyleSearch") {
+							pagestate.setIsStyleSearch(true);
+							searchline.pushAttribute("IsStyleSearch");
+						}
+						else if (type == "IsSoldOut") {
+							pagestate.setIsSoldOut(true);
+							searchline.pushAttribute("IsSoldOut");
+						}
+						else if (type == "IsSellingPlan") {
+							pagestate.setIsSellingPlan(true);
+							searchline.pushAttribute("IsSellingPlan");
+						}
+					});
+				}
+				else {
+					if (productType == "IsDcCard") {
+						pagestate.setIsDcCard(true);
+						searchline.pushAttribute("IsDcCard");
+					}
+					else if (productType == "IsStyleSearch") {
+						pagestate.setIsStyleSearch(true);
+						searchline.pushAttribute("IsStyleSearch");
+					}
+					else if (productType == "IsSoldOut") {
+						pagestate.setIsSoldOut(true);
+						searchline.pushAttribute("IsSoldOut");
+					}
+					else if (productType == "IsSellingPlan") {
+						pagestate.setIsSellingPlan(true);
+						searchline.pushAttribute("IsSellingPlan");
+					}
+				}
+			},
+
+			unSelect: function(productType) {
+				if (productType == null || typeof productType === "undefined")
+					return;
+
+				if (productType != null && typeof productType === "object") {
+					$(productType).each(function(index, type) {
+						producttype.wrapper.find("#" + id + "_hchb" + type).attr("checked", false);
+						producttype.unSet(type);
+					});
+				}
+				else {
+					producttype.wrapper.find("#" + id + "_hchb" + productType).attr("checked", false);
+					producttype.unSet(productType);
+				}
+			},
+
+			unSet: function(productType) {
+				if (productType == null || typeof productType === "undefined")
+					return;
+
+				if (productType != null && typeof productType === "object") {
+					$(productType).each(function(index, type) {
+
+						if (type == "IsDcCard") {
+							pagestate.setIsDcCard(false);
+							searchline.removeAttribute(-1, "IsDcCard", "True");
+						}
+						else if (type == "IsStyleSearch") {
+							pagestate.setIsStyleSearch(false);
+							searchline.removeAttribute(-1, "IsStyleSearch", "True");
+						}
+						else if (type == "IsSoldOut") {
+							pagestate.setIsSoldOut(false);
+							searchline.removeAttribute(-1, "IsSoldOut", "True");
+						}
+						else if (type == "IsSellingPlan") {
+							pagestate.setIsSellingPlan(false);
+							searchline.removeAttribute(-1, "IsSellingPlan", "True");
+						}
+					});
+				}
+				else {
+
+					if (productType == "IsDcCard") {
+						pagestate.setIsDcCard(false);
+						searchline.removeAttribute(-1, "IsDcCard", "True");
+					}
+					else if (productType == "IsStyleSearch") {
+						pagestate.setIsStyleSearch(false);
+						searchline.removeAttribute(-1, "IsStyleSearch", "True");
+					}
+					else if (productType == "IsSoldOut") {
+						pagestate.setIsSoldOut(false);
+						searchline.removeAttribute(-1, "IsSoldOut", "True");
+					}
+					else if (productType == "IsSellingPlan") {
+						pagestate.setIsSellingPlan(false);
+						searchline.removeAttribute(-1, "IsSellingPlan", "True");
+					}
+				}
+			},
+
+			show: function(productType) {
+
+				producttype.wrapper.show();
+
+				if (productType != null && typeof productType === "object") {
+					$(productType).each(function(index, type) {
+						producttype.wrapper.find("#" + id + "_hli" + type).show();
+					});
+				}
+				else {
+					producttype.wrapper.find("#" + id + "_hli" + productType).show();
+				}
+			},
+
+			hide: function(productType) {
+				var $productType = null;
+
+				if (productType == null || typeof productType === "undefined") {
+					producttype.wrapper.hide();
+				}
+				else if (productType != null && typeof productType === "object") {
+					$(productType).each(function(index, type) {
+						$productType = producttype.wrapper.find("#" + id + "_hli" + type);
+						$productType.hide();
+						$productType.find("input:checked").attr("checked", false);
+					});
+				}
+				else {
+					$productType = producttype.wrapper.find("#" + id + "_hli" + productType);
+					$productType.hide();
+					$productType.find("input:checked").attr("checked", false);
+				}
+			},
+
+			isSelect: function(productType) {
+				if (productType == null || (typeof productType === "undefined" || typeof productType === "object"))
+					return false;
+
+				return producttype.wrapper.find("#" + id + "_hchb" + productType).attr("checked");
+			}
+		};
+
+		searchline = {
+			wrapper: null,
+			textline: null,
+
+			init: function() {
+				searchline.wrapper = $header.find("#" + id + "_hdivSearchResult"),
+				searchline.textline = $header.find("#" + id + "_hulSelectedAttributes");
+
+				var $unselected = searchline.wrapper.find("#" + id + "_haSearchLineUnselectd");
+
+				$unselected.unbind("click");
+
+				$unselected.bind("click", function(e) {
+					selectedFullAttributesDataObject = defaultstate.dataObject;
+					pagestate.setSelectedAttributes(defaultstate.dataObject.outData());
+
+					producttype.unSelect(["IsDcCard", "IsStyleSearch", "IsSoldOut", "IsSellingPlan"]);
+					searchline.textline.html("");
+					searchline.hideTextLine();
+
+					if (!tableheader.isSelect("All")) {
+						tableheader.select("All");
+					}
+
+					if (handlers != null && typeof handlers.haSearchLineUnselectd_OnClick === "function") {
+						g.copyToPageState(e);
+						handlers.haSearchLineUnselectd_OnClick(this, e);
+					}
+				});
+			},
+
+			setAttributes: function(selectedAttributes) {
+
+				searchline.textline.html("");
+				producttype.unSelect(["IsDcCard", "IsStyleSearch", "IsSoldOut", "IsSellingPlan"]);
+				pagestate.setIsDcCard(false);
+				pagestate.setIsStyleSearch(false);
+				pagestate.setIsSoldOut(false);
+				pagestate.setIsSellingPlan(false);
+				pagestate.setSelectedAttributes(selectedAttributes);
+
+				tableheader.select("All");
+
+				var dataObject = new AttributeDataObject({ "InputData": pagestate.getSelectedAttributes() });
+
+				if (dataObject != null && dataObject.arrayObjectSet != null) {
+
+					selectedFullAttributesDataObject = new AttributeDataObject(null);
+
+					$(dataObject.arrayObjectSet).each(function(index, attribute) {
+
+						if (attribute.AttributeID == "IsDcCard") {
+							producttype.select("IsDcCard");
+						}
+						else if (attribute.AttributeID == "IsStyleSearch") {
+							producttype.select("IsStyleSearch");
+						}
+						else if (attribute.AttributeID == "IsSoldOut") {
+							producttype.select("IsSoldOut");
+						}
+						else if (attribute.AttributeID == "IsSellingPlan") {
+							producttype.select("IsSellingPlan");
+						}
+						else if (attribute.AttributeID == "IsShippingPriceFree") {
+							tableheader.select("IsShippingPriceFree");
+						}
+						else if (attribute.AttributeID == "HasNointerestData") {
+							tableheader.select("HasNointerestData");
+						}
+						else if (attribute.AttributeID == "HasCouponData") {
+							tableheader.select("HasCouponData");
+						}
+						else if (attribute.AttributeID == "HasEventData") {
+							tableheader.select("HasEventData");
+						}
+						else if (attribute.AttributeID == "HasPoint") {
+							tableheader.select("HasPoint");
+						}
+						else {
+							selectedFullAttributesDataObject.insertData(attribute.AttributeID, attribute.AttributeElementID, attribute.AttributeName, attribute.AttributeElementName);
+
+							// defaultstate에 값이 있는 것은 비노출
+							if (!defaultstate.contains(attribute.AttributeID, attribute.AttributeElementID)) {
+								searchline.appendAttr(attribute);
+							}
+						}
+					});
+
+					if (searchline.textline.find("li").size() > 0)
+						searchline.showTextLine();
+				}
+			},
+
+			appendAttr: function(attribute) {
+				var text = "";
+				var li = document.createElement("li"), a = document.createElement("a"), span = document.createElement("span");
+
+				if (attribute.AttributeID == "IsShippingPriceFree" ||
+					attribute.AttributeID == "HasNointerestData" ||
+					attribute.AttributeID == "HasCouponData" ||
+					attribute.AttributeID == "HasEventData" ||
+					attribute.AttributeID == "HasPoint" ||
+					attribute.AttributeID == "ImageGroupID"
+				) {
+					text = attribute.AttributeElementName;
+				}
+				else if (attribute.AttributeID == "IsDcCard" ||
+					attribute.AttributeID == "IsStyleSearch" ||
+					attribute.AttributeID == "IsSoldOut" ||
+					attribute.AttributeID == "IsSellingPlan") {
+					text = "[" + attribute.AttributeName + "] " + attribute.AttributeElementName;
+				}
+				else {
+					text = attribute.AttributeName + " [" + attribute.AttributeElementName + "]";
+				}
+
+				a.style.cursor = "pointer";
+				a.title = "삭제";
+
+				span.innerHTML = text;
+
+				$(li).attr({
+					attributeid: attribute.AttributeID,
+					attributeelementid: attribute.AttributeElementID
+				});
+
+				li.appendChild(a);
+				li.appendChild(span);
+
+				$(a).bind("click", function(e) {
+					var hli = this.parentNode; // DOM
+					// 디폴트값이 있을 경우 그걸 계산해준다.
+					searchline.removeAttribute(searchline.textline.find("li").index(hli) + defaultstate.dataObject.arrayObjectSet.length, null);
+
+					if (handlers != null && typeof handlers.hliSelectedAttribute_OnClick === "function") {
+						g.copyToPageState(e);
+						handlers.hliSelectedAttribute_OnClick(this, e);
+					}
+				});
+
+				searchline.textline.append(li);
+			},
+
+			pushAttribute: function(attributeID, attributeElementID) {
+				if (attributeID == null || typeof attributeID === "undefinded")
+					return;
+
+				var attributeElementName = "";
+
+				if (attributeID == "IsDcCard") {
+					selectedFullAttributesDataObject.insertData(attributeID, "True", "카드할인", "상품");
+				}
+				else if (attributeID == "IsStyleSearch") {
+					selectedFullAttributesDataObject.insertData(attributeID, "True", "이미지검색", "상품");
+				}
+				else if (attributeID == "IsSoldOut") {
+					selectedFullAttributesDataObject.insertData(attributeID, "True", "판매중단", "상품");
+				}
+				else if (attributeID == "IsSellingPlan") {
+					selectedFullAttributesDataObject.insertData(attributeID, "True", "판매예정", "상품");
+				}
+				else if (attributeID == "IsShippingPriceFree") {
+					selectedFullAttributesDataObject.insertData(attributeID, "True", "혜택", "무료배송");
+				}
+				else if (attributeID == "HasNointerestData") {
+					selectedFullAttributesDataObject.insertData(attributeID, "True", "혜택", "무이자");
+				}
+				else if (attributeID == "HasCouponData") {
+					selectedFullAttributesDataObject.insertData(attributeID, "True", "혜택", "쿠폰");
+				}
+				else if (attributeID == "HasEventData") {
+					selectedFullAttributesDataObject.insertData(attributeID, "True", "혜택", "이벤트");
+				}
+				else if (attributeID == "HasPoint") {
+					selectedFullAttributesDataObject.insertData(attributeID, "True", "혜택", "적립금");
+				}
+
+				searchline.appendAttr(selectedFullAttributesDataObject.arrayObjectSet[selectedFullAttributesDataObject.arrayObjectSet.length - 1]);
+
+				if (searchline.textline.find("li").size() > 0)
+					searchline.showTextLine();
+			},
+
+			popAttribute: function(attributeID, attributeElementID) {
+				if (attributeID == null || typeof attributeID === "undefined" || attributeElementID == null || typeof attributeElementID === "undefined")
+					return;
+
+				var index = searchline.indexOf(attributeID, attributeElementID);
+
+				if (index > -1) {
+
+					selectedFullAttributesDataObject.deleteDataByIdx(index);
+
+					// searchline에는 디폴트값이 노출되지 않기때문에 그 만큼 인덱스를 빼줌.
+					searchline.removeAttr(index - defaultstate.dataObject.arrayObjectSet.length);
+				}
+
+				if (searchline.textline.find("li").size() == 0)
+					searchline.hideTextLine();
+			},
+
+			removeAttribute: function(index, attributeID, attributeElementID) {
+				if (index < 0 && (attributeID == null || typeof attributeID === "undefined") &&
+				(selectedFullAttributesDataObject == null || selectedFullAttributesDataObject.arrayObjectSet == null || selectedFullAttributesDataObject.arrayObjectSet.length == 0)) {
+					return;
+				}
+
+				var attribute = null;
+
+				if (index > -1 && (attributeID == null || typeof attributeID === "undefined")) {
+					attribute = selectedFullAttributesDataObject.arrayObjectSet[index];
+
+					selectedFullAttributesDataObject.deleteDataByIdx(index);
+				}
+				else if (index < 0 && (attributeID != null && typeof attributeID === "string")) {
+					index = searchline.indexOf(attributeID, attributeElementID);
+
+					if (index < 0) {
+						return;
+					}
+					attribute = selectedFullAttributesDataObject.arrayObjectSet[index];
+
+					selectedFullAttributesDataObject.deleteDataByIdx(index);
+				}
+
+				if (attribute != null) {
+					if (attribute.AttributeID == "IsDcCard") {
+						producttype.unSelect("IsDcCard");
+					}
+					else if (attribute.AttributeID == "IsStyleSearch") {
+						producttype.unSelect("IsStyleSearch");
+					}
+					else if (attribute.AttributeID == "IsSoldOut") {
+						producttype.unSelect("IsSoldOut");
+					}
+					else if (attribute.AttributeID == "IsSellingPlan") {
+						producttype.unSelect("IsSellingPlan");
+					}
+					else if (attribute.AttributeID == "IsShippingPriceFree") {
+						tableheader.unSelect("IsShippingPriceFree");
+
+						if (tableheader.isEmpty()) {
+							tableheader.select("All");
+						}
+					}
+					else if (attribute.AttributeID == "HasNointerestData") {
+						tableheader.unSelect("HasNointerestData");
+
+						if (tableheader.isEmpty()) {
+							tableheader.select("All");
+						}
+					}
+					else if (attribute.AttributeID == "HasCouponData") {
+						tableheader.unSelect("HasCouponData");
+
+						if (tableheader.isEmpty()) {
+							tableheader.select("All");
+						}
+					}
+					else if (attribute.AttributeID == "HasEventData") {
+						tableheader.unSelect("HasEventData");
+
+						if (tableheader.isEmpty()) {
+							tableheader.select("All");
+						}
+					}
+					else if (attribute.AttributeID == "HasPoint") {
+						tableheader.unSelect("HasPoint");
+
+						if (tableheader.isEmpty()) {
+							tableheader.select("All");
+						}
+					}
+				}
+
+				// searchline에는 디폴트값이 노출되지 않기때문에 그 만큼 인덱스를 빼줌.
+				searchline.removeAttr(index - defaultstate.dataObject.arrayObjectSet.length);
+
+				if (searchline.textline.find("li").size() == 0)
+					searchline.hideTextLine();
+			},
+
+			removeAttr: function(index) {
+				searchline.textline.find("li:eq(" + index + ")").remove();
+			},
+
+			indexOf: function(attributeID, attributeElementID) {
+				var attribute = null, index = -1;
+				var array = null;
+
+				if (selectedFullAttributesDataObject == null)
+					return -1;
+
+				array = selectedFullAttributesDataObject.arrayObjectSet;
+
+				if (array == null)
+					return -1;
+
+				for (var i = 0; i < array.length; i++) {
+					attribute = array[i];
+					if (attribute.AttributeID == attributeID && attribute.AttributeElementID == attributeElementID) {
+						return i;
+					}
+				}
+
+				return index;
+			},
+
+			setCount: function(count) {
+				searchline.wrapper.find("#" + id + "_hsTotalCount").html(utils.commaNumber(count));
+			},
+
+			show: function() {
+				searchline.wrapper.filter(":hidden").show();
+			},
+
+			hide: function() {
+				searchline.wrapper.filter(":visible").hide();
+			},
+
+			showTextLine: function() {
+				searchline.textline.parent().filter(":hidden").show();
+			},
+
+			hideTextLine: function() {
+				searchline.textline.parent().filter(":visible").hide();
+			}
+		};
+
+		tableheader = {
+			wrapper: null,
+
+			init: function() {
+				tableheader.wrapper = $header.find("#" + id + "_hdivTableHeader");
+
+				tableheader.wrapper.find("#" + id + "_haZzim").bind("click", function(e) {
+					if (handlers != null && typeof handlers.haZzim_OnClick === "function") {
+						handlers.haZzim_OnClick(this, e);
+					}
+				});
+
+				tableheader.wrapper.find("#" + id + "_haCompare").bind("click", function(e) {
+					if (handlers != null && typeof handlers.haCompare_OnClick === "function") {
+						handlers.haCompare_OnClick(this, e);
+					}
+				});
+
+				tableheader.wrapper.find("#" + id + "_hchbAll").bind("click", function(e) {
+					var $checkbox = $(this);
+
+					if (!$checkbox.attr("checked")) {
+						$checkbox.attr("checked", true);
+						return;
+					}
+
+					tableheader.select("All");
+
+					if (handlers != null && typeof handlers.hchbAll_OnClick === "function") {
+						g.copyToPageState(e);
+
+						handlers.hchbAll_OnClick(this, e);
+					}
+				});
+
+				tableheader.wrapper.find("#" + id + "_hchbIsShippingPriceFree").bind("click", function(e) {
+					var $checked = tableheader.wrapper.find("input:gt(0):checked");
+					if ($checked.size() == 0) {
+						tableheader.select("All");
+					}
+					else {
+						tableheader.wrapper.find("#" + id + "_hchbAll").filter(":checked").attr("checked", false);
+
+						if ($(this).attr("checked")) {
+							tableheader.set("IsShippingPriceFree", "True");
+						}
+						else {
+							tableheader.unSet("IsShippingPriceFree", "True");
+						}
+					}
+
+					if (handlers != null && typeof handlers.hchbIsShippingPriceFree_OnClick === "function") {
+						g.copyToPageState(e);
+						handlers.hchbIsShippingPriceFree_OnClick(this, e);
+					}
+				});
+
+				tableheader.wrapper.find("#" + id + "_hchbHasNointerestData").bind("click", function(e) {
+					var $checked = tableheader.wrapper.find("input:gt(0):checked");
+					if ($checked.size() == 0) {
+						tableheader.select("All");
+					}
+					else {
+						tableheader.wrapper.find("#" + id + "_hchbAll").filter(":checked").attr("checked", false);
+
+						if ($(this).attr("checked")) {
+							tableheader.set("HasNointerestData", "True");
+						}
+						else {
+							tableheader.unSet("HasNointerestData", "True");
+						}
+					}
+
+					if (handlers != null && typeof handlers.hchbHasNointerestData_OnClick === "function") {
+						g.copyToPageState(e);
+						handlers.hchbHasNointerestData_OnClick(this, e);
+					}
+				});
+
+				tableheader.wrapper.find("#" + id + "_hchbHasCouponData").bind("click", function(e) {
+					var $checked = tableheader.wrapper.find("input:gt(0):checked");
+					if ($checked.size() == 0) {
+						tableheader.select("All");
+					}
+					else {
+						tableheader.wrapper.find("#" + id + "_hchbAll").filter(":checked").attr("checked", false);
+
+						if ($(this).attr("checked")) {
+							tableheader.set("HasCouponData", "True");
+						}
+						else {
+							tableheader.unSet("HasCouponData", "True");
+						}
+					}
+
+					if (handlers != null && typeof handlers.hchbHasCouponData_OnClick === "function") {
+						g.copyToPageState(e);
+						handlers.hchbHasCouponData_OnClick(this, e);
+					}
+				});
+
+				tableheader.wrapper.find("#" + id + "_hchbHasEventData").bind("click", function(e) {
+					var $checked = tableheader.wrapper.find("input:gt(0):checked");
+					if ($checked.size() == 0) {
+						tableheader.select("All");
+					}
+					else {
+						tableheader.wrapper.find("#" + id + "_hchbAll").filter(":checked").attr("checked", false);
+
+						if ($(this).attr("checked")) {
+							tableheader.set("HasEventData", "True");
+						}
+						else {
+							tableheader.unSet("HasEventData", "True");
+						}
+					}
+
+					if (handlers != null && typeof handlers.hchbHasEventData_OnClick === "function") {
+						g.copyToPageState(e);
+						handlers.hchbHasEventData_OnClick(this, e);
+					}
+				});
+
+				tableheader.wrapper.find("#" + id + "_hchbHasPoint").bind("click", function(e) {
+					var $checked = tableheader.wrapper.find("input:gt(0):checked");
+					if ($checked.size() == 0) {
+						tableheader.select("All");
+					}
+					else {
+						tableheader.wrapper.find("#" + id + "_hchbAll").filter(":checked").attr("checked", false);
+
+						if ($(this).attr("checked")) {
+							tableheader.set("HasPoint", "True");
+						}
+						else {
+							tableheader.unSet("HasPoint", "True");
+						}
+					}
+
+					if (handlers != null && typeof handlers.hchbHasPoint_OnClick === "function") {
+						g.copyToPageState(e);
+						handlers.hchbHasPoint_OnClick(this, e);
+					}
+				});
+
+				tableheader.wrapper.find(".t03").bind("mouseenter", function(e) {
+					$(this).find("div").show();
+				});
+
+				tableheader.wrapper.find(".t03").bind("mouseleave", function(e) {
+					$(this).find("div").hide();
+				});
+			},
+
+			select: function(benefitType) {
+				if (benefitType == null || typeof benefitType === "undefined")
+					return;
+
+				if (benefitType == "All") {
+					var $checkbox = tableheader.wrapper.find("#" + id + "_hchbAll");
+
+					if (!$checkbox.attr("checked"))
+						$checkbox.attr("checked", true);
+
+					tableheader.wrapper.find("input:gt(0):checked").attr("checked", false);
+
+					tableheader.set("All");
+				}
+				else {
+					var $checked = null;
+
+					tableheader.wrapper.find("#" + id + "_hchb" + benefitType).filter(":not(checked)").attr("checked", true);
+					$checked = tableheader.wrapper.find("input:gt(0):checked");
+
+					if ($checked.size() == 0) {
+						tableheader.wrapper.find("#" + id + "_hchbAll").attr("checked", true);
+						tableheader.wrapper.find("input:gt(0):checked").attr("checked", false);
+
+						tableheader.set("All");
+					}
+					else {
+						tableheader.wrapper.find("#" + id + "_hchbAll").filter(":checked").attr("checked", false);
+						tableheader.set(benefitType);
+					}
+				}
+			},
+
+			set: function(benefitType) {
+				if (benefitType == null || typeof benefitType === "undefined")
+					return;
+
+				if (benefitType == "All") {
+					pagestate.setIsShippingPriceFree(false);
+					pagestate.setHasNointerestData(false);
+					pagestate.setHasCouponData(false);
+					pagestate.setHasEventData(false);
+					pagestate.setHasPoint(false);
+
+					searchline.popAttribute("IsShippingPriceFree", "True");
+					searchline.popAttribute("HasNointerestData", "True");
+					searchline.popAttribute("HasCouponData", "True");
+					searchline.popAttribute("HasEventData", "True");
+					searchline.popAttribute("HasPoint", "True");
+				}
+				else {
+					switch (benefitType) {
+						case "IsShippingPriceFree":
+							pagestate.setIsShippingPriceFree(true);
+							searchline.pushAttribute("IsShippingPriceFree", "True");
+							break;
+						case "HasNointerestData":
+							pagestate.setHasNointerestData(true);
+							searchline.pushAttribute("HasNointerestData", "True");
+							break;
+						case "HasCouponData":
+							pagestate.setHasCouponData(true);
+							searchline.pushAttribute("HasCouponData", "True");
+							break;
+						case "HasEventData":
+							pagestate.setHasEventData(true);
+							searchline.pushAttribute("HasEventData", "True");
+							break;
+						case "HasPoint":
+							pagestate.setHasPoint(true);
+							searchline.pushAttribute("HasPoint", "True");
+							break;
+						default:
+							break;
+					}
+				}
+			},
+
+			unSelect: function(benefitType) {
+				if (benefitType == null || typeof benefitType === "undefined" || (benefitType != null && benefitType == "All"))
+					return;
+
+				if (benefitType == "All") {
+					var $checkbox = tableheader.wrapper.find("#" + id + "_hchbAll");
+
+					if (!$checkbox.attr("checked"))
+						$checkbox.attr("checked", true);
+
+					tableheader.wrapper.find("input:gt(0):checked").attr("checked", false);
+
+					tableheader.unSet("All");
+				}
+				else {
+					var $checked = tableheader.wrapper.find("input:gt(0):checked");
+
+					if ($checked.size() == 0) {
+						tableheader.wrapper.find("#" + id + "_hchbAll").attr("checked", true);
+						tableheader.wrapper.find("input:gt(0):checked").attr("checked", false);
+
+						tableheader.unSet("All");
+					}
+					else {
+						tableheader.wrapper.find("#" + id + "_hchbAll").filter(":checked").attr("checked", false);
+						tableheader.wrapper.find("#" + id + "_hchb" + benefitType).filter(":not(checked)").attr("checked", false);
+
+						tableheader.unSet(benefitType);
+					}
+				}
+			},
+
+			unSet: function(benefitType) {
+				if (benefitType == null || typeof benefitType === "undefined")
+					return;
+
+				if (benefitType == "All") {
+					pagestate.setIsShippingPriceFree(false);
+					pagestate.setHasNointerestData(false);
+					pagestate.setHasCouponData(false);
+					pagestate.setHasEventData(false);
+					pagestate.setHasPoint(false);
+
+					searchline.popAttribute("IsShippingPriceFree", "True");
+					searchline.popAttribute("HasNointerestData", "True");
+					searchline.popAttribute("HasCouponData", "True");
+					searchline.popAttribute("HasEventData", "True");
+					searchline.popAttribute("HasPoint", "True");
+				}
+				else {
+					switch (benefitType) {
+						case "IsShippingPriceFree":
+							pagestate.setIsShippingPriceFree(false);
+							searchline.popAttribute("IsShippingPriceFree", "True");
+							break;
+						case "HasNointerestData":
+							pagestate.setHasNointerestData(false);
+							searchline.popAttribute("HasNointerestData", "True");
+							break;
+						case "HasCouponData":
+							pagestate.setHasCouponData(false);
+							searchline.popAttribute("HasCouponData", "True");
+							break;
+						case "HasEventData":
+							pagestate.setHasEventData(false);
+							searchline.popAttribute("HasEventData", "True");
+							break;
+						case "HasPoint":
+							pagestate.setHasPoint(false);
+							searchline.popAttribute("HasPoint", "True");
+							break;
+						default:
+							break;
+					}
+				}
+			},
+
+			isEmpty: function() {
+				return tableheader.wrapper.find("input:gt(0):checked").size() == 0;
+			},
+
+			isSelect: function(benefitType) {
+				if (benefitType == null || typeof benefitType === "undefined")
+					return;
+
+				return tableheader.wrapper.find("#" + id + "_hchb" + benefitType).attr("checked");
+			},
+
+			show: function(buttonType) {
+				tableheader.wrapper.filter(":hidden").show();
+
+				if (buttonType != null && typeof buttonType === "string") {
+					tableheader.wrapper.find("#" + id + "_ha" + buttonType + ":hidden").show();
+				}
+				else if (buttonType != null && typeof buttonType === "object") {
+					$(buttonType).each(function(index, type) {
+						tableheader.wrapper.find("#" + id + "_hli" + type).show();
+					});
+				}
+			},
+
+			hide: function(buttonType) {
+				if (buttonType == null || typeof buttonType === "undefined") {
+					tableheader.wrapper.filter(":visible").hide();
+				}
+				else if (buttonType != null && typeof buttonType === "string") {
+					tableheader.wrapper.find("#" + id + "_ha" + buttonType + ":visible").hide();
+				}
+				else if (buttonType != null && typeof buttonType === "object") {
+					$(buttonType).each(function(index, type) {
+						tableheader.wrapper.find("#" + id + "_hli" + type).hide();
+					});
+				}
+			},
+
+			addClass: function(className) {
+				if (!tableheader.wrapper.hasClass(className)) {
+					tableheader.wrapper.addClass(className);
+				}
+			},
+
+			removeClass: function(className) {
+				if (tableheader.wrapper.hasClass(className)) {
+					tableheader.wrapper.removeClass(className);
+				}
+			}
+		};
+
+		relatedkeyword = {
+			wrapper: null,
+
+			init: function() {
+				// 원래 키워드를 백업
+				relatedkeyword.data.backupOriginalKeyword = pagestate.getKeyword();
+
+				relatedkeyword.wrapper = $header.find("#" + id + "_hdivRelatedKeywords");
+
+				// '더보기' 버튼
+				relatedkeyword.wrapper.find("#" + id + "_haRelatedKeywordsClose").bind("click", function(e) {
+					if (relatedkeyword.wrapper.hasClass("rKwordOn")) {
+						relatedkeyword.wrapper.removeClass("rKwordOn");
+						$(this).html('더보기');
+					}
+					else {
+						relatedkeyword.wrapper.addClass("rKwordOn")
+						$(this).html('닫기');
+					}
+				});
+
+				// 연관키워드 링크 연결
+				relatedkeyword.wrapper.find("a[relatedKeyword]").bind("click", function(e) {
+					if (handlers != null && typeof handlers.haRelatedKeyword_OnClick === "function") {
+						if ($(this).hasClass('on')) {
+							$(this).removeClass('on');
+							pagestate.setKeyword(relatedkeyword.data.backupOriginalKeyword);
+						}
+						else {
+							relatedkeyword.wrapper.find("a[relatedKeyword]").attr('class', '');
+							$(this).addClass('on');
+							pagestate.setKeyword($(this).attr('relatedKeyword'));
+						}
+
+						g.copyToPageState(e);
+						handlers.haRelatedKeyword_OnClick(this, e);
+					}
+				});
+
+
+			},
+
+			data: { backupOriginalKeyword: '' }
+		};
+
+		var utils = {
+			commaNumber: function(num) {
+
+				if (num < 0) { num *= -1; var minus = true }
+				else var minus = false
+
+				var dotPos = (num + "").split(".")
+				var dotU = dotPos[0]
+				var dotD = dotPos[1]
+				var commaFlag = dotU.length % 3
+
+				if (commaFlag) {
+					var out = dotU.substring(0, commaFlag)
+					if (dotU.length > 3) out += ","
+				}
+				else var out = ""
+
+				for (var i = commaFlag; i < dotU.length; i += 3) {
+					out += dotU.substring(i, i + 3)
+					if (i < dotU.length - 3) out += ","
+				}
+
+				if (minus) out = "-" + out
+				if (dotD) return out + "." + dotD
+				else return out
+			}
+		};
+
+		pagestate.init(options.pageState);
+		// 초기화를 위한 값 설정
+		defaultstate.init(pagestate.getSelectedAttributes());
+
+		tab.init();
+		viewtype.init();
+		pagesizer.init();
+		sorttype.init();
+		producttype.init();
+		searchline.init();
+		tableheader.init();
+		relatedkeyword.init();
+
+		searchline.setAttributes(pagestate.getSelectedAttributes());
+
+		g.Tab = tab;
+		g.ViewType = viewtype;
+		g.PageSizer = pagesizer;
+		g.SearchLine = searchline;
+		g.SortType = sorttype;
+		g.ProductType = producttype;
+		g.TableHeader = tableheader;
+
+		return g;
+	}
+})(jQuery);
+
+
+OS2.Application.ListHeader = function() { };
+
+OS2.Application.ListHeader.init = function(id, eventHandler, gPageState) {
+
+	if (document.getElementById(id) == null || typeof document.getElementById(id) === "undefined") {
+		return null;
+	}
+
+	return $("#" + id).ListHeader(id, {
+		handler: eventHandler,
+		pageState : gPageState
+	});
+};

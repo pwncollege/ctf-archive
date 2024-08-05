@@ -1,0 +1,1251 @@
+﻿///<reference path="../Common/Scripts/jquery-1.3.2-vsdoc2.js" />
+
+(function($) {
+	$.fn.searchOptionSelector = function(optionSelector) {
+		// 초기 SelectedAttributes 값 ( 취소버튼시 원복을 위해 저장)
+		optionSelector.defaultSelectedAttributes = decodeURIComponent(optionSelector.PageState.SelectedAttributes);
+
+		// 검색 패러미터 컨테이너
+		var selectedFullAttributeDataObject;
+		selectedFullAttributeDataObject = new AttributeDataObject({ "InputData": "" });
+
+		// 브랜드 UI용 컨테이너
+		var selectedBrandAttributeDataObject;
+		selectedBrandAttributeDataObject = new AttributeDataObject(null);
+		selectedBrandAttributeDataObject.appendDataWithArray(selectedFullAttributeDataObject.getBrands());
+
+		// 쇼핑몰 UI용 컨테이너
+		var selectedMallAttributeDataObject;
+		selectedMallAttributeDataObject = new AttributeDataObject(null);
+		selectedBrandAttributeDataObject.appendDataWithArray(selectedFullAttributeDataObject.getMalls());
+
+		// 쇼핑몰 검색 분리 상태
+		optionSelector.IsMallListingSeparated = $("#" + optionSelector.ID).attr("IsMallListingSeparated");
+
+		// 쇼핑몰 리스트 영역 이름
+		if (optionSelector.IsMallListingSeparated == "True")
+			optionSelector.divMallList = optionSelector.ID + "_divMallListSeparated";
+		else if (optionSelector.IsMallListingSeparated == "False")
+			optionSelector.divMallList = optionSelector.ID + "_divMallListInOne";
+
+		// 브랜드 검색 페이징 변수
+		optionSelector.BrandPageIndex = 0;
+		optionSelector.BrandPageSize = $("#" + optionSelector.ID).attr("BrandPageSize");
+		optionSelector.BrandClosedWindowItemMaxCount = $("#" + optionSelector.ID).attr("BrandClosedWindowItemMaxCount");
+
+		// 쇼핑몰 검색 페이징 변수
+		optionSelector.MallPageIndex = 0;
+		optionSelector.MallPageSize = $("#" + optionSelector.ID).attr("MallPageSize");
+		optionSelector.MallClosedWindowItemMaxCount = $("#" + optionSelector.ID).attr("MallClosedWindowItemMaxCount");
+
+		// 쇼핑몰 검색 정렬 기준 저장
+		optionSelector.MallIdInOneSort = "";
+		optionSelector.MallIdIsNotSohoSort = "";
+		optionSelector.MallIdIsSohoSort = "";
+
+		// 퀵바이 / SRP 여부
+		optionSelector.SRPTabType = $("#" + optionSelector.ID).attr("SRPTabType");
+
+		// 검색버튼 존재 여부
+		if ($("#" + optionSelector.ID + "_divBtnListBrand").length > 0) {
+			optionSelector.HasBrandSearchBtn = true;
+		} else {
+			optionSelector.HasBrandSearchBtn = false;
+			$("#" + optionSelector.ID).find("#btnCloseBrand").hide();
+		}
+
+		if ($("#" + optionSelector.ID + "_divBtnListMall").length > 0) {
+			optionSelector.HasMallSearchBtn = true;
+		} else {
+			optionSelector.HasMallSearchBtn = false;
+			$("#" + optionSelector.ID).find("#btnCloseMall").hide();
+		}
+
+		// 쇼핑몰 리스트 / 브랜드 리스트 AjaxCall Url
+		optionSelector.MallListAjaxCallUrl = $("#" + optionSelector.ID).attr("MallListAjaxCallUrl");
+		optionSelector.BrandListAjaxCallUrl = $("#" + optionSelector.ID).attr("BrandListAjaxCallUrl");
+
+		// 전체 데이터 컨테이너에 항목 입력
+		var insertFullDataContainerItem = function(AttributeID, AttributeName, AttributeElementID, AttributeElementName) {
+			selectedFullAttributeDataObject.insertData(AttributeID, AttributeElementID, AttributeName, AttributeElementName);
+		};
+
+		// 전체 데이터 컨테이너에서 항목 삭제
+		var deleteFullDataContainerItem = function(AttributeID, AttributeElementID) {
+			// value, type 기준 삭제
+			if (AttributeID != undefined && AttributeElementID != undefined) {
+				selectedFullAttributeDataObject.deleteDataByAttrIdAttrElementId(AttributeID, AttributeElementID);
+			}
+			// AttributeID 기준 삭제
+			else if (AttributeID != undefined && AttributeElementID == undefined) {
+				selectedFullAttributeDataObject.deleteDataByAttrID(AttributeID);
+			}
+			// AttributeElementID 기준 삭제
+			else if (AttributeID == undefined && AttributeElementID != undefined) {
+				selectedFullAttributeDataObject.deleteDataByAttrElementID(AttributeElementID);
+			}
+		};
+
+		// 전체 데이터 컨테이너에 브랜드 컨테이너의 내용을 적용 (브랜드 항목에만 영향을 줌)
+		var applyBrandDataContainerItemToFullData = function() {
+			// 풀 데이터 상의 모든 브랜드 삭제
+			deleteFullDataContainerItem("Brand");
+
+			// 삭제 후 append
+			selectedFullAttributeDataObject.appendDataWithArray(selectedBrandAttributeDataObject.arrayObjectSet);
+		};
+
+		// 전체 데이터 컨테이너에서 브랜드 컨테이너의 내용을 재추출
+		var extractBrandDataContainerItemFromFullData = function() {
+			var brandArray = selectedFullAttributeDataObject.getBrands();
+
+			selectedBrandAttributeDataObject.initData("");
+			selectedBrandAttributeDataObject.appendDataWithArray(brandArray);
+		};
+
+		// 전체 데이터 컨테이너에 쇼핑몰 컨테이너의 내용을 적용 (쇼핑몰 항목에만 영향을 줌)
+		var applyMallDataContainerItemToFullData = function() {
+			// 풀 데이터 상의 모든 쇼핑몰 삭제
+			deleteFullDataContainerItem("Mall");
+
+			// 삭제 후 append
+			selectedFullAttributeDataObject.appendDataWithArray(selectedMallAttributeDataObject.arrayObjectSet);
+		};
+
+		// 전체 데이터 컨테이너에서 쇼핑몰 컨테이너의 내용을 재추출
+		var extractMallDataContainerItemFromFullData = function() {
+			var brandArray = selectedFullAttributeDataObject.getMalls();
+
+			selectedMallAttributeDataObject.initData("");
+			selectedMallAttributeDataObject.appendDataWithArray(brandArray);
+		};
+
+		// 브랜드 데이터 컨테이너에 항목 입력
+		var insertBrandDataContainerItem = function(AttributeID, AttributeName, AttributeElementID, AttributeElementName) {
+			// 데이터 insert 시 항상 다음 페이지로 나아가야하는지 체크
+			if (selectedBrandAttributeDataObject.hasNextPage(optionSelector.BrandPageIndex, optionSelector.BrandPageSize)) {
+				optionSelector.BrandPageIndex = optionSelector.BrandPageIndex + 1;
+			}
+
+			selectedBrandAttributeDataObject.insertData(AttributeID, AttributeElementID, AttributeName, AttributeElementName);
+		};
+
+		// 브랜드 데이터 컨테이너에서 항목 삭제
+		var deleteBrandDataContainerItem = function(AttributeID, AttributeElementID) {
+
+			// value, type 기준 삭제
+			if (AttributeID != undefined && AttributeElementID != undefined) {
+				selectedBrandAttributeDataObject.deleteDataByAttrIdAttrElementId(AttributeID, AttributeElementID);
+			}
+			// AttributeID 기준 삭제
+			else if (AttributeID != undefined && AttributeElementID == undefined) {
+				selectedBrandAttributeDataObject.deleteDataByAttrID(AttributeID);
+			}
+			// AttributeElementID 기준 삭제
+			else if (AttributeID == undefined && AttributeElementID != undefined) {
+				selectedBrandAttributeDataObject.deleteDataByAttrElementID(AttributeElementID);
+			}
+
+			// 데이터 delete 시 항상 전 페이지로 돌아가야하는지 체크
+			if (selectedBrandAttributeDataObject.hasNoItemsInThisPage(optionSelector.BrandPageIndex, optionSelector.BrandPageSize)) {
+				optionSelector.BrandPageIndex = optionSelector.BrandPageIndex - 1;
+			}
+		};
+
+		// 쇼핑몰 데이터 컨테이너에 항목 입력
+		var insertMallDataContainerItem = function(AttributeID, AttributeName, AttributeElementID, AttributeElementName) {
+			// 데이터 insert 시 항상 다음 페이지로 나아가야하는지 체크
+			if (selectedMallAttributeDataObject.hasNextPage(optionSelector.MallPageIndex, optionSelector.MallPageSize)) {
+				optionSelector.MallPageIndex = optionSelector.MallPageIndex + 1;
+			}
+
+			selectedMallAttributeDataObject.insertData(AttributeID, AttributeElementID, AttributeName, AttributeElementName);
+		};
+
+		// 쇼핑몰 데이터 컨테이너에서 항목 삭제
+		var deleteMallDataContainerItem = function(AttributeID, AttributeElementID) {
+			// value, type 기준 삭제
+			if (AttributeID != undefined && AttributeElementID != undefined) {
+				selectedMallAttributeDataObject.deleteDataByAttrIdAttrElementId(AttributeID, AttributeElementID);
+			}
+			// AttributeID 기준 삭제
+			else if (AttributeID != undefined && AttributeElementID == undefined) {
+				selectedMallAttributeDataObject.deleteDataByAttrID(AttributeID);
+			}
+			// AttributeElementID 기준 삭제
+			else if (AttributeID == undefined && AttributeElementID != undefined) {
+				selectedMallAttributeDataObject.deleteDataByAttrElementID(AttributeElementID);
+			}
+
+			// 데이터 delete 시 항상 전 페이지로 돌아가야하는지 체크
+			if (selectedMallAttributeDataObject.hasNoItemsInThisPage(optionSelector.MallPageIndex, optionSelector.MallPageSize)) {
+				optionSelector.MallPageIndex = optionSelector.MallPageIndex - 1;
+			}
+		};
+
+		// selectedAttributeDataObject 들을 selectedAttr 기준으로 수정
+		var initAttributeData = function(selectedAttr, IsChangedObject) {
+			selectedFullAttributeDataObject = new AttributeDataObject({ "InputData": selectedAttr });
+
+			// 브랜드 수정여부 체크 및 데이터 교환
+			var brandArray = selectedFullAttributeDataObject.getBrands();
+
+			if (selectedBrandAttributeDataObject.compareWith(brandArray) == 0) {
+				IsChangedObject.Brand = false;
+			}
+			else {
+				// 브랜드 UI용 컨테이너
+				selectedBrandAttributeDataObject.initData("");
+				selectedBrandAttributeDataObject.appendDataWithArray(brandArray);
+
+				IsChangedObject.Brand = true;
+			}
+
+			// 쇼핑몰 수정여부 체크 및 데이터 교환
+			var mallArray = selectedFullAttributeDataObject.getMalls();
+
+			if (selectedMallAttributeDataObject.compareWith(mallArray) == 0) {
+				IsChangedObject.Mall = false;
+			}
+			else {
+				// 쇼핑몰 UI용 컨테이너
+				selectedMallAttributeDataObject.initData("");
+				selectedMallAttributeDataObject.appendDataWithArray(mallArray);
+
+				IsChangedObject.Mall = true;
+			}
+		};
+
+
+		// 선택된 브랜드 목록의 모든 항목 다시 바인드 및 그리기
+		var redrawBrandSelectedAttr = function() {
+			// 브랜드 리스트 상의 모든 체크 해제
+			$("#" + optionSelector.ID).find("#divBrandCheckList").find("input").attr("checked", false);
+			$("#" + optionSelector.ID).find("#divBrandCheckList").find("label").attr("class", "");
+
+			for (var idx = 0; idx < selectedBrandAttributeDataObject.arrayObjectSet.length; idx++) {
+				$("#" + optionSelector.ID).find("#divBrandCheckList").find("li[AttributeElementID=" + selectedBrandAttributeDataObject.arrayObjectSet[idx].AttributeElementID + "]").find("input").attr("checked", true);
+				$("#" + optionSelector.ID).find("#divBrandCheckList").find("li[AttributeElementID=" + selectedBrandAttributeDataObject.arrayObjectSet[idx].AttributeElementID + "]").find("label").attr("class", "checkbox-checked");
+			}
+		};
+
+		// 선택된 쇼핑몰 목록의 모든 항목 다시 바인드 및 그리기
+		var redrawMallSelectedAttr = function() {
+			// 쇼핑몰 리스트 상의 모든 체크 해제
+			$("#" + optionSelector.ID).find("#" + optionSelector.divMallList).find("input").attr("checked", false);
+			$("#" + optionSelector.ID).find("#" + optionSelector.divMallList).find("label").attr("class", "");
+
+			for (var idx = 0; idx < selectedMallAttributeDataObject.arrayObjectSet.length; idx++) {
+				$("#" + optionSelector.ID).find("#" + optionSelector.divMallList).find("li[AttributeElementID=" + selectedMallAttributeDataObject.arrayObjectSet[idx].AttributeElementID + "]").find("input").attr("checked", true);
+				$("#" + optionSelector.ID).find("#" + optionSelector.divMallList).find("li[AttributeElementID=" + selectedMallAttributeDataObject.arrayObjectSet[idx].AttributeElementID + "]").find("label").attr("class", "checkbox-checked");
+			}
+		};
+
+		// 브랜드 창이 열렸는지 확인할 외부 메소드
+		optionSelector.isBrandWindowOpened = function() {
+			if ($("#" + optionSelector.ID + "_divBrandList").hasClass("cntVisible")) {
+				return true;
+			}
+			else {
+				return false;
+			}
+		};
+
+		// 쇼핑몰 창이 열렸는지 확인할 외부 메소드
+		optionSelector.isMallWindowOpened = function() {
+			if ($("#" + optionSelector.ID + "_divMallList").hasClass("cntVisible")) {
+				return true;
+			}
+			else {
+				return false;
+			}
+		};
+
+		// 브랜드 창 더보기
+		var openBrandWindow = function() {
+			// 창이 열릴때 데이터 다시 로딩
+			brandListCall("count");
+
+			$("#" + optionSelector.ID + "_divBrandList").removeClass("cntHidden");
+			$("#" + optionSelector.ID + "_divBrandList").addClass("cntVisible");
+		};
+
+		// 외부 노출용 함수 - 브랜드 창 열기
+		optionSelector.openBrandWindow = function() {
+			openBrandWindow();
+		}
+
+		// 브랜드 창 닫기
+		var closeBrandWindow = function() {
+			// 창의 스크롤을 맨 위로 올리고 창을 닫음
+			$("#" + optionSelector.ID).find("#divBrandCheckList").find("ul").scrollTop(0);
+
+			$("#" + optionSelector.ID + "_divBrandList").removeClass("cntVisible");
+			$("#" + optionSelector.ID + "_divBrandList").addClass("cntHidden");
+
+			// 기존 전체 데이터로 부터 원복
+			extractBrandDataContainerItemFromFullData();
+
+			// 브랜드 리스트 상의 모든 체크 해제
+			$("#" + optionSelector.ID).find("#divBrandCheckList").find("input").attr("checked", false);
+			$("#" + optionSelector.ID).find("#divBrandCheckList").find("label").attr("class", "");
+
+			// 브랜드 리스트 상에 체크된 목록 다시 그리기
+			brandListAnchorCheckedBind();
+
+			// 선택한 브랜드 UI 클리어
+			optionSelector.BrandPageIndex = 0;
+			updateSelectedBrandUI(optionSelector.BrandPageIndex, optionSelector.BrandPageSize);
+			//      }
+
+			// Event 발생
+			if (optionSelector.eventHandlers.BrandList_OnClose != null) {
+				var eventArg = new Object();
+
+				eventArg.SelectedAttributes = selectedFullAttributeDataObject.outData();
+
+				optionSelector.eventHandlers.BrandList_OnClose(document.getElementById(optionSelector.ID), eventArg);
+			}
+		};
+
+		// 외부 노출용 함수 - 브랜드 창 닫기
+		optionSelector.closeBrandWindow = function() {
+			closeBrandWindow();
+		}
+
+		// 쇼핑몰 창 더보기
+		var openMallWindow = function(SeparationOption) {
+			// 창이 열릴때 데이터 다시 로딩
+			mallListCall("count", (SeparationOption == "False") ? "InOne" : "IsNotSoho");
+
+
+			if (SeparationOption == "True") {
+				$("#" + optionSelector.ID).find("#lblOpenedTitleIsNotSoho").show();
+				$("#" + optionSelector.ID).find("#divOpenedTitleIsSoho").show();
+
+				$("#" + optionSelector.ID).find("#lblClosedTitleIsNotSoho").hide();
+				$("#" + optionSelector.ID).find("#lblClosedTitleIsSoho").hide();
+			}
+
+			$("#" + optionSelector.ID + "_divMallList").removeClass("cntHidden");
+			$("#" + optionSelector.ID + "_divMallList").addClass("cntVisible");
+		};
+
+		// 외부 노출용 함수 - 쇼핑몰 창 열기
+		optionSelector.openMallWindow = function() {
+			openMallWindow(optionSelector.IsMallListingSeparated);
+		}
+
+
+		// 쇼핑몰 창 닫기
+		var closeMallWindow = function(SeparationOption) {
+			// 창의 스크롤을 맨 위로 올리고 창을 닫음
+			$("#" + optionSelector.ID + "_divMallList").find(".s_list").find("ul").scrollTop(0);
+
+			if (SeparationOption == "True") {
+				$("#" + optionSelector.ID).find("#lblOpenedTitleIsNotSoho").hide();
+				$("#" + optionSelector.ID).find("#divOpenedTitleIsSoho").hide();
+
+				$("#" + optionSelector.ID).find("#lblClosedTitleIsNotSoho").show();
+				$("#" + optionSelector.ID).find("#lblClosedTitleIsSoho").show();
+			}
+
+			$("#" + optionSelector.ID + "_divMallList").removeClass("cntVisible");
+			$("#" + optionSelector.ID + "_divMallList").addClass("cntHidden");
+
+			// 기존 전체 데이터로 부터 원복
+			extractMallDataContainerItemFromFullData();
+
+			// 쇼핑몰 리스트 상의 모든 체크 해제
+			$("#" + optionSelector.ID).find("#" + optionSelector.divMallList).find("input").attr("checked", false);
+			$("#" + optionSelector.ID).find("#" + optionSelector.divMallList).find("label").attr("class", "");
+
+			// 쇼핑몰 리스트 상에 체크된 목록 다시 그리기
+			mallListAnchorCheckedBind();
+
+			// 선택한 쇼핑몰 UI 클리어
+			optionSelector.MallPageIndex = 0;
+			updateSelectedMallUI(optionSelector.MallPageIndex, optionSelector.MallPageSize);
+			//      }
+
+			// Event 발생
+			if (optionSelector.eventHandlers.MallList_OnClose != null) {
+				var eventArg = new Object();
+
+				eventArg.SelectedAttributes = selectedFullAttributeDataObject.outData();
+
+				optionSelector.eventHandlers.MallList_OnClose(document.getElementById(optionSelector.ID), eventArg);
+			}
+		};
+
+		// 외부 노출용 함수 - 쇼핑몰 창 닫기
+		optionSelector.closeMallWindow = function() {
+			closeMallWindow();
+		}
+
+		// 브랜드 닫기 버튼 바인드
+		$("#" + optionSelector.ID).find("#btnCloseBrand").bind("click", function() {
+			closeBrandWindow();
+		});
+
+		// 브랜드 취소 버튼 바인드
+		$("#" + optionSelector.ID).find("#btnCancleBrand").bind("click", function() {
+			closeBrandWindow();
+		});
+
+		// 쇼핑몰 닫기 버튼 바인드
+		$("#" + optionSelector.ID).find("#btnCloseMall").bind("click", function() {
+			closeMallWindow(optionSelector.IsMallListingSeparated);
+		});
+
+		// 쇼핑몰 취소 버튼 바인드
+		$("#" + optionSelector.ID).find("#btnCancleMall").bind("click", function() {
+			closeMallWindow(optionSelector.IsMallListingSeparated);
+		});
+
+		// 하단 취소 버튼 바인드
+		$("#" + optionSelector.ID).find("#btnCancleBelow").bind("click", function() {
+			closeMallWindow(optionSelector.IsMallListingSeparated);
+		});
+
+		// 브랜드 검색 버튼 바인드
+		$("#" + optionSelector.ID).find("#btnSearchBrand").bind("click", function() {
+			// 기타 옵션 삭제
+			deleteBrandListOptions();
+
+			// 전체 데이터에 브랜드 데이터 적용
+			applyBrandDataContainerItemToFullData();
+
+			// 쇼핑몰 창이 열린 경우, 쇼핑몰 데이터 역시 반영
+			if (optionSelector.isMallWindowOpened()) {
+				applyMallDataContainerItemToFullData();
+			}
+
+			// 원복 지점 생성
+			optionSelector.defaultSelectedAttributes = selectedFullAttributeDataObject.outData();
+
+			if (optionSelector.eventHandlers.SearchBrand_OnClick != null) {
+				var eventArg = new Object();
+
+				eventArg.SelectedAttributes = optionSelector.defaultSelectedAttributes;
+
+				optionSelector.eventHandlers.SearchBrand_OnClick(document.getElementById(optionSelector.ID), eventArg);
+			}
+		});
+
+		// 쇼핑몰 검색 버튼 바인드
+		$("#" + optionSelector.ID).find("#btnSearchMall").bind("click", function() {
+			// 기타 옵션 삭제
+			deleteMallListOptions();
+
+			// 전체 데이터에 쇼핑몰 데이터 적용
+			applyMallDataContainerItemToFullData();
+
+			// 브랜드 창이 열린 경우, 브랜드 데이터 역시 반영
+			if (optionSelector.isBrandWindowOpened()) {
+				applyBrandDataContainerItemToFullData();
+			}
+
+			// 원복 지점 생성
+			optionSelector.defaultSelectedAttributes = selectedFullAttributeDataObject.outData();
+
+			if (optionSelector.eventHandlers.SearchMall_OnClick != null) {
+				var eventArg = new Object();
+
+				eventArg.SelectedAttributes = optionSelector.defaultSelectedAttributes;
+
+				optionSelector.eventHandlers.SearchMall_OnClick(document.getElementById(optionSelector.ID), eventArg);
+			}
+		});
+
+		// 하단 검색 버튼 바인드
+		$("#" + optionSelector.ID).find("#btnSearchBelow").bind("click", function() {
+			// 기타 옵션 삭제
+			deleteBrandListOptions();
+			deleteMallListOptions();
+
+			// 전체 데이터에 쇼핑몰 및 브랜드 데이터 적용
+			applyBrandDataContainerItemToFullData();
+			applyMallDataContainerItemToFullData();
+
+			// 원복 지점 생성
+			optionSelector.defaultSelectedAttributes = selectedFullAttributeDataObject.outData();
+
+			if (optionSelector.eventHandlers.SearchBelow_OnClick != null) {
+				var eventArg = new Object();
+
+				eventArg.SelectedAttributes = optionSelector.defaultSelectedAttributes;
+
+				optionSelector.eventHandlers.SearchBelow_OnClick(document.getElementById(optionSelector.ID), eventArg);
+			}
+		});
+
+		// 페이징 버튼에 이벤트 바인드 (브랜드)
+		$("#" + optionSelector.ID).find("#btnRollingBrand").find("a[pageIndex]").bind("click", function() {
+			if ($(this).attr("pageIndex") == -1)
+				return;
+
+			optionSelector.BrandPageIndex = $(this).attr("pageIndex");
+			updateSelectedBrandUI(optionSelector.BrandPageIndex, optionSelector.BrandPageSize);
+		});
+
+		// 페이징 버튼에 이벤트 바인드 (쇼핑몰)
+		$("#" + optionSelector.ID).find("#btnRollingMall").find("a[pageIndex]").bind("click", function() {
+			if ($(this).attr("pageIndex") == -1)
+				return;
+
+			optionSelector.MallPageIndex = $(this).attr("pageIndex");
+			updateSelectedMallUI(optionSelector.MallPageIndex, optionSelector.MallPageSize);
+		});
+
+		// 전체해제 버튼 바인드 (브랜드)
+		$("#" + optionSelector.ID).find("#btnRefreshBrand").bind("click", function() {
+			selectedBrandAttributeDataObject.initData("");
+			deleteFullDataContainerItem("Brand");
+
+			// 브랜드 리스트 상의 모든 체크 해제
+			$("#" + optionSelector.ID).find("#divBrandCheckList").find("input").attr("checked", false);
+			$("#" + optionSelector.ID).find("#divBrandCheckList").find("label").attr("class", "");
+
+			// 선택한 브랜드 UI 클리어
+			optionSelector.BrandPageIndex = 0;
+			updateSelectedBrandUI(optionSelector.BrandPageIndex, optionSelector.BrandPageSize);
+		});
+
+		// 전체해제 버튼 바인드 (쇼핑몰)
+		$("#" + optionSelector.ID).find("#btnRefreshMall").bind("click", function() {
+			selectedMallAttributeDataObject.initData("");
+			deleteFullDataContainerItem("Mall");
+
+			// 쇼핑몰 리스트 상의 모든 체크 해제
+			$("#" + optionSelector.ID).find("#" + optionSelector.divMallList).find("input").attr("checked", false);
+			$("#" + optionSelector.ID).find("#" + optionSelector.divMallList).find("label").attr("class", "");
+
+			// 선택한 쇼핑몰 UI 클리어
+			optionSelector.MallPageIndex = 0;
+			updateSelectedMallUI(optionSelector.MallPageIndex, optionSelector.MallPageSize);
+		});
+
+
+		var brandListAnchorBind = function() {
+			// 브랜드 리스트 체크박스 바인드
+			$("#" + optionSelector.ID).find("#divBrandCheckList").find("input").bind("click", function() {
+
+				if ($(this).parent().find("label").attr("class") == "") {
+					$(this).parent().find("label").attr("class", "checkbox-checked");
+
+					// 하단부 선택한 브랜드 데이터 입력
+					insertBrandDataContainerItem($(this).parent().attr("AttributeID"), $(this).parent().attr("AttributeName"), $(this).parent().attr("AttributeElementID"), $(this).parent().attr("AttributeElementName"));
+
+					// 윈도우가 닫힌 경우 혹은 검색버튼이 없는 경우는 실제 fullData에도 반영
+					if (!optionSelector.isBrandWindowOpened() || !optionSelector.HasBrandSearchBtn) {
+						insertFullDataContainerItem($(this).parent().attr("AttributeID"), $(this).parent().attr("AttributeName"), $(this).parent().attr("AttributeElementID"), $(this).parent().attr("AttributeElementName"));
+
+						// 쇼핑몰 윈도우가 열려있고 기존 몰데이터가 바뀐 경우는 다시 원복
+						if (optionSelector.isMallWindowOpened() && selectedMallAttributeDataObject.compareWith(selectedFullAttributeDataObject.getMalls()) < 0) {
+							extractMallDataContainerItemFromFullData();
+
+							// 선택된 쇼핑몰 목록의 모든 항목 다시 바인드 및 그리기
+							redrawMallSelectedAttr();
+
+							// 선택한 쇼핑몰 바인드
+							optionSelector.MallPageIndex = selectedMallAttributeDataObject.getMaxPageIndex(optionSelector.MallPageSize);
+							updateSelectedMallUI(optionSelector.MallPageIndex, optionSelector.MallPageSize);
+						}
+					}
+				}
+				else {
+					$(this).parent().find("label").attr("class", "");
+
+					// 하단부 선택한 브랜드 데이터 삭제
+					deleteBrandDataContainerItem($(this).parent().attr("AttributeID"), $(this).parent().attr("AttributeElementID"));
+
+					// 윈도우가 닫힌 경우 혹은 검색버튼이 없는 경우는 실제 fullData에도 반영
+					if (!optionSelector.isBrandWindowOpened() || !optionSelector.HasBrandSearchBtn) {
+						deleteFullDataContainerItem($(this).parent().attr("AttributeID"), $(this).parent().attr("AttributeElementID"));
+
+						// 쇼핑몰 윈도우가 열려있고 기존 몰데이터가 바뀐 경우는 다시 원복
+						if (optionSelector.isMallWindowOpened() && selectedMallAttributeDataObject.compareWith(selectedFullAttributeDataObject.getMalls()) < 0) {
+							extractMallDataContainerItemFromFullData();
+
+							// 선택된 쇼핑몰 목록의 모든 항목 다시 바인드 및 그리기
+							redrawMallSelectedAttr();
+
+							// 선택한 쇼핑몰 바인드
+							optionSelector.MallPageIndex = selectedMallAttributeDataObject.getMaxPageIndex(optionSelector.MallPageSize);
+							updateSelectedMallUI(optionSelector.MallPageIndex, optionSelector.MallPageSize);
+						}
+					}
+				}
+
+				// 선택한 브랜드 refresh
+				updateSelectedBrandUI(optionSelector.BrandPageIndex, optionSelector.BrandPageSize);
+
+				// 체크 변경에 따른 Event 발생.
+				if (optionSelector.eventHandlers.BrandList_OnChange != null) {
+					var eventArg = new Object();
+
+					eventArg.CheckedBrandId = $(this).parent().attr("AttributeElementID");
+					eventArg.CheckedState = ($(this).parent().find("label").attr("class") == "") ? "off" : "on";
+					eventArg.CheckedItemType = $(this).parent().attr("AttributeID");
+					eventArg.SelectedAttributes = selectedFullAttributeDataObject.outData();
+
+					optionSelector.eventHandlers.BrandList_OnChange(document.getElementById(optionSelector.ID), eventArg);
+				}
+			});
+
+			// 정렬순서 바인드
+			$("#" + optionSelector.ID).find("ul[area=brandSearchOrderButtons]").find("a").bind("click", function() {
+				// 버튼 체크 상태 클리어
+				$("#" + optionSelector.ID).find("ul[area=brandSearchOrderButtons]").find("li").attr("class", "");
+
+				$(this).parent().attr("class", "on");
+
+				brandListCall($(this).attr("order"));
+			});
+
+			// 브랜드 더보기 버튼 바인드
+			$("#" + optionSelector.ID).find("#btnMoreBrand").bind("click", function() {
+				openBrandWindow();
+			});
+		};
+
+		var mallListAnchorBind = function() {
+			// 쇼핑몰 리스트 체크박스 바인드
+			$("#" + optionSelector.ID).find("#" + optionSelector.divMallList).find("input").bind("click", function() {
+
+				if ($(this).parent().find("label").attr("class") == "") {
+					$(this).parent().find("label").attr("class", "checkbox-checked");
+
+					// 하단부 선택한 쇼핑몰 데이터 입력
+					insertMallDataContainerItem($(this).parent().attr("AttributeID"), $(this).parent().attr("AttributeName"), $(this).parent().attr("AttributeElementID"), $(this).parent().attr("AttributeElementName"));
+
+					// 윈도우가 닫힌 경우 혹은 검색버튼이 없는 경우는 실제 fullData에도 반영
+					if (!optionSelector.isMallWindowOpened() || !optionSelector.HasMallSearchBtn) {
+						insertFullDataContainerItem($(this).parent().attr("AttributeID"), $(this).parent().attr("AttributeName"), $(this).parent().attr("AttributeElementID"), $(this).parent().attr("AttributeElementName"));
+
+						// 브랜드 윈도우가 열려있고 기존 몰데이터가 바뀐 경우는 다시 원복
+						if (optionSelector.isBrandWindowOpened() && selectedBrandAttributeDataObject.compareWith(selectedFullAttributeDataObject.getMalls()) < 0) {
+							extractBrandDataContainerItemFromFullData();
+
+							// 선택된 브랜드 목록의 모든 항목 다시 바인드 및 그리기
+							redrawBrandSelectedAttr();
+
+							// 선택한 브랜드 바인드
+							optionSelector.BrandPageIndex = selectedBrandAttributeDataObject.getMaxPageIndex(optionSelector.BrandPageSize);
+							updateSelectedBrandUI(optionSelector.BrandPageIndex, optionSelector.BrandPageSize);
+						}
+					}
+				}
+				else {
+					$(this).parent().find("label").attr("class", "");
+
+					// 하단부 선택한 쇼핑몰 데이터 삭제
+					deleteMallDataContainerItem($(this).parent().attr("AttributeID"), $(this).parent().attr("AttributeElementID"));
+
+					// 윈도우가 닫힌 경우 혹은 검색버튼이 없는 경우는 실제 fullData에도 반영
+					if (!optionSelector.isMallWindowOpened() || !optionSelector.HasMallSearchBtn) {
+						deleteFullDataContainerItem($(this).parent().attr("AttributeID"), $(this).parent().attr("AttributeElementID"));
+
+						// 브랜드 윈도우가 열려있고 기존 몰데이터가 바뀐 경우는 다시 원복
+						if (optionSelector.isBrandWindowOpened() && selectedBrandAttributeDataObject.compareWith(selectedFullAttributeDataObject.getMalls()) < 0) {
+							extractBrandDataContainerItemFromFullData();
+
+							// 선택된 브랜드 목록의 모든 항목 다시 바인드 및 그리기
+							redrawBrandSelectedAttr();
+
+							// 선택한 브랜드 바인드
+							optionSelector.BrandPageIndex = selectedBrandAttributeDataObject.getMaxPageIndex(optionSelector.BrandPageSize);
+							updateSelectedBrandUI(optionSelector.BrandPageIndex, optionSelector.BrandPageSize);
+						}
+					}
+				}
+
+				// 선택한 쇼핑몰 refresh
+				updateSelectedMallUI(optionSelector.MallPageIndex, optionSelector.MallPageSize);
+
+				//        // 창이 닫힌 상태에선 원복 지점을 만들어둠
+				//        var OutData = selectedFullAttributeDataObject.outData();
+
+				//        if (!optionSelector.isMallWindowOpened()) {
+				//          optionSelector.defaultSelectedAttributes = OutData;
+				//        }
+
+				// 체크 변경에 따른 Event 발생.
+				if (optionSelector.eventHandlers.MallList_OnChange != null) {
+					var eventArg = new Object();
+
+					eventArg.CheckedMallId = $(this).parent().attr("AttributeElementID");
+					eventArg.CheckedState = ($(this).parent().find("label").attr("class") == "") ? "off" : "on";
+					eventArg.CheckedItemType = $(this).parent().attr("AttributeID");
+					eventArg.SelectedAttributes = selectedFullAttributeDataObject.outData();
+
+					optionSelector.eventHandlers.MallList_OnChange(document.getElementById(optionSelector.ID), eventArg);
+				}
+			});
+
+			// 정렬순서 바인드
+			$("#" + optionSelector.ID).find("ul[area=mallSearchOrderButtons]").find("a").bind("click", function() {
+				// 버튼 체크 상태 클리어
+				$(this).parent().parent().find("li").attr("class", "");
+
+				$(this).parent().attr("class", "on");
+
+				mallListCall($(this).attr("order"), $(this).attr("mallSeparatedStatus"));
+			});
+
+			// 쇼핑몰 더보기 버튼 바인드
+			$("#" + optionSelector.ID).find("#btnMoreMallInOne").bind("click", function() {
+				openMallWindow(optionSelector.IsMallListingSeparated);
+			});
+
+			// 쇼핑몰 더보기 버튼 바인드
+			$("#" + optionSelector.ID).find("#btnMoreMallIsNotSoho").bind("click", function() {
+				openMallWindow(optionSelector.IsMallListingSeparated);
+			});
+
+			// 쇼핑몰 더보기 버튼 바인드
+			$("#" + optionSelector.ID).find("#btnMoreMallIsSoho").bind("click", function() {
+				openMallWindow(optionSelector.IsMallListingSeparated);
+			});
+		};
+
+		// 최초 로딩시 브랜드 바인드
+		brandListAnchorBind();
+
+		// 최초 로딩시 쇼핑몰 바인드
+		mallListAnchorBind();
+
+		// 선택한 브랜드 UI 삭제 버튼 바인드
+		var selectedBrandEventBind = function() {
+			$("#" + optionSelector.ID).find("#CheckedBrandList").find("a").bind("click", function() {
+
+				deleteBrandDataContainerItem($(this).attr("AttributeID"), $(this).attr("AttributeElementID"));
+
+				// 검색 버튼이 없는 경우는 직접적으로 Full Container에 반영
+				if (!optionSelector.HasBrandSearchBtn)
+					deleteFullDataContainerItem($(this).attr("AttributeID"), $(this).attr("AttributeElementID"));
+
+				// 체크리스트에서 해제
+				$("#" + optionSelector.ID).find("#divBrandCheckList").find("li[AttributeElementID=" + $(this).attr("AttributeElementID") + "]").find("input").attr("checked", false);
+				$("#" + optionSelector.ID).find("#divBrandCheckList").find("li[AttributeElementID=" + $(this).attr("AttributeElementID") + "]").find("label").attr("class", "");
+
+				// 삭제 후 UI 다시 그려주기
+				updateSelectedBrandUI(optionSelector.BrandPageIndex, optionSelector.BrandPageSize);
+
+				// 체크 변경에 따른 Event 발생.
+				if (optionSelector.eventHandlers.BrandList_OnChange != null) {
+					var eventArg = new Object();
+
+					eventArg.CheckedBrandId = $(this).attr("AttributeElementID");
+					eventArg.CheckedState = "off";
+					eventArg.CheckedItemType = $(this).attr("AttributeID");
+					eventArg.SelectedAttributes = selectedFullAttributeDataObject.outData();
+
+					optionSelector.eventHandlers.BrandList_OnChange(document.getElementById(optionSelector.ID), eventArg);
+				}
+			});
+		};
+
+		// 선택한 브랜드 UI 재표시
+		var updateSelectedBrandUI = function(pageIndex, pageSize) {
+			var $CheckedList = $("#" + optionSelector.ID).find("#CheckedBrandList");
+
+			var selectedBrandList = paramDataToHtml(selectedBrandAttributeDataObject, pageIndex, pageSize);
+
+			if (selectedBrandList == "")
+				selectedBrandList = "<li class='list_none'>선택한 브랜드가 표시 됩니다. 검색하고 싶은 브랜드를 선택해 주십시오.</li>";
+
+			// 화면 다시 그려주기
+			$CheckedList.html(selectedBrandList);
+
+			// ie8 버그로 인하여 아이템이 하나만 있을 경우 화면에 제대로 반영이 안되는 문제 해결용
+			$CheckedList.show();
+
+			// 화면을 그려준 후 이벤트 다시 바인드
+			selectedBrandEventBind();
+
+			// pre-page가 존재할 경우 전으로 버튼 바인드
+			if (parseInt(pageIndex) > 0) {
+				$("#" + optionSelector.ID).find("#btnRollingBrand").find("a[command=pre-page]").find("img").attr("src", __picsUrl + "/os2/common/icon/arrows_prev_on.gif");
+				$("#" + optionSelector.ID).find("#btnRollingBrand").find("a[command=pre-page]").attr("pageIndex", pageIndex - 1);
+				$("#" + optionSelector.ID).find("#btnRollingBrand").find("a[command=pre-page]").attr("style", "cursor:pointer;");
+			}
+			else {
+				$("#" + optionSelector.ID).find("#btnRollingBrand").find("a[command=pre-page]").find("img").attr("src", __picsUrl + "/os2/common/icon/arrows_prev_off.gif");
+				$("#" + optionSelector.ID).find("#btnRollingBrand").find("a[command=pre-page]").attr("pageIndex", "-1");
+				$("#" + optionSelector.ID).find("#btnRollingBrand").find("a[command=pre-page]").attr("style", "");
+			}
+
+			// next-page가 존재할 경우 전으로 버튼 바인드
+			if (parseInt(pageIndex) < parseInt(selectedBrandAttributeDataObject.lastPageIndex)) {
+				$("#" + optionSelector.ID).find("#btnRollingBrand").find("a[command=next-page]").find("img").attr("src", __picsUrl + "/os2/common/icon/arrows_next_on.gif");
+				$("#" + optionSelector.ID).find("#btnRollingBrand").find("a[command=next-page]").attr("pageIndex", pageIndex + 1);
+				$("#" + optionSelector.ID).find("#btnRollingBrand").find("a[command=next-page]").attr("style", "cursor:pointer;");
+			}
+			else {
+				$("#" + optionSelector.ID).find("#btnRollingBrand").find("a[command=next-page]").find("img").attr("src", __picsUrl + "/os2/common/icon/arrows_next_off.gif");
+				$("#" + optionSelector.ID).find("#btnRollingBrand").find("a[command=next-page]").attr("pageIndex", "-1");
+				$("#" + optionSelector.ID).find("#btnRollingBrand").find("a[command=next-page]").attr("style", "");
+			}
+		};
+
+		// 브랜드 AjaxCall
+		function brandListCall(BrandIdSort) {
+			var VItemAttrs = (optionSelector.PageState.VItemAttrs != undefined) ? "&VItemAttrs=" + optionSelector.PageState.VItemAttrs : "";
+
+			$.ajax({
+				url: optionSelector.BrandListAjaxCallUrl, /* default:  /UI/WebControlsV3/HistogramBrandAjaxResult.aspx */
+				data: "keyword=" + optionSelector.PageState.Keyword
+                + "&KeywordsInclude=" + optionSelector.PageState.KeywordsInclude
+                + "&KeywordsExclude=" + optionSelector.PageState.KeywordsExclude
+                + "&displayCategories=" + optionSelector.PageState.DisplayCategories
+
+                + "&FindingType=" + optionSelector.PageState.FindingType
+
+                + "&MinVItemPrice=" + optionSelector.PageState.MinVItemPrice
+                + "&MaxVItemPrice=" + optionSelector.PageState.MaxVItemPrice
+                + "&BrandIDs=" + optionSelector.PageState.BrandIDs
+                + "&MallIDs=" + optionSelector.PageState.MallIDs
+                + "&MakerIDs=" + optionSelector.PageState.MakerIDs
+                + "&MinPBPRate=" + optionSelector.PageState.MinPBPRate
+                + "&MaxPBPRate=" + optionSelector.PageState.MaxPBPRate
+                + "&isStyleSearch=" + optionSelector.PageState.IsStyleSearch
+                + "&isSoldOut=" + optionSelector.PageState.IsSoldOut
+                + "&isSellingPlan=" + optionSelector.PageState.IsSellingPlan
+                + "&isShippingPriceFree=" + optionSelector.PageState.IsShippingPriceFree
+                + "&hasNointerestData=" + optionSelector.PageState.HasNointerestData
+                + "&hasCouponData=" + optionSelector.PageState.HasCouponData
+                + "&hasEventData=" + optionSelector.PageState.HasEventData
+                + "&hasPoint=" + optionSelector.PageState.HasPoint
+                + VItemAttrs
+
+                + "&pageIndex=0"
+                + "&pageSize=1"
+
+                + "&cornerType=" + optionSelector.PageState.CornerType
+                + "&departmentID=" + optionSelector.PageState.DepartmentID
+
+                + "&ImageColorMask=" + optionSelector.PageState.ImageColorMask
+                + "&ImageGroupID=" + optionSelector.PageState.ImageGroupID
+
+                + "&SRPTabType=" + optionSelector.SRPTabType
+
+								+ "&BrandIdSort=" + BrandIdSort
+								+ "&BrandPageSize=" + optionSelector.BrandPageSize
+								+ "&BrandClosedWindowItemMaxCount=" + optionSelector.BrandClosedWindowItemMaxCount
+                ,
+				async: true,
+				success: function(resultHtml) {
+					$("#" + optionSelector.ID).find("#divBrandAjaxCallbackArea").html(resultHtml);
+
+					// 브랜드 리스트 상에 체크된 목록 다시 그리기
+					brandListAnchorCheckedBind();
+
+					// 브랜드 검색 바인드
+					brandListAnchorBind();
+				},
+				error: function(xhr) {
+					commonAjaxErrorHandler(xhr.status, xhr.statusText);
+				}
+			});
+		};
+
+		// 브랜드 리스트 상에 체크된 목록 다시 그리기
+		var brandListAnchorCheckedBind = function() {
+			// 선택된 브랜드 리스트
+			var selectedBrandList = selectedBrandAttributeDataObject.arrayObjectSet;
+
+			for (var idx = 0; idx < selectedBrandList.length; idx++) {
+				$("#" + optionSelector.ID).find("#divBrandCheckList").find("li[AttributeElementID=" + selectedBrandList[idx].AttributeElementID + "]").find("input").attr("checked", true);
+				$("#" + optionSelector.ID).find("#divBrandCheckList").find("li[AttributeElementID=" + selectedBrandList[idx].AttributeElementID + "]").find("label").attr("class", "checkbox-checked");
+			}
+		};
+
+		// 쇼핑몰 AjaxCall
+		function mallListCall(MallIdSort, MallSeparatedStatus) {
+
+			// 넘어온 정렬 키와 위치를 기억하기 위해 전역 변수화
+			if (MallSeparatedStatus == "InOne") {
+				optionSelector.MallIdInOneSort = MallIdSort;
+			}
+			else if (MallSeparatedStatus == "IsNotSoho") {
+				optionSelector.MallIdIsNotSohoSort = MallIdSort;
+			}
+			else if (MallSeparatedStatus == "IsSoho") {
+				optionSelector.MallIdIsSohoSort = MallIdSort;
+			}
+
+			var VItemAttrs = (optionSelector.PageState.VItemAttrs != undefined) ? "&VItemAttrs=" + optionSelector.PageState.VItemAttrs : "";
+
+			$.ajax({
+				url: optionSelector.MallListAjaxCallUrl, /* default: /UI/WebControlsV3/HistogramMallAjaxResult.aspx */
+				data: "keyword=" + optionSelector.PageState.Keyword
+                + "&KeywordsInclude=" + optionSelector.PageState.KeywordsInclude
+                + "&KeywordsExclude=" + optionSelector.PageState.KeywordsExclude
+                + "&displayCategories=" + optionSelector.PageState.DisplayCategories
+
+                + "&FindingType=" + optionSelector.PageState.FindingType
+
+                + "&MinVItemPrice=" + optionSelector.PageState.MinVItemPrice
+                + "&MaxVItemPrice=" + optionSelector.PageState.MaxVItemPrice
+                + "&BrandIDs=" + optionSelector.PageState.BrandIDs
+                + "&MallIDs=" + optionSelector.PageState.MallIDs
+                + "&MakerIDs=" + optionSelector.PageState.MakerIDs
+                + "&MinPBPRate=" + optionSelector.PageState.MinPBPRate
+                + "&MaxPBPRate=" + optionSelector.PageState.MaxPBPRate
+                + "&isStyleSearch=" + optionSelector.PageState.IsStyleSearch
+                + "&isSoldOut=" + optionSelector.PageState.IsSoldOut
+                + "&IsSellingPlan=" + optionSelector.PageState.IsSellingPlan
+                + "&isShippingPriceFree=" + optionSelector.PageState.IsShippingPriceFree
+                + "&hasNointerestData=" + optionSelector.PageState.HasNointerestData
+                + "&hasCouponData=" + optionSelector.PageState.HasCouponData
+                + "&hasEventData=" + optionSelector.PageState.HasEventData
+                + "&hasPoint=" + optionSelector.PageState.HasPoint
+                + VItemAttrs
+
+                + "&pageIndex=0"
+                + "&pageSize=1"
+
+                + "&cornerType=" + optionSelector.PageState.CornerType
+                + "&departmentID=" + optionSelector.PageState.DepartmentID
+
+                + "&ImageColorMask=" + optionSelector.PageState.ImageColorMask
+                + "&ImageGroupID=" + optionSelector.PageState.ImageGroupID
+
+                + "&SRPTabType=" + optionSelector.SRPTabType
+
+								+ "&MallIdInOneSort=" + optionSelector.MallIdInOneSort
+								+ "&MallIdIsNotSohoSort=" + optionSelector.MallIdIsNotSohoSort
+								+ "&MallIdIsSohoSort=" + optionSelector.MallIdIsSohoSort
+								+ "&MallPageSize=" + optionSelector.MallPageSize
+								+ "&MallClosedWindowItemMaxCount=" + optionSelector.MallClosedWindowItemMaxCount
+                ,
+				async: true,
+				success: function(resultHtml) {
+					$("#" + optionSelector.ID).find("#" + optionSelector.divMallList).html(resultHtml);
+
+					// 쇼핑몰 리스트 상에 체크된 목록 다시 그리기
+					mallListAnchorCheckedBind();
+
+					// 쇼핑몰 검색 바인드
+					mallListAnchorBind();
+				},
+				error: function(xhr) {
+					commonAjaxErrorHandler(xhr.status, xhr.statusText);
+				}
+			});
+		};
+
+		// 선택한 쇼핑몰 UI 재표시
+		var updateSelectedMallUI = function(pageIndex, pageSize) {
+			var $CheckedList = $("#" + optionSelector.ID).find("#CheckedMallList");
+
+			var selectedMallList = paramDataToHtml(selectedMallAttributeDataObject, pageIndex, pageSize);
+
+			if (selectedMallList == "")
+				selectedMallList = "<li class='list_none'>선택한 쇼핑몰이 표시 됩니다. 검색하고 싶은 쇼핑몰을 선택해 주십시오.</li>";
+
+			// 화면 다시 그려주기
+			$CheckedList.html(selectedMallList);
+
+			// ie8 버그로 인하여 아이템이 하나만 있을 경우 화면에 제대로 반영이 안되는 문제 해결용
+			$CheckedList.show();
+
+			// 화면을 그려준 후 이벤트 다시 바인드
+			selectedMallEventBind();
+
+			// pre-page가 존재할 경우 전으로 버튼 바인드
+			if (parseInt(pageIndex) > 0) {
+				$("#" + optionSelector.ID).find("#btnRollingMall").find("a[command=pre-page]").find("img").attr("src", __picsUrl + "/os2/common/icon/arrows_prev_on.gif");
+				$("#" + optionSelector.ID).find("#btnRollingMall").find("a[command=pre-page]").attr("pageIndex", pageIndex - 1);
+				$("#" + optionSelector.ID).find("#btnRollingMall").find("a[command=pre-page]").attr("style", "cursor:pointer;");
+			}
+			else {
+				$("#" + optionSelector.ID).find("#btnRollingMall").find("a[command=pre-page]").find("img").attr("src", __picsUrl + "/os2/common/icon/arrows_prev_off.gif");
+				$("#" + optionSelector.ID).find("#btnRollingMall").find("a[command=pre-page]").attr("pageIndex", "-1");
+				$("#" + optionSelector.ID).find("#btnRollingMall").find("a[command=pre-page]").attr("style", "");
+			}
+
+			// next-page가 존재할 경우 전으로 버튼 바인드
+			if (parseInt(pageIndex) < parseInt(selectedMallAttributeDataObject.lastPageIndex)) {
+				$("#" + optionSelector.ID).find("#btnRollingMall").find("a[command=next-page]").find("img").attr("src", __picsUrl + "/os2/common/icon/arrows_next_on.gif");
+				$("#" + optionSelector.ID).find("#btnRollingMall").find("a[command=next-page]").attr("pageIndex", pageIndex + 1);
+				$("#" + optionSelector.ID).find("#btnRollingMall").find("a[command=next-page]").attr("style", "cursor:pointer;");
+			}
+			else {
+				$("#" + optionSelector.ID).find("#btnRollingMall").find("a[command=next-page]").find("img").attr("src", __picsUrl + "/os2/common/icon/arrows_next_off.gif");
+				$("#" + optionSelector.ID).find("#btnRollingMall").find("a[command=next-page]").attr("pageIndex", "-1");
+				$("#" + optionSelector.ID).find("#btnRollingMall").find("a[command=next-page]").attr("style", "");
+			}
+		};
+
+		// 선택한 쇼핑몰 UI 삭제 버튼 바인드
+		var selectedMallEventBind = function() {
+			$("#" + optionSelector.ID).find("#CheckedMallList").find("a").bind("click", function() {
+
+				deleteMallDataContainerItem($(this).attr("AttributeID"), $(this).attr("AttributeElementID"));
+
+				// 검색 버튼이 없는 경우는 직접적으로 Full Container에 반영
+				if (!optionSelector.HasMallSearchBtn)
+					deleteFullDataContainerItem($(this).attr("AttributeID"), $(this).attr("AttributeElementID"));
+
+				// 체크리스트에서 해제
+				$("#" + optionSelector.ID).find("#" + optionSelector.divMallList).find("li[AttributeElementID=" + $(this).attr("AttributeElementID") + "]").find("input").attr("checked", false);
+				$("#" + optionSelector.ID).find("#" + optionSelector.divMallList).find("li[AttributeElementID=" + $(this).attr("AttributeElementID") + "]").find("label").attr("class", "");
+
+				// 삭제 후 UI 다시 그려주기
+				updateSelectedMallUI(optionSelector.MallPageIndex, optionSelector.MallPageSize);
+
+				// 검색 버튼이 없는 경우는 직접적으로 Full Container에 반영
+				if (!optionSelector.HasMallSearchBtn)
+					deleteFullDataContainerItem($(this).attr("AttributeID"), $(this).attr("AttributeElementID"));
+
+				// 체크 변경에 따른 Event 발생.
+				if (optionSelector.eventHandlers.MallList_OnChange != null) {
+					var eventArg = new Object();
+
+					eventArg.CheckedMallId = $(this).attr("AttributeElementID");
+					eventArg.CheckedState = "off";
+					eventArg.CheckedItemType = $(this).attr("AttributeID");
+					eventArg.SelectedAttributes = selectedFullAttributeDataObject.outData();
+
+					optionSelector.eventHandlers.MallList_OnChange(document.getElementById(optionSelector.ID), eventArg);
+				}
+			});
+		};
+
+		// 쇼핑몰 리스트 상에 체크된 목록 다시 그리기
+		var mallListAnchorCheckedBind = function() {
+			// 선택된 쇼핑몰 리스트
+			var selectedMallList = selectedMallAttributeDataObject.arrayObjectSet;
+
+			for (var idx = 0; idx < selectedMallList.length; idx++) {
+				$("#" + optionSelector.ID).find("#" + optionSelector.divMallList).find("li[AttributeElementID=" + selectedMallList[idx].AttributeElementID + "]").find("input").attr("checked", true);
+				$("#" + optionSelector.ID).find("#" + optionSelector.divMallList).find("li[AttributeElementID=" + selectedMallList[idx].AttributeElementID + "]").find("label").attr("class", "checkbox-checked");
+			}
+		};
+
+		// 선택한 제조사를 출력할 Html을 가져옴
+		var paramDataToHtml = function(searchParamControllerObj, pageIndex, pageSize) {
+			var arrayResult = searchParamControllerObj.pagingArray(pageIndex, pageSize);
+
+			var retHtml = "";
+
+			for (var idx = 0; idx < arrayResult.length; idx++) {
+				switch (arrayResult[idx].AttributeID) {
+					// 브랜드                                                                                            
+					case "Brand":
+						retHtml += "<li AttributeID='" + arrayResult[idx].AttributeID + "' ><a AttributeElementID='" + arrayResult[idx].AttributeElementID + "' AttributeID='" + arrayResult[idx].AttributeID + "' title='삭제' style='cursor:pointer;'></a><span>[" + arrayResult[idx].AttributeElementName + "]</span></li>"
+						break;
+
+					// 쇼핑몰                                                                                            
+					case "Mall":
+						retHtml += "<li AttributeID='" + arrayResult[idx].AttributeID + "' ><a AttributeElementID='" + arrayResult[idx].AttributeElementID + "' AttributeID='" + arrayResult[idx].AttributeID + "' title='삭제' style='cursor:pointer;'></a><span>[" + arrayResult[idx].AttributeElementName + "]</span></li>"
+						break;
+				}
+			}
+
+			return retHtml;
+		};
+
+		// 브랜드리스트 부분의 옵션들을 삭제하는 메서드
+		var deleteBrandListOptions = function() {
+			deleteFullDataContainerItem("IsStyleSearch");           // 스타일검색
+			deleteFullDataContainerItem("IsSoldOut");               // 판매상태 : 판매중단상품
+			deleteFullDataContainerItem("IsSellingPlan");               // 판매상태 : 판매예정상품
+			deleteFullDataContainerItem("IsShippingPriceFree");   // 혜택 : 무료배송
+			deleteFullDataContainerItem("HasNointerestData");    // 혜택 : 무이자
+			deleteFullDataContainerItem("HasCouponData");       // 혜택 : 쿠폰
+			deleteFullDataContainerItem("HasEventData");          // 혜택 : 이벤트
+			deleteFullDataContainerItem("HasPoint");                // 혜택 : 적립금
+			deleteFullDataContainerItem("ImageGroupID");         // 동일이미지검색
+		};
+
+		// 쇼핑몰 리스트 부분의 옵션들을 삭제하는 메서드
+		var deleteMallListOptions = function() {
+			deleteFullDataContainerItem("IsStyleSearch");           // 스타일검색
+			deleteFullDataContainerItem("IsSoldOut");               // 판매상태 : 판매중단상품
+			deleteFullDataContainerItem("IsSellingPlan");               // 판매상태 : 판매예정상품
+			deleteFullDataContainerItem("IsShippingPriceFree");   // 혜택 : 무료배송
+			deleteFullDataContainerItem("HasNointerestData");    // 혜택 : 무이자
+			deleteFullDataContainerItem("HasCouponData");       // 혜택 : 쿠폰
+			deleteFullDataContainerItem("HasEventData");          // 혜택 : 이벤트
+			deleteFullDataContainerItem("HasPoint");                // 혜택 : 적립금
+			deleteFullDataContainerItem("ImageGroupID");         // 동일이미지검색
+		};
+
+		// 현재의 searchOptionSelector 설정용 외부 노출 메서드 시작
+
+		optionSelector.setAttributes = function(gPageState) {
+			if (gPageState.SelectedAttributes == undefined)
+				return;
+
+			var IsChanged = new Object();
+			IsChanged.Brand = false;
+			IsChanged.Mall = false;
+
+			// 받은 데이터로 수정
+			optionSelector.defaultSelectedAttributes = decodeURIComponent(gPageState.SelectedAttributes);
+
+			// 데이터 수정
+			initAttributeData(optionSelector.defaultSelectedAttributes, IsChanged);
+
+			// 브랜드 데이터가 변경되었을때만 redraw
+			if (IsChanged.Brand) {
+				// 선택된 브랜드 목록의 모든 항목 다시 바인드 및 그리기
+				redrawBrandSelectedAttr();
+
+				// 선택한 브랜드 바인드
+				optionSelector.BrandPageIndex = selectedBrandAttributeDataObject.getMaxPageIndex(optionSelector.BrandPageSize);
+				updateSelectedBrandUI(optionSelector.BrandPageIndex, optionSelector.BrandPageSize);
+			}
+
+			// 쇼핑몰 데이터가 변경되었을때만 redraw
+			if (IsChanged.Mall) {
+				// 선택된 쇼핑몰 목록의 모든 항목 다시 바인드 및 그리기
+				redrawMallSelectedAttr();
+
+				// 선택한 쇼핑몰 바인드
+				optionSelector.MallPageIndex = selectedMallAttributeDataObject.getMaxPageIndex(optionSelector.MallPageSize);
+				updateSelectedMallUI(optionSelector.MallPageIndex, optionSelector.MallPageSize);
+			}
+		};
+
+		// 브랜드 창을 열고 그 위치로 스크롤
+		optionSelector.scrollToBrand = function() {
+			if (document.getElementById("anchorSearchOptionSelector") == undefined)
+				document.getElementById(optionSelector.ID + "_divBrandList").scrollIntoView(true);
+			else
+				document.getElementById("anchorSearchOptionSelector").scrollIntoView(true);
+
+			openBrandWindow();
+		};
+
+		// 쇼핑몰 창을 열고 그 위치로 스크롤
+		optionSelector.scrollToMall = function() {
+			if (document.getElementById("anchorSearchOptionSelector") == undefined)
+				document.getElementById(optionSelector.ID + "_divMallList").scrollIntoView(true);
+			else
+				document.getElementById("anchorSearchOptionSelector").scrollIntoView(true);
+
+			openMallWindow(optionSelector.IsMallListingSeparated);
+		};
+
+		// 현재의 user control 상태로 gPageState를 업뎃하는 외부 메서드
+		optionSelector.copyToPageState = function(gPageState) {
+			// 브랜드 창이 안 열린 경우 (ajax call일 경우에만 추가 옵션 제거)
+			if (!optionSelector.isBrandWindowOpened() && !optionSelector.isMallWindowOpened()) {
+				deleteBrandListOptions();
+			}
+
+			// 쇼핑몰 창이 안 열린 경우 (ajax call일 경우에만 추가 옵션 제거)
+			if (!optionSelector.isMallWindowOpened()) {
+				deleteMallListOptions();
+			}
+
+			selectedFullAttributeDataObject.copyToPageState(gPageState, "Brand");
+
+			// encodeURIComponent를 사용하여 인코딩
+			gPageState.SelectedAttributes = encodeURIComponent(gPageState.SelectedAttributes);
+		};
+
+		optionSelector.setAttributes = function(gPageState) {
+			if (gPageState.SelectedAttributes == undefined)
+				return;
+
+			var IsChanged = new Object();
+			IsChanged.Brand = false;
+			IsChanged.Mall = false;
+
+			// 받은 데이터로 수정
+			optionSelector.defaultSelectedAttributes = decodeURIComponent(gPageState.SelectedAttributes);
+
+			// 데이터 수정
+			initAttributeData(optionSelector.defaultSelectedAttributes, IsChanged);
+
+			// 브랜드 데이터가 변경되었을때만 redraw
+			if (IsChanged.Brand) {
+				// 선택된 브랜드 목록의 모든 항목 다시 바인드 및 그리기
+				redrawBrandSelectedAttr();
+
+				// 선택한 브랜드 바인드
+				optionSelector.BrandPageIndex = selectedBrandAttributeDataObject.getMaxPageIndex(optionSelector.BrandPageSize);
+				updateSelectedBrandUI(optionSelector.BrandPageIndex, optionSelector.BrandPageSize);
+			}
+
+			// 쇼핑몰 데이터가 변경되었을때만 redraw
+			if (IsChanged.Mall) {
+				// 선택된 쇼핑몰 목록의 모든 항목 다시 바인드 및 그리기
+				redrawMallSelectedAttr();
+
+				// 선택한 쇼핑몰 바인드
+				optionSelector.MallPageIndex = selectedMallAttributeDataObject.getMaxPageIndex(optionSelector.MallPageSize);
+				updateSelectedMallUI(optionSelector.MallPageIndex, optionSelector.MallPageSize);
+			}
+		};
+
+		// 브랜드 창이 열렸는지 확인할 외부 메소드
+		optionSelector.isBrandWindowOpened = function() {
+			if ($("#" + optionSelector.ID + "_divBrandList").hasClass("cntVisible")) {
+				return true;
+			}
+			else {
+				return false;
+			}
+		};
+
+		// 쇼핑몰 창이 열렸는지 확인할 외부 메소드
+		optionSelector.isMallWindowOpened = function() {
+			if ($("#" + optionSelector.ID + "_divMallList").hasClass("cntVisible")) {
+				return true;
+			}
+			else {
+				return false;
+			}
+		};
+
+		// 현재 searchOptionSelector 보이기
+		optionSelector.show = function() {
+			$("#" + optionSelector.ID).show();
+		};
+
+		// 현재 searchOptionSelector 숨기기
+		optionSelector.hide = function() {
+			$("#" + optionSelector.ID).hide();
+		};
+
+		// 현재 searchOptionSelector의 기본 PageState 수정
+		optionSelector.setUserControlPageState = function(gPageState) {
+			$.extend(optionSelector.PageState, gPageState);
+		}
+
+		// 현재의 searchOptionSelector 설정용 외부 노출 메서드 끝
+
+		// 초기화 설정용
+		optionSelector.setAttributes(optionSelector.PageState);
+
+	}
+})(jQuery);
+
+
+OS2.Application.SearchOptionSelector = function() {
+
+}
+
+OS2.Application.SearchOptionSelector.init = function(controlID, eventHandlers, pageState) {
+	if (document.getElementById(controlID) == null || typeof document.getElementById(controlID) === "undefined") {
+		return null;
+	}
+
+  var optionSelector = new Object();
+
+  optionSelector.ID = controlID;
+  optionSelector.eventHandlers = eventHandlers;
+  optionSelector.PageState = new Object();
+  $.extend(optionSelector.PageState, pageState);
+
+  jQuery("#" + controlID).searchOptionSelector(optionSelector);
+
+  return optionSelector;
+}

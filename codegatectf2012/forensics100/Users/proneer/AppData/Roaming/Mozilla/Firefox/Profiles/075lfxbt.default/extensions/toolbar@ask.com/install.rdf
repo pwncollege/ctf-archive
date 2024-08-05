@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RDF xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:em="http://www.mozilla.org/2004/em-rdf#">
+    <Description about="urn:mozilla:install-manifest">
+        <em:id>toolbar@ask.com</em:id>
+        <em:name>Ask Toolbar</em:name>
+        
+        <!-- Description Localized (used for FF 2 as well - all browser locales)
+-->
+        <em:description>Convenient tools and links to make your web surfing more enjoyable</em:description>
+        
+        <!-- Localized descriptions -->
+        <em:localized>
+            <Description><em:locale>es-</em:locale><em:description>Herramientas y enlaces útiles para mejorar su experiencia de navegación</em:description></Description>
+        </em:localized>
+        <em:localized>
+            <Description><em:locale>de-</em:locale><em:description>Praktische Tools und Links für ein noch größeres Surfvergnügen</em:description></Description>
+        </em:localized>
+        <em:localized>
+            <Description><em:locale>fr-</em:locale><em:description>Des outils et des liens très pratiques pour faciliter votre navigation sur le Web</em:description></Description>
+        </em:localized>
+        <em:localized>
+            <Description><em:locale>it-</em:locale><em:description>Strumenti e link utili per facilitare la navigazione sul Web</em:description></Description>
+        </em:localized>
+        <em:localized>
+            <Description><em:locale>nl-</em:locale><em:description>Handige tools en koppelingen voor prettiger websurfen</em:description></Description>
+        </em:localized>
+        <em:localized>
+            <Description><em:locale>pl-</em:locale><em:description>Wygodne narzędzia i łącza ułatwiające korzystanie z sieci</em:description></Description>
+        </em:localized>
+        <em:localized>
+            <Description><em:locale>pt-</em:locale><em:description>Ferramentas e links convenientes para tornar sua navegação na web mais agradável</em:description></Description>
+        </em:localized>
+        <em:localized>
+            <Description><em:locale>ru-</em:locale><em:description>Удобные инструменты и ссылки, которые сделают вашу навигацию в сети Интернет еще более приятной</em:description></Description>
+        </em:localized>
+        
+        <em:creator>Ask.com</em:creator>
+        <em:homepageURL>http://www.ask.com/</em:homepageURL>
+        <em:version>3.11.3.15590</em:version>
+        <em:type>2</em:type>  <!-- extension -->
+        <em:aboutURL>chrome://asktoolbar/content/about.xul</em:aboutURL>
+        <em:iconURL>chrome://asktoolbar/skin/ask_32x32.png</em:iconURL>
+        <em:updateURL>https://websearch.ask.com/firefox/upgrade/manifest?tb=PTV&amp;v=3.11.3.15590&amp;id=0408A1BF-298A-4A87-ADAE-C01FC6A2354F&amp;reqver=%REQ_VERSION%&amp;itid=%ITEM_ID%&amp;itver=%ITEM_VERSION%&amp;itmaxappver=%ITEM_MAXAPPVERSION%&amp;itst=%ITEM_STATUS%&amp;appid=%APP_ID%&amp;appver=%APP_VERSION%&amp;curappver=%CURRENT_APP_VERSION%&amp;appos=%APP_OS%&amp;appabi=%APP_ABI%&amp;apploc=%APP_LOCALE%</em:updateURL>
+        
+        <em:targetApplication>  <!-- Firefox -->
+            <Description>
+                <em:id>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</em:id>
+                <em:minVersion>3.0</em:minVersion>
+                <em:maxVersion>4.*</em:maxVersion>
+            </Description>
+        </em:targetApplication>
+		
+    </Description>
+</RDF>

@@ -1,0 +1,19 @@
+.page {
+	display: none;
+}
+
+.template {
+	display: none;
+}
+
+.showed {
+	display: block !important;
+}
+
+.select_albums {
+	display: none;
+}
+
+.back {
+	display: none;
+}

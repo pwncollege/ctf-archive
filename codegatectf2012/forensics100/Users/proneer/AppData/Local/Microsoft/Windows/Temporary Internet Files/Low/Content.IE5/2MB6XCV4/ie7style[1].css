@@ -1,0 +1,25 @@
+#content table#info .soft_sm_main{
+	height: auto;
+}
+#logout {
+padding-top:1px;
+}
+/*#header div#profile {
+	top:0px;
+	margin-left:-71px;
+}*/
+div#pfc_cmd_container div#pfc_smileys {
+margin:-250px 0 0 -25px;
+}
+#section_a .content {
+	padding:0px 0 15px;
+}
+#section_b {
+	margin:0 0 20px 23px;
+}
+/*.ctgr_chng #commend_keyword{
+	left:0;
+}*/
+#users_list td {
+	position: relative;
+}

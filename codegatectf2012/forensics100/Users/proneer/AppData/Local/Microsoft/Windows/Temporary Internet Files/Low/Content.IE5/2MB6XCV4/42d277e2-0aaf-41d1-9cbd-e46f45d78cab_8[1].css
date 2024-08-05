@@ -1,0 +1,30 @@
+div.section h2.title_section span.phrase 
+{ font-size: 200%; }
+
+div.section h2.title_section img
+{
+	margin-bottom: 0px;
+	margin-top: 6px;
+	float: right;
+}
+
+div.section_oly-aml-light p.para { font-size: 120%; }
+
+.section_section-grid-2col-near td.grid-first,
+.section_section-grid-2col-near td,
+.section_section-grid-2col-near tr td.grid-last
+{ padding: 0px; }
+
+.section_section-grid-2col-near tr td.grid-last 
+{ padding-left: 10px; }
+
+.section_section-grid-2col-near td.grid-first .title_section,
+ .section_section-grid-2col-near td.grid-first p.para 
+{ width: 95%; }
+
+.section_section-grid-2col-near td div.section_oly-aml-near
+{ width: 65%; }
+
+.section_section-grid-2col-near div.section_oly-aml-near .title_section,
+.section_section-grid-2col-near div.section_oly-aml-near p.para
+{ margin-left: 0px; }

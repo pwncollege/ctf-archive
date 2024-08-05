@@ -1,0 +1,101 @@
+﻿/* Beta hero links and headers will be white, except when they are not */
+div.section_oly-aml a { color: #FFFFFF; }
+
+div.section_oly-aml h3.title_section .para,
+div.section_oly-aml h3.title_section span.phrase
+{
+	color: #FFFFFF;
+	margin-top: 10px;
+}
+
+/* Using newTerm to allow the white-black transition */
+div.section_oly-aml h3.title_section span.newTerm
+{
+	color: #000000;
+	font-style: normal;
+}
+
+/* Download hero header is giant */
+div.section_oly-aml h3.title_section .para
+{
+	font-size: 346%;
+	margin-left: 25px;
+	line-height: 100%;
+	height: 100px;
+	margin-bottom: 10px;
+	font-weight: 300;
+}
+
+/* backcompat */
+div.section_oly-aml h3.title_section .para 
+{
+	*font-size: 300%;
+	*line-height: inherit; 
+	*padding-bottom: 16px; 
+}
+div.section_oly-aml h3.title_section .para { *margin-bottom: 14px; }
+
+/* Download hero header is giant */
+div.section_oly-aml h3.title_section .para span.ui { font-weight: 600; }
+
+/* Other hero headers are less giant */
+div.section_oly-aml h3.title_section span.phrase { font-size: 146%; }
+
+/* Making the button huge and setting it a bit apart from what's below it */
+div.section_oly-aml .section_section-grid-1col-near span.section_section-button-standard a
+{
+	padding: 6px 20px 8px 20px;
+	font-size: 175%;
+	font-weight: 300;
+	color: #FFFFFF;
+	background-color: #0184bb;
+}
+
+div.section_oly-aml .section_section-grid-1col-near span.button { background-color: #fac576; }
+
+div.section_oly-aml .section_section-grid-1col-near span.section_section-button-standard { margin-bottom: 5px; }
+
+/* Setting up lower-corner download area */
+div.section_oly-aml .section_section-grid-1col-near
+{
+	width: 33%;
+	left: 66%;
+	position: relative;
+}
+
+/* backcompat */
+div.section_oly-aml .section_section-grid-1col-near { *left: 64%; }
+div.section_oly-aml .section_section-grid-1col-near .grid-first { *width: 300px; }
+
+/* Download fine print links in blue */
+div.section_oly-aml .section_section-grid-1col-near a { color: #0184bb; }
+
+/* Setting up fine print */
+div.section_oly-aml .section_section-grid-1col-near span.newTerm 
+{
+	font-style: normal; 
+	font-size: 80%; 
+}
+
+/* Setting up welcome */
+div.section_oly-aml-far
+{
+	width: 33%;
+	left: 52%;
+	padding-left: 2px;
+	padding-right: 2px;
+}
+
+div.section_oly-aml-far .para
+{
+	margin-top: 10px;
+	float: left;
+	width: 90%;
+}
+
+div.section_oly-aml-far h3.title_section .para,
+div.section_oly-aml-far h3.title_section span.phrase
+{ color: #0078b9; }
+
+/* Using newTerm to allow the white-black transition */
+div.section_oly-aml-far h3.title_section span.newTerm { color: #2a2a2a; }

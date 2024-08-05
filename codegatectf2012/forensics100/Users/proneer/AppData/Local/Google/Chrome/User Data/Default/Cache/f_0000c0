@@ -1,0 +1,578 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta name="msvalidate.01" content="79C78EB33B8812273BEAA273668E9D92" />
+ <title>SANS: Forensics and Incident Response Summit  - Computer Forensic Investigations - Windows In-Depth</title>
+ <link rel="shortcut icon" href="/favicon.ico" />
+ <meta http-equiv="Content-type" content="text/html; charset=ISO-8859-1" />
+  <meta name="robots" content="follow" /><meta name="description" content="In this computer forensics course you&#039;ll learn the fundamental steps to complete qualifications to work as a computer forensic investigator." />
+<meta name="keywords" content="computer forensic investigator, computer forensics course" />
+<meta name="categories" content="computer forensics, forensics, security, courses, training" />
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-25324117-1']);
+  _gaq.push(['_trackPageview']);  
+  _gaq.push(['_setLocalRemoteServerMode']);
+  _gaq.push(['_setLocalGifPath', 'http://www.sans.org']);      
+    
+  _gaq.push(['b._setAccount', 'UA-25324117-2']);
+  _gaq.push(['b._setDomainName', 'sans.org']);  
+  _gaq.push(['b._addIgnoredRef', 'sans.org']);
+  _gaq.push(['b._trackPageview']);     
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+<script src="/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+    urchinTracker();
+</script>
+
+ <link rel="stylesheet" href="/css/new-style/master.php?cc=201103250102" type="text/css" media="screen, projection,print" />
+    		   <link rel="stylesheet" href="/css/new-style/styles.css?cc=20110325" type="text/css" media="screen, projection,print" />
+    		   <link rel="stylesheet" href="/css/new-style/site_selector.css?cc=20110325" type="text/css" media="screen, projection,print" />
+    		   <link rel="stylesheet" href="/css/new-style/site.css?cc=20110325" type="text/css" media="screen, projection,print" /><link rel="stylesheet" href="/css/trainingevents.php?id=forensics-incident-response-summit-2012&type=F" type="text/css" media="screen, projection, print" />
+<style type="text/css">
+#sans06_frad {width: 183px; text-align: center; font-weight: bold; font-size: 11px; border: 1px solid #1D567D; background-color: #EEE; margin: 15px 0 5px 2px;}
+</style><script type="text/javascript" src="/expandable.js"></script>
+<script type="text/javascript" src="/menu.js"></script>
+
+<link rel="canonical" href="http://www.sans.org/security-training/computer-forensic-investigations-windows-in-depth-1207-mid" />
+</head>
+
+<body>
+<div class="noheader">
+<div class="container default-navigation-all">
+<!-- header -->
+<div class="header">
+<a href="/"><img src="/images/design-site/logo.png" alt="SANS Institute" class="logo" /></a>
+
+<ul class="site-selector">
+ <li class="site-switcher"><a href="#"><span class="hidden">SANS Site Network</span></a>
+  <ul class="sites">
+   <li class="current-site">Current Site</li>
+   <li class="sans"><a href=""><img src="/images/design/custom/site-selector/site-icons/sans.png" alt="sans" />Training</a></li>
+   <li class="selector-help">Choose a different site <a href="/help/site-network"><span class="hidden">Help</span></a></li>
+   <li class="giac"><a href="http://www.giac.org"><img src="/images/design/custom/site-selector/site-icons/giac.png" alt="giac" />Certification</a></li>
+   <li class="sti"><a href="http://www.sans.edu"><img src="/images/design/custom/site-selector/site-icons/sti.png" alt="sti" />Cyber Security Graduate School</a></li>
+   <li class="isc"><a href="http://isc.sans.edu"><img src="/images/design/custom/site-selector/site-icons/isc.png" alt="isc" />Internet Storm Center</a></li>
+   <li class="awareness"><a href="http://www.securingthehuman.org"><img src="/images/design/custom/site-selector/site-icons/awareness.png" alt="awareness" />Security Awareness Training</a></li>
+   <li class="forensics"><a href="http://computer-forensics.sans.org"><img src="/images/design/custom/site-selector/site-icons/forensics.png" alt="forensics" />Computer Forensics</a></li>
+   <li class="pentest "><a href="http://pen-testing.sans.org"><img src="/images/design/custom/site-selector/site-icons/pentest.png" alt="pentest">Penetration Testing</a></li>
+   <li class="audit"><a href="http://it-audit.sans.org"><img src="/images/design/custom/site-selector/site-icons/audit.png" alt="audit" />IT Audit</a></li>
+   <li class="ssi"><a href="http://software-security.sans.org"><img src="/images/design/custom/site-selector/site-icons/software-security.png" alt="ssi" />Software Security</a></li>
+  </ul>
+ </li>
+</ul>
+
+<div class="clear"></div>
+<div class="top-menu">
+<ul class="dropdown user-menu">
+ <li class="root-item login-status"><a href="https://www.sans.org/account/">Secure Access / Login<!-- |--></a>  </li>
+  <!-- <li class="root-item cart-status"><a href="#">My Cart <img src="/images/icons/silk/cart.png" /></a></li> -->
+ <li class="root-item">
+  <!-- Begin Google Site Search -->
+  <form action="/search/results/" method="post" id="cse-search-box" class="search-form">
+   <input type="text" id="q" name="q" value="" class="search-input" />
+   <input id="search-button" type="image" title="Search" name="sa" value="Search" class="search-submit" src="/images/icons2/custom/search.png" />
+  </form>
+  <script type="text/javascript" src="http://www.google.com/cse/brand?form=cse-search-box&lang=en"></script>
+ </li>
+</ul><!-- / .login-status -->
+
+<div class="clear"></div>
+<ul class="dropdown main-nav">
+
+ <li class="root-item"><a href="/find-training/" onClick="_gaq.push(['_trackEvent', 'FindTraining', 'Clicked', 'FindTrainingMenu']);">Find Training</a>
+  <ul>
+   <li class="first"><a href="/find-training/" onClick="_gaq.push(['_trackEvent', 'SearchForTraining', 'Clicked', 'FindTrainingMenu']);">Search For Training</a></li>
+   <li><a href="/security-training/bylocation/" onClick="_gaq.push(['_trackEvent', 'UpcomingEvents', 'Clicked', 'FindTrainingMenu']);">Upcoming Events</a></li>
+    <li><a href="/security-training/courses.php" onClick="_gaq.push(['_trackEvent', 'CourseList', 'Clicked', 'FindTrainingMenu']);">Course List</a>
+    <li><a href="/security-training/curriculums/index.php" onClick="_gaq.push(['_trackEvent', 'TrainingList', 'Clicked', 'FindTrainingMenu']);">Training Curricula &raquo;</a>
+     <ul>
+      <li class="first"><a href="/security-training/curriculums/security" onClick="_gaq.push(['_trackEvent', 'SecCurr', 'Clicked', 'FindTrainingMenu']);">Security</a></li>
+      <li class="no-top-radius"><a href="/security-training/curriculums/management" onClick="_gaq.push(['_trackEvent', 'MgtCurr', 'Clicked', 'FindTrainingMenu']);">Management</a></li>
+      <li class="no-top-radius"><a href="/security-training/curriculums/forensics" onClick="_gaq.push(['_trackEvent', 'ForCurr', 'Clicked', 'FindTrainingMenu']);">Forensics</a></li>
+      <li class="no-top-radius"><a href="/security-training/curriculums/developer" onClick="_gaq.push(['_trackEvent', 'DevCurr', 'Clicked', 'FindTrainingMenu']);">Secure Software Development</a></li>
+      <li class="no-top-radius"><a href="/security-training/curriculums/pen-test" onClick="_gaq.push(['_trackEvent', 'PenTestCurr', 'Clicked', 'FindTrainingMenu']);">Penetration Testing</a></li>
+      <li class="no-top-radius"><a href="/security-training/curriculums/system-administrator" onClick="_gaq.push(['_trackEvent', 'SysAdmCurr', 'Clicked', 'FindTrainingMenu']);">System Administration</a></li>
+      <li class="no-top-radius"><a href="/security-training/curriculums/incident-handler" onClick="_gaq.push(['_trackEvent', 'IncHandCurr', 'Clicked', 'FindTrainingMenu']);">Incident Handling</a></li>
+      <li class="no-top-radius"><a href="/security-training/curriculums/intrusion" onClick="_gaq.push(['_trackEvent', 'InstruAnCurr', 'Clicked', 'FindTrainingMenu']);">Intrusion Analysis</a></li>
+      <li class="no-top-radius"><a href="/security-training/curriculums/audit" onClick="_gaq.push(['_trackEvent', 'AuditCurr', 'Clicked', 'FindTrainingMenu']);">Audit</a></li>
+      <li class="no-top-radius"><a href="/security-training/curriculums/legal" onClick="_gaq.push(['_trackEvent', 'LegalCurr', 'Clicked', 'FindTrainingMenu']);">Legal</a></li>
+      <li class="no-top-radius last"><a href="/security-training/curriculums/cyber-guardian" onClick="_gaq.push(['_trackEvent', 'CyberGCurr', 'Clicked', 'FindTrainingMenu']);">Cyber Guardian</a></li>
+     </ul>
+    </li>
+    <li><a href="/security-training/discounts.php" onClick="_gaq.push(['_trackEvent', 'GroupDisc', 'Clicked', 'FindTrainingMenu']);">Group Discounts</a></li>
+   <li class="last"><a href="/security-training/calendars/" onClick="_gaq.push(['_trackEvent', 'Calendars', 'Clicked', 'FindTrainingMenu']);">Calendars</a></li>
+  </ul>
+ </li>
+
+ <li class="root-item"><a href="/security-training/" onClick="_gaq.push(['_trackEvent', 'LiveTraining', 'Clicked', 'LiveTrainingMenu']);">Live Training</a>
+  <ul>
+   <li class="first"><a href="/find-training/live" onClick="_gaq.push(['_trackEvent', 'SearchTraining', 'Clicked', 'LiveTrainingMenu']);">Search For Training</a></li>
+    <li><a href="/security-training/bylocation/" onClick="_gaq.push(['_trackEvent', 'UpcomEvents', 'Clicked', 'LiveTrainingMenu']);">Upcoming Events</a></li>
+    <li><a href="/summit/" onClick="_gaq.push(['_trackEvent', 'Summits', 'Clicked', 'LiveTrainingMenu']);">Summit Series</a></li>
+    <li><a href="/community_sans/" onClick="_gaq.push(['_trackEvent', 'Community', 'Clicked', 'LiveTrainingMenu']);">Community Events</a></li>
+    <li><a href="/mentor/" onClick="_gaq.push(['_trackEvent', 'Mentor', 'Clicked', 'LiveTrainingMenu']);">Mentor Program</a></li>
+    <li><a href="/onsite/" onClick="_gaq.push(['_trackEvent', 'Onsite', 'Clicked', 'LiveTrainingMenu']);">OnSite</a></li>
+    <li><a href="/partnership/" onClick="_gaq.push(['_trackEvent', 'Partners', 'Clicked', 'LiveTrainingMenu']);">Partnership Series</a></li>
+    <li><a href="/work-study" onClick="_gaq.push(['_trackEvent', 'WorkStudy', 'Clicked', 'LiveTrainingMenu']);">Work Study</a></li>
+    <li class="last"><a href="/coins/" onClick="_gaq.push(['_trackEvent', 'Coins', 'Clicked', 'LiveTrainingMenu']);">COINS</a></li>
+  </ul>
+ </li>
+
+ <li class="root-item"><a href="/online-security-training/" onClick="_gaq.push(['_trackEvent', 'OnlineTraining', 'Clicked', 'OnlineTrainingMenu']);">Online Training</a>
+  <ul>
+   <li class="first"><a href="/find-training/online" onClick="_gaq.push(['_trackEvent', 'SearchTraining', 'Clicked', 'OnlineTrainingMenu']);">Search For Training</a></li>
+   <li><a href="/virtual-training/vlive" onClick="_gaq.push(['_trackEvent', 'vLive', 'Clicked', 'OnlineTrainingMenu']);">vLive</a></li>
+   <li><a href="/ondemand/" onClick="_gaq.push(['_trackEvent', 'OnDemand', 'Clicked', 'OnlineTrainingMenu']);">OnDemand</a></li>
+   <li><a href="/virtual-training/event-simulcast" onClick="_gaq.push(['_trackEvent', 'Simulcast', 'Clicked', 'OnlineTrainingMenu']);">Simulcast &raquo;</a>
+     <ul>
+       <li class="first"><a href="/virtual-training/event-simulcast" onClick="_gaq.push(['_trackEvent', 'EventSimu', 'Clicked', 'OnlineTrainingMenu']);">Event</a></li>
+       <li class="last"><a href="/virtual-training/custom-simulcast" onClick="_gaq.push(['_trackEvent', 'CustSimu', 'Clicked', 'OnlineTrainingMenu']);">Custom</a></li>
+     </ul>
+   </li>
+   <li><a href="/security-awareness/" onClick="_gaq.push(['_trackEvent', 'SecAwareness', 'Clicked', 'OnlineTrainingMenu']);">Security Awareness</a></li>
+   <li class="last"><a href="/selfstudy/" onClick="_gaq.push(['_trackEvent', 'SelfStudy', 'Clicked', 'OnlineTrainingMenu']);">SelfStudy</a></li>
+  </ul>
+ </li>
+
+ <li class="root-item"><a href="/programs/" onClick="_gaq.push(['_trackEvent', 'Programs', 'Clicked', 'ProgramsMenu']);">Programs</a>
+  <ul>
+    <li class="first"><a href="/vouchers/" onClick="_gaq.push(['_trackEvent', 'VoucherCre', 'Clicked', 'ProgramsMenu']);">Voucher Credit</a></li>
+    <li><a href="/cyber-guardian" onClick="_gaq.push(['_trackEvent', 'CyberGuar', 'Clicked', 'ProgramsMenu']);">Cyber Guardian</a></li>
+    <li><a href="/cyber-ranges/" onClick="_gaq.push(['_trackEvent', 'CyberRang', 'Clicked', 'ProgramsMenu']);">Cyber Ranges</a></li>
+    <li class="last"><a href="/8570/" onClick="_gaq.push(['_trackEvent', 'Dod8570', 'Clicked', 'ProgramsMenu']);">DoD 8570</a></li>
+  </ul>
+ </li>
+
+ <li class="root-item"><a href="/security-resources/" onClick="_gaq.push(['_trackEvent', 'Resources', 'Clicked', 'ResourcesMenu']);">Resources</a>
+  <ul>
+    <li class="first"><a href="/reading_room/" onClick="_gaq.push(['_trackEvent', 'ReadingRoom', 'Clicked', 'ResourcesMenu']);">Reading Room</a></li>
+    <li><a href="/webcasts/" onClick="_gaq.push(['_trackEvent', 'Webcast', 'Clicked', 'ResourcesMenu']);">Webcasts</a></li>
+    <li><a href="/newsletters/" onClick="_gaq.push(['_trackEvent', 'Newsletter', 'Clicked', 'ResourcesMenu']);">Newsletters</a></li>
+    <li><a href="/top25-software-errors/" onClick="_gaq.push(['_trackEvent', 'Top25Err', 'Clicked', 'ResourcesMenu']);">Top 25 Programming Errors</a></li>
+    <li><a href="/critical-security-controls/" onClick="_gaq.push(['_trackEvent', 'CriticalControls', 'Clicked', 'ResourcesMenu']);">Top 20 Critical Controls</a></li>
+    <li><a href="/security-resources/policies/" onClick="_gaq.push(['_trackEvent', 'SecPolProj', 'Clicked', 'ResourcesMenu']);">Security Policy Project</a></li>
+    <li><a href="/security-resources/vendor_directory/" onClick="_gaq.push(['_trackEvent', 'FromVendor', 'Clicked', 'ResourcesMenu']);">From Vendors &raquo;</a>
+      <ul>
+        <li class="first"><a href="/security-resources/vendor_directory/" onClick="_gaq.push(['_trackEvent', 'BuyGuide', 'Clicked', 'ResourcesMenu']);">SANS Buyers Guide</a></li>
+        <li><a href="/security-resources/vendor_demos/" onClick="_gaq.push(['_trackEvent', 'SecToolDemo', 'Clicked', 'ResourcesMenu']);">Security Tool Demos</a></li>
+        <li class="last"><a href="/vendor-software-room/" onClick="_gaq.push(['_trackEvent', 'VendorBetaRoom', 'Clicked', 'ResourcesMenu']);">Vendor Software Beta Room</a></li>
+      </ul>
+    </li>
+    <li class="last"><a href="/security-resources/" onClick="_gaq.push(['_trackEvent', 'Additional', 'Clicked', 'ResourcesMenu']);">Additional Resources</a></li>
+  </ul>
+ </li>
+
+ <li class="root-item"><a href="/vendor/" class="vendor menu-vendor" onClick="_gaq.push(['_trackEvent', 'Vendor', 'Clicked', 'VendorMenu']);">Vendor</a>
+  <ul>
+    <li class="first"><a href="/vendor/" onClick="_gaq.push(['_trackEvent', 'Overview', 'Clicked', 'VendorMenu']);">Overview</a></li>
+    <li><a href="/vendor/sponsorship/" onClick="_gaq.push(['_trackEvent', 'Sponsor', 'Clicked', 'VendorMenu']);">Sponsorship</a></li>
+    <li><a href="/vendor/demographics/" onClick="_gaq.push(['_trackEvent', 'Demogra', 'Clicked', 'VendorMenu']);">Demographics</a></li>
+    <li><a href="/vendor/events/" onClick="_gaq.push(['_trackEvent', 'Events', 'Clicked', 'VendorMenu']);">Events</a></li>
+    <li class="last"><a href="/vendor/contact/" onClick="_gaq.push(['_trackEvent', 'Contact', 'Clicked', 'VendorMenu']);">Contact</a></li>
+  </ul>
+ </li>
+
+ <li class="root-item"><a href="/about/" class="about menu-about" onClick="_gaq.push(['_trackEvent', 'About', 'Clicked', 'AboutMenu']);">About</a>
+  <ul class="last-menu">
+    <li class="first"><a href="/about/sans.php" onClick="_gaq.push(['_trackEvent', 'AboutSans', 'Clicked', 'AboutMenu']);">About SANS</a></li>
+    <li><a href="/security-training/instructors.php" onClick="_gaq.push(['_trackEvent', 'CertInstru', 'Clicked', 'AboutMenu']);">Certified Instructors</a></li>
+    <li><a href="/about/contact.php" onClick="_gaq.push(['_trackEvent', 'ContactSans', 'Clicked', 'AboutMenu']);">Contact SANS</a></li>
+    <li><a href="/faq/" onClick="_gaq.push(['_trackEvent', 'SansFaq', 'Clicked', 'AboutMenu']);">SANS FAQ</a></li>
+    <li><a href="/link-to-us/" rel="nofollow" onClick="_gaq.push(['_trackEvent', 'LinkTo', 'Clicked', 'AboutMenu']);">Link to SANS</a></li>
+    <li><a href="/press/" onClick="_gaq.push(['_trackEvent', 'PressRoom', 'Clicked', 'AboutMenu']);">Press Room</a></li>
+    <li><a href="http://pgp.mit.edu:11371/pks/lookup?op=get&amp;search=0xA1694E46'" rel="nofollow" onClick="_gaq.push(['_trackEvent', 'PgpKey', 'Clicked', 'AboutMenu']);">PGP Key</a></li>
+    <li class="last"><a href="/key.txt" rel="nofollow" onClick="_gaq.push(['_trackEvent', 'PgpKeyLocal', 'Clicked', 'AboutMenu']);">PGP Key - Local Copy</a></li>
+  </ul>
+ </li>
+</ul><!-- / .dropdown -->
+</div><!-- / .top-menu -->
+
+<div class="clear"></div><!-- / .clear -->
+
+</div><!-- / .header -->
+</div><!--  end .container -->
+
+<div class="container">
+<div id="te-header">
+<script type="text/javascript" src="/te_menu.js"></script>
+
+
+<div id="page-content">
+<div id="select-course">
+<span>select a course</span>
+</div>
+ <div id="te-type">
+ 
+ <ul id="te-menu">
+ 
+
+   
+    <li id="te-gray"></li>
+        <li id="te-forensics"><a href="category.php?c=SEC/FOR"><span>Forensics</span></a>
+                 <ul>
+        <li>
+                        <a href="description.php?tid=5106" class="wideload">Computer Forensic Investigations - Windows In-Depth :: FOR-408</a>
+                      </li><li>
+                        <a href="description.php?tid=4622" class="wideload">Reverse-Engineering Malware: Malware Analysis Tools and Techniques :: FOR-610</a>
+                      </li><li>
+                        <a href="description.php?tid=4976" class="wideload">Advanced Computer Forensic Analysis and Incident Response :: FOR-508</a>
+                      </li><li>
+                        <a href="description.php?tid=4562" class="wideload">Network Forensics :: FOR-558</a>
+                      </li></ul></li>
+        <li id="te-special"><a href="category.php?c=SPECIAL"><span>Special</span></a>
+                 <ul>
+        <li>
+                        <a href="description.php?tid=2132" class="wideload">Forensics Summit: WhatWorks in Forensics and Incident Response </a>
+                      </li></ul></li><li id="te-gray"></li><li id="te-gray"></li><li id="te-gray"></li><li id="te-gray"></li>   </ul>
+ </div>
+
+
+ <div id="te-city-date" style="margin-top: 15px">
+    Austin, Texas, TX - June 20 - 27, 2012
+ </div>
+ <!--Adding Blurb for SEC560-->
+
+   
+
+  
+
+
+</p>
+</div>
+
+
+ <div id="te-logo">
+  <ul class="te-links1" style="list-style-type: none; list-style-image: none; position:absolute; top:97px; left:-20px; color:#183D5C;">
+   <li><a href="index.php">Training Event</a></li>
+   <li><a href="event.php">Event at a Glance</a></li>
+     <li><a href="register.php">Registration Info</a></li>
+             <li><a href="tuition.php">Tuition Fees</a></li>
+       </ul>
+  <ul class="te-links2">
+     <li><a href="location.php">Event Location</a></li>
+       <li><a href="faculty.php">Faculty</a></li>
+       <li>Vendor Expo</li>
+       <li><a href="twitter.php">Twitter</a></li>
+    </ul>
+  <ul class="te-links3">
+     <li><a href="vendor.php">Vendor Events</a></li>
+       <li>Special Events</li>
+       <li>SANS @Night</li>
+       <li>Brochure <small>(PDF)</small></li>
+    </ul>
+ </div>
+
+
+
+ <div id="te-summit"> </div> 
+
+
+    <a href="http://www.giac.org" target="_blank" class="medal"><span id="medal">Global Information Assurance Certification</span></a>
+          <div id="te-giac-count" >
+             <p><a href="http://www.giac.org" target="_blank">Global Information Assurance Certification<br />
+                Number of Certified Professionals<br /> 
+             40,800 </a></p>
+          </div>
+          <div id="te-quote-bar" style="margin-top: 10px">    <p><q>The Best Information Security conference I have attended yet.</q><br /> -Chris Bimson, Compass Systems, Inc.</p>
+ </div>
+         
+
+<div id="te-headerexception" style="margin: 10px 0; text-align: right; width: 750px">
+
+<!--style="position:relative;float:right;padding-top:30px;font-size:larger;"-->
+ </div>
+
+
+  	          <div id="te-register" >
+                           <a href="https://www.sans.org/registration/register.php?conferenceid=26449"><span>Register Now!</span></a>
+                      
+		
+ </div>
+
+
+
+</div><!-- / #te-header -->
+
+<br /><br />
+
+<div id="te-stuff">
+<div class="links">
+
+<!--
+<div class="small-logo">
+<a href="/"><span>SANS Home</span></a>
+</div>
+-->
+
+<div id="link-section">
+
+ 
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <h3>Forensics 408</h3>
+
+  <div id='courselinks_inset'>
+  6 Day Course   <ul class="altbackground">
+    <li id='overview'><a href="description.php?tid=5106">Course  Overview</a></li>
+               <li id='cid16206'><a href="description.php?cid=16206">408.1 - Day 1</a></li>
+               <li id='cid16211'><a href="description.php?cid=16211">408.2 - Day 2</a></li>
+               <li id='cid16216'><a href="description.php?cid=16216">408.3 - Day 3</a></li>
+               <li id='cid16221'><a href="description.php?cid=16221">408.4 - Day 4</a></li>
+               <li id='cid16226'><a href="description.php?cid=16226">408.5 - Day 5</a></li>
+               <li id='cid16231'><a href="description.php?cid=16231">408.6 - Day 6</a></li>
+          </ul>
+     </div>
+
+  
+   
+
+  
+
+  
+
+
+           
+    
+    
+    
+     <div class="altborder" style="padding:5px;margin-top:10px;font-size:smaller;"><a href="/ondemand/getdemo.php?mid=1207"><img src="/ondemand/free_demo_140.jpg" alt="Free Demo" width="140" /><br /><img src="/ondemand/click_btn.jpg" border="0" width="85" /></a><br />(Portal Account Required)</div>
+<div id="te-certification" style="margin-top:10px;">
+<a href="http://www.giac.org/certifications/security/gcfe.php"><img src="/images/design/custom/icons/box/certs/gcfe-gold.png" alt="GCFE"></a><h6>For GIAC Certification</h6><p>If you register for the full course, you may register to seek your GCFE Certification for only $549.00 US.</p>
+<!--Added Online Exam Info Per Ryans Email Request 8/7/09-->
+
+
+ <p>Students who attend a live SANS Training Event will receive access to the GIAC certification attempt approximately 7-10 business days after the last day of the event.</p>
+
+<p>Additional information:<br />
+ <a href="http://www.giac.org/certifications/discipline/GCFE.php">GCFE Information</a><br />
+ <a href="http://www.giac.org/overview/faq.php">GIAC FAQ</a><br />
+ <a href="tuition.php">Fee Information</a></p>
+</div>
+
+<div id="te-certification">
+<h6>For OnDemand Bundles</h6>
+<p>You can bundle SANS OnDemand online training and assessment package for an additional $449.00 US when registering for the full course. Additional information can be found at the <a href="/ondemand/bundle.php">OnDemand Bundles</a> page and the <a href="/ondemand/faq.php">OnDemand FAQ</a>.</p>
+</div>
+<div class="altbackground">
+           <h5>About<br />SANS WhatWorks Summit Series</h5>
+           <p style="text-align:left;padding:2px 3px 0 3px;">The SANS WhatWorks Summit Series brings together the thought leaders of the industry...<br /><a href="/whatworks/whatworks_summit.php" target="_blank">&gt;&gt; Read More</a></p>
+</div><div></div>
+
+
+
+
+  </div>
+</div> 
+<div class="column">   
+
+ <div id="te-type-bar">
+ <!-- need to somehow pass college type to stylesheet for color -->
+ <p class="te-collegetype-bar">
+ FORENSICS 408 </p>
+ </div>
+
+ <div id="te-title-date-instructor">
+  <h4>Computer Forensic Investigations - Windows In-Depth</h4>
+  Wednesday, June 20, 2012 - Monday, June 25, 2012<br />
+ 
+  <a href="faculty.php#iid673">Chad Tilbury, SANS Certified Instructor</a> 
+      <br />
+ 6 CPE/CMU Credits Per Day<br />
+ </div>
+
+ 
+  <div id="te-laptop">
+   <a href="laptop.php?tid=5106"><span>Laptop RequiredFree</span></a>
+  </div>
+ 
+
+ <div id="te-event-description">  
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p><p><em><strong>Master computer forensics.  Learn critical investigation techniques.  With today's ever-changing technologies and environments, it is inevitable that every organization will deal with cybercrime including fraud, insider threat, industrial espionage, and phishing. In addition, government agencies are now performing media exploitation to recover key intelligence kept on adversary systems.  In order to help solve these cases, organizations are hiring digital forensic professionals and calling cybercrime law enforcement agents to piece together what happened in these cases.</strong></em></p> <p>FOR408: Computer Forensic Investigations - Windows In-Depth focuses on the critical knowledge of the Windows OS that every digital forensic analyst must know to investigate computer incidents successfully. You will learn how computer forensic analysts focus on collecting and analyzing data from computer systems to track user-based activity that could be used internally or in civil/criminal litigation.</p>  <p>This course covers the fundamental steps of the in-depth computer forensic and media exploitation methodology so that each student will have the complete qualifications to work as a computer forensic investigator in the field helping solve and fight crime.  In addition to in-depth technical digital forensic knowledge on Windows Digital Forensics (Windows XP through Windows 7 and Server 2008) you will be exposed to well known computer forensic tools so such as Access Data's Forensic Toolkit (FTK), Guidance Software's EnCase, Registry Analyzer, FTK Imager, Prefetch Analyzer, and much more.  Many of the tools covered in the course are freeware, comprising a full-featured forensic laboratory that each student can take with them.</p>      <p>FOR408: Computer Forensic Investigations - Windows In-Depth is the first course in the SANS Computer Forensic Curriculum.  If this is your first computer forensics course with SANS we recommend that you start here.</p> <p><a href="http://computer-forensics.sans.org/" target="_blank">FIGHT CRIME. UNRAVEL INCIDENTS... ONE BYTE AT A TIME.</a></p> <h2>You will receive with this course</h2> <h3>Free SANS Investigative Forensic Toolkit (SIFT) Essentials</h3> <p>As a part of this course you will receive a SANS Investigative Forensic Toolkit (SIFT) Essentials with a Tableau Write Block Acquisition Kit. The entire kit will enable each investigator to accomplish proper and secure examinations of SATA, IDE, or Solid State Drives (SSD). The toolkit consists of:</p><img class="align-right" src="/images/courses/for408-sift-tableau-kit.jpg" alt="Forensics SIFT Tableau T35es Write Blocker Kit" />  <ul>  <li>Tableau T35es Write Blocker Kit    <ul>    <li>One Tableau T35es Write Blocker (Read-Only)</li>    <li>IDE Cable/Adapters</li>    <li>SATA Cable/Adapters</li>    <li>FireWire and USB Cable Adapters</li>    <li>Forensic Notebook Adapters (IDE/SATA)</li>   </ul></li><img class="align-right" src="/images/courses/for408-sift-tableau.jpg" alt="Forensics SIFT Tableau" />   <li>SANS VMware-Based Forensic Analysis VMware Workstation   <ul>     <li>Fully functioning tools that include working with Access Data's Forensic Toolkit (FTK) and Guidance Software's EnCase</li>   </ul></li>   <li>Course DVD: Loaded with case examples, tools, and documentation</li> </ul>  <h3>Who should attend</h3> <ul>  <li><strong>Information technology professionals</strong> who wish to learn the core concepts in computer forensics investigations</li>  <li><strong>Incident Response Team Members</strong> who are new to responding to security incidents and need to utilize computer forensics to help solve their cases</li>  <li><strong>Law enforcement officers, federal agents, or detectives</strong> who desire to become a subject matter expert on computer forensics for Windows based operating systems</li>  <li><strong>Media Exploitation Analysts</strong> who need to master Tactical Exploitation and Document and Media Exploitation (DOMEX) operations on systems used by an individual.  They will be able to specifically determine how the individual used their system, who they communicated with, and files they have downloaded, edited, or deleted.</li>  <li><strong>Information security managers</strong> who need to understand digital forensics in order to understand information security implications and potential litigation related issues or manage investigative teams</li>  <li><strong>Information technology lawyers and paralegals</strong> who desire to have a formal education in  digital forensic investigations</li>  <li><strong>Anyone interested in computer forensic investigations</strong> with a background in information systems, information security, and computers</li> </ul> <h3>Computer Forensic Investigations - Windows In-Depth course topics</h3> <ul>  <li>Windows File System Basics</li>  <li>Evidence Acquisition Tools and Techniques</li> <li>Law Enforcement Bag and Tag</li>  <li>Evidence Integrity</li>  <li>Registry Forensics</li>  <li>Windows Artifact Analysis   <ul>    <li>Facebook, Gmail, Hotmail, Yahoo Chat and Webmail Analysis</li>    <li>E-mail Forensics (Host, Server, Web)</li>    <li>Microsoft Office Document Analysis</li>    <li>Windows Link File Investigation</li>    <li>Windows Recycle Bin Analysis</li>    <li>File and Picture Metadata Tracking and Examination</li>    <li>Prefetch Analysis</li>   </ul></li>   <li>Event Log File Analysis</li>  <li>Firefox and Internet Explorer Browser Forensics</li>  <li>Deleted File Recovery</li>  <li>String Searching and Data Carving</li>  <li>Examine cases involving Windows XP, VISTA, and Windows 7</li>  <li>Media Analysis And Exploitation Involving:   <ul>    <li>Tracking user communications using a windows PC (email, chat, IM, webmail)</li>    <li>Tell if and how the suspect downloaded a specific file to the PC</li>    <li>Determine the exact time and the number of times a suspect executed a program</li>    <li>Show when any file was first and last opened by a suspect</li>    <li>Determine if a suspect had knowledge of a specific file</li>    <li>Show the exact physical location of the system</li>    <li>USB device tracking and analysis </li>    <li>Show how the suspect logged into the machine via the console, RDP, or network</li>    <li>Recover and examine browser artifacts even those used in private browsing mode</li>   </ul></li>   <li>Fully Updated to include full Windows 7 and Server 2008 Examinations</li> </ul> <h4>Certifications</h4> <ul>  <li>FOR408 - Computer Forensic Investigations - Windows In-Depth is an Authorized Training Center for the following Digital Forensic Certifications:</li>  <li>GIAC Certified Forensic Examiner (GCFE) <img src="/images/design/custom/icons/certs/small/gcfe-gold.png" /></li>  <li>ISFCE Certified Computer Examiner (CCE) <img src="/images/courses/cce.png" alt="ISFCE Certified Computer Examiner (CCE)" /></li> </ul>    <h4>SANS COMPUTER FORENSIC WEBSITE - HTTP://COMPUTER-FORENSICS.SANS.ORG</h4> <p>The learning does not end when class is over. SANS Computer Forensic Website is a community-focused site offering digital forensics professionals a one-stop forensic resource to learn, discuss, and share current developments in the field. It also provides information regarding SANS forensics training, GIAC certification, and upcoming events. Visit <a href="http://computer-forensics.sans.org/" target="_blank">http://computer-forensics.sans.org</a>. New content is added regularly, so please visit often. In addition, do not forget to share this information with your fellow forensic professionals.</p></p> </div>
+
+
+
+
+
+
+<div id="te-author-statement" style="margin-bottom:10px;padding:10px">
+<p><q>It was the most interesting and educational training I&#039;ve ever attended.  I learned more in this week than in the past year.</q><br /> -Michael McAndrews, Irwin Mortgage Corp.</p></div>
+
+<div id="te-author-statement">
+<h6>Author Statement</h6>
+<p>
+<p>After 25 years in law enforcement, when I think of what makes a great digital forensic analyst, three things immediately rise to the top of my list.  Superior technical skill, sound investigative methodology, and the ability to overcome obstacles.  SANS FOR408, Windows In-Depth was designed around imparting these critical skills to the students.  Unlike many other forensics training courses that focus on teaching a single tool, FOR408 provides training on many tools. While there are some really exceptional tools available, we feel every forensicator needs a variety of tools in their arsenal so they can pick and choose the best tool for each task.  But we also understand that a great forensics analyst is not great because of the tool(s) they use; they are great because they artfully apply the right investigative methodology to each analysis.  A carpenter can be a master with all his tools and still not know how to build a house.  FOR408 is designed to teach and allow each student to apply digital forensic methodologies for a variety of case types and situations, allowing them to apply in the real world the right methodology to achieve the best outcome. Finally, this course is designed to teach and demonstrate problem-solving skills necessary to be a truly successful forensicator.  Almost immediately after starting your forensic career, you learn each forensic analysis presents its own unique challenges. A technique that worked flawlessly in previous exams may not work in the next.  A good forensicator must be able to overcome obstacles through advanced trouble shooting and problem solving.  FOR408 gives students the foundation that will allow them to solve future problems, overcome obstacles and become great forensicators.  No matter if you are new to the forensic community or have been doing forensics for years, FOR408 is a must have course. - <strong>Ovie Carroll</strong></p> <p><strong>SANS COMPUTER FORENSICS GRADUATE THWARTS BANK HEIST.</strong> Headlines similar to these are now a reality as former students have emailed me regularly about how they were able to use their digital forensic skills in very real situations. Graduates of Computer Forensics Windows In-Depth are the front line troops deployed when you need accurate digital forensic and media exploitation analysis. From analyzing terrorist laptops to investigating insider intellectual property theft and fraud, SANS digital forensic graduates are battling and winning the war on crime and terror. Graduates have directly contributed to solving some of the toughest cases out there because they learn properly how to conduct analysis and run investigations properly.  Knowing that this course places the correct methodology and knowledge in the hands of responders who thwart the plans of criminals or foreign attacks brings me great comfort. Graduates are doing it. Daily. I am proud that the Computer Forensics Investigations-Windows In-Depth course at SANS helped prepare them to fight and solve crime. - <strong>Rob Lee</strong></p> <p>Computer forensics has never been more in demand than it is today.  Zettabytes of data are created yearly, and forensic examiners will increasingly be called in to separate the wheat from the chaff.  For better or worse, digital artifacts are recorded for almost every action, and the bar has been raised for those investigators working to repel computer intrusions, stop intellectual property theft, and put the bad guys in jail.  We wrote this course as the forensics training we wish would have been available early in our careers.  Keeping up with the cutting edge of forensics is daunting, and with frequent updates I am confident this course provides the most up to date training available -- whether you are just starting out or are looking to add to your forensic arsenal. - <strong>Chad Tilbury</strong></p></p>
+
+</div>
+</div>
+
+</div>
+
+<div class="clear"></div><!-- / .clear -->
+</div><!-- /container -->
+
+<!-- Bottom Content -->
+<div class="bottom-content">
+<div class="container">
+
+<div class="footer-column whitepapers">
+<h3>Latest Whitepapers</h3>
+                <p><a href="/reading_room/whitepapers/hackers
+/user-agent-field-analyzing-detecting-abnormal-malicious-organization_33874">The User Agent Field: Analyzing and Detecting the Abnormal or Malicious in your Organization</a><br />By Darren Manners</p>
+                            <p><a href="/reading_room/whitepapers/application
+/auditing-aspnet-applications-pci-dss-compliance_33869">Auditing ASP.NET applications for PCI DSS compliance</a><br />By Christian Moldes</p>
+                            <p><a href="/reading_room/whitepapers/hackers
+/profiling-hackers_33864">Profiling Hackers</a><br />By Larisa Long</p>
+            </div><!-- / .footer-column -->
+
+<div class="footer-column tweets">
+<h3>Latest Tweets</h3>
+
+                <p><a href="http://twitter.com/SANSInstitute/statuses/168079814631239681">@SANSInstitute: RT @hackmanj: #Infosec Daily Edition is out!  [...]</a><br />
+                Fri, 10 Feb 2012 21:12:05 +0000
+</p>
+                            <p><a href="http://twitter.com/SANSInstitute/statuses/168079475748249600">@SANSInstitute: Congratulations! RT @viceroyx1 Passed #GSEC y [...]</a><br />
+                Fri, 10 Feb 2012 21:10:44 +0000
+</p>
+                            <p><a href="http://twitter.com/SANSInstitute/statuses/168079093173190659">@SANSInstitute: #FF @robtlee @sansforensics #ComputerForensic [...]</a><br />
+                Fri, 10 Feb 2012 21:09:13 +0000
+</p>
+            
+</div><!-- / .footer-column -->
+
+<div class="footer-column contact">
+<h3>Contact Us</h3>
+<p>(301) 654-SANS (7267)<br />
+Mon-Fri 9am - 8pm EST/EDT<br />
+<a href="mailto:info@sans.org">info@sans.org</a></p>
+</div><!-- / .footer-column contact -->
+
+<div class="footer-quote-box">
+            <p>"The perfect balance of theory and hands-on experience."<br />- James D. Perry II, University of Tennessee</p>
+                    <p>"SANS is a great place to enhance your technical and hands-on skills and tools. I thoroughly recommend it."<br />- Aaron Waugh, Datacom NZ Ltd</p>
+                    <p>"SANS always provides you what you need to become a better security professional at the right price."<br />- Rasik Vekaria, BP</p>
+        </div>
+
+
+</div><!-- / .bottom-content -->
+</div><!-- / .container -->
+
+<!-- Footer -->
+<div id="footer">
+<div class="container">
+<img src="/images/design-site/logo-footer.png" alt="SANS - IT Audit with David Hoelzer" class="logo-footer" />
+
+<ul class="site-selector">
+ <li class="site-switcher"><a href="#"><span class="hidden">SANS Site Network</span></a>
+  <ul class="sites">
+   <li class="current-site">Current Site</li>
+   <li class="sans "><a href="http://www.sans.org"><img src="/images/design/custom/site-selector/site-icons/sans.png" alt="sans" />Training</a></li>
+   <li class="selector-help">Choose a different site <a href="/help/site-network"><span class="hidden">Help</span></a></li>
+   <li class="giac "><a href="http://www.giac.org"><img src="/images/design/custom/site-selector/site-icons/giac.png" alt="giac" />Certification</a></li>
+   <li class="isc "><a href="http://isc.sans.org"><img src="/images/design/custom/site-selector/site-icons/isc.png" alt="isc" />Internet Storm Center</a></li>
+   <li class="sti "><a href="http://www.sans.edu"><img src="/images/design/custom/site-selector/site-icons/sti.png" alt="sti" />SANS Technology Institute</a></li>
+   <li class="awareness "><a href="http://www.securingthehuman.org"><img src="/images/design/custom/site-selector/site-icons/awareness.png" alt="awareness" />Security Awareness</a></li>
+   <li class="blogs "><a href="http://blogs.sans.org"><img src="/images/design/custom/site-selector/site-icons/blogs.png" alt="blogs" />Latest News</a></li>
+   <li class="forensics "><a href="http://computer-forensics.sans.org"><img src="/images/design/custom/site-selector/site-icons/forensics.png" alt="forensics" />Computer Forensics</a></li>
+   <li class="audit "><a href="http://it-audit.sans.org"><img src="/images/design/custom/site-selector/site-icons/audit.png" alt="audit" />IT Audit</a></li>
+   <li class="ssi last"><a href="http://software-security.sans.org"><img src="/images/design/custom/site-selector/site-icons/software-security.png" alt="ssi" />Software Security</a></li>
+  </ul>
+ </li>
+</ul>
+
+<div class="latest-icons">
+<a href="http://twitter.com/it_audit"><img src="/images/design/custom/icons/twitter-icon.png" alt="Twitter" /></a>
+<a href="http://www.facebook.com/group.php?gid=124107180936461"><img src="/images/design/custom/icons/facebook-icon.png" alt="Facebook" /></a>
+<a href="http://it-audit.sans.org/blog/feed/"><img src="/images/design/custom/icons/rss-icon.png" alt="RSS" /></a>
+</div><!-- end .latest-icons -->
+
+<div class="bottom-nav align-right">
+<ul>
+ <li><a href="/security-training/courses.php">Courses</a></li>
+ <li><a href="/security-training/">Live Training</a></li>
+ <li><a href="/online-security-training/">Online Training</a></li>
+ <li><a href="/security-resources.php">Resources</a></li>
+ <li><a href="/vendor/">Vendor</a></li>
+ <li class="last"><a href="/about/">About</a></li>
+</ul>
+
+<p class="copyright align-right">&copy; 2000-2012 The SANS&#8482; Institute</p>
+</div><!-- end .bottom-nav align-right-->
+</div><!-- end .container-->
+</div><!-- end .footer-->
+</div>
+</div><!-- end .body -->
+
+
+</body>
+
+</html>

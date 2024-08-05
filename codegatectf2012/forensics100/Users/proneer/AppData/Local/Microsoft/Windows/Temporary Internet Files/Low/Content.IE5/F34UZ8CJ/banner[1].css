@@ -1,0 +1,22 @@
+/* Works with iCloud Banner */
+#main .icloud-banner { position:absolute; z-index:11; text-align:left; font-size:14px; border:1px solid #fff; line-height:1.25em; background-color:#eee;
+	background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#f9f9f9), to(#e5e5e5), color-stop(.5,#f1f1f1));
+	background:-moz-linear-gradient(top, #f9f9f9 0%, #f1f1f1 50%, #e5e5e5 100%); }
+#main .icloud-banner a.block { width:128px; min-height:35px; padding:12px 12px 9px 57px; color:#222;}
+#main .icloud-banner a.block:hover { background-color:#f1f1f1;
+	background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#f9f9f9), to(#f1f1f1), color-stop(.5,#fff));
+	background:-moz-linear-gradient(top, #f9f9f9 0%, #fff 50%, #f1f1f1 100%); }
+
+#main .icloud-banner .dangly { position:absolute; margin-top:1px; width:18px; height:15px; z-index:1; }
+#main .icloud-banner .icon { margin-top:-19px; position:absolute; z-index:1; top:50%; left:9px; }
+#main .icloud-banner .more { display:inline-block; font-size: .9em; }
+
+#main .icloud-banner.left { left:-6px; border-radius:4px 4px 4px 0;
+	box-shadow:2px 0px 2px -1px rgba(255,255,255,.7), 0 0 1px rgba(0,0,0,0.3), 0 3px 6px -1px rgba(0,0,0,0.25);
+	-webkit-box-shadow:2px 0px 2px -1px rgba(255,255,255,.7), 0 0 1px rgba(0,0,0,0.3), 0 3px 6px -1px rgba(0,0,0,0.25); }
+#main .icloud-banner.left .dangly { left:-8px; background-image:url(/v/icloud/shared/works-with-icloud-banner/a/images/banner_dangly_left.png); }
+
+#main .icloud-banner.right { right:-6px; border-radius:4px 4px 0 4px;
+	box-shadow:2px 0px 2px -1px rgba(255,255,255,.7), 0 0 1px rgba(0,0,0,0.3), 0 3px 6px -1px rgba(0,0,0,0.25);
+	-webkit-box-shadow:2px 0px 2px -1px rgba(255,255,255,.7), 0 0 1px rgba(0,0,0,0.3), 0 3px 6px -1px rgba(0,0,0,0.25); }
+#main .icloud-banner.right .dangly { right:-6px; background-image:url(/v/icloud/shared/works-with-icloud-banner/a/images/banner_dangly_right.png); }

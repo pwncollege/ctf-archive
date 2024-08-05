@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+<?xml-stylesheet href="chrome://asktoolbar/skin/toolbar.css" type="text/css"?>
+<!--
+Copyright (C) 2008-2010 APN, LLC. All rights reserved
+Ask.com Toolbar options dialog layout
+-->
+<prefwindow id="asktb-dialog-prefs" title="Toolbar Options" title-localekey="OptionsDialogTitle" 
+    buttons="," onload="ATB_Options.onloadOptionsDialog(event);" onunload="ATB_Options.onunloadOptionsDialog(event);"
+    orient="vertical" style="padding: 12px;" 
+    xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+    <script type="application/x-javascript" src="chrome://asktoolbar/content/options.js" />
+    <prefpane id="asktb-pref-search-options" style="padding: 0; margin: 0;">
+        <preferences id="asktb-preferences">
+            <preference id="asktb-pref-display-save-searches" name="extensions.asktb.save-searches" type="bool" />
+            <preference id="asktb-pref-clear-searches-on-exit" name="extensions.asktb.clear-searches-on-exit" type="bool" />
+            <preference id="asktb-pref-show-labels" name="extensions.asktb.show-labels" type="bool" />
+        </preferences>
+        
+        <tabbox id="asktb-options-tabbox">
+            <tabs>
+                <tab label="Search Settings" label-localekey="SearchOptionsSection" />
+                <tab label="More Options" label-localekey="MoreOptionsSection" />
+            </tabs>
+            <tabpanels>
+                <tabpanel id="searchOptionsTab" orient="vertical">
+                    <spacer height="8" />
+                    <hbox>
+                        <text class="inline-row-text" style="padding-left: 8px;" value="Select Ask search engine" value-localekey="SelectAskSearchEngine" />
+                        <text class="inline-row-text" value=": " />
+                        <menulist id="asktb-supported-locales-list">
+                            <menupopup id="asktb-supported-locales-popup" />
+                        </menulist>
+                    </hbox>
+                    <checkbox id="asktb-option-display-recent-searches-entry" preference="asktb-pref-display-save-searches"
+                        label="Display recent searches" label-localekey="DisplayRecentSearchesOption" checked="true" />
+                    <checkbox id="asktb-option-clear-searches-on-exit-entry" preference="asktb-pref-clear-searches-on-exit"
+                        label="Auto clear recent search history when I close the browser" label-localekey="AutoClearRecentSearchesOption" checked="false" />
+                    <checkbox id="asktb-option-enable-search-assist"
+                        label="Display search results when I type keywords or invalid URLs into the browser address bar" label-localekey="KeywordSearchOption" checked="false" />
+                    <spacer height="12" />
+                    <hbox>
+                        <text class="asktb-pref-header bold-hyperlink" value="Help" value-localekey="Help" onclick="ATB_Options.getOptionsHelp(event);" />
+                    </hbox>
+                    <spacer height="18" />
+                    <hbox>
+                        <button hidden="true" label="Restore defaults" label-localekey="RestoreDefaultsOption" oncommand="ATB_Options.restoreOptionsDefaults();" />
+                        <spacer flex="1" />
+                        <button label="OK" label-localekey="OkButton" oncommand="ATB_Options.saveOptions();" />
+                        <button label="Cancel" label-localekey="CancelButton" oncommand="ATB_Options.cancelOptions();" />
+                    </hbox>
+                </tabpanel>
+            
+                <tabpanel id="moreOptionsTab" orient="vertical">
+                    <spacer height="8" />
+                    <hbox>
+                        <text class="inline-row-text" style="padding-left: 8px;" value="Select Toolbar language" value-localekey="SelectToolbarLanguage" />
+                        <text class="inline-row-text" value=": " />
+                        <menulist id="asktb-supported-langs-list">
+                            <menupopup id="asktb-supported-langs-popup" />
+                        </menulist>
+                    </hbox>
+                    <checkbox id="asktb-option-show-labels-entry" preference="asktb-pref-show-labels"
+                        label="Show button text labels" label-localekey="ShowButtonLabelsOption" />
+                    <spacer height="33" />
+                    <hbox>
+                        <text class="asktb-pref-header bold-hyperlink" value="Help" value-localekey="Help" onclick="ATB_Options.getOptionsHelp(event);" />
+                    </hbox>
+                    <spacer height="18" />
+                    <hbox>
+                        <button hidden="true" label="Restore defaults" label-localekey="RestoreDefaultsOption" oncommand="ATB_Options.restoreOptionsDefaults();" />
+                        <spacer flex="1" />
+                        <button label="OK" label-localekey="OkButton" oncommand="ATB_Options.saveOptions();" />
+                        <button label="Cancel" label-localekey="CancelButton" oncommand="ATB_Options.cancelOptions();" />
+                    </hbox>
+                </tabpanel>
+                
+            </tabpanels>
+        </tabbox>
+        
+    </prefpane>
+</prefwindow>

@@ -1,0 +1,166 @@
+write@charset "utf-8";
+
+
+span.sp{color:#ffb413;}
+span.status{color:#ff8432;}
+p.comm{padding:5px 0;color:#999999;font-size:11px;line-height:14px;}
+p.comm2{color:#ff8432;font-weight:bold;}
+p.icoDown, span.icoDown{margin:3px 0;color:#666;line-height:14px;text-align:left;}
+p.icoDown img, span.icoDown img{padding:1px 3px 0 0; vertical-align:top;}
+p.icoDown a{text-decoration:underline !important;line-height:14px;}
+.icoHome{padding:0 0 5px 56px;text-align:left;background:url('http://image.ahnlab.com/global/site/images/common/blt/ico_home.gif') no-repeat 0 0;} /* 개인 */
+.icoBusi{padding:0 0 5px 56px;text-align:left;background:url('http://image.ahnlab.com/global/site/images/common/blt/ico_business.gif') no-repeat 0 0;} /* 기업 */
+
+/* List */
+table.list{border-top:2px solid #bbc2cf;border-bottom:2px solid #bbc2cf;}
+table.list th{padding:9px 0 8px 0;line-height:12px;border-bottom:1px solid #bbc2cf;background:#f8f9fb url('http://image.ahnlab.com/global/site/images/common/blt/bg_th.gif') no-repeat 0 center;}
+table.list th.first{background:#f8f9fb;}
+table.list td{padding:7px 10px 6px 10px;text-align:center;border-top:1px solid #dde0e7;}
+table.list td img{vertical-align:middle;}
+table.list td.down{padding-left:10px;text-align:left;color:#888;}
+table.list td.tit{padding-left:10px;padding-right:10px;text-align:left;}
+table.list td.tit a:hover{color:#09409a;}
+table.list td.no{color:#888 !important;}
+table.list td.date{color:#888 !important;}
+table.list td.name{text-align:left;}
+table.list tr.selQna td{background:#f2f6fe;}
+table.list tr.selQna td.tit a{font-weight:bold;}
+
+/* View */
+table.view{border-top:2px solid #bbc2cf;border-bottom:2px solid #bbc2cf;}
+table.view th{width:678px;padding:8px 25px 8px 25px;font-size:16px;line-height:23px;color:#333333;text-align:left;background:#f8f9fb;border-bottom:1px solid #bbc2cf;}
+table.view th img{margin-right:5px;vertical-align:middle;}
+table.view td.thLine{padding:10px 25px 9px 25px;background:url('http://image.ahnlab.com/global/site/images/common/blt/bg_td.gif') repeat-x bottom;}
+table.view td.thLine span, table.view td.thLine strong{font-size:11px !important;line-height:11px !important;}
+table.view td.thLine span.date{color:#888 !important;}
+table.view td.cont{width:663px !important;padding:30px 25px;line-height:18px;}
+table.view td.cont p, table.view td.cont strong{line-height:18px;}
+table.view td a.email:link, table.view td a.email:visited, table.view td a.email:hover {color:#5A90CB;}
+
+/* Write */
+table.write{width:100%;border-top:2px solid #bbc2cf;border-bottom:2px solid #bbc2cf;}
+table.write th{width:145px;padding:8px 0 7px 0;border-top:1px solid #dde0e7;text-align:left;vertical-align:top;}
+table.write th strong.sp{position:relative;width:125px;display:block;padding-left:20px;line-height:14px;}
+table.write th strong.sp span{position:absolute;top:4px;left:8px;font-weight:normal !important;color:#ffb413;line-height:11px;}
+table.write td{padding:4px 0 3px 0;border-top:1px solid #dde0e7;}
+table.write td input{#margin-top:-1px;}
+table.write td.notice{padding:15px 20px;}
+table.write td.notice ul.reSel{margin-top:5px;}
+table.write td .inputR, table.write td .inputR2 {margin:-3px 0 0 5px;*margin:-1px 0 0 3px;}
+:root table.write td .inputR {margin:-5px 0 0 5px;}
+:root table.write td .inputR2 {margin:-5px 0 0 5px;}
+table.write td .inputR input, table.write td .inputR2 input {width:487px;*width:480px;}
+table.write td .inputR p, table.write td .inputR2 p {padding:0 0 3px 3px;*padding:0 0 3px 8px;}
+table.write td .inputR p, table.write td .inputR p strong, table.write td .inputR2 p, table.write td .inputR2 p strong {color:#999;font-size:11px;}
+table.write td .inputR2 {padding-left:32px;*padding-left:37px;}
+table.write td .inputR2 a:link, table.write td .inputR2 a:active, table.write td .inputR2 a:visited {color:#999;font-size:11px;text-decoration:none;}
+table.write td .inputR2 a:hover {color:#999;font-size:11px;text-decoration:underline;}
+
+
+
+/* Contents Table */
+table.contTbl{border-top:2px solid #bbc2cf;border-bottom:2px solid #bbc2cf;}
+table.contTbl th{padding:9px 0 8px 0;line-height:12px;border-top:1px solid #dde0e7;border-left:1px solid #bbc2cf;border-bottom:1px solid #bbc2cf;background:#f5f7fa;}
+table.contTbl th.first{border-left:0;}
+table.contTbl th.bgnone {border-bottom:1px solid #dde0e7;background:none;}
+table.contTbl td{padding:8px 10px 8px 10px;border-top:1px solid #dde0e7;border-left:1px solid #bbc2cf;text-align:center;}
+table.contTbl td.first{border-left:0;}
+table.contTbl td.tit{text-align:left;}
+table.contTbl td.down{}
+table.contTbl td.file{table-layout:fixed;text-align:left;word-wrap:break-word;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space:-o-pre-wrap;}
+table.contTbl td.secLine{border-left:1px solid #dde0e7;}
+table.contTbl th.txtL {padding-left:10px;} /* 20100106 강미영 추가 */
+table.contTbl td.pointer p {padding-bottom:4px;} /* 20100106 강미영 추가 */
+table.contTbl td.txtLlist {padding-left:10px;text-align:left;line-height:20px;}
+
+table.contTblLine tbody tr th, table.contTblLine tbody tr td {border-bottom:1px solid #dde0e7;}
+
+table.contTblR{border-top:2px solid #bbc2cf;border-bottom:2px solid #bbc2cf;}
+table.contTblR th{padding:9px 0 8px 15px;border-right:1px solid #bbc2cf;border-top:1px solid #dde0e7;background:#f5f7fa;text-align:left;line-height:12px;}
+table.contTblR th.th{border-left:1px solid #bbc2cf;}
+table.contTblR td{padding:8px 10px 8px 15px;border-top:1px solid #dde0e7;}
+
+table.contTblI{}
+table.contTblI th{padding:7px 0 6px 15px;color:#FFF;border-left:1px solid #f9f9f9;border-bottom:1px solid #b3b3b3;background:#c6c6c6;text-align:left;font-size:11px;line-height:12px;}
+table.contTblI th.first{border-left:1px solid #c6c6c6;}
+table.contTblI td{padding:6px 10px 6px 15px;border-left:1px solid #c1c1c1;border-bottom:1px solid #c1c1c1;font-size:11px;line-height:14px;}
+table.contTblI td strong{font-size:11px;line-height:14px;}
+table.contTblI td.first{border-left:0;}
+
+table.prodList, table.prodList2 {border-bottom:2px solid #bbc2cf;margin-bottom:2px;#margin-bottom:0;}
+table.prodList th, table.prodList2 th {border-bottom:1px solid #dde0e7;}
+table.prodList th {width:130px;padding:0 0 0 20px;}
+table.prodList td, table.prodList2 td {border-bottom:1px solid #dde0e7;}
+table.prodList td{padding:10px 20px;}
+table.prodList td a strong, table.prodList2 td a strong {text-decoration:underline;}
+table.prodList td p {padding:8px 0 0 0;}
+table.prodList td p, table.prodList2 td p {word-break:keep-all !important;}
+table.prodList td .downIcon, table.prodList td .buynowBtn {padding:15px 0 16px 21px;border-left:1px solid #E7EBF1;}
+table.prodList td .downIcon span {display:block;}
+table.prodList td .downIcon span a:link, table.prodList td .downIcon span a:active, table.prodList td .downIcon span a:visited, table.prodList td .downIcon span a:hover {color:#666;text-decoration:underline;}
+table.prodList td .txtDesktop {padding-top:6px;}
+table.prodList td .txtDesktop dt, table.prodList td .txtDesktop dd {float:left;}
+table.prodList td .txtDesktop dd {padding-left:3px;}
+table.prodList td .buynowBtn {overflow:hidden;min-height:50px;padding:23px 0 22px 18px;}
+table.prodList td .buynowBtn strong {display:block;padding-bottom:9px;color:#C40002;}
+table.prodList td .buynowBtn img {margin-left:1px;}
+table.prodList td.tdText01 {padding-top:2px;}
+table.prodList td.tdText01 a strong {display:block;padding-bottom:8px;}
+
+table.prodList2 th {width:150px;padding:10px 0 22px 10px;}
+table.prodList2 th, table.prodList2 td {vertical-align:top;}
+table.prodList2 th .btnEngine {margin-top:6px;*margin-top:4px;}
+table.prodList2 td {padding:22px 0 22px 10px;}
+table.prodList2 td p {padding:6px 0 0 0;}
+table.prodList2 td .tdProbtn {padding-top:11px;}
+
+table.asecReportList {border-top:2px solid #bbc2cf;}
+table.asecReportList .first th, table.asecReportList .first td {background:url("http://image.ahnlab.com/img_upload/kr/site/images/common/blt/bg_td2.gif") repeat-x top left}
+table.asecReportList  th, table.asecReportList .first th {background:#fbfbfb; border-right:1px solid #f1f1f1; vertical-align:top; border-bottom:1px solid #dde0e7; padding:27px 0 0 0}
+table.asecReportList  td {color:#8a96a6; text-align:center; border-bottom:1px solid #dde0e7; padding:24px 0;}
+table.asecReportList  td li {float:left; margin-left:17px;font-size:11px;}
+table.asecReportList  td a {font-size:11px;}
+table.asecReportList  td strong {color:#09409a;font-size:11px;}
+
+/* paging */
+.paging{width:713px;margin-top:20px;text-align:center;font-size:0;line-height:0;}
+.paging:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}
+.paging span{display:inline-block;height:13px;padding:0 9px 0 3px;font-size:0;line-height:0;vertical-align:middle;}
+.paging span a{
+	display:inline-block;height:13px !important;padding:0 7px 0 11px;
+	background:url('http://image.ahnlab.com/global/site/images/common/layout/bg_paging.gif') no-repeat left center;
+	font-size:10px !important;line-height:10px !important;font-weight:bold;vertical-align:middle;}
+.paging span a strong{color:#5a90cb;font-size:10px !important;line-height:10px !important;}
+.paging span a.first{background-image:none;}
+.paging span a:link,
+.paging span a:visited,
+.paging span a:active,
+.paging span a:hover{color:#656565;}
+.paging a.lBtn{display:inline-block;height:11px;#height:10px;margin:0 0 0 14px;padding-top:2px;#padding-top:3px;font-size:0;line-height:0;vertical-align:middle;}
+.paging a.lBtn img{vertical-align:middle;}
+.paging a.rBtn{display:inline-block;height:11px;#height:10px;margin:0 14px 0 0;padding-top:2px;#padding-top:3px;font-size:0;line-height:0;vertical-align:middle;}
+.paging a.rBtn img{vertical-align:middle;}
+
+
+
+/* Calendar */
+table.monthTbl{margin-top:25px;border-bottom:2px solid #bbc2cf}
+table.monthTbl th{height:24px; text-align:center; background:url('http://image.ahnlab.com/global/site/images/common/blt/bg_th2.gif') repeat-x 0 0;}
+table.monthTbl th.day{background:url('http://image.ahnlab.com/global/site/images/common/blt/bg_th2_year.gif') no-repeat right;}
+table.monthTbl td{height:80px; vertical-align:top; padding:5px; border-left:1px solid #c5ccd6; border-bottom:1px solid #c5ccd6; font-size:11px;}
+table.monthTbl td a{font-size:11px; text-decoration:underline;}
+table.monthTbl td p{padding:0px !important;}
+table.monthTbl td.sun{border-left:0; color:#b73939;}
+table.monthTbl td.sat{color:#1f5cbe;}
+table.monthTbl td.mocol1{background:#faf8dd url('http://image.ahnlab.com/global/site/images/common/blt/bg_month1.gif') no-repeat right top;}
+table.monthTbl td.mocol2{background:#f0ebf7 url('http://image.ahnlab.com/global/site/images/common/blt/bg_month2.gif') no-repeat right top;}
+table.monthTbl td.mocol3{background:#eff5f9 url('http://image.ahnlab.com/global/site/images/common/blt/bg_month3.gif') no-repeat right top;}
+table.monthTbl td.mocol4{background:#e4f5f5 url('http://image.ahnlab.com/global/site/images/common/blt/bg_month4.gif') no-repeat right top;}
+table.monthTbl td.mocol5{background:#f2f7eb url('http://image.ahnlab.com/global/site/images/common/blt/bg_month5.gif') no-repeat right top;}
+table.monthTbl td.mocol6{background:#e7fadd url('http://image.ahnlab.com/global/site/images/common/blt/bg_month6.gif') no-repeat right top;}
+table.monthTbl td.mocol7{background:#f9f0ef url('http://image.ahnlab.com/global/site/images/common/blt/bg_month7.gif') no-repeat right top;;}
+table.monthTbl td.mocol8{background:#fee8de url('http://image.ahnlab.com/global/site/images/common/blt/bg_month8.gif') no-repeat right top;;}
+.month{margin-top:20px; text-align:center;}
+.month img{vertical-align:middle;}
+.month a{margin:0 10px;}
+

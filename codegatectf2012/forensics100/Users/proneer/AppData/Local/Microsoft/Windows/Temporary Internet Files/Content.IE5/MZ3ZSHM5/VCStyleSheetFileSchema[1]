@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="VisualStudioPropertySheet" type="VisualStudioPropertySheetType"/>
+	<xs:complexType name="VisualStudioPropertySheetType">
+		<xs:sequence minOccurs="0" maxOccurs="1">
+			<xs:element name="Tool" minOccurs="0" maxOccurs="unbounded">
+				<xs:complexType>
+					<xs:anyAttribute processContents="skip"/>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="UserMacro" minOccurs="0" maxOccurs="unbounded">
+				<xs:complexType>
+					<xs:attribute name="Name" type="xs:string" use="required" />
+					<xs:attribute name="Value" type="xs:string" use="required" />
+					<xs:attribute name="InheritsFromParent" type="xs:string" use="optional" />
+					<xs:attribute name="Delimiter" type="xs:string" use="optional" />
+					<xs:attribute name="PerformEnvironmentSet" type="xs:string" use="optional" />
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute name="ProjectType" type="xs:string" use="required" fixed="Visual C++" />
+		<xs:attribute name="Version" type="xs:string" use="required" fixed="8.00" />
+		<xs:attribute name="Name" type="xs:string" use="required" />
+		<xs:anyAttribute processContents="skip" />
+	</xs:complexType>
+</xs:schema>

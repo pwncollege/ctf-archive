@@ -1,0 +1,339 @@
+/*****************************************************************************/
+#subtitleContainer{
+	width:960px;
+/*	background: url(../img/download/download_bg.gif) no-repeat left top; */
+	background-position:0px 0px;	
+	line-height:20px;
+	margin:0 auto;
+	padding:5px 0px 0px 0px;
+}
+#subtitleContainer dl{
+	margin:0;
+	padding:0;
+	}
+#subtitleContainer dl dd{
+	margin:0 0 0 0;
+	padding:0;
+	}
+#subtitleContainer dl dd a{
+	color:#0088cc;
+	text-decoration:none;
+	line-height:20px;
+	}
+#subtitleContainer dl dd a:hover{
+	color:#0088cc;
+	text-decoration:underline;
+	line-height:20px;
+	}
+/* ----------------------------------------------------------*/
+#subtitleMainBox{
+	width:900px;
+	margin:0;
+	padding:0px 30px 0px 30px;
+	margin:0 auto;
+	}
+/* ----------------------------------------------------------*/
+#subtitleMainBox #subtitleTopHeader{
+	width:900px;
+	margin:0;
+	padding:0;
+	margin:0 auto;
+	}
+.header_left {
+	float:left; 
+	width:300px;
+	position:relative;
+}
+.header_right {
+	float:right;
+	width:590px;
+	text-align:right;;
+	position:relative;
+	top:8px;
+	right:0px;
+}
+/* ----------------------------------------------------------*/
+#STSect{
+	width:900px;
+	margin:10px 0px 0px 0px;
+	padding:5px 0 5px 0;
+	position:relative;
+	border-top:1px solid #b8b8b8;
+	background-color:#efefef;
+	clear:both;
+	}
+#STSect form{
+	margin:0;
+	}
+#STSect a{
+	line-height:20px;
+	color:#000000;
+	text-decoration:none;
+	}
+#STSect a:hover{
+	line-height:20px;
+	color:#0088cc;
+	text-decoration:underline;
+	}
+#STSect ul{
+	margin:0 0 0 0px;
+	padding:5px 0;
+	list-style-type:normal;
+	}
+#STSect li{
+	margin:0;
+	padding:0 15px 0 15px;
+	color:#333333;
+	border-right:1px solid #dedede;
+	display:inline;
+	}
+#STSect li a{
+	font-size:1.25em;
+	color:#2c2c2c;
+	text-decoration:none;
+	line-height:18px;
+	font-weight:bold;
+	}
+
+#STSect li a:hover{
+	font-size:1.25em;
+	color:#0088cc;
+	text-decoration:underline;
+	line-height:18px;
+	}
+#STSect li.ST_serch{
+	margin-left:185px;
+	padding:0;
+	color:#333333;
+	border-right:0px solid #dedede;
+	display:inline;
+	}
+#STSect li a.currentpage{
+	color:#0088cc;
+	text-decoration:underline;
+	line-height:18px;
+	font-weight:bold;
+	}
+/* ----------------------------------------------------------*/
+#subtitleBBS {
+	width:100%;
+	clear:both;
+	}
+#subtitleBBS table {
+	font-family: MS PGothic,ＭＳ Ｐゴシック,Arial, Helvetica, verdana sans-serif;
+	background-color:#fff;
+	border-collapse: collapse;
+	width:100%;
+	font-size:11pt;
+	}
+#subtitleBBS caption {
+	font-size:12px;
+	color:#4D4D4D;
+	font-weight: bold;
+	text-align: left;
+	 /* background: url(header_bg.jpg) no-repeat top left; */
+	padding: 20px 0px 0px 0px;
+	margin-bottom: 2px;
+	}
+#subtitleBBS thead th {
+	font-size:1.0em;
+	text-align:center;
+	padding:2px;
+	text-transform:uppercase;
+	height:26px;
+	background-color: #717171;
+	font-weight: normal;
+	border:1px solid #ffffff;
+	color:#fff;
+	font-weight:bold;
+	}
+#subtitleBBS tfoot {
+	padding:2px;
+	text-transform:uppercase;
+	font-size:9pt; 
+	margin-top:6px;
+	background-color: #ffffff;
+	text-align:center;
+	font-weight:bold;
+	}
+#subtitleBBS tfoot td{
+	padding:7px;
+	font-size:1.2em;
+	line-height:18pt;
+	}
+
+#subtitleBBS tbody tr {
+	background-color:#ffffff;
+	border-bottom: 1px solid #f0f0f0;
+	}
+#subtitleBBS tbody td {
+	padding:5px 15px 5px 15px;
+	text-align:left;
+	line-height:17px;
+	}
+#subtitleBBS tbody th {
+	text-align:left;
+	padding:2px;
+	border-bottom: 1px solid #e2e2e2;
+	}
+#subtitleBBS tbody td a, tbody th a {
+	color: #000;
+	text-decoration:none;
+	font-weight:normal; 
+	display:block; 
+	line-height:17px;
+	}
+
+#subtitleBBS tbody td a:hover, tbody th a:hover {
+	color: #000;
+	text-decoration:underline;
+	line-height:17px;
+	}
+
+#subtitleBBS tfoot td a:hover, tfoot th a:hover {
+	color: #000;
+	text-decoration:underline;
+	line-height:17px;
+	}
+
+#subtitleBBS tfoot td a {
+	color: #000;
+	text-decoration:none;
+	}
+
+#subtitleBBS tfoot td a:hover {
+	color:#0088cc;
+	text-decoration:underline;
+	}
+
+#subtitleBBS .odd {
+	/* 2目のライン   */
+	background:#f5f5f5;
+	}
+
+#subtitleBBS tbody tr:hover {
+	/* tableにRolloverの際  */
+	background: #f5f5f5;
+	color: #000000;
+	}
+
+#subtitleBBS tbody tr.odd:hover th {
+	/* tableにRolloverの際  */
+	background: #f5f5f5;
+	color: #f4f4f4;
+	text-decoration:none;
+	}
+
+#subtitleBBS .txtalign_center {
+	text-align:center;
+	}
+
+#subtitleBBS .bbs_selected {
+	color:#0088cc;
+	text-decoration:underline;
+	}
+
+#UploadBtn {
+	width:900px;
+	text-align:right;
+	clear:both;
+	}
+
+
+/* ----------------------------------------------------------*/
+/*字幕 subtitle.html */
+#noResult { width:100%; text-align:center; padding:7px 0px 7px 0px; border:1px solid #b8b8b8;  margin-top:10px; clear:both;}
+#noResult a { background:url(../img/njmdbImg/noResult_01.gif) no-repeat ; color:#d50d0d; padding:0 0 0 20px; border-bottom:1px dashed #BDBDBD; font-weight:bold; font-size:16px; padding-bottom:4px;line-height:20px;}
+#noResult dlll { border:1px solid #DDD;}
+#noResult dl dt { padding:14px 20px 0 20px; }
+#noResult h2222 { border-bottom:2px solid #EBEBEB;}
+#noResult dt { padding:10px}
+#noResult dt p { font-size:14px; line-height:22px; padding-top:14px;}
+
+
+/* ----------------------------------------------------------*/
+/*字幕 subtile_Vew.HTML */
+/*字幕 subtile_write.HTML */
+#STSect #STist { padding:0; margin:0; width:100%; border:0; font-size:12px;}
+#STSect #STist .ST_TR1st{ border-bottom:1px solid #DDD; text-align:center; height:34px; font-size:14px;}
+#STSect #STist td { height:30px;}
+#STSect #STist td a:hover { color:#e71a22; }
+#STist tr.fContents { width:100%; height:27px; }
+#STist tr img { padding-left:10px;}
+#STist tr.fContentsON { width:100%; height:27px; background:#FFF9F1; }
+
+#STist .STNum { width:8%; text-align:center; border-bottom:1px dashed #cccccc; }
+#STist .STTitle { width:50%; border-bottom:1px dashed #cccccc; font-size:14px;}
+#STist .STId { width:15%; text-align:center; border-bottom:1px dashed #cccccc; }
+#STist .STViews { width:12%; text-align:center; border-bottom:1px dashed #cccccc; }
+#STist .STDate{ width:15%; text-align:center; border-bottom:1px dashed #cccccc; }
+
+#WriteForm { border:1px solid #a5acb2; float:left; width:100%;}
+#WriteForm table{ width:100%;}
+#WriteForm .FormTitbg { width:170px; background:#e9e9e9; text-align:right; border-bottom:1px solid #a5acb2; border-right:1px solid #a5acb2;vertical-align:top }
+#WriteForm .FormTitbg1 { width:170px; background:#e9e9e9; text-align:right; vertical-align:top;border-right:1px solid #a5acb2; }
+#WriteForm .FormTit { text-align:right; border:0; padding:8px 6px 8px 0; font-size:14px; }
+#WriteForm .FormMod { font-size:14px; float:left; }
+#WriteForm .FormField { border-bottom:1px solid #a5acb2; padding:5px 0 5px 6px;border-left:1px solid #a5acb2; }
+#WriteForm .FormField1 { padding:5px 0 5px 6px; }
+/*firefox*/
+#WriteForm .FormField a, x:-moz-any-link, x:default{
+	text-decoration:none; }
+.TxtArea { border: 1px solid #ADADAD; padding:1px 0px 1px 2px;}
+/*kokomade*/
+
+
+
+
+.STTitbox { background:#EFEFEF; border-bottom:1px solid #DDD; border-top:1px solid #DDD; clear:both;}
+.STTitbox_list { background:#EFEFEF; border-bottom:1px solid #DDD; border-top:1px solid #DDD; }
+.STTitbox_list dl {border-top:1px solid #fff; padding:10px 0 10px 0;}
+#STSect_view .STTitbox_border { border-bottom:1px solid #DDD; }
+#STSect_view .STtit { border-top:1px solid #fff; font-weight:bold; vertical-align:top; padding:14px 0 10px 0; font-size:14px;}
+#STSect_view .STtit p { font-weight:bold; font-size:14px; padding:0 10px 0 10px; color:#e71a22; }
+
+#STSect_view .STfile { margin:0px 0px 12px 0px;}
+#STSect_view .STfile ul li { list-style:none;}
+#STSect_view .STfile_Com { padding:20px 10px 50px 10px;}
+#STSect_view table{ width:100%;}
+#STSect_view table .STdata { padding:10px 0 6px 0; border-bottom:1px dashed #CCC; font-size:14px;}
+#STSect_view table .STdata b { padding:0 10px 0 10px; font-weight:normal; }
+#STSect_view table .STdown { background:url(../img/njmdbImg/file_r.gif) no-repeat 10px 50%; width:20%; padding:4px 20px 0 30px; height:30px;}
+#STSect_view table .STdown_tit a { background:url(../img/njmdbImg/down.gif)no-repeat 100%; padding-right:10px; font-weight:bold}
+#STSect_view table .STdown_tit a:hover { text-decoration: underline; color:#000;}
+#STSect_view table .STdown_blank { background:url(../img/njmdbImg/file_b.gif) no-repeat 10px 50%; padding:4px 20px 0 30px; height:16px;}
+#STSect_view .STBtn_19 { background:url(../img/njmdbImg/button_left_19.gif)}
+
+#STistNum { background:#EFEFEF; padding:10px 0 10px 10px; float:left; width:960px; font-size:14px;}
+#STistNum strong { font-size:12px; color:#e71a22; font-weight:bold; clear:both;}
+#STistNum a:hover{ text-decoration:underline; color:#e71a22;}
+#STistNum a.currentpage {color:#e71a22!important; font-weight: bold; cursor: default;}
+#STistNum .STN { text-align:center}
+#STistNum .STUpbtn { float:right; padding-right:10px;}
+
+#STComment { width:100%; border-bottom:1px solid #DDD; font-weight:bold; font-size:14px; margin-bottom:20px; padding-bottom:4px; float:left;}
+#ReplyWI { background:#Fff; border-bottom:1px solid #ADADAD; border-top:1px solid #ADADAD; width:100%; float:left; padding:10px 0 10px 0;}
+#ReplyWI .replyWr{width: 100%; border: 1px solid #ADADAD; height:30px; background:#F6F6F6; padding:0 0 0 4px;}
+#ReplyWI .ReplyEmo { height:30px; padding:0 10px 0 10px;}
+#ReplyWI .ReplyEmo table { width:100%; border:0 ; border-collapse:0; border-spacing:0; }
+#ReplyWI .ReplyEmo table td { padding:0 0 0 0px; text-align:left}
+#ReplyWI .Emo { padding-left:20px;}
+#ReplyWI table td { text-align:center;}
+#ReplyCinfo { border-bottom:1px dashed #E6E6E6; margin-bottom:20px; clear:both;}
+#ReplyCinfo_bottom { margin-bottom:20px;}
+.ReplyBox { padding:8px 0 6px 26px; }
+.ReplyId { font-weight:bold;}
+.ReplyId img { margin-right:6px;}
+.ReplyData { float:right; padding-right:10px; font-size:11px; color:#BEBEBE;}
+.ReplyData img { padding-left:6px;}
+
+
+.buttonwrapper { float:left; width:100%; padding:10px 0;}
+.buttonwrapper img { border:0;}
+.buttonwrapper img.STBtn { padding-left:6px;}
+.buttonwrapper a { float:left; }
+.buttonwrapper a.STBtn_r { float:right; }
+/* ----------------------------------------------------------*/
+
+
+

@@ -1,0 +1,1191 @@
+﻿var CategoryBoxSRP				= OS2.Application.CategoryBoxSRP;
+var PriceRanceSelector		= OS2.Application.PriceRangeSelector;
+var SearchOptionSelector	= OS2.Application.SearchOptionSelector;
+var ListHeader						= OS2.Application.ListHeader;
+var Pager									= OS2.Application.Pager;
+var ListControl						= OS2.Application.ListControl;
+var SearchWing						= OS2.Application.SearchWing;
+var ThemeSearchSelector = OS2.Application.ThemeSearchSelector;
+var SocialShopping				= OS2.Application.SocialShopping;
+
+var gIsIE6 = false;
+var gCategoryBoxSRP1 = null;
+var gSearchOption1 = null;
+var gPriceRange1 = null;
+var gListHeader1 = null;
+var gPager1 = null;
+var gListControl1 = null;
+var gSearchWing1 = null;
+var gThemeSearchSelector = null;
+
+// 광고 변수
+var gAdPageIndex = 0;
+
+////////////////////////////////////////////////////////////////////
+// 페이지 초기화
+////////////////////////////////////////////////////////////////////
+$(document).ready(function() {
+	gIsIE6 = gIsIE6Browser();  // os2.finding.Common.js
+
+	// 검색어 정보를 쿠키에 입력
+	OS2.Application.FindingCommon.SetKeywordCookies(gDefaultState.Keyword);    // os2.finding.Common.js
+
+	$("#divListResult").pngFix();
+	$("#divSocialShopping").pngFix();
+
+	// 좌측 서치 윙 초기화
+	gSearchWing1 = SearchWing.init("SearchWing1", {
+		SRPTabType_OnChange: SearchWing1_SRPTabType_OnChange, 													// 검색 타입 (SRPTabTypes) Event Handler
+		Price_OnChange: SearchWing1_Price_OnChange, 																		// 가격대 바 변동 Event Handler
+		BrandList_OnChange: SearchWing1_BrandList_OnChange, 														// 브랜드 체크리스트 변동 Event Handler
+		BrandListAllButton_OnClick: SearchWing1_BrandListAllButton_OnClick, 						// 브랜드 '전체' 버튼 클릭 Event Handler
+		MallList_OnChange: SearchWing1_MallList_OnChange, 															// 쇼핑몰 체크리스트 변동 Event Handler
+		MallListAllButton_OnClick: SearchWing1_MallListAllButton_OnClick, 							// 브랜드 '전체' 버튼 클릭 Event Handler
+		MakerList_OnChange: SearchWing1_MakerList_OnChange, 														// 제조사 체크리스트 변동 Event Handler
+		MakerListAllButton_OnClick: SearchWing1_MakerListAllButton_OnClick, 						// 브랜드 '전체' 버튼 클릭 Event Handler
+		ColorList_OnChange: SearchWing1_ColorList_OnChange, 													// 색상검색 클릭 Event Handler
+
+		// SearchWing UI상의 변화가 없는 목록들이 삭제되었을 경우 나오는 Event들
+		VItemAttrs_OnChange: SearchWing1_VItemAttrs_OnChange,                           // VItemAttrs 변경 Event Handler
+		IsDcCard_OnChange: SearchWing1_IsDcCard_OnChange, 															// IsDcCard 변경 Event Handler
+		IsStyleSearch_OnChange: SearchWing1_IsStyleSearch_OnChange,                     // IsStyleSearch 변경 Event Handler
+		IsSoldOut_OnChange: SearchWing1_IsSoldOut_OnChange,                             // IsSoldOut 변경 Event Handler
+		IsSellPlan_OnChange: SearchWing1_IsSellPlan_OnChange,                           // IsSellPlan 변경 Event Handler
+		IsShippingPriceFree_OnChange: SearchWing1_IsShippingPriceFree_OnChange,         // IsShippingPriceFree 변경 Event Handler
+		HasNointerestData_OnChange: SearchWing1_HasNointerestData_OnChange, 						// HasNointerestData 변경 Event Handler
+		HasCouponData_OnChange: SearchWing1_HasCouponData_OnChange, 										// HasCouponData 변경 Event Handler
+		HasEventData_OnChange: SearchWing1_HasEventData_OnChange, 											// HasEventData 변경 Event Handler
+		HasPoint_OnChange: SearchWing1_HasPoint_OnChange,                               // HasPoint 변경 Event Handler
+
+		SelectedAttributeUncheckAllBtn_OnClick: SearchWing1_SelectedAttributeUncheckAllBtn_OnClick,    // 전체해제 Event Handler
+
+		haListView_OnClick: SearchWing1_haViewType_OnClick, 														// 정렬 버튼 클릭 Event Handler (리스트 형)
+		haImageView_OnClick: SearchWing1_haViewType_OnClick, 													// 정렬 버튼 클릭 Event Handler (이미지 형)
+		haMiddleImageView_OnClick: SearchWing1_haViewType_OnClick, 										// 정렬 버튼 클릭 Event Handler (중이미지 형)
+		haTwoColumnView_OnClick: SearchWing1_haViewType_OnClick, 											// 정렬 버튼 클릭 Event Handler (2단이미지 형)
+		haGroupedCatalogView_OnClick: SearchWing1_haViewType_OnClick										// 정렬 버튼 클릭 Event Handler (묶어보기 형)
+	    },
+        gPageState																																		// 현재의 PageState를 전달
+    );
+
+	// ThemeSearchSelector초기화
+	gThemeSearchSelector = ThemeSearchSelector.init("themeSearchSelector", {
+		//anchorCategoryCode_OnClick: CategoryBox_CategoryCode_OnClick 													// 카테고리클릭 이벤트
+	});
+	
+
+
+// 카테고리박스 SRP 초기화
+gCategoryBoxSRP1 = CategoryBoxSRP.init("CategoryBoxSRP1", {
+	anchorCategoryCode_OnClick: CategoryBox_CategoryCode_OnClick, 													// 카테고리클릭 이벤트
+	btnSearch_IncludeExclude_OnClick: CategoryBox_BtnSearch_IncludeExclude_OnClick, 				// 결과내검색버튼클릭 이벤트
+	keyword_IncludeExclude_OnClick: CategoryBox_Keyword_IncludeExclude_OnClick, 						// 카테고리박스의 결과내검색, 검색어제외 키워드의 X를 클릭해서 없애는 이벤트
+	aGoSRPResult_OnClick: TabSRP_OnClick, 																									// 통합검색결과로보기 버튼 클릭
+	aGoQuickBuyResult_OnClick: TabQuickBuy_OnClick																					// 퀵바이검색결과보기 버튼 클릭
+});
+
+// 브랜드 , 쇼핑몰 검색 초기화
+gSearchOption1 = SearchOptionSelector.init("SearchOptionSelector1", {
+	SearchBrand_OnClick: SearchOption1_SearchBtn_OnClick,           // 브랜드 검색 버튼 Event Handler
+	SearchMall_OnClick: SearchOption1_SearchBtn_OnClick,            // 쇼핑몰 검색 버튼 Event Handler
+	BrandList_OnChange: SearchOption1_BrandList_OnChange,           // 브랜드 체크리스트 변동 Event Handler
+	MallList_OnChange: SearchOption1_MallList_OnChange,             // 쇼핑몰 체크리스트 변동 Event Handler
+	BrandList_OnClose: SearchOption1_List_OnClose, 								// 브랜드 박스 취소 버튼 Event Handler
+	MallList_OnClose: SearchOption1_List_OnClose										// 쇼핑몰 박스 취소 버튼 Event Handler
+	},
+        gDefaultState                                                       // 현재의 PageState를 전달
+    );
+
+// 가격대 Bar 초기화
+gPriceRange1 = PriceRanceSelector.init("PriceRangeSelector1", {
+	Search_OnClick: PriceRange1_btnSearch_OnClick,                  // 검색버튼 Click Event Handler
+	Price_OnChange: PriceRange1_Price_OnChange,                     // Min, Max 가격 변경 Event Handler
+	MakerList_OnChange: MakerList1_OnChange,                        // 제조사 체크 변경 Event Handler
+	MakerList_OnClose: MakerList1_OnClose,                           // 제조사 리스트 박스 Event Handler
+	ColorList_OnChange: PriceRange1_ColorList_OnChange						// 색상검색 클릭 Event Handler
+	},
+        gPageState                                                        // 현재의 PageState를 전달
+    );
+
+// List Header 초기화
+gListHeader1 = ListHeader.init("ListHeader1", {
+	hliAll_OnClick: hliTab_OnClick, 																// 전체상품(All) FindingType Click Event Handler
+	hliAllMItem_OnClick: hliTab_OnClick, 													// 전체상품(AllMItem) FindingType Click Event Handler
+	hliMItem_OnClick: hliTab_OnClick, 															// 전체/일반상품(MItem) FindingType Click Event Handler
+	hliCatalog_OnClick: hliTab_OnClick, 														// 가격비교(Catalog) FindingType Click Event Handler
+	hliMItemMatched_OnClick: hliTab_OnClick, 											// 가격비교가능상품(MItemMatched) FindingType Click Event Handler
+	hliMItemUnmatched_OnClick: hliTab_OnClick, 										// 일반상품(MItemUnmatched) FindingType Click Event Handler
+	hliMItemUsed_OnClick: hliTab_OnClick, 													// 중고상품(MItemUsed) FindingType Click Event Handler
+	hliPromotion_OnClick: hliTab_OnClick, 													// 관련기획전(Promotion) FindingType Click Event Handler
+	hliMItemIPay_OnClick: hliTab_OnClick, 													// iPay 상품 FindingType Click Event Handler
+	hliRelated_OnClick: hliRelatedTab_OnClick, 													// 연관 상품 FindingType Click Event Handler
+	haListView_OnClick: haViewType_OnClick, 												// 리스트형(ListView) ViewType Click Event Handler
+	haImageView_OnClick: haViewType_OnClick, 											// 이미지형(ImageView) ViewType Click Event Handler
+	haMiddleImageView_OnClick: haViewType_OnClick, 								// 중이미지형(MiddleImageView) ViewType Click Event Handler
+	haTwoColumnView_OnClick: haViewType_OnClick, 									// 2단이미지형(TwoColumnView) ViewType Click Event Handler
+	haGroupedCatalogView_OnClick: haViewType_OnClick, 							// 묶음보기형(GroupedCatalogView) ViewType Click Event Handler
+	hselPageSize_OnChange: hselPageSize_OnChange, 									// 페이지 사이저 PageSizer OnChange Event Handler
+	hliPopular_OnClick: hliSortType_OnClick, 											// 인기순 (Popular) SortType Click Event Handler
+	hliSalesPopularScore_OnClick: hliSortType_OnClick, 									// 판매순 (SalesPopularScore) SortType Click Event Handler
+	hliNewProduct_OnClick: hliSortType_OnClick, 										// 신상품순 (NewProduct) SortType Click Event Handler
+	hliShoppingMall_OnClick: hliSortType_OnClick, 									// 판매샵 (ShoppingMall) SortType Click Event Handler
+	hliInsDate_OnClick: hliSortType_OnClick, 											// 최근등록순 (InsDate) SortType Click Event Handler
+	hliToDate_OnClick: hliSortType_OnClick, 												// 마감임박순 (ToDate) SortType Click Event Handler
+	hchbLowestPriceFisrt_OnClick: hliSortType_OnClick, 						// 낮은가격순 (LowestPriceFirst) SortType Click Event Handler
+	hchbHighestPriceFisrt_OnClick: hliSortType_OnClick, 						// 높은가격순 (HighestPriceFirst) SortType Click Event Handler
+	hchbReviewCount_OnClick: hliSortType_OnClick, 									// 상품평많은순 (ReviewCount) SortType Click Event Handler
+	hchbExpertReviewCount_OnClick: hliSortType_OnClick, 						// 전문가리뷰많은순 (ExpertReviewCount) SortType Click Event Handler
+	hchbReviewPoint_OnClick: hliSortType_OnClick, 									// 평점높은순 (ReviewPoint) SortType Click Event Handler
+	hchbIsDcCard_OnClick: hchbProductType_OnClick, 									// 카드할인상품 (IsDcCard) Checkbox Click Event Handler
+	hchbIsStyleSearch_OnClick: hchbProductType_OnClick, 						// 스타일검색상품 (IsStyleSearch) Checkbox Click Event Handler
+	hchbIsSoldOut_OnClick: hchbProductType_OnClick, 								// 판매중단상품 (IsSoldOut) Checkbox Click Event Handler
+	hchbIsSellingPlan_OnClick: hchbProductType_OnClick, 						// 판매예정상품 (IsSellingPlan) Checkbox Click Event Handler
+	hliSelectedAttribute_OnClick: hliSelectedAttribute_OnClick, 		// 검색조건 속성 삭제 (SelectedAttributes) Click Event Handler
+	haSearchLineUnselectd_OnClick: hliSelectedAttribute_OnClick, 	// 검색조건 속성 전체 삭제 (SelectedAttributes) Click Event Handler
+	haZzim_OnClick: haZzim_OnClick, 																// 선택찜 버튼 Click Event Handler
+	haCompare_OnClick: haCompare_OnClick, 													// 선택비교 버튼 Click Event Handler
+	hchbAll_OnClick: hchbOption_OnChange, 													// 혜택 - 전체 Checkbox Click Event Handler
+	hchbIsShippingPriceFree_OnClick: hchbOption_OnChange, 					// 혜택 - 무료배송 (IsShippingPriceFree) Checkbox Click Event Handler
+	hchbHasNointerestData_OnClick: hchbOption_OnChange, 						// 혜택 - 무이자(HasNointerestData) Checkbox Click Event Handler
+	hchbHasCouponData_OnClick: hchbOption_OnChange, 								// 혜택 - 쿠폰(HasCouponData) Checkbox Click Event Handler
+	hchbHasEventData_OnClick: hchbOption_OnChange, 								// 혜택 - 이벤트(HasEventData) Checkbox Click Event Handler
+	hchbHasPoint_OnClick: hchbOption_OnChange, 											// 혜택 - 적립금(HasPoint) Checkbox Click Event Handler
+	haRelatedKeyword_OnClick: haRelatedKeyword_OnClick						// 연관키워드 클릭
+	},
+	    gDefaultState
+	);
+
+gListControl1 = ListControl.init("divListResult", {
+	aZzimSelected_OnClick: BtnZzimSelected_OnClick, 														// 찜버튼클릭(이미지 옆에있는)
+	aCompareSelected_OnClick: BtnCompareSelected_OnClick, 											// 비교버튼클릭(이미지 옆에있는)
+	aStyleSearch_OnClick: StyleSearch_OnClick, 																// 스타일검색이미지클릭(상품이미지에 마우스오버를 할때 노출되는)
+	aStyleSearch2_OnClick: StyleSearch_OnClick, 																// 스타일검색이미지클릭(구매하기버튼과 함께있는)
+	aSameMallSearch_OnClick: SameMallSearch_OnClick, 														// 같은샵상품보기(레이어형태)
+	aSameMallSearch2_OnClick: SameMallSearch_OnClick, 													// 같은샵상품보기(항상노출되는형태)
+	aSameMallSearchAll_OnClick: SameMallSearchAll_OnClick, 										// 같은샵모든상품보기
+	aSameBrandSearch_OnClick: SameBrandSearch_OnClick, 												// 같은브랜드상품보기
+	aSameMakerSearch_OnClick: SameMakerSearch_OnClick, 												// 같은제조사상품보기
+	aRepresentDisplayCategory_OnClick: RepresentDisplayCategory_OnClick, 				// 대표전시카테고리클릭
+	aSameImageSearch_OnClick: SameImageSearch_OnClick													// 동일이미지검색클릭
+	},
+		gDefaultState																																		// 현재의 PageState를 전달
+    );
+
+// Pager 초기화가 Page_OnNavigate 보다 먼저 일어나야 함.
+// 북마크를 달고 Page에 진입하는 경우 Page_OnNavigate 이벤트가 발생하기 때문에
+// Pager 초기화가 늦은 경우 Pager Method 호출 시 에러가 발생함.
+
+gPager1 = Pager.Init("Pager1", {
+	Pager_OnChange: Pager1_OnChange
+});
+
+// SocialShopping 초기화
+gSocialShopping1 = SocialShopping.Init("SocialShopping1", {
+	aSocialShopping_OnClick: aSocialShopping_OnClick, 									// 어바웃 소셜쇼핑 바로가기 클릭
+	aSocialShoppingItem_OnClick: aSocialShoppingItem_OnClick						// 어바웃 소셜쇼핑 이미지, 제목 클릭
+});
+
+// 광고 PageIndex 초기화
+gAdPageIndex = gPageState.PageIndex;
+$("#haFlowerGardenBanner").bind("click", function() {
+	OpenFlowerGarden();
+});
+
+	// aQuickBuyTab 이벤트 (삭제)
+/*
+$("#aTabQuickBuy").click(function() {
+	var eventArg = new Object();
+	TabQuickBuy_OnClick($(this), eventArg);
+});
+	*/
+
+// aSRPTab 이벤트
+/*
+$("#aTabSRP").click(function() {
+	var eventArg = new Object();
+	TabSRP_OnClick($(this), eventArg);
+});
+*/
+
+// 광고 동적 Attach
+setTimeout(AttachAd, 1500);
+
+// BuyWing 동적 Attach
+setTimeout(AttachBuyWing, 1000);
+
+});    // ready End
+
+
+//////////////////////////////////////////////////////////////////////
+//  기능 구현 함수
+//////////////////////////////////////////////////////////////////////
+function OpenFlowerGarden() {
+	var url = __findingUrl + "/Corner/FlowerGarden/Main.aspx";
+	window.open(url, "", "toolbar=no,location=yes,directories=no,status=no,menubar=no,scrollbars=no, resizable=no,copyhistory=no ,width=1188 height=880, left=10,top=10");
+}
+
+function RedirectSearch() {
+  // 페이지 이동
+  document.location.href = "?isTop=y&keyword=" + gPageState.Keyword
+      + "&keywordsInclude=" + gPageState.KeywordsInclude
+      + "&keywordsExclude=" + gPageState.KeywordsExclude
+      + "&displayCategories=" + gPageState.DisplayCategories
+      + "&findingType=" + gPageState.FindingType
+      + "&sortType=" + gPageState.SortType
+      + "&pageSize=" + gPageState.PageSize
+      + "&pageIndex=" + gPageState.PageIndex
+      + "&totalResultCount=" + gPageState.TotalResultCount
+      + "&viewType=" + gPageState.ViewType
+      + "&visibleMaker=" + gPageState.VisibleMaker
+      + "&visibleBrand=" + gPageState.VisibleBrand
+      + "&viewCode=" + gPageState.ViewCode
+      + "&srpTabType=" + gPageState.SRPTabType
+      + "&browsingType=" + gPageState.BrowsingType
+
+  return;
+}
+
+function Search() {
+	if (gPageState.FindingType == "Promotion") {
+		gPager1.hide(); 	// Pager 숨김
+		PromotionSearch();
+	}
+	else {
+		// 연관검색 조건인데 일반 검색일 경우, 강제적으로 '전체상품' 탭으로
+		if (gPageState.FindingType == "Related") {
+			gPageState.FindingType = 'AllMItem';
+
+			// 탭 선택항목 수정
+			gListHeader1.setAttributes(gPageState);
+		}
+		
+		// Search Ajax Call
+		$.ajax({
+			url: "../Search/SearchAjaxResult.aspx",
+			data: "keyword=" + gPageState.Keyword
+            + "&keywordsInclude=" + gPageState.KeywordsInclude
+            + "&keywordsExclude=" + gPageState.KeywordsExclude
+            + "&displayCategories=" + gPageState.DisplayCategories
+            + "&findingType=" + gPageState.FindingType
+            + "&vitemAttrs=" + gPageState.VItemAttrs
+            + "&minVItemPrice=" + gPageState.MinVItemPrice
+            + "&maxVItemPrice=" + gPageState.MaxVItemPrice
+            + "&brandIDs=" + gPageState.BrandIDs
+            + "&mallIDs=" + gPageState.MallIDs
+            + "&makerIDs=" + gPageState.MakerIDs
+            + "&minPBPRate=" + gPageState.MinPBPRate
+            + "&maxPBPRate=" + gPageState.MaxPBPRate
+            + "&isDcCard=" + gPageState.IsDcCard
+            + "&isStyleSearch=" + gPageState.IsStyleSearch
+            + "&isSoldOut=" + gPageState.IsSoldOut
+            + "&isSellingPlan=" + gPageState.IsSellingPlan
+            + "&isShippingPriceFree=" + gPageState.IsShippingPriceFree
+            + "&hasNointerestData=" + gPageState.HasNointerestData
+            + "&hasCouponData=" + gPageState.HasCouponData
+            + "&hasEventData=" + gPageState.HasEventData
+            + "&hasPoint=" + gPageState.HasPoint
+            + "&sortType=" + gPageState.SortType
+            + "&pageSize=" + gPageState.PageSize
+            + "&pageIndex=" + gPageState.PageIndex
+            + "&viewType=" + gPageState.ViewType
+            + "&visibleMaker=" + gPageState.VisibleMaker
+            + "&visibleBrand=" + gPageState.VisibleBrand
+            + "&viewCode=" + gPageState.ViewCode
+            + "&selectedAttributes=" + gPageState.SelectedAttributes
+            + "&imageColorMask=" + gPageState.ImageColorMask
+            + "&imageGroupID=" + gPageState.ImageGroupID
+            + "&visibleDebug=" + gPageState.VisibleDebug
+          ,
+			async: true,
+			success: function(resultHtml) {
+
+				// Focus 이동
+				document.getElementById('anchorFocus').scrollIntoView(true);
+
+				// 결과 바인딩
+				document.getElementById("divListResult").innerHTML = resultHtml;
+
+				$("#divListResult").pngFix();
+
+				// gPageState에 조회 결과값 반영.
+				gPageState.TotalResultCount = $("#divListResult").find("#htxtTotalResultCount").val(); 	// 조회된 전체 갯수 설정
+
+				// 탭별 개수 설정
+				gListHeader1.Tab.setCounts({
+					AllMItem: $("#divListResult").find("#htxtRecordCountAllMItem").val(),
+					Catalog: $("#divListResult").find("#htxtRecordCountCatalog").val(),
+					MItem: $("#divListResult").find("#htxtRecordCountMItem").val(),
+					MItemUsed: $("#divListResult").find("#htxtRecordCountMItemUsed").val(),
+					MItemIPay: $("#divListResult").find("#htxtRecordCountMItemIPay").val()
+				});
+
+				// 탭 하단 조건 표시에 결과 개수 변경
+				gListHeader1.SearchLine.setCount(gPageState.TotalResultCount);
+
+				if (gPageState.TotalResultCount == 0) {
+					gPager1.hide();
+				}
+				else {
+					// Pager 설정
+					gPager1.setPager(gPageState.PageIndex, gPageState.PageSize, gPageState.TotalResultCount); 	// Pager 셋팅
+					gPager1.show(); // Pager 보임
+				}
+
+				// 광고의 페이지 Index와 List의 Page Index가 다르면
+				// 광고 갱신
+				if (gAdPageIndex != gPageState.PageIndex) {
+					var AdParameter = "keyword=" + gPageState.Keyword
+							    + "&KeywordsInclude=" + gPageState.KeywordsInclude
+							    + "&KeywordsExclude=" + gPageState.KeywordsExclude
+							    + "&displayCategories=" + gPageState.DisplayCategories
+							    + "&pageIndex=" + gPageState.PageIndex
+							    + "&pageSize=" + gPageState.PageSize
+							    + "&FindingType=" + gPageState.FindingType
+							    + "&VItemAttrs=" + gPageState.VItemAttrs
+							    + "&MinVItemPrice=" + gPageState.MinVItemPrice
+							    + "&MaxVItemPrice=" + gPageState.MaxVItemPrice
+							    ;
+
+					$("#divAd").html("<script type='text/javascript' id='adscript' src='" + __plugUrl + "/KeywordAd/ImpressionKeywordAd.aspx?pageType=SearchResult&output=javascript&ParentElementName=divAd&" + AdParameter + "'></script>"); 		// 광고 Update
+					gAdPageIndex = gPageState.PageIndex;
+				}
+
+				// 리스트 컨트롤 초기화를 통해서 이벤트 다시 바인딩
+				gListControl1 = ListControl.init("divListResult", {
+					aZzimSelected_OnClick: BtnZzimSelected_OnClick,
+					aCompareSelected_OnClick: BtnCompareSelected_OnClick,
+					aStyleSearch_OnClick: StyleSearch_OnClick,
+					aStyleSearch2_OnClick: StyleSearch_OnClick,
+					aSameMallSearch_OnClick: SameMallSearch_OnClick,
+					aSameMallSearch2_OnClick: SameMallSearch_OnClick,
+					aSameMallSearchAll_OnClick: SameMallSearchAll_OnClick,
+					aSameBrandSearch_OnClick: SameBrandSearch_OnClick,
+					aSameMakerSearch_OnClick: SameMakerSearch_OnClick,
+					aRepresentDisplayCategory_OnClick: RepresentDisplayCategory_OnClick,
+					aSameImageSearch_OnClick: SameImageSearch_OnClick
+				},
+				gPageState  // gDefaultPageState 로 하면 안됨
+			);
+
+				// 이미지 lazy loading
+				gListControl1.loadLazyItemImage();
+			},
+			error: function(xhr) {
+				commonAjaxErrorHandler(xhr.status, xhr.statusText);
+			}
+		});
+	}  // end if
+}
+
+function PromotionSearch() {
+	$.ajax({
+		url: __findingUrl + "/Corner/Promotion/PromotionSearchAjaxResult.aspx",
+		data: "keyword=" + gPageState.Keyword
+            + "&displayCategories=" + gPageState.DisplayCategories
+            + "&imgPageIndex=" + gPageState.ImgPageIndex
+            + "&imgPageSize=" + gPageState.ImgPageSize
+            + "&imgSortType=" + gPageState.ImgSortType
+            + "&imgRecordCount=" + gPageState.ImgRecordCount
+            + "&viewCode=" + gPageState.ViewCode
+            + "&viewTabIndex=" + gPageState.ViewTabIndex
+            ,
+		async: true,
+		success: function(resultHtml) {
+			$("#divListResult").html(resultHtml);
+
+			// UI개선하면서 오류가 발생하여 강제로 부르도록 수정함.
+			$.getScript("/Corner/Promotion/PromotionSearchAjaxResult.aspx.js", function() {
+				InitPromotionControl();
+			});
+
+			// 프로모션 갯수 갱신
+			var ImageRecordCount = $("#divListResult").find("#htxtImageRecordCount").val();
+			var PromotionCount = ImageRecordCount;
+
+			// 탭별 개수 설정
+			gListHeader1.Tab.setCounts({
+				Promotion: PromotionCount
+			});
+
+			if (PromotionCount == 0) {
+				$("#hdivListResult").hide();
+				$("#hdivListResultNone").show();
+			}
+			else {
+				$("#hdivListResult").show();
+				$("#hdivListResultNone").hide();
+			}
+
+		},
+		error: function(xhr) {
+			commonAjaxErrorHandler(xhr.status, xhr.statusText);
+		}
+	});
+}
+
+function RelatedSearch( ) {
+	// Search Ajax Call
+	$.ajax({
+		url: "../Search/RelatedSearchAjaxResult.aspx",
+		data: "keyword=" + gPageState.Keyword
+           + "&findingType=" + gPageState.FindingType
+           + "&sortType=" + gPageState.SortType
+           + "&pageSize=" + gPageState.PageSize
+           + "&pageIndex=" + gPageState.PageIndex
+           + "&viewType=" + gPageState.ViewType
+          ,
+        async: true,
+        success: function(resultHtml) {
+
+            // Focus 이동
+            document.getElementById('anchorFocus').scrollIntoView(true);
+
+            // 결과 바인딩
+            document.getElementById("divListResult").innerHTML = resultHtml;
+
+            $("#divListResult").pngFix();
+
+            // gPageState에 조회 결과값 반영.
+            gPageState.TotalResultCount = $("#divListResult").find("#htxtTotalResultCount").val(); 	// 조회된 전체 갯수 설정
+
+            // 탭 하단 조건 표시에 결과 개수 변경
+            gListHeader1.SearchLine.setCount(gPageState.TotalResultCount);
+
+            gPager1.hide();
+
+            // 광고의 페이지 Index와 List의 Page Index가 다르면
+            // 광고 갱신
+            if (gAdPageIndex != gPageState.PageIndex) {
+                var AdParameter = "keyword=" + gPageState.Keyword
+						    + "&KeywordsInclude=" + gPageState.KeywordsInclude
+						    + "&KeywordsExclude=" + gPageState.KeywordsExclude
+						    + "&displayCategories=" + gPageState.DisplayCategories
+						    + "&pageIndex=" + gPageState.PageIndex
+						    + "&pageSize=" + gPageState.PageSize
+						    + "&FindingType=" + gPageState.FindingType
+						    + "&VItemAttrs=" + gPageState.VItemAttrs
+						    + "&MinVItemPrice=" + gPageState.MinVItemPrice
+						    + "&MaxVItemPrice=" + gPageState.MaxVItemPrice
+						    ;
+
+                $("#divAd").html("<script type='text/javascript' id='adscript' src='" + __plugUrl + "/ProdAd/ImpressionProdAds.aspx?pageType=SearchResult&output=javascript&ParentElementName=divAd&" + AdParameter + "'></script>"); 		// 광고 Update
+                gAdPageIndex = gPageState.PageIndex;
+            }
+
+            // 리스트 컨트롤 초기화를 통해서 이벤트 다시 바인딩
+            gListControl1 = ListControl.init("divListResult", {
+                aZzimSelected_OnClick: BtnZzimSelected_OnClick,
+                aCompareSelected_OnClick: BtnCompareSelected_OnClick,
+                aStyleSearch_OnClick: StyleSearch_OnClick,
+                aStyleSearch2_OnClick: StyleSearch_OnClick,
+                aSameMallSearch_OnClick: SameMallSearch_OnClick,
+                aSameMallSearch2_OnClick: SameMallSearch_OnClick,
+                aSameMallSearchAll_OnClick: SameMallSearchAll_OnClick,
+                aSameBrandSearch_OnClick: SameBrandSearch_OnClick,
+                aSameMakerSearch_OnClick: SameMakerSearch_OnClick,
+                aRepresentDisplayCategory_OnClick: RepresentDisplayCategory_OnClick,
+                aSameImageSearch_OnClick: SameImageSearch_OnClick
+            },
+			gPageState  // gDefaultPageState 로 하면 안됨
+		);
+
+            // 이미지 lazy loading
+            gListControl1.loadLazyItemImage();
+
+            // 관심 검색어 아이콘 및 키워드 이벤트 바인드
+            $('#imgAttractIcon').bind('mouseover', function(e) {
+                $('#hdivAttractKeywordsLayer').show();
+            });
+
+            $('#hdivAttractKeywordsLayer').bind('mouseleave', function(e) {
+                $('#hdivAttractKeywordsLayer').hide();
+            });
+
+            $('#hdivAttractKeywords').find('a[relatedkeyword]').bind('click', function(e) {
+                gPageState.Keyword = $(this).attr('relatedkeyword');
+                gPageState.BrowsingType = "AttractKeyword";
+                TabSRP_OnClick(this, e);
+            });
+        },
+        error: function(xhr) {
+            commonAjaxErrorHandler(xhr.status, xhr.statusText);
+        }
+    });
+}
+
+// BuyWing Script 동적생성
+function AttachBuyWing() {
+	if (document.getElementById('container') != null) {
+		var BuyWingScript = document.createElement('script');
+		BuyWingScript.type = 'text/javascript';
+		BuyWingScript.src = __scriptUrl + '/os2/common/js/buywing.js';
+		document.getElementById('container').insertBefore(BuyWingScript, null);
+	}
+}
+
+// 광고 Script 동적생성
+function AttachAd() {
+	if (document.getElementById('divAd') != null) {
+		var AdScript = document.createElement('script');
+		AdScript.type = 'text/javascript';
+		AdScript.src = __plugUrl + '/KeywordAd/ImpressionKeywordAd.aspx?pageType=SearchResult&output=javascript&ParentElementName=divAd&' + AdScriptParam;
+		document.getElementById('divAd').insertBefore(AdScript, null);
+	}
+}
+//////////////////////////////////////////////////////////////////////
+//  페이지 내 이벤트 핸들러들.
+//////////////////////////////////////////////////////////////////////
+
+function TabQuickBuy_OnClick(sender, e) {
+	document.location.href = '/Search/SearchQuickBuy.aspx?istop=y&keyword=' + gPageState.Keyword + '&mallIDs=' + gPageState.MallIDs + '&srpTabType=QuickBuy';
+}
+
+
+function TabSRP_OnClick(sender, e) {
+	// 페이지 이동
+	document.location.href = '/Search/Search.aspx?istop=y&keyword=' + gPageState.Keyword + '&mallIDs=' + gPageState.MallIDs + '&srpTabType=SRP&browsingType=' + gPageState.BrowsingType;
+}
+
+// ------------------------------------------------------------------------------------------
+// SearchWing 에 관련된 이벤트 모음 시작
+// ------------------------------------------------------------------------------------------
+// 변경된 데이터를 gPageState 반영하고 다른 컨트롤들에 셋팅
+function SearchWing1_SetChangesToOtherControls() {
+	// 수정된 데이터 받아오기
+  gSearchWing1.copyToPageState(gPageState);
+
+	// Promotion Tab 이 선택된 경우 findingType 을 전체상품으로 변경함
+	if (gPageState.FindingType == 'Promotion') {
+		gPageState.FindingType = 'AllMItem';
+  }
+
+	// 필요 컨트롤들 업데이트
+	gListHeader1.setAttributes(gPageState);
+	gPriceRange1.setAttributes(gPageState);
+	gSearchOption1.setAttributes(gPageState);
+	gListControl1.setAttributes(gPageState);
+}
+
+
+function SearchWing1_SRPTabType_OnChange(sender, e) {
+	var srpTabType = e.SRPTabTypes;
+
+	if (srpTabType == 'SRP') {
+		TabSRP_OnClick(null, null);
+	}
+	else if (srpTabType == 'QuickBuy') {
+		TabQuickBuy_OnClick(null, null);
+	}
+}
+
+
+// 가격 슬라이드가 변할때 마다 발생하는 이벤트
+function SearchWing1_Price_OnChange(sender, e) {
+	// 변경된 데이터를 gPageState 반영하고 다른 컨트롤들에 셋팅
+	SearchWing1_SetChangesToOtherControls();
+
+	gPageState.PageIndex = 0;
+	Search();
+}
+
+function SearchWing1_BrandList_OnChange(sender, e) {
+	// 변경된 데이터를 gPageState 반영하고 다른 컨트롤들에 셋팅
+	SearchWing1_SetChangesToOtherControls();
+
+	gPageState.PageIndex = 0;
+	Search();
+}
+
+function SearchWing1_BrandListAllButton_OnClick(sender, e) {
+	// SearchOptionSelector의 해당 창 위치로 이동
+	gSearchOption1.scrollToBrand();
+}
+
+function SearchWing1_MallList_OnChange(sender, e) {
+	// 변경된 데이터를 gPageState 반영하고 다른 컨트롤들에 셋팅
+	SearchWing1_SetChangesToOtherControls();
+
+	gPageState.PageIndex = 0;
+	Search();
+}
+
+function SearchWing1_MallListAllButton_OnClick(sender, e) {
+	// SearchOptionSelector의 해당 창 위치로 이동
+	gSearchOption1.scrollToMall();
+}
+
+function SearchWing1_MakerList_OnChange(sender, e) {
+	// 변경된 데이터를 gPageState 반영하고 다른 컨트롤들에 셋팅
+	SearchWing1_SetChangesToOtherControls();
+
+	gPageState.PageIndex = 0;
+	Search();
+}
+
+function SearchWing1_MakerListAllButton_OnClick(sender, e) {
+	// PriceRangeSelector의 해당 위치로 이동
+	gPriceRange1.scrollToMaker();
+}
+
+function SearchWing1_PBPRate_OnChange(sender, e) {
+	// 변경된 데이터를 gPageState 반영하고 다른 컨트롤들에 셋팅
+	SearchWing1_SetChangesToOtherControls();
+
+	gPageState.PageIndex = 0;
+	Search();
+}
+
+function SearchWing1_ColorList_OnChange(sender, e) {
+	// 변경된 데이터를 gPageState 반영하고 다른 컨트롤들에 셋팅
+	SearchWing1_SetChangesToOtherControls();
+
+	gPageState.PageIndex = 0;
+	Search();
+}
+
+function SearchWing1_haViewType_OnClick(sender, e) {
+	// 변경된 데이터를 gPageState 반영하고 다른 컨트롤들에 셋팅
+  // SearchWing1_SetChangesToOtherControls();
+
+  gPageState.ViewType = e.ViewType;
+  gListHeader1.ViewType.select(gPageState.ViewType);
+
+	// 보기형태 cookie 저장
+	$.cookie("SRP_ViewType", e.ViewType, { expires: 0, path: '/', domain: "about.co.kr" });
+
+	Search();
+}
+
+function SearchWing1_VItemAttrs_OnChange(sender, e) {
+	// 변경된 데이터를 gPageState 반영하고 다른 컨트롤들에 셋팅
+	SearchWing1_SetChangesToOtherControls();
+
+	gPageState.PageIndex = 0;
+	Search();
+}
+
+function SearchWing1_IsDcCard_OnChange(sender, e) {
+	// 변경된 데이터를 gPageState 반영하고 다른 컨트롤들에 셋팅
+	SearchWing1_SetChangesToOtherControls();
+
+	gPageState.PageIndex = 0;
+	Search();
+}
+
+function SearchWing1_IsStyleSearch_OnChange(sender, e) {
+	// 변경된 데이터를 gPageState 반영하고 다른 컨트롤들에 셋팅
+	SearchWing1_SetChangesToOtherControls();
+
+	gPageState.PageIndex = 0;
+	Search();
+}
+
+function SearchWing1_IsSoldOut_OnChange(sender, e) {
+	// 변경된 데이터를 gPageState 반영하고 다른 컨트롤들에 셋팅
+	SearchWing1_SetChangesToOtherControls();
+
+	gPageState.PageIndex = 0;
+	Search();
+}
+
+function SearchWing1_IsSellPlan_OnChange(sender, e) {
+	// 변경된 데이터를 gPageState 반영하고 다른 컨트롤들에 셋팅
+	SearchWing1_SetChangesToOtherControls();
+
+	gPageState.PageIndex = 0;
+	Search();
+}
+
+function SearchWing1_IsShippingPriceFree_OnChange(sender, e) {
+	// 변경된 데이터를 gPageState 반영하고 다른 컨트롤들에 셋팅
+	SearchWing1_SetChangesToOtherControls();
+
+	gPageState.PageIndex = 0;
+	Search();
+}
+
+function SearchWing1_HasNointerestData_OnChange(sender, e) {
+	// 변경된 데이터를 gPageState 반영하고 다른 컨트롤들에 셋팅
+	SearchWing1_SetChangesToOtherControls();
+
+	gPageState.PageIndex = 0;
+	Search();
+}
+
+function SearchWing1_HasCouponData_OnChange(sender, e) {
+	// 변경된 데이터를 gPageState 반영하고 다른 컨트롤들에 셋팅
+	SearchWing1_SetChangesToOtherControls();
+
+	gPageState.PageIndex = 0;
+	Search();
+}
+
+function SearchWing1_HasEventData_OnChange(sender, e) {
+	// 변경된 데이터를 gPageState 반영하고 다른 컨트롤들에 셋팅
+	SearchWing1_SetChangesToOtherControls();
+
+	gPageState.PageIndex = 0;
+	Search();
+}
+
+function SearchWing1_HasPoint_OnChange(sender, e) {
+	// 변경된 데이터를 gPageState 반영하고 다른 컨트롤들에 셋팅
+	SearchWing1_SetChangesToOtherControls();
+
+	gPageState.PageIndex = 0;
+	Search();
+}
+
+function SearchWing1_SelectedAttributeUncheckAllBtn_OnClick(sender, e) {
+	// 변경된 데이터를 gPageState 반영하고 다른 컨트롤들에 셋팅
+	SearchWing1_SetChangesToOtherControls();
+
+	gPageState.PageIndex = 0;
+	Search();
+}
+// ------------------------------------------------------------------------------------------
+// SearchWing 에 관련된 이벤트 모음 끝
+// ------------------------------------------------------------------------------------------
+
+// ------------------------------------------------------------------------------------------
+// CategoryBox 에 관련된 이벤트 모음 시작
+// ------------------------------------------------------------------------------------------
+// 카테고리박스의 결과내 검색, 검색어 제외 버튼 클릭
+function CategoryBox_BtnSearch_IncludeExclude_OnClick(sender, e) {
+	var keywordsInclude = e.KeywordsInclude;
+	var keywordsExclude = e.KeywordsExclude;
+
+	if (typeof (keywordsInclude) != 'undefined') {
+		gPageState.KeywordsInclude = ($.trim(gPageState.KeywordsInclude) == '' ? keywordsInclude : gPageState.KeywordsInclude + "," + keywordsInclude);
+	}
+
+	if (typeof (keywordsExclude) != 'undefined') {
+		gPageState.KeywordsExclude = ($.trim(gPageState.KeywordsExclude) == '' ? keywordsExclude : gPageState.KeywordsExclude + "," + keywordsExclude);
+	}
+
+	gPageState.PageIndex = 0;
+
+	RedirectSearch();
+}
+
+// 카테고리박스의 결과내검색, 검색어제외 키워드의 X를 클릭해서 없애는 이벤트
+function CategoryBox_Keyword_IncludeExclude_OnClick(sender, e) {
+	gPageState.KeywordsInclude = e.KeywordsInclude;
+	gPageState.KeywordsExclude = e.KeywordsExclude;
+	
+	gPageState.PageIndex = 0;
+
+	RedirectSearch();
+}
+
+// 카테고리 코드 클릭
+function CategoryBox_CategoryCode_OnClick(sender, e) {
+	gPageState.DisplayCategories = e.DisplayCategories;
+	gPageState.PageIndex = 0;
+
+	// 페이지 이동
+	document.location.href = '?DisplayCategories=' + gPageState.DisplayCategories
+		 + "&istop=y&keyword=" + gPageState.Keyword
+		 + "&KeywordsExclude=" + gPageState.KeywordsExclude
+		 + "&KeywordsInclude=" + gPageState.KeywordsInclude;
+}
+// ------------------------------------------------------------------------------------------
+// CategoryBox 에 관련된 이벤트 모음 끝
+// ------------------------------------------------------------------------------------------
+
+
+// ------------------------------------------------------------------------------------------
+// SearchOptionSelector 에 관련된 이벤트 모음 시작
+// ------------------------------------------------------------------------------------------
+// 변경된 데이터를 gPageState 반영하고 다른 컨트롤들에 셋팅
+function SearchOption1_SetChangesToOtherControls() {
+	// 수정된 데이터 받아오기
+	gSearchOption1.copyToPageState(gPageState);
+
+	// Promotion Tab 이 선택된 경우 findingType 을 전체상품으로 변경함
+	if (gPageState.FindingType == 'Promotion') {
+		gPageState.FindingType = 'AllMItem';
+	}
+	
+	// 필요 컨트롤들 업데이트
+	gListHeader1.setAttributes(gPageState);
+	gPriceRange1.setAttributes(gPageState);
+	gSearchWing1.setAttributes(gPageState);
+	gListControl1.setAttributes(gPageState);
+}
+
+function SearchOption1_SearchBtn_OnClick(sender, e) {
+	// 변경된 데이터를 gPageState 반영하고 다른 컨트롤들에 셋팅
+	SearchOption1_SetChangesToOtherControls();
+
+	gPageState.PageIndex = 0;
+	Search();
+}
+
+// 브랜드 체크박스 선택 이벤트
+function SearchOption1_BrandList_OnChange(sender, e) {
+	// 리스트가 닫힌 상황(한줄노출)에서만 그때 그때 Ajax Call
+	if (!gSearchOption1.isBrandWindowOpened()) {  		// 열린상태에서만 반영, 닫힌 상태에서 휘발성 데이터임
+		// 변경된 데이터를 gPageState 반영하고 다른 컨트롤들에 셋팅
+		SearchOption1_SetChangesToOtherControls();
+
+		gPageState.PageIndex = 0;
+		Search();
+	}
+	else {
+		// 열린 상태 적용(검색) 버튼을 누르기 전에는 컨트롤 내부에서만 휘발성으로 값을 가지고 있게 되므로 하는 일이 없음 N/A
+	}
+}
+
+// 몰 체크박스 선택 이벤트
+function SearchOption1_MallList_OnChange(sender, e) {
+	// 리스트가 닫힌 상황(한줄노출)에서만 그때 그때 Ajax Call
+	if (!gSearchOption1.isMallWindowOpened()) {		// 열린상태에서만 반영, 닫힌 상태에서 휘발성 데이터임
+		// 변경된 데이터를 gPageState 반영하고 다른 컨트롤들에 셋팅
+		SearchOption1_SetChangesToOtherControls();
+
+		gPageState.PageIndex = 0;
+		Search();
+	}
+	else {
+		// 열린 상태 적용(검색) 버튼을 누르기 전에는 컨트롤 내부에서만 휘발성으로 값을 가지고 있게 되므로 하는 일이 없음 N/A
+	}
+}
+
+// 몰, 브랜드 선택창 닫기 이벤트
+function SearchOption1_List_OnClose(sender, e) {
+	// 닫을 때는 하는 일이 없음(적용버튼을 누르기 전에는 휘발성 데이터만을 가지고 있음) N/A
+}
+// ------------------------------------------------------------------------------------------
+// SearchOptionSelector 에 관련된 이벤트 모음 끝
+// ------------------------------------------------------------------------------------------
+
+// ------------------------------------------------------------------------------------------
+// PriceRangeSelector 에 관련된 이벤트 모음 시작
+// ------------------------------------------------------------------------------------------
+// 변경된 데이터를 gPageState 반영하고 다른 컨트롤들에 셋팅
+function PriceRange1_SetChangesToOtherControls() {
+	// 수정된 데이터 받아오기
+	gPriceRange1.copyToPageState(gPageState);
+
+	// Promotion Tab 이 선택된 경우 findingType 을 전체상품으로 변경함
+	if (gPageState.FindingType == 'Promotion') {
+		gPageState.FindingType = 'AllMItem';
+	}
+
+	// 필요 컨트롤들 업데이트
+	gListHeader1.setAttributes(gPageState); 	
+	gSearchOption1.setAttributes(gPageState);
+	gSearchWing1.setAttributes(gPageState);
+	gListControl1.setAttributes(gPageState);	
+}
+
+function PriceRange1_btnSearch_OnClick(sender, e) {
+	// 변경된 데이터를 gPageState 반영하고 다른 컨트롤들에 셋팅
+	PriceRange1_SetChangesToOtherControls();
+	
+	gPageState.PageIndex = 0;
+	Search();
+}
+
+function PriceRange1_Price_OnChange(sender, e) {
+	// 변경된 데이터를 gPageState 반영하고 다른 컨트롤들에 셋팅
+	PriceRange1_SetChangesToOtherControls();
+
+	gPageState.PageIndex = 0;
+	Search();
+}
+
+function PBPBtn1_OnClick(sender, e) {
+	// 변경된 데이터를 gPageState 반영하고 다른 컨트롤들에 셋팅
+	PriceRange1_SetChangesToOtherControls();
+
+	gPageState.PageIndex = 0;
+	Search();
+}
+
+// 제조사 체크박스 선택 이벤트
+function MakerList1_OnChange(sender, e) {
+	// 적용버튼을 누를때만 반영하므로 N/A
+}
+
+// 제조사 선택창 닫기 이벤트
+function MakerList1_OnClose(sender, e) {
+	// 적용(검색) 버튼을 누르기 전에는 컨트롤 내부에서만 휘발성으로 값을 가지고 있게 되므로 닫을 때 하는 일이 없음 N/A
+}
+
+function PriceRange1_ColorList_OnChange(sender, e) {
+	// 변경된 데이터를 gPageState 반영하고 다른 컨트롤들에 셋팅
+	PriceRange1_SetChangesToOtherControls();
+
+	gPageState.PageIndex = 0;
+	Search();
+}
+
+// ------------------------------------------------------------------------------------------
+// PriceRangeSelector 에 관련된 이벤트 모음 끝
+// ------------------------------------------------------------------------------------------
+
+// ------------------------------------------------------------------------------------------
+// ListHeaderControl 에 관련된 이벤트 모음 시작
+// ------------------------------------------------------------------------------------------
+// 변경된 데이터를 gPageState 반영하고 다른 컨트롤들에 셋팅
+function ListHeader1_SetChangesToOtherControls() {
+	// 수정된 데이터 받아오기
+	gListHeader1.copyToPageState(gPageState);
+
+	// 필요 컨트롤들 업데이트
+	gPriceRange1.setAttributes(gPageState);
+	gSearchOption1.setAttributes(gPageState);
+	gSearchWing1.setAttributes(gPageState);
+	gListControl1.setAttributes(gPageState);
+}
+
+function hliTab_OnClick(sender, e) {
+	// 변경된 데이터를 gPageState 반영하고 다른 컨트롤들에 셋팅
+	ListHeader1_SetChangesToOtherControls();
+
+	if (gPageState.FindingType == "Promotion") {
+		gPager1.hide(); 	// Pager 숨김
+		PromotionSearch();
+	}
+	else {
+		gPageState.PageIndex = 0;
+		Search();
+	}
+}
+
+// 연관상품 탭
+function hliRelatedTab_OnClick(sender, e) {
+	// DefaultState로 수정하고 FindingType은 'Related' 로 셋팅 (연관상품 탭에서는 모든 검색필터 초기화)
+	$.extend(gPageState, gDefaultState);
+	gPageState.FindingType = 'Related';
+
+	gPriceRange1.setAttributes(gPageState);
+	gSearchOption1.setAttributes(gPageState);
+	gSearchWing1.setAttributes(gPageState);
+	gListHeader1.setAttributes(gPageState);
+	gListControl1.setAttributes(gPageState);
+
+	// 연관검색어 call
+	RelatedSearch();
+}
+
+function haViewType_OnClick(sender, e) {
+	// 변경된 데이터를 gPageState 반영하고 다른 컨트롤들에 셋팅
+  ListHeader1_SetChangesToOtherControls();
+
+	// 보기형태 cookie 저장
+	$.cookie("SRP_ViewType", e.ViewType, { expires: 0, path: '/', domain: "about.co.kr" });
+
+	if (gPageState.FindingType != 'Related') {
+		Search();
+	}
+	else {
+		RelatedSearch();
+	}
+}
+
+function hliSortType_OnClick(sender, e) {
+	gPageState.SortType = e.SortType;
+	gPageState.PageIndex = 0;
+	Search();
+}
+
+function hselPageSize_OnChange(sender, e) {
+	gPageState.PageSize = e.PageSize;
+	gPageState.PageIndex = 0;
+	
+	if (gPageState.FindingType != 'Related') {
+		Search();
+	}
+	else {
+		RelatedSearch();
+	}
+}
+
+function hchbProductType_OnClick(sender, e) {
+	// 변경된 데이터를 gPageState 반영하고 다른 컨트롤들에 셋팅
+	ListHeader1_SetChangesToOtherControls();
+
+	gPageState.PageIndex = 0;
+	Search();
+}
+
+function hliSelectedAttribute_OnClick(sender, e) {
+	// 변경된 데이터를 gPageState 반영하고 다른 컨트롤들에 셋팅
+	ListHeader1_SetChangesToOtherControls();
+
+	gPageState.PageIndex = 0;
+	Search();
+}
+
+// 리스트 헤더에 있는 선택한 상품 선택찜
+function haZzim_OnClick(sender, e) {
+	gListControl1.zzimCheckedCatalog("#divListResult");
+}
+
+// 리스트 헤더에 있는 선택한 상품비교
+function haCompare_OnClick(sender, e) {
+	gListControl1.compareCheckedCatalog("#divListResult");
+}
+
+// 혜택 체크 변경
+function hchbOption_OnChange(sender, e) {
+	// 변경된 데이터를 gPageState 반영하고 다른 컨트롤들에 셋팅
+	ListHeader1_SetChangesToOtherControls();
+
+	gPageState.PageIndex = 0; 
+	Search();
+}
+
+// 연관키워드 클릭
+function haRelatedKeyword_OnClick(sender, e) {
+	ListHeader1_SetChangesToOtherControls();
+
+	gPageState.FindingType = 'AllMItem';
+	gPageState.BrowsingType = "RelatedKeyword";
+	
+	RedirectSearch();
+}
+
+// 연관키워드 클릭
+function haRelatedKeyword_OnClick(sender, e) {
+	ListHeader1_SetChangesToOtherControls();
+
+	/* Search(); */
+	
+	RedirectSearch();
+}
+// ------------------------------------------------------------------------------------------
+// ListHeaderControl 에 관련된 이벤트 모음 끝
+// ------------------------------------------------------------------------------------------
+
+
+// ------------------------------------------------------------------------------------------
+// ListControl 에 관련된 이벤트 모음 시작
+// ------------------------------------------------------------------------------------------
+// 변경된 데이터를 gPageState 반영하고 다른 컨트롤들에 셋팅
+function ListControl1_SetChangesToOtherControls() {
+	// 수정된 데이터 받아오기
+	gListControl1.copyToPageState(gPageState);
+
+	// Promotion Tab 이 선택된 경우 findingType 을 전체상품으로 변경함
+	if (gPageState.FindingType == 'Promotion') {
+		gPageState.FindingType = 'AllMItem';
+	}
+
+	// 필요 컨트롤들 업데이트
+	gPriceRange1.setAttributes(gPageState);
+	gSearchOption1.setAttributes(gPageState);
+	gListHeader1.setAttributes(gPageState);
+	gSearchWing1.setAttributes(gPageState);
+}
+
+// 상품이미지 옆에 있는 선택찜 버튼 클릭
+function BtnZzimSelected_OnClick(sender, e) {
+	gListControl1.zzimCheckedCatalog("#divListResult");  // 리스트를 감싸고있는 요소의 아이디를 지정
+}
+
+// 상품이미지 옆에 있는 선택비교버튼 클릭
+function BtnCompareSelected_OnClick(sender, e) {
+	gListControl1.compareCheckedCatalog("#divListResult"); 	// 리스트를 감싸고있는 요소의 아이디를 지정
+}
+
+// 스타일 검색
+function StyleSearch_OnClick(sender, e) {
+	gListControl1.redirectStyleSearch(gPageState, e);
+}
+
+// 같은몰 상품보기
+function SameMallSearch_OnClick(sender, e) {
+	// 변경된 데이터를 gPageState 반영하고 다른 컨트롤들에 셋팅
+	ListControl1_SetChangesToOtherControls();
+
+	gPageState.PageIndex = 0;
+	Search();
+}
+
+// 같은몰 모든 상품보기
+function SameMallSearchAll_OnClick(sender, e) {
+
+	// 페이지 이동
+	document.location.href = "/Search/Search.aspx?mallIDs=" + e.MallIDs;
+}
+
+// 같은 제조사 상품보기
+function SameMakerSearch_OnClick(sender, e) {
+	// 변경된 데이터를 gPageState 반영하고 다른 컨트롤들에 셋팅
+	ListControl1_SetChangesToOtherControls();
+
+	gPageState.PageIndex = 0;
+	Search();
+}
+
+// 같은 브랜드 상품보기
+function SameBrandSearch_OnClick(sender, e) {
+	// 변경된 데이터를 gPageState 반영하고 다른 컨트롤들에 셋팅
+	ListControl1_SetChangesToOtherControls();
+
+	gPageState.PageIndex = 0;
+	Search();
+}
+
+// 대표전시카테고리 링크 클릭
+function RepresentDisplayCategory_OnClick(sender, e) {
+	
+	// 페이지 이동
+	document.location.href = "/Category/List.aspx?displayCategories=" + e.DisplayCategoryCode
+}
+
+// 동일이미지검색 상품보기
+function SameImageSearch_OnClick(sender, e) {
+	// 변경된 데이터를 gPageState 반영하고 다른 컨트롤들에 셋팅
+	ListControl1_SetChangesToOtherControls();
+
+	gPageState.PageIndex = 0;
+	Search();
+}
+
+// ------------------------------------------------------------------------------------------
+// ListControl 에 관련된 이벤트 모음 끝
+// ------------------------------------------------------------------------------------------
+
+
+
+// ------------------------------------------------------------------------------------------
+// Pager 에 관련된 이벤트 모음 시작
+// ------------------------------------------------------------------------------------------
+// 페이지 변경 이벤트
+function Pager1_OnChange(sender, e) {
+	// 페이지 변경. 
+	gPageState.PageIndex = e.PageIndex;
+	Search();
+}
+// ------------------------------------------------------------------------------------------
+// Pager 에 관련된 이벤트 모음 끝
+// ------------------------------------------------------------------------------------------
+
+// ------------------------------------------------------------------------------------------
+// Social Shopping 에 관련된 이벤트 모음 시작
+// ------------------------------------------------------------------------------------------
+// 어바웃 쇼셜쇼핑 바로가기 클릭
+function aSocialShopping_OnClick(sender, e) {
+
+	document.location.href = '/corner/SocialShopping/Main.aspx?ViewCode=013008';
+
+}
+
+// 어바웃 쇼셜쇼핑 이미지, 제목 클릭
+function aSocialShoppingItem_OnClick(sender, e) {
+
+
+	var mallId = e.MallId;
+	var mitemNo = e.MItemNo;
+
+	//document.location.href = '/corner/SocialShopping/Main.aspx?selectedMallID=' + mallId + '&selectedMItemNo=' + mitemNo + '&ViewCode=013008';
+	window.open('/corner/SocialShopping/Main.aspx?selectedMallID=' + mallId + '&selectedMItemNo=' + mitemNo + '&ViewCode=013008');
+}
+// ------------------------------------------------------------------------------------------
+// Social Shopping 에 관련된 이벤트 모음 끝
+// ------------------------------------------------------------------------------------------

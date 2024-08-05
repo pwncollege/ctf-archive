@@ -1,0 +1,42 @@
+[1896 @ Sat Feb 11 19:03:47 2012] [YSLoader APSDaemon.exe] 
+	======================
+	 APSDaemon.exe begins
+	======================
+[1896 @ Sat Feb 11 19:03:47 2012] [YSLoader APSDaemon.exe] parent process: 288 "explorer.exe"
+[1896 @ Sat Feb 11 19:03:47 2012] [YSLoader APSDaemon.exe] main thread 1156
+[1896 @ Sat Feb 11 19:03:47 2012] [YSLoader APSDaemon.exe] command line: "C:\Program Files\Common Files\Apple\Apple Application Support\APSDaemon.exe" 
+[1896 @ Sat Feb 11 19:03:47 2012] [YSLoader APSDaemon.exe] ALLUSERSPROFILE=C:\ProgramData
+[1896 @ Sat Feb 11 19:03:47 2012] [YSLoader APSDaemon.exe] APPDATA=C:\Users\proneer\AppData\Roaming
+[1896 @ Sat Feb 11 19:03:47 2012] [YSLoader APSDaemon.exe] CommonProgramFiles=C:\Program Files\Common Files
+[1896 @ Sat Feb 11 19:03:47 2012] [YSLoader APSDaemon.exe] COMPUTERNAME=WIN-IN5AEG6USHU
+[1896 @ Sat Feb 11 19:03:47 2012] [YSLoader APSDaemon.exe] ComSpec=C:\Windows\system32\cmd.exe
+[1896 @ Sat Feb 11 19:03:47 2012] [YSLoader APSDaemon.exe] FP_NO_HOST_CHECK=NO
+[1896 @ Sat Feb 11 19:03:47 2012] [YSLoader APSDaemon.exe] HOMEDRIVE=C:
+[1896 @ Sat Feb 11 19:03:47 2012] [YSLoader APSDaemon.exe] HOMEPATH=\Users\proneer
+[1896 @ Sat Feb 11 19:03:47 2012] [YSLoader APSDaemon.exe] LOCALAPPDATA=C:\Users\proneer\AppData\Local
+[1896 @ Sat Feb 11 19:03:47 2012] [YSLoader APSDaemon.exe] LOGONSERVER=\\WIN-IN5AEG6USHU
+[1896 @ Sat Feb 11 19:03:47 2012] [YSLoader APSDaemon.exe] NUMBER_OF_PROCESSORS=1
+[1896 @ Sat Feb 11 19:03:47 2012] [YSLoader APSDaemon.exe] OS=Windows_NT
+[1896 @ Sat Feb 11 19:03:47 2012] [YSLoader APSDaemon.exe] Path=C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\
+[1896 @ Sat Feb 11 19:03:47 2012] [YSLoader APSDaemon.exe] PATHEXT=.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC
+[1896 @ Sat Feb 11 19:03:47 2012] [YSLoader APSDaemon.exe] PROCESSOR_ARCHITECTURE=x86
+[1896 @ Sat Feb 11 19:03:47 2012] [YSLoader APSDaemon.exe] PROCESSOR_IDENTIFIER=x86 Family 6 Model 30 Stepping 5, GenuineIntel
+[1896 @ Sat Feb 11 19:03:47 2012] [YSLoader APSDaemon.exe] PROCESSOR_LEVEL=6
+[1896 @ Sat Feb 11 19:03:47 2012] [YSLoader APSDaemon.exe] PROCESSOR_REVISION=1e05
+[1896 @ Sat Feb 11 19:03:47 2012] [YSLoader APSDaemon.exe] ProgramData=C:\ProgramData
+[1896 @ Sat Feb 11 19:03:47 2012] [YSLoader APSDaemon.exe] ProgramFiles=C:\Program Files
+[1896 @ Sat Feb 11 19:03:47 2012] [YSLoader APSDaemon.exe] PSModulePath=C:\Windows\system32\WindowsPowerShell\v1.0\Modules\
+[1896 @ Sat Feb 11 19:03:47 2012] [YSLoader APSDaemon.exe] PUBLIC=C:\Users\Public
+[1896 @ Sat Feb 11 19:03:47 2012] [YSLoader APSDaemon.exe] SESSIONNAME=Console
+[1896 @ Sat Feb 11 19:03:47 2012] [YSLoader APSDaemon.exe] SystemDrive=C:
+[1896 @ Sat Feb 11 19:03:47 2012] [YSLoader APSDaemon.exe] SystemRoot=C:\Windows
+[1896 @ Sat Feb 11 19:03:47 2012] [YSLoader APSDaemon.exe] TEMP=C:\Users\proneer\AppData\Local\Temp
+[1896 @ Sat Feb 11 19:03:47 2012] [YSLoader APSDaemon.exe] TMP=C:\Users\proneer\AppData\Local\Temp
+[1896 @ Sat Feb 11 19:03:47 2012] [YSLoader APSDaemon.exe] USERDOMAIN=WIN-IN5AEG6USHU
+[1896 @ Sat Feb 11 19:03:47 2012] [YSLoader APSDaemon.exe] USERNAME=proneer
+[1896 @ Sat Feb 11 19:03:47 2012] [YSLoader APSDaemon.exe] USERPROFILE=C:\Users\proneer
+[1896 @ Sat Feb 11 19:03:47 2012] [YSLoader APSDaemon.exe] windir=C:\Windows
+[1896 @ Sat Feb 11 19:03:54 2012] [YSLoader APSDaemon.exe] 
+	====================
+	 APSDaemon.exe ends
+	====================

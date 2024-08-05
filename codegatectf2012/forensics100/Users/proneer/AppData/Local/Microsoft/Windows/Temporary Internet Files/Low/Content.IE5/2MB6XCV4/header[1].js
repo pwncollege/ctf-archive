@@ -1,0 +1,2 @@
+document.writeln("<img id=\"head_loading_img\" style=\"display:\" src=\"http:\/\/img.brothersoft.com/ppd/images/ajax_load.gif\"></span>");document.write('<script language="javascript" src="http://img.brothersoft.com/v1/softjs/logindiv.js"></script>');
+	

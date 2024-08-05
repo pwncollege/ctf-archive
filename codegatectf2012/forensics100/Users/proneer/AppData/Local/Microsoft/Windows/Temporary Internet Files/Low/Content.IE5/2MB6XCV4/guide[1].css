@@ -1,0 +1,353 @@
+/*****************************************************************************/
+#guideContainer{
+	width:960px;
+/*	background: url(../img/download/download_bg.gif) no-repeat left top; */
+	background-position:0px 0px;	
+	line-height:20px;
+	margin:0 auto;
+	padding:15px 0px 0px 0px;
+}
+
+
+#guideContainer dl{
+	margin:0;
+	padding:0;
+	}
+#guideContainer dl dd{
+	margin:0 0 0 0;
+	padding:0;
+	}
+#guideContainer dl dd a{
+	color:#0088cc;
+	text-decoration:none;
+	line-height:20px;
+	}
+#guideContainer dl dd a:hover{
+	color:#0088cc;
+	text-decoration:underline;
+	line-height:20px;
+	}
+
+
+
+/* ----------------------------------------------------------*/
+
+#tabsF {
+	width:960px;
+	font-size:93%;
+	line-height:normal;
+	border-bottom:1px solid #bcd2e6;
+	margin:0;
+	padding:0;
+	height:29px;
+	}
+#tabsF ul {
+	margin:0;
+	padding:0px 10px 0 19px;
+	list-style:none;
+	}
+#tabsF li {
+	display:inline;
+	margin:0;
+	padding:0;
+	}
+#tabsF a {
+	float:left;
+	background:url("../img/tableft1.gif") no-repeat left top;
+	margin:0;
+	font-size:1.2em;
+	padding:0 0 0 4px;
+	line-height:20px;
+	text-decoration:none;
+	}
+#tabsF a span {
+	float:left;
+	display:block;
+	background:url("../img/tabright1.gif") no-repeat right top;
+	padding:5px 15px 4px 6px;
+	color:#333333;
+	line-height:20px;
+	}
+	/* Commented Backslash Hack hides rule from IE5-Mac \*/
+#tabsF a span {float:none;}
+	/* End IE5-Mac hack */
+#tabsF a:hover span {
+	color:#333333;
+	text-decoration:underline;
+	line-height:20px;
+	}
+#tabsF a:hover {
+	background-position:0% -42px;
+	}
+#tabsF a:hover span {
+	background-position:100% -42px;
+	}
+
+#tabsF #current a {
+	background-position:0% -42px;
+	}
+#tabsF #current a span {
+	background-position:100% -42px;
+	font-weight:bold;
+	clear:both;
+	}
+
+/* ----------------------------------------------------------*/
+
+#guidelist{
+	width:900px;
+	padding-top:5px;
+	padding-left:30px;
+	padding-right:30px;
+	padding-bottom:5px;
+	margin:0;
+	background-color:#ecf5fd;
+	border-bottom:1px solid #bcd2e6;
+	}
+
+#guidelist ul{
+	margin:0 0 0 0px;
+	padding:3px 0px 3px 0px;
+	list-style-type:normal;
+	}
+#guidelist li{
+	margin-right:10px;
+	padding:0 15px 0 0px;
+	color:#333333;
+	font-weight:bold;
+	display:inline;
+	}
+#guidelist li a{
+	color:#0088cc;
+	text-decoration:none;
+	line-height:18px;
+	}
+#guidelist li a:hover{
+	color:#0088cc;
+	text-decoration:underline;
+	line-height:18px;
+	}
+
+#guidelist li.current{
+	margin-right:10px;
+	padding:0 20px 0 0px;
+/*	color:#0088cc;*/
+	color:#ff7e00;
+/*	font-weight:bold; */
+	display:inline;
+	background:url("../img/ico_guide_current.gif") no-repeat right top;
+	background-position:95% 6px;
+	}
+#guidelist li.current a{
+	color:#ff7e00;
+/*	color:#0088cc; */
+/*	text-decoration:underline; */
+	line-height:18px; 
+	}
+#guidelist li.current a:hover{
+	color:#ff7e00;
+/*	color:#0088cc; */
+/*	text-decoration:underline; */
+	line-height:18px;
+	}
+
+
+/* ----------------------------------------------------------*/
+
+#guideContentsBox{
+	width:900px;
+	padding:33px 30px 30px 30px;
+	color:#787878;
+	margin:0 auto;
+	}
+#guideContentsBox h2{
+	font-size:1.8em;
+	font-family:Arial;
+	font-weight:bold;
+	color:#000000;
+	margin:0;
+	padding:0px 0px 13px 0px;
+	clear:both;
+	}
+#guideContentsBox h3{
+	font-size:150%;
+	font-weight:bold;
+	color:#000;
+	margin:0;
+	padding:0px 0px 5px 15px;
+	background:url(../img/ico_dot_A.gif) no-repeat left top;
+	line-height:25px;
+	clear:both;
+	}
+#guideContentsBox p{
+	color:#787878;
+	line-height:18px;
+	}
+#guideContentsBox blockquote{
+	color:#787878;
+	line-height:18px;
+	}
+#guideContentsBox img{
+	margin-top:8px;
+	margin-bottom:8px;
+	}
+#guideContentsBox a{
+	color:#0088cc;
+	text-decoration:none;
+	line-height:18px;
+	}
+#guideContentsBox a:hover{
+	color:#0088cc;
+	text-decoration:underline;
+	line-height:18px;
+	}
+
+#guideContentsBox .gotoTop{
+	border-bottom:1px solid #e3e6e8;
+	text-align:right;
+	margin:15px 0px 27px 0px;
+	padding:5px 0px 5px 0px;
+	}
+.bold{
+	color:#242424;
+	font-weight:bold;
+	}	
+.normaltxt{
+	color:#242424;
+	}	
+
+blockquote{
+	width:850px;
+	padding-left:25px;
+	clear:both;
+	}
+
+#guideContentsBox dl{
+	width:100%;
+	margin:0;
+	padding:0;
+	}
+#guideContentsBox dt{
+	margin:0;
+	padding:0 0 0 50px;
+	color:#242424;
+	font-weight:bold;
+	line-height:18px;
+	}
+#guideContentsBox dl dd{
+	margin:0;
+	padding:0 0 0 50px;
+	color:#787878;
+	line-height:18px;
+	}
+#guideContentsBox dl dd.indent{
+	margin:0;
+	padding:0 0 0 100px;
+	color:#787878;
+	line-height:18px;
+	}
+#guideContentsBox dl dd a{
+	color:#0088cc;
+	text-decoration:none;
+	line-height:18px;
+	}
+#guideContentsBox dl dd a:hover{
+	color:#0088cc;
+	text-decoration:underline;
+	line-height:18px;
+	}
+
+
+
+#indent_depth1 dl{
+	width:100%;
+	margin:0;
+	padding:0;
+	}
+#indent_depth1 dt{
+	margin:0;
+	padding:0 0 0 0px;
+	color:#242424;
+	font-weight:bold;
+	line-height:18px;
+	}
+#indent_depth1 dl dd{
+	margin:0;
+	padding:0 0 0 0px;
+	color:#787878;
+	line-height:18px;
+	}
+#indent_depth1 dl dd.indent{
+	margin:0;
+	padding:0 0 0 50px;
+	color:#787878;
+	line-height:18px;
+	}
+#indent_depth1 dl dd a{
+	color:#0088cc;
+	text-decoration:none;
+	line-height:18px;
+	}
+#indent_depth1 dl dd a:hover{
+	color:#0088cc;
+	text-decoration:underline;
+	line-height:18px;
+	}
+
+
+
+
+
+/* ----------------------------------------------------------*/
+
+#guideSublist{
+	clear:both;
+	width:100%;
+	padding:0;
+	margin-bottom:35px;
+/*	background-color:#f8f8f8; */
+	border-top:1px solid #e3e6e8;
+	border-bottom:1px solid #e3e6e8;
+	}
+
+#guideSublist ul{
+	margin:0 0 0 0px;
+	padding:5px 0;
+	list-style-type:normal;
+	}
+#guideSublist li{
+	margin:0;
+	padding:0 10px 0 10px;
+	color:#333333;
+/*	padding:0 15px 0 15px; */
+/*	border-right:1px solid #bcd2e6; */
+	display:inline;
+	}
+#guideSublist li a{
+	color:#0088cc;
+	text-decoration:none;
+	line-height:18px;
+	}
+#guideSublist li a:hover{
+	color:#0088cc;
+	text-decoration:underline;
+	line-height:18px;
+	}
+#guideSublist li a.now{
+/*	color:#0088cc; */
+	color:#f08526; 
+	font-weight:bold; 
+	line-height:18px;
+	text-decoration:underline;
+	}
+#guideSublist li a:hover.now{
+/*	color:#0088cc; */
+	color:#f08526; 
+	text-decoration:underline;
+	font-weight:bold; 
+	line-height:18px;
+	}
+/*gommenu*/
+
+#indent_depth1 .gommenu_indent{
+	padding-left:30px;}

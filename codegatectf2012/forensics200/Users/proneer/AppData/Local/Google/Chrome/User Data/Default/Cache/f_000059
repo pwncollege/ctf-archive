@@ -1,0 +1,715 @@
+/*@import "selectForm.css";*/
+
+body,div,ul,li,dl,dt,dd,ol,p,h1,h2,h3,h4,h5,h6,form {margin:0;padding:0}
+
+ul,ol,dl {list-style:none}
+
+img {border:0;}
+.clear { clear:both; }
+a {font:normal 12px dotum,'µ¸¿ò';color:#555;text-decoration:none;}
+a:hover {text-decoration:underline;}
+
+body {margin-bottom:40px;text-align:center;font:normal 12px dotum,'µ¸¿ò';line-height:1.5em;}
+
+.snap_01 {border:3px solid #fff;}
+
+/* select box µðÀÚÀÎ
+select.htc {width:77px;margin-top:1px;behavior:url(/css/selectBox.htc);}
+select.htc2 {width:77px;margin-top:1px;behavior:url(/css/selectBox2.htc);}
+ */
+
+/* play ¹öÆ° */
+.btn_play{ filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://img.gomtv.com/images/common/icon/play.png',sizingMethod='scale');}
+html>body .btn_play{background:url(http://img.gomtv.com/images/common/icon/play.png) transparent;}/* Win IE 4~6, Mac IE 4, Netscape 4 ¹èÁ¦ÇÏ±â */
+*:first-child+html .btn_play{background:url(http://img.gomtv.com/images/common/blank.gif) transparent;}/* IE 7 Àû¿ëÇÏ±â */
+
+/* play ¹öÆ°1 */
+.btn_play1{ filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://img.gomtv.com/images/common/icon/play1.png',sizingMethod='scale');}
+html>body .btn_play1{background:url(http://img.gomtv.com/images/common/icon/play1.png) transparent;}/* Win IE 4~6, Mac IE 4, Netscape 4 ¹èÁ¦ÇÏ±â */
+*:first-child+html .btn_play1{background:url(http://img.gomtv.com/images/common/blank.gif) transparent;}/* IE 7 Àû¿ëÇÏ±â */
+
+/* play ¹öÆ°2 */
+.btn_play2{ filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://img.gomtv.com/images/common/icon/play2.png',sizingMethod='scale');}
+html>body .btn_play2{background:url(http://img.gomtv.com/images/common/icon/play2.png) transparent;}/* Win IE 4~6, Mac IE 4, Netscape 4 ¹èÁ¦ÇÏ±â */
+*:first-child+html .btn_play2{background:url(http://img.gomtv.com/images/common/blank.gif) transparent;}/* IE 7 Àû¿ëÇÏ±â */
+
+/* play ¹öÆ°3 */
+.btn_play3{ filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://img.gomtv.com/images/common/icon/play3.png',sizingMethod='scale');}
+html>body .btn_play3{background:url(http://img.gomtv.com/images/common/icon/play3.png) transparent;}/* Win IE 4~6, Mac IE 4, Netscape 4 ¹èÁ¦ÇÏ±â */
+*:first-child+html .btn_play3{background:url(http://img.gomtv.com/images/common/blank.gif) transparent;}/* IE 7 Àû¿ëÇÏ±â */
+
+/* ºÒÅõ¸í ¹è°æ ¼³Á¤ */
+.alpha60 {filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://img.gomtv.com/images/common/bg_alpha60.png',sizingMethod='scale');}
+html>body .alpha60 {background:url(http://img.gomtv.com/images/common/bg_alpha60.png) transparent;}/* Win IE 4~6, Mac IE 4, Netscape 4 ¹èÁ¦ÇÏ±â */
+*:first-child+html .alpha60 {background:url(http://img.gomtv.com/images/common/blank.gif) transparent;}/* IE 7 Àû¿ëÇÏ±â */
+
+#top_gnb {position:relative;z-index:2;width:900px;margin:0 auto 12px;text-align:left;}
+
+#top_nav {width:900px;height:25px;background:url(http://img.gomtv.com/images/common/bg_top_nav.gif) no-repeat left top;}
+#top_nav .sethome {float:left;margin:9px 0 0 14px;}
+#top_nav ul {float:right;height:13px;padding:5px 10px 0 0;}
+#top_nav li {float:left;height:10px;}
+#top_nav li img.bar {margin:0 8px;}
+#top_nav li.msg {padding:3px 7px 0 0;font:normal 11px dotum,'µ¸¿ò';color:#898989;letter-spacing:-1px;}
+#top_nav li.msg span {color:#FFA200;}
+#top_nav li.mytv {padding:1px 7px 0 0;}
+
+#top_search {width:900px;height:77px;background:url(http://img.gomtv.com/images/common/bg_top_search.gif) no-repeat left top;}
+#top_search .logo {float:left;padding:15px 0 0 24px;margin-right:53px;}
+#search_form {position:relative;z-index:20000;float:left;width:450px;height:58px;margin-top:8px;margin-right:17px;background:url(http://img.gomtv.com/images/common/bg_search_form.gif) no-repeat left top;}
+#search_form ul.set {width:398px;height:45px;margin:10px 0 0 40px;}
+#search_form ul.set li {float:left;}
+#search_form ul.set li.sel {width:80px;height:26px;}
+#search_form ul.set li.sel select {width:77px;height:24px;}
+#search_form ul.set li.inp {position:relative;z-index:1000;width:258px;height:26px;}
+#search_form ul.set li.inp .search_input {width:255px;height:24px;padding:5px;border:0;font:normal 12px dotum,'µ¸¿ò';color:#898989;background:url(http://img.gomtv.com/images/common/bg_search_input.gif) no-repeat left top;}
+#search_form ul.set li.inp .layer_btn {position:absolute;z-index:1001;right:8px;top:5px;}
+#search_form ul.set li.btn {width:60px;height:26px;}
+#search_form ul.set li.btn img {display:block;}
+#search_form ul.set li.word {width:359px;height:13px;padding:1px 0 0 39px;font-size:11px;letter-spacing:-1px;color:#FFE5CC;}
+*html #search_form ul.set li.word {width:398px;height:19px;}
+#search_form ul.set li.word em {font-style:normal;font-weight:bold;}
+#search_form ul.set li.word a {font:normal 11px dotum,'µ¸¿ò';color:#FFE5CC;}
+#search_form ul.set li.word a:hover {text-decoration:underline;}
+
+	/* °Ë»ö ·¹ÀÌ¾î ½ºÅ¸ÀÏ :: Start */
+	.search_layer {position:absolute;left:0;top:0px;width:245px;min-height:190px;padding:6px 5px;font:normal 11px dotum,'µ¸¿ò';color:#898989;background-color:#E6E6E6;letter-spacing:-1px;z-index:1000;text-align:left;}
+	*html .search_layer {width:255px;height:202px;text-align:left;}
+
+	.search_layer .t {font:bold 12px dotum,'µ¸¿ò';color:#898989;}
+	.search_layer .bt {clear:both;}
+	.search_layer .r {float:right;margin-top:-13px;font:normal 11px dotum,'µ¸¿ò';color:#C2C2C2;}
+	.search_layer .r a {font:normal 11px dotum,'µ¸¿ò';color:#363636;}
+	.search_layer .r a:hover {text-decoration:underline;}
+
+	.search_layer .box {position:relative;width:227px;min-height:134px;float:left;padding:8px;margin:6px 0;font:normal 11px/18px dotum,'µ¸¿ò';color:#898989;background-color:#fff;border:1px solid #C2C2C2;}
+	*html .search_layer .box {width:243px;height:150px;}
+	.search_layer .box em {font-style:normal;color:#FF7E00;}
+	.search_layer .box ul {width:227px;margin:0;}
+	.search_layer .box li {width:227px;height:16px;padding-top:4px;font:normal 11px dotum,'µ¸¿ò';color:#363636;cursor:pointer;}
+	*html .search_layer .box li {height:20px;}
+	.search_layer .box li .right {float:right;margin-top:-13px}
+	.search_layer .box li span {color:#898989;}
+	.search_layer .box li.title {color:#C69C6D;border-bottom:1px solid #EEE1D3;margin-top:15px;}
+	.search_layer .box li.title span {color:#C69C6D;}
+
+	.search_layer .func {position:absolute;left:0;top:0;width:233px;padding:5px;background-color:#F6F6F6;font:normal 11px dotum,'µ¸¿ò';color:#CCCCCC;}
+	*html .search_layer .func {width:243px;}
+	.search_layer .func a {font:normal 11px dotum,'µ¸¿ò';color:#363636;}
+	.search_layer .func a.on {font:bold 11px dotum,'µ¸¿ò';color:#FF7E00;}
+	.search_layer .func .bar {padding:0 5px;}
+	/* °Ë»ö ·¹ÀÌ¾î ½ºÅ¸ÀÏ :: End */
+
+#ranking_chart {float:left;width:208px;height:51px;margin-top:15px;}
+#ranking_chart dt {height:18px;font:bold 12px dotum,'µ¸¿ò';color:#D8D8D8;letter-spacing:-1px;padding:4px 0 0 7px;}
+#ranking_chart dt span {float:right;margin-top:-15px;padding-right:5px;}
+#ranking_chart dd {height:27px;padding:2px 0 0 4px;background:url(http://img.gomtv.com/images/common/bg_top_ranking_chart.gif) no-repeat left top;}
+#ranking_chart .box {float:left;width:181px;height:20px;overflow:hidden;}
+#ranking_chart .box li {width:161px;height:20px;line-height:20px;padding-left:20px;font-size:11px;}
+#ranking_chart .box li a {font:normal 11px dotum,'µ¸¿ò';color:#D3D3D3;}
+#ranking_chart .box li a:hover {color:#FFFFFF;}
+#ranking_chart .box .no_1 {background:url(http://img.gomtv.com/images/common/icon/icon_no_1.gif) no-repeat 4px 4px;}
+#ranking_chart .box .no_2 {background:url(http://img.gomtv.com/images/common/icon/icon_no_2.gif) no-repeat 4px 4px;}
+#ranking_chart .box .no_3 {background:url(http://img.gomtv.com/images/common/icon/icon_no_3.gif) no-repeat 4px 4px;}
+#ranking_chart .box .no_4 {background:url(http://img.gomtv.com/images/common/icon/icon_no_4.gif) no-repeat 4px 4px;}
+#ranking_chart .box .no_5 {background:url(http://img.gomtv.com/images/common/icon/icon_no_5.gif) no-repeat 4px 4px;}
+#ranking_chart .box .no_6 {background:url(http://img.gomtv.com/images/common/icon/icon_no_6.gif) no-repeat 4px 4px;}
+#ranking_chart .box .no_7 {background:url(http://img.gomtv.com/images/common/icon/icon_no_7.gif) no-repeat 4px 4px;}
+#ranking_chart .box .no_8 {background:url(http://img.gomtv.com/images/common/icon/icon_no_8.gif) no-repeat 4px 4px;}
+#ranking_chart .box .no_9 {background:url(http://img.gomtv.com/images/common/icon/icon_no_9.gif) no-repeat 4px 4px;}
+#ranking_chart .box .no_10 {background:url(http://img.gomtv.com/images/common/icon/icon_no_10.gif) no-repeat 4px 4px;}
+#ranking_chart .box .updown {float:right;margin:-15px 7px 0 0;}
+
+#ranking_chart .btn {float:left;width:14px;height:18px;padding:3px 0 0 7px;}
+#ranking_chart .btn img {display:block;}
+#ranking_chart .btn img.up {margin-bottom:7px;}
+
+#top_menu {position:relative;z-index:100;width:900px;height:40px;background:url(http://img.gomtv.com/images/common/bg_top_menu.gif) repeat-x left top;}
+#top_menu ul {width:900px;height:36px;}
+#top_menu li {float:left;height:36px;}
+#top_menu li img {display:block;}
+#top_menu .lt {position:absolute;display:block;left:0;top:0;}
+#top_menu .rt {position:absolute;display:block;right:0;top:0;}
+
+#top_layer {width:900px;min-height:26px;background:#505050 url(http://img.gomtv.com/images/common/bg_top_layer.gif) no-repeat left bottom;}
+*html #top_layer {height:26px;}
+#top_layer .btn_mytv {float:left;height:25px;padding:0 0 0 12px;margin:1px 113px 0 0;}
+#top_layer .btn_channel {float:right;height:25px;margin:1px 0 0 0;padding-right:13px;}
+/*ÀÌº¥Æ® Çìµå °øÁö*/
+#top_layer .sisa_event {float:left;padding:7px 0 0 20px;margin:1px 113px 0 0;font:bold 12px dotum,'µ¸¿ò';color:#999999;}
+#top_layer .btn_event {float:right;height:25px;margin:4px 0 0 0;padding-right:13px;}
+/*ÀÌº¥Æ® Çìµå °øÁö ³¡*/
+#update_txt {float:left;width:232px;margin:3px 0 0 0;}
+#update_txt dt {float:left;width:54px;height:16px;}
+#update_txt dt img {display:block;margin-top:1px;}
+#update_txt dd.box {float:left;width:170px;height:16px;line-height:16px;overflow:hidden;}
+#update_txt dd.box a {font:normal 11px/16px dotum,'µ¸¿ò';color:#B7B7B7;text-decoration:none;}
+#update_txt dd.box a:hover {color:#D7D7D7;}
+#update_txt dd.btn {float:left;width:8px;height:16px;}
+#update_txt dd.btn img {display:block;}
+#update_txt dd.btn img.up {margin-top:1px;margin-bottom:7px;}
+
+	/* »ó´Ü ·¹ÀÌ¾î[ MY TV & Ã¤³ÎÀüÃ¼º¸±â ] :: Start */
+	#mytv {clear:both;width:900px;height:243px;background:url(http://img.gomtv.com/images/common/bg_top_layer2.gif) no-repeat left bottom;text-align:center;}
+	#mytv .mytv_box {width:876px;height:218px;margin:0 auto;background:url(http://img.gomtv.com/images/common/bg_mytv_box.gif) no-repeat left top;text-align:left;}
+	#mytv .mytv_menu {float:left;width:153px;margin:10px 25px 10px 0;padding-left:10px;}
+	#mytv .mytv_menu li {width:153px;height:28px;margin-bottom:2px;}
+	#mytv .mytv_menu li img {vertical-align:top;}
+	#mytv .btn_close {clear:both;width:83px;margin:0 auto;padding-top:12px;}
+	#mytv .btn_close img {display:block;}
+
+	#mytv_right {float:left;width:678px;height:198px;margin:10px 0 10px 0;}
+	#mytv_right .btn {height:20px;padding-left:5px;}
+	#mytv_right .btn img {display:block;}
+	#mytv_right .link {float:right;height:20px;margin-top:-16px;font-size:12px;}
+	#mytv_right .link a {font:bold 12px dotum,'µ¸¿ò';color:#CCCCCC;text-decoration:none;}
+	#mytv_right .link a:hover {color:#ECECEC;}
+	#mytv_right .link .bar {font:normal 12px dotum,'µ¸¿ò';color:#A0A0A0;padding:0 5px;}
+
+	#mytv_right .mytv_list_div .cate_bar {width:678px;height:26px;padding:0 2px;margin-bottom:7px;background:url(http://img.gomtv.com/images/common/bg_mytv_bar.gif) no-repeat left top;}
+	#mytv_right .mytv_list_div .cate_bar li {float:left;min-width:83px;height:20px;padding-left:13px;margin:2px 2px 2px 0;background:url(http://img.gomtv.com/images/common/bg_mytv_cate_l_off.gif) no-repeat left top;}
+	*html #mytv_right .mytv_list_div .cate_bar li {width:83px;}
+	#mytv_right .mytv_list_div .cate_bar li.on {background:url(http://img.gomtv.com/images/common/bg_mytv_cate_l_on.gif) no-repeat left top;}
+	#mytv_right .mytv_list_div .cate_bar li a {display:block;min-width:83px;height:20px;padding:4px 10px 0;background:url(http://img.gomtv.com/images/common/bg_mytv_cate_r_off.gif) no-repeat right top;font:bold 12px dotum,'µ¸¿ò';color:#C2C2C2;text-align:center;}
+	*html #mytv_right .mytv_list_div .cate_bar li a {width:103px;}
+	#mytv_right .mytv_list_div .cate_bar li.on a {color:#FFFFFF;background:url(http://img.gomtv.com/images/common/bg_mytv_cate_r_on.gif) no-repeat right top;}
+
+	#mytv_right .mytv_list_div .list {width:678px;height:126px;margin-bottom:17px;overflow:auto;
+		scrollbar-face-color:#808080;
+		scrollbar-highlight-color:#949494;
+		scrollbar-shadow-color:#808080;
+		scrollbar-3dlight-color:#535353;
+		scrollbar-arrow-color:#B0B0B0;
+		scrollbar-track-color:#616161;
+		scrollbar-darkshadow-color:#535353;
+		scrollbar-base-color:#808080;
+	}
+	#mytv_right .mytv_list_div .list table {width:649px;border-bottom:1px solid #5D5D5D;}
+	#mytv_right .mytv_list_div .list table .odd {background-color:#767676;}
+	#mytv_right .mytv_list_div .list table td {height:25px;border-top:1px solid #5D5D5D;}
+	#mytv_right .mytv_list_div .list table td.cate {width:91px;padding-left:14px;font:bold 12px dotum,'µ¸¿ò';color:#D7D7D7;border-right:1px solid #5D5D5D;}
+	#mytv_right .mytv_list_div .list table td.channel {width:193px;padding-left:14px;font:bold 12px dotum,'µ¸¿ò';color:#D7D7D7;border-right:1px solid #5D5D5D;}
+	#mytv_right .mytv_list_div .list table td.channel span {font-weight:normal;color:#FF7E00;}
+	#mytv_right .mytv_list_div .list table td.date {width:121px;padding-left:14px;font:bold 12px dotum,'µ¸¿ò';color:#D7D7D7;border-right:1px solid #5D5D5D;}
+	#mytv_right .mytv_list_div .list table td.title {height:22px;padding:2px 0 0 22px;font-size:11px;background-image:url(http://img.gomtv.com/images/common/bul/bul_02.gif);background-repeat:no-repeat;background-position:15px 10px;}
+	#mytv_right .mytv_list_div .list table td.title a {font:normal 11px dotum,'µ¸¿ò';color:#D7D7D7;}
+	#mytv_right .mytv_list_div .list table td.title a:hover {color:#FFFFFF;}
+	#mytv_right .mytv_list_div .list table td.title img {margin:0 0 -1px 5px;}
+	#mytv_right .mytv_list_div .list table td.del {width:24px;text-align:center;}
+
+	#mytv_right .mytv_list_div p {width:666px;height:18px;padding:6px 0 0 12px;margin-bottom:7px;font:bold 12px dotum,'µ¸¿ò';color:#fff;background:url(http://img.gomtv.com/images/common/bg_mytv_bar.gif) no-repeat left top;}
+	*html #mytv_right .mytv_list_div p {width:678px;height:24px;}
+	#mytv_right .mytv_list_div p .bar {font-weight:normal;color:#707070;}
+	#mytv_right .mytv_list_div p .cnt {color:#FFA200;}
+
+	#all_channel {clear:both;width:900px;height:243px;background:url(http://img.gomtv.com/images/common/bg_top_layer2.gif) no-repeat left bottom;text-align:center;}
+	#all_channel .channel_box {width:876px;height:218px;margin:0 auto;background:url(http://img.gomtv.com/images/common/bg_channel_box.gif) no-repeat left top;text-align:left;}
+
+
+	#all_channel .channel_tab {width:858px;height:26px;margin:0 9px 0;padding-top:9px;}
+	#all_channel .channel_tab table {width:856px;height:24px;border:1px solid #C8C8C8;}
+	#all_channel .channel_tab td {height:24px;background:url(http://img.gomtv.com/images/common/tab_channel_bg_off.gif) repeat-x left top;text-align:center;}
+	#all_channel .channel_tab td.on {background:url(http://img.gomtv.com/images/common/tab_channel_bg_on.gif) repeat-x left top;}
+	#all_channel .channel_tab td.bar {width:1px;height:24px;border-left:1px solid #C8C8C8;font-size:1px;}
+	#all_channel .channel_tab td a {display:block;font:normal 12px dotum,'µ¸¿ò';color:#898989;margin:0 7px;}
+	#all_channel .channel_tab td.on a {font:bold 12px dotum,'µ¸¿ò';color:#FF7E00;letter-spacing:-1px;}
+	#all_channel .channel_tab td a:hover {font:bold 12px dotum,'µ¸¿ò';color:#FF7E00;letter-spacing:-1px;}
+
+	#all_channel .btn_close {clear:both;width:83px;margin:0 auto;padding-top:12px;}
+	#all_channel .btn_close img {display:block;}
+
+	#channel_list {width:858px;height:150px;margin:10px 0 0 9px;background:url(http://img.gomtv.com/images/common/bg_channel_list.gif) repeat-x left bottom;}
+	#channel_list li.pane {float:left;width:272px;padding-left:10px;}
+	#channel_list li.bar {border-right:1px solid #E2E2E2;}
+	#channel_list li.pane li {height:18px;padding-left:8px;background:url(http://img.gomtv.com/images/common/bul/bul_03.gif) no-repeat left 8px;}
+	#channel_list li.pane li a {font:normal 11px dotum,'µ¸¿ò';color:#666666;text-decoration:none;}
+	#channel_list li.pane li a span {color:#B3B3B3;}
+	#channel_list li.pane li a:hover {font:normal 11px dotum,'µ¸¿ò';color:#FF8F00;text-decoration:underline;}
+	#channel_list li.pane li a:hover span {color:#FF8F00;}
+
+	table.channel_page {height:13px;border-collapse:collapse;margin:0 auto}
+	table.channel_page td{padding:0;border-right:1px solid #dddddd}
+	table.channel_page td.last{border-right:0}
+	table.channel_page a{font-size:12px;font-family:µ¸¿ò;text-decoration:none;display:block;padding:2px 7px 0 7px;color:#ACACAC;font-weight:bold}
+	table.channel_page .on, table.channel_page .on a, table.channel_page .on a:visited, table.channel_page a:hover {color:#FFA000}
+	*html body table.channel_page a{width:0.7em}
+	/* »ó´Ü ·¹ÀÌ¾î[ MY TV & Ã¤³ÎÀüÃ¼º¸±â ] :: End */
+
+/* ¼­ºêÆäÀÌÁö ·¹ÀÌ¾Æ¿ô :: Start */
+#sub_top_gnb {width:900px;margin:0 auto 12px;text-align:left;}
+#sub_top_search {width:900px;height:86px;background:url(http://img.gomtv.com/images/common/bg_sub_top_search.gif) no-repeat left top;}
+#sub_wrap {width:900px;margin:0 auto 20px;overflow-y:auto;overflow-x:hidden;text-align:left;}
+#sub_wrap_news {margin:0 auto 20px;overflow-y:hidden;overflow-x:hidden;text-align:left;}
+#sub_left {float:left;width:170px;margin-right:15px;}
+#sub_center {float:left;width:500px;margin-right:15px;}
+#sub_center2 {float:left;width:715px;}
+#sub_center3 {float:left;width:520px;margin-right:15px;}
+#sub_center10 {float:right;width:715px;}
+#sub_right {float:left;width:200px;}
+#sub_right2 {float:left;width:180px;}
+
+/* ÀÌº¥Æ®ÆäÀÌÁö ÆäÀÌÁö»ðÀÔºÎºÐ*/
+#sub_full {width:900px;padding:0 7px 20px 0;}
+/* ÀÌº¥Æ®ÆäÀÌÁö ÆäÀÌÁö»ðÀÔ³¡*/
+
+/* iframe À¸·Î µé¾î°¡´Â ÆäÀÌÁö */
+#iframe_wrap {text-align:left;background:#ffffff;}
+#iframe_wrap #sub_center2 {float:none;}
+
+#sub_center h2 {padding:8px 0 0 18px;height:27px;font:bold 14px dotum,'µ¸¿ò';color:#898989;background:url(http://img.gomtv.com/images/common/bul/bul_title.gif) no-repeat 0 5px}
+*html #sub_center h2 {height:35px;}
+#sub_center h2 span {color:#363636;}
+#sub_center h2 em {font-style:normal;color:#ff7e00;}
+
+#sub_center2 h2 {padding:8px 0 0 18px;height:27px;font:bold 14px dotum,'µ¸¿ò';color:#898989;background:url(http://img.gomtv.com/images/common/bul/bul_title.gif) no-repeat 0 5px}
+/* ÀÌº¥Æ® ÆäÀÌÁö Çì´õ*/
+#sub_center10 h2 {background:url(http://img.gomtv.com/images/movies/event_header.jpg) no-repeat;}
+/* ÀÌº¥Æ® ÆäÀÌÁö Çì´õ ³¡*/
+*html #sub_center2 h2 {height:35px;}
+#sub_center2 h2 span {color:#363636;}
+#sub_center2 h2 em {font-style:normal;color:#ff7e00;}
+
+#sub_center3 h2 {padding:8px 0 0 18px;height:27px;font:bold 14px dotum,'µ¸¿ò';color:#898989;background:url(http://img.gomtv.com/images/common/bul/bul_title.gif) no-repeat 0 5px}
+*html #sub_center3 h2 {height:35px;}
+#sub_center3 h2 span {color:#363636;}
+#sub_center3 h2 em {font-style:normal;color:#ff7e00;}
+
+#sub_top_search .sub_top_nav {height:16px;padding:0 5px 0 0;}
+#sub_top_search .sub_top_nav ul {float:right;}
+#sub_top_search .sub_top_nav li {float:left;margin-top:1px;padding-top:5px; }
+#sub_top_search .sub_top_nav li img.bar {margin:0 8px;}
+#sub_top_search .sub_top_nav li.msg {padding:4px 7px 0 0;font:normal 11px/11px dotum,'µ¸¿ò';color:#898989;letter-spacing:-1px;}
+#sub_top_search .sub_top_nav li.msg span {color:#FFA200;}
+#sub_top_search .sub_top_nav li.mytv {padding:2px 7px 0 0;}
+#sub_top_search .sub_top_nav img {display:block;}
+
+#sub_top_search .logo {float:left;height:41px;margin:8px 49px 0 0;padding-left:8px;}
+#sub_top_search .banner {float:left;height:41px;margin-top:8px;}
+#sub_top_search .search_form {float:right;width:450px;height:38px;margin-top:5px;background:url(http://img.gomtv.com/images/common/bg_sub_top_search_form.gif) no-repeat left top;}
+
+#search_form2 {position:relative;z-index:20000;float:right;width:450px;height:53px;margin-top:5px;background:url(http://img.gomtv.com/images/common/bg_sub_top_search_form.gif) no-repeat left top;}
+#search_form2 ul.set {width:398px;margin:6px 0 0 45px;}
+#search_form2 ul.set li {float:left;}
+#search_form2 ul.set li.sel {width:80px;height:26px;}
+#search_form2 ul.set li.sel select {width:77px;height:24px;}
+#search_form2 ul.set li.inp {position:relative;z-index:1000;width:258px;height:26px;}
+#search_form2 ul.set li.inp .search_input {width:255px;height:24px;padding:5px;border:0;font:normal 12px dotum,'µ¸¿ò';color:#898989;background:url(http://img.gomtv.com/images/common/bg_search_input2.gif) no-repeat left top;}
+#search_form2 ul.set li.inp .layer_btn {position:absolute;z-index:1001;right:8px;top:5px;}
+#search_form2 ul.set li.btn {width:60px;height:26px;}
+#search_form2 ul.set li.btn img {display:block;}
+#search_form2 ul.set li.word {width:359px;height:13px;padding:6px 0 0 39px;font-size:11px;letter-spacing:-1px;color:#FFE5CC;}
+*html #search_form2 ul.set li.word {width:398px;height:19px;}
+#search_form2 ul.set li.word em {font-style:normal;font-weight:bold;}
+#search_form2 ul.set li.word a {font:normal 11px dotum,'µ¸¿ò';color:#FFE5CC;}
+#search_form2 ul.set li.word a:hover {text-decoration:underline;}
+#search_form2 p.recom {clear:both;padding:1px 8px 0 0;font:normal 11px dotum,'µ¸¿ò';color:#7c7b7b;letter-spacing:-1px;text-align:right;}
+#search_form2 p.recom a {font:normal 11px dotum,'µ¸¿ò';color:#7c7b7b;}
+#search_form2 p.recom a:hover {color:#555555;text-decoration:underline;}
+
+#searchBbs {margin-bottom:10px;padding:7px 7px 0 7px;width:701px;height:28px;background:url(http://img.gomtv.com/images/common/bg_search.gif) no-repeat left top;text-align:right;}
+*html #searchBbs {width:715px;height:35px;}
+#searchBbs li.left {float:left;}
+#searchBbs li.right {float:right}
+#searchBbs select {font:normal 12px dotum,'µ¸¿ò';color:#898989;vertical-align:middle;}
+#searchBbs input {width:140px;height:18px;border:1px solid #CCCCCC;font:normal 12px dotum,'µ¸¿ò';color:#898989;vertical-align:middle;}
+#searchBbs img {vertical-align:top;}
+/* ¼­ºêÆäÀÌÁö ·¹ÀÌ¾Æ¿ô :: End */
+
+	/* ÁÂÃø ¼­ºê ¸Þ´º :: Start */
+	#left_menu {width:170px;}
+	#left_menu h3 {width:170px;height:40px;}
+
+	#left_menu .tab, #left_menu .tab2 {width:170px;height:30px;}
+	#left_menu .tab li, #left_menu .tab2 li {float:left;text-align:center;}
+	#left_menu .tab a, #left_menu .tab2 a {display:block;height:20px;padding-top:10px;font:bold 12px dotum,'µ¸¿ò';}
+	*html #left_menu .tab a, *html #left_menu .tab2 a {height:30px;}
+	#left_menu .tab a.tab_l {width:86px;color:#FFF;background:url(http://img.gomtv.com/images/common/bg_lm_tab_l_off.gif) no-repeat left top;}
+	#left_menu .tab a.tab_r {width:84px;color:#FFF;background:url(http://img.gomtv.com/images/common/bg_lm_tab_r_off.gif) no-repeat left top;}
+	#left_menu .tab .on a.tab_l {width:86px;color:#FF7E00;background:url(http://img.gomtv.com/images/common/bg_lm_tab_l_on.gif) no-repeat left top;}
+	#left_menu .tab .on a.tab_r {width:84px;color:#FF7E00;background:url(http://img.gomtv.com/images/common/bg_lm_tab_r_on.gif) no-repeat left top;}
+
+	#left_menu .tab2 a.tab_l {width:86px;color:#FFF;background:url(http://img.gomtv.com/images/common/bg_lm_tab2_l_off.gif) no-repeat left top;}
+	#left_menu .tab2 a.tab_r {width:84px;color:#FFF;background:url(http://img.gomtv.com/images/common/bg_lm_tab2_r_off.gif) no-repeat left top;}
+	#left_menu .tab2 .on a.tab_l {width:86px;color:#FF7E00;background:url(http://img.gomtv.com/images/common/bg_lm_tab2_l_on.gif) no-repeat left top;}
+	#left_menu .tab2 .on a.tab_r {width:84px;color:#FF7E00;background:url(http://img.gomtv.com/images/common/bg_lm_tab2_r_on.gif) no-repeat left top;}
+
+	#left_menu .menu_wrap {clear:both;width:170px;padding-bottom:16px;margin-bottom:10px;background:url(http://img.gomtv.com/images/common/bg_lm_bottom.gif) no-repeat left bottom;}
+	#left_menu .menu_wrap ul {padding-top:5px;background:url(http://img.gomtv.com/images/common/bg_lm_middle.gif) repeat-y left top;}
+	#left_menu .menu_wrap ul.notab {padding-top:5px;background:url(http://img.gomtv.com/images/common/bg_lm_top_round.gif) no-repeat left top;}
+	#left_menu .menu_wrap ul.notab2 {padding-top:5px;background:url(http://img.gomtv.com/images/common/bg_lm_top_round2.gif) no-repeat left top;}
+	#left_menu .menu_wrap li {width:170px;background:url(http://img.gomtv.com/images/common/bg_lm_middle.gif) repeat-y left top;}
+	#left_menu .menu_wrap li span {padding-left:3px;font-weight:normal;font-size:11px;color:#ff7e00;letter-spacing:-1px;}
+	#left_menu .menu_wrap li span.cnt {color:#898989;}
+	/* 080121 °Ë»ö°á°ú Ä«¿îÆ® °ü·Ã Ãß°¡ :: Start */
+	#left_menu .menu_wrap li span.search_cnt {padding-left:0;font:normal 12px dotum,'µ¸¿ò';color:#737373;letter-spacing:0px;}
+	#left_menu .menu_wrap li a.on span.search_cnt {padding-left:0;font:bold 12px dotum,'µ¸¿ò';color:#ffffff;letter-spacing:-1px;}
+	#left_menu .menu_wrap li a:hover span.search_cnt {font-weight:bold;letter-spacing:-1px;}
+	/* 080121 °Ë»ö°á°ú Ä«¿îÆ® °ü·Ã Ãß°¡ :: End */
+	#left_menu .menu_wrap li.line {height:12px;font-size:1px;line-height:1px;background:url(http://img.gomtv.com/images/common/bg_lm_line.gif) no-repeat left top;}
+	#left_menu .menu_wrap li.title {width:152px;height:18px;padding:5px 0 0 18px;font:bold 12px dotum,'µ¸¿ò';color:#4B4B4B;background:url(http://img.gomtv.com/images/common/bg_lm_title.gif) no-repeat left top;}
+	*html #left_menu .menu_wrap li.title {width:170px;height:23px;}
+	#left_menu .menu_wrap li.title a {font:bold 12px dotum,'µ¸¿ò';color:#4B4B4B;}
+	#left_menu .menu_wrap li.title a.on,
+	#left_menu .menu_wrap li.title a:hover {font:bold 12px dotum,'µ¸¿ò';color:#FF6E00;}
+	/* 080305 ¸Þ´º ÀÌ¹ÌÁö Ãß°¡ */
+	#left_menu .menu_wrap li.menuimg {vertical-align:middle}
+	/*#left_menu .menu_wrap li.menuimg a {display:block;margin-left:12px;width:129px;height:15px;padding:3px 0 0 17px;font:normal 12px dotum,'µ¸¿ò';color:#737373; left top;}*/
+	*html #left_menu .menu_wrap li.menuimg a {height:18px;}
+	/*#left_menu .menu_wrap li.menuimg a {display:block;margin-left:12px;width:129px;height:15px;padding:3px 0 0 17px;font:normal 12px dotum,'µ¸¿ò';color:#737373;background:url(http://img.gomtv.com/images/common/bg_lm_menu_off.gif) no-repeat left middle;}*/
+	
+	/*¸Þ´ºÀÌ¹ÌÁö»ðÀÔ*/
+	#left_menu .menu_wrap li.menu11img a {margin-left:23px;height:17px;padding:0 0 0 12px; no-repeat left middle;}
+	/*#left_menu .menu_wrap li.menu11 {padding:0 0 0 12px;}*/
+	#left_menu .menu_wrap li.menu11 {padding:0 0 0 12px;}
+	
+	/*¸Þ´ºÀÌ¹ÌÁö»ðÀÔ³¡*/
+	
+	#left_menu .menu_wrap li.menuimg a {margin-left:12px;height:15px;padding:3px 0 0 17px;background:url(http://img.gomtv.com/images/common/bg_lm_menu_off.gif) no-repeat left middle;}
+	/* 080305 ¸Þ´º ÀÌ¹ÌÁö Ãß°¡ END */
+	#left_menu .menu_wrap li.menu {font:normal 12px dotum,'µ¸¿ò';color:#737373;}
+	#left_menu .menu_wrap li.menu a {display:block;margin-left:12px;width:129px;padding:3px 0 0 17px;font:normal 12px dotum,'µ¸¿ò';color:#737373;background:url(http://img.gomtv.com/images/common/bg_lm_menu_off.gif) no-repeat left top;}
+	*html #left_menu .menu_wrap li.menu a {width:146px;height:18px;}
+	#left_menu .menu_wrap li.menu a.on,
+	#left_menu .menu_wrap li.menu a:hover {font:bold 12px dotum,'µ¸¿ò';color:#FFFFFF;letter-spacing:-1px;background:url(http://img.gomtv.com/images/common/bg_lm_menu_on.gif) no-repeat left top;}
+	#left_menu .menu_wrap li.menu a:hover span {color:#fff;}
+	#left_menu .menu_wrap li.menu a img {vertical-align:-2px;margin-left:3px;}
+	
+	#left_menu .menu_wrap li.menu_co {font:normal 12px dotum,'µ¸¿ò';color:#737373;}
+	#left_menu .menu_wrap li.menu_co a {display:block;margin-left:12px;width:129px;padding:3px 0 0 17px;font:normal 12px dotum,'µ¸¿ò';color:#737373;background:url(http://img.gomtv.com/images/common/bg_lm_pmenu_off.gif) no-repeat left top;}
+	*html #left_menu .menu_wrap li.menu_co a {width:146px;height:18px;}
+	#left_menu .menu_wrap li.menu_co a.on,
+	#left_menu .menu_wrap li.menu_co a:hover {font:bold 12px dotum,'µ¸¿ò';color:#FFFFFF;letter-spacing:-1px;background:url(http://img.gomtv.com/images/common/bg_lm_pmenu_on.gif) no-repeat left top;}
+	#left_menu .menu_wrap li.menu_co a:hover span {color:#fff;}
+	#left_menu .menu_wrap li.menu_co a img {vertical-align:-2px;margin-left:3px;}
+	
+	#left_menu .menu_wrap li.menu_pl {font:normal 12px dotum,'µ¸¿ò';color:#737373;}
+	#left_menu .menu_wrap li.menu_pl a {display:block;margin-left:12px;width:129px;padding:3px 0 0 17px;font:normal 12px dotum,'µ¸¿ò';color:#737373;background:url(http://img.gomtv.com/images/common/bg_lm_mmenu_off.gif) no-repeat left top;}
+	*html #left_menu .menu_wrap li.menu_pl a {width:146px;height:18px;}
+	#left_menu .menu_wrap li.menu_pl a.on,
+	#left_menu .menu_wrap li.menu_pl a:hover {font:bold 12px dotum,'µ¸¿ò';color:#FFFFFF;letter-spacing:-1px;background:url(http://img.gomtv.com/images/common/bg_lm_mmenu_on.gif) no-repeat left top;}
+	#left_menu .menu_wrap li.menu_pl a:hover span {color:#fff;}
+	#left_menu .menu_wrap li.menu_pl a img {vertical-align:-2px;margin-left:3px;}
+
+	#left_menu .menu_wrap li.menu2 {font:normal 12px dotum,'µ¸¿ò';color:#737373;}
+	#left_menu .menu_wrap li.menu2 a {display:block;margin-left:12px;width:129px;padding:3px 0 0 17px;font:normal 12px dotum,'µ¸¿ò';color:#737373;background:url(http://img.gomtv.com/images/common/bg_lm_menu_off.gif) no-repeat left top;}
+	*html #left_menu .menu_wrap li.menu2 a {width:146px;height:18px;}
+	#left_menu .menu_wrap li.menu2 a.on,
+	#left_menu .menu_wrap li.menu2 a:hover {font:bold 12px dotum,'µ¸¿ò';color:#FFFFFF;letter-spacing:-1px;background:url(http://img.gomtv.com/images/common/bg_lm_menu2_on.gif) no-repeat left top;}
+	#left_menu .menu_wrap li.menu2 a:hover span {color:#fff;}
+	#left_menu .menu_wrap li.menu2 a img {vertical-align:middle;margin-left:3px;}
+
+	#left_menu .menu_wrap li.subm {padding-left:36px;background:url(http://img.gomtv.com/images/common/bul/bul_mm.gif) no-repeat 29px 9px !important;}
+	#left_menu .menu_wrap li.subm a {font:normal 11px dotum,'µ¸¿ò';color:#A3864B;line-height:15px;}
+	#left_menu .menu_wrap li.subm a:hover {color:#7b5200;}
+	/* 19 ¼­ºê¸Þ´º ÀÌ¹ÌÁö À§Ä¡Á¶Á¤*/
+	#left_menu .menu_wrap li.subm a img {vertical-align:-2px;margin-left:3px;}
+	/* 19 ¼­ºê¸Þ´º ÀÌ¹ÌÁö À§Ä¡Á¶Á¤ ³¡*/
+/*	#left_menu .menu_wrap li.img a img {vertical-align:middel;margin-left:30px;}
+	#left_menu .menu_wrap li.img  img {vertical-align:middel;margin-left:30px;}
+*/
+	#left_menu .menu_wrap li.gray {padding-left:29px;font-size:12px;background:url(http://img.gomtv.com/images/common/bg_lm_gray.gif) no-repeat left top;}
+	#left_menu .menu_wrap li.gray a {font:normal 12px dotum,'µ¸¿ò';color:#7d7d7d;}
+	#left_menu .menu_wrap li.gray a:hover {color:#464646;}
+	#left_menu .menu_wrap li.first {height:18px;padding-top:13px;background:url(http://img.gomtv.com/images/common/bg_lm_gray_first.gif) no-repeat left top;}
+	*html #left_menu .menu_wrap li.first {height:31px;}
+	#left_menu .menu_wrap li.last {height:26px;background:url(http://img.gomtv.com/images/common/bg_lm_gray_last.gif) no-repeat left top;}
+
+	#left_menu .menu_wrap li.btn {margin-bottom:-12px;text-align:right;font:normal 11px dotum,'µ¸¿ò';color:#d7d7d7;}
+	#left_menu .menu_wrap li.btn a {font:normal 11px dotum,'µ¸¿ò';color:#898989;letter-spacing:-1px;}
+	#left_menu .menu_wrap li.btn .p {padding-left:13px;background:url(http://img.gomtv.com/images/common/icon/icon_lm_prev.gif) no-repeat left top;}
+	#left_menu .menu_wrap li.btn .n {padding-right:13px;margin-right:12px;background:url(http://img.gomtv.com/images/common/icon/icon_lm_next.gif) no-repeat right top;}
+
+	#left_menu .menu_wrap li.btn_b {padding-top:3px;text-align:center;}
+	#left_menu .menu_wrap li.btn_c {padding-top:7px;height:41px;text-align:center;}
+	*html #left_menu .menu_wrap li.btn_c {height:45px;}
+
+	#left_menu .linkbar {width:141px;height:20px;margin-bottom:10px;padding:10px 0 0 29px;background:url(http://img.gomtv.com/images/common/bg_lm_linkbar.gif) no-repeat left top;}
+	*html #left_menu .linkbar {width:170px;height:30px;}
+	#left_menu .linkbar a {font:bold 11px dotum,'µ¸¿ò';color:#4B4B4B;letter-spacing:-1px;}
+
+	#left_menu .live {clear:both;margin-bottom:10px;}
+	#left_menu .live h4 {height:25px;padding:6px 0 0 16px;font:normal 11px dotum,'µ¸¿ò';color:#c2c2c2;letter-spacing:-1px;background:url(http://img.gomtv.com/images/common/bg_lm_live_top.gif) no-repeat left top;}
+	*html #left_menu .live h4 {height:31px;}
+	#left_menu .live h4 span {color:#ffa200;}
+	#left_menu .live ul {padding:0 0 10px;background:url(http://img.gomtv.com/images/common/bg_lm_live_bottom.gif) no-repeat left bottom;}
+	#left_menu .live li {padding-left:16px;font:bold 11px dotum,'µ¸¿ò';letter-spacing:-1px;line-height:-5px;}
+	#left_menu .live li img {margin-left:5px;}
+	#left_menu .live li.tit {color:#ffffff;background:url(http://img.gomtv.com/images/common/bg_lm_live_tit.gif) repeat-y left top;}
+	#left_menu .live li.list {color:#d7d7d7;background:url(http://img.gomtv.com/images/common/bg_lm_live_list.gif) repeat-y left top;padding-bottom:3px;}
+	#left_menu .live li.list a {font:bold 11px dotum,'µ¸¿ò';color:#d7d7d7;}
+
+	#community_poll {margin-bottom:10px;background:url(http://img.gomtv.com/images/common/bg_cp_middle.gif) repeat-y left top;}
+	#community_poll h5 {font:bold 12px dotum,'µ¸¿ò';color:#4b4b4b;}
+	#community_poll h5 span {color:#ffa000;}
+	#community_poll h5.top {height:20px;padding:10px 0 0 10px;background:url(http://img.gomtv.com/images/common/bg_cp_top_title.gif) no-repeat left top;}
+	*html #community_poll h5.top {height:30px;}
+	#community_poll h5.middle {height:19px;padding-left:10px;background:url(http://img.gomtv.com/images/common/bg_cp_middle_title.gif) no-repeat left top;}
+	#community_poll ul {padding:5px 0 20px;}
+	#community_poll li {width:145px;padding-left:15px;font:normal 11px dotum,'µ¸¿ò';color:#898989;background:url(http://img.gomtv.com/images/common/bul/bul_00.gif) no-repeat 10px 9px;}
+	*html #community_poll li {width:160px;}
+	#community_poll li a {font:normal 11px dotum,'µ¸¿ò';color:#898989;letter-spacing:-1px;}
+	#community_poll li nobr {display:block;width:145px;padding-top:5px;text-overflow:ellipsis;overflow:hidden;}
+	#community_poll dl {clear:both;padding:0 11px;font:normal 11px dotum,'µ¸¿ò';color:#898989;letter-spacing:-1px;}
+	#community_poll dt {width:148px;padding:5px 0;}
+	#community_poll dd.one {width:148px;}
+	#community_poll dd.two {float:left;width:74px;}
+	#community_poll dd input {margin-bottom:-2px;}
+	#community_poll p.bottom {clear:both;text-align:center;padding:10px 0 10px;background:url(http://img.gomtv.com/images/common/bg_cp_bottom.gif) no-repeat left bottom;}
+
+	#et_list {padding-bottom:10px;background:url(http://img.gomtv.com/images/common/bg_cp_bottom.gif) no-repeat left bottom;}
+	#et_list h5 {height:19px;padding:10px 0 0 10px;font:bold 12px dotum,'µ¸¿ò';color:#4b4b4b;background:url(http://img.gomtv.com/images/common/bg_cp_top_title.gif) no-repeat left top;}
+	*html #et_list h5 {height:29px;}
+	#et_list h5 .more {float:right;margin-right:11px;}
+	#et_list dl {background:url(http://img.gomtv.com/images/common/bg_cp_middle.gif) repeat-y left top;}
+	#et_list dt {margin-left:10px;}
+	#et_list dt .round {position:absolute;}
+	#et_list dd {width:145px;padding-left:15px;font:normal 12px dotum,'µ¸¿ò';color:#898989;background:url(http://img.gomtv.com/images/common/bul/bul_00.gif) no-repeat 10px 9px;}
+	#et_list dd img {margin-left:3px;}
+	#et_list dd nobr {display:block;width:145px;padding-top:5px;text-overflow:ellipsis;overflow:hidden;}
+
+	#left_banner_area {margin-bottom:10px;}
+	#left_banner_area ul {float:right;height:12px;background:#fff;margin-right:3px;}
+	#left_banner_area li {float:left;margin-right:2px;}
+	#left_banner_area li img {display:block;}
+	#left_banner_area .banner_img {clear:both;width:166px;text-align:center;}
+	
+	#eventimgbox {margin-top:0px;}
+	   *html #eventimgbox {margin-top:4px;}
+	
+	#movieBanner1,#movieBanner2,#movieBanner3 {margin-top:0px;}
+	   *html #movieBanner1,#movieBanner2,#movieBanner3 {margin-top:-4px;}
+		/* ÁÂÃø ¼­ºê ¸Þ´º :: End */
+
+/* ¼­ºêÆäÀÌÁö ·¹ÀÌ¾Æ¿ô :: End */
+
+/* Ç²ÅÍ :: Start */
+#footer {clear:both;width:900px;height:57px;margin:0 auto;border-bottom:1px solid #EBEBEB;text-align:center;}
+#footer .footer_bar {width:900px;height:24px;padding-top:6px;margin-bottom:6px;background:url(http://img.gomtv.com/images/common/bg_footer_bar.gif) no-repeat left top;}
+*html #footer .footer_bar {height:30px;}
+#footer .footer_bar img.bar {margin:0 13px;}
+/* Ç²ÅÍ :: End */
+
+/* ÆäÀÌÂ¡ :: Start */
+#page {clear:both;text-align:center;font:normal 11px dotum,'µ¸¿ò';color:#DADADA;}
+#page span {font:bold 11px dotum,'µ¸¿ò';color:#363636;}
+#page a {font:normal 11px dotum,'µ¸¿ò';color:#898989;}
+#page img {margin-top:-2px;vertical-align:middle;}
+*html #page img {margin-top:-1px;}
+#page img.prev {margin-right:4px;}
+#page img.next {margin-left:4px;}
+#page img.bar {margin:0 3px;}
+#page img.bot {margin-top:4px;}
+
+/* ÆäÀÌÂ¡ :: End */
+
+/* ÀÌº¥Æ® ÆäÀÌÁö :: Start */
+#page2 {clear:both;text-align:center;font:normal 11px dotum,'µ¸¿ò';color:#DADADA;}
+/* ÆäÀÌÂ¡ :: End */
+
+#page_left_btn {float:left;margin-top:-18px;}
+#page_right_btn {float:right;margin-top:-18px;}
+
+/* ¼­ºêÆäÀÌÁö ÅÇ ¸Þ´º :: Start */
+#tab_menu {height:29px;background:url(http://img.gomtv.com/images/common/tab_bg.gif) repeat-x left top;}
+#tab_menu li {float:left;height:29px;padding-left:5px;background:url(http://img.gomtv.com/images/common/tab_left_off.gif) no-repeat left top;}
+#tab_menu li a {display:block;height:20px;padding:9px 18px 0 13px;font:bold 11px dotum,'µ¸¿ò';color:#9C9C9C;letter-spacing:-1px;background:url(http://img.gomtv.com/images/common/tab_right_off.gif) no-repeat right top;}
+*html #tab_menu li a {display:inline;height:29px;padding:10px 18px 0 13px;}
+#tab_menu li.on {background:url(http://img.gomtv.com/images/common/tab_left_on.gif) no-repeat left top;}
+#tab_menu li.on a {color:#FF6E00;background:url(http://img.gomtv.com/images/common/tab_right_on.gif) no-repeat right top;}
+#tab_menu.mini li a {padding-right:6px;padding-left:1px;}
+#tab_menu.middle li a {padding-right:13px;padding-left:8px;}
+#tab_menu.big li a {padding-right:27px;padding-left:22px;}
+/* ¼­ºêÆäÀÌÁö ÅÇ ¸Þ´º :: End */
+
+/* ´Þ·Â ·¹ÀÌ¾î :: Start */
+#calendar_layer {position:absolute;z-index:500;width:195px;height:191px;border-right:1px solid #999999;border-bottom:1px solid #999999;}
+*html #calendar_layer {width:196px;height:192px;}
+#calendar_layer .wrap {width:182px;height:179px;padding:10px 4px 0 7px;border:1px solid #c5c5c5;background-color:#ffffff;}
+*html #calendar_layer .wrap {width:195px;height:191px;}
+#calendar_layer ul.nav {height:30px;border-bottom:1px solid #eeeeee;}
+#calendar_layer ul.nav li {float:left;}
+#calendar_layer ul.nav li.prev {width:9px;padding-top:4px;text-align:right;}
+#calendar_layer ul.nav li.next {width:9px;padding-top:4px;}
+#calendar_layer ul.nav li.sel  {width:161px;text-align:center;}
+#calendar_layer select {font:normal 12px dotum,'µ¸¿ò';color:#898989;}
+#calendar_layer select.year  {width:68px;}
+#calendar_layer select.month {width:54px;}
+#calendar_layer ul.cal {clear:both;margin-top:10px;}
+#calendar_layer ul.cal li {float:left;padding:2px 0 0 0;width:23px;height:14px;overflow:hidden;margin:0 3px 2px 0;font:normal 11px/12px dotum,'µ¸¿ò';color:#b2b2b2;text-align:center;}
+*html #calendar_layer ul.cal li {height:16px;}
+#calendar_layer ul.cal li a {font:normal 11px/12px dotum,'µ¸¿ò';color:#666666;text-decoration:none;}
+#calendar_layer ul.cal li a:hover {text-decoration:underline;}
+#calendar_layer ul.cal li.sun a, #calendar_layer ul.cal li.sun {color:#ff7e00;}
+#calendar_layer ul.cal li.sat a, #calendar_layer ul.cal li.sat {color:#4d87bc;}
+#calendar_layer ul.cal li.today {background-color:#d3d3d3;}
+#calendar_layer ul.cal li.week {font-size:12px;color:#565656;margin-bottom:10px;}
+/* ´Þ·Â ·¹ÀÌ¾î :: End */
+
+/* ¿ìÃø »ýÁß°è ½ºÅ¸ÀÏ */
+#live_onair {position:relative;z-index:1;}
+#live_onair .dayNavi {width:200px;height:16px;font:11px/14px;padding-top:3px;text-align:center;}
+*html #live_onair .dayNavi {height:19px;}
+#live_onair .dayNavi a {font:11px/14px;}
+#live_onair .game {background-color:#156f9f;color:#7baed5;font:bold 11px dotum,'µ¸¿ò';}
+#live_onair .sports {background-color:#254d8a;color:#7fa0cf;font:bold 11px dotum,'µ¸¿ò';}
+#live_onair .dayNavi .lb {margin-right:5px;vertical-align:middle;}
+#live_onair .dayNavi .rb {margin-left:5px;vertical-align:middle;}
+
+#live_onair dl {clear:both;position:relative;z-index:1;}
+#live_onair dt {position:relative;z-index:1;height:25px;padding:7px 10px 0 0;text-align:right;background:url(http://img.gomtv.com/images/common/live_top.gif) no-repeat left top;}
+*html #live_onair dt {height:32px;}
+#live_onair dd {letter-spacing:-1px;}
+
+#live_onair .hidden {display:none;}
+#live_onair .area {position:absolute;z-index:-1;}
+#live_onair .area2 {position:absolute;}
+
+#live_onair .live {width:213px;height:44px;background-color:#fff;border:1px solid #eaeaea;border-top:0;}
+*html #live_onair .live {width:215px;height:45px;}
+
+#live_onair .toggleBtn {height:12px;margin:0;padding:0;border:0;cursor:pointer;}
+#live_onair .toggleBtn img {display:block;}
+#live_onair .toggleBtn1 {height:12px;margin:0;padding:0;border:0;}
+#live_onair .toggleBtn1 img {display:block;}
+
+#live_onair p {width:193px;margin:0 10px;overflow:hidden;}
+#live_onair p nobr {width:193px;}
+#live_onair .if {padding:9px 0 0 0;font:normal 11px dotum,'µ¸¿ò';color:#d7d7d7;}
+#live_onair .vs {padding:2px 0 0 0;font:bold 12px dotum,'µ¸¿ò';color:#636363;}
+#live_onair .league {color:#898989;}
+#live_onair .time {color:#a1a1a1;}
+#live_onair .start {font-weight:bold;color:#ff5a00;}
+#live_onair .end   {font-weight:bold;color:#c69c6d;}
+#live_onair .ready {font-weight:bold;color:#ffa200;}
+#live_onair .bar {padding:0 3px;}
+#live_onair em {font-style:normal;color:#ff5a00;}
+
+#live_onair .on {cursor:pointer;border:1px solid #6a6a6a;border-top:0;background:url(http://img.gomtv.com/images/common/live_top_over.gif) repeat left bottom;}
+#live_onair .on .if {color:#959595;}
+#live_onair .on .vs {color:#fff;}
+#live_onair .on .league {color:#cccccc;}
+#live_onair .on .time {color:#cccccc;}
+
+#live_onair .w200 .live {width:198px;}
+*html #live_onair .w200 .live {width:200px;}
+#live_onair .w200 p {width:178px;}
+#live_onair .w200 p nobr {width:178px;}
+
+/* ¿ìÃø »ýÁß°è ½ºÅ¸ÀÏ ¼öÁ¤ */
+#live_onair dd.blue {background:#146F9E; width:200px; height:19px;}
+#live_onair dd li {float:left;}
+#live_onair dd li.left {padding-left:50px;}
+#live_onair dd li.mtext {width:74px; padding-top:4px; text-align:center; font:bold 11px dotum,'µ¸¿ò';color:#78AED3;}
+#live_onair dd li.right {padding-right:50px;}
+
+#live_onair dd.blue02 {background:#244C89; width:200px; height:19px;}
+#live_onair dd li.mtext02 {width:74px; padding-top:4px; text-align:center; font:bold 11px dotum,'µ¸¿ò';color:#7FA0CF;}
+/* ¿ìÃø »ýÁß°è ½ºÅ¸ÀÏ ¼öÁ¤ ³¡*/
+
+
+#swf_loading {position:absolute;width:680px;height:90px;padding-top:40px;text-align:center;background-color:#717171;}
+*html #swf_loading {height:130px;}
+
+#live_onair2 {}
+#live_onair2 .dayNavi {width:200px;height:16px;font:11px/14px;padding-top:3px;text-align:center;}
+*html #live_onair2 .dayNavi {height:19px;}
+#live_onair2 .dayNavi a {font:11px/14px;}
+#live_onair2 .game {background-color:#156f9f;color:#7baed5;font:bold 11px dotum,'µ¸¿ò';}
+#live_onair2 .sports {background-color:#254d8a;color:#7fa0cf;font:bold 11px dotum,'µ¸¿ò';}
+#live_onair2 .dayNavi .lb {margin-right:5px;vertical-align:middle;}
+#live_onair2 .dayNavi .rb {margin-left:5px;vertical-align:middle;}
+
+#live_onair2 dl {clear:both;}
+#live_onair2 dt {height:25px;padding:7px 10px 0 0;text-align:right;background:url(http://img.gomtv.com/images/common/live_top.gif) no-repeat left top;}
+*html #live_onair2 dt {height:32px;}
+#live_onair2 dd {letter-spacing:-1px;}
+
+#live_onair2 .hidden {display:none;}
+#live_onair2 .area {position:absolute;}
+
+#live_onair2 .live {width:213px;height:44px;background-color:#fff;border:1px solid #eaeaea;border-top:0;}
+*html #live_onair2 .live {width:215px;height:45px;}
+
+#live_onair2 .toggleBtn {height:12px;margin:0;padding:0;border:0;cursor:pointer;}
+#live_onair2 .toggleBtn img {display:block;}
+#live_onair2 .toggleBtn1 {height:12px;margin:0;padding:0;border:0;}
+#live_onair2 .toggleBtn1 img {display:block;}
+
+#live_onair2 p {width:193px;margin:0 10px;overflow:hidden;}
+#live_onair2 p nobr {width:193px;}
+#live_onair2 .if {padding:9px 0 0 0;font:normal 11px dotum,'µ¸¿ò';color:#d7d7d7;}
+#live_onair2 .vs {padding:2px 0 0 0;font:bold 12px dotum,'µ¸¿ò';color:#636363;}
+#live_onair2 .league {color:#898989;}
+#live_onair2 .time {color:#a1a1a1;}
+#live_onair2 .start {font-weight:bold;color:#ff5a00;}
+#live_onair2 .end   {font-weight:bold;color:#c69c6d;}
+#live_onair2 .ready {font-weight:bold;color:#ffa200;}
+#live_onair2 .bar {padding:0 3px;}
+#live_onair2 em {font-style:normal;color:#ff5a00;}
+
+#live_onair2 .on {cursor:pointer;border:1px solid #6a6a6a;border-top:0;background:url(http://img.gomtv.com/images/common/live_top_over.gif) repeat left bottom;}
+#live_onair2 .on .if {color:#959595;}
+#live_onair2 .on .vs {color:#fff;}
+#live_onair2 .on .league {color:#cccccc;}
+#live_onair2 .on .time {color:#cccccc;}
+
+#live_onair2 .w200 .live {width:198px;}
+*html #live_onair2 .w200 .live {width:200px;}
+#live_onair2 .w200 p {width:178px;}
+#live_onair2 .w200 p nobr {width:178px;}
+
+#live_onair2 dd.blue {background:#146F9E; width:200px; height:19px;}
+#live_onair2 dd li {float:left;}
+#live_onair2 dd li.left {padding-left:50px;}
+#live_onair2 dd li.mtext {width:74px; padding-top:4px; text-align:center; font:bold 11px dotum,'µ¸¿ò';color:#78AED3;}
+#live_onair2 dd li.right {padding-right:50px;}
+
+#live_onair2 dd.blue02 {background:#244C89; width:200px; height:19px;}
+#live_onair2 dd li.mtext02 {width:74px; padding-top:4px; text-align:center; font:bold 11px dotum,'µ¸¿ò';color:#7FA0CF;}
+
+
+/* S:tving ÇÁ·Î¸ð¼Ç °ü·Ã ¼­ºê 20100325 : ¹®ÅÂ¾ç*/
+#tving_sub_list {float:left; width:200px; height:265px; background:url(http://img.gomtv.com/images/common/tving_sublist_bg.gif) no-repeat left top; margin-bottom:10px;_margin-bottom:0px;}		
+#tving_slisttit {width:180px; padding:3px 10px 0 10px; height:31px; border-bottom:1px solid #dadada;}
+   *html #tving_slisttit {width:200px; height:35px;}
+#tving_slisttit li.stit {float:left; font:bold 12px dotum,'µ¸¿ò'; color:#333; height:27px; padding-top:4px;}
+   *html #tving_slisttit li.stit {height:31px;}
+#tving_slisttit li.stit a {position:relative; vertical-align:top; display:inline-block; width:45px; height:22px; background:url(http://img.gomtv.com/images/common/list_tit_tving.gif) no-repeat left 0; text-decoration:none;}
+#tving_slisttit li.stit a:hover {position:relative;  vertical-align:top; display:inline-block; width:45px; height:22px; background:url(http://img.gomtv.com/images/common/list_tit_tving.gif) no-repeat right 0; text-decoration:none;}
+#tving_slisttit li.stit a span {position:absolute; z-index:-1; visibility:hidden;}		   
+#tving_slisttit li.stit {float:left; font:bold 12px dotum,'µ¸¿ò'; color:#333; line-height:31px;}
+#tving_slisttit li.stit a {font:bold 12px dotum,'µ¸¿ò'; color:#333;}
+
+#tving_slisttit li.smore {float:right; padding-top:14px; height:17px;} 
+*html #tving_slisttit li.smore {height:31px;}
+
+#tving_slisttit li.smore a {position:relative; display:inline-block; width:35px; height:10px; background:url(http://img.gomtv.com/images/main/2009_v1/btn_tving_more.gif) no-repeat left 0; text-decoration:none;}
+#tving_slisttit li.smore a:hover {position:relative; display:inline-block; width:35px; height:10px; background:url(http://img.gomtv.com/images/main/2009_v1/btn_tving_more.gif) no-repeat right 0; text-decoration:none;}
+#tving_slisttit li.smore a span {position:absolute; z-index:-1; visibility:hidden;}		
+#tving_slistset {clear:both; width:170px; padding:5px 15px 0 15px; height:39px; border-bottom:1px solid #eeeeee;}
+   *html #tving_slistset {width:200px; height:45px;}		
+#tving_slistset li {display:inline; height:18px;}
+#tving_slistset li.pro {width:170px; float:left; font:normal 12px/18px dotum,'µ¸¿ò'; color:#5c5c5c;}
+#tving_slistset li.per {clear:both; width:70px; float:left; font:bold 12px/18px verdana; color:#f7941d;}
+#tving_slistset li.ch {float:right; width:100px; text-align:right; font:normal 11px/18px dotum,'µ¸¿ò'; color:#002b65;}
+#tving_slistset li.ch a {font:normal 11px/18px dotum,'µ¸¿ò'; color:#002b65;}
+#tving_slistset li.ch a:hover {font:normal 11px/18px dotum,'µ¸¿ò'; color:#002b65;}		   
+#tving_slistset_nob {clear:both; width:170px; padding:5px 15px 0 15px; height:40px;}
+   *html #tving_slistset_nob {width:200px; height:45px;}		
+#tving_slistset_nob li {display:inline; height:18px; line-height:18px;}
+#tving_slistset_nob li.pro {width:170px; float:left; font:normal 12px dotum,'µ¸¿ò'; color:#5c5c5c;}
+#tving_slistset_nob li.per {clear:both; width:70px; float:left; font:bold 12px verdana; color:#f7941d;}
+#tving_slistset_nob li.ch {float:left; width:100px; text-align:right; font:normal 11px/18px dotum,'µ¸¿ò'; color:#002b65;}
+#tving_slistset_nob li.ch a {font:normal 11px/18px dotum,'µ¸¿ò'; color:#002b65;}
+#tving_slistset_nob li.ch a:hover {font:normal 11px/18px dotum,'µ¸¿ò'; color:#002b65;}
+
+#tving_sub_list_01 {float:left; width:200px; height:285px; background:url(http://img.gomtv.com/images/common/tving_sublist_bg_01.gif) no-repeat left top; margin-bottom:10px;_margin-bottom:0px;}
+#tving_sub_list_01 p.timeinfo {text-align:right; padding-right:12px; height:20px; line-height:20px;}
+#tving_slisttit li.stit_01 {float:left; font:bold 12px dotum,'µ¸¿ò'; color:#333; height:27px; padding-top:4px;}
+   *html #tving_slisttit li.stit_01  {height:31px;}
+#tving_slisttit li.stit_01 a {position:relative; vertical-align:top; display:inline-block; width:115px; height:22px; background:url(http://img.gomtv.com/images/common/list_tit_tving_01.gif) no-repeat left 0; text-decoration:none;}
+#tving_slisttit li.stit_01 a:hover {position:relative;  vertical-align:top; display:inline-block; width:115px; height:22px; background:url(http://img.gomtv.com/images/common/list_tit_tving_01.gif) no-repeat right 0; text-decoration:none;}
+#tving_slisttit li.stit_01 a span {position:absolute; z-index:-1; visibility:hidden;}
+
+
+/* E:tving ÇÁ·Î¸ð¼Ç °ü·Ã ¼­ºê 20100325 : ¹®ÅÂ¾ç*/

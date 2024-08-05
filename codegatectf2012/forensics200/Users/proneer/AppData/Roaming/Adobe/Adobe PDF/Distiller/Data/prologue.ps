@@ -1,0 +1,25 @@
+%
+%  prologue.ps
+%
+%  This file can be used to add custom PostScript code that you
+%  wish to have executed at the beginning of every PostScript job
+%  being distilled. If the option labelled "Use Prologue.ps and
+%  Epilogue.ps" is selected in the "Advanced" panel of the "Job
+%  Options" dialog, the contents of this file will be executed
+%  before the actual PostScript file is run. This file is executed
+%  when the "UsePrologue" parameter is set to "true" in the job
+%  options file. This file is usually located in Distiller's "Data"
+%  directory, but it may in fact reside anywhere in the same folder
+%  or directory as the Distiller application. This file can be used
+%  for a variety of purposes, including adding a cover page to a job
+%  or for defining PostScript procedures for gathering statistics
+%  while a PostScript job is executing.
+%
+
+(Processing prologue.ps...\n) print flush
+
+%  Insert your custom PostScript here...
+
+(Done processing prologue.ps.\n) print flush
+
+%  End of file.

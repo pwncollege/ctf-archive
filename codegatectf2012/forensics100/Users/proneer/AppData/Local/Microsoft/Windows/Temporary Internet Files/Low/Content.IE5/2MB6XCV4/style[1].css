@@ -1,0 +1,636 @@
+body { background:#ffffff url(http://img.daemon-tools.cc/new/bg_main.jpg) top center repeat-x; font-family:Arial, Helvetica, sans-serif; font-size:12px; font-size-adjust:none; font-style:normal; font-variant:normal; font-weight:normal; color:#333333; }
+.BigFontSize {font-size:14px;}
+body, div, ul, li, p, a, form { margin:0; padding:0; }
+a { outline-style:none; }
+img { border:0px }
+.marginAuto { margin:auto; }
+#main_div { width:980px; }
+.width980 { width:980px; }
+.floatLeft { float:left; }
+.floatRight { float:right; }
+html .listStyleNone, html .listStyleNone li { list-style:none; list-style-type:none; list-style-image:none; }
+.inlineList li { float:left; }
+.lineHeight1_65 { line-height:1.65; }
+.lineHeightNormal { line-height:normal; }
+.lineHeight2 { line-height:2; }
+.nowrap { white-space:nowrap; }
+.curDefault { cursor: default; }
+.curPointer { cursor: pointer; }
+.clear, .clearNoIe { clear:both; }
+.clearNoIe { -display:none; }
+.borderNone { border:none; }
+.fontSize0 { font-size:0px; }
+.txtFontSize { font-size:12px; }
+.BigFontSize .txtFontSize{ font-size:14px;}
+.displayBlock { display: block; }
+html { height: 100%; }
+body { height: 100%; min-height: 100%; }
+#main_div { min-height: 100%; }
+* html #main_div { height: 100%; }
+.footer { margin-top:-140px; position:relative; min-width:980px; }
+.positionRelative { position:relative; }
+.positionRelativeIe { -position:relative; }
+.positionAbsolute { position:absolute; }
+.z1001 { z-index:1001; }
+.z1002 { z-index:1002; }
+.textDecorationNone { text-decoration:none; }
+.textAlignCenter { text-align:center; }
+#Home_page { background:#ffffff url(http://img.daemon-tools.cc/new/bg_main.jpg) top center repeat-x; }
+#Products_page, #compare_page { background:#ffffff url(http://img.daemon-tools.cc/new/bg_products.jpg) top center repeat-x; }
+#Store_page { background:#ffffff url(http://img.daemon-tools.cc/new/bg_store.jpg) top center repeat-x; }
+#Downloads_page { background:#ffffff url(http://img.daemon-tools.cc/new/bg_store.jpg) top center repeat-x; }
+#Partners_page, #partners_page_aff_join { background:#ffffff url(http://img.daemon-tools.cc/new/bg_partners.jpg) top center repeat-x; }
+#News_page, #Privacy_page, #Releasenotes_page, #Terms_page, #Sitemap_page, #Addons_page, #Windows7_page, #Contacts_page, #Support_page, #Questionnaire_page, #pnf_page { background:#ffffff url(http://img.daemon-tools.cc/new/bg_support.jpg) top center repeat-x; }
+#Windows7_page {background:#ffffff url(http://img.daemon-tools.cc/new/bg_win7.jpg) top center repeat-x;}
+.logo { width:250px; height:49px; background:url(http://img.daemon-tools.cc/new/logo.png) no-repeat; -background-image: none; -filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="http://img.daemon-tools.cc/new/logo.png", sizingMethod="crop");}
+.langLeft, .langRight, .langArrow, .selected .selectMiddle, .hover .selectMiddle, .selected .selectLeft, .hover .selectLeft, .selected .selectRight, .hover .selectRight, .searchLeft, .searchRight, .searchMiddle { background:url(http://img.daemon-tools.cc/new/top_controls.gif) no-repeat; }
+.langLeft, .langRight { height:18px; }
+.langLeft { padding-left:2px; }
+.langRight { padding-right:2px; background-position:right -25px; }
+.langMiddle { background:#ffffff; height:18px; padding: 0 8px; }
+.langArrow { width:6px; height:12px; background-position:0 -214px; margin-left:7px; }
+.marginRight25 { margin-right:25px; }
+.marginRight40 { margin-right:40px; }
+.marginRight55 { margin-right:55px; }
+.marginRight15 { margin-right:15px; }
+.lineHeight16 { line-height:16px; }
+.topArea { padding-top:22px; }
+#Home_page .topArea a, #Partners_page .topArea a, #partners_page_aff_join .topArea a { color:#e3fdff; text-decoration:underline; }
+#Home_page .topArea a:hover { color:#ffffff; }
+#Products_page .topArea a, #Store_page .topArea a, #Support_page .topArea a, #News_page .topArea a, #compare_page .topArea a, #Downloads_page .topArea a, #Windows7_page .topArea a, #Sitemap_page .topArea a, #Contacts_page .topArea a, #Privacy_page .topArea a, #Terms_page .topArea a { color:#555555; }
+#Products_page .topArea a:hover, #Store_page .topArea a:hover, #Support_page .topArea a:hover, #News_page .topArea a:hover, #compare_page .topArea a:hover, #Downloads_page .topArea a:hover, #Windows7_page .topArea a:hover, #Sitemap_page .topArea a:hover, #Contacts_page .topArea a:hover, #Privacy_page .topArea a:hover, #Terms_page .topArea a:hover { color:#333333; }
+/*#Products_page .topArea a {
+	color:#444444;
+	text-decoration:underline;
+}
+#Products_page .topArea a:hover {
+	color:#000000;
+}*/
+.menuLeft, .menuRight, .menuMiddle { height:51px; }
+.marginTop40 { margin-top:40px; }
+.marginTop30 { margin-top:30px; }
+.marginTop15 { margin-top:15px; }
+.marginTop20 { margin-top:20px; }
+.menuLeft { background:url(http://img.daemon-tools.cc/new/menu_left.png) no-repeat; -background:url(http://img.daemon-tools.cc/new/menu_left.gif) no-repeat; padding-left:3px; }
+.menuRight { background: url(http://img.daemon-tools.cc/new/menu_right.png) no-repeat; -background-image: none; -filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="http://img.daemon-tools.cc/new/menu_right.png", sizingMethod="crop");
+width:25px; top:0px; right:-25px; }
+.paddingLeft22 { padding-left:22px; }
+.paddingLeft40 { padding-left:40px; }
+.paddingRight22 { padding-right:22px; }
+.menuMiddle { padding-left:7px; padding-right:50px; background:#004E72 url(http://img.daemon-tools.cc/new/menu_middle.gif) repeat-x; }
+.selectRight a, .selectRight a:hover, .selectRight a:visited, .selectRight a:link, .selectRight a:active { color:#ffffff; font-size:14px; text-decoration:none; line-height:49px; }
+.BigFontSize .selectRight a, .BigFontSize .selectRight a:hover, .BigFontSize .selectRight a:visited, .BigFontSize .selectRight a:link, .BigFontSize .selectRight a:active { color:#ffffff; font-size:16px; text-decoration:none; line-height:49px; }
+html .menuMiddle .selected .selectMiddle { background-position:0 -330px; background-repeat:repeat-x; }
+html .menuMiddle .selected .selectLeft { background-position:0 -240px; }
+html .menuMiddle .selected .selectRight { background-position:right -420px; }
+.menuMiddle .hover .selectMiddle { background-position:0 -730px; background-repeat:repeat-x; }
+.menuMiddle .hover .selectLeft { background-position:0 -640px; }
+.menuMiddle .hover .selectRight { background-position:right -820px; }
+.menuMiddle .hover .expanded { background-position:right -910px; }
+.menuMiddle a { display:block; height:51px; padding:0 12px 0 10px; }
+.searchRight { background-position:right -185px; padding-right:3px; }
+.searchLeft { background-position:0 -115px; padding-left:4px; margin-top:44px; }
+.searchMiddle { background-position:0 -150px; background-repeat:repeat-x; }
+.searchLeft, .searchRight, .searchMiddle { height:24px; }
+.searchMiddle input { border:0 none; }
+.goButt { background:url(http://img.daemon-tools.cc/new/top_controls.gif) no-repeat 0 -499px; width:20px; height:22px; margin:2px 2px 0 7px; }
+#content, #compare_page #content { margin-top:70px; padding:0 20px; }
+#Products_page #content { margin-top:40px; }
+.mainTitle h1 {font-family:Arial, Helvetica, sans-serif; font-size:28px; color:#212f42; margin:0px; font-weight:normal; text-shadow: 1px 1px 0px #ffffff; word-spacing:0.1em; padding-top:15px; margin-left:-2px; }
+.mainProductImg { background: url(http://img.daemon-tools.cc/new/screen_dt_adv_main.png) no-repeat; -background-image: none; -filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="http://img.daemon-tools.cc/new/screen_dt_adv_main.png", sizingMethod="crop");
+width:431px; height:349px; margin-left:-32px; }
+.mainProductBlock { margin-top:50px; }
+.mainProductDescription { margin-left:450px; -width:480px; }
+.titleFontSize { font-size:19px; }
+.BigFontSize .buttBlue.titleFontSize { font-size:16px; }
+a, html #Home_page .langList li a, html #Partners_page .langList li a, html #partners_page_aff_join .langList li a, html #Products_page .langList li a, html #compare_page .langList li a, html #Store_page .langList li a, #Support_page .langList li a, #News_page .langList li a, html #Downloads_page .langList li a, html #Windows7_page .langList li a, html #Sitemap_page .langList li a, html #Contacts_page .langList li a, html #Privacy_page .langList li a, html #Terms_page .langList li a { color:#1a6fc6; text-decoration:underline; }
+a:hover, html #Home_page .langList li a:hover, html #Partners_page .langList li a:hover, html #partners_page_aff_join .langList li a:hover, html #Products_page .langList li a:hover, html #compare_page .langList li a:hover, html #Store_page .langList li a:hover, #Support_page .langList li a:hover, #News_page .langList li a:hover, html #Downloads_page .langList li a:hover, html #Windows7_page .langList li a:hover, html #Sitemap_page .langList li a:hover, html #Contacts_page .langList li a:hover, html #Privacy_page .langList li a:hover, html #Terms_page .langList li a:hover { color:#00467c; }
+.buttMiddle, .buttLeft, .buttRight { background:url(http://img.daemon-tools.cc/new/buttons.gif) no-repeat; height:42px; }
+.buttMiddle { background-repeat:repeat-x; }
+.buttBlue .buttMiddle { background:#006196 url(http://img.daemon-tools.cc/new/buttons.gif) repeat-x; background-position:0 -60px; }
+.buttBlue .buttRight { background-position:right -120px; }
+.buttBlue .hover .buttMiddle { background:#004280 url(http://img.daemon-tools.cc/new/buttons.gif) repeat-x; background-position:0 -240px; }
+.buttBlue .hover .buttLeft { background-position:0 -180px; }
+.buttBlue .hover .buttRight { background-position:right -300px; }
+.buttGreen .buttMiddle { background:#4A9D00 url(http://img.daemon-tools.cc/new/buttons.gif) repeat-x; background-position:0 -420px; }
+.buttGreen .buttLeft { background-position:0 -360px; }
+.buttGreen .buttRight { background-position:right -480px; }
+.buttGreen .hover .buttMiddle {background:#1c8200 url(http://img.daemon-tools.cc/new/buttons.gif) repeat-x; background-position:0 -600px; }
+.buttGreen .hover .buttLeft { background-position:0 -540px; }
+.buttGreen .hover .buttRight { background-position:right -660px; }
+.buttBlue a, .buttGreen a { display:block; height:42px; line-height:40px; text-align:center; width:180px; }
+.buttBlue a { text-shadow: -1px -1px 0px #204e79; }
+.buttGreen a { text-shadow: -1px -1px 0px #246500; }
+.buttBlue a, .buttGreen a, .buttBlue a:hover, .buttGreen a:hover, .buttBlue a:visited, .buttGreen a:visited, .buttBlue a:link, .buttGreen a:link, .buttBlue a:active, .buttGreen a:active { color:#ffffff; text-decoration:none; }
+.buttBlueStroke .buttMiddle, .buttBlueStroke .buttLeft, .buttBlueStroke .buttRight, .buttGreenStroke .buttMiddle, .buttGreenStroke .buttLeft, .buttGreenStroke .buttRight { background: url(http://img.daemon-tools.cc/new/buttons_white_stroke.gif) no-repeat; height:36px; }
+.buttBlueStroke .buttLeft { padding-left:17px; }
+.buttBlueStroke .buttRight { padding-right:19px; background-position:right -100px; }
+.buttBlueStroke .buttMiddle { background:#006196 url(http://img.daemon-tools.cc/new/buttons_white_stroke.gif); background-position:0 -50px; background-repeat:repeat-x; }
+.buttBlueStroke .hover .buttLeft { padding-left:17px; background-position:0 -150px; }
+.buttBlueStroke .hover .buttRight { padding-right:19px; background-position:right -250px; }
+.buttBlueStroke .hover .buttMiddle {background:#004280 url(http://img.daemon-tools.cc/new/buttons_white_stroke.gif); background-position:0 -200px; background-repeat:repeat-x; }
+.buttBlueStroke .buttMiddle a, .buttGreenStroke .buttMiddle a { display:block; text-decoration:none; font-size:16px; color:#ffffff; height:36px; line-height:32px; padding:0 25px; }
+.buttBlueStroke .buttMiddle a { text-shadow: -1px -1px 0px #204e79; }
+.buttGreenStroke .buttMiddle a { text-shadow: -1px -1px 0px #246500; }
+.buttGreenStroke .buttLeft { padding-left:17px; background-position:0 -300px; }
+.buttGreenStroke .buttRight { padding-right:19px; background-position:right -400px; }
+.buttGreenStroke .buttMiddle { background:#4A9D00 url(http://img.daemon-tools.cc/new/buttons_white_stroke.gif); background-position:0 -350px; background-repeat:repeat-x; }
+.buttGreenStroke .hover .buttLeft { padding-left:17px; background-position:0 -450px; }
+.buttGreenStroke .hover .buttRight { padding-right:19px; background-position:right -550px; }
+.buttGreenStroke .hover .buttMiddle { background:#1c8200 url(http://img.daemon-tools.cc/new/buttons_white_stroke.gif); background-position:0 -500px; background-repeat:repeat-x; }
+.mainContentTitle { border-bottom:#d9dadc 1px solid; padding-bottom:5px; }
+.keepMeInformedMain { }
+.width30pct { width:30%; }
+.width50pct { width:50%; }
+.width70pct { width:70%; }
+.keepMeInformedMainImg { margin-left:-12px; }
+.rightArea .keepMeInformedMainImg { margin-left:-6px; }
+.keepMeInformedDescription { margin-left:155px; }
+.rightArea .keepMeInformedDescription { margin-left:100px; }
+ul, #Partners_page #content ul { list-style:url(http://img.daemon-tools.cc/new/list_dot.gif); }
+#Partners_page ul { }
+.mainProductDescription br { line-height:normal; font-size:9px; }
+.keepMeInformedDescription li { padding-bottom:10px; }
+.rightArea .keepMeInformedDescription li { padding-bottom:7px; }
+.rightArea .keepMeInformedDescription ul { margin-bottom:0px; }
+.marginBottom20 { margin-bottom:20px; }
+.subscribeInput { width: 175px; font-size: 12px; color: rgb(119, 119, 119); margin-right:10px; }
+.BigFontSize .subscribeInput { font-size: 14px; }
+.subscribeButton { }
+.fRMiddle, .fRLeft, .fRRight { background:url(http://img.daemon-tools.cc/new/facebook_rss.gif?v2) no-repeat; }
+.rssBlock .fRMiddle, .rssBlock .fRLeft, .rssBlock .fRRight { background:url(http://img.daemon-tools.cc/new/rss_block.gif) no-repeat; }
+.fRMiddle { background-position:0 -200px; background-repeat:repeat-x; }
+.rssBlock .fRMiddle { background-position:0 -70px; background-repeat:repeat-x; }
+.fRRight { background-position:right -400px; height:184px; padding:0 15px; }
+.rssBlock .fRRight { background-position:right -140px; height:62px; padding:0 15px; }
+.facebookRssBlockSmall .fRRight, .facebookRssBlockSmall .fRLeft, .facebookRssBlockSmall .fRMiddle { height:44px; }
+.facebookRssBlockSmall { top:0px; -top:-4px; right:0px; }
+.facebookRssBlockSmall .fRLeft { background-position:0 -600px; padding-left:4px; }
+.facebookRssBlockSmall .fRMiddle { background-position:0 -660px; background-repeat:repeat-x; }
+.facebookRssBlockSmall .fRRight { background-position:right -720px; padding-right:4px; }
+.facebookRssBlock, .rssBlock { margin-right:-15px; margin-top:-1px; }
+.facebookIc, .rssIc, .slideArrow, .twitterIc {background: url("http://img.daemon-tools.cc/new/small_ics.jpg") no-repeat scroll 0 0 transparent;}
+.twitterIc{background: url("http://img.daemon-tools.cc/new/small_ics.jpg?v2") repeat scroll 0 -40px transparent;margin-bottom: -3px;}
+.smallIc { width:16px; height:16px; }
+.moreThenSmallIc { width:24px; height:24px; }
+.marginRight7 { margin-right:7px; }
+.marginLeft7 { margin-left:7px; }
+.facebookIc, .rssIc, .slideArrow { background:url(http://img.daemon-tools.cc/new/small_ics.jpg) no-repeat; }
+.messageIc { background:url(http://img.daemon-tools.cc/new/small_ics.gif) no-repeat; }
+.rssIc { background-position:0 -20px; }
+.rssIc, .facebookIc {margin-bottom:-3px;}
+.paddingBottom10{padding-bottom:10px;}
+.paddingBottom20 {padding-bottom:20px;}
+.paddingBottom22 {padding-bottom:25px;}
+.paddingBottom50 {padding-bottom:50px;}
+.paddingBottom50 {padding-bottom:60px;}
+.marginBottom30 {margin-bottom:30px;}
+.marginBottom40 {margin-bottom:40px;}
+.paddingBottom40 {padding-bottom:40px;}
+.paddingTop10 {padding-top:10px;}
+.paddingTop20 {padding-top:20px;}
+.paddingTop25 {padding-top:25px;}
+.paddingTop30 {padding-top:30px;}
+.paddingTop40 {padding-top:40px;}
+.dtproAdvLogo, .dtNetLogo { background:url(http://img.daemon-tools.cc/new/dt_pro_logo.png) no-repeat; -background-image: none; -filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="http://img.daemon-tools.cc/new/dt_pro_logo.png", sizingMethod="crop");}
+.dtproStdLogo { background:url(http://img.daemon-tools.cc/new/dt_pro_logo.png) no-repeat; -background-image: none; -filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="http://img.daemon-tools.cc/new/dt_pro_logo.png", sizingMethod="crop");}
+.dtLiteLogo { background:url(http://img.daemon-tools.cc/new/dt_lite_logo.png) no-repeat; -background-image: none; -filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="http://img.daemon-tools.cc/new/dt_lite_logo.png", sizingMethod="crop");}
+.marginRight18 { margin-right:18px; }
+.middleIc { width:32px; height:32px; }
+.productDescription { margin-left:50px; }
+.subTitleFontSize { font-size:16px; }
+.BigFontSize .subTitleFontSize { font-size:16px; }
+.smallBr { font-size:4px; }
+.middleBr { font-size:8px; }
+.specialLink { border-bottom:1px dotted #1A6FC6; }
+.slideArrow { background-position:-140px 0px; width:7px; height:7px; margin-left:7px; }
+.slideArrow { background-position:-140px 0px; width:7px; height:7px; margin-left:7px; }
+.separator { height:15px; }
+.separatorSmall { height:8px; }
+.footer { height:140px; color:#ffffff; background:#006392 url(http://img.daemon-tools.cc/new/footer.gif) repeat-x top center; }
+.footer a { color:#e3fdff; text-decoration:underline; }
+.footer a:hover { color:#ffffff; }
+.paddingTop15 { padding-top:15px; }
+.paddingLeftRight20 { padding:0 20px; }
+.justify { text-align:justify; }
+.langListTopLeft, .langListTop, .langListTopRight, .langListBottomLeft, .langListBottom, .langListBottomRight { background:url(http://img.daemon-tools.cc/new/lang_list.png) no-repeat; -background:url(http://img.daemon-tools.cc/new/lang_list.gif) no-repeat; }
+.langListTopLeft, .langListBottomLeft, .langListLeft { padding-left:10px; }
+.langListTopRight, .langListBottomRight, .langListRight { padding-right:10px; }
+.langListTop, .langListBottom { background-repeat:repeat-x; }
+.langListTop { background-position:0 -20px; }
+.langListTopRight { background-position:right -40px; }
+.langListTopLeft { }
+.langListBottomLeft { background-position:0 -60px; }
+.langListBottom { background-position:0 -80px; }
+.langListBottomRight { background-position:right -100px; }
+.langListLeft { background:url(http://img.daemon-tools.cc/new/lang_list_left.png) repeat-y; -background:url(http://img.daemon-tools.cc/new/lang_list_left.gif) repeat-y; }
+.langListRight { background:url(http://img.daemon-tools.cc/new/lang_list_right.png) top right repeat-y; -background:url(http://img.daemon-tools.cc/new/lang_list_right.gif) top right repeat-y; }
+.langListMiddle { background:#ffffff; }
+.langList { top:10px; left:-10px; top /*\**/: 11px\9; *top:10px; }
+.selectedLang { padding-left:10px; padding-right:20px; margin-bottom:10px; }
+.langList li a { display:block; padding:6px 10px; }
+.langList ul { padding-bottom:10px; }
+.langList { display:none; }
+.click .langList { display:block; }
+.newsBlockMain, .reviewBlockMain { overflow-y:hidden; height:0px; }
+.subMenu { background:url(http://img.daemon-tools.cc/new/1.gif) repeat; top:51px; left:0px; display:none; }
+.hover .subMenu { display:block; }
+.subMenu a { background:transparent url(http://img.daemon-tools.cc/new/top_controls.gif) bottom center repeat-x; display:block; }
+.subMenu a:hover, html .subMenu .selected { background:#1d6f96 url(http://img.daemon-tools.cc/new/top_controls.gif) bottom center repeat-x; }
+.subMenu a.last:hover { background:#1d6f96; }
+.subMenu .last { background:transparent; }
+html .menuMiddle .lineHeight1_65 a { line-height:1.65; }
+html .menuMiddle .subMenu a { font-size:12px; padding-top:7px; padding-bottom:8px; }
+html .BigFontSize .menuMiddle .subMenu a { font-size:14px; padding-top:7px; padding-bottom:8px; }
+.menuMiddle .subMenu a, .menuMiddle .subMenu a:hover, .menuMiddle .subMenu a:visited, .menuMiddle .subMenu a:link, .menuMiddle .subMenu a:active { height:auto; color:#ffffff; text-decoration:none; }
+.bg014c70 { background:#014c70; }
+.subMenuBottomLeft { background:url(http://img.daemon-tools.cc/new/sub_menu_bottom_left.png) no-repeat; padding:0 3px; }
+.subMenuBottomRight { width:3px; height:3px; background:url(http://img.daemon-tools.cc/new/sub_menu_bottom_right.png) no-repeat; top:0px; right:-3px; -right:0px; }
+.subMenuBottom { background:#014c70; }
+.langListLeft ul { margin:0px; padding:0px; }
+.productBlockTopLeft, .productBlockTopRight { background:url(http://img.daemon-tools.cc/new/product_block.png) no-repeat; -background:url(http://img.daemon-tools.cc/new/product_block.gif) no-repeat; }
+.productBlockTopLeft { padding-left:9px; }
+.productBlockTopRight { padding-right:429px; background-position:right -15px; }
+.productBlockTop { background:#fcfcfd; }
+.productBlock { margin:0 -20px; }
+.productBlockMiddle { background:url(http://img.daemon-tools.cc/new/product_block_bg.png) repeat-x 0 -40px; }
+.productBlockImg { background:url(http://img.daemon-tools.cc/new/product_net.jpg) top right no-repeat; }
+.dtNet .productBlockImg { background:url(http://img.daemon-tools.cc/new/product_net.jpg) top right no-repeat; }
+.dtproAdv .productBlockImg { background:url(http://img.daemon-tools.cc/new/product_pro_advanced.jpg?v3) top right no-repeat; }
+.dtproStd .productBlockImg { background:url(http://img.daemon-tools.cc/new/product_pro_standard.jpg?v3) top right no-repeat; }
+.dtLite .productBlockImg { background:url(http://img.daemon-tools.cc/new/product_lite.jpg) top right no-repeat; }
+.productBlockBottomLeft { width:9px; height:10px; background:url(http://img.daemon-tools.cc/new/product_block_bottom_left.png) no-repeat; bottom:0px; left:0px; }
+.productBlockBottomRight { width:9px; height:10px; background:url(http://img.daemon-tools.cc/new/product_block_bottom_right.png) no-repeat; bottom:0px; right:0px; }
+.productBlockBottom { height:10px; }
+.version { padding:2px 0 0 0; color:#858585; }
+.titleCorrectAlign { margin-left:-2px; }
+.compareLink { padding:8px 0; }
+.itsFreeLeft, .itsFreeRight, .itsFreeMiddle { background:url(http://img.daemon-tools.cc/new/its_free.png) no-repeat; -background:url(http://img.daemon-tools.cc/new/its_free.gif) no-repeat; }
+.itsFreeMiddle {background: url(http://img.daemon-tools.cc/new/its_free.png);}
+.priceLeft, .priceRight, .priceMiddle { background:url(http://img.daemon-tools.cc/new/price.png) no-repeat; -background:url(http://img.daemon-tools.cc/new/price.gif) no-repeat; }
+.priceMiddle {background: url(http://img.daemon-tools.cc/new/price.png);}
+.itsFreeLeft, .priceLeft { padding-left:7px; margin-top:10px; margin-left:-30px; }
+.itsFreeMiddle, .priceMiddle { background-position: 0 -20px; background-repeat:repeat-x; color:#ffffff; font-size:10px; height:16px; line-height:14px; text-shadow: -1px -1px 0px #c66f21; line-height:16px; }
+.priceMiddle {text-shadow: -1px -1px 0px #558200;}
+.BigFontSize .itsFreeMiddle, .priceMiddle { font-size:14px;}
+.itsFreeRight, .priceRight { background-position: right -40px; padding-right:7px; }
+.compareLinkArrow { background:url(http://img.daemon-tools.cc/new/buttons_white_stroke.gif) no-repeat 0 -600px; height:9px; width:5px; margin-top:15px; margin-left:5px; }
+.softpedia, .cnet, .pcworld, .pcworld, .tucows, .download3000, .win7Compatible, .brotherSoft, .softwareInformer, .psMasters, .afreecodec { background: url(http://img.daemon-tools.cc/new/awards.jpg) no-repeat; }
+.softpedia { width:90px; height:47px; }
+.cnet { width:91px; height:47px; background-position: 0 -70px; }
+.pcworld { width:95px; height:47px; background-position: 0 -140px; }
+.tucows { width:129px; height:47px; background-position: 0 -210px; }
+.download3000 { width:140px; height:54px; background-position: 0 -290px; }
+.win7Compatible { width:118px; height:54px; background-position: 0 -364px; }
+.brotherSoft { width:112px; height:54px; background-position: 0 -438px; }
+.softwareInformer { width:100px; height:54px; background-position: 0 -512px; }
+.psMasters{width: 125px; height:54px; background-position: 0 -588px;}
+.afreecodec { background-position: 0 -643px;height: 70px;width: 118px; }
+.softpedia-dtLite, .tucows-dtLite, .brothersoft-dtLite, .editorspick-dtLite, .win7Compatible-dtLite, .softonic-dtLite, .download3k-dtLite, .psMasters-dtLite { background: url(http://img.daemon-tools.cc/new/awards-dtLite.gif) no-repeat; }
+.softpedia-dtLite { width:90px; height:47px; }
+.tucows-dtLite { width:129px; height:47px; background-position: 0 -80px; }
+.brothersoft-dtLite { width:112px; height:54px; background-position: 0 -295px; }
+.editorspick-dtLite { width:100px; height:60px; background-position: 0 -365px; }
+.win7Compatible-dtLite { width:118px; height:54px; background-position: 0 -220px; }
+.softonic-dtLite { width:60px; height:60px; background-position:0 -450px;}
+.download3k-dtLite {background-position: 0 -530px;height: 61px;width: 62px;}
+.psMasters-dtLite{width: 125px; height:54px; background-position: 0 -620px;}
+html .facebookLike iframe { margin-top:7px; margin-bottom:10px; }
+.buttGreenSmall .buttMiddle, .buttGreenSmall .buttLeft, .buttGreenSmall .buttRight, .buttBlueSmall .buttMiddle, .buttBlueSmall .buttLeft, .buttBlueSmall .buttRight { background:url(http://img.daemon-tools.cc/new/buttonsSmall.gif) no-repeat; }
+.buttBlueSmall .buttMiddle {background:#006196 url(http://img.daemon-tools.cc/new/buttonsSmall.gif); background-repeat:repeat-x; }
+.buttBlueSmall .buttMiddle { background-position:0 -60px; }
+.buttBlueSmall .buttRight { background-position:right -120px; }
+.buttBlueSmall .hover .buttMiddle {background:#004280 url(http://img.daemon-tools.cc/new/buttonsSmall.gif); background-position:0 -240px; }
+.buttBlueSmall .hover .buttLeft { background-position:0 -180px; }
+.buttBlueSmall .hover .buttRight { background-position:right -300px; }
+.buttGreenSmall .buttMiddle {background:#4A9D00  url(http://img.daemon-tools.cc/new/buttonsSmall.gif); background-position:0 -420px; }
+.buttGreenSmall .buttMiddle { background-repeat:repeat-x; }
+.buttGreenSmall .buttLeft { background-position:0 -360px; }
+.buttGreenSmall .buttRight { background-position:right -480px; }
+.buttGreenSmall .hover .buttMiddle {background:#1c8200  url(http://img.daemon-tools.cc/new/buttonsSmall.gif); background-position:0 -600px; }
+.buttGreenSmall .hover .buttLeft { background-position:0 -540px; }
+.buttGreenSmall .hover .buttRight { background-position:right -660px; }
+.buttGreenSmall a, .buttBlueSmall a { display:block; height:35px; line-height:34px; text-align:center; font-size:16px; padding-left:20px; padding-right:20px; }
+.buttBlueSmall a { text-shadow: -1px -1px 0px #204e79; }
+.buttGreenSmall a { text-shadow: -1px -1px 0px #246500; }
+.buttBlueSmall a, .buttGreenSmall a, .buttBlueSmall a:hover, .buttGreenSmall a:hover, .buttBlueSmall a:visited, .buttGreenSmall a:visited, .buttBlueSmall a:link, .buttGreenSmall a:link, .buttBlueSmall a:active, .buttGreenSmall a:active { color:#ffffff; text-decoration:none; }
+.iconOurAffiliate, .iconOurPartners, .iconOurCommission { background: url(http://img.daemon-tools.cc/new/iconsAffiliates.gif) 0 0 no-repeat; width:79px; height:64px; margin-top:7px; }
+.iconOurPartners { background:url(http://img.daemon-tools.cc/new/iconsAffiliates.gif) 0 -84px no-repeat; }
+.iconOurCommission { background:url(http://img.daemon-tools.cc/new/iconsAffiliates.gif) 0 -167px no-repeat; }
+.textOurAffiliate, .textOurPartners, .textOurCommission { margin-left:50px; }
+.titleList14 { font-size:14px; color:#303449; font-weight:bold; }
+.subTitleFontSize { font-size:16px; }
+.labelInput { font-size:12px; padding-bottom:3px; }
+.BigFontSize .labelInput { font-size:14px; padding-bottom:3px; }
+.checkBox { margin-left:-1px; }
+.controlInput415 input, .controlInput415 textarea, .controlInput415 select, .input415 { width:415px; font-family:Arial, Helvetica, sans-serif; margin-left:-3px; -margin-left:0px; }
+.controlInput415 input, .controlInput415 textarea, .input415, .controlInput415 select { padding-left:0px; }
+.controlInput415 select option { padding-left:2px; }
+.input415 { margin-top:3px; }
+.switcherMiddle, .switcherLeft, .last .switcherRight { background:url(http://img.daemon-tools.cc/new/switcher.gif) no-repeat; }
+.switcherMiddle { background:#233e55 url(http://img.daemon-tools.cc/new/switcher.gif); background-repeat:repeat-x; background-position:0 -40px; }
+.switcherLeft { background-position:0 -80px; padding-left:2px; }
+.first .switcherLeft { background-position:0px 0px; padding-left:3px; }
+.last .switcherRight { background-position:right -120px; padding-left:3px; }
+html .selected .switcherMiddle {background:#457399 url(http://img.daemon-tools.cc/new/switcher.gif); background-repeat:repeat-x; background-position:0 -200px; }
+html .selected .switcherLeft { background-position:0 -240px; padding-left:2px; }
+html .selected .first .switcherLeft { background-position:0px -160px; padding-left:3px; }
+html .selected .last .switcherRight { background-position:right -280px; padding-left:3px; }
+.hover .switcherMiddle { background:#37556e url(http://img.daemon-tools.cc/new/switcher.gif); background-repeat:repeat-x; background-position:0 -360px; }
+.hover .switcherLeft { background-position:0 -400px; padding-left:2px; }
+.hover .first .switcherLeft { background-position:0px -320px; padding-left:3px; }
+.hover .last .switcherRight { background-position:right -440px; padding-left:3px; }
+.switcher .selected .curPointer { cursor:default; }
+.switcherMiddle span { display:block; padding:0 15px; height:25px; color:#ffffff; text-decoration:none; line-height:23px; }
+html .selected .switcherMiddle span { text-shadow: 1px 1px 0px #000000; }
+.hover .switcherMiddle span { text-shadow: 1px 1px 0px #000000; }
+.switcher { padding-top:5px; padding-left:20px; background:#ffffff; margin-right:-12px; }
+.marginLeft50pct { margin:0 0 0 50%; }
+.marginLeft46pct { margin-left:46%; }
+.marginRight50pct { margin:0 50% 0 0; }
+.marginRight45pct { margin-right:46%; }
+.usabilityImg, .sysIntegrationImg, .functionalityImg { background:url(http://img.daemon-tools.cc/new/pro_advanced_key_features.jpg) no-repeat; }
+.usabilityImg { width:445px; height:240px; margin-left:-11px; }
+.sysIntegrationImg { width:476px; height:234px; margin-right:-7px; background-position:0 -260px; }
+.functionalityImg { width:420px; height:150px; margin-left:-7px; background-position:0 -520px; }
+.subTitleFontColor { color:#303449; }
+.subTitleFont { font-family:Verdana, Geneva, sans-serif; }
+.separatorBig { height:55px; }
+.separatorBigest { height:70px; }
+.reviewAutor { color:#777777; background:#ffffff; }
+.hint { color:#777777; }
+.marginRight30pct { margin-right:30%; }
+.reviews p, .downloadDescription p, p { margin-bottom:15px; }
+.reviewBlockMain .reviewAutor { visibility:hidden; }
+.displayNone { display:none; }
+.overflowYHidden { overflow-y:hidden; }
+.overflowXHidden { overflow-x:hidden; }
+.overflowHidden { overflow:hidden; }
+.overflowXVisible { overflow-x:visible; width:940px; }
+.tabContents .overflowXVisible { width:auto; }
+.height0 { height:0px; }
+.tabContent { background:#ffffff; position:relative;}
+.z1005 { z-index:1005; }
+.z1500 { z-index:1500; }
+.overflowYHidden #screen_gallery { position:absolute; left:-10000px; top:-10000px; }
+.reviewAutor { }
+.colorRequired { color:#cb4800; }
+.requiredField { position:relative; z-index:1001; margin-left:-8px; }
+.message { color:777777; margin-left:-31px; -margin-left:-16px; }
+.italic { font-style:italic; }
+.width73pct { width:73%; }
+.width25pct { width:25%; }
+.width22pct { width:22%; }
+.width55pct { width:55%; }
+.singleInstanceLicenseImg, .multiInstanceLicenseImg, .dtActivationImg, .dtNetActivationImg { background:url(http://img.daemon-tools.cc/new/licensing.jpg) no-repeat; margin-top:43px; }
+.singleInstanceLicenseImg { width:304px; height:109px; margin-left:-6px; }
+.multiInstanceLicenseImg { background-position: 0 -150px; width:309px; height:191px; }
+.dtNetActivationImg { background-position: 0 -400px; width:299px; height:250px; }
+.dtActivationImg { background-position: 0 -700px; width:208px; height:209px; }
+.licenseContent p { margin-bottom:10px; }
+.blockMiddle { margin-right:-15px; background:#ffffff; }
+.blockLeft { background:url(http://img.daemon-tools.cc/new/block_left.gif) repeat-y; }
+.blockRight { background:url(http://img.daemon-tools.cc/new/block_right.gif) repeat-y top right; }
+.blockTopLeft, .blockTop, .blockTopRight, .blockBottomLeft, .blockBottom, .blockBottomRight { background:url(http://img.daemon-tools.cc/new/block.gif) no-repeat; }
+.blockTopLeft { padding-left:4px; }
+.blockTop { background-position: 0 -10px; background-repeat:repeat-x; }
+.blockTopRight { background-position: right -20px; padding-right:4px; }
+.blockBottomLeft { background-position: 0 -30px; padding-left:4px; }
+.blockBottom { background-position: 0 -50px; background-repeat:repeat-x; }
+.blockBottomRight { background-position: right -70px; padding-right:4px; }
+.blockContent { padding:10px 15px; }
+ol { margin:0px; padding:0 0 0 18px; }
+.blueTxt { color:#1A6FC6; }
+.marginTopMin14 { margin-top:-14px; }
+.zoom1 { zoom:1; }
+.blockGray { margin-left:-15px; }
+.blockGray, .blockGrayTop, .blockGrayBottom { background:#eff4f5; }
+.blockGrayTopLeft, .blockGrayTopRight, .blockGrayBottomLeft, .blockGrayBottomLeft { background:url(http://img.daemon-tools.cc/new/block.gif) no-repeat; }
+.blockGrayTopLeft { background-position:0 -90px; padding-left:3px; }
+.blockGrayTopRight { background-position:right -100px; padding-right:3px; }
+.blockGrayBottomLeft { background-position:0 -110px; padding-left:3px; }
+.blockGrayBottomRight { background-position:right -120px; padding-right:3px; }
+.greenTxt { color:#157f00; }
+.redTxt { color:#D20000; }
+.fontSize12 { font-size:12px; }
+.BigFontSize .fontSize12 { font-size:14px; }
+.fontSize14 { font-size:14px; }
+.BigFontSize .fontSize14 { font-size:16px; }
+.fontSize16 { font-size:16px; }
+.BigFontSize .fontSize16 { font-size:18px; }
+.fontSize18 { font-size:18px; }
+.marginLeftNone { margin-left:0px; }
+.fontSize10 { font-size:10px; }
+.BigFontSize .fontSize10 { font-size:12px; }
+.poweredByLink a, .poweredByLink a:hover, .poweredByLink a:visited, .poweredByLink a:link, .poweredByLink a:active { text-decoration:none; color:#333333; }
+.poweredByLink { margin-top:-19px; }
+.downloadTitle { margin-left:40px; padding-top:3px; }
+.width68pct { width:68%; }
+.width32pct { width:32%; }
+.marginLeftMin40 { /*margin-left:-40px;*/ }
+.marginLeftMin15 { margin-left:-15px; }
+.affiliatesImg { width:80px; height:80px; background:url(http://img.daemon-tools.cc/new/partners.jpg) no-repeat 0 3px; }
+.publishersImg { width:80px; height:80px; background:url(http://img.daemon-tools.cc/new/partners.jpg) no-repeat 0 -100px; }
+.lineHeight2_2 { line-height:2.2; }
+.letterImg { background:url(http://img.daemon-tools.cc/new/small_ics.jpg) no-repeat -20px 0px; width:40px; height:38px; margin-right:10px; }
+.rssImg { background:url(http://img.daemon-tools.cc/new/small_ics.jpg) no-repeat -20px -40px; width:40px; height:40px; margin-left:0px; }
+.facebookImg { background:url(http://img.daemon-tools.cc/new/small_ics.jpg) no-repeat -20px -80px; width:40px; height:40px; }
+.selectedNewsArrow { background:url(http://img.daemon-tools.cc/new/block.gif) no-repeat 0 -130px; width:9px; height:18px; top:14px; left:-8px; -left:-23px; }
+.newsLinkContainer { padding:14px 0; }
+.marginRight0 { margin-right:0px; }
+html .compareTabs { background:url(http://img.daemon-tools.cc/new/compare_tabs_bg.gif) bottom center repeat-x; height:26px; margin-left:-15px; margin-right:-15px; }
+.compareTabs .tabLeft, .compareTabs .tabRight, .compareTabs .tabMiddle { background:url(http://img.daemon-tools.cc/new/compare_tabs.png) no-repeat; -background:url(http://img.daemon-tools.cc/new/compare_tabs.gif) no-repeat; height:26px; float:left; }
+.compareTabs .tabLeft { padding-left:4px; }
+.compareTabs .tabLeft { background-position:0 -90px; }
+.compareTabs .tabMiddle { background-repeat:repeat-x; padding-left:5px; padding-right:0px; padding-top:8px; height:18px; color:#454545; }
+.compareTabs .first .tabMiddle { padding-left:11px; }
+.compareTabs .selected .tabMiddle { color:#000000; }
+.compareTabs .tabMiddle { background-position:0 -120px; }
+.compareTabs .tabRight { padding-right:17px; background-position:right -150px; }
+.compareTabs .hover .tabLeft { background-position:0 -180px; }
+.compareTabs .hover .tabMiddle { background-position:0 -210px; }
+.compareTabs .hover .tabRight { background-position:right -240px; }
+html .compareTabs .selected .tabLeft { background-position:0 -0px; }
+html .compareTabs .selected .tabMiddle { background-position:0 -30px; }
+html .compareTabs .selected .tabRight { background-position:right -60px; }
+.compareTable td { background:url(http://img.daemon-tools.cc/new/compare_td.gif) repeat-x; padding-top:12px; padding-bottom:17px; }
+.smallFontSize { font-size:10px; }
+.BigFontSize .smallFontSize { font-size:12px; }
+.grayTxt { color:#999999; }
+.storeTestImg { background:url(http://img.daemon-tools.cc/new/store_test_img.png) no-repeat; -background-image: none; -filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="http://img.daemon-tools.cc/new/store_test_img.png", sizingMethod="crop");
+width:320px; height:232px; margin-left:-15px; }
+.formMessage { background-color: rgb(250, 244, 236); color: rgb(173, 12, 12); padding-top: 2px; padding-bottom: 2px; margin-left: -4px; -margin-left: 0px; padding-left: 4px; width: 415px; border-left: 1px solid rgb(244, 207, 189); border-right: 1px solid rgb(244, 207, 189); border-bottom: 1px solid rgb(244, 207, 189); }
+.subscribeBlockHome .blockMiddle { margin-left:-20px; margin-right:-20px; }
+.subscribeBlockHome .blockContent { padding-left:20px; padding-right:20px; }
+.storeProductBlock .blockMiddle { margin-left:-15px; -margin-left:-7px; width:480px; }
+.storeProductBlock .buttMiddle a { padding:0 15px; }
+.dtProLogo { background:url(http://img.daemon-tools.cc/new/dt_pro_logo.png) no-repeat; -background-image: none; -filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="http://img.daemon-tools.cc/new/dt_pro_logo.png", sizingMethod="crop");}
+/*gallery styles*/
+.galleryItem { height:0px; width:0px; overflow:hidden; }
+.gallery { overflow:hidden; }
+.gallery_conteiner { width:600px; margin:0px auto 15px auto; }
+.imgTitle { height:30px; }
+.zIndex1001 { z-index:1001; }
+.positionAbsolute { position:absolute; }
+.galleryTopLeft, .galleryTopMiddle, .galleryTopRight, .galleryBottomLeft, .galleryBottomRight { height:14px; }
+.galleryTopLeft { background-repeat:no-repeat; padding-left:15px; }
+.galleryTopRight { background-repeat:no-repeat; background-position: right -28px; padding-right:15px; }
+.galleryTopMiddle { background-repeat: repeat-x; background-position: 0 -14px; }
+.galleryBottomLeft { background-repeat:no-repeat; background-position:0 -42px; padding-left:15px; }
+.galleryBottomRight { background-repeat:no-repeat; background-position: right -56px; padding-right:15px; }
+.galleryBottomMiddle { height:14px; }
+.leftSide { width:3px; }
+.gButtLeft, .gButtRight, .gButtMiddle { background:url(http://img.daemon-tools.cc/new/buttons-second.gif); height:32px; }
+.gButtLeft { padding-left:8px; background-repeat:no-repeat; }
+.gButtRight { padding-right:10px; background-repeat:no-repeat; background-position:right -64px; }
+.gButtMiddle { background-repeat: repeat-x; background-position:0 -32px; padding: 0 10px; }
+.gButtMiddle span { line-height:27px; }
+.butBackHover .gButtLeft { background-position:0 -96px; }
+.butBackHover .gButtMiddle { background-position:0 -128px; }
+.butBackHover .gButtRight { background-position:right -160px; }
+.butNextHover .gButtLeft { background-position:0 -192px; }
+.butNextHover .gButtMiddle { background-position:0 -224px; }
+.butNextHover .gButtRight { background-position:right -256px; }
+.butBackHover, .butNextHover { color:#ffffff; }
+.gTitle { color:#505050; border-bottom:1px dashed #CCCCCC; margin-top:8px; padding-bottom:10px; margin-bottom:25px; }
+.gTitle, .galeryButts { }
+.galeryButts { color:#333333; height:32px; }
+.floatRight .gButtLeft, .floatRight .gButtMiddle, .floatRight .gButtRight { float:right }
+.floatLeft .gButtLeft, .floatLeft .gButtMiddle, .floatLeft .gButtRight { float:left }
+.cursorPointer { cursor:pointer; }
+.buttonBackImg, .buttonNextImg { background:url(http://img.daemon-tools.cc/new/gallery_buttons.gif) no-repeat; width:34px; height:34px; }
+.buttonNextImg { background-position:0 -140px; }
+.butBackHover { background-position:0 -70px; }
+.butNextHover { background-position:0 -210px; }
+html .buttonNextDisable { background-position:0 -670px; cursor:default; }
+html .buttonBackDisable { background-position:0 -600px; cursor:default; }
+.imgNum { background:url(http://img.daemon-tools.cc/new/gallery_buttons.gif) no-repeat 0 -280px; width:100px; height:88px; margin:5px 14px 5px 15px; text-align:center; -position:relative; }
+.imgNum img { margin-top:7px; }
+html .selectedImgNum { background:url(http://img.daemon-tools.cc/new/gallery_buttons.gif) no-repeat 0 -500px; width:100px; height:88px; }
+.imgNumHover { background:url(http://img.daemon-tools.cc/new/gallery_buttons.gif) no-repeat 0 -390px; width:100px; height:88px; }
+#imgs_num { font-size:0px; padding:0 15px; }
+.gallThumbsTopLeft, .gallThumbsTop, .gallThumbsTopRight, .gallThumbsLeft, .gallThumbsBottomLeft, .gallThumbsBottomRight { background:url(http://img.daemon-tools.cc/new/gallery.gif) no-repeat; }
+.gallThumbsTopLeft { padding-left:6px; -position:relative; }
+.gallThumbsTop { background-position:0 -15px; background-repeat:repeat-x; height:6px; }
+.gallThumbsTopRight { background-position:right -30px; padding-right:5px; }
+.gallThumbsLeft { background:url(http://img.daemon-tools.cc/new/gallery_left.gif) repeat-y; padding-left:6px; -position:relative; }
+.gallThumbs { background:#eeeeee; }
+.gallThumbsRight { background:#eeeeee; padding-right:5px; }
+.gallThumbsBottomLeft { padding-left:6px; background-position:0 -45px; height:6px; }
+.gallThumbsBottom { background:#eeeeee; height:6px; }
+.gallThumbsBottomRight { padding-right:5px; background-position:right -60px; }
+.gallThumbs { padding:7px 10px; }
+.galleryItem { }
+.emptyfield { background-color:#ffbfa2; }
+.priceStickerLeft, .priceStickerRight, .priceStickerMiddle { background:url(http://img.daemon-tools.cc/new/price_sticker.gif) no-repeat; }
+.priceStickerMiddle {background:url(http://img.daemon-tools.cc/new/price_sticker.gif)}
+.priceStickerLeft { padding-left:15px; height:28px; }
+#Home_page .priceStickerLeft { bottom:60px; left:-29px; }
+#Store_page .priceStickerLeft { bottom:30px; left:-9px; }
+.priceStickerRight { padding-right:10px; height:28px; background-position:right -80px; }
+.priceStickerMiddle { height:28px; color:#ffffff; text-shadow: -1px -1px 0px #b16622; background-position:0 -40px; background-repeat:repeat-x; cursor:default; }
+#Home_page .priceStickerMiddle { padding:0 15px; }
+.priceStickerText { padding-top:9px; }
+a.more { background:url(http://img.daemon-tools.cc/new/more.gif) no-repeat right 1px; font-size:10px; color:#ffffff; text-decoration:none; }
+.BigFontSize a.more {background:url(http://img.daemon-tools.cc/new/more.gif) no-repeat right 2px; font-size:12px; }
+a.more:hover, a.more:link, a.more:active, a.more:visited { color:#ffffff; text-decoration:none; }
+.blockMargin { margin: 0 -20px; }
+.storProductDescription { margin-left:320px; }
+.storProductDescription .blockMargin { margin: 0 -15px; }
+.marginTopMin50 { margin-top:-50px; }
+#Downloads_page  .buttGreenStroke { margin-right:20px; }
+#Home_page  .buttGreenStroke { margin-right:20px; }
+.storProductDescription .paddingBottom40 { padding-bottom:0px; }
+.bgf8f9fa td { background:#f8f9fa url(http://img.daemon-tools.cc/new/compare_td.gif) repeat-x; }
+.buttonDTNet .buttRight, .buttonDTNet .buttLeft, .buttonDTNet .buttMiddle, .buttonDTNetBlue .buttRight, .buttonDTNetBlue .buttLeft, .buttonDTNetBlue .buttMiddle { height:48px; }
+.ToolbarIcondtLite, .ToolbarIconweather, .ToolbarIconradio, .ToolbarIcontranslate, .ToolbarIconclock, .ToolbarIconip, .ToolbarIconwebsearch, .ToolbarIconsearchlocation, .ToolbarFacebook { background:url(http://img.daemon-tools.cc/new/toolbar-icons.jpg) no-repeat; width:32px; height:32px; }
+.ToolbarFacebook { background-position:-320px 0; }
+.ToolbarIconweather { background-position:-40px 0; }
+.ToolbarIconradio { background-position:-80px 0; }
+.ToolbarIcontranslate { background-position:-120px 0; }
+.ToolbarIconclock { background-position:-160px 0; }
+.ToolbarIconip { background-position:-200px 0; }
+.ToolbarIconwebsearch { background-position:-240px 0; }
+.ToolbarIconsearchlocation { background-position:-280px 0; }
+.tabsArrowBack, .tabsArrowNext { background:url(http://img.daemon-tools.cc/new/tab_arrows.gif) no-repeat; width:27px; height:26px; position:absolute; cursor:pointer; }
+.tabsArrowBack { left:0px; top:0px; }
+.tabsArrowNext { right:0px; top:0px; }
+.tabsArrowBack { }
+.tabsArrowNext { background-position:0 -120px; }
+#compare_tabs .butBackHover { background-position:0 -40px; }
+#compare_tabs .butNextHover { background-position:0 -160px; }
+html #compare_tabs .disableBackButt { background-position:0 -80px; cursor:default; }
+html #compare_tabs .disableNextButt { background-position:0 -200px; cursor:default; }
+.dtNetStoreBuyNow, .dtproAdvStoreBuyNow, .dtproStdStoreBuyNow, .dtLiteStoreBuyNow { background:url(http://img.daemon-tools.cc/new/products_buy_now.jpg?v2) no-repeat; }
+.dtNetStoreBuyNow { width:270px; height:143px; }
+.dtproAdvStoreBuyNow { width:270px; height:190px; background-position:0 -190px; }
+.dtproStdStoreBuyNow { background-position:0 -430px; width:270px; height:190px; }
+.dtLiteStoreBuyNow { background-position:0 -670px; width:270px; height:200px; }
+.tabContent .marginRight50pct ul.lineHeight2 { padding-right:15px;}
+.lineHeight2 li { line-height:1.65; margin-bottom:7px;}
+#Windows7_page .blockMargin {margin-left:-15px; margin-right:-15px;}
+#Windows7_page .blockMiddle { padding-bottom:0px;}
+.BigTitle{font-size:36px; color:#444444; text-shadow: 1px 1px 0px #ffffff; -filter:progid:DXImageTransform.Microsoft.DropShadow(color="#ffffff",offX=1,offY=1,positive="true"); zoom: 1;}
+.loaderText { font-size:28px; color:#777777; text-align:center; padding:30px 0;}
+#tabs_content{ width:940px;}
+.imageLoader { background:url(http://img.daemon-tools.cc/new/loader.gif) no-repeat center;}
+.featureListIEPadding li{ *margin-left:20px;}
+.buttGreenStroke .priceLeft, .buttBlueStroke .priceLeft, .buttGreenStroke .itsFreeLeft, .buttBlueStroke .itsFreeLeft { cursor:default;}
+.dtLiteDownloadDescription{ margin-bottom:15px;}
+#Terms_page #content, #Privacy_page #content  { line-height:1.65;}
+.newSticker { background: url(http://img.daemon-tools.cc/new/new_sticker.png) no-repeat; width:78px; height:78px; top:-25px; right:33px; -top:-25px; -right:32px;}
+.answer { padding:10px 0 20px 0;}
+.answer p{ padding-bottom:10px; margin:0px;}
+.faqListNum { top:0px; left:-30px;}
+.separatorMiddle { height:20px;}
+.grayTxt a, .grayTxt a:visited { color:#999999;}
+.grayTxt a:hover { color:#777777;}
+.BigFontSize .selectedLang { padding-right:0px; }
+
+.latest_release_details{float:left;width:630px;}
+.latest_info{float:left;width:620px;}
+.teaser_releases{background:url(http://img.daemon-tools.cc/new/clock_release.jpg) 0 4px no-repeat;height:248px;width:300px;}
+.subtitle{font-size:19px;color:#3f8300;padding-bottom:5px;}
+.subtitle_bold{color:#303449;font:bold 14px Arial, Helvetica, sans-serif;padding: 5px 0 10px;}
+.date{color:#a2a2a2;font-size:12px;}
+.latest_release_details{padding-top:20px;}
+.width300{width:300px;}
+ul.bugs{list-style:none !important;list-style-image:none  !important;}
+ul.bugs li{background:url(http://img.daemon-tools.cc/new/icon_bug.jpg) 0 4px no-repeat;padding-left:18px;}
+.greyhead_table tr td{border-bottom:1px dotted #878787;padding:20px 5px 10px 5px;}
+.greyhead_table thead tr td{background-color:#e9eaeb;border-bottom:1px solid #c2c3c4;color:#303449;font:bold 14px Arial, Helvetica, sans-serif;padding:6px 5px;}
+.big_darkbue{color:#303449;font-size:20px;}
+
+.iconPublisherPortal, .iconPublisherMagazine, .iconPublisherPeople {background: url("http://img.daemon-tools.cc/new/iconsPublishers.jpg") no-repeat scroll 0 0 transparent;margin-top: 7px;width: 79px;}
+.iconPublisherPortal {background: url("http://img.daemon-tools.cc/new/iconsPublishers.jpg") no-repeat scroll 0 -7px transparent;height:70px;}
+.iconPublisherMagazine {background: url("http://img.daemon-tools.cc/new/iconsPublishers.jpg") no-repeat scroll 0 -84px transparent;height: 85px;}
+.iconPublisherPeople {background: url("http://img.daemon-tools.cc/new/iconsPublishers.jpg") no-repeat scroll 0 -193px transparent;height: 70px;}
+
+#application_form{background: url(http://img.daemon-tools.cc/new/partners-result-form.jpg) repeat-y;margin:40px 0 0 65px;width:816px;}
+.green{color:#39780f;}
+.margin_10_0{margin:10px 0;}
+.padding_left_10{padding-left:10px;}
+.bigtxt{font-size:20px;font-weight:bold;}
+.subblue{color:#0b3043;font-size:14px;padding:7px 10px;}
+#application_form_body{background:url(http://img.daemon-tools.cc/new/partners-result-background.jpg) no-repeat top left;padding:48px 50px 50px 130px;}
+#application_form_bottom{background:url(http://img.daemon-tools.cc/new/partners-result-bottom.jpg) no-repeat bottom left;height:20px;}
+.form_data{font-size:13px;line-height:16px;}
+.bold_subtitle{font-weight:bold;display:block;padding:8px 0 2px 0;}
+
+.teaser_releases_small{background:url(http://img.daemon-tools.cc/new/clock_small_release.jpg) 0 4px no-repeat;height:120px;width:111px;}
+.smallinf{padding:10px 15px;width: 780px;}
+.smallinfp{padding:10px 0;line-height:20px;}
+.listinside ul.lineHeight2 li{margin-left:20px;}
+
+.content_with_promo {margin-top:40px !important;}
+#promo{background:url(http://img.daemon-tools.cc/actions/getmoreinstances_small.png) no-repeat;
+	-background-image: none;
+	-filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="http://img.daemon-tools.cc/actions/getmoreinstances_small.png", sizingMethod="crop");
+	height:130px;text-align:center;padding:0 0 20px;position:relative;zoom:1;
+}
+.promotext_blue{color:#014c6f;font: normal 20px Arial, Helvetica, sans-serif;padding:13px 0;}
+#button_holder{width: 100%;text-align: center;overflow:hidden;padding:12px 0;}
+#holder_inner{display: inline-block;text-align:center;margin:0 auto;width:180px;}
+#until{color: #FFFFFF;font: bold 12px Arial,Helvetica,sans-serif;text-align: center;position:absolute;text-transform:uppercase;top:65px;right:192px;}
+
+.keyfeaturesdtNet{background:url(http://img.daemon-tools.cc/new/keyfeatures-dtNet.jpg) no-repeat -7px top;margin-bottom:40px;position:relative;zoom:1;}

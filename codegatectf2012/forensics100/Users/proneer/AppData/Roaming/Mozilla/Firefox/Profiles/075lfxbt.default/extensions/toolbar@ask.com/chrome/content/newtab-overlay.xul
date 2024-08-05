@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet href="chrome://global/skin/global.css" type="text/css"?>
+
+<overlay id="asktb-newtab-overlay" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+    
+    <!-- 
+        Override the new tab command.
+        See https://developer.mozilla.org/En/XUL/List_of_commands
+     -->
+    <command id="cmd_newNavigatorTab" oncommand="ATB.NewTab.onNewTab();"/>
+
+    <!-- Tabbrowser doesn't use the command element. -->
+    <tabbrowser id="content" onnewtab="ATB.NewTab.onNewTab();"/>
+    <script type="application/x-javascript" src="chrome://asktoolbar/content/newtab-manager.js" />
+</overlay>

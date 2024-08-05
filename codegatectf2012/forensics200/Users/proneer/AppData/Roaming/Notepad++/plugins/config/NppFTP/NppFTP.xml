@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<NppFTP defaultCache="%CONFIGDIR%\Cache\%USERNAME%@%HOSTNAME%" outputShown="0" windowRatio="0.5" clearCache="0" clearCachePermanent="0">
+    <Profiles />
+</NppFTP>

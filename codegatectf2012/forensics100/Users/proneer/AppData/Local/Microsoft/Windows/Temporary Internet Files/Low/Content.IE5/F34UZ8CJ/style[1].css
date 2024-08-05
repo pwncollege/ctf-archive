@@ -1,0 +1,357 @@
+@charset "utf-8";
+
+/* Layout */
+body{width:100%;background:url('http://image.ahnlab.com/global/site/images/common/layout/bg_body.gif') repeat-x top left;}
+body#bodynone {background-image:none;}
+
+#container{width:995px;margin:0 auto;}
+#header{position:absolute;z-index:100;width:995px;height:111px;background:url('http://image.ahnlab.com/global/site/images/common/layout/bg_gnb.gif') no-repeat 0 52px;}
+#unbBox{width:957px;height:52px;overflow:hidden;padding:0 19px;}
+#unbBox p.logo{float:left;margin:0;padding:21px 0 0 28px;}
+#unbBox p.search{position:relative;float:right;margin-top:27px;}
+#unbBox p.search input{height:17px;padding:2px 0 0 2px;border-top:1px solid #8b8b8b;border-left:1px solid #8b8b8b;border-bottom:1px solid #c8c8c8;border-right:1px solid #c8c8c8;}
+#unbBox p.search a img{vertical-align:middle;}
+#unbBox ul.unb{float:right;height:14px;overflow:hidden;margin:32px -1px 0 0;}
+#unbBox ul.unb li{float:left;height:14px;padding:0 9px;font-size:0;line-height:0;background:url('http://image.ahnlab.com/global/site/images/common/layout/bg_ut.gif') no-repeat right 4px;}
+
+#contents{width:995px;padding:0 0 80px 0;}
+#contWrap{width:957px;overflow:hidden;padding:126px 19px 0 19px;}/* 일반Sub Page */
+body#bodynone #contWrap {width:957px;overflow:hidden;padding:0;}/* 일반Sub Page */
+#mcontWrap{width:957px;overflow:hidden;padding:111px 19px 0 19px;}/* Main Page */
+#leftMenu{float:left;width:225px;z-index:90;margin-top:5px;}
+#LNBBox{width:225px;overflow:hidden;}
+#LNBBox h2{position:relative;z-index:5;width:211px;height:35px;padding:0 0 0 14px;color:#1a1a1a;font-size:20px !important;line-height:100% !important;background:url('http://image.ahnlab.com/global/site/images/common/layout/bg_h2.gif') no-repeat left bottom;}
+#LNBBox ul.dep1{width:225px;margin-top:-1px;border-bottom:2px solid #bbc2cf;}
+#LNBBox ul.dep1 li{width:225px;border-top:1px solid #e5e5e5;}
+#LNBBox ul.dep1 li a{display:block;width:201x;padding:0 0 2px 24px;color:#444444;font-size:12px !important;line-height:22px !important;font-weight:bold;background:url('http://image.ahnlab.com/global/site/images/common/layout/bg_dep1.gif') no-repeat 8px 7px;}
+#LNBBox ul.dep1 li a:hover{color:#09409a;background:url('http://image.ahnlab.com/global/site/images/common/layout/bg_dep1_over.gif') no-repeat 8px 7px;}
+#LNBBox ul.dep1 li.on a{color:#09409a;background:url('http://image.ahnlab.com/global/site/images/common/layout/bg_dep1_over.gif') no-repeat 8px 7px;}
+#LNBBox ul.dep2{width:217px;padding:11px 0 11px 8px;border-top:1px solid #e5e5e5;}
+#LNBBox ul.dep2 li{width:217px;border:none;}
+#LNBBox ul.dep2 li a{display:block;width:192px;padding:2px 0 3px 17px;background:#fff url('none') !important;color:#666666 !important;font-size:11px !important;line-height:13px !important;font-family:Verdana;font-weight:normal;}
+#LNBBox ul.dep2 li a:hover{background:#8bb1da url('none') !important;color:#ffffff !important;}
+#LNBBox ul.dep2 li.on a{background:#8bb1da url('none') !important;color:#ffffff !important;}
+
+ul.gnbDep1{width:957px;height:39px;overflow:hidden;margin:5px 0 0 19px;}
+ul.gnbDep1 li{float:left;display:block;background:url('http://image.ahnlab.com/global/site/images/common/layout/bg_gnb_line.gif') no-repeat right 15px;text-align:center;}
+ul.gnbDep1 li a{display:block;}
+ul.gnbDep1 li a span{display:block;height:29px;padding-top:10px;font-weight:bold;color:#d1d5ed !important;cursor:pointer;}
+ul.gnbDep1 li a:hover span{color:#ffffff !important;}
+ul.gnbDep1 li a.on span{color:#ffffff !important;}
+ul.gnbDep1 li .wrap{display:none;}
+
+ul.gnbDep1 li.mn1{width:193px;}
+ul.gnbDep1 li.mn1 a:hover{background:url('http://image.ahnlab.com/global/site/images/common/layout/bg_mn1.gif') no-repeat left bottom;}
+ul.gnbDep1 li.mn1 a.on{background:url('http://image.ahnlab.com/global/site/images/common/layout/bg_mn1.gif') no-repeat left bottom;}
+ul.gnbDep1 li.mn1 .wrap{position:absolute;z-index:100;width:200px;height:353px;top:94px;left:19px;}
+ul.gnbDep1 li.mn1 ul.gnbDep2{
+	width:200px;height:344px;/* height:356px; */padding-top:12px;
+	-filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://image.ahnlab.com/global/site/images/common/layout/bg_mn1.png',sizingMethod='scale');/* IE6 */
+}
+html>body ul.gnbDep1 li.mn1 ul.gnbDep2{background:transparent url('http://image.ahnlab.com/global/site/images/common/layout/bg_mn1.png') no-repeat top left;}/* IE 7, FF */
+
+ul.gnbDep1 li.mn2{width:129px;}
+ul.gnbDep1 li.mn2 a:hover{background:url('http://image.ahnlab.com/global/site/images/common/layout/bg_mn2.gif') no-repeat left bottom;}
+ul.gnbDep1 li.mn2 a.on{background:url('http://image.ahnlab.com/global/site/images/common/layout/bg_mn2.gif') no-repeat left bottom;}
+ul.gnbDep1 li.mn2 .wrap{position:absolute;z-index:100;width:200px;height:153px;top:96px;left:177px;}
+ul.gnbDep1 li.mn2 ul.gnbDep2{
+	width:200px;height:121px;/* height:131px; */padding-top:10px;
+	-filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://image.ahnlab.com/global/site/images/common/layout/bg_mn2.png',sizingMethod='scale');/* IE6 */
+}
+html>body ul.gnbDep1 li.mn2 ul.gnbDep2{background:transparent url('http://image.ahnlab.com/global/site/images/common/layout/bg_mn2.png') no-repeat top left;}/* IE 7, FF */
+
+ul.gnbDep1 li.mn3{width:187px;}
+ul.gnbDep1 li.mn3 a:hover{background:url('http://image.ahnlab.com/global/site/images/common/layout/bg_mn3.gif') no-repeat left bottom;}
+ul.gnbDep1 li.mn3 a.on{background:url('http://image.ahnlab.com/global/site/images/common/layout/bg_mn3.gif') no-repeat left bottom;}
+ul.gnbDep1 li.mn3 .wrap{position:absolute;z-index:100;width:200px;height:107px;top:96px;left:335px;}
+ul.gnbDep1 li.mn3 ul.gnbDep2{
+	width:200px;height:97px;/* height:107px; */padding-top:10px;
+	-filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://image.ahnlab.com/global/site/images/common/layout/bg_mn3_02.png',sizingMethod='scale');/* IE6 */
+}
+html>body ul.gnbDep1 li.mn3 ul.gnbDep2{background:transparent url('http://image.ahnlab.com/global/site/images/common/layout/bg_mn3_02.png') no-repeat top left;}/* IE 7, FF */
+
+ul.gnbDep1 li.mn4{width:112px;}
+ul.gnbDep1 li.mn4 a:hover{background:url('http://image.ahnlab.com/global/site/images/common/layout/bg_mn4.gif') no-repeat left bottom;}
+ul.gnbDep1 li.mn4 a.on{background:url('http://image.ahnlab.com/global/site/images/common/layout/bg_mn4.gif') no-repeat left bottom;}
+ul.gnbDep1 li.mn4 .wrap{position:absolute;z-index:100;width:200px;height:175px;top:96px;left:484px;}
+ul.gnbDep1 li.mn4 ul.gnbDep2{
+	width:200px;height:165px;/* height:175px; */padding-top:10px;
+	-filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://image.ahnlab.com/global/site/images/common/layout/bg_mn4.png',sizingMethod='scale');/* IE6 */
+}
+html>body ul.gnbDep1 li.mn4 ul.gnbDep2{background:transparent url('http://image.ahnlab.com/global/site/images/common/layout/bg_mn4.png') no-repeat top left;}/* IE 7, FF */
+
+ul.gnbDep1 li.mn5{width:152px;background:url('none') !important;}
+ul.gnbDep1 li.mn5 a:hover{background:url('http://image.ahnlab.com/global/site/images/common/layout/bg_mn5.gif') no-repeat left bottom;}
+ul.gnbDep1 li.mn5 a.on{background:url('http://image.ahnlab.com/global/site/images/common/layout/bg_mn5.gif') no-repeat left bottom;}
+
+ul.gnbDep1 li.mn6{width:164px;padding-left:20px;background:url('none') !important;}
+ul.gnbDep1 li.mn6 a:hover{background:url('http://image.ahnlab.com/global/site/images/common/layout/bg_mn6.gif') no-repeat right bottom;}
+ul.gnbDep1 li.mn6 a.on{background:url('http://image.ahnlab.com/global/site/images/common/layout/bg_mn6.gif') no-repeat right bottom;}
+ul.gnbDep1 li.mn6 .wrap{position:absolute;z-index:100;width:200px;height:307px;top:94px;left:776px;}
+ul.gnbDep1 li.mn6 ul.gnbDep2{
+	width:200px;height:355px;/* height:342px; */padding-top:12px;
+	-filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://image.ahnlab.com/global/site/images/common/layout/bg_mn6.png',sizingMethod='scale');/* IE6 */
+}
+html>body ul.gnbDep1 li.mn6 ul.gnbDep2{background:transparent url('http://image.ahnlab.com/global/site/images/common/layout/bg_mn6.png') no-repeat top left;}/* IE 7, FF */
+
+ul.gnbDep2{width:200px;clear:both;}
+ul.gnbDep2 li{position:relative;float:none;width:200px;background:url('http://image.ahnlab.com/global/site/images/common/layout/bg_gnb2_line.gif') no-repeat left bottom;text-align:left;}
+ul.gnbDep2 li.last{background:url('none') !important;}
+ul.gnbDep2 li a{display:block;width:180px;padding:1px 0 5px 20px;color:#ffffff !important;font-size:11px;line-height:16px !important;font-weight:bold;background:url('http://image.ahnlab.com/global/site/images/common/blt/blt_gnb.gif') no-repeat 10px 8px;}
+ul.gnbDep2 li a:hover{color:#bde7ff !important;background:url('http://image.ahnlab.com/global/site/images/common/blt/blt_gnb_on.gif') no-repeat 10px 8px !important;}
+ul.gnbDep2 li a.on{color:#bde7ff !important;background:url('http://image.ahnlab.com/global/site/images/common/blt/blt_gnb_on.gif') no-repeat 10px 8px !important;}
+ul.gnbDep3{width:200px;margin-top:-2px !important;padding:8px 0 5px 0 !important;background:url('http://image.ahnlab.com/global/site/images/common/layout/bg_gnb2_line.gif') no-repeat left top;}
+ul.gnbDep3 li{background:url('none');}
+ul.gnbDep3 li a{width:173px;padding:1px 0 5px 27px;text-indent:-7px;background:url('none');line-height:14px !important;font-weight:normal;}
+ul.gnbDep3 li a:hover{background:url('none') !important;}
+ul.gnbDep3 li a.on{background:url('none') !important;}
+
+#main{float:right;width:713px;}
+body#bodynone #contWrap #main {float:left;}
+
+#footer{width:957px;margin:0 auto;padding:0 19px 30px 19px;}
+#footer .fWrap{position:relative;width:957px;height:90px;border-top:2px solid #000000;}
+#footer .fLogo{position:absolute;top:11px;left:157px;}
+#footer .fMenu{position:absolute;top:16px;left:279px;}
+#footer .fMenu ul{height:10px;overflow:hidden;border-left:1px solid #d9d9d9;}
+#footer .fMenu li{float:left;padding:0 13px 0 15px;font-size:0;line-height:0;border-right:1px solid #d9d9d9;}
+#footer .fMenu li a img{vertical-align:top !important;}
+#footer .fSite{position:absolute;z-index:10;top:11px;left:704px;}
+#footer .fSite a{color:#888888;font-size:11px;}
+#footer .fSite p.btn{width:91px;height:18px;padding:1px 0 0 6px;background:url('http://image.ahnlab.com/global/site/images/common/layout/sel_global_o.gif') no-repeat;color:#888888;font-size:11px;cursor:pointer;}
+#footer .fSite p.on{background:url('http://image.ahnlab.com/global/site/images/common/layout/sel_global.gif') no-repeat;}
+#footer .fsList{padding:3px 0;background:#fff;border-top:0;border-left:1px solid #e4e4e4;border-right:1px solid #bfbfbf;border-bottom:1px solid #bfbfbf;cursor:pointer;}
+#footer .fsList li{padding:0 0 0 6px;}
+#footer .fCopy{position:absolute;top:34px;left:295px;}
+
+.leftBnr{width:225px;}
+.leftBnr ul.bnrs li{margin-bottom:10px;font-size:0;line-height:0;border-bottom:1px solid #bbc2cf;}
+.leftBnr ul.bnrs li.none{border:0;}
+.leftBnr ul.bnrs li a{font-size:0;line-height:0;}
+
+.layerBox{position:absolute;width:410px;z-index:10;}
+.layerBox .wrap{background:url('http://image.ahnlab.com/global/site/images/common/layout/bg_layerc.gif') repeat-y left top;}
+.layerBox .wrapBtm{padding-bottom:11px;background:url('http://image.ahnlab.com/global/site/images/common/layout/bg_layerc_btm.gif') no-repeat left bottom;}
+.layerBox .tit{position:relative;width:390px;height:22px;padding-left:20px;padding-top:7px;background:url('http://image.ahnlab.com/global/site/images/common/layout/bg_layer_top.gif') no-repeat left top;}
+.layerBox .tit strong{color:#fff;}
+.layerBox .tit strong.point{color:#fff468;}
+.layerBox .tit span.btn{position:absolute;top:11px;right:8px;font-size:0;line-height:0;}
+.layerBox .tit span.btn a{font-size:0 !important;line-height:0 !important;}
+.layerBox .txtarea{width:370px;overflow-y: auto;margin-left:4px;padding:16px 16px 10px 16px;}
+.layerBox .txtarea p{font-size:11px;line-height:14px;}
+.layerBox .txtarea p.txt{padding-bottom:8px}
+.layerBox .txtarea p strong.stFont11, .layerBox .txtarea p em, .layerBox .txtarea ol li em {font-size:11px;}
+.layerBox .txtarea p.txt02 {padding-bottom:5px}
+.layerBox .txtarea p.btn {clear:both;padding-top:10px;text-align:center;}
+.layerBox .txtarea p em, .layerBox .txtarea ol li em {line-height:14px;}
+.layerBox .txtarea p em img, .layerBox .txtarea ol li em img {margin-right:2px;}
+.layerBox .txtarea .stit01, .layerBox .txtarea ol.stit02 {margin-top:8px;}
+.layerBox .txtarea .stit01 strong, .layerBox .txtarea ol.stit02 li h3 strong {color:#5BAF00;font-size:11px;}
+.layerBox .txtarea ol.stit02 {}
+.layerBox .txtarea ol.stit02 li h3 {padding:1px 0 0 20px;*padding:0 0 0 20px;}
+.layerBox .txtarea ol.stit02 li h3 strong {line-height:14px;}
+.layerBox .txtarea ol.stit02 li.stitNum1 h3 {background:url('http://image.ahnlab.com/global/site/images/common/blt/ico_popgrnum1.gif') no-repeat left 4px;}
+.layerBox .txtarea ol.stit02 li.stitNum2 h3 {background:url('http://image.ahnlab.com/global/site/images/common/blt/ico_popgrnum2.gif') no-repeat left 4px;}
+.layerBox .txtarea ol.stit02 li ol.laypopTxt1 li {padding:0 0 0 16px;}
+.layerBox .txtarea ol.laypopTxt1 {margin-top:14px;padding-bottom:15px;}
+.layerBox .txtarea ol.laypopTxt1 li {padding:0 0 4px 16px;font-size:11px;line-height:14px;}
+.layerBox .txtarea ol.laypopTxt1 li.num1 {background:url('http://image.ahnlab.com/global/site/images/common/blt/ico_popnum1.gif') no-repeat left 3px;}
+.layerBox .txtarea ol.laypopTxt1 li.num2 {background:url('http://image.ahnlab.com/global/site/images/common/blt/ico_popnum2.gif') no-repeat left 3px;}
+.layerBox .txtarea ol.laypopTxt1 li.num3 {background:url('http://image.ahnlab.com/global/site/images/common/blt/ico_popnum3.gif') no-repeat left 3px;}
+.layerBox .txtarea ol.laypopTxt1 li.num4 {background:url('http://image.ahnlab.com/global/site/images/common/blt/ico_popnum4.gif') no-repeat left 3px;}
+.layerBox .txtarea ol.laypopTxt1 li.num5 {background:url('http://image.ahnlab.com/global/site/images/common/blt/ico_popnum5.gif') no-repeat left 3px;}
+.layerBox .txtarea ol.laypopTxt1 li .laypopImg {margin:17px 0 0 -16px;}
+.layerBox .txtarea ol.laypopTxt1 li em {display:block;margin:14px 0 0 -13px;}
+
+
+/* Style */
+.hBox{width:713px;height:61px;overflow:hidden;margin-bottom:15px;}
+.hBox h3{width:704px;height:32px;padding-left:9px;border-bottom:4px solid #09409a;}
+.hBox h4{width:704px;height:32px;padding-left:9px;border-bottom:4px solid #09409a;}
+.hBox p.location{display:block;height:20px;padding:3px 7px 0 0;background:#f5f5f5;border-top:1px solid #ffffff;border-bottom:1px solid #efefef;text-align:right;}
+.hBox p.location strong{color:#5a90cb;font-size:11px;}
+.hBox p.location a{font-size:11px;}
+
+h4.info {position:relative;width:694px;height:25px;z-index:5;margin-top:25px;}
+h4.info, .titH4box h4 {padding-left:19px;background:url('http://image.ahnlab.com/global/site/images/common/blt/blt_h5.gif') no-repeat 8px 4px;}
+h4.info span.more, .titH4box .more, .titH4boxbgn .more {position:absolute;top:3px;right:5px;}
+h4.h4Virus {margin-bottom:12px;padding:5px 0 0 20px;}
+h4.info2, h4.infoTxt1 {height:25px;margin-top:30px;padding:0 0 0 10px;background:url('http://image.ahnlab.com/global/site/images/common/blt/bg_h5.gif') repeat-x left bottom;}
+h4.info2 img{padding-left:13px;background:url('http://image.ahnlab.com/global/site/images/common/blt/blt_h5.gif') no-repeat 0 4px;}
+h4.info3 {width:694px;height:21px;margin-top:25px;padding-left:19px;background:url('http://image.ahnlab.com/global/site/images/common/blt/blt_h5.gif') no-repeat 8px 4px;}
+h4.infoTxt1 {position:relative;padding-left:8px;}
+h4.infoTxt1 strong {padding-left:12px;color:#333;font-size:14px;background:url('http://image.ahnlab.com/global/site/images/common/blt/blt_h5.gif') no-repeat 0 7px;}
+h4.infoTxt1None {background-image:none;}
+
+.titH4box {position:relative;overflow:hidden;width:711px;height:25px;margin-top:30px;padding-left:2px;background:url('http://image.ahnlab.com/global/site/images/common/blt/bg_h5.gif') repeat-x left bottom;}
+.titH4box h4 {}
+.titH4box .more {top:2px;right:5px;}
+.titH4boxbgn {margin-top:25px;background-image:none;}
+.titH4boxbgn .more {top:7px;}
+
+.topBox{width:713px;background:url('http://image.ahnlab.com/global/site/images/common/layout/bg_box.gif') repeat-y left top;}
+.topBox .wrap{width:713px;padding-top:10px;background:url('http://image.ahnlab.com/global/site/images/common/layout/bg_box_top.gif') no-repeat left top;}
+.topBox .wrapBtm{width:709px;padding:0 2px 14px 2px;background:url('http://image.ahnlab.com/global/site/images/common/layout/bg_box_btm.gif') no-repeat left bottom;}
+
+.prodDl{width:709px;overflow:hidden;}
+.prodDl p.img{float:left;}
+.prodDl dl{float:left;padding-top:21px;}
+.prodDl dt{padding-bottom:5px;}
+.prodDl ul{width:450px;}
+.prodDl li{padding-left:10px;line-height:16px;background:url('http://image.ahnlab.com/global/site/images/common/blt/blt_deps.gif') no-repeat 1px 8px;}
+
+.imgBox{margin-top:25px;}
+.pDep1 {margin:0 20px 15px 20px;}
+.pDep1 .btnA {margin-top:7px;}
+
+.lineBox{padding-bottom:15px;background:url('http://image.ahnlab.com/global/site/images/common/blt/bg_linebox.gif') no-repeat left bottom;}
+.lineBox .wrap{border-top:1px solid #e8e8e8;}
+.lineBox .wrap2 {padding-bottom:0;}
+
+.changePw{padding:20px 0 25px 0;}
+.changePw dl{width:350px;margin:0 auto;}
+.changePw dl:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}
+.changePw dt{float:left;width:165px;padding-top:8px;}
+.changePw dt.txt {padding-top:4px;}
+.changePw dd.txt {padding-top:7px;}
+.changePw dd{float:left;width:185px;padding:4px 0;}
+.changePw p.btns, .idchangePw p.btns {width:185px;margin:0 auto;}
+.changePw p.btns {padding:5px 0 0 165px;}
+.idchangePw dt {width:132px;}
+.idchangePw p.btns{padding:5px 0 0 99px;}
+.getemailBox {overflow:hidden;width:100%;height:1%;padding:25px 0 25px 0;}
+.getemailBox img {display:block;padding:0 24px 0 60px;}
+.getemailBox img, .getemailBox p {float:left;}
+.getemailBox p {width:479px;padding:29px 0 21px 0;text-align:left;}
+.getemailBox p strong {display:block;color:#404041;padding-bottom:10px;}
+.getemailBox p strong, .getemailBox p strong em {font-size:18px;}
+.getemailBox p strong em {color:#5A90CB;}
+
+.addProd{padding:25px 0 25px 20px;}
+.addProd .tit{padding-bottom:15px;}
+.addProd .reg{padding:0 0 0 130px;}
+.addProd .reg input{margin:0 2px;}
+
+p.notice{padding-left:30px;background:url('http://image.ahnlab.com/global/site/images/common/blt/blt_notice.gif') no-repeat left -2px;}
+p.notice2{padding:2px 0 2px 30px;background:url('http://image.ahnlab.com/global/site/images/common/blt/blt_notice2.gif') no-repeat left top;}
+p.psBlt{margin:5px 0 10px 5px; padding-left:8px;font-size:12px;background:url('http://image.ahnlab.com/img_upload/kr/site/images/common/blt/blt_ps.gif') no-repeat 0 5px;}
+
+.noticeBox{margin-top:20px;border:1px solid #e6eaf2;}
+.noticeBox .wrap{border:1px solid #ffffff;background:#f8f9fb;}
+.noticeBox .wNoti{width:633px;padding:25px 38px 25px 38px;}
+.noticeBox .wRep{width:673px;padding:0 18px 25px 18px;}
+.noticeBox .wRep2 {width:671px;padding:14px 19px 16px 19px;line-height:20px;}
+.noticeBox .wRep2 p {padding-top:2px;}
+.noticeBox .notiBox{border-bottom:1px solid #ffffff;}
+.noticeBox p.notice{padding-bottom:20px;border-bottom:1px solid #dfe0e1;}
+.noticeBox ul.cList{margin:15px 0 0 17px;}
+.wRep dl{width:673px;}
+.wRep dt{padding:20px 0 10px 0;}
+.wRep dt strong{padding-left:15px;background:url('http://image.ahnlab.com/global/site/images/common/blt/blt_deps.gif') no-repeat 5px 6px;color:#c40002;}
+
+.qWrite{display:block;width:673px;padding:20px;}
+.qWrite:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}
+.qWrite p.notice2{float:left;}
+.qWrite p.btns{float:right;}
+
+ul.cList{}
+ul.cList li{padding:0 0 6px 12px;background:url('http://image.ahnlab.com/global/site/images/common/blt/blt_sp.gif') no-repeat 0 8px;}
+ul.cList li a{text-decoration:underline !important;}
+ul.cl1{margin-left:20px;}/* cList 의 변형스타일 */
+ul.cl1 li{color:#999999;}
+ul.cl1 li strong{font-weight:normal;}
+ul.cl2{margin-left:20px;margin-bottom:20px;}
+ul.cl2 li{padding-bottom:2px;}
+
+.qSubmit, .qSubmit2 {display:block;width:713px;padding:20px 0;border:0 !important;}
+.qSubmit:after, .qSubmit2:after {content:"."; display:block; height:0; clear:both; visibility:hidden}
+.qSubmit p.img, .qSubmit p.img2, .qSubmit2 p.img {float:left;padding:6px 68px 0 53px;}
+.qSubmit p.img2 {padding:0 49px 0 0;}
+.qSubmit p.txt, .qSubmit2 p.txt {float:left;width:469px;line-height:18px;}
+.qSubmit p.txt strong.first {padding-bottom:13px;}
+.qSubmit p.txt strong.first, .qSubmit2 p.txt strong.first {display:block;color:#404041;font-size:18px;}
+.qSubmit2 p.txt strong.first {padding-bottom:9px;}
+.qSubmit p.txt strong.first em, .qSubmit2 p.txt strong.first em {color:#5A90CB;font-size:18px;}
+.qSubmit p.txt img, .qSubmit2 p.txt img {display:block;margin-bottom:10px;}
+.qSubmit p.txt a img, .qSubmit2 p.txt a img {margin:15px 0 0 0 !important;}
+.qSubmit p.txt strong.bld6 {text-decoration:underline;}
+
+.idchangePw {padding-bottom:20px;}
+.qSubmit2 {overflow:hidden;width:100%;margin-top:-5px;padding-bottom:25px;background:url('http://image.ahnlab.com/global/site/images/common/blt/bg_linebox_st.gif') no-repeat left top;}
+.qSubmit2 p.img {padding:6px 24px 0 25px;}
+.qSubmit2 p.txt {padding-top:19px;}
+.qSubmit2 p.txt img {margin-bottom:6px;}
+.qSubmit2 p a:link strong, .qSubmit2 p a:active strong, .qSubmit2 p a:visited strong, .qSubmit2 p a:hover strong {color:#5a90cb;text-decoration:underline;}
+
+.detailSearch {position:relative;width:713px;background:url('http://image.ahnlab.com/global/site/images/common/layout/bg_sch.gif') repeat-y left top;}
+.detailSearch .wrap{padding-top:7px;background:url('http://image.ahnlab.com/global/site/images/common/layout/bg_sch_top.gif') no-repeat left top;}
+.detailSearch .wrapBtm{height:1%;padding:0 10px 6px 10px;background:url('http://image.ahnlab.com/global/site/images/common/layout/bg_sch_btm.gif') no-repeat left bottom;}
+.detailSearch input{#margin-top:-1px;}
+.detailSearch img.btn{#margin-top:-1px;}
+
+.detailSearch .sortList {position:absolute;top:10px;*top:8px;right:8px;*right:4px;width:auto;padding-left:9px;background:url('http://image.ahnlab.com/global/site/images/common/blt/bg_sort3.gif') no-repeat left 4px;}
+.detailSearch .sortList dt strong {padding-left:10px;color:#666;background:url('http://image.ahnlab.com/global/site/images/common/blt/blt_dot01.gif') no-repeat left 6px;}
+
+dl.searchBy{display:block;width:707px;margin-left:1px;border-bottom:1px solid #e4e4e4;}
+dl.searchBy:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}
+dl.searchBy dt{float:left;width:143px;padding:5px 0 0 17px;}
+dl.searchBy dt strong{padding-left:12px;background:url('http://image.ahnlab.com/global/site/images/common/blt/blt_li.gif') no-repeat 0 5px;}
+dl.searchBy dd{float:left;width:526px;padding:2px 0 0 20px;border-left:1px solid #e4e4e4;}
+dl.searchBy dd p{padding:0 0 3px 0;}
+dl.searchBy dd p strong{padding-right:5px;color:#888888;vertical-align:middle;}
+dl.searchBy dd p strong.fromto{display:inline-block;width:32px;color:#404041;}
+dl.sb1{padding:4px 0 12px 0;}/* searchBy의 first */
+dl.sb2{padding:12px 0 4px 0;border-bottom:0;}/* searchBy의 second */
+dl.sb2 dt{padding:15px 0 0 17px;}
+dl.sb2 dd{width:320px;border-right:1px solid #e4e4e4;}
+dl.sb2 dd.btn{width:175px;padding:12px 0 0 20px;border:0;}
+
+.selectProd {overflow:hidden;margin-top:15px;padding-left:9px;}
+.selectProd dt, .selectProd dd {float:left;}
+.selectProd dt {padding:1px 0 0 10px;background:url('http://image.ahnlab.com/global/site/images/common/blt/blt_li.gif') no-repeat left 9px;}
+.selectProd dd {padding-left:13px;}
+
+dl.sortList{width:713px;margin-bottom:8px;text-align:right;}
+dl.sortList dt{display:inline;}
+dl.sortList dt strong{padding-left:8px;font-size:11px;color:#91a0af;background:url('http://image.ahnlab.com/global/site/images/common/blt/blt_sort.gif') no-repeat 0 5px;}
+dl.sortList dd{display:inline;}
+dl.sortList dd ul{display:inline;width:200px;}
+dl.sortList dd li{display:inline;padding:0 6px 0 8px;background:url('http://image.ahnlab.com/global/site/images/common/blt/bg_sort.gif') no-repeat left 3px;}
+dl.sortList dd li.first{padding-left:10px;background:none;}
+dl.sortList dd li a{font-size:11px !important;font-weight:bold;}
+
+.prodInfo, .prodInfo2 {padding-top:10px;border:0 !important;}
+.prodInfo p{padding:0 20px 20px 20px;}
+.prodInfo p.txt, .prodInfo2 p.txt {padding-bottom:10px;}
+.prodInfo2 {overflow:hidden;width:100%;height:1%;padding-top:15px;}
+.prodInfo2 .leftImg {float:left;width:162px;}
+
+.renewInfo{padding:0 20px 25px 20px;}
+.renewInfo dt{padding-top:15px;}
+.renewInfo dt strong{font-size:14px;}
+.renewInfo dd{padding-top:12px;}
+.renewInfo p.btn{padding-top:25px;text-align:center;}
+
+.asecReportBox { width:713px;  margin:10px 0 30px 0}
+.asecReportBox .top {background:url('http://image.ahnlab.com//global/site/images/common/layout/box_top.gif') no-repeat left top; width:713px; height:9px; line-height:9px; font-size:9px;}
+.asecReportBox .bt {background:url('http://image.ahnlab.com//global/site/images/common/layout/box_bt.gif') no-repeat left top; width:713px; height:12px; line-height:12px; font-size:12px;}
+.asecReportBox .cont {border-right:1px solid #ababab; border-left:1px solid #ababab; width:711px; *zoom:1; padding:6px 0;}
+.asecReportBox .cont:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}
+.asecReportBox .cont .ico {float:left; width:125px; text-align:right;}
+.asecReportBox .cont .txt {float:left; font-weight:bold;font-size:14px; padding:7px 0 0 25px}
+
+.loginBox{display:block;width:957px;padding:25px 0 40px 0;background:url('http://image.ahnlab.com/global/site/images/common/blt/bg_linebox_b.gif') no-repeat left bottom;}
+.loginBox:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}
+.loginBox .ipt{float:left;position:relative;width:400px;padding-left:70px;}
+.loginBox .bnr{float:left;width:366px;padding-left:30px;}
+.loginBox .ipt p.txt{padding:25px 0 40px 5px;}
+.loginBox .ipt dl{display:block;width:240px;margin-left:35px;}
+.loginBox .ipt dl:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}
+.loginBox .ipt dt{float:left;width:90px;padding-top:5px;font-size:0;line-height:0;}
+.loginBox .ipt dd{float:left;width:150px;padding-bottom:5px;font-size:0;line-height:0;}
+.loginBox .ipt dd input{#margin-top:-1px;}
+.loginBox .ipt p.btnLogin{position:absolute;top:84px;left:360px;}
+.loginBox .ipt p.btnAOS {padding:4px 0 0 121px;}
+.loginBox ul.etc{width:350px;margin-top:20px;padding:25px 0 0 50px;background:url('http://image.ahnlab.com/global/site/images/member/bg_login.gif') no-repeat left top;}
+.loginBox ul.etc li{padding-bottom:10px;}
+.loginBox ul.etc li a{text-decoration:underline;color:#1f4787;}

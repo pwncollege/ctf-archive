@@ -1,0 +1,863 @@
+/************* 영상 플레이 시키는 부분 ***************************************************/
+var baseUrl	= "http://tv.gomtv.com/cgi-bin/launcher/";
+var playParam	= new Array();
+var typeParam	= new Array('movie', 'drama', 'clip', 'news', 'sponsor', 'live', 'live_p2p', 'channel', 'series');
+
+playParam['movie']	= new Array("isweb", "dispid", "vodid", "level", "part", "navurl", "isnav",""); // 7개
+playParam['drama']	= new Array("isweb", "dispid", "vodid", "level", "part", "navurl", "isnav",""); // 7개
+playParam['clip']	= new Array("isweb", "dispid", "clipid","level","part","navurl", "isnav","");
+playParam['news']	= new Array("isweb", "newsid", "","","","navurl", "isnav","");
+playParam['sponsor']	= new Array("isweb", "sponid", "","","","navurl", "isnav","");
+playParam['live']	= new Array("isweb", "liveid", "chnum", "source", "", "navurl", "isnav","");
+playParam['live_p2p']	= new Array("isweb", "liveid", "chnum", "", "", "navurl", "isnav","");
+playParam['channel']= new Array("isweb", "chid", "pid", "bid", "bjvid", "navurl", "isnav", "level"); // 7개
+playParam['series']	= new Array("isweb", "id0s","id1s","id2s","id3s", "type", "navurl", "isnav", "level","returl"); // 9개
+playParam['chart'] = new Array("isweb", "chid","pid","bid","bjvid", "level", "source", "isnav", "navurl"); // 8개
+
+var BT = (function x(){})[-5]=='x'?'FF3':(function x(){})[-6]=='x'?'FF2':/a/[-1]=='a'?'FF':'\v'=='v'?'IE':/a/.__proto__=='//'?'Saf':/s/.test(/a/.toString)?'Chr':/^function \(/.test([].sort)?'Op':'Unknown'; // Broswer Type
+BT	= (navigator.userAgent.indexOf('Firefox') != -1) ? 'FF' : BT;
+BT	= (navigator.userAgent.indexOf('Safari') != -1) ? 'Sa' : BT;
+BT	= (navigator.userAgent.indexOf('Chrome') != -1) ? 'Chr' : BT;
+BT	= (navigator.userAgent.indexOf('MSIE') != -1 ) ? 'IE' : BT;
+var ISSA	= BT == "Sa" ? true : false;
+var ISFF	= (BT == 'FF' || BT == 'FF2' || BT == 'FF3') ? true : false;
+var ISCHR	= (BT == 'Chr') ? true : false;
+var MWB		= /http:\/\/exp/g.test(document.URL) ? true : false;
+var MW		= (MWB) ? "app" : "web";
+
+//alert("ISFF : " + ISFF + ":::"+BT);
+var ISIE	= (navigator.userAgent.indexOf('MSIE') != -1 ) ? true : false;
+var ISOSWIN	= (navigator.userAgent.indexOf('Windows') != -1) ? true : false;
+var ISOSMAC	= (navigator.userAgent.indexOf('Mac') != -1) ? true : false;
+var ISAX	= /http:\/\/ch\.gomtv/g.test(document.URL) || /http:\/\/movie\.gomtv/g.test(document.URL) || /http:\/\/drama\.gomtv/g.test(document.URL) ? true : false
+
+ISAX	= /http:\/\/movie\.gomtv\.com\/index/g.test(document.URL) || /http:\/\/drama\.gomtv\.com\/index/g.test(document.URL) ? false : ISAX;
+
+ISAX	= (document.URL == "http://movie.gomtv.com/") ? false : ISAX;
+ISAX	= (document.URL == "http://drama.gomtv.com/") ? false : ISAX;
+onerror = function() {return;}
+
+/** OS/Browser FullName **/
+var DEFN = {};
+DEFN.Browser = (navigator.userAgent.indexOf('MSIE') != -1)		? 'MSIE'	: DEFN.Browser;
+DEFN.Browser = (navigator.userAgent.indexOf('Firefox') != -1)	? 'Firefox' : DEFN.Browser;
+DEFN.Browser = (navigator.userAgent.indexOf('Safari') != -1)	? 'Safari'	: DEFN.Browser;
+DEFN.Browser = (navigator.userAgent.indexOf('Chrome') != -1)	? 'Chrome'	: DEFN.Browser;
+DEFN.Browser = (navigator.userAgent.indexOf('Opera') != -1)		? 'Opera'	: DEFN.Browser;
+DEFN.OS		= (navigator.userAgent.indexOf('Windows') != -1)	? "Windows" : DEFN.OS;
+DEFN.OS		= (navigator.userAgent.indexOf('Mac') != -1)		? "Mac"		: DEFN.OS;
+DEFN.OS		= (navigator.userAgent.indexOf('iPhone') != -1)		? "iPhone"	: DEFN.OS;
+DEFN.OS		= (navigator.userAgent.indexOf('iPod') != -1)		? "iPod"	: DEFN.OS;
+if(DEFN.Browser == 'MSIE')
+{
+	DEFN.Browser = DEFN.Browser + jQuery.browser.version;
+}
+
+var userAgent = navigator.userAgent.toLowerCase();
+var browser = {
+	version: (userAgent.match( /.+(?:rv|it|ra|ie)[\/: ]([\d.]+)/ ) || [0,'0'])[1],
+	safari: /webkit/.test( userAgent ),
+	opera: /opera/.test( userAgent ),
+	msie: /msie/.test( userAgent ) && !/opera/.test( userAgent ),
+	mozilla: /mozilla/.test( userAgent ) && !/(compatible|webkit)/.test( userAgent )
+};
+
+
+
+function goCH(chid, pid, bid)
+{
+	var tmpLink = 'http://ch.gomtv.com/2009/gate.gom?intchid=' + chid + '&intpid=' + pid + '&intbid=' + bid + '&type=3&auto=1';
+	top.document.location.href = tmpLink;
+}
+function goCH2(chid, pid, bid, level)
+{
+	var tmpLink = 'http://ch.gomtv.com/2009/gate.gom?intchid=' + chid + '&intpid=' + pid + '&intbid=' + bid + '&type=3&auto=' + level;
+	top.document.location.href = tmpLink;
+}
+
+function goMOVIE(dispid, vodid)
+{
+	var tmpLink = 'http://movie.gomtv.com/' + dispid + '/' + vodid + '/121';
+	top.document.location.href = tmpLink;
+}
+function goDRAMA(dispid, vodid)
+{
+	var tmpLink = 'http://drama.gomtv.com/' + dispid + '/' + vodid + '121';
+	top.document.location.href = tmpLink;
+}
+
+function showAxPlay(type, id0s, id1s, id2s, part, level, target){
+	switch(type){
+		case "channel":
+			var tmpLink = 'http://ch.gomtv.com/'+id0s+'/'+id1s+'/'+id2s+'/1';
+			if(target == 1){
+				window.open(tmpLink);
+			}else{
+				top.document.location.href = tmpLink;
+			}
+			break;
+		case "movie":
+			var tmpLink = 'http://movie.gomtv.com/'+id0s+'/'+id1s+'/'+part+level+'1';
+			if(target == 1){
+				window.open(tmpLink);
+			}else{
+				top.document.location.href = tmpLink;
+			}
+			break;
+		case "drama":
+			var tmpLink = 'http://drama.gomtv.com/'+id0s+'/'+id1s+'/'+part+level+'1';
+			if(target == 1){
+				window.open(tmpLink);
+			}else{
+				top.document.location.href = tmpLink;
+			}
+			break;
+	}
+}
+
+function showMovie(type, param1, param2, param3, param4, param5, param6)
+{
+	if (ISOSMAC	= 'Mac') // 맥곰 베타 서비스용
+	{
+		if (DEFN.Browser == 'Safari')
+		{
+			if (type == 'channel')
+			{
+				goCH2(param2, param3, param4, '1');
+			} else if (type == 'movie')
+			{
+				goMOVIE(param2, param3);
+			} else if (type == 'drama')
+			{
+				goDRAMA(param2, param3);
+			}
+		}
+	}
+
+	if (browser.msie == true && (type == 'channel'))
+	{
+		goCH(param2, param3, param4);
+	} else if (browser.msie == true && (type == 'movie'))
+	{
+		goMOVIE(param2, param3);
+	} else if (browser.msie == true && (type == 'drama'))
+	{
+		goDRAMA(param2, param3);
+	} else
+	{
+		var launcher	= baseUrl + "launcher_"+type+".cgi";
+		var param		= "";
+		var level		= 1;
+		param	+= playParam[type][0] + "=" + param1 + "&";
+		param	+= playParam[type][1] + "=" + param2 + "&";
+		param	+= playParam[type][2] + "=" + param3 + "&";
+		if(type == 'movie' || type == 'drama'){
+			param	+= playParam[type][3] + "=" + param4 + "&";
+			param	+= playParam[type][4] + "=" + param5 + "&";
+		}else{
+			param	+= playParam[type][3] + "=" + param4 + "&";
+			param	+= playParam[type][4] + "=" + param5 + "&";
+			param	+= playParam[type][7] + "=" + level + "&";
+		}
+		param	+= playParam[type][5] + "=" + escape(param6);
+		launcher	+= "?" + param;
+		playing(launcher);
+	}
+}
+
+function showMovie2(type, param1, param2, param3, param4, param5, param6, param7)
+{
+	if (ISOSMAC	= 'Mac') // 맥곰 베타 서비스용
+	{
+		if (DEFN.Browser == 'Safari')
+		{
+			if (type == 'channel')
+			{
+				goCH2(param2, param3, param4, param7);
+			} else if (type == 'movie')
+			{
+				goMOVIE(param2, param3);
+			} else if (type == 'drama')
+			{
+				goDRAMA(param2, param3);
+			}
+		}
+	}
+
+	if (browser.msie == true && (type == 'channel'))
+	{
+		goCH2(param2, param3, param4, param7);
+	} else if (browser.msie == true && (type == 'movie'))
+	{
+		goMOVIE(param2, param3);
+	} else if (browser.msie == true && (type == 'drama'))
+	{
+		goDRAMA(param2, param3);
+	} else
+	{
+		var launcher	= baseUrl + "launcher_"+type+".cgi";
+		var param		= "";
+		param	+= playParam[type][0] + "=" + param1 + "&";
+		param	+= playParam[type][1] + "=" + param2 + "&";
+		param	+= playParam[type][2] + "=" + param3 + "&";
+		if(type == 'movie' || type == 'drama'){
+			param	+= playParam[type][3] + "=" + param4 + "&";
+			param	+= playParam[type][4] + "=" + param5 + "&";
+		}else{
+			param	+= playParam[type][3] + "=" + param4 + "&";
+			param	+= playParam[type][4] + "=" + param5 + "&";
+			param	+= playParam[type][7] + "=" + param7 + "&";
+		}
+		param	+= playParam[type][5] + "=" + escape(param6);
+		launcher	+= "?" + param;
+		playing(launcher);
+	}
+}
+
+function showMovieNav(type, param1, param2, param3, param4, param5, param6, param7)
+{
+	if (ISOSMAC	= 'Mac') // 맥곰 베타 서비스용
+	{
+		if (DEFN.Browser == 'Safari')
+		{
+			if (type == 'channel')
+			{
+				goCH(param2, param3, param4);
+			} else if (type == 'movie')
+			{
+				goMOVIE(param2, param3);
+			} else if (type == 'drama')
+			{
+				goDRAMA(param2, param3);
+			}
+		}
+	}
+
+	if (browser.msie == true && (type == 'channel'))
+	{
+		goCH(param2, param3, param4);
+	} else if (browser.msie == true && (type == 'movie'))
+	{
+		goMOVIE(param2, param3);
+	} else if (browser.msie == true && (type == 'drama'))
+	{
+		goDRAMA(param2, param3);
+	} else
+	{
+		var launcher	= baseUrl + "launcher_"+type+".cgi";
+		var param		= "";
+		var level		= 1;
+		param	+= playParam[type][0] + "=" + param1 + "&";
+		param	+= playParam[type][1] + "=" + param2 + "&";
+		param	+= playParam[type][2] + "=" + param3 + "&";
+		if(type == 'movie' || type == 'drama'){
+			level	= param4;
+			param	+= playParam[type][3] + "=" + param4 + "&";
+			param	+= playParam[type][4] + "=" + param5 + "&";
+		}else{
+			param	+= playParam[type][3] + "=" + param4 + "&";
+			param	+= playParam[type][4] + "=" + param5 + "&";
+			param	+= playParam[type][7] + "=" + level + "&";
+		}
+		param	+= playParam[type][5] + "=" + escape(param6);
+		launcher	+= "?" + param;
+		playing(launcher);
+	}
+}
+
+function showMovieNav2(type, param1, param2, param3, param4, param5, param6, param7, param8)
+{
+	if (ISOSMAC	= 'Mac') // 맥곰 베타 서비스용
+	{
+		if (DEFN.Browser == 'Safari')
+		{
+			if (type == 'channel')
+			{
+				goCH(param2, param3, param4);
+			} else if (type == 'movie')
+			{
+				goMOVIE(param2, param3);
+			} else if (type == 'drama')
+			{
+				goDRAMA(param2, param3);
+			}
+		}
+	}
+
+	if (browser.msie == true && (type == 'channel'))
+	{
+		goCH(param2, param3, param4);
+	} else if (browser.msie == true && (type == 'movie'))
+	{
+		goMOVIE(param2, param3);
+	} else if (browser.msie == true && (type == 'drama'))
+	{
+		goDRAMA(param2, param3);
+	} else
+	{
+		var launcher	= baseUrl + "launcher_"+type+".cgi";
+		var param		= "";
+		param	+= playParam[type][0] + "=" + param1 + "&";
+		param	+= playParam[type][1] + "=" + param2 + "&";
+		param	+= playParam[type][2] + "=" + param3 + "&";
+		if(type == 'movie' || type == 'drama'){
+			param8	= param4;
+			param	+= playParam[type][3] + "=" + param4 + "&";
+			param	+= playParam[type][4] + "=" + param5 + "&";
+		}else{
+			param	+= playParam[type][3] + "=" + param4 + "&";
+			param	+= playParam[type][4] + "=" + param5 + "&";
+			param	+= playParam[type][7] + "=" + param8 + "&";
+		}
+		param	+= playParam[type][5] + "=" + escape(param6) + "&";
+		param	+= playParam[type][6] + "=" + param7;
+		launcher	+= "?" + param;
+		playing(launcher);
+	}
+}
+
+function showSeries(param1, param2, param3, param4, param5, param6, param7)
+{
+	if (ISOSMAC	= 'Mac') // 맥곰 베타 서비스용
+	{
+		if (DEFN.Browser == 'Safari')
+		{
+			if (param6 == '10000')
+			{
+				goCH(param2, param3, param4);
+			} else if (param6 == '100')
+			{
+				goMOVIE(param2, param3);
+			} else if (type == '110')
+			{
+				goDRAMA(param2, param3);
+			}
+		}
+	}
+
+	if (browser.msie == true && (param6 == '10000'))
+	{
+		goCH(param2, param3, param4);
+	} else if (browser.msie == true && (param6 == '100'))
+	{
+		goMOVIE(param2, param3);
+	} else if (browser.msie == true && (param6 == '110'))
+	{
+		goDRAMA(param2, param3);
+	} else
+	{
+		var launcher	= baseUrl + "series_set.cgi";
+		var param	= "";
+		var arrParam= "";
+		var pLen	= 0;
+		var level	= 1;
+		var tmpZero	= "";
+		var type	= 'series';
+		param	+= playParam[type][0] + "=" + param1 + "&";
+		param	+= playParam[type][1] + "=" + param2 + "&";
+		param	+= playParam[type][2] + "=" + param3 + "&";
+
+		if(param6 == '100' || param6 == '110'){
+			arrParam = param4.split(",");
+			pLen = arrParam.length;
+			for(var i = 0;i < pLen;i++){
+				if(i ==0){
+					tmpZero = "0";
+				}else{
+					tmpZero +=",0";
+				}
+			}
+			level	= arrParam[0];
+			param	+= playParam[type][4] + "=" + tmpZero + "&";
+			param	+= playParam[type][3] + "=" + param5 + "&";
+		}else{
+			param	+= playParam[type][3] + "=" + param4 + "&";
+			param	+= playParam[type][4] + "=" + param5 + "&";
+		}
+		param	+= playParam[type][5] + "=" + param6 + "&";
+		param	+= playParam[type][6] + "=" + escape(param7) + "&";
+		param	+= playParam[type][8] + "=" + level;
+		launcher	+= "?" + param;
+		playing(launcher);
+	}
+}
+
+
+function showSeries2(param1, param2, param3, param4, param5, param6, param7, param8)
+{
+	if (ISOSMAC	= 'Mac') // 맥곰 베타 서비스용
+	{
+		if (DEFN.Browser == 'Safari')
+		{
+			if (param6 == '10000')
+			{
+				goCH(param2, param3, param4);
+			} else if (param6 == '100')
+			{
+				goMOVIE(param2, param3);
+			} else if (type == '110')
+			{
+				goDRAMA(param2, param3);
+			}
+		}
+	}
+
+	if (browser.msie == true &&  (param6 == '10000'))
+	{
+		goCH(param2, param3, param4);
+	} else if (browser.msie == true && (param6 == '100'))
+	{
+		goMOVIE(param2, param3);
+	} else if (browser.msie == true && (param6 == '110'))
+	{
+		goDRAMA(param2, param3);
+	} else
+	{
+		var launcher	= baseUrl + "series_set.cgi";
+		var param	= "";
+		var arrParam= "";
+		var pLen	= 0;
+		var tmpZero	= "";
+		var type	= 'series';
+		param	+= playParam[type][0] + "=" + param1 + "&";
+		param	+= playParam[type][1] + "=" + param2 + "&";
+		param	+= playParam[type][2] + "=" + param3 + "&";
+
+		if(param6 == '100' || param6 == '110'){
+			arrParam = param4.split(",");
+			pLen = arrParam.length;
+			for(var i = 0;i < pLen;i++){
+				if(i ==0){
+					tmpZero = "0";
+				}else{
+					tmpZero +=",0";
+				}
+			}
+			param8	= arrParam[0];
+			param	+= playParam[type][4] + "=" + tmpZero + "&";
+			param	+= playParam[type][3] + "=" + param5 + "&";
+		}else{
+			param	+= playParam[type][3] + "=" + param4 + "&";
+			param	+= playParam[type][4] + "=" + param5 + "&";
+		}
+		param	+= playParam[type][5] + "=" + param6 + "&";
+		param	+= playParam[type][6] + "=" + escape(param7) + "&";
+		param	+= playParam[type][8] + "=" + param8;
+		launcher	+= "?" + param;
+		playing(launcher);
+	}
+}
+
+
+function showSeries3(param1, param2, param3, param4, param5, param6, param7, param8, param9)
+{
+	if (ISOSMAC	= 'Mac') // 맥곰 베타 서비스용
+	{
+		if (DEFN.Browser == 'Safari')
+		{
+			if (param6 == '10000')
+			{
+				goCH(param2, param3, param4);
+			} else if (param6 == '100')
+			{
+				goMOVIE(param2, param3);
+			} else if (type == '110')
+			{
+				goDRAMA(param2, param3);
+			}
+		}
+	}
+
+	if (browser.msie == true && (param6 == '10000'))
+	{
+		goCH(param2, param3, param4);
+	} else if (browser.msie == true &&  (param6 == '100'))
+	{
+		goMOVIE(param2, param3);
+	} else if (browser.msie == true && (param6 == '110'))
+	{
+		goDRAMA(param2, param3);
+	} else
+	{
+		var launcher	= baseUrl + "series_set.cgi";
+		var param	= "";
+		var arrParam= "";
+		var pLen	= 0;
+		var tmpZero	= "";
+		var type	= 'series';
+		param	+= playParam[type][0] + "=" + param1 + "&";
+		param	+= playParam[type][1] + "=" + param2 + "&";
+		param	+= playParam[type][2] + "=" + param3 + "&";
+
+		if(param6 == '100' || param6 == '110'){
+			arrParam = param4.split(",");
+			pLen = arrParam.length;
+			for(var i = 0;i < pLen;i++){
+				if(i ==0){
+					tmpZero = "0";
+				}else{
+					tmpZero +=",0";
+				}
+			}
+			param8	= arrParam[0];
+			param	+= playParam[type][4] + "=" + tmpZero + "&";
+			param	+= playParam[type][3] + "=" + param5 + "&";
+		}else{
+			param	+= playParam[type][3] + "=" + param4 + "&";
+			param	+= playParam[type][4] + "=" + param5 + "&";
+		}
+		param	+= playParam[type][5] + "=" + param6 + "&";
+		param	+= playParam[type][6] + "=" + escape(param7) + "&";
+		param	+= playParam[type][8] + "=" + param8 + "&";
+		param	+= playParam[type][9] + "=" + escape(param9);
+		launcher	+= "?" + param;
+		playing(launcher);
+	}
+}
+
+function showSeriesNav(param1, param2, param3, param4, param5, param6, param7, param8)
+{
+	if (ISOSMAC	= 'Mac') // 맥곰 베타 서비스용
+	{
+		if (DEFN.Browser == 'Safari')
+		{
+			if (param6 == '10000')
+			{
+				goCH(param2, param3, param4);
+			} else if (param6 == '100')
+			{
+				goMOVIE(param2, param3);
+			} else if (type == '110')
+			{
+				goDRAMA(param2, param3);
+			}
+		}
+	}
+
+	if (browser.msie == true && (param6 == '10000'))
+	{
+		goCH(param2, param3, param4);
+	} else if (browser.msie == true && (param6 == '100'))
+	{
+		goMOVIE(param2, param3);
+	} else if (browser.msie == true && (param6 == '110'))
+	{
+		goDRAMA(param2, param3);
+	} else
+	{
+		var launcher	= baseUrl + "series_set.cgi";
+		var param	= "";
+		var arrParam= "";
+		var pLen	= 0;
+		var level	= 1;
+		var tmpZero	= "";
+		var type	= 'series';
+		param	+= playParam[type][0] + "=" + param1 + "&";
+		param	+= playParam[type][1] + "=" + param2 + "&";
+		param	+= playParam[type][2] + "=" + param3 + "&";
+
+		if(param6 == '100' || param6 == '110'){
+			arrParam = param4.split(",");
+			pLen = arrParam.length;
+			for(var i = 0;i < pLen;i++){
+				if(i ==0){
+					tmpZero = "0";
+				}else{
+					tmpZero +=",0";
+				}
+			}
+			level	= arrParam[0];
+			param	+= playParam[type][4] + "=" + tmpZero + "&";
+			param	+= playParam[type][3] + "=" + param5 + "&";
+		}else{
+			param	+= playParam[type][3] + "=" + param4 + "&";
+			param	+= playParam[type][4] + "=" + param5 + "&";
+		}
+		param	+= playParam[type][5] + "=" + param6 + "&";
+		param	+= playParam[type][6] + "=" + escape(param7) + "&";
+		param	+= playParam[type][7] + "=" + param8 + "&";
+		param	+= playParam[type][8] + "=" + level;
+		launcher	+= "?" + param;
+	//	alert(launcher);
+		playing(launcher);
+	}
+}
+
+function showSeriesNav2(param1, param2, param3, param4, param5, param6, param7, param8, param9)
+{
+	if (ISOSMAC	= 'Mac') // 맥곰 베타 서비스용
+	{
+		if (DEFN.Browser == 'Safari')
+		{
+			if (param6 == '10000')
+			{
+				goCH2(param2, param3, param4, param7);
+				goCH(param2, param3, param4);
+			} else if (param6 == '100')
+			{
+				goMOVIE(param2, param3);
+			} else if (type == '110')
+			{
+				goDRAMA(param2, param3);
+			}
+		}
+	}
+
+	if (browser.msie == true && (param6 == '10000'))
+	{
+		goCH(param2, param3, param4);
+	} else if (browser.msie == true && (param6 == '100'))
+	{
+		goMOVIE(param2, param3);
+	} else if (browser.msie == true && (param6 == '110'))
+	{
+		goDRAMA(param2, param3);
+	} else
+	{
+		var launcher	= baseUrl + "series_set.cgi";
+		var param	= "";
+		var arrParam= "";
+		var pLen	= 0;
+		var tmpZero	= "";
+		var type	= 'series';
+		param	+= playParam[type][0] + "=" + param1 + "&";
+		param	+= playParam[type][1] + "=" + param2 + "&";
+		param	+= playParam[type][2] + "=" + param3 + "&";
+
+		if(param6 == '100' || param6 == '110'){
+			arrParam = param4.split(",");
+			pLen = arrParam.length;
+			for(var i = 0;i < pLen;i++){
+				if(i ==0){
+					tmpZero = "0";
+				}else{
+					tmpZero +=",0";
+				}
+			}
+			param9	= arrParam[0];
+			param	+= playParam[type][4] + "=" + tmpZero + "&";
+			param	+= playParam[type][3] + "=" + param5 + "&";
+		}else{
+			param	+= playParam[type][3] + "=" + param4 + "&";
+			param	+= playParam[type][4] + "=" + param5 + "&";
+		}
+		param	+= playParam[type][5] + "=" + param6 + "&";
+		param	+= playParam[type][6] + "=" + escape(param7) + "&";
+		param	+= playParam[type][7] + "=" + param8 + "&";
+		param	+= playParam[type][8] + "=" + param9;
+		launcher	+= "?" + param;
+	//	alert(launcher);
+		playing(launcher);
+	}
+}
+
+function showThumbNav(param1, param2, param3, param4, param5, param6, param7, param8)
+{
+	if (ISOSMAC	= 'Mac') // 맥곰 베타 서비스용
+	{
+		if (DEFN.Browser == 'Safari')
+		{
+			if (param6 == '10000')
+			{
+				goCH(param2, param3, param4);
+			} else if (param6 == '100')
+			{
+				goMOVIE(param2, param3);
+			} else if (type == '110')
+			{
+				goDRAMA(param2, param3);
+			}
+		}
+	}
+
+	if (browser.msie == true && (param6 == '10000'))
+	{
+		goCH(param2, param3, param4);
+	} else if (browser.msie == true && (param6 == '100'))
+	{
+		goMOVIE(param2, param3);
+	} else if (browser.msie == true && (param6 == '110'))
+	{
+		goDRAMA(param2, param3);
+	} else
+	{
+		var launcher    = baseUrl + "launcher_thumb.cgi";
+		var param   = "";
+		var arrParam= "";
+		var pLen    = 0;
+		var level   = 1;
+		var tmpZero = "";
+		var type    = 'series';
+		param   += playParam[type][0] + "=" + param1 + "&";
+		param   += playParam[type][1] + "=" + param2 + "&";
+		param   += playParam[type][2] + "=" + param3 + "&";
+
+		if(param6 == '100' || param6 == '110'){
+			arrParam = param4.split(",");
+			pLen = arrParam.length;
+			for(var i = 0;i < pLen;i++){
+				if(i ==0){
+					tmpZero = "0";
+				}else{
+					tmpZero +=",0";
+				}
+			}
+			level   = arrParam[0];
+			param   += playParam[type][4] + "=" + tmpZero + "&";
+			param   += playParam[type][3] + "=" + param5 + "&";
+		}else{
+			param   += playParam[type][3] + "=" + param4 + "&";
+			param   += playParam[type][4] + "=" + param5 + "&";
+		}
+		param   += playParam[type][5] + "=" + param6 + "&";
+		param   += playParam[type][6] + "=" + escape(param7) + "&";
+		param   += playParam[type][7] + "=" + param8 + "&";
+		param   += playParam[type][8] + "=" + level;
+		launcher    += "?" + param;
+		playing(launcher);
+	}
+}
+
+function showMusicChartWeb(param1, param2, param3, param4, param5, param6, param7, param8, param9)
+{
+	var launcher	= "http://tv.gomtv.com/cgi-bin/launcher/series_set.cgi";
+	var param	= "";
+	var arrParam= "";
+	var pLen	= 0;
+	var tmpZero	= "";
+	var type	= 'series';
+	param	+= playParam[type][0] + "=" + param1 + "&";
+	param	+= playParam[type][1] + "=" + param2 + "&";
+	param	+= playParam[type][2] + "=" + param3 + "&";
+	param	+= playParam[type][3] + "=" + param4 + "&";
+	param	+= playParam[type][4] + "=" + param5 + "&";
+	param	+= playParam[type][5] + "=" + escape(param6) + "&";
+	param	+= playParam[type][6] + "=" + param7 + "&";
+	param	+= playParam[type][7] + "=" + param8 + "&";
+	param	+= playParam[type][8] + "=" + param9 + "&";
+	param 	+= "source=MUSIC_CHART";
+	launcher	+= "?" + param;
+//	alert(launcher);
+	playing(launcher);
+}
+
+
+function playing(launcher)
+{
+//	alert(launcher);
+	var str="<iframe name='runframe' id='runframe' src='"+launcher+"' width='0' height='0'></iframe>";
+	document.getElementById('hiddenlyr').innerHTML=str;
+}
+
+
+function getCookieAutoPlay( name )
+{
+	var nameOfCookie = name + '=';
+	var x = 0;
+	while ( x <= document.cookie.length )
+	{
+		var y = (x+nameOfCookie.length);
+		if ( document.cookie.substring( x, y ) == nameOfCookie )
+		{
+			if ( (endOfCookie=document.cookie.indexOf( ';', y )) == -1 )
+				endOfCookie = document.cookie.length;
+			return unescape( document.cookie.substring( y, endOfCookie ) );
+		}
+		x = document.cookie.indexOf( ' ', x ) + 1;
+		if ( x == 0 )
+			break;
+	}
+	return '';
+}
+
+function setCookieAutoPlay( name, value )
+{
+	document.cookie = name + '=' + value + '; domain=.gomtv.com; path=/;';
+}
+
+function clearAutoPlay()
+{
+	var str="<iframe height=0 width=0></iframe>";
+	document.getElementById('idxautohiddenlyr').innerHTML=str;
+}
+
+function closeAutoPlay()
+{
+	setTimeout('clearAutoPlay()',1000);
+}
+
+function initAutoPlay(type)
+{
+	if ( top.document.location == document.location )
+	{
+		var autoplay = getCookieAutoPlay( "autoplay" );
+		var autotype = getCookieAutoPlay( "autotype" );
+		if (autotype)
+		{
+			type = autotype;
+		}
+
+		setCookieAutoPlay( "autoplay", 0 );
+		if ( autoplay == 1 )
+		{
+			var level	= getCookieAutoPlay( "autolevel" );
+			if(level == '')
+			{
+				level = 1;
+				if(type == 100 || type == 110){
+					level = 2;
+				}
+			}
+			param	= "isweb=0&isnav=0&";
+			param	+= playParam['series'][1] + "=" + getCookieAutoPlay( "autoid0s" ) + "&";
+			param	+= playParam['series'][2] + "=" + getCookieAutoPlay( "autoid1s" ) + "&";
+			param	+= playParam['series'][3] + "=" + getCookieAutoPlay( "autoid2s" ) + "&";
+			param	+= playParam['series'][4] + "=" + getCookieAutoPlay( "autoid3s" ) + "&";
+			param	+= "source=" + getCookieAutoPlay( "autosource" ) + "&";
+			param	+= playParam['series'][5] + "=" + type + "&";
+			param	+= playParam['series'][8] + "=" + level;
+			idxid	= getCookieAutoPlay( "autoid0s" );
+			if( idxid.length > 0 )
+			{	var launcher	= baseUrl + "series_set.cgi";
+				launcher		+= "?" + param;
+				var str="<iframe name=idxautorunframe id=idxautorunframe src='"+launcher+"' width=0 height=0 onLoad='closeAutoPlay();'></iframe>";
+				document.all['idxautohiddenlyr'].innerHTML=str;
+			}
+		}
+	}
+}
+
+function RunGom(url)
+{
+	if(gomtvx.IsInstall)							// 설치될때까지 대기
+	{
+		// 기본 정보 세팅
+		gomtvx.SetVersionURL("http://app.gomtv.com/gom/GrVersion.ini");
+		gomtvx.SetClassName("GomPlayer1.x");
+		gomtvx.SetProgramID("GOMPLAYER");			// 베타이면 "GOMPLAYERBETA", 정식이면 "GOMPLAYER"
+
+		// 자동 설치 막기
+		gomtvx.bAutoInstall=0;
+		gomtvx.bSilentInstall=0;
+
+		// 곰 실행
+		gomtvx.Run("/nosetup", "", "");
+
+		// 명령어 보내기
+		gomtvx.SendCommand("/showtv");					// tv창 열기
+		var param = "/navtv \"" + url + "\"";			// tv창에 브라우징
+		gomtvx.SendCommand(param);
+	}
+	else
+	{
+		var param = "RunGom(" + "\"" + url + "\"" + ")";
+		setTimeout(param, 100);					// 설치할때까지 재시도.
+	}
+}
+
+function OpenTV(url)
+{
+	launcher	= "http://tv.gomtv.com/cgi-bin/launcher/launcher_only_page.cgi?navurl="+escape(url);
+	var str="<iframe name='runframe' id='runframe' src='"+launcher+"' width='0' height='0'></iframe>";
+	document.getElementById('hiddenlyr').innerHTML=str;
+}

@@ -1,0 +1,391 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta name="msvalidate.01" content="79C78EB33B8812273BEAA273668E9D92" />
+ <title>SANS: Information Security Reading Room - Computer Security White Papers</title>
+ <link rel="shortcut icon" href="/favicon.ico" />
+ <meta http-equiv="Content-type" content="text/html; charset=ISO-8859-1" />
+  <meta name="robots" content="follow" /><meta name="description" content="computer and information security white papers provided free to benefit the infosec community. Features 1,941 papers in 77 categories." />
+<meta name="keywords" content="computer security white papers, information security white papers, free security white papers" />
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-25324117-1']);
+  _gaq.push(['_trackPageview']);  
+  _gaq.push(['_setLocalRemoteServerMode']);
+  _gaq.push(['_setLocalGifPath', 'http://www.sans.org']);      
+    
+  _gaq.push(['b._setAccount', 'UA-25324117-2']);
+  _gaq.push(['b._setDomainName', 'sans.org']);  
+  _gaq.push(['b._addIgnoredRef', 'sans.org']);
+  _gaq.push(['b._trackPageview']);     
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+<script src="/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+    urchinTracker();
+</script>
+
+ <link rel="stylesheet" href="/css/new-style/master.php?cc=201103250102" type="text/css" media="screen, projection,print" />
+    		   <link rel="stylesheet" href="/css/new-style/styles.css?cc=20110325" type="text/css" media="screen, projection,print" />
+    		   <link rel="stylesheet" href="/css/new-style/site_selector.css?cc=20110325" type="text/css" media="screen, projection,print" />
+    		   <link rel="stylesheet" href="/css/new-style/site.css?cc=20110325" type="text/css" media="screen, projection,print" /><link rel="stylesheet" href="/css/reading_room.css?cc=20070629" type="text/css" media="screen, projection, print" />
+<style type="text/css">
+.links-split2 {width: 450px}
+.links-split1 {width: 325px; margin: 0 0 0 5px !important;}
+</style><script type="text/javascript" src="/expandable.js"></script>
+<script type="text/javascript" src="/menu.js"></script>
+
+
+</head>
+
+<body>
+<div class="noheader">
+<div class="container default-navigation-all">
+<!-- header -->
+<div class="header">
+<a href="/"><img src="/images/design-site/logo.png" alt="SANS Institute" class="logo" /></a>
+
+<ul class="site-selector">
+ <li class="site-switcher"><a href="#"><span class="hidden">SANS Site Network</span></a>
+  <ul class="sites">
+   <li class="current-site">Current Site</li>
+   <li class="sans"><a href=""><img src="/images/design/custom/site-selector/site-icons/sans.png" alt="sans" />Training</a></li>
+   <li class="selector-help">Choose a different site <a href="/help/site-network"><span class="hidden">Help</span></a></li>
+   <li class="giac"><a href="http://www.giac.org"><img src="/images/design/custom/site-selector/site-icons/giac.png" alt="giac" />Certification</a></li>
+   <li class="sti"><a href="http://www.sans.edu"><img src="/images/design/custom/site-selector/site-icons/sti.png" alt="sti" />Cyber Security Graduate School</a></li>
+   <li class="isc"><a href="http://isc.sans.edu"><img src="/images/design/custom/site-selector/site-icons/isc.png" alt="isc" />Internet Storm Center</a></li>
+   <li class="awareness"><a href="http://www.securingthehuman.org"><img src="/images/design/custom/site-selector/site-icons/awareness.png" alt="awareness" />Security Awareness Training</a></li>
+   <li class="forensics"><a href="http://computer-forensics.sans.org"><img src="/images/design/custom/site-selector/site-icons/forensics.png" alt="forensics" />Computer Forensics</a></li>
+   <li class="pentest "><a href="http://pen-testing.sans.org"><img src="/images/design/custom/site-selector/site-icons/pentest.png" alt="pentest">Penetration Testing</a></li>
+   <li class="audit"><a href="http://it-audit.sans.org"><img src="/images/design/custom/site-selector/site-icons/audit.png" alt="audit" />IT Audit</a></li>
+   <li class="ssi"><a href="http://software-security.sans.org"><img src="/images/design/custom/site-selector/site-icons/software-security.png" alt="ssi" />Software Security</a></li>
+  </ul>
+ </li>
+</ul>
+
+<div class="clear"></div>
+<div class="top-menu">
+<ul class="dropdown user-menu">
+ <li class="root-item login-status"><a href="https://www.sans.org/account/">Secure Access / Login<!-- |--></a>  </li>
+  <!-- <li class="root-item cart-status"><a href="#">My Cart <img src="/images/icons/silk/cart.png" /></a></li> -->
+ <li class="root-item">
+  <!-- Begin Google Site Search -->
+  <form action="/search/results/" method="post" id="cse-search-box" class="search-form">
+   <input type="text" id="q" name="q" value="" class="search-input" />
+   <input id="search-button" type="image" title="Search" name="sa" value="Search" class="search-submit" src="/images/icons2/custom/search.png" />
+  </form>
+  <script type="text/javascript" src="http://www.google.com/cse/brand?form=cse-search-box&lang=en"></script>
+ </li>
+</ul><!-- / .login-status -->
+
+<div class="clear"></div>
+<ul class="dropdown main-nav">
+
+ <li class="root-item"><a href="/find-training/" onClick="_gaq.push(['_trackEvent', 'FindTraining', 'Clicked', 'FindTrainingMenu']);">Find Training</a>
+  <ul>
+   <li class="first"><a href="/find-training/" onClick="_gaq.push(['_trackEvent', 'SearchForTraining', 'Clicked', 'FindTrainingMenu']);">Search For Training</a></li>
+   <li><a href="/security-training/bylocation/" onClick="_gaq.push(['_trackEvent', 'UpcomingEvents', 'Clicked', 'FindTrainingMenu']);">Upcoming Events</a></li>
+    <li><a href="/security-training/courses.php" onClick="_gaq.push(['_trackEvent', 'CourseList', 'Clicked', 'FindTrainingMenu']);">Course List</a>
+    <li><a href="/security-training/curriculums/index.php" onClick="_gaq.push(['_trackEvent', 'TrainingList', 'Clicked', 'FindTrainingMenu']);">Training Curricula &raquo;</a>
+     <ul>
+      <li class="first"><a href="/security-training/curriculums/security" onClick="_gaq.push(['_trackEvent', 'SecCurr', 'Clicked', 'FindTrainingMenu']);">Security</a></li>
+      <li class="no-top-radius"><a href="/security-training/curriculums/management" onClick="_gaq.push(['_trackEvent', 'MgtCurr', 'Clicked', 'FindTrainingMenu']);">Management</a></li>
+      <li class="no-top-radius"><a href="/security-training/curriculums/forensics" onClick="_gaq.push(['_trackEvent', 'ForCurr', 'Clicked', 'FindTrainingMenu']);">Forensics</a></li>
+      <li class="no-top-radius"><a href="/security-training/curriculums/developer" onClick="_gaq.push(['_trackEvent', 'DevCurr', 'Clicked', 'FindTrainingMenu']);">Secure Software Development</a></li>
+      <li class="no-top-radius"><a href="/security-training/curriculums/pen-test" onClick="_gaq.push(['_trackEvent', 'PenTestCurr', 'Clicked', 'FindTrainingMenu']);">Penetration Testing</a></li>
+      <li class="no-top-radius"><a href="/security-training/curriculums/system-administrator" onClick="_gaq.push(['_trackEvent', 'SysAdmCurr', 'Clicked', 'FindTrainingMenu']);">System Administration</a></li>
+      <li class="no-top-radius"><a href="/security-training/curriculums/incident-handler" onClick="_gaq.push(['_trackEvent', 'IncHandCurr', 'Clicked', 'FindTrainingMenu']);">Incident Handling</a></li>
+      <li class="no-top-radius"><a href="/security-training/curriculums/intrusion" onClick="_gaq.push(['_trackEvent', 'InstruAnCurr', 'Clicked', 'FindTrainingMenu']);">Intrusion Analysis</a></li>
+      <li class="no-top-radius"><a href="/security-training/curriculums/audit" onClick="_gaq.push(['_trackEvent', 'AuditCurr', 'Clicked', 'FindTrainingMenu']);">Audit</a></li>
+      <li class="no-top-radius"><a href="/security-training/curriculums/legal" onClick="_gaq.push(['_trackEvent', 'LegalCurr', 'Clicked', 'FindTrainingMenu']);">Legal</a></li>
+      <li class="no-top-radius last"><a href="/security-training/curriculums/cyber-guardian" onClick="_gaq.push(['_trackEvent', 'CyberGCurr', 'Clicked', 'FindTrainingMenu']);">Cyber Guardian</a></li>
+     </ul>
+    </li>
+    <li><a href="/security-training/discounts.php" onClick="_gaq.push(['_trackEvent', 'GroupDisc', 'Clicked', 'FindTrainingMenu']);">Group Discounts</a></li>
+   <li class="last"><a href="/security-training/calendars/" onClick="_gaq.push(['_trackEvent', 'Calendars', 'Clicked', 'FindTrainingMenu']);">Calendars</a></li>
+  </ul>
+ </li>
+
+ <li class="root-item"><a href="/security-training/" onClick="_gaq.push(['_trackEvent', 'LiveTraining', 'Clicked', 'LiveTrainingMenu']);">Live Training</a>
+  <ul>
+   <li class="first"><a href="/find-training/live" onClick="_gaq.push(['_trackEvent', 'SearchTraining', 'Clicked', 'LiveTrainingMenu']);">Search For Training</a></li>
+    <li><a href="/security-training/bylocation/" onClick="_gaq.push(['_trackEvent', 'UpcomEvents', 'Clicked', 'LiveTrainingMenu']);">Upcoming Events</a></li>
+    <li><a href="/summit/" onClick="_gaq.push(['_trackEvent', 'Summits', 'Clicked', 'LiveTrainingMenu']);">Summit Series</a></li>
+    <li><a href="/community_sans/" onClick="_gaq.push(['_trackEvent', 'Community', 'Clicked', 'LiveTrainingMenu']);">Community Events</a></li>
+    <li><a href="/mentor/" onClick="_gaq.push(['_trackEvent', 'Mentor', 'Clicked', 'LiveTrainingMenu']);">Mentor Program</a></li>
+    <li><a href="/onsite/" onClick="_gaq.push(['_trackEvent', 'Onsite', 'Clicked', 'LiveTrainingMenu']);">OnSite</a></li>
+    <li><a href="/partnership/" onClick="_gaq.push(['_trackEvent', 'Partners', 'Clicked', 'LiveTrainingMenu']);">Partnership Series</a></li>
+    <li><a href="/work-study" onClick="_gaq.push(['_trackEvent', 'WorkStudy', 'Clicked', 'LiveTrainingMenu']);">Work Study</a></li>
+    <li class="last"><a href="/coins/" onClick="_gaq.push(['_trackEvent', 'Coins', 'Clicked', 'LiveTrainingMenu']);">COINS</a></li>
+  </ul>
+ </li>
+
+ <li class="root-item"><a href="/online-security-training/" onClick="_gaq.push(['_trackEvent', 'OnlineTraining', 'Clicked', 'OnlineTrainingMenu']);">Online Training</a>
+  <ul>
+   <li class="first"><a href="/find-training/online" onClick="_gaq.push(['_trackEvent', 'SearchTraining', 'Clicked', 'OnlineTrainingMenu']);">Search For Training</a></li>
+   <li><a href="/virtual-training/vlive" onClick="_gaq.push(['_trackEvent', 'vLive', 'Clicked', 'OnlineTrainingMenu']);">vLive</a></li>
+   <li><a href="/ondemand/" onClick="_gaq.push(['_trackEvent', 'OnDemand', 'Clicked', 'OnlineTrainingMenu']);">OnDemand</a></li>
+   <li><a href="/virtual-training/event-simulcast" onClick="_gaq.push(['_trackEvent', 'Simulcast', 'Clicked', 'OnlineTrainingMenu']);">Simulcast &raquo;</a>
+     <ul>
+       <li class="first"><a href="/virtual-training/event-simulcast" onClick="_gaq.push(['_trackEvent', 'EventSimu', 'Clicked', 'OnlineTrainingMenu']);">Event</a></li>
+       <li class="last"><a href="/virtual-training/custom-simulcast" onClick="_gaq.push(['_trackEvent', 'CustSimu', 'Clicked', 'OnlineTrainingMenu']);">Custom</a></li>
+     </ul>
+   </li>
+   <li><a href="/security-awareness/" onClick="_gaq.push(['_trackEvent', 'SecAwareness', 'Clicked', 'OnlineTrainingMenu']);">Security Awareness</a></li>
+   <li class="last"><a href="/selfstudy/" onClick="_gaq.push(['_trackEvent', 'SelfStudy', 'Clicked', 'OnlineTrainingMenu']);">SelfStudy</a></li>
+  </ul>
+ </li>
+
+ <li class="root-item"><a href="/programs/" onClick="_gaq.push(['_trackEvent', 'Programs', 'Clicked', 'ProgramsMenu']);">Programs</a>
+  <ul>
+    <li class="first"><a href="/vouchers/" onClick="_gaq.push(['_trackEvent', 'VoucherCre', 'Clicked', 'ProgramsMenu']);">Voucher Credit</a></li>
+    <li><a href="/cyber-guardian" onClick="_gaq.push(['_trackEvent', 'CyberGuar', 'Clicked', 'ProgramsMenu']);">Cyber Guardian</a></li>
+    <li><a href="/cyber-ranges/" onClick="_gaq.push(['_trackEvent', 'CyberRang', 'Clicked', 'ProgramsMenu']);">Cyber Ranges</a></li>
+    <li class="last"><a href="/8570/" onClick="_gaq.push(['_trackEvent', 'Dod8570', 'Clicked', 'ProgramsMenu']);">DoD 8570</a></li>
+  </ul>
+ </li>
+
+ <li class="root-item"><a href="/security-resources/" onClick="_gaq.push(['_trackEvent', 'Resources', 'Clicked', 'ResourcesMenu']);">Resources</a>
+  <ul>
+    <li class="first"><a href="/reading_room/" onClick="_gaq.push(['_trackEvent', 'ReadingRoom', 'Clicked', 'ResourcesMenu']);">Reading Room</a></li>
+    <li><a href="/webcasts/" onClick="_gaq.push(['_trackEvent', 'Webcast', 'Clicked', 'ResourcesMenu']);">Webcasts</a></li>
+    <li><a href="/newsletters/" onClick="_gaq.push(['_trackEvent', 'Newsletter', 'Clicked', 'ResourcesMenu']);">Newsletters</a></li>
+    <li><a href="/top25-software-errors/" onClick="_gaq.push(['_trackEvent', 'Top25Err', 'Clicked', 'ResourcesMenu']);">Top 25 Programming Errors</a></li>
+    <li><a href="/critical-security-controls/" onClick="_gaq.push(['_trackEvent', 'CriticalControls', 'Clicked', 'ResourcesMenu']);">Top 20 Critical Controls</a></li>
+    <li><a href="/security-resources/policies/" onClick="_gaq.push(['_trackEvent', 'SecPolProj', 'Clicked', 'ResourcesMenu']);">Security Policy Project</a></li>
+    <li><a href="/security-resources/vendor_directory/" onClick="_gaq.push(['_trackEvent', 'FromVendor', 'Clicked', 'ResourcesMenu']);">From Vendors &raquo;</a>
+      <ul>
+        <li class="first"><a href="/security-resources/vendor_directory/" onClick="_gaq.push(['_trackEvent', 'BuyGuide', 'Clicked', 'ResourcesMenu']);">SANS Buyers Guide</a></li>
+        <li><a href="/security-resources/vendor_demos/" onClick="_gaq.push(['_trackEvent', 'SecToolDemo', 'Clicked', 'ResourcesMenu']);">Security Tool Demos</a></li>
+        <li class="last"><a href="/vendor-software-room/" onClick="_gaq.push(['_trackEvent', 'VendorBetaRoom', 'Clicked', 'ResourcesMenu']);">Vendor Software Beta Room</a></li>
+      </ul>
+    </li>
+    <li class="last"><a href="/security-resources/" onClick="_gaq.push(['_trackEvent', 'Additional', 'Clicked', 'ResourcesMenu']);">Additional Resources</a></li>
+  </ul>
+ </li>
+
+ <li class="root-item"><a href="/vendor/" class="vendor menu-vendor" onClick="_gaq.push(['_trackEvent', 'Vendor', 'Clicked', 'VendorMenu']);">Vendor</a>
+  <ul>
+    <li class="first"><a href="/vendor/" onClick="_gaq.push(['_trackEvent', 'Overview', 'Clicked', 'VendorMenu']);">Overview</a></li>
+    <li><a href="/vendor/sponsorship/" onClick="_gaq.push(['_trackEvent', 'Sponsor', 'Clicked', 'VendorMenu']);">Sponsorship</a></li>
+    <li><a href="/vendor/demographics/" onClick="_gaq.push(['_trackEvent', 'Demogra', 'Clicked', 'VendorMenu']);">Demographics</a></li>
+    <li><a href="/vendor/events/" onClick="_gaq.push(['_trackEvent', 'Events', 'Clicked', 'VendorMenu']);">Events</a></li>
+    <li class="last"><a href="/vendor/contact/" onClick="_gaq.push(['_trackEvent', 'Contact', 'Clicked', 'VendorMenu']);">Contact</a></li>
+  </ul>
+ </li>
+
+ <li class="root-item"><a href="/about/" class="about menu-about" onClick="_gaq.push(['_trackEvent', 'About', 'Clicked', 'AboutMenu']);">About</a>
+  <ul class="last-menu">
+    <li class="first"><a href="/about/sans.php" onClick="_gaq.push(['_trackEvent', 'AboutSans', 'Clicked', 'AboutMenu']);">About SANS</a></li>
+    <li><a href="/security-training/instructors.php" onClick="_gaq.push(['_trackEvent', 'CertInstru', 'Clicked', 'AboutMenu']);">Certified Instructors</a></li>
+    <li><a href="/about/contact.php" onClick="_gaq.push(['_trackEvent', 'ContactSans', 'Clicked', 'AboutMenu']);">Contact SANS</a></li>
+    <li><a href="/faq/" onClick="_gaq.push(['_trackEvent', 'SansFaq', 'Clicked', 'AboutMenu']);">SANS FAQ</a></li>
+    <li><a href="/link-to-us/" rel="nofollow" onClick="_gaq.push(['_trackEvent', 'LinkTo', 'Clicked', 'AboutMenu']);">Link to SANS</a></li>
+    <li><a href="/press/" onClick="_gaq.push(['_trackEvent', 'PressRoom', 'Clicked', 'AboutMenu']);">Press Room</a></li>
+    <li><a href="http://pgp.mit.edu:11371/pks/lookup?op=get&amp;search=0xA1694E46'" rel="nofollow" onClick="_gaq.push(['_trackEvent', 'PgpKey', 'Clicked', 'AboutMenu']);">PGP Key</a></li>
+    <li class="last"><a href="/key.txt" rel="nofollow" onClick="_gaq.push(['_trackEvent', 'PgpKeyLocal', 'Clicked', 'AboutMenu']);">PGP Key - Local Copy</a></li>
+  </ul>
+ </li>
+</ul><!-- / .dropdown -->
+</div><!-- / .top-menu -->
+
+<div class="clear"></div><!-- / .clear -->
+
+</div><!-- / .header -->
+</div><!--  end .container -->
+
+<div class="container">
+
+<div id="page-content">
+
+<h1 align="center">Welcome to SANS Information Security Reading Room</h1>
+ <div class="subnote">
+   <q>Featuring over 1,941 original computer security white papers in 77  different categories.</q>
+ </div>
+
+ <div class="links-split">
+<img src="/images/design/custom/icons/training/large/reading-room.png" style="float:left;" />
+
+<table width="480px" align="center" id="rr-special">
+<tr><td><h5>Special Categories</h5></td>
+<td align="center" width="20%"><h5>Last Updated</h5></td></tr>
+
+<tr><td><a href="last.php" accesskey="l">Last 25 Papers Added to the SANS InfoSec Reading Room</a><a href="rss/" class="rss"></a></td><td valign="top" align="center" class="h3invert">Feb 07, 12</td></tr>
+<tr><td><a href="top25.php">Top 25 Papers Based on Views</a></td><td align="center" class="h3invert">Feb 12, 12</td></tr>
+<tr><td><a href="analysts_program/">SANS Analyst Program</a></td><td align="center" class="h3invert">January, 2012</td></tr>
+<tr><td><a href="http://www.sans.edu/resources/securitylab/41/" target="_blank">Thought Leadership Interviews (STI)</a></td><td align="center" class="h3invert">March 04, 2011</td></tr>
+<tr><td><a href="/reading_room/whitepapers//" title=""></a></td><td align="center" class="h3invert"></td></tr>
+<tr><td><a href="/tools.php">Free Vendor White Papers</a> </td><td align="center" class="h3invert">Summer 2011</td></tr>
+<tr><td><a href="certmatters/">Certification Series/Surveys</a>, <a href="books/">Book Reviews</a>, <a href="special.php">Special Papers</a></td><td align="center" class="h3invert">Archive</td></tr>
+<!--<tr><td><strong>Reading Room podcast</strong> <a class="smalltext" target="_blank" href="http://docs.info.apple.com/article.html?artnum=301880">(RSS Reader required)</a><a href="podcast/" class="rss"></a></td><td valign="top" align="center">
+</td></tr>-->
+</table>
+<br />
+
+<div id="rr-banner">
+<a href="/reading_room/images/click.php?id=553"  target="_blank"><img src="http://www.sans.org/reading_room/banner.php?id=553" alt="ArcSight" border="0" height="60" width="468" /></a></div>
+
+<p class="margin-top">To access the white papers, please choose a category from the list below. You must have a working PDF viewer installed to access the papers.</p> 
+<p><a href="/info.php?id=211" target="_blank">Don't have Adobe Acrobat Reader? Download it for free! <img src="/images/acrobat.gif" border="0" align="absmiddle"></a></p>
+<img src="images/wp.gif" title="Vendor White Paper" alt="Vendor White Paper Logo" style="float:left;margin-right:5px" /><p>Look for this logo to easily identify free vendor content in the categories below.</p>
+<h3>Expand Your <a href="/computer_security.php">Computer Security</a> Knowledge With:</h3>
+
+<div class="links-split1">
+<table>
+
+<!-- left side -->
+
+<tr><td><h5>Category</h5></td>
+<td align="center" width="30%"><h5>Last Updated</h5></td></tr>
+<tr><td><a href="/reading_room/whitepapers/acceptable/" title="Acceptable Use">Acceptable Use</a></td><td align="center" class="h3invert">Sep 14, 10<tr><td><a href="/reading_room/whitepapers/application/" title="Application and Database Security">Application and Database Security</a></td><td align="center" class="h3invert">Feb 07, 12<tr><td><a href="/reading_room/whitepapers/attacking/" title="Attacking Attackers">Attacking Attackers</a></td><td align="center" class="h3invert">Oct 31, 03<tr><td><a href="/reading_room/whitepapers/auditing/" title="Auditing & Assessment">Auditing & Assessment</a></td><td align="center" class="h3invert">Feb 07, 12<tr><td><a href="/reading_room/whitepapers/authentication/" title="Authentication">Authentication</a></td><td align="center" class="h3invert">Oct 15, 09<tr><td><a href="/reading_room/whitepapers/backup/" title="Backup Strategies">Backup Strategies</a></td><td align="center" class="h3invert">May 07, 10<tr><td><a href="/reading_room/whitepapers/bestprac/" title="Best Practices">Best Practices</a></td><td align="center" class="h3invert">Dec 01, 11<tr><td><a href="/reading_room/whitepapers/casestudies/" title="Case Studies">Case Studies</a></td><td align="center" class="h3invert">Nov 17, 10<tr><td><a href="/reading_room/whitepapers/cloud/" title="Cloud Computing">Cloud Computing</a></td><td align="center" class="h3invert">Oct 18, 11<tr><td><a href="/reading_room/whitepapers/commerical/" title="Commercial Software">Commercial Software</a></td><td align="center" class="h3invert">Jan 26, 05<tr><td><a href="/reading_room/whitepapers/compliance/" title="Compliance">Compliance</a></td><td align="center" class="h3invert">Oct 18, 11<tr><td><a href="/reading_room/whitepapers/country/" title="Country-specific Issues">Country-specific Issues</a></td><td align="center" class="h3invert">Oct 18, 11<tr><td><a href="/reading_room/whitepapers/covert/" title="Covert Channels">Covert Channels</a></td><td align="center" class="h3invert">Aug 17, 11<tr><td><a href="/reading_room/whitepapers/dlp/" title="Data Loss Prevention">Data Loss Prevention</a></td><td align="center" class="h3invert">May 16, 11<tr><td><a href="/reading_room/whitepapers/certificates/" title="Digital Certificates">Digital Certificates</a></td><td align="center" class="h3invert">Aug 03, 11<tr><td><a href="/reading_room/whitepapers/privacy/" title="Digital Privacy">Digital Privacy</a></td><td align="center" class="h3invert">Mar 18, 10<tr><td><a href="/reading_room/whitepapers/directories/" title="Directories">Directories</a></td><td align="center" class="h3invert">Mar 15, 07<tr><td><a href="/reading_room/whitepapers/recovery/" title="Disaster Recovery">Disaster Recovery</a></td><td align="center" class="h3invert">May 28, 10<tr><td><a href="/reading_room/whitepapers/dns/" title="DNS Issues">DNS Issues</a></td><td align="center" class="h3invert">Nov 09, 10<tr><td><a href="/reading_room/whitepapers/ecommerce/" title="eCommerce">eCommerce</a></td><td align="center" class="h3invert">Sep 29, 09<tr><td><a href="/reading_room/whitepapers/email/" title="Email Issues">Email Issues</a></td><td align="center" class="h3invert">Jan 12, 09<tr><td><a href="/reading_room/whitepapers/vpns/" title="Encryption & VPNs">Encryption & VPNs</a></td><td align="center" class="h3invert">Jun 08, 11<tr><td><a href="/reading_room/whitepapers/firewalls/" title="Firewalls & Perimeter Protection">Firewalls & Perimeter Protection</a></td><td align="center" class="h3invert">Sep 20, 10<tr><td><a href="/reading_room/whitepapers/forensics/" title="Forensics">Forensics</a></td><td align="center" class="h3invert">Feb 07, 12<tr><td><a href="/reading_room/whitepapers/infosec/" title="Getting Started/InfoSec">Getting Started/InfoSec</a></td><td align="center" class="h3invert">Dec 07, 09<tr><td><a href="/reading_room/whitepapers/hackers/" title="Hackers">Hackers</a></td><td align="center" class="h3invert">Feb 07, 12<tr><td><a href="/reading_room/whitepapers/hipaa/" title="HIPAA">HIPAA</a></td><td align="center" class="h3invert">Mar 09, 05<tr><td><a href="/reading_room/whitepapers/hsoffice/" title="Home & Small Office">Home & Small Office</a></td><td align="center" class="h3invert">Aug 31, 11<tr><td><a href="/reading_room/whitepapers/incident/" title="Incident Handling">Incident Handling</a></td><td align="center" class="h3invert">Nov 29, 11<tr><td><a href="/reading_room/whitepapers/assurance/" title="Information Assurance">Information Assurance</a></td><td align="center" class="h3invert">Jan 11, 11<tr><td><a href="/reading_room/whitepapers/warfare/" title="Information Warfare">Information Warfare</a></td><td align="center" class="h3invert">Oct 07, 11<tr><td><a href="/reading_room/whitepapers/detection/" title="Intrusion Detection">Intrusion Detection</a></td><td align="center" class="h3invert">Dec 19, 11<tr><td><a href="/reading_room/whitepapers/intrusion/" title="Intrusion Prevention">Intrusion Prevention</a></td><td align="center" class="h3invert">Oct 07, 11<tr><td><a href="/reading_room/whitepapers/iso17799/" title="ISO-17799">ISO-17799</a></td><td align="center" class="h3invert">Dec 20, 10<tr><td><a href="/reading_room/whitepapers/legal/" title="Legal Issues">Legal Issues</a></td><td align="center" class="h3invert">Oct 18, 11<tr><td><a href="/reading_room/whitepapers/linux/" title="Linux Issues">Linux Issues</a></td><td align="center" class="h3invert">Dec 01, 11<tr><td><a href="/reading_room/whitepapers/logging/" title="Logging Technology and Techniques">Logging Technology and Techniques</a></td><td align="center" class="h3invert">Nov 29, 11<tr><td><a href="/reading_room/whitepapers/apple/" title="Mac/Apple Issues">Mac/Apple Issues</a></td><td align="center" class="h3invert">Feb 07, 12
+</table>
+
+     </div>
+     <div class="links-split2">
+<table>
+<tr>
+ <td><h5>Category</h5></td>
+ <td align="center" width="30%"><h5>Last Updated</h5></td>
+ <td valign="top" rowspan="36">
+	<a href="/info/93044/3ba2417fdab403257da8f7ca419c503300hgs18649" target="_top">
+<img src="/images/banners/11039.jpg" alt="SANS 2012 - Orlando" title="SANS 2012 - Orlando" height="600" width="160" border="0" />
+</a> </td>
+</tr>
+
+<tr><td><a href="/reading_room/whitepapers/mainframes/" title="Mainframes">Mainframes</a></td><td align="center" class="h3invert">Jun 30, 05<tr><td><a href="/reading_room/whitepapers/malicious/" title="Malicious Code">Malicious Code</a></td><td align="center" class="h3invert">Feb 07, 12<tr><td><a href="/reading_room/whitepapers/services/" title="Managed Services">Managed Services</a></td><td align="center" class="h3invert">Oct 14, 10<tr><td><a href="/reading_room/whitepapers/leadership/" title="Management &amp; Leadership">Management &amp; Leadership</a></td><td align="center" class="h3invert">Oct 26, 11<tr><td><a href="/reading_room/whitepapers/access/" title="Network Access Control">Network Access Control</a></td><td align="center" class="h3invert">Mar 15, 11<tr><td><a href="/reading_room/whitepapers/networkdevs/" title="Network Devices">Network Devices</a></td><td align="center" class="h3invert">Aug 25, 10<tr><td><a href="/reading_room/whitepapers/novell/" title="Novell/Netware Issues">Novell/Netware Issues</a></td><td align="center" class="h3invert">Jan 22, 05<tr><td><a href="/reading_room/whitepapers/pda/" title="PDAs and Other Mobile Devices">PDAs and Other Mobile Devices</a></td><td align="center" class="h3invert">Sep 12, 11<tr><td><a href="/reading_room/whitepapers/testing/" title="Penetration Testing">Penetration Testing</a></td><td align="center" class="h3invert">Feb 07, 12<tr><td><a href="/reading_room/whitepapers/physcial/" title="Physical Security">Physical Security</a></td><td align="center" class="h3invert">Aug 30, 07<tr><td><a href="/reading_room/whitepapers/protocols/" title="Protocols">Protocols</a></td><td align="center" class="h3invert">Dec 19, 11<tr><td><a href="/reading_room/whitepapers/riskmanagement/" title="Risk Management">Risk Management</a></td><td align="center" class="h3invert">Sep 19, 11<tr><td><a href="/reading_room/whitepapers/scripting/" title="Scripting Tips">Scripting Tips</a></td><td align="center" class="h3invert">Jan 03, 11<tr><td><a href="/reading_room/whitepapers/securecode/" title="Securing Code">Securing Code</a></td><td align="center" class="h3invert">Mar 18, 10<tr><td><a href="/reading_room/whitepapers/awareness/" title="Security Awareness">Security Awareness</a></td><td align="center" class="h3invert">Oct 26, 11<tr><td><a href="/reading_room/whitepapers/basics/" title="Security Basics">Security Basics</a></td><td align="center" class="h3invert">Dec 19, 11<tr><td><a href="/reading_room/whitepapers/modeling/" title="Security Modeling">Security Modeling</a></td><td align="center" class="h3invert">Oct 07, 11<tr><td><a href="/reading_room/whitepapers/policyissues/" title="Security Policy Issues">Security Policy Issues</a></td><td align="center" class="h3invert">Oct 11, 11<tr><td><a href="/reading_room/whitepapers/engineering/" title="Social Engineering">Social Engineering</a></td><td align="center" class="h3invert">Mar 18, 10<tr><td><a href="/reading_room/whitepapers/solaris/" title="Solaris Issues">Solaris Issues</a></td><td align="center" class="h3invert">May 05, 05<tr><td><a href="/reading_room/whitepapers/standards/" title="Standards">Standards</a></td><td align="center" class="h3invert">Aug 24, 05<tr><td><a href="/reading_room/whitepapers/stenganography/" title="Steganography">Steganography</a></td><td align="center" class="h3invert">Jul 03, 08<tr><td><a href="/reading_room/whitepapers/storage/" title="Storage">Storage</a></td><td align="center" class="h3invert">May 16, 11<tr><td><a href="/reading_room/whitepapers/sysadmin/" title="System Administration">System Administration</a></td><td align="center" class="h3invert">Dec 01, 11<tr><td><a href="/reading_room/whitepapers/telecommunting/" title="Telecommuting">Telecommuting</a></td><td align="center" class="h3invert">Oct 31, 03<tr><td><a href="/reading_room/whitepapers/telephone/" title="Telephone Issues">Telephone Issues</a></td><td align="center" class="h3invert">May 05, 05<tr><td><a href="/reading_room/whitepapers/terminal/" title="Terminal Services">Terminal Services</a></td><td align="center" class="h3invert">Feb 14, 07<tr><td><a href="/reading_room/whitepapers/threats/" title="Threats/Vulnerabilities">Threats/Vulnerabilities</a></td><td align="center" class="h3invert">Aug 17, 11<tr><td><a href="/reading_room/whitepapers/tools/" title="Tools">Tools</a></td><td align="center" class="h3invert">Nov 29, 11<tr><td><a href="/reading_room/whitepapers/travel/" title="Travel Security">Travel Security</a></td><td align="center" class="h3invert">Oct 31, 03<tr><td><a href="/reading_room/whitepapers/unix/" title="Unix Issues">Unix Issues</a></td><td align="center" class="h3invert">Dec 01, 11<tr><td><a href="/reading_room/whitepapers/voip/" title="VOIP Issues">VOIP Issues</a></td><td align="center" class="h3invert">Dec 29, 08<tr><td><a href="/reading_room/whitepapers/webservers/" title="Web Servers">Web Servers</a></td><td align="center" class="h3invert">Dec 01, 11<tr><td><a href="/reading_room/whitepapers/windowsnet/" title="Windows .NET">Windows .NET</a></td><td align="center" class="h3invert">Nov 13, 08<tr><td><a href="/reading_room/whitepapers/win2k/" title="Windows 2000 Issues">Windows 2000 Issues</a></td><td align="center" class="h3invert">Oct 31, 03<tr><td><a href="/reading_room/whitepapers/windows/" title="Windows Issues">Windows Issues</a></td><td align="center" class="h3invert">Feb 07, 12<tr><td><a href="/reading_room/whitepapers/wireless/" title="Wireless Access">Wireless Access</a></td><td align="center" class="h3invert">Jul 19, 11<tr><td><a href="/reading_room/whitepapers/monitoring/" title="Work Monitoring">Work Monitoring</a></td><td align="center" class="h3invert">Sep 17, 08
+
+</table>
+     </div>
+
+ <div class="column">
+<!--  <p align="center"><a href="/click.php?id=211" target="_blank">Don't have Adobe Acrobat Reader? Download it for free!* <img src="/images/acrobat.gif" border="0" align="absmiddle"></a></p>-->
+<p><strong>VENDORS:</strong> For information on advertisements or placing your white paper in the SANS Information Security Reading Room visit, <a href="http://www.sans.org/vendor/banners.php" target="_blank">http://www.sans.org/vendor/banners.php</a>.</p>
+
+<p>
+<a href="/training" class="h3">"Expand your mastery of Information Security through SANS Training - As YOU Like It!"</a><br/>
+<a href="/training"><b>LIVE in GREAT CITIES!</b></a><br /> <a href="/onsite"><b>LIVE at YOUR SITE!</b></a><br /> <a href="/vlive"><b>LIVE ONLINE!</b></a><br /> <a href="/selfstudy"><b>or ONLINE at YOUR OWN PACE!</b></a>
+</p>
+
+<p>Most of the computer security white papers in the Reading Room have been written by students seeking GIAC certification to fulfill part of their certification requirements and are provided by SANS as a resource to benefit the security community at large. SANS attempts to ensure the accuracy of information, but papers are published "as is". Errors or inconsistencies may exist or may be introduced over time as material becomes dated. If you suspect a serious error, please contact <a href="mailto:webmaster@sans.org">webmaster@sans.org</a>. 
+
+</p>
+<p>All papers are copyrighted.  No re-posting of them or distribution of them is permitted.
+</p>
+
+ </div>
+ </div>
+
+
+</div>
+<div class="clear"></div><!-- / .clear -->
+</div><!-- /container -->
+
+<!-- Bottom Content -->
+<div class="bottom-content">
+<div class="container">
+
+<div class="footer-column whitepapers">
+<h3>Latest Whitepapers</h3>
+                <p><a href="/reading_room/whitepapers/hackers
+/user-agent-field-analyzing-detecting-abnormal-malicious-organization_33874">The User Agent Field: Analyzing and Detecting the Abnormal or Malicious in your Organization</a><br />By Darren Manners</p>
+                            <p><a href="/reading_room/whitepapers/application
+/auditing-aspnet-applications-pci-dss-compliance_33869">Auditing ASP.NET applications for PCI DSS compliance</a><br />By Christian Moldes</p>
+                            <p><a href="/reading_room/whitepapers/hackers
+/profiling-hackers_33864">Profiling Hackers</a><br />By Larisa Long</p>
+            
+</div><!-- / .footer-column -->
+
+<div class="footer-column tweets">
+<h3>Latest Tweets</h3>
+                <p><a href="http://twitter.com/SANSInstitute/statuses/168079814631239681">@SANSInstitute: RT @hackmanj: #Infosec Daily Edition is out!  [...]</a><br />
+                Fri, 10 Feb 2012 21:12:05 +0000
+</p>
+                            <p><a href="http://twitter.com/SANSInstitute/statuses/168079475748249600">@SANSInstitute: Congratulations! RT @viceroyx1 Passed #GSEC y [...]</a><br />
+                Fri, 10 Feb 2012 21:10:44 +0000
+</p>
+                            <p><a href="http://twitter.com/SANSInstitute/statuses/168079093173190659">@SANSInstitute: #FF @robtlee @sansforensics #ComputerForensic [...]</a><br />
+                Fri, 10 Feb 2012 21:09:13 +0000
+</p>
+            
+
+</div><!-- / .footer-column -->
+
+<div class="footer-column contact">
+<h3>Contact Us</h3>
+<p>(301) 654-SANS (7267)<br />
+Mon-Fri 9am - 8pm EST/EDT<br />
+<a href="mailto:info@sans.org">info@sans.org</a></p>
+</div><!-- / .footer-column contact -->
+
+<div class="footer-quote-box">
+            <p>"It has really been an eye opener concerning the depth of security training &amp; awareness that SANS has to offer."<br />- Michael Hall, Drivesavers</p>
+                    <p>"This has been a great way to get working knowledge that would have taken years of experience to learn."<br />- Josh Carlson, Nelnet</p>
+                    <p>"SANS is a great place to enhance your technical and hands-on skills and tools. I thoroughly recommend it."<br />- Aaron Waugh, Datacom NZ Ltd</p>
+        </div>
+
+</div><!-- / .bottom-content -->
+</div><!-- / .container -->
+
+<!-- Footer -->
+<div id="footer">
+<div class="container">
+<img src="/images/design-site/logo-footer.png" alt="SANS: Computer Security Training, Network Security Research, InfoSec Resources" class="logo-footer" />
+
+<ul class="site-selector">
+ <li class="site-switcher"><a href="#"><span class="hidden">SANS Site Network</span></a>
+  <ul class="sites">
+   <li class="current-site">Current Site</li>
+   <li class="sans"><a href=""><img src="/images/design/custom/site-selector/site-icons/sans.png" alt="sans" />Training</a></li>
+   <li class="selector-help">Choose a different site <a href="/help/site-network"><span class="hidden">Help</span></a></li>
+   <li class="giac"><a href="http://www.giac.org"><img src="/images/design/custom/site-selector/site-icons/giac.png" alt="giac" />Certification</a></li>
+   <li class="sti"><a href="http://www.sans.edu"><img src="/images/design/custom/site-selector/site-icons/sti.png" alt="sti" />College</a></li>
+   <li class="isc"><a href="http://isc.sans.edu"><img src="/images/design/custom/site-selector/site-icons/isc.png" alt="isc" />Internet Storm Center</a></li>
+   <li class="awareness"><a href="http://www.securingthehuman.org"><img src="/images/design/custom/site-selector/site-icons/awareness.png" alt="awareness" />Security Awareness</a></li>
+   <li class="forensics"><a href="http://computer-forensics.sans.org"><img src="/images/design/custom/site-selector/site-icons/forensics.png" alt="forensics" />Computer Forensics</a></li>
+   <li class="audit"><a href="http://it-audit.sans.org"><img src="/images/design/custom/site-selector/site-icons/audit.png" alt="audit" />IT Audit</a></li>
+   <li class="ssi"><a href="http://software-security.sans.org"><img src="/images/design/custom/site-selector/site-icons/software-security.png" alt="ssi" />Software Security</a></li>
+   <li class="blogs last"><a href="http://blogs.sans.org"><img src="/images/design/custom/site-selector/site-icons/blogs.png" alt="blogs" />Latest News</a></li>
+  </ul>
+ </li>
+</ul>
+
+<div class="latest-icons">
+<a href="http://twitter.com/SANSInstitute"><img src="/images/design/custom/icons/twitter-icon.png" alt="Twitter" /></a>
+<a href="https://www.facebook.com/pages/SANS-Institute/173623382673767"><img src="/images/design/custom/icons/facebook-icon.png" alt="Facebook" /></a>
+<a href="/rss.php"><img src="/images/design/custom/icons/rss-icon.png" alt="RSS" /></a>
+</div><!-- end .latest-icons -->
+
+<div class="bottom-nav align-right">
+<ul>
+ <li><a href="/security-training/courses.php">Courses</a></li>
+ <li><a href="/security-training/">Live Training</a></li>
+ <li><a href="/online-security-training/">Online Training</a></li>
+ <li><a href="/security-resources.php">Resources</a></li>
+ <li><a href="/vendor/">Vendor</a></li>
+ <li><a href="privacy.php">Privacy Policy</a></li>
+ <li class="last"><a href="/about/">About</a></li>
+
+</ul>
+
+<p class="copyright align-right"><a href="http://www.sans.org/trademarkuse.pdf">Trademark Usage Policy</a> | &copy; 2000-2012 The SANS&#8482; Institute</p>
+</div><!-- end .bottom-nav align-right-->
+</div><!-- end .container-->
+</div><!-- end .footer-->
+</div>
+</div><!-- end .body -->
+
+
+</body>
+
+</html>

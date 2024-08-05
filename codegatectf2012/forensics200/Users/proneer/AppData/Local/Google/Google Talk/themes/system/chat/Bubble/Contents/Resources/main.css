@@ -1,0 +1,120 @@
+/* Ensure that our assumptions about the default browser colors are correct. */
+BODY { color: #000000; background-color: #FFFFFF; }
+BODY a:link { color: #0000FF; }
+BODY a:hover { color: #0000FF; }
+BODY a:active { color: #0000FF; }
+BODY a:visited { color: #800080; }
+
+BODY {
+  margin: 4px;
+}
+DIV#content {
+  font: 12px Arial;
+}
+DIV#insert {
+  display: none;
+}
+
+DIV.system1st {
+  margin: 4px 0px 4px 0px;
+}
+DIV.systemNth {
+  margin: 4px 0px 4px 0px;
+}
+
+/* Two ways to do icons with these rules:
+   <img class='icon' src='%userIconPath%'>
+   <div class='icon'><div style='height:1px;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="%userIconPath%")'></div></div>
+*/
+
+/* Borders */
+DIV.b1 {
+  height: 1px;
+  font-size: 1px;
+  overflow: hidden;
+  margin: 0px 5px;
+  border-top: 1px solid #938F5A;
+}
+DIV.b2 {
+  height: 1px;
+  font-size: 1px;
+  overflow: hidden;
+  margin: 0px 3px;
+  border-left: 2px solid #938F5A;
+  border-right: 2px solid #938F5A;
+}
+DIV.b3 {
+  height: 1px;
+  font-size: 1px;
+  overflow: hidden;
+  margin: 0px 2px;
+  border-left: 1px solid #938F5A;
+  border-right: 1px solid #938F5A;
+}
+DIV.b4 {
+  height: 2px;
+  font-size: 1px;
+  overflow: hidden;
+  margin: 0px 1px;
+  border-left: 1px solid #938F5A;
+  border-right: 1px solid #938F5A;
+}
+
+DIV.chat {
+  border-left: 1px solid #938F5A;
+  border-right: 1px solid #938F5A;
+  padding: 0px 5px;
+}
+DIV.chat .icon {
+  background-color: white;
+  border: 1px solid white;
+  display: none;
+}
+DIV.chat DIV.msg {
+  margin: 0px 0px 0px 0px;
+}
+DIV.chat DIV.Nth {
+  margin: 5px 0px 0px 0px;
+}
+DIV.chat SPAN.salutation {
+  font-weight: bold;
+  display: block;
+  border-bottom: 1px solid #CDCDCD;
+  margin: 0px 0px 1px 0px;
+}
+
+DIV.out {
+  text-align: left;
+  filter: progid:DXImageTransform.Microsoft.Gradient(gradientType='0',startColorStr='#FFFEEA',endColorStr='#F2F4CC');
+  height: 1px;
+}
+DIV.t-o {
+  background-color: #FFFEEB;
+}
+DIV.b-o {
+  background-color: #F1F3CB;
+}
+DIV.out .icon {
+  float: left;
+  margin: 0px 5px 0px 0px;
+}
+
+DIV.in {
+  text-align: left;
+}
+DIV.in .icon {
+  float: left;
+  margin: 0px 5px 0px 0px;
+}
+
+DIV.clear {
+  clear: both;
+  height: 1px;
+  overflow: hidden;
+}
+
+DIV.break {
+  height: 1px;
+  margin: 3px 0px 0px 0px;
+  overflow: hidden;
+}

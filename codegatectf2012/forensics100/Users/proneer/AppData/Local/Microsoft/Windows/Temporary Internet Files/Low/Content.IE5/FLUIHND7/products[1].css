@@ -1,0 +1,44 @@
+@charset "utf-8";
+/*===========================================================================
+	CONTENTS
+============================================================================*/
+/*intro*/
+	.content .main.intro .section.products_list li .thumb{float:left}
+	.content .main.intro .section.products_list li .cont{margin-left:120px;padding:5px 5px 5px 10px}
+	.content .main.intro .section.products_list li .cont dt span{color:#a7a7a7 !important;font-size:0.75em;font-weight:normal}
+	.content .main.intro .section.products_list li .cont dd{position:relative; margin:0}
+	.content .main.intro .section.products_list li .cont dd span.v_line{padding:0 3px;color:#a7a7a7;font-size:0.8em}
+
+/*detail, features, summury, requirements*/
+	.content .main .section.product_head .sub_features li{float:left}
+	.content .main .section.product_head .sub_features a{padding-right:15px;color:#e1462d;font-size:1.1em;font-weight:bold;text-decoration:none}
+	.content .main .section.product_head .service{float:right;margin:0 0 10px 10px}
+	.content .main .section.product_head .service .btn a,
+	.content .main .section.product_head .service .btn button,
+	.content .main .section.product_head .service .btn input{padding:0 15px !important}
+
+/*overview*/
+	/*xmanager*/
+	.content .main.overview .section .benifits.head{display:block;position:relative;width:593px;height:260px;background:url(/images/p-products-xmg-overview1.gif) no-repeat}
+	.content .main.overview .section .benifits.head .img1{display:block;position:absolute;top:16px;left:11px;width:220px;height:220px}
+	.content .main.overview .section .benifits.head .img1.on{background:url(/images/p-products-xmg-overview2.gif) no-repeat}
+	.content .main.overview .section .benifits.head .img2{display:block;position:absolute;top:16px;right:16px;width:217px;height:220px}
+	.content .main.overview .section .benifits.head .img2.on{background:url(/images/p-products-xmg-overview3.gif) no-repeat}
+	.content .main.overview .section .benifits.cont .bx_hover{margin:0 -10px 0 -10px;padding:10px;_margin:10px 0;_padding:0}
+	.content .main.overview .section .benifits.cont .bx_hover *{margin:0}
+
+/*key_features*/
+	.content .main.key_features .body dd img{vertical-align: middle}
+
+/*specification*/
+	.content .main.specification .tap_wrap1 .tap_body dl{width:47%}
+	.content .main.specification .tap_wrap1 .tap_body dl dd ul li{word-break:keep-all}
+
+/*reference*/
+	.content .main.reference .section.site ul{list-style:none}
+	.content .main.reference .section.site .thumb{float:left}
+	.content .main.reference .section.site .cont{margin-left:20em}
+	.content .main.reference .section.site .cont dt{margin:0}
+	.content .main.reference .section.site .cont dd{margin:0}
+
+

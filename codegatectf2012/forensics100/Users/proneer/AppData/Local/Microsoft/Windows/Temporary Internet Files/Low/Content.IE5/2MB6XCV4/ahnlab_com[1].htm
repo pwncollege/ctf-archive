@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+	<title>안철수연구소</title>
+	<script type="text/javascript">	
+	<!--
+	function init(){
+	    var ie=document.all?1:0;
+	    var lang=(ie)?navigator.browserLanguage:navigator.language;
+	    var domain = location.href;
+	    var browsers = new Array(/Mobile/, /Windows CE/, /POLARIS/, /Android/, /Phone/);
+	    var browsers_except = "iPad";
+	    var mobile_yn = "N";   
+	    
+		for (var key in browsers) {
+		    if (navigator.userAgent.match(browsers[key]) != null) {
+			    if ( navigator.userAgent.match(browsers_except) != null ) {
+			    	mobile_yn = "iPad";	
+			    } else {
+		    		mobile_yn = "Y";
+			    }
+		    }
+		}
+		if (mobile_yn=="Y") {
+			if(domain.indexOf("v3clinic.ahnlab.com") > -1 || domain.indexOf("v3365") > -1 || domain.indexOf("v3clinic") > -1) {
+				location.href="http://v3clinic.ahnlab.com/v3clinic/site/main/main.do";
+			} else if (domain.indexOf("conference.ahnlab.com") > -1) {
+				location.href="http://conference.ahnlab.com/conference/rsa2012/";
+			} else if (domain.indexOf("ahnfoundation.org") > -1) {
+				location.href="http://www.ahnfoundation.org/";					
+		    } else {
+		    	location.href = "http://m.ahnlab.com";   
+		    }
+		} else {
+		    if(domain.indexOf("www.ahnlab.com") > -1){
+		    	if (lang.indexOf('ko')>-1) {
+		    		location.href="http://www.ahnlab.com/kr/site/main/main.do";
+		    	} else if (lang.indexOf('en')>-1) {
+			        if ( mobile_yn == "iPad" ) {
+			        	location.href="http://www.ahnlab.com/kr/site/main/main.do ";
+			        } else {
+		            	location.href="http://global.ahnlab.com/ ";
+			        }
+		    	} else if (lang.indexOf('ja')>-1) {
+		    		location.href="http://www.ahnlab.co.jp/";
+		    	} else if (lang.indexOf('zh')>-1) {
+		    		location.href="http://global.ahn.com.cn/ ";
+		    	} else {
+		    		location.href="http://home.ahnlab.com/oversea/";
+		    	}
+		    } else if(domain.indexOf("www.ahnlab.co.kr") > -1) {
+		    	location.href="http://www.ahnlab.com/kr/site/main/main.do";   
+		    } else if(domain.indexOf("v3clinic.ahnlab.com") > -1 || domain.indexOf("v3365") > -1 || domain.indexOf("v3clinic") > -1) {
+		    	location.href="http://v3clinic.ahnlab.com/v3clinic/site/main/main.do";
+		    } else if(domain.indexOf("conference.ahnlab.com") > -1) {
+		    	location.href="http://conference.ahnlab.com/conference/rsa2012/";
+		    } else if(domain.indexOf("ahnfoundation.org") > -1) {
+		    	location.href="http://www.ahnfoundation.org/";
+		    }
+		}
+	}
+	function notice(){
+    	location.href="http://www.ahnlab.com/kr/site/html/error/notice/error_server.html";
+	}
+	function ddos(){
+	    var domain = location.href;
+	    if(domain.indexOf("v3clinic.ahnlab.com") > -1 || domain.indexOf("v3365") > -1 || domain.indexOf("v3clinic") > -1) {
+	    	location.href="http://v3clinic.ahnlab.com/v3clinic/site/main/main.do";
+	    } else {
+	    	location.href="http://www.ahnlab.com/kr/site/html/ddos/ddos.html";
+	    }			
+	}	
+	// -->
+	</script>
+</head>
+<body onload="init()"></body>
+<!--body onload="notice()"></body-->
+</html>

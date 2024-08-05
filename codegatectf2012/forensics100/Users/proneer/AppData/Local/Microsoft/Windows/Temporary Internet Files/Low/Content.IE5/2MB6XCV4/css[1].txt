@@ -1,0 +1,10 @@
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: url('http://themes.googleusercontent.com/static/fonts/opensans/v6/cJZKeOuBrn4kERxqtaUH3fY6323mHUZFJMgTvxaG2iE.eot');
+  src: local('Open Sans'), local('OpenSans'), url('http://themes.googleusercontent.com/static/fonts/opensans/v6/cJZKeOuBrn4kERxqtaUH3fY6323mHUZFJMgTvxaG2iE.eot') format('embedded-opentype'), url('http://themes.googleusercontent.com/static/fonts/opensans/v6/cJZKeOuBrn4kERxqtaUH3T8E0i7KZn-EPnyo3HZu7kw.woff') format('woff');
+}
+.font-effect-smoothing {
+  -ms-filter: "progid:DXImageTransform.Microsoft.Gradient(startColorstr=#00ffffff,endColorStr=#00ffffff)";
+}

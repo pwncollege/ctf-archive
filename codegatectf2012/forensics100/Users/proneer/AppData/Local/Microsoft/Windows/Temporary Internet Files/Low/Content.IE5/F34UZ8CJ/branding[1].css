@@ -1,0 +1,57 @@
+.cse-branding-bottom,
+.cse-branding-right {
+margin:0;
+padding:0
+}
+.cse-branding-bottom,
+.cse-branding-right {
+zoom: 1;
+}
+.cse-branding-bottom:after,
+.cse-branding-right:after {
+content: ".";
+display: block;
+height: 0;
+clear: both;
+visibility: hidden
+}
+.cse-branding-text { 
+font: 10px Arial;
+}
+.cse-branding-form form {
+margin-bottom: 0;
+padding-bottom: 0;
+}
+/* Bottom-specific selectors */
+.cse-branding-bottom .cse-branding-logo, 
+.cse-branding-bottom .cse-branding-text {
+display: block; 
+float: left
+}
+.cse-branding-bottom .cse-branding-form {
+margin-bottom: 3px;
+}
+.cse-branding-bottom .cse-branding-logo {
+padding: 0
+}
+.cse-branding-bottom .cse-branding-text {
+padding-top: 4px
+}
+.cse-branding-right .cse-branding-form {
+float: left;
+}
+/* Right-specific selectors */
+.cse-branding-right .cse-branding-logo, 
+.cse-branding-right .cse-branding-text {
+margin-left: 4px;
+}
+.cse-branding-right .cse-branding-form {
+float: left;
+margin-right: 4px;
+}
+.cse-branding-right .cse-branding-logo {
+padding: 0
+}
+.cse-branding-right .cse-branding-text {
+margin-top: -4px
+}

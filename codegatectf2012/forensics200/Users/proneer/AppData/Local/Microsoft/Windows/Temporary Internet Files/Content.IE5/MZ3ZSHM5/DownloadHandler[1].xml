@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/" xmlns:ie="http://schemas.microsoft.com/Search/2008/">
+ <ShortName>Google</ShortName>
+ <Description>Google Search</Description>
+  <Url type="text/html" xmlns:referrer="http://a9.com/-/opensearch/extensions/referrer/1.0/" template="http://www.google.com/search?q={searchTerms}&amp;sourceid=ie7&amp;rls=com.microsoft:{language}:{referrer:source}&amp;ie={inputEncoding?}&amp;oe={outputEncoding?}" />
+  <Url rel="suggestions" type="application/x-suggestions+xml" template="http://clients5.google.com/complete/search?q={searchTerms}&amp;client=ie8&amp;mw={ie:maxWidth}&amp;sh={ie:sectionHeight}&amp;rh={ie:rowHeight}&amp;inputencoding={inputEncoding}&amp;outputencoding={outputEncoding}" />
+  <Image height="16" width="16" type="image/icon">http://www.google.com/favicon.ico</Image>
+</OpenSearchDescription>

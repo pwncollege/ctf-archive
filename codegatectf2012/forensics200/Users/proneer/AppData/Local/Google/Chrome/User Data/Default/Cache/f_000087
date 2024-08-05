@@ -1,0 +1,2453 @@
+﻿var IE = jQuery.browser.msie ? jQuery.browser.version : false;
+
+/* try {document.execCommand('BackgroundImageCache', false, true);} catch(e) {} */
+
+/*퀵바이 플래시*/
+
+function flashMenu(url, id, width, height, trans, flashvars) {
+	var strFlashTag = new String();
+	var currProtocol = document.location.protocol + "//";
+
+	strFlashTag += '<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" ';
+	strFlashTag += 'codebase="' + currProtocol + 'download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=version=8,0,0,0" width="' + width + '" id="' + id + '" height="' + height + '" >';
+	strFlashTag += '<param name="movie" value="' + url + '"/>';
+	strFlashTag += '<param name="FlashVars" value="' + flashvars + '"/>';
+	strFlashTag += '<param name="quality" value="best"/>';
+	//strFlashTag += '<param name="bgcolor" value="' + bgcolor + '"/>';
+	strFlashTag += '<param name="menu" value="false"/>';
+	//strFlashTag += '<param name="salign" value="LT"/>';
+	strFlashTag += '<param name="scale" value="noscale"/>';
+	if (trans == true) {
+		strFlashTag += '<param name="wmode" value="transparent"/>';
+	}
+	//else{
+	//strFlashTag += '<param name="wmode" value="opaque"/>';
+	//}
+	strFlashTag += '<param name="allowScriptAccess" value="always"/>';
+
+	strFlashTag += '<!--[if !IE]> <-->';
+	strFlashTag += '<object type="application/x-shockwave-flash" ';
+	strFlashTag += 'data="' + url + '" ';
+	strFlashTag += 'name="' + id + '" ';
+	strFlashTag += 'width="' + width + '" ';
+	strFlashTag += 'height="' + height + '" ';
+	strFlashTag += 'allowScriptAccess="always" ';
+	strFlashTag += 'menu="false" ';
+	strFlashTag += 'scale="noscale" ';
+
+	if (trans == true) {
+		strFlashTag += 'wmode="transparent" ';
+	}
+	strFlashTag += 'flashvars="' + flashvars + '"/>';
+
+	strFlashTag += '<!--[if !IE]> <-->';
+	strFlashTag += '</object>';
+	strFlashTag += '<!--> <![endif]-->';
+
+	strFlashTag += '</object>';
+
+	document.write(strFlashTag);
+}
+
+
+// QuickBuy 레이어사이즈 변환
+function flash_dashboard_size(h) {
+	var container = document.getElementById("quickBuyContainer");
+	container.style.height = h + "px";
+}
+
+// flash 오브젝트 접근
+function getFlashMovieObject(movieName) {
+	if (window.document[movieName]) {
+		return window.document[movieName];
+	}
+	if (navigator.appName.indexOf("Microsoft Internet") == -1) {
+		if (document.getElementById(movieName)) {
+			return document.getElementById(movieName);
+		}
+		//if (document.embeds && document.embeds[movieName])
+		//return document.embeds[movieName]; 
+	}
+	else // if (navigator.appName.indexOf("Microsoft Internet")!=-1)
+	{
+		return document.getElementById(movieName);
+	}
+}
+
+// quickBuy 숨기기
+function quickBuySetHideMode() {
+	var obj = getFlashMovieObject('quickBuySwf');
+	obj.SetVariable("_sizeObj", 0);
+	flash_dashboard_size(5);
+	//getFlashMovieObject('quickBuySwf').focus();
+}
+
+
+// quickBuy 최소화보기
+function quickBuySetMiniMode() {
+
+	var obj = getFlashMovieObject('quickBuySwf');
+	obj.SetVariable("_sizeObj", 77);
+	flash_dashboard_size(77);
+	//getFlashMovieObject('quickBuySwf').focus();
+}
+
+
+// quickBuy 전체보기
+function quickBuySetFullMode() {
+	var obj = getFlashMovieObject('quickBuySwf');
+	obj.SetVariable("_sizeObj", 187);
+
+	flash_dashboard_size(187);
+	document.getElementById("quickBuyContainer").focus();
+	getFlashMovieObject('quickBuySwf').focus();
+}
+
+/*퀵바이 플래시*/
+
+function show(id) {
+	document.getElementById(id).style.display = 'block';
+}
+function hide(id) {
+	document.getElementById(id).style.display = 'none';
+}
+function showHide(sid, hid) {
+	document.getElementById(sid).style.display = 'block';
+	document.getElementById(hid).style.display = 'none';
+}
+function showTableRow(id) {
+	var tr = document.getElementById(id);
+	tr.style.display = '';
+}
+function hideTableRow(id) {
+	var tr = document.getElementById(id);
+	tr.style.display = 'none';
+}
+function toggleTableRow(id) {
+	var tr = document.getElementById(id);
+	if (tr.style.display === 'none') {
+		tr.style.display = '';
+	} else {
+		tr.style.display = 'none';
+	}
+}
+function imageOver(imgs) {
+	imgs.src = imgs.src.replace("off.gif", "on.gif");
+}
+function imageOut(imgs) {
+	imgs.src = imgs.src.replace("on.gif", "off.gif");
+}
+
+/* 백화점관 좌측메뉴 Flash width 조절 */
+function departmentFlashResize(w)
+{
+	var container = document.getElementById("departmentLNBMainDiv");
+	container.style.width = w + "px";
+}
+
+
+/*
+function prodList() {
+var ico_list = $('table.prod-list td.special div.ico-list');
+if (!ico_list.length) {
+return false;
+}
+ico_list.each(function () {
+var $this = $(this),
+layer = $('div.specialList', this);
+$this.bind('mouseenter', function () {
+$this.css('z-index', '1000');
+layer.css('z-index', '1000').show();
+});
+layer.bind('mouseleave', function () {
+$this.css('z-index', '');
+layer.css('z-index', '').hide();
+});
+});
+}
+function costDate() {
+var price_date = $('table.prod-list td.price div.price-date');
+if (!price_date.length) {
+return false;
+}
+price_date.each(function () {
+var $this = $(this),
+layer = $('div.date', this);
+$this.bind('mouseenter', function () {
+$this.css('z-index', '1000');
+layer.css('z-index', '1000').show();
+}).bind('mouseleave', function () {
+$this.css('z-index', '');
+layer.css('z-index', '').hide();
+});
+});
+}
+
+function costDate2() {
+var price_date = $('div.prod-hrz dd.price div.price-date');
+if (!price_date.length) {
+return false;
+}
+price_date.each(function () {
+var $this = $(this),
+layer = $('div.date', this);
+$this.bind('mouseenter', function () {
+$this.css('z-index', '1000');
+layer.css('z-index', '1000').show();
+}).bind('mouseleave', function () {
+$this.css('z-index', '');
+layer.css('z-index', '').hide();
+});
+});
+}
+*/
+function cateTotal() {
+	var cate_total = $('div.cate-total');
+	if (!cate_total.length) {
+		return false;
+	}
+	cate_total.each(function() {
+		var $this = $(this),
+			cats = $('tr:has(a.more-btn)', this),
+			more_cate = $('tr.more-cate-wrap', this),
+			sliding_bar = $('div.slidingBar', this),
+			sb_button = $('a', sliding_bar),
+			sb_button_txt = $('span', sb_button);
+
+		cats.each(function() {
+			var list = $('ul', this),
+				more_btn = $('a.more-btn', this),
+				btn_img = $('img', more_btn),
+				btn_txt = $('span', more_btn);
+
+			more_btn.bind('click', function(e) {
+				e.preventDefault();
+				var txt = more_btn.text();
+				if (list.hasClass('closed')) {
+					list.removeClass('closed');
+					btn_img.attr('src', function() {
+						var src = this.getAttribute('src');
+						return src.replace('ico_cross.gif', 'ico_min.gif');
+					});
+					btn_txt.text('닫기');
+				} else {
+					list.addClass('closed');
+					btn_img.attr('src', function() {
+						var src = this.getAttribute('src');
+						return src.replace('ico_min.gif', 'ico_cross.gif');
+					});
+					btn_txt.text('더보기');
+				}
+			});
+		});
+
+		sb_button.bind('click', function(e) {
+			e.preventDefault();
+			var txt = sb_button_txt.text();
+			if (more_cate.css('display') !== 'none') {
+				more_cate.css('display', '');
+				sliding_bar.removeClass('close').addClass('open');
+				sb_button_txt.text(txt.replace('닫기', '더보기'));
+			} else {
+				if (jQuery.browser.msie) {
+					more_cate.css('display', 'block');
+				} else {
+					more_cate.css('display', 'table-row');
+				}
+				sliding_bar.removeClass('open').addClass('close');
+				sb_button_txt.text(txt.replace('더보기', '닫기'));
+			}
+		});
+	});
+}
+
+function scateTotal() {
+	var cate_total = $('div.scate-total');
+	if (!cate_total.length) {
+		return false;
+	}
+	cate_total.each(function() {
+		var $this = $(this),
+			cats = $('tr:has(a.more-btn)', this),
+			more_cate = $('tr.more-cate-wrap', this),
+			sliding_bar = $('div.slidingBar', this),
+			sb_button = $('a', sliding_bar),
+			sb_button_txt = $('span', sb_button);
+
+		cats.each(function() {
+			var list = $('ul', this),
+				more_btn = $('a.more-btn', this),
+				btn_img = $('img', more_btn),
+				btn_txt = $('span', more_btn);
+
+			more_btn.bind('click', function(e) {
+				e.preventDefault();
+				var txt = more_btn.text();
+				if (list.hasClass('closed')) {
+					list.removeClass('closed');
+					btn_img.attr('src', function() {
+						var src = this.getAttribute('src');
+						return src.replace('ico_cross.gif', 'ico_min.gif');
+					});
+					btn_txt.text('닫기');
+				} else {
+					list.addClass('closed');
+					btn_img.attr('src', function() {
+						var src = this.getAttribute('src');
+						return src.replace('ico_min.gif', 'ico_cross.gif');
+					});
+					btn_txt.text('더보기');
+				}
+			});
+		});
+
+		sb_button.bind('click', function(e) {
+			e.preventDefault();
+			var txt = sb_button_txt.text();
+			if (more_cate.css('display') !== 'none') {
+				more_cate.css('display', '');
+				sliding_bar.removeClass('close').addClass('open');
+				sb_button_txt.text(txt.replace('닫기', '더보기'));
+			} else {
+				if (jQuery.browser.msie) {
+					more_cate.css('display', 'block');
+				} else {
+					more_cate.css('display', 'table-row');
+				}
+				sliding_bar.removeClass('open').addClass('close');
+				sb_button_txt.text(txt.replace('더보기', '닫기'));
+			}
+		});
+	});
+}
+/* function quickbOption() {
+var quickb_option = $('table.quickb-option');
+if (!quickb_option.length) {
+return false;
+}
+quickb_option.each(function () {
+var $this = $(this),
+option = $('tr:has(a.more-btn)', this);
+
+option.each(function () {
+var list = $('ul', this),
+more_btn = $('a.more-btn', this),
+btn_img = $('img', more_btn),
+btn_txt = $('span', more_btn);
+
+more_btn.bind('click', function (e) {
+e.preventDefault();
+var txt = more_btn.text();
+if (list.hasClass('closed')) {
+list.removeClass('closed');
+btn_img.attr('src', function () {
+var src = this.getAttribute('src');
+return src.replace('ico_cross.gif', 'ico_min.gif');
+});
+btn_txt.text('닫기');
+} else {
+list.addClass('closed');
+btn_img.attr('src', function () {
+var src = this.getAttribute('src');
+return src.replace('ico_min.gif', 'ico_cross.gif');
+});
+btn_txt.text('더보기');
+}
+});
+});
+});
+}2009-12-21 */
+
+function categoryTable(selector, options) {
+	var settings = jQuery.extend({
+		rows: 'tr:has(a.more-btn)',
+		moreButton: 'a.more-btn',
+		list: 'ul',
+		btnImg: 'img',
+		onImg: 'ico_cross.gif',
+		offImg: 'ico_min.gif',
+		btnTxt: 'span',
+		closed: 'closed',
+		closeTxt: '닫기',
+		openTxt: '더보기',
+		slidingContents: 'tr.more-cate-wrap',
+		slidingBar: 'div.slidingBar',
+		slidingButton: 'a',
+		slidingButtonText: 'span',
+		slidingOpenTxt: '펄쳐보기',
+		slidingCloseTxt: '닫기'
+	}, options),
+		wrapper = jQuery(selector);
+	if (!wrapper.length) {
+		return false;
+	}
+	wrapper.each(function() {
+		var rows = $(settings.rows, this),
+			sliding_bar = $(settings.slidingBar, this);
+		rows.each(function() {
+			var list = $(settings.list, this),
+				more_button = $(settings.moreButton, this),
+				btn_img = $(settings.btnImg, more_button),
+				btn_txt = $(settings.btnTxt, more_button);
+			more_button.bind('click', function(e) {
+				e.preventDefault();
+				var txt = btn_txt.text();
+				if (list.hasClass(settings.closed)) {
+					list.removeClass(settings.closed);
+					btn_img.attr('src', function() {
+						var src = this.getAttribute('src');
+						return src.replace(settings.onImg, settings.offImg);
+					});
+					btn_txt.text(settings.closeTxt);
+				} else {
+					list.addClass(settings.closed);
+					btn_img.attr('src', function() {
+						var src = this.getAttribute('src');
+						return src.replace(settings.offImg, settings.onImg);
+					});
+					btn_txt.text(settings.openTxt);
+				}
+			});
+		});
+		if (sliding_bar.length) {
+			var sliding_cont = $(settings.slidingContents, this),
+				sb_button = $(settings.slidingButton, sliding_bar),
+				sb_btn_txt = $(settings.slidingButtonText, sb_button);
+			sb_button.unbind('click').bind('click', function(e) {
+				var btn_txt = sb_btn_txt.text();
+				e.preventDefault();
+				if (sliding_cont.css('display') !== 'none') {
+					sliding_cont.css('display', 'none');
+					if (jQuery.browser.msie && jQuery.browser.version < 8) {
+						sliding_cont.children().css('display', 'none');
+					}
+					sliding_bar.removeClass('close').addClass('open');
+					sb_btn_txt.text(btn_txt.replace(settings.slidingCloseTxt, settings.slidingOpenTxt));
+				} else {
+					if (jQuery.browser.msie) {
+						sliding_cont.css('display', 'block');
+						if (jQuery.browser.version < 8) {
+							sliding_cont.children().css('display', '');
+						}
+					} else {
+						sliding_cont.css('display', 'table-row');
+					}
+					sliding_bar.removeClass('open').addClass('close');
+					sb_btn_txt.text(btn_txt.replace(settings.slidingOpenTxt, settings.slidingCloseTxt));
+				}
+			});
+			this.slidingBarSet = true;
+		}
+		this.categoryTableSet = true;
+	});
+}
+
+
+/* LNB */
+function LNB(mi, si) {
+	var $wrapper = $('#lnb'),
+		$items = $wrapper.find('li');
+	init();
+	function select(item) {
+		var $item = $(item),
+			$img = $(item.image);
+		if (!item.subItems.length) {
+			$img.attr('src', function() {
+				var src = this.getAttribute('src');
+				return src.replace('_off.', '_on.');
+			});
+		}
+	}
+	function unselect(item) {
+		var $item = $(item),
+			$img = $(item.image);
+		if (!item.subItems.length) {
+			$img.attr('src', function() {
+				var src = this.getAttribute('src');
+				return src.replace('_on.', '_off.');
+			});
+		}
+	}
+	function init() {
+		$items.each(function() {
+			this.image = this.getElementsByTagName('img')[0];
+			this.subItems = this.getElementsByTagName('li');
+		});
+		$items.bind('mouseenter', function() {
+			select(this);
+		}).bind('mouseleave', function() {
+			unselect(this);
+		});
+		if (mi) {
+			var $main = $wrapper.find('> ul > li:nth-child(' + mi + ')'),
+				main = $main[0],
+				$sub;
+			$main.unbind('mouseleave');
+			select(main);
+			if (si && (si <= main.subItems.length)) {
+				$sub = $main.find('> ul > li:nth-child(' + si + ')');
+				$sub.unbind('mouseleave');
+				select($sub[0]);
+			}
+		}
+	}
+}
+
+function leftMenu() {
+	var $wrapper = $('#lnb'),
+		$items = $wrapper.find('li'),
+		arg = arguments;
+	$items.each(function() {
+		var $item = $(this);
+		this.image = (function() {
+			var img = $item.find('> h3 a img');
+			if (!img.length) {
+				img = $item.find('> a img');
+			}
+			return img;
+		} ());
+		this.subMenu = $item.firstDescendant('ul');
+		this.subItems = this.subMenu.find('> li');
+	});
+	function select(item) {
+		var $item = $(item);
+		var $image = $item.find('> h3 a img');
+		$item.addClass('on');
+		if ($image.length) {
+			item.image.attr('src', function() {
+				return this.getAttribute('src').replace('_off.', '_on.');
+			});
+		}
+	}
+	function unselect(item) {
+		var $item = $(item);
+		$item.removeClass('on');
+		if (item.image.length) {
+			item.image.attr('src', function() {
+				return this.getAttribute('src').replace('_on.', '_off.');
+			});
+		}
+	}
+	$items.bind('mouseenter', function() {
+		var $this = $(this);
+		$this.addClass('hover');
+		$this.css('z-index', '100'); /*2009-10-15*/
+		select(this);
+	}).bind('mouseleave', function() {
+		var $this = $(this);
+		$this.removeClass('hover');
+		$this.css('z-index', '0');  /*2009-10-15*/
+		unselect(this);
+	});
+	init();
+	function init() {
+		var len = arg.length,
+			i = 0,
+			list = $wrapper.firstDescendant('ul'),
+			item;
+		while (i < len) {
+			if (list.length) {
+				item = list.find('> li:nth-child(' + arg[i] + ')');
+				item.unbind('mouseleave').bind('mouseleave', function() {
+					$(this).removeClass('hover');
+				});
+				select(item[0]);
+				list = item.firstDescendant('ul');
+			}
+			i++;
+		}
+	}
+}
+
+
+/* CATEGORY */
+function categoryKeyword() {
+	var wrapper = $('div.category-keyword'),
+		keylist = wrapper.find('div.catekeyList'),
+		items = keylist.find('li');
+	items.each(function() {
+		var $this = $(this);
+		this.sub = $this.find('div.cateSList-sub');
+		this.image = $this.find('> a img');
+	});
+	wrapper
+		.bind('mouseenter', function() {
+			keylist.css('display', 'block');
+		})
+		.bind('mouseleave', function() {
+			keylist.css('display', 'none');
+		});
+	items
+		.bind('mouseenter', function() {
+			this.image.attr('src', function() {
+				var src = this.getAttribute('src').replace('_off.', '_on.');
+				this.setAttribute('src', src);
+			});
+			if (this.sub.length) {
+				$(this).css('z-index', '100');
+				this.sub.css('display', 'block');
+			}
+		})
+		.bind('mouseleave', function() {
+			this.image.attr('src', function() {
+				var src = this.getAttribute('src').replace('_on.', '_off.');
+				this.setAttribute('src', src);
+			});
+			if (this.sub.length) {
+				$(this).css('z-index', '0');
+				this.sub.css('display', 'none');
+			}
+		});
+}
+/* CATEGORY */
+function mcategoryKeyword() {
+	var wrapper = $('div.cateN'),
+		keylist = wrapper.find('div.catekeyList'),
+		keySlist = wrapper.find('div.in-line'),
+		items = keylist.find('li');
+		itemsC = keylist.find('.sin-line li');
+	items.each(function() {
+		var $this = $(this);
+		this.sub = $this.find('div.cateSList-sub');
+		this.image = $this.find('> a img');
+	});
+	itemsC.each(function() {
+		var $this = $(this);
+	});
+	wrapper
+		.bind('mouseenter', function() {
+			keylist.addClass('cateOn');
+			keySlist.css('z-index', '100');
+			keySlist.css('display','block');
+		})
+		.bind('mouseleave', function() {
+			keylist.removeClass('cateOn');
+			keySlist.css('z-index', '0');
+			keySlist.css('display','none');
+		});
+	items
+		.bind('mouseenter', function() {
+			this.image.attr('src', function() {
+				var src = this.getAttribute('src').replace('_off.', '_on.');
+				this.setAttribute('src', src);
+			});
+			if (this.sub.length) {
+				$(this).css('z-index', '100');
+				$(this).addClass('on')
+				this.sub.css('visibility', 'visible');
+			}
+		})
+		.bind('mouseleave', function() {
+			this.image.attr('src', function() {
+				var src = this.getAttribute('src').replace('_on.', '_off.');
+				this.setAttribute('src', src);
+			});
+			if (this.sub.length) {
+				$(this).css('z-index', '0');
+				$(this).removeClass('on');
+				this.sub.css('visibility', 'hidden');
+			}
+		});
+	itemsC
+		.bind('mouseenter', function() {
+			if ($(this).length) {
+				$(this).addClass('mhover');
+			}
+		})
+		.bind('mouseleave', function() {
+			if ($(this).length) {
+				$(this).removeClass('mhover');
+			}
+		});
+}
+
+
+/* definition list toggle */
+function initToggle(tabContainer) {
+	triggers = tabContainer.getElementsByTagName("a");
+
+	for (i = 0; i < triggers.length; i++) {
+		if (triggers.item(i).href.split("#")[1])
+			triggers.item(i).targetEl = document.getElementById(triggers.item(i).href.split("#")[1]);
+
+		if (!triggers.item(i).targetEl)
+			continue;
+
+		triggers.item(i).targetEl.style.display = "none";
+
+		triggers.item(i).onclick = function() {
+			if (tabContainer.current == this) {
+				this.targetEl.style.display = "none";
+				this.style.fontWeight = "normal";
+				tabContainer.current = null;
+			} else {
+				if (tabContainer.current) {
+					tabContainer.current.targetEl.style.display = "none";
+					tabContainer.current.style.fontWeight = "normal";
+				}
+				this.targetEl.style.display = "block";
+				this.style.fontWeight = "bold";
+				tabContainer.current = this;
+			}
+			return false;
+		}
+		triggers[i].style.fontWeight = "normal";
+	}
+}
+/* // 셀렉트박스
+function addEvent(obj, type, fn) {
+if (obj.addEventListener) {
+if (type === 'mouseenter') {
+obj.addEventListener('mouseover', mouseEnterLeave(fn), false);
+} else if (type === 'mouseleave') {
+obj.addEventListener('mouseout', mouseEnterLeave(fn), false);
+} else {
+obj.addEventListener(type, fn, false);
+}
+} else if (obj.attachEvent) {
+var etypefn = 'e' + type + fn,
+typefn = type + fn;
+obj[etypefn] = fn;
+obj[typefn] = function () {
+obj[etypefn](window.event);
+};
+obj.attachEvent('on' + type, obj[typefn]);
+}
+}
+function mouseEnterLeave(fn) {
+return function (evt) {
+var rel = evt.relatedTarget;
+if (this === rel || isChildOf(this, rel)) {
+return;
+}
+fn.call(this, evt);
+};
+}
+function isChildOf(parent, child) {
+if (parent === child) {
+return;
+}
+while (child && (child !== parent) && (child !== document.body)) {
+try {
+child = child.parentNode;
+} catch (e) {
+return true;
+}
+}
+return child === parent;
+}
+function extend(org, ext) {
+ext = ext || {};
+for (var prop in ext) {
+if (ext.hasOwnProperty(prop)) {
+org[prop] = ext[prop];
+}
+}
+return org;
+}
+function clear(timer) {
+window.clearTimeout(timer);
+window.clearInterval(timer);
+return null;
+}
+function init_combobox(combo, layerid, options) {
+var layer = document.getElementById(layerid),
+list = layer.getElementsByTagName('ul')[0],
+items = list.getElementsByTagName('a'),
+valueholder = combo.getElementsByTagName('em')[0],
+timer,
+settings = extend({
+delay: 100
+}, options);
+if (layer.style.display === 'block') {
+layer.style.display = 'none';
+} else {
+layer.style.display = 'block';
+}
+(function () {
+var i = items.length;
+while (i--) {
+addEvent(items[i], 'click', function (e) {
+e = e || window.event;
+if (e.preventDefault) {
+e.preventDefault();
+}
+e.returnValue = false;
+valueholder.innerHTML = this.innerHTML;
+closeLayer();
+});
+}
+}());
+addEvent(combo, 'mouseleave', closeLayer);
+addEvent(layer, 'mouseleave', closeLayer);
+addEvent(layer, 'mouseenter', function () {
+timer = clear(timer);
+});
+function closeLayer() {
+timer = clear(timer);
+timer = window.setTimeout(function () {
+layer.style.display = 'none';
+}, settings.delay);
+}
+}
+// 셀렉트박스 */
+//셀렉트박스 2009-12-24
+// 브라우저 체크	
+var isie = (navigator.userAgent.toLowerCase().indexOf('msie') != -1) ? true : false;
+var isie6 = (navigator.userAgent.toLowerCase().indexOf('msie 6') != -1) ? true : false;
+//var isie7=(navigator.userAgent.toLowerCase().indexOf('msie 7')!=-1)? true : false;	
+if (navigator.userAgent.toLowerCase().indexOf('msie 7') != -1) {
+	isie6 = false;
+	var isie7 = true;
+}
+if (navigator.userAgent.toLowerCase().indexOf('msie 8') != -1) {
+	isie6 = false;
+	var isie8 = true;
+}
+var isfirefox = (navigator.userAgent.toLowerCase().indexOf('firefox') != -1) ? true : false;
+var isopera = (navigator.userAgent.toLowerCase().indexOf('opera') != -1) ? true : false;
+
+try {
+	document.execCommand('BackgroundImageCache', false, true);
+} catch (e) { }
+// 윈도우 사이즈	
+function getwinsize(target) {
+	if (target == 'clientHeight' && isopera) return self.innerHeight;
+	else {
+		if (document.documentElement.clientWidth) return eval('document.documentElement.' + target);
+		else return eval('document.body.' + target);
+	}
+}
+// 페이지 사이즈	
+function getpageysize() {
+	var height = getwinsize('clientHeight');
+	var scrollheight = (isfirefox) ? self.innerHeight + window.scrollMaxY : document.body.scrollHeight;
+	return (scrollheight > height) ? scrollheight : height;
+}
+// 화면상 위치	
+function getoffset(target) {
+	var targetID = target.id;
+	var targetinfo = [target.offsetWidth, target.offsetHeight, 0, 0];
+	for (target; (target.tagName.toLowerCase() != 'body' && target.tagName.toLowerCase() != 'html' && target.id.indexOf('body') == -1 && target.id != 'w-top' && target.className != 'location-box-in' && target.className != 'headerinside_noquick'); target = target.offsetParent) {
+		targetinfo[2] += target.offsetLeft;
+		targetinfo[3] += target.offsetTop;
+	}
+	if (targetID == 'quick') {
+		var ck = parseInt(document.getElementById('quick').getElementsByTagName('div')[0].style.marginLeft);
+		targetinfo[2] = (ck) ? targetinfo[2] - 590 : targetinfo[2] - 347;
+		targetinfo[3] = targetinfo[3] + 4;
+	}
+	return targetinfo;
+}
+
+// 화면상 위치(outside)	
+function getoffsetoutside(target) {
+	var targetinfo = [target.offsetWidth, target.offsetHeight, 0, 0];
+	for (target; (target.tagName.toLowerCase() != 'body' && target.tagName.toLowerCase() != 'html'); target = target.offsetParent) {
+		targetinfo[2] += target.offsetLeft;
+		targetinfo[3] += target.offsetTop;
+	}
+	return targetinfo;
+}
+
+// 화면상 위치(inside layer)	
+function getoffsetinlayer(target) {
+	var targetinfo = [target.offsetWidth, target.offsetHeight, 0, 0];
+	for (target; (target.className && target.className.indexOf('cmrdlayer') == -1); target = target.offsetParent) {
+		targetinfo[2] += target.offsetLeft;
+		targetinfo[3] += target.offsetTop;
+	}
+	return targetinfo;
+}
+// 콤보박스 등록	
+function init_combobox(from, layerid, isdesign, selectboxid, inlayer, cutlength) {
+
+	var obj = document.getElementById(layerid);
+	var ck = document.getElementById(layerid).style.display;
+	var ul = obj.getElementsByTagName('ul')[0];
+	var retg = from.getElementsByTagName('span')[0];
+	if (!cutlength) cutlength = 12;
+	//if(!cutlength) cutlength=6; 0905셀렉트박스갯수수정	
+
+	//열려있으면 닫고 끝.	
+	if (ck == 'block') {
+		layer(layerid);
+		return;
+	}
+
+	var max = 0;
+
+	//셀렉트박스 기능을 사용할 경우 들어갈 innerHTML 설정.	 
+	if (selectboxid) {
+		var opts = '', sel = document.getElementById(selectboxid);
+		for (var i = 0, max = sel.options.length; i < max; i++) {
+			//if(i==0) retg.innerHTML=sel.options[i].text;	
+			opts += '<li><a href="#" onclick="select_combobox(\'' + selectboxid + '\',' + i + ');return false;">' + sel.options[i].text + '</a></li>';
+		}
+		ul.innerHTML = opts;
+	}
+
+	//안의 컨텐츠 높이가 108이상일경우 스크롤바 생성(display가 none일경우 offsetHeight을 가져오지 못하므로 block설정).	 
+	obj.style.left = '-10000px'; //셀렉트가 생성되는 동안 화면에서 안보이게	 
+	obj.style.display = 'block';
+	obj.style.width = from.offsetWidth - 3 + 'px';
+	ul.style.height = 'auto';
+	if ((cutlength * 18) < (ul.offsetHeight - 2)) {
+		ul.style.height = (cutlength * 18) + 'px';
+		ul.style.overflow = 'auto';
+		ul.style.overflowX = 'hidden';
+		if (!obj.inserted) {
+			if (isie) var paddel = document.createElement('<div class="rpadding">');
+			else {
+				var paddel = document.createElement('div');
+				paddel.setAttribute('class', 'rpadding');
+			}
+			obj.insertBefore(paddel, ul);
+			obj.removeChild(ul);
+			paddel.appendChild(ul);
+			obj.inserted = true;
+		}
+		if (sel && sel.options.length > cutlength) {
+			obj.style.display = 'block';
+			var lih = ul.getElementsByTagName('li')[0].offsetHeight;
+			ul.scrollTop = lih * sel.selectedIndex;
+		}
+	}
+
+	//위아래 구분 080507	
+	var objheight = obj.offsetHeight;
+	obj.style.display = 'none';
+	var isupper = ((objheight + from.offsetTop + from.offsetHeight) > getpageysize()) ? true : false;
+
+	//포지션 설정	
+	var left = 'justify-left';
+	var vposition = (isupper) ? 'top+1' : (isie && isdesign) ? 'bottom-1' : 'bottom-1';
+	if (layerid == 'hdviewotherp') vposition = 'bottom-1';
+	layer(layerid, from, left, vposition, true, false, inlayer);
+	/*
+	from.onclick=function(){
+	var ck=document.getElementById(layerid).style.display;
+	if(!ck || ck=='none'){
+	layer(layerid,this,left,bottom,true,false,inlayer);
+	if(sel && sel.options.length>6){
+	obj.style.display='block';
+	var lih=ul.getElementsByTagName('li')[0].offsetHeight;
+	ul.scrollTop=lih*sel.selectedIndex;
+	}
+	}else layer(layerid);
+	}
+	*/
+
+	//a태그 기능 설정.	
+	var save, atags = ul.getElementsByTagName('a');
+	for (var i = 0, max = atags.length; i < max; i++) {
+		if (!atags[i].funcsaved) {
+			atags[i].savefunc = atags[i].onclick;
+			atags[i].funcsaved = true;
+		}
+		atags[i].onmouseover = function() {
+			layerwaitforclose(layerid);
+		}
+		atags[i].onclick = function() {
+			if (this.savefunc) this.savefunc();
+			retg.innerHTML = this.innerHTML;
+			document.getElementById(layerid).style.display = 'none';
+			if (this.href.substring(this.href.lastIndexOf('#')) == '#') return false;
+		}
+	}
+
+	// 마우스아웃시 사라짐 설정.	
+	from.onmouseover = function() {
+		layerwaitforclose(layerid);
+	}
+	obj.onmouseover = function() {
+		layerwaitforclose(layerid);
+	}
+	from.onmouseout = function() {
+		if (obj.style.display == 'block') layerclose(layerid);
+	}
+	obj.onmouseout = function() {
+		if (obj.style.display == 'block') layerclose(layerid);
+	}
+
+}
+var global_selectbox_titlearea = {};
+function select_combobox(selectboxid, no) {
+	var sel = document.getElementById(selectboxid);
+	if (!eval('global_selectbox_titlearea.' + selectboxid)) {
+		var p = sel.parentNode;
+		for (var tg = p; (tg.previousSibling.nodeType != 1 || tg.previousSibling.className.indexOf('combo') == -1); tg = tg.previousSibling) { }
+		eval('global_selectbox_titlearea.' + selectboxid + '=tg.previousSibling.getElementsByTagName(\'span\')[0]');
+	}
+	eval('global_selectbox_titlearea.' + selectboxid).innerHTML = sel.options[no].text;
+	sel.options[no].selected = 'selected';
+	if (sel.fireEvent) {
+		sel.fireEvent("onchange");
+	}
+	else if (document.createEvent) {
+		var evt = document.createEvent("HTMLEvents");
+		if (evt.initEvent) {
+			evt.initEvent('change', true, true);
+		}
+		if (sel.dispatchEvent) {
+			sel.dispatchEvent(evt);
+		}
+	}
+}
+
+//콤보박스 값유지
+function select_comboboxEx(selectboxid, no) {
+	var sel = document.getElementById(selectboxid);
+	if (!eval('global_selectbox_titlearea.' + selectboxid)) {
+		var p = sel.parentNode;
+		for (var tg = p; (tg.previousSibling.nodeType != 1 || tg.previousSibling.className.indexOf('combo') == -1); tg = tg.previousSibling) { }
+		eval('global_selectbox_titlearea.' + selectboxid + '=tg.previousSibling.getElementsByTagName(\'span\')[0]');
+	}
+	eval('global_selectbox_titlearea.' + selectboxid).innerHTML = sel.options[no].text;
+}
+
+// 레이어 컨트롤.	
+var layerclosetimer = {};
+function layerclose(layerid) {
+	if (layerid != 'wagglex2layer' || (layerid == 'wagglex2layer' && !document.getElementById(layerid).mover))
+		eval('layerclosetimer.' + layerid + '=setTimeout("layer(\'"+layerid+"\')",100)');
+}
+function layerwaitforclose(layerid) {
+	clearTimeout(eval('layerclosetimer.' + layerid));
+}
+function layer(layerid, target, xpos, ypos, isoverevent, outside, inlayer) {
+
+	try { clearTimeout(eval('layerclosetimer.' + layerid)) } catch (error) { }
+	var obj = document.getElementById(layerid);
+	if (target && (!obj.style.display || obj.style.display == 'none')) {
+		var targetinfo = (!outside) ? (!inlayer) ? getoffset(target) : getoffsetinlayer(target) : getoffsetoutside(target);
+		obj.style.display = 'block';
+		var objinfo = [obj.offsetWidth, obj.offsetHeight];
+		obj.style.display = 'none';
+		if (xpos || ypos) {
+			if (xpos) {
+				if (!isNaN(xpos)) setleft(xpos);
+				else {
+					var xpospm;
+					if (xpospm = xpos.match(/([a-z-]+)(\-|\+)([0-9]+)/)) xpos = xpospm[1];
+					if (xpos == 'left') setleft(targetinfo[2] - objinfo[0]);
+					else if (xpos == 'justify-left') setleft(targetinfo[2]) - document.documentElement.scrollLeft;
+					else if (xpos == 'right') setleft(targetinfo[2] + targetinfo[0]);
+					else if (xpos == 'justify-right') setleft((targetinfo[2] + targetinfo[0]) - objinfo[0]);
+					else if (xpos == 'center') setleft((targetinfo[2] + (targetinfo[0] / 2)) - (objinfo[0] / 2));
+				}
+			}
+			if (ypos) {
+				if (!isNaN(ypos)) settop(ypos);
+				else {
+					var ypospm;
+					if (ypospm = ypos.match(/([a-z-]+)(\-|\+)([0-9]+)/)) ypos = ypospm[1];
+					if (ypos == 'top') settop(targetinfo[3] - objinfo[1]);
+					else if (ypos == 'justify-top') settop(targetinfo[3]);
+					else if (ypos == 'bottom') settop(targetinfo[3] + targetinfo[1]);
+					else if (ypos == 'justify-bottom') settop((targetinfo[3] + targetinfo[1]) - objinfo[1]);
+					else if (ypos == 'middle') settop((targetinfo[3] + (targetinfo[1] / 2)) - (objinfo[1] / 2));
+				}
+			}
+		} else {
+			if (xpos === 0) setleft(xpos);
+			if (ypos === 0) settop(ypos);
+		}
+		obj.style.display = 'block';
+	} else {
+		if (!isoverevent) obj.style.display = 'none';
+	}
+
+	function setleft(value) {
+		if (xpospm) value = eval('value' + xpospm[2] + xpospm[3]);
+		obj.style.left = '0' + 'px';
+	}
+
+	function settop(value) {
+		if (ypospm) value = eval('value' + ypospm[2] + ypospm[3]);
+		obj.style.top = '21' + 'px';
+	}
+
+}
+//셀렉트박스
+
+//footer 라인 넣기
+function containerBg() {
+	var currProtocol = document.location.protocol + "//";
+	if (!document.getElementById) return false;
+	if (!document.getElementById("container")) return false;
+	var cbg = document.getElementById("container");
+	cbg.style.background = "transparent url(" + currProtocol + "pics.about.co.kr/os2/common/footer/footer_bg2.gif) repeat-x 0 bottom";
+} /*2010-04-27 2010-08-20*/
+
+$(document).ready(function() {
+	categoryTable('#contents div.scate-total,#contents div.spec,#contents div.eoption-box'); /*2009-12-23*/
+	categoryTable('#contents div.cate-total', { slidingOpenTxt: '더보기' });
+	categoryTable('#contents div.result-list', { slidingOpenTxt: '더보기' });
+	categoryTable('#contents div.spec', { slidingContents: 'tr.spec-more-wrap', slidingOpenTxt: '펼쳐보기' });
+	categoryTable('#contents div.spec-box', { slidingContents: 'tr.spec-more-wrap', slidingOpenTxt: '펼쳐보기' });
+	categoryTable('#contents div.brand-option', { slidingContents: 'tr.spec-more-wrap', slidingOpenTxt: '펼쳐보기' });
+	categoryKeyword();
+	mcategoryKeyword();
+	containerBg();
+});
+/* jQuery Plugins */
+(function($) {
+	$.fn.firstDescendant = function(selector) {
+		return $(this.descendants(selector)[0]);
+	};
+	$.fn.descendants = function(selector) {
+		var elements = this.find('*');
+		if (selector) {
+			elements = elements.filter(selector);
+		}
+		return elements;
+	};
+	$.fn.hTabs = function(options) {
+		var settings = $.extend({
+			titles: '.tab-tit',
+			contents: '.tab-cont',
+			imgOn: '_on.',
+			imgOff: '_off.'
+		}, options);
+		return this.each(function() {
+			var $this = $(this),
+				$titles = $this.find(settings.titles);
+			$titles.each(function() {
+				var $title = $(this),
+					$anchor = $title.find('a'),
+					cont_id = $anchor.attr('href');
+				this.$image = $title.find('img');
+				this.$content = $(cont_id);
+			});
+			function closeAll() {
+				$titles.each(function() {
+					var $img = this.$image;
+					if ($img.length) {
+						$img.attr('src', function() {
+							return this.getAttribute('src').replace(settings.imgOn, settings.imgOff);
+						});
+					}
+					this.$content.hide();
+				});
+			}
+			function open(title) {
+				var $img = title.$image;
+				if ($img.length) {
+					$img.attr('src', function() {
+						return this.getAttribute('src').replace(settings.imgOff, settings.imgOn);
+					});
+				}
+				title.$content.show();
+			}
+			$titles.bind('click', function(e) {
+				e.stopPropagation();
+				e.preventDefault();
+				closeAll();
+				open(this);
+			});
+		});
+	};
+
+	$.fn.rotate = function(options) {
+		var settings = $.extend({
+			list: 'ul',
+			items: 'li',
+			buttons: {
+				prev: 'p.prod-prev a',
+				next: 'p.prod-next a'
+			},
+			visible: 3,
+			lastVisible: 'last'
+		}, options);
+		return this.each(function() {
+			var self = this,
+						list = $(settings.list, self),
+						items = $(settings.items, list),
+						buttons = {
+							prev: $(settings.buttons.prev, this),
+							next: $(settings.buttons.next, this)
+						};
+			init();
+			function move(direction) {
+				switch (direction) {
+					case 'prev':
+						list.append($(items.filter(':first')));
+						break;
+					case 'next':
+						list.prepend($(items.filter(':last')));
+						break;
+					default:
+				}
+				list = $(settings.list, self);
+				items = $(settings.items, list);
+				items.removeClass(settings.lastVisible).css('display', 'none');
+				if (items.length > settings.visible) {
+					items.slice(0, settings.visible).css('display', 'block');
+					$(items[settings.visible - 1]).addClass(settings.lastVisible);
+				} else {
+					items.css('display', 'block');
+					items.filter(':last').addClass(settings.lastVisible);
+				}
+			}
+			function init() {
+				if (items.length <= settings.visible) {
+					var button,
+								img;
+					for (button in buttons) {
+						if (buttons.hasOwnProperty(button)) {
+							img = $('img', buttons[button]);
+							img.attr('src', function() {
+								var src = this.getAttribute('src');
+								return src.replace('_on.', '_off.');
+							});
+						}
+					}
+					items.css('display', 'block');
+					items.filter(':last').addClass(settings.lastVisible);
+				} else {
+					items.css('display', 'none');
+					items.slice(0, settings.visible).css('display', 'block');
+					$(items[settings.visible - 1]).addClass(settings.lastVisible);
+				}
+			}
+			buttons.prev.bind('click', function(e) {
+				e.preventDefault();
+				if (items.length > settings.visible) {
+					move('prev');
+				}
+			});
+			buttons.next.bind('click', function(e) {
+				e.preventDefault();
+				if (items.length > settings.visible) {
+					move('next');
+				}
+			});
+		});
+	};
+
+	$.fn.rotatep = function(options) {
+		var settings = $.extend({
+			list: 'li',
+			items: 'table.prod-list',
+			buttons: {
+				prev: 'p.prod-prev a',
+				next: 'p.prod-next a'
+			},
+			visible: 3,
+			lastVisible: 'last'
+		}, options);
+		return this.each(function() {
+			var self = this,
+						list = $(settings.list, self),
+						items = $(settings.items, list),
+						buttons = {
+							prev: $(settings.buttons.prev, this),
+							next: $(settings.buttons.next, this)
+						};
+			init();
+			function move(direction) {
+				switch (direction) {
+					case 'prev':
+						list.append($(items.filter(':first')));
+						break;
+					case 'next':
+						list.prepend($(items.filter(':last')));
+						break;
+					default:
+				}
+				list = $(settings.list, self);
+				items = $(settings.items, list);
+				items.removeClass(settings.lastVisible).css('display', 'none');
+				if (items.length > settings.visible) {
+					items.slice(0, settings.visible).css('display', 'block');
+					$(items[settings.visible - 1]).addClass(settings.lastVisible);
+				} else {
+					items.css('display', 'block');
+					items.filter(':last').addClass(settings.lastVisible);
+				}
+			}
+			function init() {
+				if (items.length <= settings.visible) {
+					var button,
+								img;
+					for (button in buttons) {
+						if (buttons.hasOwnProperty(button)) {
+							img = $('img', buttons[button]);
+							img.attr('src', function() {
+								var src = this.getAttribute('src');
+								return src.replace('_on.', '_off.');
+							});
+						}
+					}
+					items.css('display', 'block');
+					items.filter(':last').addClass(settings.lastVisible);
+				} else {
+					items.css('display', 'none');
+					items.slice(0, settings.visible).css('display', 'block');
+					$(items[settings.visible - 1]).addClass(settings.lastVisible);
+				}
+			}
+			buttons.prev.bind('click', function(e) {
+			e.preventDefault();
+				if (items.length > settings.visible) {
+					move('prev');
+				}
+			});
+			buttons.next.bind('click', function(e) {
+				e.preventDefault();
+				if (items.length > settings.visible) {
+					move('next');
+				}
+			});
+		});
+	};
+
+	/* Selectbox */
+	$.fn.selectbox = function() {
+		var all_selects = this;
+
+		function hideAll() {
+			all_selects.each(function() {
+				this.close();
+			});
+		}
+
+		$('body').bind('click', function() {
+			hideAll();
+		});
+
+		return this.each(function() {
+			if (this.generated) {
+				return;
+			}
+			var self = this,
+				old_selectbox = $(this),
+				mode = self.getAttribute('mode'),
+				select_width = parseInt(old_selectbox.width()) - 2,
+				old_options = old_selectbox.find('option'),
+				selected_index = self.selectedIndex,
+				wrapper, value_holder,
+				new_selectbox_string = ['<ul class="new-selectbox">'],
+				new_selectbox, new_options;
+
+			self.close = function() {
+				new_selectbox.slideUp('fast');
+				wrapper.css('z-index', 0);
+			};
+
+			self.reGen = function() {
+				if (self.generated) {
+					old_options = old_selectbox.find('option');
+					selected_index = self.selectedIndex;
+					new_selectbox.empty();
+					new_selectbox_string = [];
+					for (var i = 0, len = old_options.length; i < len; i++) {
+						new_selectbox_string.push('<li>');
+						new_selectbox_string.push(old_options[i].text);
+						new_selectbox_string.push('</li>');
+					}
+					new_selectbox.append(new_selectbox_string.join(''));
+					old_selectbox = $(self);
+					select_width = parseInt(old_selectbox.width()) - 2;
+					new_options = new_selectbox.find('li');
+					$(new_options[selected_index]).attr('selected', true).addClass('selected');
+					value_holder.val(old_options[selected_index].text);
+					value_holder.css('width', select_width + 'px');
+					new_selectbox.css('width', (select_width - 2) + 'px');
+					optionBinder();
+				} else {
+					generateNewSelectbox();
+				}
+			};
+
+			generateNewSelectbox();
+
+			function generateNewSelectbox() {
+				if (self.generated) {
+					self.reGen();
+				} else {
+					var opt_len = old_options.length,
+						i;
+					old_selectbox.wrap('<div class="selectbox-wrap" />');
+					wrapper = old_selectbox.parent('div.selectbox-wrap');
+					for (i = 0; i < opt_len; i++) {
+						new_selectbox_string.push('<li>');
+						new_selectbox_string.push(old_options[i].text);
+						new_selectbox_string.push('</li>');
+					}
+					new_selectbox_string.push('</ul>');
+					wrapper.append('<input type="button" class="value-holder" value="' + old_options[selected_index].text + '">');
+					wrapper.append(new_selectbox_string.join(''));
+
+					value_holder = wrapper.find('input.value-holder');
+					value_holder.css('width', select_width + 'px');
+					new_selectbox = wrapper.find('ul.new-selectbox');
+					if (mode === 'scroll') {
+						new_selectbox.addClass('new-selectbox-scroll');
+					}
+					new_selectbox.css('width', (select_width - 2) + 'px');
+					new_options = new_selectbox.find('li');
+					$(new_options[selected_index]).addClass('selected');
+					self.generated = true;
+				}
+			}
+
+			function select(obj) {
+				var index = new_options.index(obj);
+				new_options.removeClass('selected');
+				obj.addClass('selected');
+				old_options.attr('selected', false);
+				$(old_options[index]).attr('selected', true);
+				value_holder.val(obj.text());
+				old_selectbox.change();
+			}
+
+			value_holder.bind('click', function(e) {
+				e.stopPropagation();
+				e.preventDefault();
+				if (new_selectbox.css('display') === 'none') {
+					hideAll();
+				}
+				wrapper.css('z-index', '1');
+				new_selectbox.slideToggle(100);
+			});
+
+			value_holder.bind('keydown', function(e) {
+				var selected = new_options.filter('.selected');
+				if (e.keyCode === 40) {	// Down Arrow
+					e.preventDefault();
+					if (selected.next().length) {
+						select(selected.next());
+					}
+				} else if (e.keyCode === 38) {	// Up Arrow
+					e.preventDefault();
+					if (selected.prev().length) {
+						select(selected.prev());
+					}
+				} else if (e.keyCode === 9) {
+					new_selectbox.slideUp(100);
+					wrapper.css('z-index', '0');
+				}
+			});
+
+			optionBinder();
+
+			function optionBinder() {
+				new_options.bind('click', function() {
+					select($(this));
+					new_selectbox.slideUp(100);
+					wrapper.css('z-index', '0');
+					// value_holder.focus();
+				});
+				new_options.hover(function() {
+					new_options.removeClass('selected');
+					new_options.removeClass('hover');
+					$(this).addClass('hover');
+				});
+			}
+			this.newSelect = new_selectbox;
+		});
+	};
+
+	/* Radio */
+	$.fn.Radio = function(options) {
+		var settings = $.extend({
+			wrapper: 'radio-wrap',
+			hover: 'radio-hover',
+			focus: 'radio-focus',
+			checked: 'radio-checked',
+			disabled: 'radio-disabled'
+		}, options),
+			family = {};
+
+		return this.each(function() {
+			if (this.generated) {
+				return;
+			}
+			var self = this,
+				$radio = $(self);
+
+			self.check = function() {
+				uncheckAll();
+				this.checked = true;
+				self.wrapper.addClass(settings.checked);
+				if (self.label.length) {
+					self.label.addClass(settings.checked);
+				}
+			};
+			self.uncheck = function() {
+				this.checked = false;
+				self.wrapper.removeClass(settings.checked);
+				if (self.label.length) {
+					self.label.removeClass(settings.checked);
+				}
+			};
+			self.disable = function() {
+				this.disabled = true;
+				self.wrapper.addClass(settings.disabled);
+			};
+			self.enable = function() {
+				this.disabled = false;
+				self.wrapper.removeClass(settings.disabled);
+			};
+			self.reGen = function() {
+				if (self.generated) {
+					if (self.checked) {
+						self.check();
+					} else {
+						self.uncheck();
+					}
+					if (self.disabled) {
+						self.disable();
+					} else {
+						self.enable();
+					}
+				} else {
+					init();
+				}
+			};
+
+			init();
+
+			if (self.name) {
+				if (!family.hasOwnProperty(self.name)) {
+					family[self.name] = [];
+					family[self.name].push(self);
+				} else {
+					family[self.name].push(self);
+				}
+			}
+
+			function init() {
+				if (self.generated) {
+					self.reGen();
+				} else {
+					$radio.wrap('<span>');
+					self.wrapper = $(self.parentNode);
+					self.wrapper.addClass(settings.wrapper);
+					getLabel();
+					if (self.checked) {
+						self.wrapper.addClass(settings.checked);
+						if (self.label.length) {
+							self.label.addClass(settings.checked);
+						}
+					}
+					if (self.disabled) {
+						self.wrapper.addClass(settings.disabled);
+					}
+					bind();
+					self.generated = true;
+				}
+			}
+
+			function getLabel() {
+				self.label = self.wrapper.parent('label');
+				if (!self.label.length && self.id) {
+					self.label = $('label[for=' + self.id + ']');
+				} else {
+					self.label = [];
+				}
+			}
+
+			function uncheckAll() {
+				$(family[self.name]).each(function() {
+					this.checked = false;
+					this.wrapper.removeClass(settings.checked);
+					if (this.label && this.label.length) {
+						this.label.removeClass(settings.checked);
+					}
+				});
+			}
+
+			function bind() {
+				$radio
+					.bind('mouseover', function() {
+						self.wrapper.addClass(settings.hover);
+					})
+					.bind('mouseout', function() {
+						self.wrapper.removeClass(settings.hover);
+					});
+				$radio
+					.bind('focus', function() {
+						self.wrapper.addClass(settings.focus);
+					})
+					.bind('blur', function() {
+						self.wrapper.removeClass(settings.focus);
+					});
+				$radio.bind('change', function(e) {
+					if (self.checked) {
+						$(family[self.name]).each(function() {
+							this.wrapper.removeClass(settings.checked);
+							if (this.label.length) {
+								this.label.removeClass(settings.checked);
+							}
+						});
+						self.wrapper.addClass(settings.checked);
+						if (self.label.length) {
+							self.label.addClass(settings.checked);
+						}
+					} else if (self.label.length) {
+						self.label.removeClass(settings.checked);
+					}
+					if (self.disabled) {
+						self.wrapper.addClass(settings.disabled);
+					} else {
+						self.wrapper.removeClass(settings.disabled);
+					}
+				});
+				//*
+				if ($.browser.msie) {
+					self.wrapper.bind('click', function(e) {
+						e.stopPropagation();
+						if (!self.disabled) {
+							self.check();
+						}
+					});
+					self.label.bind('click', function(e) {
+						e.preventDefault();
+						e.stopPropagation();
+						$radio.focus();
+						if (!self.disabled) {
+							if (self.checked) {
+								$(self).click();
+								self.uncheck();
+							} else {
+								$(self).click();
+								self.check();
+							}
+						}
+					});
+				}
+				// */
+			}
+		});
+	};
+
+	/* Checkbox */
+	$.fn.Checkbox = function(options) {
+		var settings = $.extend({
+			wrapper: 'checkbox-wrap',
+			hover: 'checkbox-hover',
+			focus: 'checkbox-focus',
+			checked: 'checkbox-checked',
+			disabled: 'checkbox-disabled'
+		}, options);
+
+		return this.each(function() {
+			if (this.generated) {
+				return;
+			}
+			var self = this,
+				$checkbox = $(self),
+				wrapper;
+
+			init();
+
+			self.check = function() {
+				this.checked = true;
+				wrapper.addClass(settings.checked);
+				if (self.label.length) {
+					self.label.addClass(settings.checked);
+				}
+			};
+			self.uncheck = function() {
+				this.checked = false;
+				wrapper.removeClass(settings.checked);
+				if (self.label.length) {
+					self.label.removeClass(settings.checked);
+				}
+			};
+			self.disable = function() {
+				this.disabled = true;
+				wrapper.addClass(settings.disabled);
+			};
+			self.enable = function() {
+				this.disabled = false;
+				wrapper.removeClass(settings.disabled);
+			};
+
+			self.reGen = function() {
+				if (self.generated) {
+					if (self.checked) {
+						self.check();
+					} else {
+						self.uncheck();
+					}
+					if (self.disabled) {
+						self.disable();
+					} else {
+						self.enable();
+					}
+				} else {
+					init();
+				}
+			};
+
+			function init() {
+				if (self.generated) {
+					self.reGen();
+				} else {
+					$checkbox.wrap('<span>');
+					wrapper = $(self.parentNode);
+					wrapper.addClass(settings.wrapper);
+					if (self.checked) {
+						wrapper.addClass(settings.checked);
+					}
+					if (self.disabled) {
+						wrapper.addClass(settings.disabled);
+					}
+					getLabel();
+					bind();
+					self.generated = true;
+				}
+			}
+
+			function getLabel() {
+				self.label = wrapper.parent('label');
+				if (!self.label.length && self.id) {
+					self.label = $('label[for=' + self.id + ']');
+				}
+			}
+
+			function bind() {
+				$checkbox
+					.bind('mouseover', function() {
+						wrapper.addClass(settings.hover);
+					})
+					.bind('mouseout', function() {
+						wrapper.removeClass(settings.hover);
+					});
+				$checkbox
+					.bind('focus', function() {
+						wrapper.addClass(settings.focus);
+					})
+					.bind('blur', function() {
+						wrapper.removeClass(settings.focus);
+					});
+				$checkbox.bind('change', function() {
+					if (self.checked) {
+						wrapper.addClass(settings.checked);
+						if (self.label.length) {
+							self.label.addClass(settings.checked);
+						}
+					} else {
+						wrapper.removeClass(settings.checked);
+						if (self.label.length) {
+							self.label.removeClass(settings.checked);
+						}
+					}
+					if (self.disabled) {
+						wrapper.addClass(settings.disabled);
+					} else {
+						wrapper.removeClass(settings.disabled);
+					}
+				});
+				//*
+				if ($.browser.msie) {
+					wrapper.bind('click', function(e) {
+						e.stopPropagation();
+						if (!self.disabled) {
+							if (self.checked) {
+								wrapper.addClass(settings.checked);
+							} else {
+								wrapper.removeClass(settings.checked);
+							}
+						}
+					});
+					//2009-11-17 김희연 2009-11-26 조현
+					self.label.bind('click', function(e) {
+						e.preventDefault();
+						$checkbox.focus();
+
+						if (!self.disabled) {
+							if (self.checked) {
+								if ($(self.label).attr("alwaysCheckboxcheck") == "true") {
+									self.checked = true;
+									$(self).click();
+									self.check();
+									self.focus();
+								} else {
+									self.checked = false;
+									$(self).click();
+									self.uncheck();
+									self.focus();
+								}
+
+
+							} else {
+								self.checked = true;
+								$(self).click();
+								self.check();
+								self.focus();
+							}
+						} //2009-11-17 2009-11-26
+					});
+				}
+				// */
+			}
+		});
+	};
+} (jQuery));
+
+//팝업 리사이징
+function resize_popup(w,h,scroll,center){
+	if(scroll) w=w+17;
+	if(center){
+		var winl=(screen.width/2)-(w/2),wint=(screen.height/2)-(h/2);winl=winl-10;wint=(isopera)? wint-130 : wint-30;
+		window.moveTo(winl,wint);
+	}
+	if(!scroll) document.documentElement.style.overflow='hidden';
+	else if(!isie){
+		document.documentElement.style.overflow='auto';
+		document.documentElement.style.overflowX='hidden';
+	}
+	var nw=(!scroll)? document.documentElement.clientWidth : document.documentElement.clientWidth+17;
+	var nh=document.documentElement.clientHeight;
+	if((nw!=w && (nw-1)!=w && (nw+1)!=w) || nh!=h) window.resizeBy(w-nw,h-nh);
+}
+
+
+/**
+ * 플래시 embed 코드 
+ * swfobject.js 사용
+ */
+
+function embedFlash(src,target,w,h,trans,flashvars) 
+{
+	if (flashvars != undefined) flashvars.swf_id = target;
+
+	var params = {
+		menu: "false"
+		,quality : "high"  
+		,wmode : trans
+		,allowScriptAccess : "always"
+	};
+	
+	var attributes = {
+		id: target,
+		name: target
+	};
+
+	swfobject.embedSWF(src, target, w, h, "9.0.0", "expressInstall.swf", flashvars, params, attributes);
+}
+
+// quickBuy 닫힘
+function closeQuickBuy()
+{
+	var obj = getFlashMovieObject('quickBuySwf');
+	obj.SetVariable("_mode", "close");
+	//flash_dashboard_size(77);
+	//getFlashMovieObject('quickBuySwf').focus();
+
+	// quickBuyBtn
+	var quickBuyBtnObj = getFlashMovieObject('quickBuyBtn');
+	quickBuyBtnObj.SetVariable("_mode", "close");
+}
+
+
+// quickBuy 펼침
+function openQuickBuy()
+{
+	// quickBuyBtn
+	var quickBuyBtnObj = getFlashMovieObject('quickBuyBtn');
+	quickBuyBtnObj.SetVariable("_mode", "open");
+
+	var obj = getFlashMovieObject('quickBuySwf');
+	obj.SetVariable("_mode", "open");
+
+	//flash_dashboard_size(331);
+	document.getElementById("quickBuyContainer").focus();
+	getFlashMovieObject('quickBuySwf').focus();
+}
+
+
+
+
+// swf div height사이즈 조절
+function flash_height(id, h)
+{
+var container = document.getElementById(id);
+if(h != undefined) container.style.height = h+"px";
+}
+
+// swf div width 사이즈 조절
+function flash_width(id, w)
+{
+var container = document.getElementById(id);
+if(w != undefined) container.style.width = w+"px";
+}
+
+/**
+* 퀵바이 열기/닫기 관리
+*/
+function quickBuyMode(aMode)
+{
+	var quickBuyObj = getFlashMovieObject('quickBuySwf');
+	var quickBuyBtnObj = getFlashMovieObject('quickBuyBtn');
+	quickBuyObj.addParam({           mode: aMode                     });
+	quickBuyBtnObj.addParam({        mode: aMode											});
+}
+
+
+
+
+// 클럽엣지
+function clubEdgeGNBFlashResize(h) {
+	var container = document.getElementById("clubEdgeGNBDiv");
+	container.style.height = h + "px";
+}
+// 클럽엣지
+
+/**
+ * --------------------------------------------------------------------
+ * jQuery-Plugin "pngFix"
+ * Version: 1.2, 09.03.2009
+ * by Andreas Eberhard, andreas.eberhard@gmail.com
+ *                      http://jquery.andreaseberhard.de/
+ *
+ * Copyright (c) 2007 Andreas Eberhard
+ * Licensed under GPL (http://www.opensource.org/licenses/gpl-license.php)
+ *
+ * Changelog:
+ *    09.03.2009 Version 1.2
+ *    - Update for jQuery 1.3.x, removed @ from selectors
+ *    11.09.2007 Version 1.1
+ *    - removed noConflict
+ *    - added png-support for input type=image
+ *    - 01.08.2007 CSS background-image support extension added by Scott Jehl, scott@filamentgroup.com, http://www.filamentgroup.com
+ *    31.05.2007 initial Version 1.0
+ * --------------------------------------------------------------------
+ * @example $(function(){$(document).pngFix();});
+ * @desc Fixes all PNG's in the document on document.ready
+ *
+ * jQuery(function(){jQuery(document).pngFix();});
+ * @desc Fixes all PNG's in the document on document.ready when using noConflict
+ *
+ * @example $(function(){$('div.examples').pngFix();});
+ * @desc Fixes all PNG's within div with class examples
+ *
+ * @example $(function(){$('div.examples').pngFix( { blankgif:'ext.gif' } );});
+ * @desc Fixes all PNG's within div with class examples, provides blank gif for input with png
+ * --------------------------------------------------------------------
+ */
+
+(function($) {
+
+jQuery.fn.pngFix = function(settings) {
+
+	// Settings
+	settings = jQuery.extend({
+		blankgif: 'blank.gif'
+	}, settings);
+
+	var ie55 = (navigator.appName == "Microsoft Internet Explorer" && parseInt(navigator.appVersion) == 4 && navigator.appVersion.indexOf("MSIE 5.5") != -1);
+	var ie6 = (navigator.appName == "Microsoft Internet Explorer" && parseInt(navigator.appVersion) == 4 && navigator.appVersion.indexOf("MSIE 6.0") != -1);
+
+	if (jQuery.browser.msie && (ie55 || ie6)) {
+
+		//fix images with png-source
+		jQuery(this).find("img[src$=.png]").each(function() {
+
+			jQuery(this).attr('width',jQuery(this).width());
+			jQuery(this).attr('height',jQuery(this).height());
+
+			var prevStyle = '';
+			var strNewHTML = '';
+			var imgId = (jQuery(this).attr('id')) ? 'id="' + jQuery(this).attr('id') + '" ' : '';
+			var imgClass = (jQuery(this).attr('class')) ? 'class="' + jQuery(this).attr('class') + '" ' : '';
+			var imgTitle = (jQuery(this).attr('title')) ? 'title="' + jQuery(this).attr('title') + '" ' : '';
+			var imgAlt = (jQuery(this).attr('alt')) ? 'alt="' + jQuery(this).attr('alt') + '" ' : '';
+			var imgAlign = (jQuery(this).attr('align')) ? 'float:' + jQuery(this).attr('align') + ';' : '';
+			var imgHand = (jQuery(this).parent().attr('href')) ? 'cursor:hand;' : '';
+			if (this.style.border) {
+				prevStyle += 'border:'+this.style.border+';';
+				this.style.border = '';
+			}
+			if (this.style.padding) {
+				prevStyle += 'padding:'+this.style.padding+';';
+				this.style.padding = '';
+			}
+			if (this.style.margin) {
+				prevStyle += 'margin:'+this.style.margin+';';
+				this.style.margin = '';
+			}
+			var imgStyle = (this.style.cssText);
+
+			strNewHTML += '<span '+imgId+imgClass+imgTitle+imgAlt;
+			strNewHTML += 'style="position:relative;white-space:pre-line;display:inline-block;background:transparent;'+imgAlign+imgHand;
+			strNewHTML += 'width:' + jQuery(this).width() + 'px;' + 'height:' + jQuery(this).height() + 'px;';
+			strNewHTML += 'filter:progid:DXImageTransform.Microsoft.AlphaImageLoader' + '(src=\'' + jQuery(this).attr('src') + '\', sizingMethod=\'scale\');';
+			strNewHTML += imgStyle+'"></span>';
+			if (prevStyle != ''){
+				strNewHTML = '<span style="position:relative;display:inline-block;'+prevStyle+imgHand+'width:' + jQuery(this).width() + 'px;' + 'height:' + jQuery(this).height() + 'px;'+'">' + strNewHTML + '</span>';
+			}
+
+			jQuery(this).hide();
+			jQuery(this).after(strNewHTML);
+
+		});
+
+		// fix css background pngs
+		jQuery(this).find("*").each(function(){
+			var bgIMG = jQuery(this).css('background-image');
+			if(bgIMG.indexOf(".png")!=-1){
+				var iebg = bgIMG.split('url("')[1].split('")')[0];
+				jQuery(this).css('background-image', 'none');
+				jQuery(this).get(0).runtimeStyle.filter = "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='" + iebg + "',sizingMethod='scale')";
+			}
+		});
+		
+		//fix input with png-source
+		jQuery(this).find("input[src$=.png]").each(function() {
+			var bgIMG = jQuery(this).attr('src');
+			jQuery(this).get(0).runtimeStyle.filter = 'progid:DXImageTransform.Microsoft.AlphaImageLoader' + '(src=\'' + bgIMG + '\', sizingMethod=\'scale\');';
+   		jQuery(this).attr('src', settings.blankgif)
+		});
+	
+	}
+	
+	return jQuery;
+
+};
+
+})(jQuery);
+
+			(function($) {
+
+				$.jScrollPane = {
+					active : []
+				};
+				$.fn.jScrollPane = function(settings)
+				{
+					settings = $.extend({}, $.fn.jScrollPane.defaults, settings);
+
+					var rf = function() { return false; };
+					
+					return this.each(
+						function()
+						{
+							var $this = $(this);
+							// Switch the element's overflow to hidden to ensure we get the size of the element without the scrollbars [http://plugins.jquery.com/node/1208]
+							$this.css('overflow', 'hidden');
+							var paneEle = this;
+							
+							if ($(this).parent().is('.jScrollPaneContainer')) {
+								var currentScrollPosition = settings.maintainPosition ? $this.position().top : 0;
+								var $c = $(this).parent();
+								var paneWidth = $c.innerWidth();
+								var paneHeight = $c.outerHeight();
+								var trackHeight = paneHeight;
+								$('>.jScrollPaneTrack, >.jScrollArrowUp, >.jScrollArrowDown', $c).remove();
+								$this.css({'top':0});
+							} else {
+								var currentScrollPosition = 0;
+								this.originalPadding = $this.css('paddingTop') + ' ' + $this.css('paddingRight') + ' ' + $this.css('paddingBottom') + ' ' + $this.css('paddingLeft');
+								this.originalSidePaddingTotal = (parseInt($this.css('paddingLeft')) || 0) + (parseInt($this.css('paddingRight')) || 0);
+								var paneWidth = $this.innerWidth();
+								var paneHeight = $this.innerHeight();
+								var trackHeight = paneHeight;
+								$this.wrap(
+									$('<div></div>').attr(
+										{'className':'jScrollPaneContainer'}
+									).css(
+										{
+											'height':paneHeight+'px', 
+											'width':paneWidth+'px'
+										}
+									)
+								);
+								$(document).bind(
+									'emchange', 
+									function(e, cur, prev)
+									{
+										$this.jScrollPane(settings);
+									}
+								);
+								
+							}
+							
+							if (settings.reinitialiseOnImageLoad) {
+								var $imagesToLoad = $.data(paneEle, 'jScrollPaneImagesToLoad') || $('img', $this);
+								var loadedImages = [];
+								
+								if ($imagesToLoad.length) {
+									$imagesToLoad.each(function(i, val)	{
+										$(this).bind('load', function() {
+											if($.inArray(i, loadedImages) == -1){ //don't double count images
+												loadedImages.push(val); //keep a record of images we've seen
+												$imagesToLoad = $.grep($imagesToLoad, function(n, i) {
+													return n != val;
+												});
+												$.data(paneEle, 'jScrollPaneImagesToLoad', $imagesToLoad);
+												settings.reinitialiseOnImageLoad = false;
+												$this.jScrollPane(settings); // re-initialise
+											}
+										}).each(function(i, val) {
+											if(this.complete || this.complete===undefined) { 
+												//needed for potential cached images
+												this.src = this.src; 
+											} 
+										});
+									});
+								};
+							}
+
+							var p = this.originalSidePaddingTotal;
+							
+							var cssToApply = {
+								'height':'auto',
+								'width':paneWidth - settings.scrollbarWidth - settings.scrollbarMargin - p + 'px'
+							}
+
+							if(settings.scrollbarOnLeft) {
+								cssToApply.paddingLeft = settings.scrollbarMargin + settings.scrollbarWidth + 'px';
+							} else {
+								cssToApply.paddingRight = settings.scrollbarMargin + 'px';
+							}
+
+							$this.css(cssToApply);
+
+							var contentHeight = $this.outerHeight();
+							var percentInView = paneHeight / contentHeight;
+
+							if (percentInView < .99) {
+								var $container = $this.parent();
+								$container.append(
+									$('<div></div>').attr({'className':'jScrollPaneTrack'}).css({'width':settings.scrollbarWidth+'px'}).append(
+										$('<div></div>').attr({'className':'jScrollPaneDrag'}).css({'width':settings.scrollbarWidth+'px'}).append(
+											$('<div></div>').attr({'className':'jScrollPaneDragTop'}).css({'width':settings.scrollbarWidth+'px'}),
+											$('<div></div>').attr({'className':'jScrollPaneDragBottom'}).css({'width':settings.scrollbarWidth+'px'})
+										)
+									)
+								);
+								
+								var $track = $('>.jScrollPaneTrack', $container);
+								var $drag = $('>.jScrollPaneTrack .jScrollPaneDrag', $container);
+								
+								if (settings.showArrows) {
+									
+									var currentArrowButton;
+									var currentArrowDirection;
+									var currentArrowInterval;
+									var currentArrowInc;
+									var whileArrowButtonDown = function()
+									{
+										if (currentArrowInc > 4 || currentArrowInc%4==0) {
+											positionDrag(dragPosition + currentArrowDirection * mouseWheelMultiplier);
+										}
+										currentArrowInc ++;
+									};
+									var onArrowMouseUp = function(event)
+									{
+										$('html').unbind('mouseup', onArrowMouseUp);
+										currentArrowButton.removeClass('jScrollActiveArrowButton');
+										clearInterval(currentArrowInterval);
+									};
+									var onArrowMouseDown = function() {
+										$('html').bind('mouseup', onArrowMouseUp);
+										currentArrowButton.addClass('jScrollActiveArrowButton');
+										currentArrowInc = 0;
+										whileArrowButtonDown();
+										currentArrowInterval = setInterval(whileArrowButtonDown, 100);
+									};
+									$container
+										.append(
+											$('<a></a>')
+												.attr({'href':'javascript:;', 'className':'jScrollArrowUp'})
+												.css({'width':settings.scrollbarWidth+'px'})
+												.html('Scroll up')
+												.bind('mousedown', function()
+												{
+													currentArrowButton = $(this);
+													currentArrowDirection = -1;
+													onArrowMouseDown();
+													this.blur();
+													return false;
+												})
+												.bind('click', rf),
+											$('<a></a>')
+												.attr({'href':'javascript:;', 'className':'jScrollArrowDown'})
+												.css({'width':settings.scrollbarWidth+'px'})
+												.html('Scroll down')
+												.bind('mousedown', function()
+												{
+													currentArrowButton = $(this);
+													currentArrowDirection = 1;
+													onArrowMouseDown();
+													this.blur();
+													return false;
+												})
+												.bind('click', rf)
+										);
+									var $upArrow = $('>.jScrollArrowUp', $container);
+									var $downArrow = $('>.jScrollArrowDown', $container);
+									if (settings.arrowSize) {
+										trackHeight = paneHeight - settings.arrowSize - settings.arrowSize;
+										$track
+											.css({'height': trackHeight+'px', top:settings.arrowSize+'px'})
+									} else {
+										var topArrowHeight = $upArrow.height();
+										settings.arrowSize = topArrowHeight;
+										trackHeight = paneHeight - topArrowHeight - $downArrow.height();
+										$track
+											.css({'height': trackHeight+'px', top:topArrowHeight+'px'})
+									}
+								}
+								
+								var $pane = $(this).css({'position':'absolute', 'overflow':'visible'});
+								
+								var currentOffset;
+								var maxY;
+								var mouseWheelMultiplier;
+								// store this in a seperate variable so we can keep track more accurately than just updating the css property..
+								var dragPosition = 0;
+								var dragMiddle = percentInView*paneHeight/2;
+								
+								// pos function borrowed from tooltip plugin and adapted...
+								var getPos = function (event, c) {
+									var p = c == 'X' ? 'Left' : 'Top';
+									return event['page' + c] || (event['client' + c] + (document.documentElement['scroll' + p] || document.body['scroll' + p])) || 0;
+								};
+								
+								var ignoreNativeDrag = function() {	return false; };
+								
+								var initDrag = function()
+								{
+									ceaseAnimation();
+									currentOffset = $drag.offset(false);
+									currentOffset.top -= dragPosition;
+									maxY = trackHeight - $drag[0].offsetHeight;
+									mouseWheelMultiplier = 2 * settings.wheelSpeed * maxY / contentHeight;
+								};
+								
+								var onStartDrag = function(event)
+								{
+									initDrag();
+									dragMiddle = getPos(event, 'Y') - dragPosition - currentOffset.top;
+									$('html').bind('mouseup', onStopDrag).bind('mousemove', updateScroll);
+									if ($.browser.msie) {
+										$('html').bind('dragstart', ignoreNativeDrag).bind('selectstart', ignoreNativeDrag);
+									}
+									return false;
+								};
+								var onStopDrag = function()
+								{
+									$('html').unbind('mouseup', onStopDrag).unbind('mousemove', updateScroll);
+									dragMiddle = percentInView*paneHeight/2;
+									if ($.browser.msie) {
+										$('html').unbind('dragstart', ignoreNativeDrag).unbind('selectstart', ignoreNativeDrag);
+									}
+								};
+								var positionDrag = function(destY)
+								{
+									destY = destY < 0 ? 0 : (destY > maxY ? maxY : destY);
+									dragPosition = destY;
+									$drag.css({'top':destY+'px'});
+									var p = destY / maxY;
+									$pane.css({'top':((paneHeight-contentHeight)*p) + 'px'});
+									$this.trigger('scroll');
+									if (settings.showArrows) {
+										$upArrow[destY == 0 ? 'addClass' : 'removeClass']('disabled');
+										$downArrow[destY == maxY ? 'addClass' : 'removeClass']('disabled');
+									}
+								};
+								var updateScroll = function(e)
+								{
+									positionDrag(getPos(e, 'Y') - currentOffset.top - dragMiddle);
+								};
+								
+								var dragH = Math.max(Math.min(percentInView*(paneHeight-settings.arrowSize*2)/2, settings.dragMaxHeight), settings.dragMinHeight);
+								
+								$drag.css(
+									{'height':dragH+'px'}
+								).bind('mousedown', onStartDrag);
+								
+								var trackScrollInterval;
+								var trackScrollInc;
+								var trackScrollMousePos;
+								var doTrackScroll = function()
+								{
+									if (trackScrollInc > 8 || trackScrollInc%4==0) {
+										positionDrag((dragPosition - ((dragPosition - trackScrollMousePos) / 2)));
+									}
+									trackScrollInc ++;
+								};
+								var onStopTrackClick = function()
+								{
+									clearInterval(trackScrollInterval);
+									$('html').unbind('mouseup', onStopTrackClick).unbind('mousemove', onTrackMouseMove);
+								};
+								var onTrackMouseMove = function(event)
+								{
+									trackScrollMousePos = getPos(event, 'Y') - currentOffset.top - dragMiddle;
+								};
+								var onTrackClick = function(event)
+								{
+									initDrag();
+									onTrackMouseMove(event);
+									trackScrollInc = 0;
+									$('html').bind('mouseup', onStopTrackClick).bind('mousemove', onTrackMouseMove);
+									trackScrollInterval = setInterval(doTrackScroll, 100);
+									doTrackScroll();
+								};
+								
+								$track.bind('mousedown', onTrackClick);
+								
+								var _animateToPosition;
+								var _animateToInterval;
+								function animateToPosition()
+								{
+									var diff = (_animateToPosition - dragPosition) / settings.animateStep;
+									if (diff > 1 || diff < -1) {
+										positionDrag(dragPosition + diff);
+									} else {
+										positionDrag(_animateToPosition);
+										ceaseAnimation();
+									}
+								}
+								var ceaseAnimation = function()
+								{
+									if (_animateToInterval) {
+										clearInterval(_animateToInterval);
+										delete _animateToPosition;
+									}
+								};
+								var scrollTo = function(pos, preventAni)
+								{
+									if (typeof pos == "string") {
+										$e = $(pos, $this);
+										if (!$e.length) return;
+										pos = $e.offset().top - $this.offset().top;
+									}
+									$container.scrollTop(0);
+									ceaseAnimation();
+									var destDragPosition = -pos/(paneHeight-contentHeight) * maxY;
+									if (preventAni || !settings.animateTo) {
+										positionDrag(destDragPosition);
+									} else {
+										_animateToPosition = destDragPosition;
+										_animateToInterval = setInterval(animateToPosition, settings.animateInterval);
+									}
+								};
+								$this[0].scrollTo = scrollTo;
+								
+								$this[0].scrollBy = function(delta)
+								{
+									var currentPos = -parseInt($pane.css('top')) || 0;
+									scrollTo(currentPos + delta);
+								};
+								
+								initDrag();
+								
+								scrollTo(-currentScrollPosition, true);
+							
+								// Deal with it when the user tabs to a link or form element within this scrollpane
+								$('*', this).bind(
+									'focus',
+									function(event)
+									{
+										var $e = $(this);
+										
+										// loop through parents adding the offset top of any elements that are relatively positioned between
+										// the focused element and the jScrollPaneContainer so we can get the true distance from the top
+										// of the focused element to the top of the scrollpane...
+										var eleTop = 0;
+										
+										while ($e[0] != $this[0]) {
+											eleTop += $e.position().top;
+											$e = $e.offsetParent();
+										}
+										
+										var viewportTop = -parseInt($pane.css('top')) || 0;
+										var maxVisibleEleTop = viewportTop + paneHeight;
+										var eleInView = eleTop > viewportTop && eleTop < maxVisibleEleTop;
+										if (!eleInView) {
+											var destPos = eleTop - settings.scrollbarMargin;
+											if (eleTop > viewportTop) { // element is below viewport - scroll so it is at bottom.
+												destPos += $(this).height() + 15 + settings.scrollbarMargin - paneHeight;
+											}
+											scrollTo(destPos);
+										}
+									}
+								)
+								
+								
+								if (location.hash) {
+									scrollTo(location.hash);
+								}
+								
+								// use event delegation to listen for all clicks on links and hijack them if they are links to
+								// anchors within our content...
+								$(document).bind(
+									'click',
+									function(e)
+									{
+										$target = $(e.target);
+										if ($target.is('a')) {
+											var h = $target.attr('href');
+											if(typeof(h) != 'undefined')
+											{
+												if (h.substr(0, 1) == '#') {
+													scrollTo(h);
+												}
+											}
+										}
+									}
+								);
+								
+								$.jScrollPane.active.push($this[0]);
+								
+							} else {
+								$this.css(
+									{
+										'height':paneHeight+'px',
+										'width':paneWidth-this.originalSidePaddingTotal+'px',
+										'padding':this.originalPadding
+									}
+								);
+								// remove from active list?
+								$this.parent().unbind('mousewheel');
+							}
+							
+						}
+					)
+				};
+
+				$.fn.jScrollPane.defaults = {
+					scrollbarWidth : 6,
+					scrollbarMargin : 0,
+					wheelSpeed : 18,
+					showArrows : false,
+					arrowSize : 0,
+					animateTo : false,
+					dragMinHeight : 113,
+					dragMaxHeight : 113,
+					animateInterval : 100,
+					animateStep: 3,
+					maintainPosition: true,
+					scrollbarOnLeft: false,
+					reinitialiseOnImageLoad: false
+				};
+
+				// clean up the scrollTo expandos
+				$(window)
+					.bind('unload', function() {
+						var els = $.jScrollPane.active; 
+						for (var i=0; i<els.length; i++) {
+							els[i].scrollTo = els[i].scrollBy = null;
+						}
+					}
+				);
+
+				})(jQuery);
+
+
+				/* ie6 png24  */
+				function setPng24(obj) {
+					obj.width = obj.height = 1;
+					obj.className = obj.className.replace(/\bpng24\b/i, '');
+					obj.style.filter = 'progid:DXImageTransform.Microsoft.AlphaImageLoader(src="' + obj.src + '",sizingMethod="image");';
+					obj.src = 'http://pics.about.co.kr/os2/social_cms/blank.gif';
+					return '';
+				}

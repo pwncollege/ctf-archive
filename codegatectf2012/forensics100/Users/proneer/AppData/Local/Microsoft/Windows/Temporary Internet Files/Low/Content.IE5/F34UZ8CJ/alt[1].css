@@ -1,0 +1,29 @@
+#productnav { *margin-bottom: 7px; *width: 54.5%; }
+
+/* container */
+#main aside.callout + p { *margin: 0 0 18px 0 !important; }
+#main aside.callout > p { *clear: none; *margin-left: 137px; }
+#whatis #main aside.callout a.OverlayPanel + h3 { *position: static !important; }
+#main .callout a.thumb img { _float: left !important; }
+#main .callout h3 { *margin-bottom: 9px; _margin-left: 148px; }
+#main .callout p { _margin-left: 148px !important; }
+#main .callout p a.more { *display:inline; *white-space:normal; *text-align:left; }
+
+#overview #main header { *height: 469px; }
+
+#whatsnew #main .buckets { *margin-bottom: 18px; }
+#whatsnew #developer_program { border: 1px solid #e5e5e5; padding: 17px 45px 1.5em; }
+#whatsnew .performance_callout { border: 1px solid #edecec; }
+
+#whatis #main .buckets {  *margin-bottom: 18px; }
+#whatis #main .buckets a.first { _padding-left: 55px !important; }
+#whatis #standards .column.first p { _position: static; *clear: both; }
+#whatis #standards img.big_one { _margin-right: -50px; }
+
+#features header h1 { margin: 0 auto; }
+#features article section header h2 { *padding-bottom:18px; }
+
+#download header h1, #download p.intro { _margin-left: 30px; }
+#download #download-frame { height: 400px; *height: 400px; }
+
+#thankyou header { float: left; width: auto; }

@@ -1,0 +1,1194 @@
+﻿///<reference path="jquery-1.3.2-vsdoc2.js" / >
+
+(function($) {
+
+	$.fn.priceRangeSelector = function(rangeSelector) {
+		// 초기 SelectedAttributes 값 ( 취소버튼시 원복을 위해 저장)
+		rangeSelector.defaultSelectedAttributes = decodeURIComponent(rangeSelector.PageState.SelectedAttributes);
+
+		// 검색 패러미터 컨테이너
+		// Full Container
+		var selectedFullAttributeDataObject;
+		selectedFullAttributeDataObject = new AttributeDataObject({ "InputData": "" });
+
+		// UI용 Container (Full Container에서 GetPriceRangeSelectorLists 만을 넣어 계산)
+		var selectedAttributeDataObject;
+		selectedAttributeDataObject = new AttributeDataObject(null);
+		selectedAttributeDataObject.appendDataWithArray(selectedFullAttributeDataObject.getPriceRangeSelectorLists());
+
+		// 가격 바 사이즈
+		var maxBarWidth = parseInt($("#" + rangeSelector.ID).attr("MaxBarWidth"));
+		var widthOfSlideButton = 15;
+
+		// 디폴트 코드
+
+		// 제조사 검색 페이징 변수
+		rangeSelector.PageIndex = 0;
+		rangeSelector.PageSize = parseInt($("#" + rangeSelector.ID).attr("PageSize"));
+
+		if (document.getElementById(rangeSelector.ID) == null || document.getElementById(rangeSelector.ID) == "undefined") return;
+
+		// 퀵바이 / SRP 여부
+		rangeSelector.SRPTabType = $("#" + rangeSelector.ID).attr("SRPTabType");
+
+    // 제조사 리스트 Ajax Call 주소
+    rangeSelector.MakerListAjaxCallUrl = $("#" + rangeSelector.ID).attr("MakerListAjaxCallUrl");
+
+		// 상태 값 초기화.
+		// 슬라이더 상 최대 최소값 (액수)
+		rangeSelector.MaxPrice = $("#" + rangeSelector.ID).attr("MaxPrice");
+		rangeSelector.MinPrice = $("#" + rangeSelector.ID).attr("MinPrice");
+
+		// 최대값과 최소값 사이의 갭
+		rangeSelector.MinMaxGap = rangeSelector.MaxPrice - rangeSelector.MinPrice;
+
+		// 실제 가격표시를 위해 사용되는 bar range (버튼을 제외한 중간 bar 라인)
+		rangeSelector.BarRangeWidth = maxBarWidth - widthOfSlideButton * 2;
+
+		// 픽셀당 가격 변동치 (계산 간소화를 위해 상수를 선계산)
+		rangeSelector.PricePerPixel = parseFloat(rangeSelector.MinMaxGap) / parseFloat(rangeSelector.BarRangeWidth);
+
+		// 가격당 픽셀 변동치 (계산 간소화를 위해 상수를 선계산)
+		rangeSelector.PixelPerPrice = parseFloat(rangeSelector.BarRangeWidth) / parseFloat(rangeSelector.MinMaxGap);
+
+		// 화면에 출력될 최대 최소값 (액수)
+		rangeSelector.selectedMaxPrice = $("#" + rangeSelector.ID).attr("SelectedMaxPrice");
+		rangeSelector.selectedMinPrice = $("#" + rangeSelector.ID).attr("SelectedMinPrice");
+
+		
+		// UI 상태
+		var leftSliderPosition = document.getElementById(rangeSelector.ID + "_LeftSlider").style.left.replace("px", "");
+		var rightSliderPosition = document.getElementById(rangeSelector.ID + "_RightSlider").style.left.replace("px", "");
+		var rangeBarWidth = $("#" + rangeSelector.ID + "_imgSelectedRangeBar").width();
+
+
+		// 데이터 컨테이너에 항목 입력
+		var insertDataContainerItem = function(AttributeID, AttributeName, AttributeElementID, AttributeElementName) {
+			// 가격이나 할인율은 1개만 들어가므로 삭제 후 재입력
+			if (AttributeID == "PBPRateRange") {
+				selectedFullAttributeDataObject.deleteDataByAttrID("PBPRateRange");
+			}
+			else if (AttributeID == "VitemPriceRange") {
+				selectedFullAttributeDataObject.deleteDataByAttrID("VitemPriceRange");
+			}
+
+			// 데이터 insert 시 항상 다음 페이지로 나아가야하는지 체크
+			if (selectedAttributeDataObject.hasNextPage(rangeSelector.PageIndex, rangeSelector.PageSize)) {
+				rangeSelector.PageIndex = rangeSelector.PageIndex + 1;
+			}
+
+			if (AttributeID == "Maker") {
+				// 제조사 만 UI에 나타나므로 UI용 컨테이너에 추가
+				selectedAttributeDataObject.insertData(AttributeID, AttributeElementID, AttributeName, AttributeElementName);
+			}
+			selectedFullAttributeDataObject.insertData(AttributeID, AttributeElementID, AttributeName, AttributeElementName);
+		};
+
+		// 데이터 컨테이너에서 항목 삭제
+		var deleteDataContainerItem = function(AttributeID, AttributeElementID) {
+			// AttributeID, AttributeElementID 기준 삭제
+			if (AttributeID != undefined && AttributeElementID != undefined) {
+				selectedAttributeDataObject.deleteDataByAttrIdAttrElementId(AttributeID, AttributeElementID);
+				selectedFullAttributeDataObject.deleteDataByAttrIdAttrElementId(AttributeID, AttributeElementID);
+			}
+			// AttributeID 기준 삭제
+			else if (AttributeID != undefined && AttributeElementID == undefined) {
+				selectedAttributeDataObject.deleteDataByAttrID(AttributeID);
+				selectedFullAttributeDataObject.deleteDataByAttrID(AttributeID);
+			}
+			// AttributeElementID 기준 삭제
+			else if (AttributeID == undefined && AttributeElementID != undefined) {
+				selectedAttributeDataObject.deleteDataByAttrElementID(AttributeElementID);
+				selectedFullAttributeDataObject.deleteDataByAttrElementID(AttributeElementID);
+			}
+
+			// 데이터 delete 시 항상 전 페이지로 돌아가야하는지 체크
+			if (selectedAttributeDataObject.hasNoItemsInThisPage(rangeSelector.PageIndex, rangeSelector.PageSize)) {
+				rangeSelector.PageIndex = rangeSelector.PageIndex - 1;
+			}
+		};
+
+
+		var drag = function(elementToDrag, width, height, minposX, minposY, maxposX, maxposY, move_cbfunc, end_cbfunc, evt) {
+
+			// 드래그가 시작되는 마우스위치(창기반 좌표계) 이다. 
+			var objX = parseInt(elementToDrag.style.left);
+			var objY = parseInt(elementToDrag.style.top);
+			if (isNaN(objX)) objX = minposX;
+			if (isNaN(objY)) objY = minposY;
+
+			var msX = evt.clientX;
+			var msY = evt.clientY;
+
+			// mousedown 이벤트후에 발생될 mousemove와 mouseup 이벤트에 반응할 
+			// 이벤트 처리기들을 등록한다. 
+			if (document.addEventListener) // DOM레빌 2 이벤트 모델 
+			{
+				// 포착 이벤트 처리기를 등록한다. 
+				document.addEventListener("mousemove", moveHandler, true);
+				document.addEventListener("mouseup", upHandler, true);
+			}
+			else if (document.attachEvent)  //IE 5 이상의 이벤트모델 
+			{
+				// IE 이벤트 모델에서는 엘리먼트에 대해 setCapture()를 호출하여 
+				// 이벤트를 포착한다. 
+				elementToDrag.setCapture();
+				elementToDrag.attachEvent("onmousemove", moveHandler);
+				elementToDrag.attachEvent("onmouseup", upHandler);
+
+				// 마우스 포착에 실패하면 mouseup 이벤트라고 간주한다. 
+				elementToDrag.attachEvent("onlosecapture", upHandler);
+			}
+			else {  // IE 4 이벤트모델 
+				// IE 4 에서는 attachEvent()나 setCapture()를 사용할수 없기 때문에 
+				// document 객체에 대해 이벤트 처리기를 직접 설정하고 마우스 이벤트가 
+				// 거품처럼 위로 올라가길 기대한다. 
+				var oldmovehandler = document.onmousemove;    //upHandler()에서 사용된다. 
+				var olduphandler = document.onmouseup;
+				document.onmousemove = moveHandler;
+				document.onmouseup = upHandler;
+			}
+
+			// 이 이벤트는 이미 처리했다.    
+			if (evt.stopPropagation) evt.stopPropagation();      // DOM레벨 2 
+			else evt.cancelBubble = true;                           // IE 
+
+			// 기본 동작 수행을 금지한다. 
+			if (evt.preventDefault) evt.preventDefault();       // DOM레벨 2 
+			else evt.returnValue = false;                           // IE 
+
+			/** 
+			* 다음은 엘리먼트가 드래그 될떄 mousemove 이벤트를 감지하는 이벤트 처리기이다. 
+			* 이 처리기가 하는 일은 엘리먼트를 이동시키는 것이다. 
+			**/
+			function moveHandler(e) {
+				if (!e) e = window.event;      // IE 이벤트모델 
+
+				// 엘리먼트를 현재 마우스 위치로이동한다.
+				// 이때 처음 마우스를 클릭했을때의 오프셋을 필요한 만큼 적용시킨다. 
+				var curX = msX - e.clientX;
+				if (isNaN(curX)) curX = minposX;
+				var newX = objX - curX;
+				if (newX < minposX) {
+					newX = minposX;
+				}
+				if (newX > maxposX) newX = maxposX;
+
+				var curY = msY - e.clientY;
+				if (isNaN(curY)) curY = minposY;
+				var newY = objY - curY;
+				if (newY < minposY) {
+					newY = minposY;
+				}
+				if (newY > maxposY) newY = maxposY;
+
+				elementToDrag.style.left = newX + "px";
+				elementToDrag.style.top = newY + "px";
+
+				// 다른쪽에서 이 이벤트를 볼수 없게 한다. 
+				if (e.stopPropagtion) e.stopPropagation();          // DOM 레빌 2 
+				else e.cancelBubble = true;                           // IE 
+
+				if (move_cbfunc) move_cbfunc(elementToDrag, newX, newY);
+			}
+
+			/* 
+			* 다음은 드래그가 끝났을때 발생하는 mouseup이벤트를 포착하는 이벤트 처리기이다 
+			*/
+			function upHandler(e) {
+				if (!e) e = window.event;      // IE 이벤트모델 
+
+				//capture한 이벤트 처리기를 등록 취소한다. 
+				if (document.removeEventListener)       //DOm 이벤트 모델 
+				{
+					document.removeEventListener("mouseup", upHandler, true);
+					document.removeEventListener("mousemove", moveHandler, true);
+				}
+				else if (document.detachEvent)          // IE 5와 그 이후 버전의 이벤트 모델 
+				{
+					elementToDrag.detachEvent("onlosecapture", upHandler);
+					elementToDrag.detachEvent("onmouseup", upHandler);
+					elementToDrag.detachEvent("onmousemove", moveHandler);
+					elementToDrag.releaseCapture();
+				}
+				else    // IE 4 이벤트 모델 
+				{
+					//원본 처리기가존재하면 이를 복구한다. 
+					document.onmouseup = olduphandler;
+					document.onmousemove = oldmovehandler;
+				}
+
+				// 이벤트가 더 전파되지 않게 한다. 121          // propagate : 널리 퍼지다, 보급되다 
+				if (e.stopPropagation) e.stopPropagation();     // DOM Level 2
+				else e.cancelBubble = true;                       // IE
+
+				// 이벤트 발동만을 위한 수정
+				//        if (end_cbfunc) end_cbfunc(elementToDrag, newX, newY);
+				if (end_cbfunc) end_cbfunc();
+
+				isDragging = false;
+			}
+		}
+
+		var getClientRect = function(obj) {
+
+			function Rectangle(left, top, right, bottom) {
+				this.left = left;
+				this.top = top;
+				this.right = right;
+				this.bottom = bottom;
+			}
+
+			Rectangle.FromBoundingClientRect = function(boundingClientRect) {
+				var rectangle = new Rectangle();
+
+				rectangle.left = boundingClientRect.left;
+				rectangle.top = boundingClientRect.top;
+				rectangle.right = boundingClientRect.right;
+				rectangle.bottom = boundingClientRect.bottom;
+
+				return rectangle;
+			}
+
+			if (obj.getBoundingClientRect) {
+				return Rectangle.FromBoundingClientRect(obj.getBoundingClientRect());
+			}
+			else {
+				var left = 0;
+				var top = 0;
+				var width = obj.offsetWidth;
+				var height = obj.offsetHeight;
+				do {
+					top += obj.offsetTop || 0;
+					left += obj.offsetLeft || 0;
+					obj = obj.offsetParent;
+				} while (obj);
+
+				left = left - (document.documentElement.scrollLeft || document.body.scrollLeft);
+				top = top - (document.documentElement.scrollTop || document.body.scrollTop);
+
+				return new Rectangle(left, top, left + width, top + height);
+			}
+		}
+
+		rangeSelector.SetPositionLeftSlider = function() {
+			// 좌측 슬라이더 위치
+			leftSliderPosition = parseInt(maxBarWidth * (parseFloat(rangeSelector.selectedMinPrice) / parseFloat(rangeSelector.MaxPrice))) - widthOfSlideButton;
+
+			var leftSliderMaxPosition = maxBarWidth - widthOfSlideButton * 2;
+
+			if (leftSliderPosition <= widthOfSlideButton) {
+				leftSliderPosition = 0;
+				rangeSelector.selectedMinPrice = 0;
+			}
+			else if (leftSliderPosition >= leftSliderMaxPosition) {
+				leftSliderPosition = leftSliderMaxPosition;
+				rangeSelector.selectedMinPrice = rangeSelector.selectedMaxPrice;
+			}
+
+			// UI 갱신
+			updatePriceUI();
+		}
+
+		rangeSelector.SetPositionRightSlider = function() {
+			// 우측 슬라이더 위치
+			rightSliderPosition = parseInt(maxBarWidth * (parseFloat(parseFloat(rangeSelector.selectedMaxPrice) / parseFloat(rangeSelector.MaxPrice))));
+
+			var rightSliderMaxPosition = maxBarWidth - widthOfSlideButton;
+
+			if (rightSliderPosition <= widthOfSlideButton) {
+				rightSliderPosition = widthOfSlideButton;
+				rangeSelector.selectedMaxPrice = 0;
+			}
+			else if (rightSliderPosition >= rightSliderMaxPosition) {
+				rightSliderPosition = rightSliderMaxPosition - 1;
+			}
+
+			// UI 갱신
+			updatePriceUI();
+		}
+
+		// os2.finding.Common.js 상의 setComma 함수를 사용함
+		var toMoneyString = setComma;
+
+		// 가격바 UI 재표시
+		var updatePriceUI = function() {
+			// 선택영역 표시 Bar
+			rangeBarWidth = parseInt(rightSliderPosition) - parseInt(leftSliderPosition);
+			document.getElementById(rangeSelector.ID + "_SelectedRangeBar").style.paddingLeft = parseInt(leftSliderPosition) + "px";
+			document.getElementById(rangeSelector.ID + "_imgSelectedRangeBar").style.width = rangeBarWidth + "px";
+			document.getElementById(rangeSelector.ID + "_LeftSlider").style.left = parseInt(leftSliderPosition) + "px";
+			document.getElementById(rangeSelector.ID + "_RightSlider").style.left = parseInt(rightSliderPosition) + "px";
+
+			document.getElementById(rangeSelector.ID + "_hspanMinPrice").innerHTML = toMoneyString(rangeSelector.selectedMinPrice);
+			document.getElementById(rangeSelector.ID + "_htxtMinPrice").value = toMoneyString(rangeSelector.selectedMinPrice);
+
+			document.getElementById(rangeSelector.ID + "_hspanMaxPrice").innerHTML = toMoneyString(rangeSelector.selectedMaxPrice);
+			document.getElementById(rangeSelector.ID + "_htxtMaxPrice").value = toMoneyString(rangeSelector.selectedMaxPrice);
+		};
+
+		// 선택한 제조사 UI 재표시
+		var updateSelectedMakerUI = function(pageIndex, pageSize) {
+
+			var $CheckedList = $("#" + rangeSelector.ID).find("#CheckedList");
+
+			var selectedMakerList = paramDataToHtml(selectedAttributeDataObject.pagingArray(pageIndex, pageSize));
+
+			if (selectedMakerList == "")
+				selectedMakerList = "<li class='list_none'>선택한 제조사가 표시 됩니다. 검색하고 싶은 제조사를 선택해 주십시오.</li>";
+
+			// 화면 다시 그려주기
+			$CheckedList.html(selectedMakerList);
+
+			// ie8 버그로 인하여 아이템이 하나만 있을 경우 화면에 제대로 반영이 안되는 문제 해결용
+			$CheckedList.show();
+
+			// 화면을 그려준 후 이벤트 다시 바인드
+			selectedMakerEventBind();
+
+			// pre-page가 존재할 경우 전으로 버튼 바인드
+			if (parseInt(pageIndex) > 0) {
+				$("#" + rangeSelector.ID).find(".btn_rolling").find("a[command=pre-page]").find("img").attr("src", __picsUrl + "/os2/common/icon/arrows_prev_on.gif");
+				$("#" + rangeSelector.ID).find(".btn_rolling").find("a[command=pre-page]").attr("pageIndex", pageIndex - 1);
+				$("#" + rangeSelector.ID).find(".btn_rolling").find("a[command=pre-page]").attr("style", "cursor:pointer;");
+			}
+			else {
+				$("#" + rangeSelector.ID).find(".btn_rolling").find("a[command=pre-page]").find("img").attr("src", __picsUrl + "/os2/common/icon/arrows_prev_off.gif");
+				$("#" + rangeSelector.ID).find(".btn_rolling").find("a[command=pre-page]").attr("pageIndex", "-1");
+				$("#" + rangeSelector.ID).find(".btn_rolling").find("a[command=pre-page]").attr("style", "");
+			}
+
+
+			//      $("#TestConsole").html($("#TestConsole").html() + "<br /><br />" + "rangeSelector.PageIndex: " + parseInt(rangeSelector.PageIndex) + " /  selectedAttributeDataObject.lastPageIndex: " + parseInt(selectedAttributeDataObject.lastPageIndex) + "   /  boolean: " + (parseInt(rangeSelector.PageIndex) < parseInt(selectedAttributeDataObject.lastPageIndex)));
+
+
+			// next-page가 존재할 경우 전으로 버튼 바인드
+			if (parseInt(pageIndex) < parseInt(selectedAttributeDataObject.lastPageIndex)) {
+				$("#" + rangeSelector.ID).find(".btn_rolling").find("a[command=next-page]").find("img").attr("src", __picsUrl + "/os2/common/icon/arrows_next_on.gif");
+				$("#" + rangeSelector.ID).find(".btn_rolling").find("a[command=next-page]").attr("pageIndex", pageIndex + 1);
+				$("#" + rangeSelector.ID).find(".btn_rolling").find("a[command=next-page]").attr("style", "cursor:pointer;");
+			}
+			else {
+				$("#" + rangeSelector.ID).find(".btn_rolling").find("a[command=next-page]").find("img").attr("src", __picsUrl + "/os2/common/icon/arrows_next_off.gif");
+				$("#" + rangeSelector.ID).find(".btn_rolling").find("a[command=next-page]").attr("pageIndex", "-1");
+				$("#" + rangeSelector.ID).find(".btn_rolling").find("a[command=next-page]").attr("style", "");
+			}
+
+
+		};
+
+		// 선택한 제조사를 출력할 Html을 가져옴
+		var paramDataToHtml = function(arrayResult) {
+			var retHtml = "";
+
+			for (var idx = 0; idx < arrayResult.length; idx++) {
+				switch (arrayResult[idx].AttributeID) {
+					// 제조사      
+					case "Maker":
+						retHtml += "<li AttributeID='Maker' ><a AttributeElementID='" + arrayResult[idx].AttributeElementID + "' AttributeID='" + arrayResult[idx].AttributeID + "' title='삭제' style='cursor:pointer;'></a><span>[" + arrayResult[idx].AttributeElementName + "]</span></li>"
+						break;
+
+					// 가격      
+					case "VitemPriceRange":
+						retHtml += "<li AttributeID='VitemPriceRange' ><a AttributeElementID='" + arrayResult[idx].AttributeElementID + "' AttributeID='" + arrayResult[idx].AttributeID + "' title='삭제' style='cursor:pointer;'></a><span>가격\\ [" + arrayResult[idx].AttributeElementName + "]</span></li>"
+						break;
+
+					// 색상      
+					case "ImageColorMask":
+						retHtml += "<li AttributeID='ImageColorMask' ><a AttributeElementID='" + arrayResult[idx].AttributeElementID + "' AttributeID='" + arrayResult[idx].AttributeID + "' title='삭제' style='cursor:pointer;'></a><span>색상 [" + arrayResult[idx].AttributeElementName + "]</span></li>"
+						break;
+				}
+			}
+
+			return retHtml;
+		};
+
+		// 선택한 제조사 UI 삭제 버튼 바인드
+		var selectedMakerEventBind = function() {
+			$("#" + rangeSelector.ID).find("#CheckedList").find("a").bind("click", function() {
+				// 데이터 삭제
+				deleteDataContainerItem($(this).attr("AttributeID"), $(this).attr("AttributeElementID"));
+
+				switch ($(this).attr("AttributeID")) {
+					case "Maker":
+						// 리스트 상 체크해제
+						$("#" + rangeSelector.ID).find(".mall").find("li[AttributeElementID=" + $(this).attr("AttributeElementID") + "]").find("input").attr("checked", false);
+						$("#" + rangeSelector.ID).find(".mall").find("li[AttributeElementID=" + $(this).attr("AttributeElementID") + "]").find("label").attr("class", "");
+
+						// 체크 변경에 따른 Event 발생.
+						if (rangeSelector.eventHandlers.MakerList_OnChange != null) {
+							var eventArg = new Object();
+
+							eventArg.CheckedMakerId = $(this).attr("AttributeElementID");
+							eventArg.CheckedState = "off";
+							eventArg.CheckedItemType = $(this).attr("AttributeID");
+							eventArg.SelectedAttributes = selectedFullAttributeDataObject.outData();
+
+							rangeSelector.eventHandlers.MakerList_OnChange(document.getElementById(rangeSelector.ID), eventArg);
+						}
+						break;
+
+					case "ImageColorMask":
+						// 리스트 상 체크해제
+						$("#" + rangeSelector.ID).find("#divColorPalette").find("a[AttributeElementID=" + $(this).attr("AttributeElementID") + "]").attr("class", "");
+
+						// 체크 변경에 따른 Event 발생.
+						if (rangeSelector.eventHandlers.ColorList_OnChange != null) {
+							var eventArg = new Object();
+
+							eventArg.CheckedColorId = $(this).attr("AttributeElementID");
+							eventArg.CheckedState = "off";
+							eventArg.CheckedItemType = $(this).attr("AttributeID");
+							eventArg.SelectedAttributes = selectedFullAttributeDataObject.outData();
+
+							rangeSelector.eventHandlers.ColorList_OnChange(document.getElementById(rangeSelector.ID), eventArg);
+						}
+						break;
+
+					case "VitemPriceRange":
+						// 가격 슬라이드 바 refresh (최대 최소값으로)
+						rangeSelector.selectedMinPrice = rangeSelector.MinPrice;
+						rangeSelector.selectedMaxPrice = rangeSelector.MaxPrice;
+
+						leftSliderPosition = 0;
+						rightSliderPosition = maxBarWidth - widthOfSlideButton;
+
+						// 슬라이드 바 UI refresh
+						updatePriceUI();
+
+						var OutData = selectedFullAttributeDataObject.outData();
+
+						// 원복 지점 생성
+						rangeSelector.defaultSelectedAttributes = OutData;
+
+						// 값 변경에 따른 Event 발생.
+						if (rangeSelector.eventHandlers.Price_OnChange != null) {
+							var eventArg = new Object();
+
+							eventArg.SelectedMaxPrice = rangeSelector.selectedMaxPrice;
+							eventArg.SelectedMinPrice = rangeSelector.selectedMinPrice;
+							eventArg.SelectedAttributes = OutData;
+
+							rangeSelector.eventHandlers.Price_OnChange(document.getElementById(rangeSelector.ID), eventArg);
+						}
+						break;
+				}
+
+				// 삭제 후 UI 다시 그려주기
+				rangeSelector.PageIndex = selectedAttributeDataObject.getMaxPageIndex(rangeSelector.PageSize);
+				updateSelectedMakerUI(rangeSelector.PageIndex, rangeSelector.PageSize);
+			});
+		};
+
+		// 검색 버튼 액션
+		var searchAction = function() {
+			//insertDataContainerItem("VitemPriceRange", "가격\\", rangeSelector.selectedMinPrice + "|" + rangeSelector.selectedMaxPrice, toMoneyString(rangeSelector.selectedMinPrice) + " ~ " + toMoneyString(rangeSelector.selectedMaxPrice));
+
+			// 검색 버튼이 눌릴 시 기타 옵션 삭제
+			deleteListOptions();
+
+			// 원복지점 생성
+			rangeSelector.defaultSelectedAttributes = selectedFullAttributeDataObject.outData();
+
+			if (rangeSelector.eventHandlers.Search_OnClick != null) {
+				var eventArg = new Object();
+
+				eventArg.SelectedMaxPrice = rangeSelector.selectedMaxPrice;
+				eventArg.SelectedMinPrice = rangeSelector.selectedMinPrice;
+				eventArg.SelectedAttributes = rangeSelector.defaultSelectedAttributes;
+
+				rangeSelector.eventHandlers.Search_OnClick(document.getElementById(rangeSelector.ID), eventArg);
+			}
+		};
+
+		/*
+		$("#" + rangeSelector.ID + "_btnSearch1").bind("click", function() {
+		searchAction();
+		});
+		*/
+
+		$("#" + rangeSelector.ID + "_btnSearch2").bind("click", function() {
+			searchAction();
+		});
+
+		// MouseUp 시 이벤트
+		var SlideMouseUp = function() {
+			// 선택된 제조사 리스트 추가
+			insertDataContainerItem("VitemPriceRange", "가격\\", rangeSelector.selectedMinPrice + "|" + rangeSelector.selectedMaxPrice, toMoneyString(rangeSelector.selectedMinPrice) + " ~ " + toMoneyString(rangeSelector.selectedMaxPrice));
+
+			var OutData = selectedFullAttributeDataObject.outData();
+
+			// 원복 지점 생성
+			rangeSelector.defaultSelectedAttributes = OutData;
+
+			// 값 변경에 따른 Event 발생.
+			if (rangeSelector.eventHandlers.Price_OnChange != null) {
+				var eventArg = new Object();
+
+				eventArg.SelectedMaxPrice = rangeSelector.selectedMaxPrice;
+				eventArg.SelectedMinPrice = rangeSelector.selectedMinPrice;
+				eventArg.SelectedAttributes = OutData;
+
+				rangeSelector.eventHandlers.Price_OnChange(document.getElementById(rangeSelector.ID), eventArg);
+			}
+		};
+
+		$("#" + rangeSelector.ID + "_LeftThumb").bind("mousedown", function(event) {
+			drag(document.getElementById(rangeSelector.ID + "_LeftSlider"), 0, 33, 0, 33, (parseInt(rightSliderPosition) - widthOfSlideButton), 0, Slider_OnMove, SlideMouseUp, event);
+
+			// 이벤트 Bubbling 중단.
+			if (event.stopPropagation) event.stopPropagation();      // DOM레벨 2
+			else event.cancelBubble = true;                           // IE
+		});
+
+		$("#" + rangeSelector.ID + "_RightThumb").bind("mousedown", function(event) {
+			drag(document.getElementById(rangeSelector.ID + "_RightSlider"), 0, 33, (parseInt(leftSliderPosition) + widthOfSlideButton), 33, maxBarWidth - widthOfSlideButton, 0, Slider_OnMove, SlideMouseUp, event);
+
+			// 이벤트 Bubbling 중단.
+			if (event.stopPropagation) event.stopPropagation();      // DOM레벨 2
+			else event.cancelBubble = true;                           // IE
+		});
+
+		var Slider_OnMove = function(obj, posX, posY) {
+			switch (obj.id) {
+				case rangeSelector.ID + "_LeftSlider":
+					leftSliderPosition = posX;
+					break;
+				case rangeSelector.ID + "_RightSlider":
+					rightSliderPosition = posX;
+					break;
+			}
+
+			// 최저가격 범위 다시 계산 및 표시
+			rangeSelector.selectedMinPrice = parseInt(rangeSelector.PricePerPixel * parseFloat(leftSliderPosition)) + parseInt(rangeSelector.MinPrice);
+
+			// 최대가격 범위 다시 계산 및 표시
+			rangeSelector.selectedMaxPrice = parseInt(rangeSelector.PricePerPixel * parseFloat(rightSliderPosition - widthOfSlideButton)) + parseInt(rangeSelector.MinPrice);
+
+			// 단위 보정.
+			rangeSelector.selectedMinPrice = parseInt(rangeSelector.selectedMinPrice - rangeSelector.selectedMinPrice % 100);
+			rangeSelector.selectedMaxPrice = parseInt(rangeSelector.selectedMaxPrice - rangeSelector.selectedMaxPrice % 100);
+
+			// UI 갱신
+			updatePriceUI();
+		}
+
+		// 숫자만 입력 가능
+		$("#" + rangeSelector.ID + "_htxtMinPrice").keypress(function(event) {
+			if (event.which && (event.which > 47 && event.which < 58 || event.which == 8)) {
+			}
+			else {
+				event.preventDefault();
+			}
+		});
+
+		$("#" + rangeSelector.ID + "_htxtMinPrice").bind("change", function() {
+			var minValue = $("#" + rangeSelector.ID + "_htxtMinPrice").val();
+
+			minValue = minValue.replace(/[^0-9]*/g, "");
+
+			// 값 Validation Check
+			if (minValue == "" || parseInt(minValue) < parseInt(rangeSelector.MinPrice) || parseInt(minValue) > parseInt(rangeSelector.MaxPrice)) {
+				alert(toMoneyString(rangeSelector.MinPrice) + "~" + toMoneyString(rangeSelector.MaxPrice) + "원 사이의 숫자를 입력해 주세요.");
+				$("#" + rangeSelector.ID + "_htxtMinPrice").val(toMoneyString(rangeSelector.selectedMinPrice));
+				minValue = rangeSelector.selectedMinPrice;
+
+				return false;
+			}
+			else if (parseInt(minValue) > parseInt(rangeSelector.selectedMaxPrice)) {
+				alert(toMoneyString(rangeSelector.MinPrice) + "~" + toMoneyString(rangeSelector.selectedMaxPrice) + "원 사이의 숫자를 입력해 주세요.");
+				$("#" + rangeSelector.ID + "_htxtMinPrice").val(toMoneyString(rangeSelector.selectedMinPrice));
+				minValue = rangeSelector.selectedMinPrice;
+				return false;
+			}
+
+			if (minValue != "" && parseInt(minValue) < parseInt(rangeSelector.MinPrice)) {
+				rangeSelector.selectedMinPrice = rangeSelector.MinPrice;
+				$("#" + rangeSelector.ID + "_htxtMinPrice").val(toMoneyString(minValue));
+			}
+			else if (minValue != "" && parseInt(minValue) >= 0) {
+				rangeSelector.selectedMinPrice = minValue;
+				$("#" + rangeSelector.ID + "_htxtMinPrice").val(toMoneyString(minValue));
+			}
+			else {
+				$("#" + rangeSelector.ID + "_htxtMinPrice").val("");
+				rangeSelector.selectedMinValue = -1;
+			}
+
+			// 좌측 슬라이더 위치 재계산
+			if (rangeSelector.selectedMinValue == -1)
+				leftSliderPosition = 0;
+			else
+				leftSliderPosition = parseInt(parseFloat(rangeSelector.selectedMinPrice - rangeSelector.MinPrice) * parseFloat(rangeSelector.BarRangeWidth) / parseFloat(rangeSelector.MinMaxGap));
+
+			// UI 갱신
+			updatePriceUI();
+
+			// 선택된 제조사 리스트 추가 (가격대)
+			insertDataContainerItem("VitemPriceRange", "가격\\", rangeSelector.selectedMinPrice + "|" + rangeSelector.selectedMaxPrice, toMoneyString(rangeSelector.selectedMinPrice) + " ~ " + toMoneyString(rangeSelector.selectedMaxPrice));
+
+			var OutData = selectedFullAttributeDataObject.outData();
+
+			// 원복 지점 생성
+			rangeSelector.defaultSelectedAttributes = OutData;
+
+			// 값 변경에 따른 Event 발생.
+			if (rangeSelector.eventHandlers.Price_OnChange != null) {
+				var eventArg = new Object();
+
+				eventArg.SelectedMaxPrice = rangeSelector.selectedMaxPrice;
+				eventArg.SelectedMinPrice = rangeSelector.selectedMinPrice;
+				eventArg.SelectedAttributes = OutData;
+
+				rangeSelector.eventHandlers.Price_OnChange(document.getElementById(rangeSelector.ID), eventArg);
+			}
+		});
+
+		// 숫자만 입력 가능
+		$("#" + rangeSelector.ID + "_htxtMaxPrice").keypress(function(event) {
+			if (event.which && (event.which > 47 && event.which < 58 || event.which == 8)) {
+			}
+			else {
+				event.preventDefault();
+			}
+		});
+
+		$("#" + rangeSelector.ID + "_htxtMaxPrice").bind("change", function() {
+
+			var maxValue = $("#" + rangeSelector.ID + "_htxtMaxPrice").val();
+
+			maxValue = maxValue.replace(/[^0-9]*/g, "");
+
+			// 값 Validation Check
+			if (maxValue == "" || parseInt(maxValue) < parseInt(rangeSelector.MinPrice) || parseInt(maxValue) > parseInt(rangeSelector.MaxPrice)) {
+				alert(toMoneyString(rangeSelector.MinPrice) + "~" + toMoneyString(rangeSelector.MaxPrice) + "원 사이의 숫자를 입력해 주세요.");
+				$("#" + rangeSelector.ID + "_htxtMaxPrice").val(toMoneyString(rangeSelector.selectedMaxPrice));
+				maxValue = rangeSelector.selectedMaxPrice;
+				return false;
+			}
+			else if (parseInt(maxValue) < parseInt(rangeSelector.selectedMinPrice)) {
+				alert(toMoneyString(rangeSelector.selectedMinPrice) + "~" + toMoneyString(rangeSelector.MaxPrice) + "원 사이의 숫자를 입력해 주세요.");
+				$("#" + rangeSelector.ID + "_htxtMaxPrice").val(toMoneyString(rangeSelector.selectedMaxPrice));
+				maxValue = rangeSelector.selectedMaxPrice;
+				return false;
+			}
+
+			if (maxValue != "" && maxValue > parseInt(rangeSelector.MaxPrice)) {
+				rangeSelector.selectedMaxPrice = rangeSelector.MaxPrice;
+				$("#" + rangeSelector.ID + "_htxtMaxPrice").val(toMoneyString(maxValue));
+			}
+			else if (maxValue != "" && parseInt(maxValue) >= 0) {
+				rangeSelector.selectedMaxPrice = maxValue;
+				$("#" + rangeSelector.ID + "_htxtMaxPrice").val(toMoneyString(maxValue));
+			}
+			else {
+				$("#" + rangeSelector.ID + "_htxtMaxPrice").val("");
+				rangeSelector.selectedMaxValue = -1;
+			}
+
+			// 우측 슬라이더 위치 재계산
+			if (rangeSelector.selectedMinValue == -1)
+				rightSliderPosition = 0;
+			else
+				rightSliderPosition = parseInt(parseFloat(rangeSelector.selectedMaxPrice - rangeSelector.MinPrice) * parseFloat(rangeSelector.BarRangeWidth) / parseFloat(rangeSelector.MinMaxGap)) + parseInt(widthOfSlideButton);
+
+			// 선택된 제조사 리스트 추가(가격대)
+			insertDataContainerItem("VitemPriceRange", "가격\\", rangeSelector.selectedMinPrice + "|" + rangeSelector.selectedMaxPrice, toMoneyString(rangeSelector.selectedMinPrice) + " ~ " + toMoneyString(rangeSelector.selectedMaxPrice));
+
+			// UI 갱신
+			updatePriceUI();
+
+			var OutData = selectedFullAttributeDataObject.outData();
+
+			// 원복 지점 생성
+			rangeSelector.defaultSelectedAttributes = OutData;
+
+			// 값 변경에 따른 Event 발생.
+			if (rangeSelector.eventHandlers.Price_OnChange != null) {
+				var eventArg = new Object();
+
+				eventArg.SelectedMaxPrice = rangeSelector.selectedMaxPrice;
+				eventArg.SelectedMinPrice = rangeSelector.selectedMinPrice;
+				eventArg.SelectedAttributes = OutData;
+
+				rangeSelector.eventHandlers.Price_OnChange(document.getElementById(rangeSelector.ID), eventArg);
+			}
+		});
+
+		// 제조사 검색 열기
+		var openMakerWindow = function() {
+			// 여는 시점에 데이터를 바운드
+			makerListCall("count");
+
+			if ($("#" + rangeSelector.ID).find("#lblMakerCount").html() != "0") {
+				$("#" + rangeSelector.ID).find(".makeList").show();
+			}
+		};
+
+		// 제조사 검색 닫기
+		var closeMakerWindow = function() {
+			$("#" + rangeSelector.ID).find(".makeList").hide();
+		};
+
+		// 제조사 검색하기 버튼 (닫혀있을 때)
+		$("#" + rangeSelector.ID).find("#anchorMakerSearchBox").bind("click", function() {
+			openMakerWindow();
+		});
+
+		// 제조사 검색하기 버튼 (열려있을 때)
+		$("#" + rangeSelector.ID).find("#anchorMakerSearchBoxInBoxBtn").bind("click", function() {
+			closeMakerWindow();
+		});
+
+		$("#" + rangeSelector.ID).find(".cancle").bind("click", function() {
+			closeMakerWindow();
+			boxCloseEvent();
+		});
+
+		$("#" + rangeSelector.ID).find(".btn_close").bind("click", function() {
+			closeMakerWindow();
+			boxCloseEvent();
+		});
+
+		// 제조사 검색하기 박스가 닫힐때 이벤트
+		var boxCloseEvent = function() {
+			// (취소 이므로 변경 데이터 원복 )
+			var isChanged = initAttributeData(rangeSelector.defaultSelectedAttributes);
+
+			// 데이터가 변경되었을 때만 Redraw
+			if (isChanged) {
+				// 화면 Redraw
+				redrawSelectedAttr();
+
+				// 선택한 제조사 다시 그리기
+				rangeSelector.PageIndex = selectedAttributeDataObject.getMaxPageIndex(rangeSelector.PageSize);
+				updateSelectedMakerUI(rangeSelector.PageIndex, rangeSelector.PageSize);
+			}
+
+			if (rangeSelector.eventHandlers.MakerList_OnClose != null) {
+				var eventArg = new Object();
+
+				eventArg.SelectedAttributes = selectedFullAttributeDataObject.outData();
+
+				rangeSelector.eventHandlers.MakerList_OnClose(document.getElementById(rangeSelector.ID), eventArg);
+			}
+		}
+
+		// selectedAttributeDataObject 들을 selectedAttr 기준으로 수정
+		var initAttributeData = function(selectedAttr) {
+			rangeSelector.defaultSelectedAttributes = selectedAttr;
+
+			// Full Container
+			tempFullAttributeDataObject = new AttributeDataObject({ "InputData": rangeSelector.defaultSelectedAttributes });
+
+			if (selectedFullAttributeDataObject.compareWith(tempFullAttributeDataObject.arrayObjectSet) == 0) {
+				return false;
+			}
+			else {
+				selectedFullAttributeDataObject = tempFullAttributeDataObject;
+
+				var priceRangeSelectorArray = selectedFullAttributeDataObject.getPriceRangeSelectorLists();
+
+				// UI용 Container (Full Container에서 GetPriceRangeSelectorLists 만을 넣어 계산)
+				selectedAttributeDataObject = new AttributeDataObject(null);
+				selectedAttributeDataObject.appendDataWithArray(priceRangeSelectorArray);
+
+				return true;
+			}
+		};
+
+		var colorListAnchorBind = function() {
+			// 색상검색 팔레트 클릭 이벤트 바인드
+			$("#" + rangeSelector.ID).find("#divColorPalette").find("a").bind("click", function() {
+				// 전체 선택 : 모든 리스트 리셋 후 전체 선택만을 남김
+				if ($(this).attr("AttributeElementID") == "0") {
+					$("#" + rangeSelector.ID).find("#divColorPalette").find("a").attr("class", "");
+					$(this).attr("class", "on");
+
+					// 색상검색 리스트 전부 삭제
+					deleteDataContainerItem($(this).attr("AttributeID"));
+				}
+				else {
+					if ($(this).attr("class") == "") {
+						// 전체선택 해제
+						$("#" + rangeSelector.ID).find("#divColorPalette").find("a[AttributeElementID=0]").attr("class", "");
+					
+						$(this).attr("class", "on");
+
+						// 선택한 색상검색 데이터 입력
+						insertDataContainerItem($(this).attr("AttributeID"), $(this).attr("AttributeName"), $(this).attr("AttributeElementID"), $(this).attr("AttributeElementName"));
+					}
+					else {
+						$(this).attr("class", "");
+						
+						// 만약 선택 항목이 하나도 없다면 전체 선택을 체크
+						if ($("#" + rangeSelector.ID).find("#divColorPalette").find("a[class=on]").length < 1)
+							$("#" + rangeSelector.ID).find("#divColorPalette").find("a[AttributeElementID=0]").attr("class", "on");
+
+						// 선택한 색상검색 데이터 삭제
+						deleteDataContainerItem($(this).attr("AttributeID"), $(this).attr("AttributeElementID"));
+					}
+				}
+
+				// 체크 변경에 따른 Event 발생.
+				if (rangeSelector.eventHandlers.ColorList_OnChange != null) {
+					var eventArg = new Object();
+
+					eventArg.CheckedColorId = $(this).attr("AttributeElementID");
+					eventArg.CheckedState = ($(this).attr("class") == "") ? "off" : "on";
+					eventArg.CheckedItemType = $(this).attr("AttributeID");
+					eventArg.SelectedAttributes = selectedFullAttributeDataObject.outData();
+
+					rangeSelector.eventHandlers.ColorList_OnChange(document.getElementById(rangeSelector.ID), eventArg);
+				}
+			});
+		};
+
+		// 색상검색 리스트 클릭 이벤트 최초 바인드
+		colorListAnchorBind();
+
+		var makerListAnchorBind = function() {
+			// 제조사 리스트 체크박스 바인드
+			$("#" + rangeSelector.ID).find(".mall").find("input").bind("click", function() {
+
+				if ($(this).parent().find("label").attr("class") == "") {
+					$(this).parent().find("label").attr("class", "checkbox-checked");
+
+					// 하단부 선택한 제조사 데이터 입력
+					insertDataContainerItem($(this).parent().attr("AttributeID"), $(this).parent().attr("AttributeName"), $(this).parent().attr("AttributeElementID"), $(this).parent().attr("AttributeElementName"));
+
+				}
+				else {
+					$(this).parent().find("label").attr("class", "");
+
+					// 하단부 선택한 제조사 데이터 삭제
+					deleteDataContainerItem($(this).parent().attr("AttributeID"), $(this).parent().attr("AttributeElementID"));
+				}
+
+				// 선택한 제조사 refresh
+				updateSelectedMakerUI(rangeSelector.PageIndex, rangeSelector.PageSize);
+
+				// 체크 변경에 따른 Event 발생.
+				if (rangeSelector.eventHandlers.MakerList_OnChange != null) {
+					var eventArg = new Object();
+
+					eventArg.CheckedMakerId = $(this).parent().attr("AttributeElementID");
+					eventArg.CheckedState = ($(this).parent().find("label").attr("class") == "") ? "off" : "on";
+					eventArg.CheckedItemType = $(this).parent().attr("AttributeID");
+					eventArg.SelectedAttributes = selectedFullAttributeDataObject.outData();
+
+					rangeSelector.eventHandlers.MakerList_OnChange(document.getElementById(rangeSelector.ID), eventArg);
+				}
+			});
+
+			// 정렬순서 바인드
+			$("#" + rangeSelector.ID).find(".sl_inner").find(".s_title").find("a").bind("click", function() {
+				$("#" + rangeSelector.ID).find(".sl_inner").find(".s_title").find("li").attr("class", "");
+				$(this).parent().attr("class", "on");
+
+				makerListCall($(this).attr("order"));
+			});
+		}
+
+		// 제조사 검색 바인드
+		makerListAnchorBind();
+
+		// 제조사 리스트 상에 체크된 목록 다시 그리기
+		var makerListAnchorCheckedBind = function() {
+			// 선택된 메이커 리스트
+			var selectedMakerList = selectedAttributeDataObject.arrayInAttrID("Maker");
+
+			for (var idx = 0; idx < selectedMakerList.length; idx++) {
+				$("#" + rangeSelector.ID).find(".mall").find("li[AttributeElementID=" + selectedMakerList[idx].AttributeElementID + "]").find("input").attr("checked", true);
+				$("#" + rangeSelector.ID).find(".mall").find("li[AttributeElementID=" + selectedMakerList[idx].AttributeElementID + "]").find("label").attr("class", "checkbox-checked");
+			}
+		};
+
+		function makerListCall(MakerIdSort) {
+			var VItemAttrs = (rangeSelector.PageState.VItemAttrs != undefined) ? "&VItemAttrs=" + rangeSelector.PageState.VItemAttrs : "";
+
+			$.ajax({
+				url: rangeSelector.MakerListAjaxCallUrl, 	// default : /UI/WebControlsV3/HistogramMakerAjaxResult.aspx
+				data: "keyword=" + rangeSelector.PageState.Keyword
+                + "&KeywordsInclude=" + rangeSelector.PageState.KeywordsInclude
+                + "&KeywordsExclude=" + rangeSelector.PageState.KeywordsExclude
+                + "&displayCategories=" + rangeSelector.PageState.DisplayCategories
+
+                + "&FindingType=" + rangeSelector.PageState.FindingType
+
+                + "&MinVItemPrice=" + rangeSelector.PageState.MinVItemPrice
+                + "&MaxVItemPrice=" + rangeSelector.PageState.MaxVItemPrice
+                + "&BrandIDs=" + rangeSelector.PageState.BrandIDs
+                + "&MallIDs=" + rangeSelector.PageState.MallIDs
+                + "&MakerIDs=" + rangeSelector.PageState.MakerIDs
+                + "&isStyleSearch=" + rangeSelector.PageState.IsStyleSearch
+                + "&isSoldOut=" + rangeSelector.PageState.IsSoldOut
+                + "&isSellingPlan=" + rangeSelector.PageState.IsSellingPlan
+                + VItemAttrs
+
+                + "&isShippingPriceFree=" + rangeSelector.PageState.IsShippingPriceFree
+                + "&hasNointerestData=" + rangeSelector.PageState.HasNointerestData
+                + "&hasCouponData=" + rangeSelector.PageState.HasCouponData
+                + "&hasEventData=" + rangeSelector.PageState.HasEventData
+                + "&hasPoint=" + rangeSelector.PageState.HasPoint
+
+                + "&SortType=" + rangeSelector.PageState.SortType
+
+                + "&pageIndex=0"
+                + "&pageSize=1"
+
+                + "&cornerType=" + rangeSelector.PageState.CornerType
+                + "&departmentID=" + rangeSelector.PageState.DepartmentID
+
+                + "&ImageColorMask=" + rangeSelector.PageState.ImageColorMask
+                + "&ImageGroupID=" + rangeSelector.PageState.ImageGroupID
+
+                + "&SRPTabType=" + rangeSelector.SRPTabType
+
+                + "&MakerIdSort=" + MakerIdSort
+                ,
+				async: false,
+				success: function(resultHtml) {
+					$("#" + rangeSelector.ID).find(".sl_inner").html(resultHtml);
+
+					// 가져온 제조사 데이터가 없을 경우
+					if ($("#" + rangeSelector.ID).find("#lblMakerCount").html() == "0") {
+						$("#" + rangeSelector.ID).find(".makeList").hide();
+						$("#" + rangeSelector.ID).find(".makeNone").show();
+
+						// 제조사가 없을 경우 버튼 바인드
+						$("#" + rangeSelector.ID).find("#btnCloseLayerNoMaker").bind("click", function() {
+							$("#" + rangeSelector.ID).find(".makeNone").hide();
+						});
+					}
+
+					// 제조사 리스트 상에 체크된 목록 다시 그리기
+					makerListAnchorCheckedBind();
+
+					// 제조사 검색 바인드
+					makerListAnchorBind();
+				},
+				error: function(xhr) {
+					commonAjaxErrorHandler(xhr.status, xhr.statusText);
+				}
+			});
+		};
+
+		// 전체해제 버튼
+		$("#" + rangeSelector.ID).find(".search_word").find(".refresh").bind("click", function() {
+			selectedAttributeDataObject.initData("");
+			selectedFullAttributeDataObject.deleteDataByAttrID("Maker");
+
+			// 제조사 리스트 상의 모든 체크 해제
+			$("#" + rangeSelector.ID).find(".mall").find("input").attr("checked", false);
+			$("#" + rangeSelector.ID).find(".mall").find("label").attr("class", "");
+
+			// 가격 슬라이드 바 refresh (최대 최소값으로)
+			rangeSelector.selectedMinPrice = rangeSelector.MinPrice;
+			rangeSelector.selectedMaxPrice = rangeSelector.MaxPrice;
+
+			leftSliderPosition = 0;
+			rightSliderPosition = maxBarWidth - widthOfSlideButton;
+
+			// 슬라이드 바 UI refresh
+			updatePriceUI();
+
+			// 할인율 검색 버튼 리셋
+			$("#" + rangeSelector.ID).find(".dcRate").find("dd").attr("class", "");
+
+			// 선택한 제조사 UI 클리어
+			rangeSelector.PageIndex = 0;
+			updateSelectedMakerUI(rangeSelector.PageIndex, rangeSelector.PageSize);
+		});
+
+		// 페이징 버튼에 이벤트 바인드
+		$("#" + rangeSelector.ID).find(".btn_rolling").find("a[pageIndex]").bind("click", function() {
+			if ($(this).attr("pageIndex") == -1)
+				return;
+
+			rangeSelector.PageIndex = $(this).attr("pageIndex");
+			updateSelectedMakerUI(rangeSelector.PageIndex, rangeSelector.PageSize);
+		});
+
+		// 선택된 제조사 목록의 모든 항목 다시 바인드 및 그리기
+		var redrawSelectedAttr = function() {
+			// 제조사 리스트 상의 모든 체크 해제
+			$("#" + rangeSelector.ID).find(".mall").find("input").attr("checked", false);
+			$("#" + rangeSelector.ID).find(".mall").find("label").attr("class", "");
+
+			// 가격대 바 리셋
+			rangeSelector.selectedMinPrice = rangeSelector.MinPrice;
+			rangeSelector.selectedMaxPrice = rangeSelector.MaxPrice;
+			leftSliderPosition = 0;
+			rightSliderPosition = maxBarWidth - parseInt(widthOfSlideButton);
+
+			// 할인율 검색 버튼 리셋
+			$("#" + rangeSelector.ID).find(".dcRate").find("dd").attr("class", "");
+
+			// 색상검색 리스트 리셋
+			$("#" + rangeSelector.ID).find("#divColorPalette").find("a").attr("class", "");
+			$("#" + rangeSelector.ID).find("#divColorPalette").find("a[AttributeElementID=0]").attr("class", "on");
+
+			for (var idx = 0; idx < selectedFullAttributeDataObject.arrayObjectSet.length; idx++) {
+
+				switch (selectedFullAttributeDataObject.arrayObjectSet[idx].AttributeID) {
+					// 제조사                                                                               
+					case "Maker":
+						//            // 제조사 리스트 다시 불러옴
+						//            MakerListCall("count");
+
+						$("#" + rangeSelector.ID).find(".mall").find("li[AttributeElementID=" + selectedFullAttributeDataObject.arrayObjectSet[idx].AttributeElementID + "]").find("input").attr("checked", true);
+						$("#" + rangeSelector.ID).find(".mall").find("li[AttributeElementID=" + selectedFullAttributeDataObject.arrayObjectSet[idx].AttributeElementID + "]").find("label").attr("class", "checkbox-checked");
+						break;
+
+					// 색상검색
+					case "ImageColorMask":
+						$("#" + rangeSelector.ID).find("#divColorPalette").find("a[AttributeElementID=0]").attr("class", "");
+						$("#" + rangeSelector.ID).find("#divColorPalette").find("a[AttributeElementID=" + selectedFullAttributeDataObject.arrayObjectSet[idx].AttributeElementID + "]").attr("class", "on");
+						break;
+
+					// 가격대                                                                                     
+					case "VitemPriceRange":
+						var Prices = selectedFullAttributeDataObject.arrayObjectSet[idx].AttributeElementID.split('|');
+
+						if (Prices.length > 1) {
+							var minValue = rangeSelector.selectedMinPrice = parseInt(Prices[0]);
+							if (minValue < 0 || minValue < rangeSelector.MinPrice)
+								minValue = rangeSelector.selectedMinPrice = rangeSelector.MinPrice;
+
+							var maxValue = rangeSelector.selectedMaxPrice = parseInt(Prices[1]);
+							if (maxValue < 0 || maxValue > rangeSelector.MaxPrice)
+								maxValue = rangeSelector.selectedMaxPrice = rangeSelector.MaxPrice;
+
+							$("#" + rangeSelector.ID + "_htxtMinPrice").val(toMoneyString(minValue));
+							$("#" + rangeSelector.ID + "_htxtMaxPrice").val(toMoneyString(maxValue));
+
+							// 좌측 슬라이더 위치 재계산
+							if (rangeSelector.selectedMinValue == -1)
+								leftSliderPosition = 0;
+							else
+								leftSliderPosition = parseInt(parseFloat(rangeSelector.selectedMinPrice - rangeSelector.MinPrice) * rangeSelector.PixelPerPrice);
+
+							// 우측 슬라이더 위치 재계산
+							if (rangeSelector.selectedMinValue == -1)
+								rightSliderPosition = 0;
+							else
+								rightSliderPosition = parseInt(parseFloat(rangeSelector.selectedMaxPrice - rangeSelector.MinPrice) * rangeSelector.PixelPerPrice) + parseInt(widthOfSlideButton);
+
+						}
+						break;
+				}
+			}
+
+			// UI 갱신
+			updatePriceUI();
+		};
+
+		// 리스트 부분의 옵션들을 삭제하는 메서드
+		var deleteListOptions = function() {
+			deleteDataContainerItem("IsStyleSearch");           // 스타일검색
+			deleteDataContainerItem("IsSoldOut");               // 판매상태 : 판매중단상품
+			deleteDataContainerItem("IsSellingPlan");            // 판매상태 : 판매예정상품
+			deleteDataContainerItem("IsShippingPriceFree");   // 혜택 : 무료배송
+			deleteDataContainerItem("HasNointerestData");    // 혜택 : 무이자
+			deleteDataContainerItem("HasCouponData");       // 혜택 : 쿠폰
+			deleteDataContainerItem("HasEventData");          // 혜택 : 이벤트
+			deleteDataContainerItem("HasPoint");                // 혜택 : 적립금
+			deleteDataContainerItem("ImageGroupID");         // 동일이미지검색
+		};
+
+		// 현재의 priceRangeSelector 설정용 외부 노출 메서드 시작
+		// 제조사 창이 열렸는지 확인하는 메서드
+		rangeSelector.isMakerWindowOpened = function() {
+			if ($("#" + rangeSelector.ID).find(".makeList").is(":visible")) {
+				return true;
+			}
+			else {
+				return false;
+			}
+		};
+
+		// 쇼핑몰 창을 열고 그 위치로 스크롤
+		rangeSelector.scrollToMaker = function() {
+			if (document.getElementById("anchorPriceRangeSelector") == undefined)
+				document.getElementById(rangeSelector.ID).scrollIntoView(true);
+			else
+				document.getElementById("anchorPriceRangeSelector").scrollIntoView(true);
+
+			openMakerWindow();
+		};
+
+		// 현재의 user control 상태로 gPageState를 업뎃하는 외부 메서드 (encodeURIComponent로 인코딩해서 출력)
+		rangeSelector.copyToPageState = function(gPageState) {
+			// 제조사 창이 안 열린 경우 (ajax call일 경우에만 추가 옵션 제거)
+			if (!rangeSelector.isMakerWindowOpened()) {
+				deleteListOptions();
+			}
+
+			selectedFullAttributeDataObject.copyToPageState(gPageState);
+
+			// encodeURIComponent를 사용하여 인코딩
+			gPageState.SelectedAttributes = encodeURIComponent(gPageState.SelectedAttributes);
+		};
+
+		rangeSelector.setAttributes = function(gPageState) {
+			if (gPageState.SelectedAttributes == undefined)
+				return;
+
+			// 데이터가 인코딩하여 넘어오므로 디코딩하여 사용
+			var isChanged = initAttributeData(decodeURIComponent(gPageState.SelectedAttributes));
+
+			if (isChanged) {
+				// 선택된 제조사 목록의 모든 항목 다시 바인드 및 그리기
+				redrawSelectedAttr();
+
+				// 선택한 제조사 바인드
+				rangeSelector.PageIndex = selectedAttributeDataObject.getMaxPageIndex(rangeSelector.PageSize);
+				updateSelectedMakerUI(rangeSelector.PageIndex, rangeSelector.PageSize);
+			}
+		}
+
+		// 현재 searchOptionSelector 보이기
+		rangeSelector.show = function() {
+			$("#" + rangeSelector.ID).show();
+		};
+
+		// 현재 searchOptionSelector 숨기기
+		rangeSelector.hide = function() {
+			$("#" + rangeSelector.ID).hide();
+		};
+
+		// 현재 searchOptionSelector의 기본 PageState 수정
+		rangeSelector.setUserControlPageState = function(gPageState){
+			$.extend(rangeSelector.PageState, gPageState);
+		}
+
+		// 현재의 priceRangeSelector 설정용 외부 노출 메서드 끝
+
+		// 초기화 설정용
+		rangeSelector.setAttributes(rangeSelector.PageState);
+	}
+})(jQuery);
+
+
+OS2.Application.PriceRangeSelector = function() {
+
+}
+
+OS2.Application.PriceRangeSelector.init = function(controlID, eventHandlers, pageState) {
+
+  if (document.getElementById(controlID) == null || typeof document.getElementById(controlID) === "undefined") {
+    return null;
+  }
+
+  var rangeSelector = new Object();
+
+  rangeSelector.ID = controlID;
+  rangeSelector.eventHandlers = eventHandlers;
+  rangeSelector.PageState = new Object();
+  $.extend(rangeSelector.PageState, pageState);
+
+  jQuery("#" + controlID).priceRangeSelector(rangeSelector);
+
+  return rangeSelector;
+}

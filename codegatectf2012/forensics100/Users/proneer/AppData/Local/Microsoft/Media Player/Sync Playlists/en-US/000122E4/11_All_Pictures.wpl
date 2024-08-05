@@ -1,0 +1,18 @@
+<?wpl version="1.0"?>
+<smil>
+    <head>
+        <meta name="Generator" content="Microsoft Windows Media Player -- 10.0.0.3449"/>
+        <meta name="DontCopyToDevice" content="TRUE"/>
+        <title>All Pictures</title>
+    </head>
+    <body>
+        <seq>
+            <smartPlaylist version="1.0.0.0">
+                <querySet>
+                    <sourceFilter id="{CC823400-A8E4-4081-B073-D3B6D952FE69}" name="Pictures in my library">
+                    </sourceFilter>
+                </querySet>
+            </smartPlaylist>
+        </seq>
+    </body>
+</smil>
