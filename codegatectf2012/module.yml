@@ -1,0 +1,7 @@
+id: codegatectf2012
+name: Codegate CTF 2012
+
+challenges:
+  - id: bin100
+    name: BINARY - 100
+  
