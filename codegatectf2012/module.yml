@@ -12,3 +12,5 @@ challenges:
     name: BINARY - 400
   - id: bin500
     name: BINARY - 500
+  - id: forensics100
+    name: FORENSICS - 100
