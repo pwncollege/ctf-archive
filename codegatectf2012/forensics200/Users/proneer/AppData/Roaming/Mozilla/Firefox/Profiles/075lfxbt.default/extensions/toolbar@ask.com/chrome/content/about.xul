@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+<?xml-stylesheet href="chrome://asktoolbar/skin/toolbar.css" type="text/css"?>
+<!--
+Copyright (C) 2008-2010 APN, LLC. All rights reserved
+Ask.com Toolbar about dialog layout
+-->
+<window class="dialog" id="asktb-about" title="About Ask Toolbar" title-localekey="AboutDialogTitle"
+    buttons="" onload="ATB_onLoad(event);" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+    <script type="application/x-javascript" src="chrome://asktoolbar/content/about.js" />
+    <stringbundleset id="strbundles">
+        <!-- Select the  appropriate *.properties file for a localized version of this toolbar -->
+        <stringbundle id="asktb-localized-strings" src="chrome://asktoolbar/skin/strings.properties" />
+    </stringbundleset>
+    <groupbox>
+        <caption image="chrome://asktoolbar/skin/asklogo.png" image-localekey="AboutLogo" />
+        <vbox>
+            <text id="asktb-version-label" value="powered by Ask.com" value-localekey="AboutVersionLabel" style="padding: 16px;" />
+        </vbox>
+        <text value="Copyright 2009 Ask.com" value-localekey="AboutCopyright" style="padding: 16px;" />
+        <spacer height="16px" />
+        <hbox style="position: fixed; right: 16px; bottom: 16px;">
+            <button label="OK" label-localekey="OkButton" oncommand="window.close();" />
+        </hbox>
+    </groupbox>
+</window>

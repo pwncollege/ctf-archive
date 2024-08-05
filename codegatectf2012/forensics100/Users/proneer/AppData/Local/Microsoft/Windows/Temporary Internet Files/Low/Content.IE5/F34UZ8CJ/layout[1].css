@@ -1,0 +1,102 @@
+@charset "utf-8";
+/*===========================================================================
+	Global CSS
+============================================================================*/
+/* layout */
+	#wrap{width:auto}
+	.colgroup{width:881px;margin:auto}
+/*font*/
+	#header .gnb *,#header .lnb *,#footer .fnb *{font-family:Segoe UI, Malgun Gothic}
+	#container #snb .snb *{font-family:Arial,Dotum}
+/*display+widht+border = real size 883(1+881(170 | 711(1+710(25px+660+25)))+1)*/
+	#header{height:69px;border-bottom:#e1462d 5px solid}
+	#header .colgroup{position:relative;z-index:1}
+	#container{}
+	#container .colgroup{border-color:#cacaca;border-width:0 1px;border-style:solid}
+	#container #snb{float:left;width:170px;height:auto}
+	#container #content{float:left;width:660px;height:auto;padding:0 25px 25px 25px;border-color:#cacaca;border-width:0 0 0 1px;border-style:solid}
+	#footer .colgroup{border-color:#cacaca;border-width:1px 0 0 0;border-style:solid}
+/*background*/
+	body{background-color:#eeeeee}
+	#header{background:#343434}
+	#container .colgroup{background:#f3f3f3}
+	#container #content{background-color:#fff}
+
+/*===========================================================================
+	CONTENTS
+============================================================================*/
+/* #header */
+	/*logo*/
+	#header .logo a{display:block;width:170px;height:69px;background:url(/images/ci-netsarang_header.gif) no-repeat 50%}
+	/*.gnb*/
+	#header .gnb{position:absolute;top:8px;right:0}
+	#header .gnb li{float:left}
+	#header .gnb li a{padding:0 10px;border-right:#565656 1px solid;color:#fff;font-size:0.9em;font-weight:bold;text-decoration:none}
+	#header .gnb li a.end{border-width:0}
+	/*.lnb*/
+	#header .lnb *{color:#434343;text-decoration:none}
+	#header .lnb{position:absolute;top:30px;left:185px}
+	#header .lnb li{position:relative;float:left;cursor:pointer}
+	#header .lnb li a.thumb{padding:5px 10px;color:#9f9f9f;font-size:13px;line-height:2em}
+	#header .lnb li a.thumb.on{color:#fff;font-weight:bold}
+	#header .lnb li a.thumb:hover{color:#fff}
+	#header .lnb li ul{visibility:hidden;position:absolute;top:-4px;left:0px;padding:3px 0px;border:#c0c0c0 1px solid;background:#fff}
+	#header .lnb li ul li{float:left;clear:both;width:180px}
+	#header .lnb li ul li a:hover{color:#e1462d;background-color:#f5f5f5;background-position:center right !important}
+	#header .lnb li ul li a{display:block;padding:4px 10px;font-size:12px;font-weight:normal;white-space:nowrap}
+	#header .lnb li ul li .sub_item{background:url(/images/bul-lnb_arrow.png) no-repeat;background-position:center right !important}
+	/*.search*/
+	#header .g_search{position:absolute;right:10px;bottom:13px}
+	#header .g_search fieldset{float:right}
+	#header .g_search .text_field{width:130px;color:gray;font-style:italic}
+	/*.service*/
+	#header .service{position:absolute;top:80px;right:25px;z-index:-1}
+	#header .service .btn_print_view{display:block;float:right;background:url(/images/ico-print.png) no-repeat;font-size:1.1em;line-height:16px;text-indent:20px;cursor:pointer}
+
+/* #container */
+	/* #snb .snb_wrap1 */
+	#container .snb_wrap li{list-style:none}
+	#container .snb_wrap .snb{font-size:11px;line-height:16px; text-indent:15px}
+	#container .snb_wrap .snb a{display:block;text-decoration:none}
+	#container .snb_wrap .snb dt{background:#757575 url(/images/bg-snb_top.png)}
+	#container .snb_wrap .snb dt a{color:#fff;font-size:12px;font-weight:bold;line-height:30px;text-indent:15px}	
+	#container .snb_wrap .snb dd ul li{border-bottom:1px #fff solid;background: #d7d7d7;line-height:25px}
+	#container .snb_wrap .snb dd ul li.on{background:#a0a0a0 url(/images/bul_li_arrow_white.png) no-repeat 97% 6px;}
+	#container .snb_wrap .snb dd ul li.on a{color:#fff}
+	#container .snb_wrap .snb dd ul li a{color:#444444;font-weight:bold;}
+	#container .snb_wrap .snb dd ul li a:hover{background:#a0a0a0;color:#fff}
+	#container .snb_wrap .snb dd ul li ul{display:none;background:#f3f3f3}
+	#container .snb_wrap .snb dd ul li ul li{margin-left:10px;padding-left:20px;border-width:0;background:url(/images/bul_li_arrow.png) no-repeat 6px 6px;list-style:none;list-style-position:outside;text-indent:0}
+	#container .snb_wrap .snb dd ul li ul li a{color:#444444 !important; border-bottom:0;background:#f3f3f3;line-height:25px}
+	#container .snb_wrap .snb dd ul li ul li a:hover,#container .snb_wrap .snb dd ul li ul li a.on{background:#f3f3f3;color:#e1462d !important;}
+	
+
+	/* #container #contents */
+	#container #content .content .path{position:relative;height:30px;margin-bottom:18px;border-bottom:#dbdbdb 1px solid}
+	#container #content .content .path .path_link{position:absolute;left:0 !important;bottom:2px;padding:0;font-size:10px;font-weight:normal;line-height:19px !important}
+	#container #content .content .path .path_link,
+	#container #content .content .path .path_link *{color:#4C4C4C;font-size:11px !important;text-decoration:none}
+	#container #content .content .path .path_link span{color:#d1d0d0;font-family:verdana;font-size:10px !important;line-height:10px}
+	#container #content .content .main:after{content:".";display:block;visibility:hidden;clear:both;height:0}
+	#container #content .content .main{display:block;min-height:1%; min-height:500px}
+	* html #container #content .content .main{height:1%}
+	.content .main .section{display:block;min-height:1%;*zoom:1}
+	.content .main .section:after{content:".";display:block;visibility:hidden;clear:both;height:0}
+	* html .content .main .section{height:1%}
+
+/* #footer */
+	#footer .fnb{padding:10px 15px}
+	#footer .fnb *{font-size:13px}
+	#footer .fnb li .thumb{color:#444444;font-weight:bold}
+	#footer .fnb ul li a{color:#787878;font-size:11px;line-height:16px}
+	#footer .fnb ul li.ico_twitter{line-height:1em}
+	#footer .fnb .fnb_list1{float:left;width:140px}
+	#footer .fnb .fnb_list2{float:left;width:120px}
+	#footer .fnb .fnb_list3{float:left;width:110px}
+	#footer .fnb .fnb_list4{float:left;width:130px}
+	#footer .fnb .fnb_list5{float:left;width:110px}
+	#footer .fnb .fnb_list6{float:left;width:140px}
+	#footer .fnb .fnb_list7{float:left;width:100px}
+	#footer .copyright{position:relative;left:15px;top:20px;font-family:verdana;font-size:10px}
+	#footer .copyright a{position:relative;top:1px;color:#4C4C4C;font-size:10px;font-weight:normal;line-height:16px}
+	#footer .logo a{display:block;float:right;width:117px;height:40px;background:url(/images/ci-netsarang_footer.gif) no-repeat top 50%;cursor:pointer}

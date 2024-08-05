@@ -1,0 +1,74 @@
+body {margin: 0; padding: 0; background: #fff; text-align: center; font: 12px 'Lucida Grande', Geneva, Arial, Verdana, sans-serif; color: #000;}
+table, td {font: 10px 'Lucida Grande', Geneva, Verdana, Arial, sans-serif; color: #000;}
+
+#header {width: 640; margin: 10px auto; text-align: center;}
+
+#main, #breadcrumb, #footer {width: 640; margin: 1.5em auto; text-align: left;}
+#main div.column {text-align: left; margin-bottom: 1em;}
+#main p {margin: 0 0 1em 0;}
+#main p.last {margin: 0;}
+#main p.intro {font-weight: bold;}
+#main .lite {color: #79767c;}
+#main h1 {font-size: 24px; margin: 0 0 .5em 0;}
+#main h2 {font-size: 16px; margin: 0;}
+#main h3 {font-size: 12px; margin: 0;}
+#main h4 {font-size: 10px; margin: 0;}
+#main .more {text-align: right;}
+
+#main a.pdf {background: url(http://a772.g.akamai.net/7/772/51/8d371dc67bde81/www.apple.com/main/elements/globaliconpdf12x12.gif) left top no-repeat; display: block; padding-left: 20px;}
+#main a.html {background: url(http://a772.g.akamai.net/7/772/51/08bbbab02953ed/www.apple.com/main/elements/globaliconhtml12x12.gif) left top no-repeat; display: block; padding-left: 20px;}
+#main a.qt {background: url(http://a772.g.akamai.net/7/772/51/e41618749b448f/www.apple.com/main/elements/globaliconqt12x12.gif) left top no-repeat; display: block; padding-left: 20px;}
+#main a.ical {background: url(http://a772.g.akamai.net/7/772/51/330d22f03e65fe/www.apple.com/main/elements/globaliconical12x12.gif) left top no-repeat; display: block; padding-left: 20px;}
+#main a.dl {background: url(http://a772.g.akamai.net/7/772/51/34e1bc5d44dbc5/www.apple.com/main/elements/globalicondl11x10.gif) left top no-repeat; display: block; padding-left: 20px;}
+#main a.dmg {background: url(http://a772.g.akamai.net/7/772/51/e015a293375e8e/www.apple.com/main/elements/globalicondmg12x12.gif) left top no-repeat; display: block; padding-left: 20px;}
+#main a.zip {background: url(http://a772.g.akamai.net/7/772/51/6632cc8dd1180e/www.apple.com/main/elements/globaliconzip12x12.gif) left top no-repeat; display: block; padding-left: 20px;}
+#main a.keynote {background: url(http://a772.g.akamai.net/7/772/51/929b9b9db3c453/www.apple.com/main/elements/globaliconkeynote12x12.gif) left top no-repeat; display: block; padding-left: 20px;}
+
+#main .subcolumn1-2 {float: left; width: 330px;}
+#main .subcolumn2-2 {float: right; width: 330px;}
+#main .subcolumn1-3, #main .subcolumn2-3, #main .subcolumn3-3 {width: 212px; float: left;}
+#main .subcolumn1-3, #main .subcolumn2-3 {margin-right: 20px;}
+
+#content {float: left; width: 450px;}
+
+#content .subcolumn1-2 {float: left; width: 215px;}
+#content .subcolumn2-2 {float: right; width: 215px;}
+#content .subcolumn1-3, #content .subcolumn2-3, #content .subcolumn3-3 {width: 135px; float: left;}
+#content .subcolumn1-3, #content .subcolumn2-3 {margin-right: 22px;}
+
+#sidebar {float: right; width: 200px; font: 10px 'Lucida Grande', Geneva, Verdana, Arial, sans-serif;}
+#sidebar h2 {font-size: 12px; margin: 0;}
+#sidebar h3 {font-size: 11px; margin: 0;}
+#sidebar h4 {font-size: 10px; margin: 0;}
+
+#main .box {border: 1px solid #a1a5a9; padding: 0 5px 5px 5px; margin: 0 0 1.25em 0;}
+#content .box h2 {border-bottom: 1px solid #a1a5a9; padding: 5px; background: #f2f2f2; margin: 0 -5px 5px -5px; font-size: 12px;}
+#sidebar .box h2 {border-bottom: 1px solid #a1a5a9; padding: 5px; background: #f2f2f2; margin: 0 -5px 5px -5px; font-size: 10px;}
+
+img.left {float: left; margin: 2px 10px 5px 0; border: 0;}
+img.right {float: right; margin: 2px 0 5px 10px; border: 0;}
+img.across {margin: 0 0 10px 0; border: 0;}
+
+ul {list-style: none outside; margin: 0; padding: 0 0 1em 0;}
+ul.square {list-style: square outside; margin: 0 0 0 16px; padding: 0 0 1em 0;}
+ul.circle {list-style: circle outside; margin: 0 0 0 16px; padding: 0 0 1em 0;}
+ol {list-style: decimal; margin: 0 0 0 2.8em; padding: 0 0 1em 0;}
+li {padding-bottom: .3em;}
+ul ul.circle {margin-top: .3em;}
+
+ol.last {padding: 0;}
+ul.last {padding: 0;}
+
+sup {vertical-align: baseline; font-size: 1em; color: #76797c;}
+
+.sosumi {font-size: 10px !important; color: #76797c; margin-bottom: 1em;}
+ol.sosumi {margin-left: 0; padding-left: 1.5em; clear: both;}
+
+#breadcrumb, #footer {text-align: center; clear: both;}
+#breadcrumb {clear: both; font-size: 10px; padding: 1em 0;}
+
+#footer {font-size: 10px; border-top: 1px solid #a1a5a9; padding-top: 1em;}
+#footer form {margin-bottom: 2em;}
+#footer form input {vertical-align: bottom;}
+
+div.clearer {clear: both; display: block; margin: 0; padding: 0; height: 0; line-height: 1px; font-size: 1px;}

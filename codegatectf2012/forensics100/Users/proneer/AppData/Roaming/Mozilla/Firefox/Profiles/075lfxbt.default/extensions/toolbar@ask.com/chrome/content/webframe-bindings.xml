@@ -1,0 +1,397 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bindings id="atbWebframeBindings" xmlns="http://www.mozilla.org/xbl"
+	xmlns:xbl="http://www.mozilla.org/xbl"
+	xmlns:xul="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+
+	<binding id="soloBrowserBinding">
+		<content>
+			<xul:browser
+                anonid="atb-solo-browser"
+                xbl:inherits="src,src=macro-src,width,width=frame-width,height,minwidth,maxwidth,minheight,maxheight,height,pack,flex"
+                width="24" 
+                minheight="24" 
+                maxheight="24" 
+                pack="start" 
+                flex="0"
+                style="overflow:hidden;" 
+                autoscroll="false" 
+                type="content" 
+                hidden="false" />
+            <xul:toolbarbutton
+                anonid="atb-solo-native-button" flex="1"
+                xbl:inherits="widget-url,widget-height,widget-width,show-native,show-native-pref,width=native-width,height=native-height,tooltiptext=native-tooltiptext,label=native-label,image=native-image,onclick=native-onclick,type"
+                hidden="true"/>
+		</content>
+
+		<implementation>
+        
+            <field name="isActive">
+                false
+            </field>
+            <field name="shouldBeActivated">
+                true
+            </field>
+            <field name="activationBlocked">
+                true
+            </field>
+            <field name="frameBrowser" readonly="true">
+                document.getAnonymousElementByAttribute(this, "anonid", "atb-solo-browser");
+            </field>
+            
+            <field name="_nativeButton">
+                document.getAnonymousElementByAttribute(this, "anonid", "atb-solo-native-button");
+            </field>
+            
+            <field name="_listener">
+                null
+            </field>
+            
+            <field name="_frameViewInitialized">
+                false
+            </field>
+            
+            <field name="_showingNativeButton">
+                false
+            </field>
+            
+            <property name="hasNativeButton">
+                <setter>
+                <![CDATA[
+                    
+                ]]>
+                </setter>
+                <getter>
+                <![CDATA[ 
+                    /*
+                     * We need an image and an onclick in order to render a native button.
+                     * TODO: Is there a better way to determine whether a native button is supported?
+                     */
+                    if(this._nativeButton.getAttribute("image") && this._nativeButton.getAttribute("onclick")) {
+                        return true;
+                    } else {
+                        return false;
+                    }  
+                ]]>
+                </getter>
+            </property>
+            
+            <property name="showingNativeButton" onget="return this._showingNativeButton;">
+                <setter>
+                <![CDATA[
+                    var url;
+                    
+                    this._nativeButton.hidden = !val && !ATB.Core.isItemInOverflowMenu(this) && this.hasNativeButton;
+                    this.frameBrowser.hidden = (val || ATB.Core.isItemInOverflowMenu(this)) && this.hasNativeButton;
+                    this._showingNativeButton = val;
+                    
+                    
+                    /* 
+                     * If the browser is showing, make sure it is set to the correct URL.
+                     * If the browser isn't showing, make sure about:blank is loaded.
+                     * We don't want a hidden browser to have content/JavaScript in memory.
+                     * However, this only applies to webframes that have a native button.
+                     */
+                    if(this.hasNativeButton) {
+                        if(val) {
+                            if (this.frameBrowser.docShell) {
+                                ATB.Logger.debug("Web Frame: Loading about:blank");
+                                this.frameBrowser.loadURI("about:blank", null, null);
+                            } else {
+                                ATB.Logger.info("Web Frame: docshell not available yet, not loading anything");
+                            }
+                        } else {
+                        
+                            // If macro-src is available, set the src attribute with its replaced value.
+                            url = this.getAttribute("macro-src");
+                            
+                            if(url) {
+                                url = ATB.Prefs.replaceTbMacros(url);
+                                
+                                // This will *not* trigger a reload.
+                                this.frameBrowser.setAttribute("src", url);
+                                
+                                this.frameBrowser.loadURI(url);
+                                
+                            } else {
+                                url = this.frameBrowser.getAttribute("src");
+                                this.frameBrowser.loadURI(url);
+                            }
+                            
+                            ATB.Logger.debug("Web Frame: Loaded url: " + url);
+                        }
+                    }
+                    return val;
+                ]]>
+                </setter>
+            </property>
+            
+            <method name="showNativeButton">
+                <body>
+                <![CDATA[
+                    ATB.Logger.debug("Web Frame: showNativeButton");
+                    
+                    if(this.hasNativeButton && !this.showingNativeButton){
+                        
+                        this.showingNativeButton = true;
+                        
+                        this._frameViewInitialized = true;
+                    }
+                    
+                    ATB.Logger.debug("Web Frame: showNativeButton: Native button showing? " + this.showingNativeButton);
+                ]]>
+                </body>
+            </method>
+            
+            <method name="reloadBrowser">
+                <body>
+                <![CDATA[
+                    if(!this.showingNativeButton)
+                        this.frameBrowser.reload();
+                ]]>
+                </body>
+            </method>
+            
+            <method name="persistNativeShowing">
+                <body>
+                <![CDATA[
+                    /*
+                     * If we have a "show native" pref, persist whether the native button is showing or not.
+                     */
+                    var showNativePrefStr = this._nativeButton.getAttribute("show-native-pref");
+                    if(showNativePrefStr){
+                        ATB.Prefs.setBoolPref(showNativePrefStr, this.showingNativeButton);
+                    }
+                ]]>
+                </body>
+            </method>
+            
+            <method name="showBrowser">
+                <parameter name="obeyNativePref" />
+                <body>
+                <![CDATA[
+                    ATB.Logger.debug("Web Frame: showBrowser");
+                    
+                    /*
+                     * Shows the browser frame and hides the native button. If obeyNativePref evaluates to true, try 
+                     * to show the browser frame if the preference value allows it (if "show native" pref isn't set 
+                     * and/or is set to false).
+                     */
+                    var showNativePrefStr = this._nativeButton.getAttribute("show-native-pref"), 
+                        showNative = false,
+                        showNativePrefValue;
+                    
+                    if(showNativePrefStr && obeyNativePref) {
+                        // Use the preference if it exists.
+                        showNativePrefValue = ATB.Prefs.getBoolPref(showNativePrefStr);
+                        if(typeof showNativePrefValue == "boolean")
+                            showNative = showNativePrefValue;
+                    }
+                    
+                    this.showingNativeButton = showNative;
+                    
+                    this._frameViewInitialized = true;
+                    
+                    ATB.Logger.debug("Web Frame: showBrowser: Native button showing? " + this.showingNativeButton);
+                ]]>
+                </body>
+            </method>
+            
+            <method name="activateContent">
+				<parameter name="listener" />
+				<body>
+        <![CDATA[
+            this._activateContent(listener);
+        ]]>
+				</body>
+			</method>
+			
+			<method name="_activateContent">
+                <parameter name="listener" />
+                <body>
+        <![CDATA[ // for inheritance
+            if (ATB.Logger.isDebugEnabled()) { ATB.Logger.debug(this.getAttribute("id") + " (Web Frame browser): activating content"); }
+            if (!listener) {
+                listener = this._listener; // for chevron
+            } else {
+                this._listener = listener;
+            }
+            
+            if (!this.activationBlocked && this.frameBrowser.docShell) {
+                
+                this.frameBrowser.addProgressListener(listener, Components.interfaces.nsIWebProgress.NOTIFY_STATE_ALL);
+                
+                this.isActive = true;
+                
+                if(!this._frameViewInitialized)
+                    this._initFrameView();
+                
+            } else if (!this.activationBlocked) {
+                if (ATB.Logger.isWarnEnabled()) { ATB.Logger.warn(this.getAttribute("id") + ": docShell is null? " + (this.frameBrowser.docShell === null)); }           
+            }
+        ]]>
+                </body>
+            </method>
+            
+            <method name="preactivateContent">
+                <parameter name="listener" />
+                <body>
+        <![CDATA[
+            if (ATB.Logger.isDebugEnabled()) { ATB.Logger.debug(this.getAttribute("id") + " (Web Frame browser): PRE-activating content"); }
+            this._listener = listener;
+            this.shouldBeActivated = true;
+            
+            if(!this._frameViewInitialized)
+                this._initFrameView();
+        ]]>
+                </body>
+            </method>
+
+            <method name="deactivateContent">
+                <parameter name="listener" />
+                <body>
+        <![CDATA[
+            this._deactivateContent(listener);
+        ]]>
+                </body>
+            </method>
+
+			<method name="_deactivateContent">
+				<parameter name="listener" />
+				<body>
+        <![CDATA[
+            if (ATB.Logger.isDebugEnabled()) { ATB.Logger.debug(this.getAttribute("id") + " (Web Frame browser): DEactivating content"); }
+            if (!listener) {
+                listener = this._listener; // for chevron
+            }
+            if (this.isActive && listener) {           
+                this.frameBrowser.stop();
+                this.frameBrowser.loadURI("about:blank", null, null); // TODO does this help previous page unload?
+                this.frameBrowser.removeProgressListener(listener);
+            }
+            this.isActive = false;
+            
+            // Reset button initialization
+            this._frameViewInitialized = false;
+        ]]>
+				</body>
+			</method>
+			
+            <method name="_initFrameView">
+                <body>
+                <![CDATA[
+                    /*
+                     * Initializes the button view based on the "show native" preference and network 
+                     * state. If the preference is true or the network is unavailable, the native button is shown (if available).
+                     */
+                    var showNativePrefStr, showNative = false, showNativePrefValue;
+                    ATB.Logger.debug("Web Frame: _initFrameView");
+                    // If we have a show-native-pref attribute, check the pref to determine whether we should switch our view.
+                    showNativePrefStr = this._nativeButton.getAttribute("show-native-pref");
+                    if(showNativePrefStr) {
+                        showNativePrefValue = ATB.Prefs.getBoolPref(showNativePrefStr);
+                        if(typeof showNativePrefValue == "boolean") {
+                            showNative = showNativePrefValue;
+                        }
+                    }
+                    
+                    // Show the native button if it is available and the "show native" pref is set to true (or we are offline). Otherwise show the browser.
+                    if(this.hasNativeButton && (showNative || !ATB.Net.isNetworkAvailableForContent())) {
+                        this.showNativeButton();
+                    } else {
+                        this.showBrowser();
+                    }
+                    
+                    ATB.Logger.debug("Web Frame: _initFrameView: Native button showing? " + this.showingNativeButton);
+                    this._frameViewInitialized = true;
+                ]]>
+                </body>
+            </method>
+            
+			<method name="stopNavigation">
+                <body>
+        <![CDATA[
+            if (this.isActive) {
+                this.frameBrowser.webNavigation.stop(Components.interfaces.nsIWebNavigation.STOP_ALL);
+            }
+        ]]>
+                </body>
+            </method>
+
+            <method name="cloneNode">
+                <parameter name="doDeepClone" />
+                <body>
+        <![CDATA[
+            var clone = XULElement.prototype.cloneNode.call(this, true);
+            //if (ATB.Logger.isDebugEnabled()) { ATB.Logger.debug(this.getAttribute("id") + ": You cloned me! Should be active? Was active? " + this.shouldBeActivated + ", " + this.isActive); }
+            clone._listener = this._listener;
+            
+            /*
+             * XXX: Not sure why, but in some cases the _frameViewInitialized flag is true even though the 
+             * UI hasn't been set appropriately (cloning preserves flag but not view state). On the other hand, 
+             * if the _frameViewInitialized flag isn't preserved (in cloneNode method) the UI gets reset multiple times.
+             * 
+             * Is there a better way to manage the view state that handles chevron AND offline states?
+             * 
+             * Update: Alex V. recommends using setUserData/getUserData instead of overriding cloneNode above. We should
+             * explore this option and refactor all three flags at the same time.
+             * 
+             * See https://dev.mozilla.jp/localmdc/developer.mozilla.org/en/dom/node.setuserdata.html
+             */
+            clone._frameViewInitialized = this._frameViewInitialized;
+            
+            clone.shouldBeActivated = this.shouldBeActivated;
+            clone.activationBlocked = this.activationBlocked;
+            return clone;
+        ]]>
+                </body>
+            </method>
+
+		</implementation>
+	</binding>
+
+
+	<binding id="framesetBrowserBinding"
+		extends="chrome://asktoolbar/content/webframe-bindings.xml#soloBrowserBinding">
+		<implementation>
+		    <field name="originalUrl" readonly="true">
+                this.getAttribute("atbsrc");
+            </field>
+            <field name="shouldBeActivated">
+                false
+            </field>
+            
+			<constructor>
+				this.collapsed = true;
+            </constructor>
+            
+            <method name="activateContent">
+                <parameter name="listener" />
+                <body>
+        <![CDATA[
+            this._activateContent(listener);
+            this.shouldBeActivated = true;
+            this.loadContent();
+        ]]>
+                </body>
+            </method>
+            
+        <method name="deactivateContent">
+                <parameter name="listener" />
+                <body>
+        <![CDATA[
+            this._deactivateContent(listener);
+            this.shouldBeActivated = false;
+            this.collapsed = true;
+        ]]>
+                </body>
+            </method>
+
+        <method name="loadContent">
+            <body><![CDATA[
+                this.frameBrowser.loadURI(this.originalUrl, null, null);
+                this.collapsed = false;
+            ]]></body>
+        </method>
+		</implementation>
+	</binding>
+</bindings>

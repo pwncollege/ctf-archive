@@ -1,0 +1,112 @@
+/* Ensure that our assumptions about the default browser colors are correct. */
+BODY { color: #000000; background-color: #FFFFFF; }
+BODY a:link { color: #0000FF; }
+BODY a:hover { color: #0000FF; }
+BODY a:active { color: #0000FF; }
+BODY a:visited { color: #800080; }
+
+BODY {
+  margin: 4px;
+}
+DIV#content {
+  font: 12px Arial;
+}
+DIV#insert {
+  display: none;
+}
+
+DIV.system1st {
+  margin: 4px 0px 4px 0px;
+}
+DIV.systemNth {
+  margin: 4px 0px 4px 0px;
+}
+
+/* Two ways to do icons with these rules:
+   <img class='icon' src='%userIconPath%'>
+   <div class='icon'><div style='height:1px;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="%userIconPath%")'></div></div>
+*/
+
+/* Borders */
+DIV.b1 {
+  height: 1px;
+  overflow: hidden;
+  margin: 0px 5px;
+  background: #E4F2F9;
+}
+DIV.b2 {
+  height: 1px;
+  overflow: hidden;
+  margin: 0px 3px;
+  background: #E4F2F9;
+}
+DIV.b3 {
+  height: 1px;
+  overflow: hidden;
+  margin: 0px 2px;
+  background: #E4F2F9;
+}
+DIV.b4 {
+  height: 2px;
+  overflow: hidden;
+  margin: 0px 1px;
+  background: #E4F2F9;
+}
+
+DIV.chat {
+  padding: 0px 0px;
+}
+DIV.chat .icon {
+  background-color: white;
+  border: 1px solid white;
+  display: none;
+}
+DIV.chat DIV.msg {
+  margin: 0px 0px 0px 0px;
+}
+DIV.chat DIV.Nth {
+  margin: 5px 0px 0px 0px;
+}
+DIV.chat DIV.salutation {
+  display: block;
+  font-weight: bold;
+  margin: 0px 0px 0px 0px;
+  border: 0px;
+  background: #BFD0EA;
+  background-image: url(%systemdir%diagonal.gif);
+  background-position:top right;
+  background-repeat: no-repeat;
+}
+
+DIV.chat DIV.salutation_inner {
+  margin: 4px;
+  font-weight: bold;
+  font-size: 12px;
+}
+
+DIV.message {
+  background: #E4F2F9;
+  border: 4px solid #E4F2F9;
+  border-bottom: 3px solid #E4F2F9;
+  margin: 0px;
+}
+
+DIV.message_next {
+  background: #E4F2F9;
+  border: 4px solid #E4F2F9;
+  border-top: 0px;
+  margin: 0px;
+}
+
+DIV.break {
+  height: 8px;
+  margin: 3px 0px 0px 0px;
+  overflow: hidden;
+}
+
+DIV.image_float {
+  display:block;
+  float: right;
+  margin-right: 8px;
+  margin-top: 4px;
+}

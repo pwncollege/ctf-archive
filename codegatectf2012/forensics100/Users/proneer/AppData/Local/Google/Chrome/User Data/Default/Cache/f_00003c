@@ -1,0 +1,535 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="google-site-verification" content="cC-8xOerZ3opiLx9VloUCzc6SgMfOZHYihJzWA19-KI" />
+<meta name="msvalidate.01" content="79C78EB33B8812273BEAA273668E9D92" />
+<title>Digital Forensics Case Leads: Do SSD Drives Auto Destroy Forensic Evidence? Industrial Espionage, and Cloud Computing Forensics</title>
+
+
+<link rel="stylesheet" href="/css/design/styles" type="text/css" />
+<link rel="stylesheet" href="/css/site_selector" type="text/css" />
+
+<link rel="stylesheet" href="/css/blog" type="text/css" media="screen, projection, print" />
+
+
+
+<link rel="stylesheet" type="text/css" href="/css/site" />
+
+<!-- Added Cross Domain Customizations 9.23.11 DB -->
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-6384910-4']);
+  _gaq.push(['_trackPageview']); 
+  _gaq.push(['_setLocalRemoteServerMode']);
+  _gaq.push(['b._setAccount', 'UA-25324117-2']);
+  _gaq.push(['b._setDomainName', 'sans.org']);
+  _gaq.push(['b._addIgnoredRef', 'sans.org']);   
+  _gaq.push(['b._trackPageview']);
+  
+  
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+
+</head>
+
+<body>
+    
+<div class="bodywrap ">
+<div class="container default-navigation-all">
+
+
+<!-- header -->
+<div class="header">
+
+<a href="/"><img src="/images/design-site/logo.png" alt="Digital Forensics Case Leads: Do SSD Drives Auto Destroy Forensic Evidence? Industrial Espionage, and Cloud Computing Forensics" class="logo" /></a>
+
+<ul class="site-selector">
+ <li class="site-switcher"><a href="#"><span class="hidden">SANS Site Network</span></a>
+  <ul class="sites">
+    <li class="current-site">Current Site</li>
+    <li class="forensics "><a href="http://computer-forensics.sans.org"><img src="/images/design/custom/site-selector/site-icons/forensics.png" alt="forensics" />Computer Forensics</a></li>
+   <li class="selector-help">Choose a different site <a href="/help/site-network"><span class="hidden">Help</span></a></li><li class="sans "><a href="http://www.sans.org"><img src="/images/design/custom/site-selector/site-icons/sans.png" alt="sans" />Training</a></li>
+<li class="giac "><a href="http://www.giac.org"><img src="/images/design/custom/site-selector/site-icons/giac.png" alt="giac" />Certification</a></li>
+<li class="isc "><a href="http://isc.sans.org"><img src="/images/design/custom/site-selector/site-icons/isc.png" alt="isc" />Internet Storm Center</a></li>
+<li class="sti "><a href="http://www.sans.edu"><img src="/images/design/custom/site-selector/site-icons/sti.png" alt="sti" />Cyber Security Graduate School</a></li>
+<li class="awareness "><a href="http://www.securingthehuman.org"><img src="/images/design/custom/site-selector/site-icons/awareness.png" alt="awareness" />Security Awareness Training</a></li>
+<li class="pentest "><a href="http://pen-testing.sans.org"><img src="/images/design/custom/site-selector/site-icons/pentest.png" alt="pentest" />Penetration Testing</a></li>
+<li class="audit "><a href="http://it-audit.sans.org"><img src="/images/design/custom/site-selector/site-icons/audit.png" alt="audit" />IT Audit</a></li>
+<li class="ssi last"><a href="http://software-security.sans.org"><img src="/images/design/custom/site-selector/site-icons/ssi.png" alt="ssi" />Software Security</a></li>
+  </ul>
+ </li>
+</ul>
+
+<div class="top-menu">
+<!-- Begin Google Site Search -->
+<div class="search-form">
+<form action="https://computer-forensics.sans.org/search/results" method="post" id="cse-search-box">
+<input type="hidden" name="_xsrf_token" value="fd7e5e4b395e25a05d8b0c3c29a3cc1e36bf2795"  />
+<input type="text" id="q" name="q" value="" class="search-input" /><input id="search-button" type="image" title="Search" name="sa" value="Search" class="search-submit" src="/images/icons/custom/search.png" /><input type="text" id="_website" name="_website" value="" size="1" onchange="this.value=null" /></form>
+<script type="text/javascript" src="http://www.google.com/cse/brand?form=cse-search-box&lang=en"></script>
+</div><!-- / .search-form -->
+
+<div class="clear"></div>
+    
+<ul class="dropdown">
+ <!-- <li class="root-item active"><a href="#">Active</a> -->
+ <li class="root-item active"><a href="/community">Community</a>
+ <ul>
+    <li class="first"><a href="/blog">Blog</a></li>
+    <li><a href="/community/challenges">Challenges</a></li>
+    <li><a href="/community/links">Links</a></li>
+    <li><a href="/community/downloads">SIFT Kit / Downloads</a></li>
+    <li><a href="/community/summits">Summit Archives</a></li>
+    <li><a href="/community/webcasts">Webcasts</a></li>
+    <li><a href="/community/whitepapers">Whitepapers</a></li>
+	<li class="last"><a href="/community/lethal_forensicator">SANS Lethal Forensicator Coin</a></li>
+ </ul>
+ </li>
+ <li class="root-item "><a href="/courses">Courses</a>
+    <ul>
+            <li class="first"><a href="/courses/description/computer-forensic-investigations-windows-in-depth-1207">Windows Forensics<br />FOR408</a></li>
+            <li><a href="/courses/description/advanced-computer-forensic-analysis-incident-response-98">Advanced Forensics<br />FOR508</a></li>
+            <li><a href="/courses/description/advanced-filesystem-recovery-memory-forensics-141">Memory Forensics<br />FOR526</a></li>
+            <li><a href="/courses/description/network-forensics-1227">Network Forensics<br />FOR558</a></li>
+            <li><a href="/courses/description/mobile-device-forensics-1297">Mobile Forensics<br />FOR563</a></li>
+            <li><a href="/courses/description/reverse-engineering-malware-malware-analysis-tools-techniques-54">Malware Analysis<br />FOR610</a></li>
+        <li><a href="/media/courses/forensics_curriculum.pdf">Forensics Brochure</a>
+    <li><a href="/sift-kit/essentials">SIFT Toolkit - Essentials</a></li>
+    <li><a href="/sift-kit/advanced">SIFT Toolkit - Advanced</a></li>
+    <li><a href="/courses/assessment">Free Assessment</a></li>
+    <li class="last"><a href="/events">Register Now</a></li>
+    </ul>
+ </li>
+ 
+ <li class="root-item "><a href="/events">Events</a>
+ <ul>
+  <li class="first"><a href="/events">Forensic Events List</a></li>
+  <li class="last"><a href="/events/summits/">Summits</a></li>
+ </ul>
+ </li>
+ <li class="root-item "><a href="/certification">Certification</a>
+  <ul>
+  <li class="first"><a href="/certification/gcfe">GCFE - Forensic Examiner</a></li>
+  <li><a href="/certification/gcfa">GCFA - Forensic Analyst</a></li>
+  <li><a href="/certification/grem">GREM - Malware Analyst</a></li>
+  <li><a href="/certification/analysts">Certified Analysts</a></li>
+  <li><a href="/certification/ethics">GIAC Code of Ethics</a></li> 
+  <li class="last"><a href="http://www.giac.org">GIAC Homepage</a></li>
+  </ul>
+ </li>
+ <li class="root-item "><a href="/instructors">Instructors</a>
+ <ul>
+    <li class="first"><a href="/instructors">SANS Instructors</a></li>
+    <li class="last"><a href="/instructors/author">Author Statement</a></li>
+ </ul>
+ </li>
+ <li class="root-item "><a href="/about">About</a>
+ <ul>
+  <li class="first"><a href="/about">About</a></li>
+  <li class="last"><a href="/about/press">Press Room</a></li>
+ </ul>
+ </li>
+</ul><!-- end .dropdown -->
+</div><!-- end .top-menu -->
+<div class="clear"></div><!-- end .clear -->
+</div><!-- end .header-->
+</div><!--  end .container -->
+
+    <!-- Header -->
+    <div class="container">
+
+    <div class="header-standard">
+      <h1 class="headerTitle">Blog</h1>
+             
+    </div><!-- end .top-text -->
+    <div class="header-icon blog-page-icon"></div><!-- end .top-icon icon-gallery -->
+    <div class="clear"></div><!-- end .clear -->
+ 
+    </div><!-- end .container -->
+     
+<!-- container -->
+<div class="container">
+    <!-- middle -->
+    <div class="middle">
+        <!-- wrapper -->
+        <div class="wrapper">
+            <!-- content -->
+            <div class="content">
+                <!-- post entry -->
+                <div class="post-title">
+                    <div class="post-date">
+                        <strong>03</strong>
+                        <span>Mar <b>2011</b></span>
+                    </div>
+                    <h2><a href="/blog/2011/03/03/digital-forensics-case-leads-ssd-drives-auto-destroy-forensic-evidence#" title="Digital Forensics Case Leads: Do SSD Drives Auto Destroy Forensic Evidence? Industrial Espionage, and Cloud Computing Forensics" >Digital Forensics Case Leads: Do SSD Drives Auto Destroy Forensic Evidence? Industrial Espionage, and Cloud Computing Forensics</a></h2>
+                </div>
+                                <div class="post-meta post-meta-height-incrase">
+                    <span class="post-comments">
+                        <a title="" href="/blog/2011/03/03/digital-forensics-case-leads-ssd-drives-auto-destroy-forensic-evidence#comments"><span  class="ico-comments">1</span>&nbsp;comments</a>
+                    </span>
+                    <span>Posted by</span>
+                        <a href="/blog/author/iravictor" title="View all posts by Ira Victor">Ira Victor</a><br />
+                    <span>Filed under</span>  <a href="/blog/category/artifact-analysis" title="View all posts in artifact analysis">artifact analysis</a>, <a href="/blog/category/browser-forensics" title="View all posts in Browser Forensics">Browser Forensics</a>, <a href="/blog/category/case-leads" title="View all posts in Case Leads">Case Leads</a>, <a href="/blog/category/computer-forensics" title="View all posts in Computer Forensics">Computer Forensics</a>, <a href="/blog/category/digital-forensic-law" title="View all posts in Digital Forensic Law">Digital Forensic Law</a>, <a href="/blog/category/ediscovery" title="View all posts in eDiscovery">eDiscovery</a>, <a href="/blog/category/evidence-acquisition" title="View all posts in Evidence Acquisition">Evidence Acquisition</a>, <a href="/blog/category/incident-response" title="View all posts in Incident Response">Incident Response</a>, <a href="/blog/category/timeline-analysis-computer-forensics" title="View all posts in Timeline Analysis">Timeline Analysis</a>, <a href="/blog/category/usb-device-analysis" title="View all posts in USB Device Analysis">USB Device Analysis</a>, <a href="/blog/category/write-blockers" title="View all posts in Write Blockers">Write Blockers</a>                    <!-- <span class="ico-tags">taged</span> <a href="#">awsome</a>, <a href="#">design</a>  -->
+                </div>
+                <div class="post-entry">
+                    <p>Solid State Drives (SSD) Forensics continue as the top story this week. Two University researchers published shocking research that indicates that the firmware in SSDs can destroy forensic evidence as part of it's everyday functionality. Details in MUST Reads (upgrading this week from "Good Reads"). Apple made big news with the launch of new tablet (this week) and new laptop offerings (last week). We bring you news of forensic tools for the Mac. Plus, industrial espionage featuring Chinese spies paying American employees to steal intellectual property. And, do you have naked passwords?</p>
+<p>Tools:<ul>	<li>MacQuisition 2.53 from BlackBag Technologies, is a forensic acquisition tool for legacy and new Mac hardware. The new version now supports Intel i5 and i7 processing architecture, enabling it to work with the latest Mac laptops and desktops. This update also offers dual boot options for working with new Intel powered Macs as well as legacy PowerPC Macs. According to, Drew Fahey, Director of Forensics at BlackBag Technology, "These enhancements offer Mac forensic professionals the most robust and flexible Mac imaging tool available today..." For more information about MacQuisition, such as an ovedrview video or data sheet, visit <a title="BlackBag" href="http://www.blackbagtech.com" target="_blank">http://www.blackbagtech.com</a>. And, don't miss an excellent BlackBag Technology blog posting on imaging <a title="MacBookAir" href="https://www.blackbagtech.com/blog/?p=87" target="_blank">MacBook Air lap-tops</a>.</li>	<li>Open source forensic tool The Sleuth Kit, <a title="TSK" href="http://sleuthkit.org/sleuthkit/download.php" target="_blank">version 3.2.1</a>, was just released with some new features and a host of bug fixes.</li>	<li>UPDATE: Last month, your blogger <a title="Crypto Adapter" href="http://computer-forensics.sans.org/blog/2011/02/03/digital-forensics-case-leads-draft-copy-post-2" target="_blank">reported on a new tool by called The Hiddn Crypto Adapter</a>. This device can encrypt plain-Jane acquisition drives and adds FIPS-compliant two-factor authentication. The device was available for demo by your blogger at the RSA Conference 2011 in San Francisco. It's small, easy-to-use, and worked well with a Win/Lin laptop your blogger was sporting that day at RSA. Spokesperson said it works with Mac OS X, too. <a title="Crypto Adapter" href="http://www.hiddn.no/ca/" target="_blank">Worth looking into</a>. <strong></strong></li></ul>MUST Reads:<ul>	<li>With the explosive growth of Solid State Drives( SSDs) in computers, and other computing devices like tablets and netbooks, there is some shocking news from Graeme B. Bell and Richard Boddington, two researchers at Murdoch University in Perth, Australia. According to these researchers, SSDs "have the capacity to destroy evidence catastrophically under their own volition..." Their work is contained in a <a title="SSD Forensics" href="http://www.jdfsl.org/subscriptions/JDFSL-V5N3-Bell.pdf" target="_blank">paper written</a> for the Journal of Digital Forensics, Security, and the Law entitled, 'Solid State Drives: The Beginning of the End for Current Practice in Digital Forensic Discovery?' Takeaway: Forensic professionals must deploy new approaches to SSD forensics. The current approach could miss important data in event time-lines. Your blogger had off-the-record discussions with some in the community that may have some solutions. Watch this space for updates.</li>	<li>Ironically, SSDs may also have problems with legit data destruction. If you missed it last week, read more from this 'Naked Security blog' post, <a href="http://nakedsecurity.sophos.com/2011/02/20/ssds-prove-difficult-to-securely-erase">"SSD's prove difficult to securely erase"</a>. The full paper can be found <a href="http://www.usenix.org/events/fast11/tech/full_papers/Wei.pdf">here</a>.</li>	<li>Brett Kingston is the author of <a title="The Real World Against America" href="http://www.amazon.com/Real-War-Against-America/dp/0975519921/ref=sr_1_4?ie=UTF8&s=books&qid=1298961515&sr=1-4">The Real War Against America</a>, on industrial espionage featuring Chinese spies paying American employees to steal intellectual property. Brett Kingston invented a new way to manufacture fiber optic cables. The designs were stolen by insiders bribed by Chinese competitors. Brett worked with the FBI to track down and prosecute the Chinese competitors, and won a $40 million civil judgment against them. The competitor transfered all their funds out of the reach of the Courts, and they were tipped off by their lawyers. You can <a title="CyberJungle Radio" href="http://dataclonelabs.com/security_talkworkshop/thecyberjungle_202.mp3" target="_blank">hear an interview</a> your blogger conducted with Brett Kingstone at CyberJungle Radio; the interview begins at about the 18:25 mark. This is an excellent segment to share with non-technical managers to help them understand the challengers of forensics and incident response.</li></ul>News:<ul>	<li><strong> </strong><a title="LSE" href="http://www.sfgate.com/cgi-bin/article.cgi?f=/g/a/2011/02/28/bloomberg1376-LHCAWO1A74E901-4FEGB906ARUP6KDRG52OFKMAEU.DTL" target="_blank">London Stock Exchange</a>, and <a title="Morgan Stanley" href="http://www.bbc.co.uk/news/technology-12597819" target="_blank">Morgan Stanley</a>: Added to the list of financial services companies breached by cyber criminals. Don't worry, they "Take security very seriously."</li>	<li>New Hampshire local LE <a title="LE recording" href="http://unionleader.com/article.aspx?headline=Weare+police+charge+man+for+recording+traffic+stop&articleId=192f30ad-3c32-4033-9743-8b048ae97170" target="_blank">charge man for recording traffic stop</a> using smart phone and voice mail</li>	<li>New Zeus account takeover attack targets <a title="Zues" href="http://unionleader.com/article.aspx?headline=Weare+police+charge+man+for+recording+traffic+stop&articleId=192f30ad-3c32-4033-9743-8b048ae97170" target="_blank">users of mobile phone</a> multi-factor authentication</li>	<li>Meanwhile, new proposed <a title="Fed Banking Rules" href="http://www.bankinfosecurity.com/articles.php?art_id=3395&rf=2011-03-02-eb" target="_blank">Fed Banking rules</a> designed to fight Zues and other account takeover attacks could result in a wave of forensic and ediscovery-rich litigation</li>	<li>RSA Conference San Francisco had a full-house during a session with Aaron Turner on the legal and  forensics issues with employee BYOD (Bring Your Own [mobile] Device). Aaron's talk was jammed packed with forensic information. For example, he advised professionals to buy a fresh phone before leaving the US. Use that phone outside of the US. Before leaving the country you have traveled to, turn on the phone and flush it down the toilet. The water and the phone's power will make data recovery very difficult. US Customs cannot inspect what they cannot get to. <a title="BYOD" href="http://thecyberjungle.wordpress.com/2011/02/17/rsa-conference-2011-cloud-forensics-byod-forensics/" target="_blank">Read the full posting on this talk</a>, and on the important topic of cloud computing forensics.</li></ul>Levity:<ul>	<li>The whole idea of <a title="Naked Password" href="http://www.nakedpassword.com" target="_blank">naked password</a> is to encourage your users to enter stronger passwords. Sally tastefully removes items of clothing as the password grows stronger.</li></ul>Coming Events:<ul>	<li><a href="http://www.dfrws.org/2011/cfp.shtml">The annual Digital Forensics Research Workshop</a> Call for Papers ends on Feb. 27, 2001.</li>	<li><a href="http://www.sans.org/boston-2011-cs/description.php?tid=4687">Forensics 408: Computer Forensics Essentials</a> - Boston, Feb 28 - Mar 4, 2011</li>	<li>First-ever <a title="Honeynet Confernece" href="http://www.honeynet.org/node/602" target="_blank">Honeynet Project Public Conference</a> -Paris, France, March 21, 2011</li>	<li><a href="http://www.sans.org/boston-2011-cs/description.php?tid=4687">Forensics 408: Computer Forensics Essentials</a> - Morristown, NJ - May 9 - 14, 2011</li>	<li>Guidance Software <a href="http://www.guidancesoftware.com/CEIC-2011.html">Computer and Enterprise Investigations Conference (CEIC) 2011</a> - Orlando, May 15 - 18, 2011</li>	<li><a href="http://accessdata.com/aduc">AccessData User's Conference</a> - Las Vegas, May 15 - 18, 2011</li>	<li><a href="http://www.sans.org/forensics-incident-response-summit-2011/?utm_source=web-sans&utm_medium=text-ad&utm_content=text-link_Forensics_Summit_2011&utm_campaign=SANS_What_Works_in_Forensics_and_Incident_Response_Summit_2011&ref=68018">SANS What Works in Forensics and Incident Response Summit</a> - Austin, TX, June 7 - 8, 2011</li>	<li>3rd International <a title="ICDF2C" href="http://d-forensics.org/" target="_blank">ICST Conference on Digital Forensics & Cyber Crime</a> - Dublin Ireland, October 26-28, 2011<strong></strong></li>	<li>The  2011 Sleuth Kit and Open Source Digital Forensics Conference has issued  a call for papers. The event will be held on 14 June in McLean VA, and  the CFP is available <a href="http://www.basistech.com/about-us/events/open-source-forensics-conference/2011/call-for-presentations/">here</a>.</li>	<li>2011 DC3 Digital Security Challenge for US High School Students.<a title="DC3 Challenge" href="http://www.dc3.mil/challenge/2011/apply/index.php" target="_blank">Registration now open</a>!</li></ul>If you have an article to suggest for case leads please email it to caseleads@sans.org.</p>
+<p><em>by<a title="Ira Victor" href="http://www.IraVictor.net" target="_blank"> Ira Victor</a>, G2700, GCFA, GPCI, GSEC, ISACA-CGEIT. Ira Victor is a forensic analyst with<a title="Data Clone Labs" href="http://www.dataclonelabs.com/" target="_blank"> Data Clone Labs</a>, He is also Co-Host of <a title="The CyberJungle" href="http://www.thecyberjungle.com/" target="_blank">CyberJungle Radio</a>, the news and talk on security, privacy and the law. Ira is President of <a title="InfraGard" href="http://www.infragard.net/" target="_blank">Sierra-Nevada InfraGard</a>, and a member of <a title="HTCIA" href="http://www.htcia.org/" target="_blank">The High Tech Crime Investigator's Association (HTCIA)</a>. Follow Ira's security and forensics tweets: <a title="Twitter Feed" href="http://twitter.com/ira_victor" target="_blank">@ira_victor</a> .</em></p>                    <div class="clear"></div>
+                </div><!--/ post-entry -->
+                <div class="post-footer">
+                    <div class="share-this"><script src="http://www.sans.org/urchin.js" type="text/javascript"></script>
+<script type="text/javascript">
+    <!--
+    var addthis_config = {services_exclude: 'print',
+                          services_compact: 'facebook, twitter, email, stumbleupon, delicious, more',
+                          };
+    urchinTracker('/urchin-tracker/addthis/impressions/index.php');
+    document.write(unescape('%3Cdiv id="addthis_button"%3E'
+                          + '%3Ca href="http://www.addthis.com/bookmark.php%3Fv=250&username=sans" class="addthis_button"%3E'
+                          + '%3Cimg src="http://s7.addthis.com/static/btn/v2/lg-share-en.gif" width="125" height="16" alt="Share this" style="border:0" /%3E'
+                          + '%3C/a%3E'
+                          + '%3Cscript type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js%23username=sans"%3E%3C/script%3E'
+                          + '%3C/div%3E'));
+    -->
+</script>
+</div>
+                        <div class="post-links"><a href="blog/2011/03/03/digital-forensics-case-leads-ssd-drives-auto-destroy-forensic-evidence">Permalink</a> | <a href="/blog/2011/03/03/digital-forensics-case-leads-ssd-drives-auto-destroy-forensic-evidence/feed">Comments RSS Feed</a> - <a href="#respond">Post a comment</a> | <a href="blog/2011/03/03/digital-forensics-case-leads-ssd-drives-auto-destroy-forensic-evidence/trackback/">Trackback URL</a></div>
+                </div><!--/ post-footer -->
+                <div class="clear"></div>
+    <div class="post-comment" ><h3><a name="comments"></a>1 Comments</h3><div class="comment-entry comment-level-one">
+    <div class="comment-meta">
+        <span class="comment-links"><p>Posted March 05, 2011 at 9:04 AM  |  <a href="blog/2011/03/03/digital-forensics-case-leads-ssd-drives-auto-destroy-forensic-evidence#comment-12141">Permalink</a> | <a href="?reply-to-comment=12141#respond">Reply</a></p></span>
+        <a name="comment-12141"></a><h5 class="ico-comments">Frank Phillips</h5>
+    </div>
+    <p class="comment-content">It would be best if the SSD garbage collector could be disabled by pin or solder jumper on the hardware. An investigator with drive in hand would just have to open the case and move or solder a "GC disable" jumper before powering the drive.<br /><br />There should be no reason why the microcontroller inside the SSD can't check this signal before proceeding with GC.<br /><br />Even the smallest form factors should have room for this on the PCB.</p>
+    
+                    
+</div>
+</div>                    <div class="post-comment form" id="comment-form">
+                    <h3><a name="respond"></a>Post a Comment</h3>
+    <div class=""></div><form action="https://computer-forensics.sans.org/blog/2011/03/03/digital-forensics-case-leads-ssd-drives-auto-destroy-forensic-evidence#respond" method="post">
+<input type="hidden" name="_xsrf_token" value="fd7e5e4b395e25a05d8b0c3c29a3cc1e36bf2795"  />
+<input type="hidden" name="question" value="Is grass green or black?"  />
+<input type="hidden" name="comment_post_ID" value="35916"  />
+<div class="form-section">
+                    <label class=""><span class="required-field">*</span>Name</label><br /><input type="text" id="author" name="author" value="" class="input-text" /></div><div class="form-section">
+                     <label class=""><span class="required-field">*</span>Email</label><br /><input type="text" id="email" name="email" value="" class="input-text" /></div><div class="form-section">
+                     <label>Website</label><br /><input type="text" id="url" name="url" value="" class="input-text" /></div><div class="form-section">
+                    <label class=""><span class="required-field">*</span>Anti-spam question: Is grass green or black?</label><br /><input type="text" id="antispam" name="antispam" value="" class="input-text" /></div><div class="form-section">
+                    <label class=""><span class="required-field">*</span>Comment</label><br /><textarea id="comment" name="comment" rows="8" cols="70" class="input-text" ></textarea></div><input type="submit" id="submit" name="submit" value="Post Comment"  /><input type="text" id="_website" name="_website" value="" size="1" onchange="this.value=null" /></form>
+          <div>
+                        <p><span class="required-field">*</span> Indicates a required field.</p>
+                    </div>
+                </div><!--/ post-comment -->
+                                <div class="clear"></div>
+            </div><!--/ content -->
+        </div><!--/ wrapper -->
+        
+        <!-- sidebar -->
+        <div class="navigation"><!-- navidation -->
+    <div class="widget widget_rss"><!-- widget: rss -->
+                    <a href="/blog/feed/">
+                <img src="/images/design/custom/rss.png" title="RSS Feed" alt="RSS">
+        </a>
+        <br />
+        <br />
+             
+    </div><!-- /widget: rss -->
+    
+    
+    <div class="widget widget_search"><!-- widget: search -->
+        <h3>Search Blog:</h3>
+        <form action="http://computer-forensics.sans.org/blog/" method="post" role="search">
+<input type="hidden" name="_xsrf_token" value="fd7e5e4b395e25a05d8b0c3c29a3cc1e36bf2795"  />
+<input type="text" id="search" name="search" value="" class="input-text" size="10" /><input type="submit" id="submit" name="submit" value="Search"  /><input type="text" id="_website" name="_website" value="" size="1" onchange="this.value=null" /></form>
+    </div><!-- /widget: search -->
+
+        <div class="widget widget_categories"><!-- widget: categories --> 
+        <h3>Categories</h3>
+        <ul>
+                            <li><a href="/blog/category/advanced-persistent-threat">Advanced Persistent Threat</a> (1)</li>
+                            <li><a href="/blog/category/apt-advanced-persistent-threat">apt</a> (1)</li>
+                            <li><a href="/blog/category/artifact-analysis">artifact analysis</a> (57)</li>
+                            <li><a href="/blog/category/book-reviews">Book Reviews</a> (4)</li>
+                            <li><a href="/blog/category/browser-forensics">Browser Forensics</a> (25)</li>
+                            <li><a href="/blog/category/case-leads">Case Leads</a> (81)</li>
+                            <li><a href="/blog/category/certification-and-license">Certification and License</a> (9)</li>
+                            <li><a href="/blog/category/challenge">Challenge</a> (6)</li>
+                            <li><a href="/blog/category/community-sans-events">Community SANS Events</a> (2)</li>
+                            <li><a href="/blog/category/computer-forensic-hero">Computer Forensic Hero</a> (2)</li>
+                            <li><a href="/blog/category/computer-forensics">Computer Forensics</a> (463)</li>
+                            <li><a href="/blog/category/computer-forensics-and-ir-summit">Computer Forensics and IR Summit</a> (17)</li>
+                            <li><a href="/blog/category/digital-forensic-law">Digital Forensic Law</a> (40)</li>
+                            <li><a href="/blog/category/drive-encryption">Drive Encryption</a> (13)</li>
+                            <li><a href="/blog/category/ediscovery">eDiscovery</a> (42)</li>
+                            <li><a href="/blog/category/email-investigations">Email Investigations</a> (15)</li>
+                            <li><a href="/blog/category/ethics">Ethics</a> (7)</li>
+                            <li><a href="/blog/category/evidence-acquisition">Evidence Acquisition</a> (101)</li>
+                            <li><a href="/blog/category/evidence-analysis">Evidence Analysis</a> (164)</li>
+                            <li><a href="/blog/category/getting-started">Getting Started</a> (14)</li>
+                            <li><a href="/blog/category/incident-response">Incident Response</a> (115)</li>
+                            <li><a href="/blog/category/linux-ir">Linux IR</a> (23)</li>
+                            <li><a href="/blog/category/malware-analysis">Malware Analysis</a> (49)</li>
+                            <li><a href="/blog/category/memory-analysis">Memory Analysis</a> (36)</li>
+                            <li><a href="/blog/category/mobile-device-forensics">Mobile Device Forensics</a> (42)</li>
+                            <li><a href="/blog/category/network-forensics">Network Forensics</a> (37)</li>
+                            <li><a href="/blog/category/registry-analysis">Registry Analysis</a> (24)</li>
+                            <li><a href="/blog/category/reporting-computer-forensics">Reporting</a> (15)</li>
+                            <li><a href="/blog/category/reverse-engineering">Reverse Engineering</a> (21)</li>
+                            <li><a href="/blog/category/sans-institute">SANS Institute</a> (12)</li>
+                            <li><a href="/blog/category/sift-workstation">SIFT Workstation</a> (4)</li>
+                            <li><a href="/blog/category/timeline-analysis-computer-forensics">Timeline Analysis</a> (18)</li>
+                            <li><a href="/blog/category/training">Training</a> (13)</li>
+                            <li><a href="/blog/category/uncategorized">Uncategorized</a> (4)</li>
+                            <li><a href="/blog/category/usb-device-analysis">USB Device Analysis</a> (11)</li>
+                            <li><a href="/blog/category/windows-ir">Windows IR</a> (45)</li>
+                            <li><a href="/blog/category/write-blockers">Write Blockers</a> (13)</li>
+                    </ul>
+    </div><!-- / widget: categories -->
+    
+        <div class="widget widget_recent_posts"><!-- widget: recent posts -->
+        <h3>Recent Posts</h3>
+        <ul>
+                            <li><a href="/blog/2012/02/10/digital-forensics-case-leads-android-malwarechrome-browser-bugs-and-it-guy-shoots-daughters-laptop">Digital Forensics Case Leads: Android Malware,Chrome Browser Bugs and IT guy shoots Daughters Laptop.
+</a></li>
+                            <li><a href="/blog/2012/02/02/digital-forensics-case-leads-the-new-forensics-the-cybermilitia-and-bill-gates-gets-behind-open-source">Digital Forensics Case Leads: The New Forensics, The CyberMilitia and Bill Gates Gets Behind Open Source?
+</a></li>
+                            <li><a href="/blog/2012/01/25/digital-forensic-sifting-colorized-super-timeline-template-for-log2timeline-output-files">Digital Forensic SIFTing: Colorized Super Timeline Template for Log2timeline Output Files
+</a></li>
+                            <li><a href="/blog/2012/01/20/digital-forensic-sifting-targeted-timeline-creation-and-analysis">Digital Forensic SIFTing - Targeted Timeline Creation and Analysis using log2timeline
+</a></li>
+                            <li><a href="/blog/2012/01/19/digital-forensics-case-leads-refs-ex01-and-dfironline">Digital Forensics Case Leads: ReFS, Ex01, and DFIROnline
+</a></li>
+                    </ul>
+    </div><!-- / widget: recent posts -->
+    
+        
+            <div class="widget widget_recent_comments"><!-- widget: recent comments --> 
+        <h3>Recent Comments</h3>
+        <ul>
+                    </ul>
+        </div><!-- / widget: recent comments -->
+    
+        <div class="widget widget_popular_posts"><!-- widget: popular posts -->
+        <h3>Popular Posts</h3>
+        <ul>
+                    </ul>
+    </div><!-- / widget: popular posts -->
+    
+        <div class="widget widget_archives"><!-- widget: archive -->
+        <h3>Archives</h3>
+                <select name="archive-dropdown\" onchange="document.location.href=this.options[this.selectedIndex].value;">
+            <option value="\">Select Month</option>
+                            <option value="/blog/2012/02"> February 2012 (2)
+</option>
+                            <option value="/blog/2012/01"> January 2012 (10)
+</option>
+                            <option value="/blog/2011/12"> December 2011 (15)
+</option>
+                            <option value="/blog/2011/11"> November 2011 (7)
+</option>
+                            <option value="/blog/2011/10"> October 2011 (7)
+</option>
+                            <option value="/blog/2011/09"> September 2011 (8)
+</option>
+                            <option value="/blog/2011/08"> August 2011 (10)
+</option>
+                            <option value="/blog/2011/07"> July 2011 (7)
+</option>
+                            <option value="/blog/2011/06"> June 2011 (11)
+</option>
+                            <option value="/blog/2011/05"> May 2011 (6)
+</option>
+                            <option value="/blog/2011/04"> April 2011 (9)
+</option>
+                            <option value="/blog/2011/03"> March 2011 (7)
+</option>
+                            <option value="/blog/2011/02"> February 2011 (7)
+</option>
+                            <option value="/blog/2011/01"> January 2011 (14)
+</option>
+                            <option value="/blog/2010/12"> December 2010 (6)
+</option>
+                            <option value="/blog/2010/11"> November 2010 (11)
+</option>
+                            <option value="/blog/2010/10"> October 2010 (18)
+</option>
+                            <option value="/blog/2010/09"> September 2010 (15)
+</option>
+                            <option value="/blog/2010/08"> August 2010 (22)
+</option>
+                            <option value="/blog/2010/07"> July 2010 (15)
+</option>
+                            <option value="/blog/2010/06"> June 2010 (17)
+</option>
+                            <option value="/blog/2010/05"> May 2010 (8)
+</option>
+                            <option value="/blog/2010/04"> April 2010 (11)
+</option>
+                            <option value="/blog/2010/03"> March 2010 (22)
+</option>
+                            <option value="/blog/2010/02"> February 2010 (23)
+</option>
+                            <option value="/blog/2010/01"> January 2010 (8)
+</option>
+                            <option value="/blog/2009/12"> December 2009 (6)
+</option>
+                            <option value="/blog/2009/11"> November 2009 (8)
+</option>
+                            <option value="/blog/2009/10"> October 2009 (7)
+</option>
+                            <option value="/blog/2009/09"> September 2009 (11)
+</option>
+                            <option value="/blog/2009/08"> August 2009 (19)
+</option>
+                            <option value="/blog/2009/07"> July 2009 (16)
+</option>
+                            <option value="/blog/2009/06"> June 2009 (12)
+</option>
+                            <option value="/blog/2009/05"> May 2009 (13)
+</option>
+                            <option value="/blog/2009/04"> April 2009 (20)
+</option>
+                            <option value="/blog/2009/03"> March 2009 (20)
+</option>
+                            <option value="/blog/2009/02"> February 2009 (19)
+</option>
+                            <option value="/blog/2009/01"> January 2009 (18)
+</option>
+                            <option value="/blog/2008/12"> December 2008 (22)
+</option>
+                            <option value="/blog/2008/11"> November 2008 (9)
+</option>
+                            <option value="/blog/2008/10"> October 2008 (13)
+</option>
+                            <option value="/blog/2008/09"> September 2008 (11)
+</option>
+                            <option value="/blog/2008/08"> August 2008 (3)
+</option>
+                    </select>
+    </div>
+    
+    <!-- widget: tags -->
+        <!-- / widget: tags -->
+    
+          <!-- widget: ad -->
+                    <div class="widget widget_ad">
+                      </div>
+                    <!-- /widget: ad -->
+    
+    <!-- widget: meta -->
+    <div class="widget widget_meta">
+        <h3>Links</h3>
+        <ul>
+                        <li><a target="_blank" href="https://blogs.sans.org/computer-forensics/login.php">Log in</a></li>
+            <li><a class="feed" href="/blog/feed/" title="Post Feed">Entries RSS</a></li>
+            <li><a class="feed" href="/blog/feed/comments/" title="Comment Feed">Comments RSS</a></li>
+                                            <li><a href="http://wordpress.com/">WordPress.com</a></li>
+                                <li><a href="http://wordpress.org/">WordPress.org</a></li>
+                                    </ul>
+    </div><!-- /widget: meta -->
+</div><!--/ navigation -->
+        <!--/ sidebar -->
+        
+    </div><!--/ middle -->
+</div><!--/ container -->
+<!-- Bottom Content -->
+<div class="bottom-content">
+<div class="container">
+
+<div class="footer-column" style="margin-right:10px">
+<h3>Latest Blog Posts</h3>
+        <p><a href="/blog/2012/02/10/digital-forensics-case-leads-android-malwarechrome-browser-bugs-and-it-guy-shoots-daughters-laptop">Digital Forensics Case Leads: Android Malware,Chrome Browser Bugs and IT gu [...]</a><br />
+        February 10, 2012 - 4:34 PM
+</p>
+            <p><a href="/blog/2012/02/02/digital-forensics-case-leads-the-new-forensics-the-cybermilitia-and-bill-gates-gets-behind-open-source">Digital Forensics Case Leads: The New Forensics, The CyberMilitia and Bill  [...]</a><br />
+        February 02, 2012 - 6:45 PM
+</p>
+            <p><a href="/blog/2012/01/25/digital-forensic-sifting-colorized-super-timeline-template-for-log2timeline-output-files">Digital Forensic SIFTing: Colorized Super Timeline Template for Log2timelin [...]</a><br />
+        January 25, 2012 - 6:02 AM
+</p>
+    </div>
+
+<div class="footer-column" style="margin-right:30px">
+<h3>Latest Tweets</h3>
+            <p><a href="http://twitter.com/sansforensics/statuses/168095099832639488">@sansforensics: RT @robtlee: RT @syngress: Windows Forensic A [...]</a><br />
+            February 10, 2012 - 10:12 PM</p>
+                    <p><a href="http://twitter.com/sansforensics/statuses/168012610321661952">@sansforensics: &amp;quot;Digital Forensics Case Leads: Android M [...]</a><br />
+            February 10, 2012 - 4:45 PM</p>
+                    <p><a href="http://twitter.com/sansforensics/statuses/167990964563095552">@sansforensics: SANS announces WINDOWS FORENSICS - Solving Cr [...]</a><br />
+            February 10, 2012 - 3:19 PM</p>
+        </div>
+
+<div class="footer-column">
+<h3>Latest Papers</h3>
+    <p><a href="/community/papers/gcfa/grow-forensic-tools-taxonomy-python-libraries-helpful-forensic-analysis_6879">Grow Your Own Forensic Tools: A Taxonomy of Python Libraries Helpful for Forensic Analysis</a><br />
+    By Terrence OConnor</p>
+    <p><a href="/community/papers/gcfa/integrating-forensic-investigation-methodology-ediscovery_5088">Integrating Forensic Investigation Methodology into eDiscovery</a><br />
+    By Colin Chisholm</p>
+    <p><a href="/community/papers/gcfa/mastering-super-timeline-log2timeline_5028">Mastering the Super Timeline With log2timeline</a><br />
+    By Kristinn Gudjonsson</p>
+</div>
+<div class="clear"></div>
+<div class="footer-quote-box">
+    <p>"This is awesome! We're seeing details that most people don't even know exist."<br />- John Wright, Info Tech, Inc.</p>
+    <p>"Rob is great, just like all of the other SANS instructors I've had."<br />- Chris O'Keefe, The Community Preservation Corp</p>
+    <p>"I had taken several other forensic courses prior to this one, but none of them or their instructors made understanding forensic methodologies and techniques as clear and understandable as Rob Lee and this course has."<br />- Nathon Heck, Purdue</p>
+</div>
+
+</div>
+</div><!-- end .bottom-content -->
+<!-- Footer -->
+<div id="footer">
+<div class="container">
+<img src="/images/design-site/logo-footer.png" alt="Digital Forensics Case Leads: Do SSD Drives Auto Destroy Forensic Evidence? Industrial Espionage, and Cloud Computing Forensics" class="logo-footer" />
+
+<ul class="site-selector">
+ <li class="site-switcher"><a href="#"><span class="hidden">SANS Site Network</span></a>
+  <ul class="sites">
+    <li class="current-site">Current Site</li>
+    <li class="forensics "><a href="http://computer-forensics.sans.org"><img src="/images/design/custom/site-selector/site-icons/forensics.png" alt="forensics" />Computer Forensics</a></li>
+   <li class="selector-help">Choose a different site <a href="/help/site-network"><span class="hidden">Help</span></a></li><li class="sans "><a href="http://www.sans.org"><img src="/images/design/custom/site-selector/site-icons/sans.png" alt="sans" />Training</a></li>
+<li class="giac "><a href="http://www.giac.org"><img src="/images/design/custom/site-selector/site-icons/giac.png" alt="giac" />Certification</a></li>
+<li class="isc "><a href="http://isc.sans.org"><img src="/images/design/custom/site-selector/site-icons/isc.png" alt="isc" />Internet Storm Center</a></li>
+<li class="sti "><a href="http://www.sans.edu"><img src="/images/design/custom/site-selector/site-icons/sti.png" alt="sti" />Cyber Security Graduate School</a></li>
+<li class="awareness "><a href="http://www.securingthehuman.org"><img src="/images/design/custom/site-selector/site-icons/awareness.png" alt="awareness" />Security Awareness Training</a></li>
+<li class="pentest "><a href="http://pen-testing.sans.org"><img src="/images/design/custom/site-selector/site-icons/pentest.png" alt="pentest" />Penetration Testing</a></li>
+<li class="audit "><a href="http://it-audit.sans.org"><img src="/images/design/custom/site-selector/site-icons/audit.png" alt="audit" />IT Audit</a></li>
+<li class="ssi last"><a href="http://software-security.sans.org"><img src="/images/design/custom/site-selector/site-icons/ssi.png" alt="ssi" />Software Security</a></li>
+  </ul>
+ </li>
+</ul>
+
+<div class="latest-icons">
+<a href="http://twitter.com/sansforensics"><img src="/images/design/custom/icons/twitter-icon.png" alt="Twitter" /></a>
+<a href="https://www.facebook.com/pages/SANS-Institute/173623382673767"><img src="/images/design/custom/icons/facebook-icon.png" alt="Facebook" /></a>
+<a href="http://computer-forensics.sans.org/blog/feed/"><img src="/images/design/custom/icons/rss-icon.png" alt="RSS" /></a>
+</div><!-- end .latest-icons -->
+
+<div class="bottom-nav align-right">
+<ul>
+ <li><a href="/community/">Community</a></li>
+ <li><a href="/courses">Courses</a></li>
+ <li><a href="/events/">Events</a></li>
+ <li><a href="/certification/">Certification</a></li>
+ <li class="last"><a href="/instructors">Instructors</a></li>
+</ul>
+<p class="copyright align-right">&copy; 2008 - 2012 The SANS&#8482; Institute</p>
+</div><!-- end .bottom-nav align-right-->
+</div><!-- end .container-->
+</div><!-- end .footer-->
+
+</div><!-- end .body -->
+
+
+</body>
+</html>

@@ -1,0 +1,10 @@
+function AT_tags(){
+  try{var tags = new Array();
+    var imgs = new Array();
+    tags = ['http://ec.atdmt.com/images/pixel.gif','https://idcs.interclick.com/Segment.aspx?sid=45fbb345-0949-497c-9c1b-7d6a14dd3dff','https://secure.fastclick.net/w/tre?ad_id=20429;evt=17789;cat1=22374;cat2=22375;rand=508172000'];
+    for(var i=0; i<tags.length; i++)
+    { imgs[i] = new Image();
+      imgs[i].src = tags[i];}
+    this.csk='Test';
+  }catch(e){this.csk='Error';}}
+var AT_csk = new AT_tags();

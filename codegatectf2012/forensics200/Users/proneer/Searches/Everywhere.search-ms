@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<persistedQuery version="1.0">
+    <query>
+        <kindList>
+            <kind name="item"/>
+        </kindList>
+        <scope knownScopeID="{7c61d0a6-af7e-483a-b705-d2c5c2264656}" />
+    </query>
+</persistedQuery>

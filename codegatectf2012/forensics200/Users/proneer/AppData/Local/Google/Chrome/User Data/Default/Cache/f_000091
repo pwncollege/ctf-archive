@@ -1,0 +1,5946 @@
+﻿	// HotSubCategory 관련변수
+	var hotSubCateMenu = 
+	[
+		// 메뉴 0
+		{
+			"menu":[
+				{ 
+					"categoryCode" : "02000000",
+					"menuName": "컴퓨터/주변기기",
+					"middleMenu" : [
+					{
+						"categoryCode" : "02130000",
+						"menuName": "브랜드관",
+						"isPoint" : "false",
+						"isNew" : "false",
+						"isHit" : "false",
+						"linkUrl" : "",						
+						"subMenu" : [
+							{
+								"categoryCode" : "02130100",
+								"menuName": "삼성",
+								"keyword" : ""						
+							},
+							{
+								"categoryCode" : "02130200",
+								"menuName": "LG",
+								"keyword" : ""
+							},
+							{
+								"categoryCode" : "02130300",
+								"menuName": "TG삼보",
+								"keyword" : ""
+							},
+							{
+								"categoryCode" : "02130400",
+								"menuName": "HP",
+								"keyword" : ""
+							},
+							{
+								"categoryCode" : "02130500",
+								"menuName": "애플",
+								"keyword" : ""
+							},
+							{
+								"categoryCode" : "02130600",
+								"menuName": "소니",
+								"keyword" : ""
+							},
+							{
+								"categoryCode" : "02130700",
+								"menuName": "DELL",
+								"keyword" : ""
+							},
+							{
+								"categoryCode" : "02130800",
+								"menuName": "ASUS",
+								"keyword" : ""
+							},
+							{
+								"categoryCode" : "02130900",
+								"menuName": "도시바",
+								"keyword" : ""
+							},
+							{
+								"categoryCode" : "02131000",
+								"menuName": "레노버",
+								"keyword" : ""
+							},
+							{
+								"categoryCode" : "02131100",
+								"menuName": "MSI",
+								"keyword" : ""
+							},
+							{
+								"categoryCode" : "02131200",
+								"menuName": "로지텍",
+								"keyword" : ""
+							},
+							{
+								"categoryCode" : "02131300",
+								"menuName": "캐논",
+								"keyword" : ""
+							},
+							{
+								"categoryCode" : "02131400",
+								"menuName": "엡손",
+								"keyword" : ""
+							},
+							{
+								"categoryCode" : "02131500",
+								"menuName": "필립스",
+								"keyword" : ""
+							},
+							{
+								"categoryCode" : "02131600",
+								"menuName": "스카이디지탈",
+								"keyword" : ""
+							},
+							{
+								"categoryCode" : "02131700",
+								"menuName": "이메이션",
+								"keyword" : ""
+							},
+							{
+								"categoryCode" : "02131800",
+								"menuName": "잘만테크",
+								"keyword" : ""
+							},
+							{
+								"categoryCode" : "02131900",
+								"menuName": "EFM네트웍스",
+								"keyword" : ""
+							},
+							{
+								"categoryCode" : "02132000",
+								"menuName": "이지넷유비쿼터스",
+								"keyword" : ""
+							}
+						]
+					},
+					{
+						"categoryCode" : "02020500",
+						"menuName": "스마트패드",
+						"isPoint" : "false",
+						"isNew" : "true",
+						"isHit" : "false",
+						"linkUrl" : "",						
+						"subMenu" : []
+					},
+					{
+						"categoryCode" : "02060700",
+						"menuName": "USB 메모리",
+						"isPoint" : "true",
+						"isNew" : "false",
+						"isHit" : "false",
+						"linkUrl" : "",						
+						"subMenu" : [
+							{
+								"categoryCode" : "02060703",
+								"menuName": "1GB",
+								"keyword" : ""						
+							},
+							{
+								"categoryCode" : "02060704",
+								"menuName": "2GB",
+								"keyword" : ""
+							},
+							{
+								"categoryCode" : "02060705",
+								"menuName": "4GB",
+								"keyword" : ""
+							},
+							{
+								"categoryCode" : "02060706",
+								"menuName": "8GB",
+								"keyword" : ""
+							},
+							{
+								"categoryCode" : "02060707",
+								"menuName": "16GB",
+								"keyword" : ""
+							},
+							{
+								"categoryCode" : "02060708",
+								"menuName": "32GB",
+								"keyword" : ""
+							}
+						]
+					},
+					{
+						"categoryCode" : "02020000",
+						"menuName": "노트북/넷북",
+						"isPoint" : "false",
+						"isNew" : "false",
+						"isHit" : "true",
+						"linkUrl" : "",						
+						"subMenu" : [
+							{
+								"categoryCode" : "02020500",
+								"menuName": "스마트패드",
+								"keyword" : ""						
+							},
+							{
+								"categoryCode" : "02020100",
+								"menuName": "노트북",
+								"keyword" : ""						
+							},
+							{
+								"categoryCode" : "02020200",
+								"menuName": "넷북",
+								"keyword" : ""
+							},
+							{
+								"categoryCode" : "02020300",
+								"menuName": "PDA/UMPC/MID",
+								"keyword" : ""
+							},
+							{
+								"categoryCode" : "02020400",
+								"menuName": "노트북 액세서리",
+								"keyword" : ""
+							},							
+							{
+								"categoryCode" : "02020600",
+								"menuName": " 스마트패드 액세서리",
+								"keyword" : ""
+							}
+						]
+					},
+					{
+						"categoryCode" : "02010000",
+						"menuName": "데스크탑",
+						"isPoint" : "false",
+						"isNew" : "false",
+						"isHit" : "true",
+						"linkUrl" : "",						
+						"subMenu" : [
+							{
+								"categoryCode" : "02010100",
+								"menuName": "브랜드PC",
+								"keyword" : ""						
+							},
+							{
+								"categoryCode" : "02010200",
+								"menuName": "조립형PC",
+								"keyword" : ""
+							},
+							{
+								"categoryCode" : "02010300",
+								"menuName": "베어본PC",
+								"keyword" : ""
+							},
+							{
+								"categoryCode" : "02010400",
+								"menuName": "서버/워크스테이션",
+								"keyword" : ""
+							}
+						]
+					}	
+					,
+					{
+						"categoryCode" : "02030000",
+						"menuName": "모니터",
+						"isPoint" : "false",
+						"isNew" : "false",
+						"isHit" : "false",
+						"linkUrl" : "",						
+						"subMenu" : [
+							{
+								"categoryCode" : "02030100",
+								"menuName": "LCD 모니터",
+								"keyword" : ""						
+							},
+							{
+								"categoryCode" : "02030200",
+								"menuName": "LED 모니터",
+								"keyword" : ""
+							},
+							{
+								"categoryCode" : "02030500",
+								"menuName": "3D 모니터",
+								"keyword" : ""
+							},
+							{
+								"categoryCode" : "02030400",
+								"menuName": "모니터 주변기기",
+								"keyword" : ""
+							}
+						]
+					}	
+					,
+					
+					{
+						"categoryCode" : "02090105",
+						"menuName": "DMB수신기",
+						"isPoint" : "false",
+						"isNew" : "false",
+						"isHit" : "false",
+						"linkUrl" : ""	,
+						"subMenu" : [
+							
+						]					
+					}
+					
+					],
+					// 컴퓨터 / 주변기기 서브메뉴
+					"subMenu" : [
+					{
+						"categoryCode" : "02130000",
+						"menuName": "브랜드관",
+						"keyword" : ""						
+					},
+					{
+						"categoryCode" : "02020000",
+						"menuName": "노트북/넷북",
+						"keyword" : ""
+					}	
+					,
+					{
+						"categoryCode" : "02010000",
+						"menuName": "데스크탑",
+						"keyword" : ""
+					}	
+					,
+					{
+						"categoryCode" : "02030000",
+						"menuName": "모니터",
+						"keyword" : ""
+					}	
+					,
+					{
+						"categoryCode" : "02090000",
+						"menuName": "멀티미디어",
+						"keyword" : ""
+					}	
+					,
+					{
+						"categoryCode" : "02040000",
+						"menuName": "주변기기",
+						"keyword" : ""
+					}
+					,
+					
+					{
+						"categoryCode" : "02050000",
+						"menuName": "PC부품",
+						"keyword" : ""
+					}
+					,
+					{
+						"categoryCode" : "02060000",
+						"menuName": "저장장치",
+						"keyword" : ""
+					}
+					,
+					{
+						"categoryCode" : "02070000",
+						"menuName": "네트워크",
+						"keyword" : ""
+					}
+					,
+					{
+						"categoryCode" : "02080000",
+						"menuName": "PC소모품",
+						"keyword" : ""
+					},
+					{
+						"categoryCode" : "02140000",
+						"menuName": "PC액세서리",
+						"keyword" : ""
+					},
+					{
+						"categoryCode" : "02150000",
+						"menuName": "소프트웨어",
+						"keyword" : ""
+					}
+					
+					]
+				},
+				{ 
+					"categoryCode" : "01000000",
+					"menuName": "가전제품",
+					"middleMenu" : [
+					{
+						"categoryCode" : "01130000",
+						"menuName": "브랜드관",
+						"isPoint" : "false",
+						"isNew" : "false",
+						"isHit" : "false",
+						"linkUrl" : "",						
+						"subMenu" : [
+							{
+								"categoryCode" : "01130100",
+								"menuName": "삼성",
+								"keyword" : ""						
+							},
+							{
+								"categoryCode" : "01130200",
+								"menuName": "LG",
+								"keyword" : ""
+							},
+							{
+								"categoryCode" : "01130300",
+								"menuName": "대우",
+								"keyword" : ""
+							},
+							{
+								"categoryCode" : "01130400",
+								"menuName": "소니",
+								"keyword" : ""
+							},
+							{
+								"categoryCode" : "01130500",
+								"menuName": "애플",
+								"keyword" : ""
+							},
+							{
+								"categoryCode" : "01130600",
+								"menuName": "캐논",
+								"keyword" : ""
+							},
+							{
+								"categoryCode" : "01130700",
+								"menuName": "니콘",
+								"keyword" : ""
+							},
+							{
+								"categoryCode" : "01130800",
+								"menuName": "후지필름",
+								"keyword" : ""
+							},
+							{
+								"categoryCode" : "01130900",
+								"menuName": "올림푸스",
+								"keyword" : ""
+							},
+							{
+								"categoryCode" : "01131000",
+								"menuName": "아이리버",
+								"keyword" : ""
+							},
+							{
+								"categoryCode" : "01131100",
+								"menuName": "코원",
+								"keyword" : ""
+							},
+							{
+								"categoryCode" : "01131200",
+								"menuName": "파나소닉",
+								"keyword" : ""
+							},
+							{
+								"categoryCode" : "01131300",
+								"menuName": "모토롤라",
+								"keyword" : ""
+							},
+							{
+								"categoryCode" : "01131400",
+								"menuName": "닌텐도",
+								"keyword" : ""
+							},
+							{
+								"categoryCode" : "01131500",
+								"menuName": "필립스",
+								"keyword" : ""
+							},
+							{
+								"categoryCode" : "01131600",
+								"menuName": "샤프",
+								"keyword" : ""
+							},
+							{
+								"categoryCode" : "01131700",
+								"menuName": "한경희생활과학",
+								"keyword" : ""
+							},
+							{
+								"categoryCode" : "01131800",
+								"menuName": "위니아만도",
+								"keyword" : ""
+							},
+							{
+								"categoryCode" : "01131900",
+								"menuName": "동양매직",
+								"keyword" : ""
+							},
+							{
+								"categoryCode" : "01132000",
+								"menuName": "브라운",
+								"keyword" : ""
+							},
+							{
+								"categoryCode" : "01132100",
+								"menuName": "JVC",
+								"keyword" : ""
+							},
+							{
+								"categoryCode" : "01132200",
+								"menuName": "아이나비",
+								"keyword" : ""
+							},
+							{
+								"categoryCode" : "01132300",
+								"menuName": "파인드라이브",
+								"keyword" : ""
+							},
+							{
+								"categoryCode" : "01132400",
+								"menuName": "엔나비",
+								"keyword" : ""
+							},
+							{
+								"categoryCode" : "01132500",
+								"menuName": "만도",
+								"keyword" : ""
+							},
+							{
+								"categoryCode" : "01132600",
+								"menuName": "현대유비스",
+								"keyword" : ""
+							}
+						]
+					},
+					{
+						"categoryCode" : "01010000",
+						"menuName": "휴대폰",
+						"isPoint" : "false",
+						"isNew" : "false",
+						"isHit" : "false",
+						"linkUrl" : "",						
+						"subMenu" : [
+							{
+								"categoryCode" : "01010600",
+								"menuName": "SK텔레콤",
+								"keyword" : ""						
+							},
+							{
+								"categoryCode" : "01010700",
+								"menuName": "KT",
+								"keyword" : ""
+							},
+							{
+								"categoryCode" : "01010800",
+								"menuName": "LG유플러스",
+								"keyword" : ""						
+							},
+							{
+								"categoryCode" : "01011400",
+								"menuName": "기능별휴대폰",
+								"keyword" : ""						
+							},
+							{
+								"categoryCode" : "01010900",
+								"menuName": "휴대폰브랜드별",
+								"keyword" : ""
+							},
+							{
+								"categoryCode" : "01011000",
+								"menuName": "스마트폰",
+								"keyword" : ""
+							},
+							{
+								"categoryCode" : "01011300",
+								"menuName": "스마트패드",
+								"keyword" : ""
+							}
+						]
+					},
+					{
+						"categoryCode" : "01011000",
+						"menuName": "스마트폰",
+						"isPoint" : "true",
+						"isNew" : "false",
+						"isHit" : "false",
+						"linkUrl" : "",						
+						"subMenu" : []
+					},
+					{
+						"categoryCode" : "01190000",
+						"menuName": "휴대폰 액서서리",
+						"isPoint" : "true",
+						"isNew" : "false",
+						"isHit" : "false",
+						"linkUrl" : "",						
+						"subMenu" : []
+					},
+					{
+						"categoryCode" : "01090400",
+						"menuName": " 가습기",
+						"isPoint" : "false",
+						"isNew" : "false",
+						"isHit" : "true",
+						"linkUrl" : "",						
+						"subMenu" : [
+							{
+								"categoryCode" : "01090401",
+								"menuName": "초음파식가습기",
+								"keyword" : ""						
+							},
+							{
+								"categoryCode" : "01090402",
+								"menuName": "가열식가습기",
+								"keyword" : ""
+							},
+							{
+								"categoryCode" : "01090403",
+								"menuName": "복합식가습기",
+								"keyword" : ""						
+							},
+							{
+								"categoryCode" : "01090404",
+								"menuName": "자연식가습기",
+								"keyword" : ""
+							},
+							{
+								"categoryCode" : "01090412",
+								"menuName": "가습기필터",
+								"keyword" : ""
+							}	
+						]
+					},
+					{
+						"categoryCode" : "01140000",
+						"menuName": "디지털카메라",
+						"isPoint" : "false",
+						"isNew" : "true",
+						"isHit" : "false",
+						"linkUrl" : "",						
+						"subMenu" : [
+							{
+								"categoryCode" : "01140100",
+								"menuName": "컴팩트디카",
+								"keyword" : ""						
+							},
+							{
+								"categoryCode" : "01140200",
+								"menuName": "DSLR",
+								"keyword" : ""
+							},
+							{
+								"categoryCode" : "01140300",
+								"menuName": "미러리스디카",
+								"keyword" : ""						
+							},
+							{
+								"categoryCode" : "01140400",
+								"menuName": "카메라렌즈",
+								"keyword" : ""
+							}						
+						]
+					},
+					{
+						"categoryCode" : "01090202",
+						"menuName": "전기히터",
+						"isPoint" : "false",
+						"isNew" : "false",
+						"isHit" : "true",
+						"linkUrl" : "",						
+						"subMenu" : []
+					},
+					{
+						"categoryCode" : "01090300",
+						"menuName": "전기요/장판",
+						"isPoint" : "false",
+						"isNew" : "false",
+						"isHit" : "true",
+						"linkUrl" : "",						
+						"subMenu" : [
+							{
+								"categoryCode" : "01090301",
+								"menuName": "전기장판",
+								"keyword" : ""						
+							},
+							{
+								"categoryCode" : "01090302",
+								"menuName": "전기담요",
+								"keyword" : ""
+							},
+							{
+								"categoryCode" : "01090303",
+								"menuName": "전기방석",
+								"keyword" : ""						
+							}
+						
+						]
+					},
+					{
+						"categoryCode" : "01111000",
+						"menuName": "김치냉장고",
+						"isPoint" : "false",
+						"isNew" : "false",
+						"isHit" : "true",
+						"linkUrl" : "",						
+						"subMenu" : [
+							{
+								"categoryCode" : "01111006",
+								"menuName": "딤채",
+								"keyword" : ""						
+							},
+							{
+								"categoryCode" : "01111007",
+								"menuName": "하우젠",
+								"keyword" : ""
+							},
+							{
+								"categoryCode" : "01111009",
+								"menuName": "다맛",
+								"keyword" : ""						
+							},
+							{
+								"categoryCode" : "01111010",
+								"menuName": "디오스",
+								"keyword" : ""						
+							},
+							{
+								"categoryCode" : "01111011",
+								"menuName": "클라쎄",
+								"keyword" : ""
+							},
+							{
+								"categoryCode" : "01111012",
+								"menuName": "지펠아삭",
+								"keyword" : ""						
+							}
+						
+						]
+					}
+					],
+					
+					"subMenu" : [
+					{
+						"categoryCode" : "01130000",
+						"menuName": "브랜드관",
+						"keyword" : ""						
+					},
+					{
+						"categoryCode" : "01010000",
+						"menuName": "휴대폰",
+						"keyword" : ""
+					},
+					{
+						"categoryCode" : "01140000",
+						"menuName": "디지털카메라",
+						"keyword" : ""						
+					},
+					{
+						"categoryCode" : "01150000",
+						"menuName": "캠코더",
+						"keyword" : ""
+					},
+					{
+						"categoryCode" : "01160000",
+						"menuName": "필름카메라",
+						"keyword" : ""
+					}	,
+					{
+						"categoryCode" : "01040000",
+						"menuName": "카메라관련용품",
+						"keyword" : ""
+					}	
+					,
+					{
+						"categoryCode" : "01050000",
+						"menuName": "MP3",
+						"keyword" : ""
+					}	
+					,
+					{
+						"categoryCode" : "01170000",
+						"menuName": "PMP",
+						"keyword" : ""
+					}	
+					,
+					{
+						"categoryCode" : "01070000",
+						"menuName": "통신/학습/사무",
+						"keyword" : ""
+					}
+					,
+					{
+						"categoryCode" : "01080000",
+						"menuName": "영상/음향가전",
+						"keyword" : ""
+					}
+					,
+					{
+						"categoryCode" : "01090000",
+						"menuName": "계절가전",
+						"keyword" : ""
+					}
+					,
+					{
+						"categoryCode" : "01100000",
+						"menuName": "생활가전",
+						"keyword" : ""
+					}
+					,
+					{
+						"categoryCode" : "01110000",
+						"menuName": "주방가전",
+						"keyword" : ""
+					}
+					,
+					{
+						"categoryCode" : "01180000",
+						"menuName": "건강가전",
+						"keyword" : ""
+					}
+					]
+					
+				}
+			]
+		},
+		// 메뉴 1
+		{
+			"menu":[
+				{ 
+					"categoryCode" : "03000000",
+					"menuName": "여성의류",
+					// 여성의류
+					"subMenu" : [
+						{
+							"categoryCode" : "03290000",
+							"menuName": "브랜드의류",
+							"keyword" : ""						
+						},
+						{
+							"categoryCode" : "03390000",
+							"menuName": "겨울 코디 제안",
+							"keyword" : ""						
+						},		
+						{
+							"categoryCode" : "03330000",
+							"menuName": "패딩/다운",
+							"keyword" : ""						
+						},
+						{
+							"categoryCode" : "03220000",
+							"menuName": "점퍼",
+							"keyword" : ""						
+						},
+						{
+							"categoryCode" : "03350000",
+							"menuName": "코트",
+							"keyword" : ""						
+						},				
+						{
+							"categoryCode" : "03210000",
+							"menuName": "자켓",
+							"keyword" : ""						
+						},	
+						{
+							"categoryCode" : "03200000",
+							"menuName": "원피스",
+							"keyword" : ""						
+						},
+						{
+							"categoryCode" : "03140000",
+							"menuName": "가디건",
+							"keyword" : ""						
+						},
+						{
+							"categoryCode" : "03120000",
+							"menuName": "니트",
+							"keyword" : ""						
+						},
+						{
+							"categoryCode" : "03340000",
+							"menuName": "조끼",
+							"keyword" : ""						
+						},		
+						{
+							"categoryCode" : "03100000",
+							"menuName": "티셔츠",
+							"keyword" : ""						
+						},						
+						{
+							"categoryCode" : "03110000",
+							"menuName": "블라우스/셔츠",
+							"keyword" : ""						
+						},
+					
+						{
+							"categoryCode" : "03180000",
+							"menuName": "미니스커트",
+							"keyword" : ""						
+						},
+						{
+							"categoryCode" : "03360000",
+							"menuName": "미디스커트",
+							"keyword" : ""						
+						},
+						{
+							"categoryCode" : "03410000",
+							"menuName": "롱스커트",
+							"keyword" : ""						
+						},
+						{
+							"categoryCode" : "03170000",
+							"menuName": "청바지",
+							"keyword" : ""						
+						},
+						{
+							"categoryCode" : "03160000",
+							"menuName": "바지",
+							"keyword" : ""						
+						},
+						
+						{
+							"categoryCode" : "03370000",
+							"menuName": "레깅스",
+							"keyword" : ""						
+						},
+						{
+							"categoryCode" : "03240000",
+							"menuName": "정장/세트",
+							"keyword" : ""						
+						},
+						{
+							"categoryCode" : "03260000",
+							"menuName": "빅사이즈",
+							"keyword" : ""						
+						},
+						{
+							"categoryCode" : "03270000",
+							"menuName": "스포츠의류",
+							"keyword" : ""						
+						},
+						{
+							"categoryCode" : "03280000",
+							"menuName": "테마/시즌의류",
+							"keyword" : ""						
+						}						
+					],
+					"middleMenu" : [
+						{
+							"categoryCode" : "03330000",
+							"menuName": "패딩/다운",
+							"isPoint" : "false",
+							"isNew" : "false",
+							"isHit" : "false",
+							"linkUrl" : "",						
+							"subMenu" : [
+								{
+									"categoryCode" : "03331400",
+									"menuName": "하프 패딩/다운점퍼",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "03331500",
+									"menuName": "롱 패딩/다운점퍼",
+									"keyword" : ""
+								},
+								{
+									"categoryCode" : "03331600",
+									"menuName": "후드 패딩/다운점퍼",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "03331700",
+									"menuName": "퍼트리밍 패딩/다운점퍼",
+									"keyword" : ""
+								},
+								{
+									"categoryCode" : "03331800",
+									"menuName": " 누빔점퍼",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "03331900",
+									"menuName": "누빔/패딩/다운코트",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "03332000",
+									"menuName": "패딩자켓",
+									"keyword" : ""
+								},
+								{
+									"categoryCode" : "03332100",
+									"menuName": "패딩조끼",
+									"keyword" : ""
+								}
+							]
+						},
+						{
+							"categoryCode" : "03350000",
+							"menuName": "코트",
+							"isPoint" : "false",
+							"isNew" : "false",
+							"isHit" : "false",
+							"linkUrl" : "",						
+							"subMenu" : [
+								{
+									"categoryCode" : "03350200",
+									"menuName": "모직코트",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "03350300",
+									"menuName": "트위드/헤링본코트",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "03350400",
+									"menuName": "알파카/캐시미어코트",
+									"keyword" : ""
+								},
+								{
+									"categoryCode" : "03351000",
+									"menuName": "누빔/패딩/다운코트",
+									"keyword" : ""
+								},
+								{
+									"categoryCode" : "03350500",
+									"menuName": "니트코트",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "03350600",
+									"menuName": "퍼/모피코트",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "03350700",
+									"menuName": "퍼트리밍코트",
+									"keyword" : ""						
+								},								
+								{
+									"categoryCode" : "03350800",
+									"menuName": "무스탕",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "03350900",
+									"menuName": "가죽/스웨이드코트",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "03351100",
+									"menuName": "벨벳코트",
+									"keyword" : ""
+								},
+								{
+									"categoryCode" : "03350100",
+									"menuName": "트렌치코트",
+									"keyword" : ""
+								},
+								{
+									"categoryCode" : "03352000",
+									"menuName": "면코트",
+									"keyword" : ""
+								},
+								{
+									"categoryCode" : "03351300",
+									"menuName": "케이프코트",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "03351400",
+									"menuName": "원피스코트",
+									"keyword" : ""
+								},
+								{
+									"categoryCode" : "03351500",
+									"menuName": "벨티드코트",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "03351600",
+									"menuName": "후드코트",
+									"keyword" : ""
+								},
+								{
+									"categoryCode" : "03351700",
+									"menuName": "숏/미니코트",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "03351800",
+									"menuName": "하프코트",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "03351900",
+									"menuName": "롱코트",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "03351200",
+									"menuName": "코트기타",
+									"keyword" : ""						
+								}
+							] // Middle Menu종료
+						}		
+					]
+					
+				},
+				// 남성의류
+				{ 
+					"categoryCode" : "19000000",
+					"menuName": "남성의류",
+					"subMenu" : [
+						{
+							"categoryCode" : "19160000",
+							"menuName": "브랜드의류",
+							"keyword" : ""
+						}
+						,
+						{
+							"categoryCode" : "19190000",
+							"menuName": "겨울 코디 제안",
+							"keyword" : ""
+						}
+						,
+						{
+							"categoryCode" : "19080000",
+							"menuName": "점퍼",
+							"keyword" : ""						
+						},
+																
+						{
+							"categoryCode" : "19210000",
+							"menuName": "코트",
+							"keyword" : ""						
+						},
+						{
+							"categoryCode" : "19090000",
+							"menuName": "자켓",
+							"keyword" : ""
+						},						
+						{
+							"categoryCode" : "19050000",
+							"menuName": "가디건",
+							"keyword" : ""
+						}	,
+						{
+							"categoryCode" : "19040000",
+							"menuName": "니트",
+							"keyword" : ""
+						}	
+						,						
+						{	
+							"categoryCode" : "19200000",
+							"menuName": "조끼",
+							"keyword" : ""						
+						}						
+						,
+						
+						{
+							"categoryCode" : "19010000",
+							"menuName": "티셔츠",
+							"keyword" : ""
+						}	
+						,
+						{
+							"categoryCode" : "19020000",
+							"menuName": "셔츠/남방",
+							"keyword" : ""
+						}
+						,
+						{
+							"categoryCode" : "19070000",
+							"menuName": "청바진",
+							"keyword" : ""
+						}
+						,
+						{
+							"categoryCode" : "19060000",
+							"menuName": "바지",
+							"keyword" : ""
+						}	
+						,						
+						{
+							"categoryCode" : "19120000",
+							"menuName": "정장세트",
+							"keyword" : ""
+						}
+						,
+						{
+							"categoryCode" : "19130000",
+							"menuName": "빅사이즈",
+							"keyword" : ""
+						}
+						,
+						{
+							"categoryCode" : "19140000",
+							"menuName": "스포츠의류",
+							"keyword" : ""
+						}		
+						,
+						{
+							"categoryCode" : "19240000",
+							"menuName": "테마/시즌의류",
+							"keyword" : ""
+						}						
+					]	, // 남성의류 서브메뉴 end
+					"middleMenu" : [
+						{
+							"categoryCode" : "19260000",
+							"menuName": " 패딩/다운",
+							"isPoint" : "false",
+							"isNew" : "false",
+							"isHit" : "false",
+							"linkUrl" : "",						
+							"subMenu" : [
+								{
+									"categoryCode" : "19260100",
+									"menuName": "하프 패딩/다운점퍼",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "19260200",
+									"menuName": "롱 패딩/다운점퍼",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "19260300",
+									"menuName": "양면 패딩/다운점퍼",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "19260400",
+									"menuName": "패딩코트",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "19260500",
+									"menuName": "패딩자켓",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "19260600",
+									"menuName": "패딩조끼",
+									"keyword" : ""						
+								}
+							]
+							
+						},
+					
+						{
+							"categoryCode" : "19210000",
+							"menuName": "코트",
+							"isPoint" : "false",
+							"isNew" : "false",
+							"isHit" : "false",
+							"linkUrl" : "",						
+							"subMenu" : [
+								{
+									"categoryCode" : "19210400",
+									"menuName": "모직/알파카코트",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "19210700",
+									"menuName": "패딩코트",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "19210600",
+									"menuName": "무스탕/모피코트",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "19210500",
+									"menuName": "가죽/스웨이드코트",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "19210300",
+									"menuName": "벨티드/퍼트리밍코트",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "19210800",
+									"menuName": "퍼코트",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "19211200",
+									"menuName": "더블코트",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "19211300",
+									"menuName": "하프코트",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "19211100",
+									"menuName": "롱코트",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "19211000",
+									"menuName": "트렌치코트",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "19210100",
+									"menuName": "더플코트",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "19210200",
+									"menuName": "면코트",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "19210900",
+									"menuName": "코트기타",
+									"keyword" : ""						
+								}
+							]
+						}
+					]				
+					
+				},
+				// 언더웨어
+				{ 
+					"categoryCode" : "21000000",
+					"menuName": "언더웨어",
+					"middleMenu":[]		,					
+					"subMenu" : [
+						{
+							"categoryCode" : "21080000",
+							"menuName": "브랜드언더웨어",
+							"keyword" : ""
+						},
+						{
+							"categoryCode" : "21010000",
+							"menuName": "여성언더웨어",
+							"keyword" : ""						
+						},
+						{
+							"categoryCode" : "21020000",
+							"menuName": "남성언더웨어",
+							"keyword" : ""
+						},
+						{
+							"categoryCode" : "21090000",
+							"menuName": "잠옷",
+							"keyword" : ""
+						},
+						{
+							"categoryCode" : "21030000",
+							"menuName": "기능성언더웨어",
+							"keyword" : ""
+						}	
+						,
+						{
+							"categoryCode" : "21050000",
+							"menuName": "커플언더웨어",
+							"keyword" : ""
+						}	
+						,
+						{
+							"categoryCode" : "21060000",
+							"menuName": "빅사이즈언더웨어",
+							"keyword" : ""
+						}	
+						,
+						{
+							"categoryCode" : "21100000",
+							"menuName": "임산부언더웨어",
+							"keyword" : ""
+						}	
+						,
+						{
+							"categoryCode" : "21070000",
+							"menuName": "주니어언더웨어",
+							"keyword" : ""
+						}	
+						,
+						{
+							"categoryCode" : "21040000",
+							"menuName": "란제리소품",
+							"keyword" : ""
+						}
+					]	
+										
+				},
+				
+				// 패션슈즈
+				{ 
+					"categoryCode" : "04000000",
+					"menuName": "패션슈즈"	,					
+					"subMenu" : [
+						{
+							"categoryCode" : "04180000",
+							"menuName": "겨울 패션슈즈",
+							"keyword" : ""
+						}
+						,		
+						{
+							"categoryCode" : "04120000",
+							"menuName": "정장슈즈브랜드",
+							"keyword" : ""
+						}
+						,						
+						{
+							"categoryCode" : "04150000",
+							"menuName": "스포츠/캐주얼슈즈브랜드",
+							"keyword" : ""
+						},
+						{
+							"categoryCode" : "04010000",
+							"menuName": "여성구두/신발",
+							"keyword" : ""						
+						},
+						{
+							"categoryCode" : "04020000",
+							"menuName": "남성구두/신발",
+							"keyword" : ""
+						},
+						{
+							"categoryCode" : "04030000",
+							"menuName": "캐주얼화",
+							"keyword" : ""
+						}	
+						,
+						{
+							"categoryCode" : "04040000",
+							"menuName": "기능화",
+							"keyword" : ""
+						}	
+						,
+						{
+							"categoryCode" : "04050000",
+							"menuName": "빅사이즈화",
+							"keyword" : ""
+						}	
+						,
+						{
+							"categoryCode" : "04060000",
+							"menuName": "신발소품",
+							"keyword" : ""
+						}
+						,
+						{
+							"categoryCode" : "04140000",
+							"menuName": "풋관련아이템",
+							"keyword" : ""						
+						}
+					]	, // submenu end
+					
+					"middleMenu" : [
+						{
+							"categoryCode" : "04180000",
+							"menuName": "겨울패션슈즈",
+							"isPoint" : "false",
+							"isNew" : "false",
+							"isHit" : "false",
+							"linkUrl" : "",						
+							"subMenu" : [
+								{
+									"categoryCode" : "04180100",
+									"menuName": "어그",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "04180200",
+									"menuName": "베어파우",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "04180300",
+									"menuName": "EMU",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "04180400",
+									"menuName": "여성 슈즈",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "04180500",
+									"menuName": "남성 슈즈",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "04180600",
+									"menuName": "캐주얼패션슈즈",
+									"keyword" : ""						
+								}
+							]
+							
+						},	
+						{
+							"categoryCode" : "04010400",
+							"menuName": "여성부츠",
+							"isPoint" : "false",
+							"isNew" : "false",
+							"isHit" : "false",
+							"linkUrl" : "",						
+							"subMenu" : [
+								{
+									"categoryCode" : "04010406",
+									"menuName": "롱부츠",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "04010408",
+									"menuName": "앵클부츠",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "04010407",
+									"menuName": "미들부츠",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "04010411",
+									"menuName": "워커힐/레이스업부츠",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "04010404",
+									"menuName": "가죽부츠",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "04010402",
+									"menuName": "양털/니트부츠",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "04010412",
+									"menuName": "패딩부츠",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "04010405",
+									"menuName": "스웨이드부츠",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "04010410",
+									"menuName": "웨스턴부츠",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "04010403",
+									"menuName": "마부츠",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "04010401",
+									"menuName": "레인부츠/장화",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "04010413",
+									"menuName": "부츠기타",
+									"keyword" : ""						
+								}
+							]
+							
+						},
+						{
+							"categoryCode" : "04030000",
+							"menuName": "케주얼화",
+							"isPoint" : "false",
+							"isNew" : "false",
+							"isHit" : "false",
+							"linkUrl" : "",						
+							"subMenu" : [
+								{
+									"categoryCode" : "04030100",
+									"menuName": "남성캐주얼화",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "04030200",
+									"menuName": "여성캐주얼화",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "04030300",
+									"menuName": "공용캐주얼화",
+									"keyword" : ""						
+								}
+							]
+							
+						}
+					]
+					
+				} , 
+				
+				//패션가방/잡화
+				{ 
+					"categoryCode" : "23000000",
+					"menuName": "패션가방/잡화"	,
+					"middleMenu":[]		,					
+					"subMenu" : [
+						{
+							"categoryCode" : "23110000",
+							"menuName": "겨울 패션잡화",
+							"keyword" : ""
+						}	
+						,
+						{
+							"categoryCode" : "23060000",
+							"menuName": "가방/잡화브랜드",
+							"keyword" : ""
+						}	
+						,
+						{
+							"categoryCode" : "23080000",
+							"menuName": "스포츠/캐주얼잡화브랜드",
+							"keyword" : ""
+						},	
+						{
+							"categoryCode" : "23010000",
+							"menuName": "가방",
+							"keyword" : ""
+						},
+						{
+							"categoryCode" : "23020000",
+							"menuName": "지갑/벨트",
+							"keyword" : ""						
+						},						
+						{
+							"categoryCode" : "23040000",
+							"menuName": "선글라스/안경테",
+							"keyword" : ""
+						},
+						{
+							"categoryCode" : "23030000",
+							"menuName": "모자/비니/두건",
+							"keyword" : ""
+						}	
+						,
+						{
+							"categoryCode" : "23050000",
+							"menuName": "섬유/시즌잡화",
+							"keyword" : ""
+						}	
+					]									
+				} , 
+				
+				// 시계, 액서서리
+				{ 
+					"categoryCode" : "05000000",
+					"menuName": "시계/액세서리"		,
+					"subMenu" : [
+						{
+							"categoryCode" : "05200000",
+							"menuName": "겨울 인기아이템",
+							"keyword" : ""						
+						},
+						{
+							"categoryCode" : "05010000",
+							"menuName": "시계",
+							"keyword" : ""						
+						},
+						{
+							"categoryCode" : "05020000",
+							"menuName": "여성액세서리",
+							"keyword" : ""
+						},
+						{
+							"categoryCode" : "05030000",
+							"menuName": "남성액세서리",
+							"keyword" : ""
+						}	
+						,
+						{
+							"categoryCode" : "05040000",
+							"menuName": "커플액세서리",
+							"keyword" : ""
+						}	
+						,
+						{
+							"categoryCode" : "05080000",
+							"menuName": "귀금속액세서리",
+							"keyword" : ""
+						}	
+						,
+						{
+							"categoryCode" : "05050000",
+							"menuName": "유아동액세서리",
+							"keyword" : ""
+						}	,
+						{
+							"categoryCode" : "05150000",
+							"menuName": "기타액세서리",
+							"keyword" : ""
+						}	,
+						{
+							"categoryCode" : "05070000",
+							"menuName": "액세서리소품",
+							"keyword" : ""
+						}	,
+						{
+							"categoryCode" : "05060000",
+							"menuName": "헤어액세서리",
+							"keyword" : ""
+						}	,
+						{
+							"categoryCode" : "05090000",
+							"menuName": "명품브랜드시계",
+							"keyword" : ""
+						}	,
+						{
+							"categoryCode" : "05100000",
+							"menuName": "정장/예물브랜드시계",
+							"keyword" : ""
+						}	,
+						{
+							"categoryCode" : "05120000",
+							"menuName": "스포츠브랜드시계",
+							"keyword" : ""
+						}	,
+						{
+							"categoryCode" : "05110000",
+							"menuName": "패션브랜드시계",
+							"keyword" : ""
+						}	,
+						{
+							"categoryCode" : "05130000",
+							"menuName": "보석/준보석브랜드",
+							"keyword" : ""
+						}	,
+						{
+							"categoryCode" : "05140000",
+							"menuName": "트랜드주얼리브랜드",
+							"keyword" : ""
+						}	
+						
+					]	, // submenu end
+										
+					"middleMenu" : [
+						{
+							"categoryCode" : "05010000",
+							"menuName": "시계",
+							"isPoint" : "false",
+							"isNew" : "false",
+							"isHit" : "false",
+							"linkUrl" : "",						
+							"subMenu" : [
+								{
+									"categoryCode" : "05010100",
+									"menuName": "명품시계",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "05010200",
+									"menuName": "정장/예물시계",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "05010400",
+									"menuName": "스포츠시계",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "05010500",
+									"menuName": "패션시계",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "05010600",
+									"menuName": "캐릭터시계",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "05011100",
+									"menuName": "가죽밴드",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "05011200",
+									"menuName": "메탈밴드",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "05011300",
+									"menuName": "우레탄밴드",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "05011400",
+									"menuName": "젤리밴드",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "05012100",
+									"menuName": "패브릭밴드",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "05012200",
+									"menuName": "플라스틱밴드",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "05011500",
+									"menuName": "무브먼트",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "05011600",
+									"menuName": "다이얼 글라스",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "05011700",
+									"menuName": "방수시계",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "05010700",
+									"menuName": "액세서리시계",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "05010800",
+									"menuName": "아동시계",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "05010900",
+									"menuName": "생활시계",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "05011000",
+									"menuName": "시계소품",
+									"keyword" : ""						
+								}
+							]
+						}
+						,
+						{
+							"categoryCode" : "05020400",
+							"menuName": "커플액세서리",
+							"isPoint" : "false",
+							"isNew" : "false",
+							"isHit" : "false",
+							"linkUrl" : "",						
+							"subMenu" : [
+								{
+									"categoryCode" : "05040100",
+									"menuName": "커플링",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "05040200",
+									"menuName": "커플목걸이/펜던트",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "05040300",
+									"menuName": "커플시계",
+									"keyword" : ""						
+								}
+							]
+						}
+					]
+								
+				} ,
+				
+				// 화장품/ 향수
+				{ 
+					"categoryCode" : "06000000",
+					"menuName": "화장품/향수"		,
+					"middleMenu" : [
+						{
+							"categoryCode" : "06160000",
+							"menuName": "국내브랜드",
+							"isPoint" : "false",
+							"isNew" : "false",
+							"isHit" : "false",
+							"linkUrl" : "",		
+							"subMenu" : [
+								{
+									"categoryCode" : "06160100",
+									"menuName": "뉴트로지나",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "06160200",
+									"menuName": "다나한",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "06160300",
+									"menuName": "더페이스샵",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "06160400",
+									"menuName": "더히스토리오브후",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "06160500",
+									"menuName": "라끄베르",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "06160600",
+									"menuName": "라네즈",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "06163500",
+									"menuName": "리리코스",
+									"keyword" : ""						
+								},								
+								{
+									"categoryCode" : "06164200",
+									"menuName": "리엔케이",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "06160700",
+									"menuName": "마몽드",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "06160800",
+									"menuName": "미샤",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "06160900",
+									"menuName": "바닐라코",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "06161000",
+									"menuName": "백옥생",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "06161100",
+									"menuName": "보닌",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "06161200",
+									"menuName": "보브",
+									"keyword" : ""						
+								},
+									{
+									"categoryCode" : "06161300",
+									"menuName": "설화수",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "06161400",
+									"menuName": "수려한",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "06163600",
+									"menuName": "숨37도",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "06161500",
+									"menuName": "스킨79",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "06161600",
+									"menuName": "스킨푸드",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "06161700",
+									"menuName": "아이오페",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "06161800",
+									"menuName": "알로에마임",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "06161900",
+									"menuName": "에뛰드",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "06162000",
+									"menuName": "에뛰드하우스",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "06162100",
+									"menuName": "에스까다",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "06162200",
+									"menuName": "엔프라니",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "06162300",
+									"menuName": "오휘",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "06162400",
+									"menuName": "이니스프리",
+									"keyword" : ""						
+								},
+									{
+									"categoryCode" : "06162500",
+									"menuName": "이자녹스",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "06162600",
+									"menuName": "입큰",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "06162800",
+									"menuName": "참존",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "06162900",
+									"menuName": "클린앤클리어",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "06163000",
+									"menuName": "토니모리",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "06163200",
+									"menuName": "한스킨",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "06163300",
+									"menuName": "헤라",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "06163400",
+									"menuName": "ICS",
+									"keyword" : ""						
+								}
+							]
+						},
+						{
+							"categoryCode" : "06170000",
+							"menuName": "수입브랜드",
+							"isPoint" : "false",
+							"isNew" : "false",
+							"isHit" : "false",
+							"linkUrl" : "",						
+							"subMenu" : [
+								{
+									"categoryCode" : "06170100",
+									"menuName": "가네보",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "06175200",
+									"menuName": "라 메르",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "06170200",
+									"menuName": "갸스비",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "06170300",
+									"menuName": "겔랑",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "06170400",
+									"menuName": "노에비아",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "06170500",
+									"menuName": "달팡",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "06170600",
+									"menuName": "더바디샵",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "06170700",
+									"menuName": "라프레리",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "06170800",
+									"menuName": "랑콤",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "06170900",
+									"menuName": "로라메르시에",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "06171000",
+									"menuName": "로레알",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "06171100",
+									"menuName": "록시땅",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "06171200",
+									"menuName": "메이블린",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "06171300",
+									"menuName": "메이크업포에버",
+									"keyword" : ""						
+								},
+									{
+									"categoryCode" : "06171400",
+									"menuName": "바비브라운",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "06171500",
+									"menuName": "베네피트",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "06171600",
+									"menuName": "부르주아",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "06171800",
+									"menuName": "비오템",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "06171900",
+									"menuName": "샤넬",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "06172000",
+									"menuName": "셀렉스-C",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "06172100",
+									"menuName": "슈에무라",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "06172200",
+									"menuName": "스틸라",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "06172300",
+									"menuName": "시세이도",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "06172400",
+									"menuName": "시슬리",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "06172500",
+									"menuName": "아베다",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "06172600",
+									"menuName": "안나수이",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "06172700",
+									"menuName": "에스티로더",
+									"keyword" : ""						
+								},
+									{
+									"categoryCode" : "06172800",
+									"menuName": "엘리자베스아덴",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "06172900",
+									"menuName": "오르비스",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "06173000",
+									"menuName": "오리진스",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "06173100",
+									"menuName": "입생로랑",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "06173200",
+									"menuName": "쥴리크",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "06173300",
+									"menuName": "지방시",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "06174300",
+									"menuName": "코스메 데코르테",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "06173400",
+									"menuName": "크리니크",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "06173500",
+									"menuName": "크리스찬디올",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "06173600",
+									"menuName": "클라란스",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "06174200",
+									"menuName": "키엘",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "06174400",
+									"menuName": "프레쉬",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "06173800",
+									"menuName": "DHC",
+									"keyword" : ""						
+								}
+								,
+								{
+									"categoryCode" : "06173900",
+									"menuName": "MAC",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "06174000",
+									"menuName": "RMK",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "06174100",
+									"menuName": "SK-II",
+									"keyword" : ""						
+								}
+							]
+						},
+						{
+							"categoryCode" : "06030000",
+							"menuName": "메이크업",
+							"isPoint" : "false",
+							"isNew" : "false",
+							"isHit" : "false",
+							"linkUrl" : "",
+								"subMenu" : [
+								{
+									"categoryCode" : "06030100",
+									"menuName": "베이스메이크업",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "06030200",
+									"menuName": "립메이크업",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "06030300",
+									"menuName": "아이메이크업",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "06030400",
+									"menuName": "블러셔/하이라이터",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "06030500",
+									"menuName": "메이크업세트",
+									"keyword" : ""						
+								}
+							]
+						},
+						{
+							"categoryCode" : "06180000",
+							"menuName": "향수",
+							"isPoint" : "false",
+							"isNew" : "true",
+							"isHit" : "false",
+							"linkUrl" : "",		
+							"subMenu" : [
+								{
+									"categoryCode" : "06180100",
+									"menuName": "여성향수",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "06180200",
+									"menuName": "남성향수",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "06180300",
+									"menuName": "남녀공용향수",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "06180400",
+									"menuName": "향수세트",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "06180500",
+									"menuName": "소품",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "06180600",
+									"menuName": "향수브랜드",
+									"keyword" : ""						
+								}
+							]
+						}
+					],  
+					
+					"subMenu" : [
+						
+						{
+							"categoryCode" : "06180100",
+							"menuName": "향수",
+							"keyword" : ""						
+						}	,
+						{
+							"categoryCode" : "06160000",
+							"menuName": "국내브랜드",
+							"keyword" : ""
+						}	,
+						{
+							"categoryCode" : "06170000",
+							"menuName": "수입브랜드",
+							"keyword" : ""
+						}	,
+						{
+							"categoryCode" : "06220000",
+							"menuName": "브랜드 기획세트",
+							"keyword" : ""
+						}	,
+						
+						{
+							"categoryCode" : "06010000",
+							"menuName": "기초화장품",
+							"keyword" : ""						
+						},
+						{
+							"categoryCode" : "06200000",
+							"menuName": "스페셜케어",
+							"keyword" : ""						
+						}	,
+						{
+							"categoryCode" : "06070000",
+							"menuName": "남성화장품",
+							"keyword" : ""
+						}	,
+						{
+							"categoryCode" : "06030000",
+							"menuName": "메이크업",
+							"keyword" : ""
+						}	
+						,
+						{
+							"categoryCode" : "06040000",
+							"menuName": "클렌징",
+							"keyword" : ""
+						}	,
+						{
+							"categoryCode" : "06130000",
+							"menuName": "마사지/팩/마스크",
+							"keyword" : ""
+						},
+						{
+							"categoryCode" : "06020000",
+							"menuName": "선케어",
+							"keyword" : ""
+						}	
+						,
+						{
+							"categoryCode" : "06050000",
+							"menuName": "바디케어",
+							"keyword" : ""
+						}	,
+						{
+							"categoryCode" : "06060000",
+							"menuName": "헤어케어",
+							"keyword" : ""
+						}	,
+						{
+							"categoryCode" : "06190000",
+							"menuName": "바디/헤어케어세트",
+							"keyword" : ""
+						}	,
+						{
+							"categoryCode" : "06140000",
+							"menuName": "다이어트/슬리밍",
+							"keyword" : ""
+						}	,
+						{
+							"categoryCode" : "06210000",
+							"menuName": "제모용품",
+							"keyword" : ""
+						}	,
+						
+						{
+							"categoryCode" : "06100000",
+							"menuName": "맘/베이비케어",
+							"keyword" : ""
+						}	,						
+						{
+							"categoryCode" : "06080000",
+							"menuName": "네일케어",
+							"keyword" : ""
+						}	,
+						{
+							"categoryCode" : "06090000",
+							"menuName": "뷰티소품",
+							"keyword" : ""
+						}
+						
+					]	
+				} 
+			]
+		}, // 메뉴 1 끝
+		
+		// 메뉴 2
+		{
+			"menu":[
+				{ 
+					"categoryCode" : "08000000",
+					"menuName": "유아동/출산",
+					// 유아동/출산 서브메뉴
+					"subMenu" : [
+					{
+						"categoryCode" : "08230000",
+						"menuName": "새학기 준비",
+						"keyword" : ""
+					},
+					{
+						"categoryCode" : "08210000",
+						"menuName": "겨울아이템",
+						"keyword" : ""
+					},
+					{
+						"categoryCode" : "08010000",
+						"menuName": "분유",
+						"keyword" : ""
+					}						
+					,
+					{
+						"categoryCode" : "08020000",
+						"menuName": "이유식",
+						"keyword" : ""
+					},
+					{
+						"categoryCode" : "08030000",
+						"menuName": "아기간식",
+						"keyword" : ""
+					}	
+					,
+					{
+						"categoryCode" : "08040000",
+						"menuName": "기저귀",
+						"keyword" : ""
+					}	
+					,
+					{
+						"categoryCode" : "08160000",
+						"menuName": "물티슈",
+						"keyword" : ""
+					}
+					,
+					{
+						"categoryCode" : "08050000",
+						"menuName": "외출/안전용품",
+						"keyword" : ""
+					}	
+					,
+						{
+						"categoryCode" : "08060000",
+						"menuName": "위생용품",
+						"keyword" : ""
+					}
+					,
+					{
+						"categoryCode" : "08170000",
+						"menuName": "유아화장품",
+						"keyword" : ""
+					},
+					{
+						"categoryCode" : "08070000",
+						"menuName": "도서/미디어",
+						"keyword" : ""
+					}	
+					,
+					{
+						"categoryCode" : "08080000",
+						"menuName": "완구",
+						"keyword" : ""
+					}	
+					,
+					{
+						"categoryCode" : "08260000",
+						"menuName": "연령별완구",
+						"keyword" : ""
+					}	
+					,
+					{
+						"categoryCode" : "08270000",
+						"menuName": "유아용스포츠용품",
+						"keyword" : ""
+					}	
+					,
+					{
+						"categoryCode" : "08090000",
+						"menuName": "출산/수유용품",
+						"keyword" : ""
+					}		
+					,
+					{
+						"categoryCode" : "08100000",
+						"menuName": "임부용품",
+						"keyword" : ""
+					}		
+					,					
+					{
+						"categoryCode" : "08110000",
+						"menuName": "유아동의류",
+						"keyword" : ""
+					},
+					{
+						"categoryCode" : "08120000",
+						"menuName": "유아동잡화",
+						"keyword" : ""
+					},
+					{
+						"categoryCode" : "08250000",
+						"menuName": "아동문구",
+						"keyword" : ""
+					},
+					{
+						"categoryCode" : "08130000",
+						"menuName": "유아가구",
+						"keyword" : ""
+					},
+					{
+						"categoryCode" : "08140000",
+						"menuName": "아동/주니어가구",
+						"keyword" : ""
+					}					
+					,					
+					{
+						"categoryCode" : "08150000",
+						"menuName": "유아동침구",
+						"keyword" : ""
+					},
+					{
+						"categoryCode" : "08240000",
+						"menuName": "유기농제품",
+						"keyword" : ""
+					}
+					], // submenu end
+					"middleMenu" : [
+					 {
+							"categoryCode" : "08010000",
+							"menuName": "분유",
+							"isPoint" : "false",
+							"isNew" : "false",
+							"isHit" : "false",
+							"linkUrl" : ""		,
+							"subMenu" : [
+									{
+										"categoryCode" : "08010100",
+										"menuName": "단계별국내분유",
+										"keyword" : ""						
+									},
+									{
+										"categoryCode" : "08010800",
+										"menuName": "해외분유",
+										"keyword" : ""
+									},
+									{
+										"categoryCode" : "08010900",
+										"menuName": "단계별해외분유",
+										"keyword" : ""
+									}	,
+									{
+										"categoryCode" : "08010200",
+										"menuName": "특수분유",
+										"keyword" : ""
+									}	,
+									{
+										"categoryCode" : "08011000",
+										"menuName": "수유용품",
+										"keyword" : ""
+									}	,
+									{
+										"categoryCode" : "08010400",
+										"menuName": "매일유업",
+										"keyword" : ""
+									}	,
+									{
+										"categoryCode" : "08010500",
+										"menuName": "남양유업",
+										"keyword" : ""
+									}	,
+									{
+										"categoryCode" : "08010600",
+										"menuName": "파스퇴르",
+										"keyword" : ""
+									}	,
+									{
+										"categoryCode" : "08010700",
+										"menuName": "일동후디스",
+										"keyword" : ""
+									}	,
+									{
+										"categoryCode" : "08010300",
+										"menuName": "해외브랜드분유",
+										"keyword" : ""
+									}	
+							]				
+						},
+						{
+							"categoryCode" : "08040000",
+							"menuName": "기저귀",
+							"isPoint" : "false",
+							"isNew" : "false",
+							"isHit" : "false",
+							"linkUrl" : "",
+							"subMenu" : [
+									{
+										"categoryCode" : "08041000",
+										"menuName": "국내기저귀",
+										"keyword" : ""						
+									},
+									{
+										"categoryCode" : "08041100",
+										"menuName": "해외기저귀",
+										"keyword" : ""
+									},
+									{
+										"categoryCode" : "08041400",
+										"menuName": "친환경기저귀",
+										"keyword" : ""
+									}	,
+									{
+										"categoryCode" : "08040300",
+										"menuName": "천기저귀",
+										"keyword" : ""
+									}	,
+									{
+										"categoryCode" : "08040600",
+										"menuName": "사이즈",
+										"keyword" : ""
+									}	,
+									{
+										"categoryCode" : "08041500",
+										"menuName": "형태",
+										"keyword" : ""
+									}	,
+									{
+										"categoryCode" : "08042100",
+										"menuName": "성별",
+										"keyword" : ""
+									}	,
+									{
+										"categoryCode" : "08042000",
+										"menuName": "기저귀용품",
+										"keyword" : ""
+									}	,
+									{
+										"categoryCode" : "08040100",
+										"menuName": "국내브랜드기저귀",
+										"keyword" : ""
+									}	,
+									{
+										"categoryCode" : "08040200",
+										"menuName": "해외브랜드기저귀",
+										"keyword" : ""
+									}		,
+									{
+										"categoryCode" : "08040400",
+										"menuName": "친환경브랜드기저귀",
+										"keyword" : ""
+									}		,
+									{
+										"categoryCode" : "08041900",
+										"menuName": "천기저귀브랜드",
+										"keyword" : ""
+									}	
+							]							
+						},
+						{
+							"categoryCode" : "08160000",
+							"menuName": "물티슈",
+							"isPoint" : "false",
+							"isNew" : "false",
+							"isHit" : "false",
+							"linkUrl" : ""	,
+							"subMenu" : [
+									{
+										"categoryCode" : "08160800",
+										"menuName": "아기물티슈",
+										"keyword" : ""						
+									},
+									{
+										"categoryCode" : "08160600",
+										"menuName": "물티슈형태",
+										"keyword" : ""
+									},
+									{
+										"categoryCode" : "08160900",
+										"menuName": "물티슈용도",
+										"keyword" : ""
+									}	,
+									{
+										"categoryCode" : "08160700",
+										"menuName": "물티슈브랜드",
+										"keyword" : ""
+									}	
+							]						
+						},
+					 {
+							"categoryCode" : "08050100",
+							"menuName": "유모차",
+							"isPoint" : "false",
+							"isNew" : "false",
+							"isHit" : "false",
+							"linkUrl" : ""	,
+							"subMenu" : [
+									{
+										"categoryCode" : "08050101",
+										"menuName": "일반형",
+										"keyword" : ""						
+									},
+									{
+										"categoryCode" : "08050102",
+										"menuName": "디럭스형",
+										"keyword" : ""
+									},
+									{
+										"categoryCode" : "08050103",
+										"menuName": "휴대용",
+										"keyword" : ""
+									}	,
+									{
+										"categoryCode" : "08050104",
+										"menuName": "삼륜형",
+										"keyword" : ""
+									}		,
+									{
+										"categoryCode" : "08050105",
+										"menuName": "트윈형",
+										"keyword" : ""
+									}								
+							]				
+						},
+						{
+							"categoryCode" : "08050301",
+							"menuName": "카시트",
+							"isPoint" : "false",
+							"isNew" : "false",
+							"isHit" : "false",
+							"linkUrl" : "",
+							"subMenu" : [
+									{
+										"categoryCode" : "08051101",
+										"menuName": "일체형",
+										"keyword" : ""						
+									},
+									{
+										"categoryCode" : "08051102",
+										"menuName": "부스터",
+										"keyword" : ""
+									}
+							]
+						},
+						{
+							"categoryCode" : "08240000",
+							"menuName": "유기농제품",
+							"isPoint" : "false",
+							"isNew" : "true",
+							"isHit" : "false",
+							"linkUrl" : "",						
+							"subMenu" : [
+								{
+									"categoryCode" : "08240100",
+									"menuName": "분유",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "08240200",
+									"menuName": "이유식",
+									"keyword" : ""
+								},
+								{
+									"categoryCode" : "08240300",
+									"menuName": "아기간식",
+									"keyword" : ""
+								}	,
+								{
+									"categoryCode" : "08240400",
+									"menuName": "기저귀",
+									"keyword" : ""
+								}	,
+								{
+									"categoryCode" : "08240500",
+									"menuName": "물티슈",
+									"keyword" : ""
+								}	,
+								{
+									"categoryCode" : "08241500",
+									"menuName": "신생아용품",
+									"keyword" : ""
+								}	,
+								{
+									"categoryCode" : "08241600",
+									"menuName": "유기농의류",
+									"keyword" : ""
+								}	
+							]
+						},
+						{
+							"categoryCode" : "08120000",
+							"menuName": "유아동 잡화",
+							"isPoint" : "false",
+							"isNew" : "false",
+							"isHit" : "false",
+							"linkUrl" : "",						
+							"subMenu" : [
+								{
+									"categoryCode" : "08120100",
+									"menuName": "신발",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "08120500",
+									"menuName": "신발브랜드",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "08120200",
+									"menuName": "가방",
+									"keyword" : ""
+								},
+								{
+									"categoryCode" : "08120600",
+									"menuName": "가방브랜드",
+									"keyword" : ""
+								},								
+								{
+									"categoryCode" : "08120300",
+									"menuName": "시즌잡화",
+									"keyword" : ""
+								}	,
+								{
+									"categoryCode" : "08120700",
+									"menuName": "한복용품",
+									"keyword" : ""
+								}	,
+								{
+									"categoryCode" : "08120800",
+									"menuName": "발레용품",
+									"keyword" : ""
+								}	,
+								{
+									"categoryCode" : "08120400",
+									"menuName": "패션소품",
+									"keyword" : ""
+								}	,
+								{
+									"categoryCode" : "08120900",
+									"menuName": "액세서리",
+									"keyword" : ""
+								}
+							]
+						},
+						{
+							"categoryCode" : "08110000",
+							"menuName": "유아동 의류",
+							"isPoint" : "false",
+							"isNew" : "false",
+							"isHit" : "false",
+							"linkUrl" : "",						
+							"subMenu" : [
+								{
+									"categoryCode" : "08110900",
+									"menuName": "상의",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "08111000",
+									"menuName": "하의",
+									"keyword" : ""
+								},
+								{
+									"categoryCode" : "08111100",
+									"menuName": "상하복",
+									"keyword" : ""
+								}	,
+								{
+									"categoryCode" : "08111200",
+									"menuName": "내의류",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "08110600",
+									"menuName": "여아용",
+									"keyword" : ""
+								},
+								{
+									"categoryCode" : "08110700",
+									"menuName": "남아용",
+									"keyword" : ""
+								}	,
+								{
+									"categoryCode" : "08110100",
+									"menuName": "유아의류",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "08110400",
+									"menuName": "유아의류브랜드",
+									"keyword" : ""
+								},
+								{
+									"categoryCode" : "08110200",
+									"menuName": "아동/주니어의류",
+									"keyword" : ""
+								}	,
+								{
+									"categoryCode" : "08110500",
+									"menuName": "아동의류브랜드",
+									"keyword" : ""
+								}		,
+								{
+									"categoryCode" : "08110300",
+									"menuName": "유아동테마의류",
+									"keyword" : ""
+								}	
+							]
+						}										
+					]
+				},
+				// 생활/건강/주방
+				{ 
+					"categoryCode" : "11000000",
+					"menuName": "생활/건강/주방",
+					"subMenu" : [
+						{
+							"categoryCode" : "11210000",
+							"menuName": "겨울철  생활 아이템",
+							"keyword" : ""
+						}
+						,
+					
+						{
+							"categoryCode" : "11220000",
+							"menuName": "식기류",
+							"keyword" : ""						
+						},
+						{
+							"categoryCode" : "11230000",
+							"menuName": "냄비/솥/프라이팬",
+							"keyword" : ""
+						}
+						,
+						{
+							"categoryCode" : "11040000",
+							"menuName": "주방용품",
+							"keyword" : ""
+						}	
+						,
+						{
+							"categoryCode" : "11250000",
+							"menuName": "DIY홈쿠킹/제과제빵",
+							"keyword" : ""
+						}	
+						,
+						{
+							"categoryCode" : "11010000",
+							"menuName": "욕실용품",
+							"keyword" : ""
+						}	
+						,					
+						{
+							"categoryCode" : "11270000",
+							"menuName": "구강청결용품",
+							"keyword" : ""
+						}	
+						,
+						
+						{
+							"categoryCode" : "11020000",
+							"menuName": "생활용품",
+							"keyword" : ""
+						}	
+						,
+						{
+							"categoryCode" : "11080000",
+							"menuName": "세제류",
+							"keyword" : ""
+						}
+						,
+						{
+							"categoryCode" : "11090000",
+							"menuName": "방향/실내청결용품",
+							"keyword" : ""
+						}
+						,
+						{
+							"categoryCode" : "11100000",
+							"menuName": "여성위생용품",
+							"keyword" : ""
+						},
+						{
+							"categoryCode" : "11110000",
+							"menuName": "화장지/제지류",
+							"keyword" : ""
+						},						
+						{
+							"categoryCode" : "11030000",
+							"menuName": "공구용품",
+							"keyword" : ""
+						}							
+						,
+						{
+							"categoryCode" : "11130000",
+							"menuName": "원예용품",
+							"keyword" : ""
+						}
+						,
+						{
+							"categoryCode" : "11170000",
+							"menuName": "안전용품",
+							"keyword" : ""
+						}
+						,
+						{
+							"categoryCode" : "11140000",
+							"menuName": "보안용품",
+							"keyword" : ""
+						}
+						,
+						{
+							"categoryCode" : "11260000",
+							"menuName": "커피용품",
+							"keyword" : ""
+						}
+						,
+						{
+							"categoryCode" : "11050000",
+							"menuName": "와인용품",
+							"keyword" : ""
+						}
+						,
+						{
+							"categoryCode" : "11280000",
+							"menuName": "안마기",
+							"keyword" : ""
+						}
+						,
+						{
+							"categoryCode" : "11060000",
+							"menuName": "건강용품",
+							"keyword" : ""
+						}					
+						,						
+						{
+							"categoryCode" : "11290000",
+							"menuName": "헬스/다이어트용품",
+							"keyword" : ""
+						}
+					]				,
+					"middleMenu" : [
+						{
+							"categoryCode" : "11210000",
+							"menuName": "겨울철 생활 아이템",
+							"isPoint" : "false",
+							"isNew" : "false",
+							"isHit" : "false",
+							"linkUrl" : "",						
+							"subMenu" : [
+								{
+									"categoryCode" : "11210100",
+									"menuName": "추위엔 필수 주방용품",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "11210200",
+									"menuName": "찜질용품 BEST",
+									"keyword" : ""
+								}
+							]
+						},
+						{
+							"categoryCode" : "11280000",
+							"menuName": "안마기",
+							"isPoint" : "false",
+							"isNew" : "false",
+							"isHit" : "false",
+							"linkUrl" : "",						
+							"subMenu" : [
+								{
+									"categoryCode" : "11280100",
+									"menuName": "안마기",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "11280300",
+									"menuName": "안마기 형태",
+									"keyword" : ""
+								},
+								{
+									"categoryCode" : "11280400",
+									"menuName": "안마의자",
+									"keyword" : ""
+								}	,
+								{
+									"categoryCode" : "11280500",
+									"menuName": "발마사지기",
+									"keyword" : ""
+								}		,
+								{
+									"categoryCode" : "11280700",
+									"menuName": "안마용품",
+									"keyword" : ""
+								}		,
+								{
+									"categoryCode" : "11280800",
+									"menuName": "지압용품",
+									"keyword" : ""
+								}		
+							]
+						},
+						{
+							"categoryCode" : "11080000",
+							"menuName": "세제류",
+							"isPoint" : "false",
+							"isNew" : "false",
+							"isHit" : "false",
+							"linkUrl" : "",						
+							"subMenu" : [
+								{
+									"categoryCode" : "11080100",
+									"menuName": "세탁세제",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "11080200",
+									"menuName": "섬유유연제",
+									"keyword" : ""
+								},
+								{
+									"categoryCode" : "11080300",
+									"menuName": "얼룩제거제",
+									"keyword" : ""
+								}	,
+								{
+									"categoryCode" : "11080400",
+									"menuName": "유아용세제",
+									"keyword" : ""
+								}		,
+								{
+									"categoryCode" : "11080500",
+									"menuName": "비누/클리닝제품",
+									"keyword" : ""
+								}		,
+								{
+									"categoryCode" : "11080600",
+									"menuName": "다용도 세정제/클리너",
+									"keyword" : ""
+								}		,
+								{
+									"categoryCode" : "11080700",
+									"menuName": "욕실세정제",
+									"keyword" : ""
+								}	
+										,
+								{
+									"categoryCode" : "11080800",
+									"menuName": "주방세제",
+									"keyword" : ""
+								}	
+										,
+								{
+									"categoryCode" : "11080900",
+									"menuName": "세제류 브랜드",
+									"keyword" : ""
+								}	
+							]
+						},
+						{
+							"categoryCode" : "11230000",
+							"menuName": "냄비/솥/프라이팬",
+							"isPoint" : "false",
+							"isNew" : "true",
+							"isHit" : "false",
+							"linkUrl" : "",						
+							"subMenu" : [
+								{
+									"categoryCode" : "11230100",
+									"menuName": "냄비",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "11230200",
+									"menuName": "사이즈별 냄비",
+									"keyword" : ""
+								},
+								{
+									"categoryCode" : "11230300",
+									"menuName": "브랜드 냄비",
+									"keyword" : ""
+								}	,
+								{
+									"categoryCode" : "11230400",
+									"menuName": "솥/밥솥",
+									"keyword" : ""
+								}		,
+								{
+									"categoryCode" : "11230500",
+									"menuName": "사이즈별 솥",
+									"keyword" : ""
+								}		,
+								{
+									"categoryCode" : "11230600",
+									"menuName": "브랜드 솥",
+									"keyword" : ""
+								}		,
+								{
+									"categoryCode" : "11230700",
+									"menuName": "프라이팬류",
+									"keyword" : ""
+								}	,
+								{
+									"categoryCode" : "11230800",
+									"menuName": "사이즈별 프라이팬",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "11230900",
+									"menuName": "브랜드 프라이팬",
+									"keyword" : ""
+								}
+							]
+						}
+					]
+				},
+				
+				// 식품/슈퍼마켓
+				{ 
+					"categoryCode" : "24140000",
+					"menuName": "식품/슈퍼마켓"		,
+					"subMenu" : [
+						
+						{
+							"categoryCode" : "24130000",
+							"menuName": "겨울 별미 BEST",
+							"keyword" : ""						
+						},
+						{
+							"categoryCode" : "24150000",
+							"menuName": "웰빙 다이어트식품",
+							"keyword" : ""						
+						},
+						{
+							"categoryCode" : "24170000",
+							"menuName": "쌀/잡곡류",
+							"keyword" : ""						
+						},
+						{
+							"categoryCode" : "24180000",
+							"menuName": "과일/견과류",
+							"keyword" : ""						
+						},
+						{
+							"categoryCode" : "24020000",
+							"menuName": "농산물",
+							"keyword" : ""
+						}	
+						,
+						{
+							"categoryCode" : "24030000",
+							"menuName": "수산물",
+							"keyword" : ""
+						}	
+						,
+						{
+							"categoryCode" : "24040000",
+							"menuName": "축산물",
+							"keyword" : ""
+						}	
+						,
+						{
+							"categoryCode" : "24190000",
+							"menuName": "김치",
+							"keyword" : ""
+						}	
+						,
+						{
+							"categoryCode" : "24200000",
+							"menuName": "즉석식품",
+							"keyword" : ""
+						}	
+						,
+						{
+							"categoryCode" : "24050000",
+							"menuName": "반찬/가공식품",
+							"keyword" : ""
+						}	
+						,
+					  {
+							"categoryCode" : "24210000",
+							"menuName": "커피",
+							"keyword" : ""
+						}	
+						,
+						{
+							"categoryCode" : "24220000",
+							"menuName": "음료/차류",
+							"keyword" : ""
+						}	
+						,
+						{
+							"categoryCode" : "24230000",
+							"menuName": "간식",
+							"keyword" : ""
+						}	
+						,						
+						
+						{
+							"categoryCode" : "24070000",
+							"menuName": "양념/소스",
+							"keyword" : ""
+						}
+						,
+						{
+							"categoryCode" : "24240000",
+							"menuName": "DIY홈쿠킹/제과제빵 ",
+							"keyword" : ""
+						}
+						,
+						{
+							"categoryCode" : "24250000",
+							"menuName": "홍삼/인삼",
+							"keyword" : ""
+						}
+						,
+						{
+							"categoryCode" : "24090000",
+							"menuName": "건강식품",
+							"keyword" : ""
+						}
+					],
+					"middleMenu" : [
+						{
+							"categoryCode" : "24170500",
+							"menuName": "브랜드쌀",
+							"isPoint" : "false",
+							"isNew" : "true",
+							"isHit" : "false",
+							"linkUrl" : "",
+							"subMenu" : [
+								{
+									"categoryCode" : "24170501",
+									"menuName": "철원쌀",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "24170502",
+									"menuName": "이천쌀",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "24170503",
+									"menuName": "고창쌀",
+									"keyword" : ""						
+								}, 
+								{
+									"categoryCode" : "24170504",
+									"menuName": "남원쌀",
+									"keyword" : ""						
+								}
+							]													
+						},
+						{
+							"categoryCode" : "24190600",
+							"menuName": "브랜드 김치",
+							"isPoint" : "false",
+							"isNew" : "false",
+							"isHit" : "false",
+							"linkUrl" : ""	,
+							"subMenu" : [
+								{
+									"categoryCode" : "24190601",
+									"menuName": "종가집김치",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "24190602",
+									"menuName": "한성김치",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "24190603",
+									"menuName": "하선정김치",
+									"keyword" : ""						
+								}, 
+								{
+									"categoryCode" : "24190604",
+									"menuName": "농협아름찬김치",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "24190605",
+									"menuName": "김혜자정성김치",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "24190606",
+									"menuName": "동원양반김치",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "24190607",
+									"menuName": "풀무원김치",
+									"keyword" : ""						
+								}, 
+								{
+									"categoryCode" : "24190608",
+									"menuName": "홍진경더김치",
+									"keyword" : ""						
+								}
+							]														
+						},
+						{
+							"categoryCode" : "24250300",
+							"menuName": "브랜드 홍삼",
+							"isPoint" : "false",
+							"isNew" : "true",
+							"isHit" : "false",
+							"linkUrl" : ""	,
+							"subMenu" : [
+								{
+									"categoryCode" : "24250301",
+									"menuName": "정관장",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "24250302",
+									"menuName": "고려홍삼",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "24250303",
+									"menuName": "종근당",
+									"keyword" : ""						
+								}, 
+								{
+									"categoryCode" : "24250304",
+									"menuName": "삼지원",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "24250305",
+									"menuName": "한삼인",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "24250306",
+									"menuName": "천지인",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "24250307",
+									"menuName": "천지양",
+									"keyword" : ""						
+								}
+							]												
+						}
+					]	
+								
+				} ,
+				
+				// 가구/인테리어
+				{ 
+					"categoryCode" : "09000000",
+					"menuName": "가구/인테리어"		,
+					"subMenu" : [
+						{
+							"categoryCode" : "09180000",
+							"menuName": "침대/매트리스",
+							"keyword" : ""						
+						},
+						{
+							"categoryCode" : "09190000",
+							"menuName": "소파",
+							"keyword" : ""
+						}	
+						,
+						{
+							"categoryCode" : "09020000",
+							"menuName": "수납가구",
+							"keyword" : ""
+						}	
+						,
+						{
+							"categoryCode" : "09050000",
+							"menuName": "침실가구",
+							"keyword" : ""						
+						},
+						{
+							"categoryCode" : "09010000",
+							"menuName": "거실가구",
+							"keyword" : ""
+						}	
+						,
+						
+						{
+							"categoryCode" : "09030000",
+							"menuName": "주방가구",
+							"keyword" : ""
+						}	
+						,
+						{
+							"categoryCode" : "09040000",
+							"menuName": "홈오피스가구",
+							"keyword" : ""
+						}	
+						,
+						{
+							"categoryCode" : "09160000",
+							"menuName": "의자",
+							"keyword" : ""
+						},
+						{
+							"categoryCode" : "09170000",
+							"menuName": "사무/교구용가구",
+							"keyword" : ""
+						}
+						,
+						{
+							"categoryCode" : "09070000",
+							"menuName": "아동/주니어가구",
+							"keyword" : ""
+						}
+						,
+						{
+							"categoryCode" : "09060000",
+							"menuName": "유아가구",
+							"keyword" : ""
+						}
+						,
+						
+						{
+							"categoryCode" : "09080000",
+							"menuName": "전통고가구",
+							"keyword" : ""
+						},
+						{
+							"categoryCode" : "09090000",
+							"menuName": "인테리어",
+							"keyword" : ""
+						},
+						{
+							"categoryCode" : "09100000",
+							"menuName": "DIY/리폼",
+							"keyword" : ""
+						},
+						{
+							"categoryCode" : "09220000",
+							"menuName": "플라워/가드닝",
+							"keyword" : ""
+						},
+						{
+							"categoryCode" : "09150000",
+							"menuName": "사랑스런 신혼공간",
+							"keyword" : ""
+						},
+						{
+							"categoryCode" : "09200000",
+							"menuName": "화이트가구",
+							"keyword" : ""
+						},
+						{
+							"categoryCode" : "09210000",
+							"menuName": "앤틱가구",
+							"keyword" : ""
+						},
+						{
+							"categoryCode" : "09230000",
+							"menuName": "브랜드관",
+							"keyword" : ""
+						}
+					],
+					"middleMenu" : [
+						{
+							"categoryCode" : "09180000",
+							"menuName": "침대/매트리스",
+							"isPoint" : "false",
+							"isNew" : "false",
+							"isHit" : "false",
+							"linkUrl" : "http://finding.about.co.kr/Search/Search.aspx?DisplayCategories=09000000&istop=y&keyword=%ec%b9%a8%eb%8c%80&MallIDs=&VisibleQuickBuy=true&VisibleSpecialSearch=true&FindingType=All&KeywordsExclude=&KeywordsInclude=",
+							"subMenu" : [
+							{
+								"categoryCode" : "09180100",
+								"menuName": "싱글침대",
+								"keyword" : ""						
+							},
+							{
+								"categoryCode" : "09180200",
+								"menuName": "슈퍼싱글침대",
+								"keyword" : ""
+							}	
+							,
+							{
+								"categoryCode" : "09180300",
+								"menuName": "더블침대",
+								"keyword" : ""						
+							},
+							{
+								"categoryCode" : "09180400",
+								"menuName": "퀸침대",
+								"keyword" : ""
+							}	
+							,
+							{
+								"categoryCode" : "09180500",
+								"menuName": "킹침대",
+								"keyword" : ""
+							}	
+							,
+							{
+								"categoryCode" : "09180600",
+								"menuName": "기능성침대",
+								"keyword" : ""
+							}	
+							,
+							{
+								"categoryCode" : "09180700",
+								"menuName": "매트리스",
+								"keyword" : ""
+							}	
+							,
+							{
+								"categoryCode" : "09180800",
+								"menuName": "침대/매트리스브랜드",
+								"keyword" : ""
+							}]				
+						},
+						{
+							"categoryCode" : "09190000",
+							"menuName": "소파",
+							"isPoint" : "false",
+							"isNew" : "false",
+							"isHit" : "false",
+							"linkUrl" : ""	,
+							"subMenu" : [
+							{
+								"categoryCode" : "09190800",
+								"menuName": "천연가죽소파",
+								"keyword" : ""						
+							},
+							{
+								"categoryCode" : "09190900",
+								"menuName": "인조가죽소파",
+								"keyword" : ""
+							}	
+							,
+							{
+								"categoryCode" : "09191000",
+								"menuName": "천/패브릭소파",
+								"keyword" : ""						
+							},
+							{
+								"categoryCode" : "09191100",
+								"menuName": "벨벳/스웨이드소파",
+								"keyword" : ""
+							}	
+							,
+							{
+								"categoryCode" : "09191200",
+								"menuName": "소파구성별",
+								"keyword" : ""
+							}	
+							,
+							{
+								"categoryCode" : "09191300",
+								"menuName": "소파인용별",
+								"keyword" : ""
+							}	
+							,
+							{
+								"categoryCode" : "09190600",
+								"menuName": "기능성소파",
+								"keyword" : ""
+							}	
+							,
+							{
+								"categoryCode" : "09190500",
+								"menuName": "소파데코",
+								"keyword" : ""
+							}	
+							,
+							{
+								"categoryCode" : "09190700",
+								"menuName": "소파브랜드",
+								"keyword" : ""
+							}]									
+						},
+						{
+							"categoryCode" : "09000000",
+							"menuName": "책상",
+							"isPoint" : "false",
+							"isNew" : "false",
+							"isHit" : "false",
+							"linkUrl" : "http://finding.about.co.kr/Search/Search.aspx?DisplayCategories=09000000&istop=y&keyword=%ec%b1%85%ec%83%81&MallIDs=&VisibleQuickBuy=true&VisibleSpecialSearch=true&FindingType=All&KeywordsExclude=&KeywordsInclude="						
+						}
+					]								
+				} ,
+				
+				// 침구/커튼/수예
+				{ 
+					"categoryCode" : "10000000",
+					"menuName": "침구/커튼/수예"		,
+					
+					"subMenu" : [	
+						{
+							"categoryCode" : "10100000",
+							"menuName": "겨울침구",
+							"keyword" : ""
+						},					
+						{
+							"categoryCode" : "10160000",
+							"menuName": "침구단품",
+							"keyword" : ""
+						},
+						{
+							"categoryCode" : "10170000",
+							"menuName": "침구세트",
+							"keyword" : ""
+						},
+						{
+							"categoryCode" : "10110000",
+							"menuName": "사이즈별 침구",
+							"keyword" : ""
+						}	
+						,
+						{
+							"categoryCode" : "10120000",
+							"menuName": "소재별 침구",
+							"keyword" : ""
+						}	
+						,
+						{
+							"categoryCode" : "10130000",
+							"menuName": "무늬별 침구",
+							"keyword" : ""
+						}	
+						,
+						{
+							"categoryCode" : "10020000",
+							"menuName": "유아동 침구",
+							"keyword" : ""
+						}	
+						,
+						{
+							"categoryCode" : "10150000",
+							"menuName": "솜류",
+							"keyword" : ""
+						}	
+						,
+						{
+							"categoryCode" : "10030000",
+							"menuName": "커튼/블라인드",
+							"keyword" : ""
+						}
+						,
+						{
+							"categoryCode" : "10040000",
+							"menuName": "카페트/러그",
+							"keyword" : ""
+						}
+						,
+						{
+							"categoryCode" : "10050000",
+							"menuName": "홈데코",
+							"keyword" : ""
+						}
+						,
+						{
+							"categoryCode" : "10060000",
+							"menuName": "수예",
+							"keyword" : ""
+						}
+					], // submenu end
+					"middleMenu" : [
+					 {
+							"categoryCode" : "10170000",
+							"menuName": "침구세트",
+							"isPoint" : "false",
+							"isNew" : "false",
+							"isHit" : "false",
+							"linkUrl" : ""		,
+							"subMenu" : [
+								{
+									"categoryCode" : "10170100",
+									"menuName": "매트커버세트",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "10170200",
+									"menuName": "침대커버세트",
+									"keyword" : ""
+								},
+								{
+									"categoryCode" : "10170300",
+									"menuName": "이불/커버세트",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "10170500",
+									"menuName": "이불/요세트",
+									"keyword" : ""
+								},
+								{
+									"categoryCode" : "10170600",
+									"menuName": "이불패드세트",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "10170400",
+									"menuName": "예단/혼수 침구",
+									"keyword" : ""						
+								}
+							]				
+						},
+						{
+							"categoryCode" : "10030000",
+							"menuName": "커튼/블라인드",
+							"isPoint" : "false",
+							"isNew" : "false",
+							"isHit" : "false",
+							"linkUrl" : "",
+							"subMenu" : [
+								{
+									"categoryCode" : "10030100",
+									"menuName": "커튼",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "10030200",
+									"menuName": "로만쉐이드",
+									"keyword" : ""
+								},
+								{
+									"categoryCode" : "10030400",
+									"menuName": "블라인드",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "10030300",
+									"menuName": "커튼소품",
+									"keyword" : ""
+								}
+							
+							]							
+						},
+						{
+							"categoryCode" : "10040000",
+							"menuName": "카페트/러그",
+							"isPoint" : "false",
+							"isNew" : "false",
+							"isHit" : "false",
+							"linkUrl" : ""	,
+							"subMenu" : [
+								{
+									"categoryCode" : "10040100",
+									"menuName": "소재별 카페트",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "10040400",
+									"menuName": "사이즈별 카페트",
+									"keyword" : ""
+								},
+								{
+									"categoryCode" : "10040300",
+									"menuName": "러그",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "10040600",
+									"menuName": "발매트",
+									"keyword" : ""
+								},
+								{
+									"categoryCode" : "10040500",
+									"menuName": "사이즈별 러그",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "10040200",
+									"menuName": "여름자리",
+									"keyword" : ""
+								}
+							]						
+						}						
+					]	
+					
+				} 
+			]
+		} ,// 메뉴2 끝
+		
+				
+		// 메뉴 3
+		{
+			"menu":[
+				{ 
+					"categoryCode" : "30130000",
+					"menuName": "발렌타인데이",
+					"subMenu" : [
+								{
+									"categoryCode" : "30130100",
+									"menuName": "초콜릿",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "30130200",
+									"menuName": "커플링",
+									"keyword" : ""
+								}	,
+								{
+									"categoryCode" : "30130300",
+									"menuName": "커플시계",
+									"keyword" : ""
+								}	,
+								{
+									"categoryCode" : "30130800",
+									"menuName": "남성시계",
+									"keyword" : ""
+								}	,
+								{
+									"categoryCode" : "30130700",
+									"menuName": "커플속옷",
+									"keyword" : ""
+								},
+								{
+									"categoryCode" : "30130400",
+									"menuName": "남자향수",
+									"keyword" : ""
+								},
+								{
+									"categoryCode" : "30130500",
+									"menuName": "꽃",
+									"keyword" : ""
+								},
+								{
+									"categoryCode" : "30130600",
+									"menuName": "꽃선물세트",
+									"keyword" : ""
+								},
+								{
+									"categoryCode" : "30130900",
+									"menuName": "초콜릿 포장용품",
+									"keyword" : ""
+								}
+					],
+					"middleMenu" : [
+						{
+							"categoryCode" : "30130100",
+							"menuName": "초콜릿",
+							"isPoint" : "false",
+							"isNew" : "false",
+							"isHit" : "true",	
+							"linkUrl" : "",						
+							"subMenu" : [
+								// 없음
+							]
+							
+						},
+						{
+							"categoryCode" : "24240500",
+							"menuName": "초콜릿 DIY",
+							"isPoint" : "false",
+							"isNew" : "false",
+							"isHit" : "true",
+							"linkUrl" : "",						
+							"subMenu" : [
+								// 없음
+							]
+						},
+						{
+							"categoryCode" : "30130200",
+							"menuName": "커플링",
+							"isPoint" : "false",
+							"isNew" : "false",
+							"isHit" : "false",
+							"linkUrl" : "",						
+							"subMenu" : [
+								//없음
+								
+							]
+						},
+						{
+							"categoryCode" : "30130400",
+							"menuName": "남자향수",
+							"isPoint" : "false",
+							"isNew" : "false",
+							"isHit" : "false",
+							"linkUrl" : "",						
+							"subMenu" : [
+								// 없음
+							]
+						}
+					]
+				},	
+				{ 
+					"categoryCode" : "30020400",
+					"menuName": "백화점",
+					"middleMenu" : [
+						{
+							"categoryCode" : "25070000",
+							"menuName": "명품화장품",
+							"isPoint" : "true",
+							"isNew" : "false",
+							"isHit" : "true",	
+							"linkUrl" : "",						
+							"subMenu" : [
+								{
+									"categoryCode" : "25070100",
+									"menuName": "스킨케어",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "25070200",
+									"menuName": "클렌징/선케어",
+									"keyword" : ""
+								}	,
+								{
+									"categoryCode" : "25070300",
+									"menuName": "스페셜케어",
+									"keyword" : ""
+								}	,
+								{
+									"categoryCode" : "25070400",
+									"menuName": "남성케어",
+									"keyword" : ""
+								}	,
+								{
+									"categoryCode" : "25070500",
+									"menuName": "메이크업",
+									"keyword" : ""
+								},
+								{
+									"categoryCode" : "25070600",
+									"menuName": "바디케어",
+									"keyword" : ""
+								},
+								{
+									"categoryCode" : "25070700",
+									"menuName": "헤어케어",
+									"keyword" : ""
+								},
+								{
+									"categoryCode" : "25070800",
+									"menuName": "향수",
+									"keyword" : ""
+								}
+							]
+							
+						},
+						{
+							"categoryCode" : "25060000",
+							"menuName": "시계,보석",
+							"isPoint" : "false",
+							"isNew" : "false",
+							"isHit" : "false",
+							"linkUrl" : "",						
+							"subMenu" : [
+								{
+									"categoryCode" : "25060100",
+									"menuName": "시계",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "25060200",
+									"menuName": "보석/액세서리",
+									"keyword" : ""
+								}	,
+								{
+									"categoryCode" : "25060300",
+									"menuName": "헤어액세서리",
+									"keyword" : ""
+								}	,
+								{
+									"categoryCode" : "25060400",
+									"menuName": "액세서리소품",
+									"keyword" : ""
+								}	
+							]
+						},
+						{
+							"categoryCode" : "25050000",
+							"menuName": "패션잡화",
+							"isPoint" : "false",
+							"isNew" : "false",
+							"isHit" : "false",
+							"linkUrl" : "",						
+							"subMenu" : [
+								{
+									"categoryCode" : "25050100",
+									"menuName": "핸드백/가방",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "25050200",
+									"menuName": "여성지갑/벨트",
+									"keyword" : ""
+								}	,
+								{
+									"categoryCode" : "25050500",
+									"menuName": "남성지갑/벨트",
+									"keyword" : ""
+								}	,
+								{
+									"categoryCode" : "25050300",
+									"menuName": "여성슈즈",
+									"keyword" : ""
+								}	,
+								{
+									"categoryCode" : "25050600",
+									"menuName": "남성슈즈",
+									"keyword" : ""
+								}	,
+								{
+									"categoryCode" : "25050400",
+									"menuName": "섬유/시즌잡화",
+									"keyword" : ""
+								}	
+							]
+						}
+					],
+					"subMenu" : [
+					{
+						"categoryCode" : "25010000",
+						"menuName": "여성의류",
+						"keyword" : ""						
+					},
+					{
+						"categoryCode" : "25020000",
+						"menuName": "남성의류",
+						"keyword" : ""
+					},
+					{
+						"categoryCode" : "25030000",
+						"menuName": "캐주얼의류",
+						"keyword" : ""
+					}	,
+					{
+						"categoryCode" : "25040000",
+						"menuName": "언더웨어",
+						"keyword" : ""
+					}	
+					,
+					{
+						"categoryCode" : "25050000",
+						"menuName": "패션잡화",
+						"keyword" : ""
+					}	
+					,
+					{
+						"categoryCode" : "25060000",
+						"menuName": "시계/보석/액세서리",
+						"keyword" : ""
+					}	
+					,
+					{
+						"categoryCode" : "25070000",
+						"menuName": "명품화장품",
+						"keyword" : ""
+					}	
+					,
+					{
+						"categoryCode" : "25080000",
+						"menuName": "스포츠/레저",
+						"keyword" : ""
+					}
+					,
+					
+					{
+						"categoryCode" : "25090000",
+						"menuName": "유아동/출산용품",
+						"keyword" : ""
+					}
+					,
+					{
+						"categoryCode" : "25100000",
+						"menuName": "식품",
+						"keyword" : ""
+					}
+					,
+					{
+						"categoryCode" : "25110000",
+						"menuName": "침구/수예",
+						"keyword" : ""
+					}
+					,
+					{
+						"categoryCode" : "25120000",
+						"menuName": "가구/인테리어",
+						"keyword" : ""
+					}
+					,
+					{
+						"categoryCode" : "25130000",
+						"menuName": "주방/식기",
+						"keyword" : ""
+					},
+					{
+						"categoryCode" : "25140000",
+						"menuName": "가전",
+						"keyword" : ""
+					}
+					]
+				},
+				// 명품관
+				{ 
+					"categoryCode" : "18000000",
+					"menuName": "명품관",
+					"middleMenu" : [
+						{
+							"categoryCode" : "18010000",
+							"menuName": "가방",
+							"isPoint" : "false",
+							"isNew" : "false",
+							"isHit" : "false",
+							"linkUrl" : "",						
+							"subMenu" : [
+								{
+									"categoryCode" : "18010800",
+									"menuName": "토트백",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "18010500",
+									"menuName": "비즈니스백",
+									"keyword" : ""
+								}	,
+								{
+									"categoryCode" : "18010900",
+									"menuName": "숄더백",
+									"keyword" : ""
+								}	,
+								{
+									"categoryCode" : "18011000",
+									"menuName": "크로스팩",
+									"keyword" : ""
+								}	,
+								{
+									"categoryCode" : "18011100",
+									"menuName": "백팩",
+									"keyword" : ""
+								}	,
+								{
+									"categoryCode" : "18010400",
+									"menuName": "여행/노트북가방",
+									"keyword" : ""
+								}	,
+								
+								{
+									"categoryCode" : "18010600",
+									"menuName": "세컨백/미니백",
+									"keyword" : ""
+								}	,
+								{
+									"categoryCode" : "18010700",
+									"menuName": "파우치",
+									"keyword" : ""
+								}		
+							]
+						},
+						{
+							"categoryCode" : "18020000",
+							"menuName": "지갑",
+							"isPoint" : "false",
+							"isNew" : "false",
+							"isHit" : "false",
+							"linkUrl" : "",						
+							"subMenu" : [
+								{
+									"categoryCode" : "18020600",
+									"menuName": "장지갑",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "18020700",
+									"menuName": "중지갑",
+									"keyword" : ""
+								}	,
+								{
+									"categoryCode" : "18020800",
+									"menuName": "반지갑",
+									"keyword" : ""
+								}	,
+								{
+									"categoryCode" : "18020300",
+									"menuName": "열쇠지갑",
+									"keyword" : ""
+								}	,
+								{
+									"categoryCode" : "18020900",
+									"menuName": "동전지갑",
+									"keyword" : ""
+								}	,
+								{
+									"categoryCode" : "18020400",
+									"menuName": "명함지갑",
+									"keyword" : ""
+								}	,
+								{
+									"categoryCode" : "18021000",
+									"menuName": "카드지갑",
+									"keyword" : ""
+								}	,
+								{
+									"categoryCode" : "18021100",
+									"menuName": "벨트",
+									"keyword" : ""
+								}	
+							]
+						},
+						{
+							"categoryCode" : "18100000",
+							"menuName": "화장품/향수",
+							"isPoint" : "false",
+							"isNew" : "false",
+							"isHit" : "false",
+							"linkUrl" : "",						
+							"subMenu" : [
+								{
+									"categoryCode" : "18100100",
+									"menuName": "스킨케어",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "18100200",
+									"menuName": "클렌징",
+									"keyword" : ""
+								}	,
+								{
+									"categoryCode" : "18100300",
+									"menuName": "선케어",
+									"keyword" : ""
+								}	,
+								{
+									"categoryCode" : "18100400",
+									"menuName": "메이크업",
+									"keyword" : ""
+								}	,
+								{
+									"categoryCode" : "18100500",
+									"menuName": "바디케어",
+									"keyword" : ""
+								}	,
+								{
+									"categoryCode" : "18100600",
+									"menuName": "남성화장품",
+									"keyword" : ""
+								}	,
+								{
+									"categoryCode" : "18100800",
+									"menuName": "향수",
+									"keyword" : ""
+								}	
+							]
+						}
+					],					
+					"subMenu" : [
+						{
+							"categoryCode" : "18010000",
+							"menuName": "가방",
+							"keyword" : ""						
+						},
+						{
+							"categoryCode" : "18020000",
+							"menuName": "지갑/벨트",
+							"keyword" : ""
+						},
+						{
+							"categoryCode" : "18030000",
+							"menuName": "슈즈",
+							"keyword" : ""
+						}	
+						,
+						{
+							"categoryCode" : "18040000",
+							"menuName": "시계",
+							"keyword" : ""
+						}	
+						,
+						{
+							"categoryCode" : "18050000",
+							"menuName": "패션액세서리",
+							"keyword" : ""
+						}	
+						,
+						{
+							"categoryCode" : "18070000",
+							"menuName": "선글라스",
+							"keyword" : ""
+						}	
+						,
+						{
+							"categoryCode" : "18060000",
+							"menuName": "섬유잡화",
+							"keyword" : ""
+						}
+						,
+						{
+							"categoryCode" : "18110000",
+							"menuName": "의류",
+							"keyword" : ""
+						}
+						,
+						{
+							"categoryCode" : "18100000",
+							"menuName": "화장품/향수",
+							"keyword" : ""
+						}
+					]					
+				},
+				
+				// 해외쇼핑
+				{ 
+					"categoryCode" : "20000000",
+					"menuName": "해외쇼핑"		,
+					"middleMenu" : [
+						{
+							"categoryCode" : "20010000",
+							"menuName": "의류",
+							"isPoint" : "false",
+							"isNew" : "false",
+							"isHit" : "false",
+							"linkUrl" : "",						
+							"subMenu" : [
+								{
+									"categoryCode" : "20010100",
+									"menuName": "여성의류",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "20010200",
+									"menuName": "남성의류",
+									"keyword" : ""
+								}	
+							]
+						},
+						{
+							"categoryCode" : "20030000",
+							"menuName": "슈즈",
+							"isPoint" : "false",
+							"isNew" : "false",
+							"isHit" : "false",
+							"linkUrl" : "",						
+							"subMenu" : [
+								{
+									"categoryCode" : "20030100",
+									"menuName": "여성슈즈",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "20030200",
+									"menuName": "남성슈즈",
+									"keyword" : ""
+								}	
+							]
+						}
+						,
+						{
+							"categoryCode" : "20080000",
+							"menuName": "맘/베이비/키즈",
+							"isPoint" : "false",
+							"isNew" : "false",
+							"isHit" : "false",
+							"linkUrl" : "",						
+							"subMenu" : [
+								{
+									"categoryCode" : "20080100",
+									"menuName": "베이비/키즈의류",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "20080200",
+									"menuName": "베이비용품",
+									"keyword" : ""
+								}	,
+								{
+									"categoryCode" : "20080300",
+									"menuName": "임부복/용품",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "20080400",
+									"menuName": "베이비/키즈잡화",
+									"keyword" : ""
+								}	,
+								{
+									"categoryCode" : "20080500",
+									"menuName": "베이비/키즈슈즈",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "20080600",
+									"menuName": "완구/교육",
+									"keyword" : ""
+								}	,
+								{
+									"categoryCode" : "20080700",
+									"menuName": "룸데코",
+									"keyword" : ""						
+								}
+							]
+						}
+						,
+						{
+							"categoryCode" : "20100000",
+							"menuName": "리빙/홈",
+							"isPoint" : "false",
+							"isNew" : "false",
+							"isHit" : "false",
+							"linkUrl" : "",						
+							"subMenu" : [
+								{
+									"categoryCode" : "20100100",
+									"menuName": "침구/커튼",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "20100200",
+									"menuName": "가구",
+									"keyword" : ""
+								}	,
+								{
+									"categoryCode" : "20100300",
+									"menuName": "욕실용품",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "20100400",
+									"menuName": "주방용품",
+									"keyword" : ""
+								}	,
+								{
+									"categoryCode" : "20100500",
+									"menuName": "수납정리용품",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "20100600",
+									"menuName": "인테리어소품",
+									"keyword" : ""
+								}	
+							]
+						}
+					],
+					"subMenu" : [
+						{
+							"categoryCode" : "20010000",
+							"menuName": "의류",
+							"keyword" : ""						
+						},
+						{
+							"categoryCode" : "20020000",
+							"menuName": "언더웨어",
+							"keyword" : ""
+						},
+						{
+							"categoryCode" : "20030000",
+							"menuName": "슈즈",
+							"keyword" : ""
+						}	
+						,
+						{
+							"categoryCode" : "20040000",
+							"menuName": "가방/지갑",
+							"keyword" : ""
+						}	
+						,
+						{
+							"categoryCode" : "20050000",
+							"menuName": "패션잡화",
+							"keyword" : ""
+						}	
+						,
+						{
+							"categoryCode" : "20060000",
+							"menuName": "뷰티",
+							"keyword" : ""
+						}	
+						,
+						{
+							"categoryCode" : "20070000",
+							"menuName": "시계/액세서리",
+							"keyword" : ""
+						}
+						,
+						{
+							"categoryCode" : "20080000",
+							"menuName": "맘/베이비/키즈",
+							"keyword" : ""
+						},
+						{
+							"categoryCode" : "20090000",
+							"menuName": "레저/스포츠/취미",
+							"keyword" : ""
+						},
+						{
+							"categoryCode" : "20100000",
+							"menuName": "리빙/홈",
+							"keyword" : ""
+						},
+						{
+							"categoryCode" : "20110000",
+							"menuName": "가전/컴퓨터",
+							"keyword" : ""
+						}
+					]
+								
+				} ,
+				
+				// 면세점
+				{ 
+					"categoryCode" : "07000000",
+					"menuName": "면세점"		,
+					"middleMenu" : [
+						{
+							"categoryCode" : "07010000",
+							"menuName": "화장품",
+							"isPoint" : "true",
+							"isNew" : "false",
+							"isHit" : "false",
+							"linkUrl" : "",						
+							"subMenu" : [
+								{
+									"categoryCode" : "07010100",
+									"menuName": "스킨케어",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "07010200",
+									"menuName": "메이크업",
+									"keyword" : ""
+								}	,
+								{
+									"categoryCode" : "07010300",
+									"menuName": "헤어케어",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "07010400",
+									"menuName": "바디케어",
+									"keyword" : ""
+								}	,
+								{
+									"categoryCode" : "07010500",
+									"menuName": "유아화장품",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "07010600",
+									"menuName": "남성화장품",
+									"keyword" : ""
+								}	
+							]
+						},
+						{
+							"categoryCode" : "07030000",
+							"menuName": "가방/지갑/벨트",
+							"isPoint" : "false",
+							"isNew" : "false",
+							"isHit" : "false",
+							"linkUrl" : "",						
+							"subMenu" : [
+								{
+									"categoryCode" : "07030100",
+									"menuName": "가방",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "07030200",
+									"menuName": "지갑",
+									"keyword" : ""
+								}	,
+								{
+									"categoryCode" : "07030300",
+									"menuName": "벨트",
+									"keyword" : ""						
+								}
+							]
+						},
+						{
+							"categoryCode" : "07050000",
+							"menuName": "시계/액세서리",
+							"isPoint" : "false",
+							"isNew" : "false",
+							"isHit" : "false",
+							"linkUrl" : "",						
+							"subMenu" : [
+								{
+									"categoryCode" : "07050100",
+									"menuName": "시계",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "07050200",
+									"menuName": "액세서리",
+									"keyword" : ""
+								}	,
+								{
+									"categoryCode" : "07050300",
+									"menuName": "소품",
+									"keyword" : ""						
+								}
+							]
+						},
+						{
+							"categoryCode" : "07080000",
+							"menuName": "국내브랜드",
+							"isPoint" : "false",
+							"isNew" : "false",
+							"isHit" : "false",
+							"linkUrl" : "",						
+							"subMenu" : [
+								{
+									"categoryCode" : "07080100",
+									"menuName": "화장품",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "07080200",
+									"menuName": "패션잡화",
+									"keyword" : ""
+								}	,
+								{
+									"categoryCode" : "07080300",
+									"menuName": "액세서리",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "07080400",
+									"menuName": "전자제품",
+									"keyword" : ""
+								}	,
+								{
+									"categoryCode" : "07080500",
+									"menuName": "귀금속/기념품",
+									"keyword" : ""						
+								}
+							]
+						}
+					],
+					"subMenu" : [
+						{
+							"categoryCode" : "07010000",
+							"menuName": "화장품",
+							"keyword" : ""						
+						},
+						{
+							"categoryCode" : "07020000",
+							"menuName": "향수",
+							"keyword" : ""
+						},
+						{
+							"categoryCode" : "07030000",
+							"menuName": "가방/지갑/벨트",
+							"keyword" : ""
+						}	
+						,
+						{
+							"categoryCode" : "07040000",
+							"menuName": "패션잡화",
+							"keyword" : ""
+						}	
+						,
+						{
+							"categoryCode" : "07050000",
+							"menuName": "시계/액세서리",
+							"keyword" : ""
+						}	
+						,
+						{
+							"categoryCode" : "07060000",
+							"menuName": "전자제품",
+							"keyword" : ""
+						}	
+						,
+						{
+							"categoryCode" : "07070000",
+							"menuName": "식품",
+							"keyword" : ""
+						}	
+						,
+						{
+							"categoryCode" : "07090000",
+							"menuName": "생활용품",
+							"keyword" : ""
+						}	
+						,
+						{
+							"categoryCode" : "07070000",
+							"menuName": "코리안기프트",
+							"keyword" : ""
+						}						
+					]
+								
+				} 
+			]
+		} // 메뉴3 끝
+		,
+		// 메뉴 4
+		{
+			"menu":[
+				{ 
+					"categoryCode" : "32000000",
+					"menuName": "<span class=\"ico_n\">도서</span>",
+					"middleMenu" : [
+						{
+							"categoryCode" : "32010000",
+							"menuName": "소설",
+							"isPoint" : "false",
+							"isNew" : "false",
+							"isHit" : "false",
+							"linkUrl" : "",						
+							"subMenu" : [
+								{
+									"categoryCode" : "32010100",
+									"menuName": "한국소설",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "32010200",
+									"menuName": "영미소설",
+									"keyword" : ""
+								}	,
+								{
+									"categoryCode" : "32010300",
+									"menuName": "일본소설",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "32010400",
+									"menuName": "중국소설",
+									"keyword" : ""
+								}	,
+								{
+									"categoryCode" : "32010500",
+									"menuName": "러시아소설",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "32010600",
+									"menuName": "프랑스소설",
+									"keyword" : ""
+								}	,
+								{
+									"categoryCode" : "32010700",
+									"menuName": "독일소설",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "32010800",
+									"menuName": "기타나라소설",
+									"keyword" : ""
+								},
+								{
+									"categoryCode" : "32010900",
+									"menuName": "라이트 노벨",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "32011000",
+									"menuName": "장르소설",
+									"keyword" : ""
+								}	,
+								{
+									"categoryCode" : "32011100",
+									"menuName": "테마소설",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "32011200",
+									"menuName": "청소년소설",
+									"keyword" : ""
+								},
+								{
+									"categoryCode" : "32011300",
+									"menuName": "한국고전소설",
+									"keyword" : ""
+								}	,
+								{
+									"categoryCode" : "32011400",
+									"menuName": "세계문학",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "32011500",
+									"menuName": "세계고전",
+									"keyword" : ""
+								},
+								{
+									"categoryCode" : "32011600",
+									"menuName": "소설문고/시리즈",
+									"keyword" : ""
+								}
+							]
+						},
+						{
+							"categoryCode" : "32020000",
+							"menuName": "시/에세이",
+							"isPoint" : "false",
+							"isNew" : "false",
+							"isHit" : "false",
+							"linkUrl" : "",						
+							"subMenu" : [
+								{
+									"categoryCode" : "=32020100",
+									"menuName": "나라별 시",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "32020200",
+									"menuName": "장르 시",
+									"keyword" : ""
+								}	,
+								{
+									"categoryCode" : "32020300",
+									"menuName": "시와 이야기",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "32020400",
+									"menuName": "나라별 에세이",
+									"keyword" : ""
+								},
+								{
+									"categoryCode" : "32020500",
+									"menuName": "테마에세이",
+									"keyword" : ""
+								}	,
+								{
+									"categoryCode" : "32020600",
+									"menuName": "인물/자전적에세이",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "32020700",
+									"menuName": "지혜/상식",
+									"keyword" : ""
+								}	,
+								{
+									"categoryCode" : "32020800",
+									"menuName": "연하도서/카드도서",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "32020900",
+									"menuName": "시/에세이문고",
+									"keyword" : ""
+								}			
+							]
+						}
+					], // 중카테
+					"subMenu" : [
+					
+					{
+						"categoryCode" : "32010000",
+						"menuName": "소설",
+						"keyword" : ""						
+					},					
+					{
+						"categoryCode" : "32020000",
+						"menuName": "시/에세이",
+						"keyword" : ""
+					},
+					{
+						"categoryCode" : "32030000",
+						"menuName": "인문",
+						"keyword" : ""						
+					},					
+					{
+						"categoryCode" : "32040000",
+						"menuName": "가정/생활",
+						"keyword" : ""
+					},
+					{
+						"categoryCode" : "32050000",
+						"menuName": "요리",
+						"keyword" : ""						
+					},					
+					{
+						"categoryCode" : "32060000",
+						"menuName": "건강",
+						"keyword" : ""
+					},
+					{
+						"categoryCode" : "32070000",
+						"menuName": "취미/스포츠",
+						"keyword" : ""						
+					},					
+					{
+						"categoryCode" : "32080000",
+						"menuName": "경제/경영",
+						"keyword" : ""
+					},
+					{
+						"categoryCode" : "32090000",
+						"menuName": "자기계발",
+						"keyword" : ""						
+					},					
+					{
+						"categoryCode" : "32100000",
+						"menuName": "정치/사회",
+						"keyword" : ""
+					},
+					{
+						"categoryCode" : "32110000",
+						"menuName": "정부간행물",
+						"keyword" : ""						
+					},					
+					{
+						"categoryCode" : "32120000",
+						"menuName": "역사/문화",
+						"keyword" : ""
+					},
+					{
+						"categoryCode" : "32130000",
+						"menuName": "종교",
+						"keyword" : ""						
+					},					
+					{
+						"categoryCode" : "32140000",
+						"menuName": "예술/대중문화",
+						"keyword" : ""
+					},
+					{
+						"categoryCode" : "32150000",
+						"menuName": "중/고등학습",
+						"keyword" : ""						
+					},					
+					{
+						"categoryCode" : "32160000",
+						"menuName": "기술/공학",
+						"keyword" : ""
+					}
+					,
+					{
+						"categoryCode" : "32170000",
+						"menuName": "외국어",
+						"keyword" : ""						
+					},					
+					{
+						"categoryCode" : "32180000",
+						"menuName": "과학",
+						"keyword" : ""
+					},
+					{
+						"categoryCode" : "32190000",
+						"menuName": "취업/수험서",
+						"keyword" : ""						
+					},					
+					{
+						"categoryCode" : "32200000",
+						"menuName": "여행/기행",
+						"keyword" : ""
+					},
+					{
+						"categoryCode" : "32210000",
+						"menuName": "컴퓨터/IT",
+						"keyword" : ""						
+					},					
+					{
+						"categoryCode" : "32220000",
+						"menuName": "잡지",
+						"keyword" : ""
+					},
+					{
+						"categoryCode" : "32230000",
+						"menuName": "사전",
+						"keyword" : ""						
+					},					
+					{
+						"categoryCode" : "32240000",
+						"menuName": "청소년",
+						"keyword" : ""
+					},					
+					{
+						"categoryCode" : "32250000",
+						"menuName": "초등학습",
+						"keyword" : ""
+					},					
+					{
+						"categoryCode" : "32260000",
+						"menuName": "유아",
+						"keyword" : ""
+					},					
+					{
+						"categoryCode" : "32270000",
+						"menuName": "아동",
+						"keyword" : ""
+					},					
+					{
+						"categoryCode" : "32280000",
+						"menuName": "어린이영어",
+						"keyword" : ""
+					},					
+					{
+						"categoryCode" : "32290000",
+						"menuName": "만화",
+						"keyword" : ""
+					},					
+					{
+						"categoryCode" : "32300000",
+						"menuName": "대학교재",
+						"keyword" : ""
+					},					
+					{
+						"categoryCode" : "32320000",
+						"menuName": "일본도서",
+						"keyword" : ""
+					},					
+					{
+						"categoryCode" : "32330000",
+						"menuName": "영미도서",
+						"keyword" : ""
+					},					
+					{
+						"categoryCode" : "32340000",
+						"menuName": "프랑스도서",
+						"keyword" : ""
+					},					
+					{
+						"categoryCode" : "32350000",
+						"menuName": "독일도서",
+						"keyword" : ""
+					},					
+					{
+						"categoryCode" : "32370000",
+						"menuName": "한국관련도서",
+						"keyword" : ""
+					}
+					]
+				},
+				{ 
+					"categoryCode" : "12000000",
+					"menuName": "레저/스포츠",
+					"subMenu" : [
+					{
+						"categoryCode" : "12270000",
+						"menuName": "브랜드관",
+						"keyword" : ""						
+					},	
+					{
+						"categoryCode" : "12090000",
+						"menuName": "스키/보드",
+						"keyword" : ""
+					},
+					{
+						"categoryCode" : "12340000",
+						"menuName": "실내스포츠",
+						"keyword" : ""
+					},
+					{
+						"categoryCode" : "12160000",
+						"menuName": "레저/스포츠 예약예매",
+						"keyword" : ""						
+					},
+					{
+						"categoryCode" : "12060000",
+						"menuName": "등산용품",
+						"keyword" : ""
+					},
+					{
+						"categoryCode" : "12310000",
+						"menuName": "아웃도어의류",
+						"keyword" : ""
+					},					
+					{
+						"categoryCode" : "12240000",
+						"menuName": "캠핑용품",
+						"keyword" : ""						
+					},
+					
+					{
+						"categoryCode" : "12030000",
+						"menuName": "자전거",
+						"keyword" : ""
+					}	
+					,
+					{
+						"categoryCode" : "12010000",
+						"menuName": "골프",
+						"keyword" : ""
+					}	
+					,
+					{
+						"categoryCode" : "12320000",
+						"menuName": "골프의류/잡화",
+						"keyword" : ""
+					}	
+					,
+					{
+						"categoryCode" : "12080000",
+						"menuName": "헬스/다이어트",
+						"keyword" : ""
+					}	
+					,
+					{
+						"categoryCode" : "12100000",
+						"menuName": "낚시",
+						"keyword" : ""						
+					},
+					
+					{
+						"categoryCode" : "12020000",
+						"menuName": "구기스포츠",
+						"keyword" : ""
+					}
+					,
+					
+					{
+						"categoryCode" : "12260000",
+						"menuName": "라켓스포츠",
+						"keyword" : ""
+					}
+					,
+					{
+						"categoryCode" : "12040000",
+						"menuName": "인라인/X-GAME기구",
+						"keyword" : ""
+					}
+					,
+					{
+						"categoryCode" : "12050000",
+						"menuName": "모터사이클",
+						"keyword" : ""
+					}
+					,
+					{
+						"categoryCode" : "12070000",
+						"menuName": "수영용품",
+						"keyword" : ""						
+					},
+					
+					{
+						"categoryCode" : "12110000",
+						"menuName": "요가/댄스",
+						"keyword" : ""
+					},
+					{
+						"categoryCode" : "12120000",
+						"menuName": "격투/수련",
+						"keyword" : ""
+					},
+					{
+						"categoryCode" : "12130000",
+						"menuName": "런닝/마라톤",
+						"keyword" : ""
+					},
+					{
+						"categoryCode" : "12140000",
+						"menuName": "스케이트",
+						"keyword" : ""
+					},
+					
+					{
+						"categoryCode" : "12150000",
+						"menuName": "기타스포츠잡화",
+						"keyword" : ""
+					},					
+					{
+						"categoryCode" : "12330000",
+						"menuName": "스포츠의류/잡화",
+						"keyword" : ""
+					}
+					],
+					"middleMenu" : [
+						{
+							"categoryCode" : "12090000",
+							"menuName": "스키/보드",
+							"isPoint" : "false",
+							"isNew" : "false",
+							"isHit" : "true",
+							"linkUrl" : "",						
+							"subMenu" : [
+								{
+									"categoryCode" : "12090100",
+									"menuName": "스키 장비",
+									"keyword" : ""
+								},
+								{
+									"categoryCode" : "12090200",
+									"menuName": "보드 장비",
+									"keyword" : ""
+								},
+								{
+									"categoryCode" : "12090500",
+									"menuName": "스키복",
+									"keyword" : ""
+								},
+								
+								{
+									"categoryCode" : "12090300",
+									"menuName": "보드복",
+									"keyword" : ""
+								},					
+								{
+									"categoryCode" : "12090400",
+									"menuName": "스키/보드용품",
+									"keyword" : ""
+								},
+								{
+									"categoryCode" : "12090600",
+									"menuName": "시즌권/리프트권",
+									"keyword" : ""
+								}			
+							]
+						},
+						{
+							"categoryCode" : "12060000",
+							"menuName": "등산",
+							"isPoint" : "false",
+							"isNew" : "false",
+							"isHit" : "true",
+							"linkUrl" : "",						
+							"subMenu" : [
+								{
+									"categoryCode" : "12060100",
+									"menuName": "등산화",
+									"keyword" : ""
+								},
+								{
+									"categoryCode" : "12060900",
+									"menuName": "등산의류",
+									"keyword" : ""
+								},
+								{
+									"categoryCode" : "12061000",
+									"menuName": "등산가방",
+									"keyword" : ""
+								},
+								
+								{
+									"categoryCode" : "12060200",
+									"menuName": "등산잡화",
+									"keyword" : ""
+								},					
+								{
+									"categoryCode" : "12060300",
+									"menuName": "등반용품",
+									"keyword" : ""
+								}						
+							]
+						},
+						
+						{
+							"categoryCode" : "12030000",
+							"menuName": "자전거",
+							"isPoint" : "false",
+							"isNew" : "false",
+							"isHit" : "false",
+							"linkUrl" : "",						
+							"subMenu" : [
+								{
+									"categoryCode" : "12031600",
+									"menuName": "픽시자전거",
+									"keyword" : ""
+								},
+								{
+									"categoryCode" : "12030100",
+									"menuName": "MTB",
+									"keyword" : ""
+								},
+								{
+									"categoryCode" : "12030200",
+									"menuName": "미니벨로",
+									"keyword" : ""
+								},
+								
+								{
+									"categoryCode" : "12030300",
+									"menuName": "아동용",
+									"keyword" : ""
+								},					
+								{
+									"categoryCode" : "12030400",
+									"menuName": "생활자전거",
+									"keyword" : ""
+								}	,
+								{
+									"categoryCode" : "12030500",
+									"menuName": "로드사이클",
+									"keyword" : ""
+								},
+								{
+									"categoryCode" : "12031500",
+									"menuName": "하이브리드",
+									"keyword" : ""
+								},
+								{
+									"categoryCode" : "12030800",
+									"menuName": "전기/전동자전거",
+									"keyword" : ""
+								},
+								
+								{
+									"categoryCode" : "12030900",
+									"menuName": "자전거부품",
+									"keyword" : ""
+								},					
+								{
+									"categoryCode" : "12031000",
+									"menuName": "자전거공구",
+									"keyword" : ""
+								}	,
+																{
+									"categoryCode" : "12031100",
+									"menuName": "액세서리",
+									"keyword" : ""
+								},
+								{
+									"categoryCode" : "12031200",
+									"menuName": "보호장비",
+									"keyword" : ""
+								},
+								{
+									"categoryCode" : "12031300",
+									"menuName": "자전거의류",
+									"keyword" : ""
+								}							
+							]
+						},
+						{
+							"categoryCode" : "12010000",
+							"menuName": "골프",
+							"isPoint" : "false",
+							"isNew" : "false",
+							"isHit" : "false",
+							"linkUrl" : "",						
+							"subMenu" : [
+								{
+									"categoryCode" : "12010700",
+									"menuName": "테일러메이드",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "12010800",
+									"menuName": "캘러웨이",
+									"keyword" : ""
+								}	,
+								{
+									"categoryCode" : "12010900",
+									"menuName": "나이키골프",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "12011000",
+									"menuName": "미즈노",
+									"keyword" : ""
+								}	,
+								{
+									"categoryCode" : "12011100",
+									"menuName": "핑(PING)",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "12011200",
+									"menuName": "마루망",
+									"keyword" : ""
+								},
+								{
+									"categoryCode" : "12011300",
+									"menuName": "다이와",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "12011400",
+									"menuName": "야마하",
+									"keyword" : ""
+								}	,
+								{
+									"categoryCode" : "12011500",
+									"menuName": "던롭",
+									"keyword" : ""						
+								},
+													{
+									"categoryCode" : "12011600",
+									"menuName": "브리지스톤",
+									"keyword" : ""
+								},
+								{
+									"categoryCode" : "12011700",
+									"menuName": "남성용 클럽",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "12011800",
+									"menuName": "여성용 클럽",
+									"keyword" : ""
+								}	,
+								{
+									"categoryCode" : "12011900",
+									"menuName": "주니어용 클럽",
+									"keyword" : ""						
+								},			
+								{
+									"categoryCode" : "12012000",
+									"menuName": "왼손용 클럽",
+									"keyword" : ""						
+								},
+								
+								{
+									"categoryCode" : "12010100",
+									"menuName": "골프클럽",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "12010200",
+									"menuName": "골프가방",
+									"keyword" : ""
+								}	,
+								{
+									"categoryCode" : "12010300",
+									"menuName": "골프잡화",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "12010400",
+									"menuName": "골프소품",
+									"keyword" : ""
+								}	,
+								{
+									"categoryCode" : "12010500",
+									"menuName": "연습용품",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "12010600",
+									"menuName": "골프의류",
+									"keyword" : ""
+								}
+							]
+						}						
+					]
+				},
+				// 문구/팬시/취미
+				{ 
+					"categoryCode" : "14000000",
+					"menuName": "문구/팬시/취미",
+					"middleMenu" : [
+						
+					],					
+					"subMenu" : [
+						{
+							"categoryCode" : "14130000",
+							"menuName": "새학기 아이템",
+							"keyword" : ""
+						}	,
+						{
+							"categoryCode" : "14060000",
+							"menuName": "오피스/일반문구",
+							"keyword" : ""
+						}	,		
+						{
+							"categoryCode" : "14070000",
+							"menuName": "디자인팬시",
+							"keyword" : ""
+						}	
+						,
+						{
+							"categoryCode" : "14050000",
+							"menuName": "애완용품",
+							"keyword" : ""
+						}	,
+						{
+							"categoryCode" : "14030000",
+							"menuName": "모형미니어쳐",
+							"keyword" : ""
+						},
+						{
+							"categoryCode" : "14010000",
+							"menuName": "악기",
+							"keyword" : ""
+						}
+						,
+						{
+							"categoryCode" : "14100000",
+							"menuName": "파티/포장용품",
+							"keyword" : ""
+						},
+						{
+							"categoryCode" : "14020000",
+							"menuName": "퍼즐/보드게임",
+							"keyword" : ""
+						}		,
+						{
+							"categoryCode" : "14080000",
+							"menuName": "미술/제도용품",
+							"keyword" : ""
+						}	
+						,
+						{
+							"categoryCode" : "14090000",
+							"menuName": "아동문구",
+							"keyword" : ""
+						}	,
+						{
+							"categoryCode" : "14120000",
+							"menuName": "교재용악기",
+							"keyword" : ""
+						},
+						{
+							"categoryCode" : "14150000",
+							"menuName": "다이어리/캘린더",
+							"keyword" : ""
+						}
+					]					
+				},
+				
+				// 자동차용품
+				{ 
+					"categoryCode" : "13000000",
+					"menuName": "자동차용품"		,
+					"subMenu" : [
+						{
+							"categoryCode" : "13130000",
+							"menuName": "브랜드관",
+							"keyword" : ""						
+						},
+						{
+							"categoryCode" : "13010000",
+							"menuName": "네비게이션/GPS",
+							"keyword" : ""						
+						},						
+						{
+							"categoryCode" : "13150000",
+							"menuName": "블랙박스/하이패스",
+							"keyword" : ""
+						},
+						{
+							"categoryCode" : "13020000",
+							"menuName": "차량용 시트/매트",
+							"keyword" : ""
+						},
+						{
+							"categoryCode" : "13090000",
+							"menuName": "인테리어",
+							"keyword" : ""
+						},
+						{
+							"categoryCode" : "13080000",
+							"menuName": "익스테리어",
+							"keyword" : ""
+						}
+						,
+						{
+							"categoryCode" : "13110000",
+							"menuName": "타이어/휠/체인",
+							"keyword" : ""
+						}
+						,												
+						{
+							"categoryCode" : "13100000",
+							"menuName": "차량세차/관리용품",
+							"keyword" : ""
+						}	
+						,
+						{
+							"categoryCode" : "13120000",
+							"menuName": "튜닝/DIY용품",
+							"keyword" : ""
+						}
+						,
+						{
+							"categoryCode" : "13050000",
+							"menuName": "램프",
+							"keyword" : ""
+						}	
+						,												
+						{
+							"categoryCode" : "13070000",
+							"menuName": "차량용 전자제품",
+							"keyword" : ""
+						}
+						,
+						{
+							"categoryCode" : "13030000",
+							"menuName": "오디오/AV용품",
+							"keyword" : ""
+						},						
+						{
+							"categoryCode" : "13180000",
+							"menuName": "차량용 전기용품",
+							"keyword" : ""
+						}
+						,
+						{
+							"categoryCode" : "13170000",
+							"menuName": "모터사이클",
+							"keyword" : ""
+						}
+					]	,
+					"middleMenu" : [
+						{
+							"categoryCode" : "13010000",
+							"menuName": "네비게이션/GPS",
+							"isPoint" : "false",
+							"isNew" : "false",
+							"isHit" : "false",
+							"linkUrl" : "",						
+							"subMenu" : [
+								{
+									"categoryCode" : "13010500",
+									"menuName": "아이나비맵 ",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "13010600",
+									"menuName": "만도맵피맵 ",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "13010700",
+									"menuName": "만도지니맵 ",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "13010800",
+									"menuName": "아틀란맵",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "13010900",
+									"menuName": "SK엔나비맵",
+									"keyword" : ""						
+								},	
+								{
+									"categoryCode" : "13011000",
+									"menuName": "루센맵",
+									"keyword" : ""						
+								},								
+								{
+									"categoryCode" : "13013000",
+									"menuName": "엠피온맵",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "13013100",
+									"menuName": "로디맵 ",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "13011100",
+									"menuName": "기타맵",
+									"keyword" : ""						
+								},								
+								{
+									"categoryCode" : "13013200",
+									"menuName": "브랜드별",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "13013300",
+									"menuName": "형태별 ",
+									"keyword" : ""						
+								},							
+								{
+									"categoryCode" : "13012400",
+									"menuName": "TPEG 방송사업자별",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "13012500",
+									"menuName": "기능별 ",
+									"keyword" : ""						
+								},								
+								{
+									"categoryCode" : "13010100",
+									"menuName": "네비게이션액세서리",
+									"keyword" : ""						
+								},
+								{
+									"categoryCode" : "13010301",
+									"menuName": "GPS",
+									"keyword" : ""						
+								}
+							]
+						}
+						,
+						{
+							"categoryCode" : "13150000",
+							"menuName": "블랙박스/하이패스",
+							"isPoint" : "false",
+							"isNew" : "false",
+							"isHit" : "false",
+							"linkUrl" : "",						
+							"subMenu" : [
+								{
+									"categoryCode" : "13150600",
+									"menuName": "블랙박스",
+									"keyword" : ""
+								},													
+								{
+									"categoryCode" : "13150700",
+									"menuName": "화소별",
+									"keyword" : ""						
+								},			
+								{
+									"categoryCode" : "13151300",
+									"menuName": "해상도별",
+									"keyword" : ""						
+								},		
+								{
+									"categoryCode" : "13150300",
+									"menuName": "기능별",
+									"keyword" : ""						
+								},		
+								{
+									"categoryCode" : "13151000",
+									"menuName": "하이패스",
+									"keyword" : ""						
+								},															
+								{
+									"categoryCode" : "13151201",
+									"menuName": "카드리더기",
+									"keyword" : ""
+								}
+							]
+						}
+					]	
+								
+				} ,
+
+				
+				// 음반/DVD
+				{ 
+					"categoryCode" : "15000000",
+					"menuName": "음반/DVD"		,
+					"middleMenu" : [],
+					"subMenu" : [
+					 {
+							"categoryCode" : "15040000",
+							"menuName": "블루레이",
+							"keyword" : ""						
+						},
+						{
+							"categoryCode" : "15010000",
+							"menuName": "DVD/비디오",
+							"keyword" : ""						
+						},
+						{
+							"categoryCode" : "15020000",
+							"menuName": "음반",
+							"keyword" : ""
+						},
+						{
+							"categoryCode" : "15050000",
+							"menuName": "한류스타 총집합",
+							"keyword" : ""
+						}
+						
+					]		
+				} 
+			,
+				// 꽃배달/상품권
+				{ 
+					"categoryCode" : "16000000",
+					"menuName": "꽃배달/상품권"		,
+					"middleMenu" : [
+					
+					],
+					"subMenu" : [
+					
+					  {
+							"categoryCode" : "16080000",
+							"menuName": "공기정화",
+							"keyword" : ""						
+						},
+						
+						{
+							"categoryCode" : "16010000",
+							"menuName": "꽃",
+							"keyword" : ""						
+						},
+						{
+							"categoryCode" : "16020000",
+							"menuName": "꽃선물세트",
+							"keyword" : ""
+						},
+						{
+							"categoryCode" : "16030000",
+							"menuName": "인테리어플라워",
+							"keyword" : ""
+						},
+						{
+							"categoryCode" : "16040000",
+							"menuName": "원예식물",
+							"keyword" : ""
+						},
+						{
+							"categoryCode" : "16060000",
+							"menuName": "상품권",
+							"keyword" : ""
+						},
+						{
+							"categoryCode" : "16070000",
+							"menuName": "e쿠폰",
+							"keyword" : ""
+						}
+					]		
+								
+				} 
+				
+			]
+		} // 메뉴4 끝
+	];

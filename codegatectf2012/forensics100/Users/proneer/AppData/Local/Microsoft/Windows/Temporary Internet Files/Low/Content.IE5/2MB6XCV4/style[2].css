@@ -1,0 +1,533 @@
+body, html {
+	background:#9bc5e2 url(http://img.disc-tools.com/site_bg.gif) no-repeat center 30px;
+	height:100%;
+	min-height:100%;
+	margin:0;
+	padding:0;
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:14px;
+	color:#333;
+}
+a {outline:none; text-decoration:none}
+a:link, a:visited {color:#36F}
+a:hover {color:#C00}
+#container {
+	width:850px;
+	min-height:100%;
+	padding-bottom:-157px;
+	margin:0 auto;
+	background:#FFF;
+}
+* html #container {
+	height: 100%;
+}
+#slogan {
+	width:115px;
+	height:12px;
+	position:absolute;
+	z-index:2;
+	font-size:10px;
+	font-family:Tahoma, Geneva, sans-serif;
+	margin:27px 0 0 19px;
+}
+#slogan h1{
+	font-size:10px;
+	color:#FFF;
+	font-weight:normal;
+	margin:0;
+	text-decoration:none;
+}
+#footer {
+	height:157px;
+	margin:-157px auto 0 auto;
+	width:850px;
+	background: url(http://img.disc-tools.com/container_sprite.jpg) no-repeat 0 -200px;
+}
+#header {
+	width:850px;
+	height:190px;
+	background:url(http://img.disc-tools.com/container_sprite.jpg) no-repeat 0 0px;
+}
+#header #logo {
+	width:210px;
+	height:53px;
+	margin:137px 0 0 51px;
+	float:left;
+	display:inline;
+	background:#09F;
+}
+#header #logo .overbutton {
+	clear: both;
+	position:absolute;
+	display:block;
+	height: 53px;
+	width: 210px;
+	background:url(http://img.disc-tools.com/main_sprite.gif) no-repeat 0 0;
+	cursor: pointer;
+}
+#header #logo .overbutton span.hover {
+	position: absolute;
+	display: block;
+	height: 53px;
+	width: 210px;
+	background: url(http://img.disc-tools.com/main_sprite.gif) no-repeat 0 -53px;
+	cursor: pointer;
+}
+
+#header #lamp {
+	width:95px;
+	height:79px;
+	margin:58px 0 0 109px;
+	float:left;
+	display:inline;
+}
+#header #lamp .overbutton {
+	clear: both;
+	position:relative;
+	display:block;
+	height: 79px;
+	width: 95px;
+	background:url(http://img.disc-tools.com/container_sprite.jpg) no-repeat -1000px -1000px;
+	cursor: default;
+}
+#header #lamp .overbutton span.hover {
+	clear: both;
+	position:relative;
+	display:block;
+	height: 79px;
+	width: 95px;
+	background:url(http://img.disc-tools.com/container_sprite.jpg) no-repeat 0 -357px;
+	cursor: default;
+}
+
+#header #logo #title {width:210px; height:auto; position:absolute; z-index:1000; margin:0 0 0 18px}
+#header #logo #title h1 {
+font-weight:normal;
+	color:#FFF;
+	font-size:25px;
+	margin:0;
+	font-family:Georgia, "Times New Roman", Times, serif;
+	text-shadow:#066fae 1px 1px 0px;
+}
+#header #logo a:hover #title h1 {text-shadow:#60025d 1px 1px 0px;}
+
+#top_banner {
+	width:505px;
+	height:68px;
+	background:#FFF url(http://img.disc-tools.com/main_sprite.gif) no-repeat -188px -106px;
+	float:right;
+}
+#top_banner #banner_place {
+	width:468px;
+	height:60px;
+	margin:8px 0 0 25px;
+	float:left;
+	display:inline;
+}
+#top_banner #banner_place img {border:none}
+#top_banner #banner_place a:hover img {
+	filter:progid:DXImageTransform.Microsoft.Alpha(opacity=80);-moz-opacity: 0.8; -khtml-opacity: 0.8;opacity: 0.8;
+}
+#top_banner #corner {
+	width:9px;
+	height:68px;
+	float:right;
+	background:url(http://img.disc-tools.com/main_sprite.gif) no-repeat 0 -106px;
+}
+#top_banner #ads_button {
+	width:196px;
+	height:28px;
+	display:inline;
+	margin:10px 0px 0px 313px;
+	position:absolute;
+}
+#top_banner #ads_button .overbutton {
+	clear: both;
+	position:absolute;
+	display:block;
+	width:196px;
+	height:28px;
+	cursor:pointer;
+	background: url(http://img.disc-tools.com/main_sprite.gif) no-repeat 0 -190px;
+}
+#top_banner #ads_button .overbutton span.hover {
+	clear: both;
+	position:absolute;
+	display:block;
+	width:196px;
+	height:28px;
+	background: url(http://img.disc-tools.com/main_sprite.gif) no-repeat 0 -218px;
+	cursor:pointer;
+}
+#top_banner #ads_button a:link, #top_banner #ads_button a:visited {color:#FFF;}
+#top_banner #ads_button a div {position:absolute; z-index:1000; padding:2px 0 0 8px; font-family:Georgia, "Times New Roman", Times, serif}
+#content {
+	width:850px;
+	height:auto;
+	background:url(http://img.disc-tools.com/main_sprite.gif) no-repeat -200px -314px;
+	*background:url(http://img.disc-tools.com/main_sprite.gif) no-repeat -200px -299px;
+	-background:url(http://img.disc-tools.com/main_sprite.gif) no-repeat -200px -314px;
+	//margin-top:-15px;
+	padding:40px 0 147px 0;
+	//padding-top:60px;
+}
+#content a {text-decoration:underline}
+#content .product {
+	margin:20px 66px;
+	width:auto;
+}
+#content .product .logo {width:32px; height:32px; float:left; display:inline}
+#content .product .title {float:left; display:inline; width:auto; margin:1px 0 0 10px;}
+#content .product .title h1 {
+	font-size:20px;
+	font-weight:normal;
+	font-family:Verdana, Geneva, sans-serif;
+	margin:0px;
+	color:#2f6486;
+}
+#content .product .tab {
+	width:auto;
+	height:auto;
+	margin:15px 45px 0px 45px;
+	float:none;
+	font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size:13px;
+	//margin-top:-40px;
+}
+#content .product .tab .topString {
+	width:100%;
+	height:22px;
+	background:#e6f1fe url(http://img.disc-tools.com/main_sprite.gif) repeat-x 0 -252px;
+}
+#content .product .tab .topString .left {
+	background:url(http://img.disc-tools.com/main_sprite.gif) no-repeat -39px -106px;
+	width:5px;
+	height:22px;
+	float:left;
+}
+#content .product .tab .topString .name {
+	width:150px;
+	padding:2px 0 0 3px;
+	color:#4a6384;
+	text-shadow:#fdfeff 0px 1px 0px;
+	float:left;
+}
+#content .product .tab .topString .value {
+	width:auto;
+	padding:2px 0 0 0;
+	color:#414040;
+	text-shadow:#fefefe 0px 1px 0px;
+	float:left;
+}
+#content .product .tab .topString .right {
+	background:url(http://img.disc-tools.com/main_sprite.gif) no-repeat -45px -106px;
+	width:5px;
+	height:22px;
+	float:right;
+}
+#content .product .tab .lightString {
+	width:100%;
+	height:20px;
+	background:#f3f8ff;
+}
+#content .product .tab .lightString .left {
+	background:url(http://img.disc-tools.com/main_sprite.gif) no-repeat -51px -106px;
+	width:5px;
+	height:20px;
+	float:left;
+}
+#content .product .tab .lightString .name {
+	width:150px;
+	padding:0px 0 0 3px;
+	color:#4a6384;
+	text-shadow:#fff 0px 1px 0px;
+	float:left;
+}
+#content .product .tab .lightString .value {
+	width:auto;
+	padding:0;
+	color:#414040;
+	text-shadow:#fff 0px 1px 0px;
+	float:left;
+}
+#content .product .tab .lightString .right {
+	background:url(http://img.disc-tools.com/main_sprite.gif) no-repeat -57px -106px;
+	width:5px;
+	height:20px;
+	float:right;
+}
+#content .product .tab .darkString {
+	width:100%;
+	height:20px;
+	background:#e7f3fe;
+}
+#content .product .tab .darkString .left {
+	background:url(http://img.disc-tools.com/main_sprite.gif) no-repeat -51px -106px;
+	width:5px;
+	height:20px;
+	float:left;
+}
+#content .product .tab .darkString .name {
+	width:150px;
+	padding:0px 0 0 3px;
+	color:#4a6384;
+	text-shadow:#fdfeff 0px 1px 0px;
+	float:left;
+}
+#content .product .tab .darkString .value {
+	width:auto;
+	padding:0;
+	color:#414040;
+	text-shadow:#fefefe 0px 1px 0px;
+	float:left;
+}
+#content .product .tab .darkString .right {
+	background:url(http://img.disc-tools.com/main_sprite.gif) no-repeat -57px -106px;
+	width:5px;
+	height:20px;
+	float:right;
+}
+#content .product .tab .bottomString {
+	width:100%;
+	height:22px;
+	background:#f3faff url(http://img.disc-tools.com/main_sprite.gif) repeat-x 0 -274px;
+}
+#content .product .tab .bottomString .left {
+	background:url(http://img.disc-tools.com/main_sprite.gif) no-repeat -63px -106px;
+	width:5px;
+	height:22px;
+	float:left;
+}
+#content .product .tab .bottomString .name {
+	width:150px;
+	padding:2px 0 0 3px;
+	color:#4a6384;
+	text-shadow:#fdfeff 0px 1px 0px;
+	float:left;
+}
+#content .product .tab .bottomString .value {
+	width:auto;
+	padding:2px 0 0 0;
+	color:#414040;
+	text-shadow:#fefefe 0px 1px 0px;
+	float:left;
+}
+#content .product .tab .bottomString .right {
+	background:url(http://img.disc-tools.com/main_sprite.gif) no-repeat -69px -106px;
+	width:5px;
+	height:22px;
+	float:right;
+}
+#content .product .descrTitle {width:auto; padding-left:45px; margin-top:30px}
+#content .product .descrTitle h2 {
+	font-size:17px;
+	color:#2f6486;
+	font-weight:normal;
+	margin:0 0 8px 0;
+	-margin:0;
+	float:left;
+}
+#content .product .descrTitle .download {
+	float:right;
+	width:30px;
+	height:20px;
+	margin-right:92px;
+	-margin-right:45px;
+	display:inline;
+	font-size:13px;
+}
+*:first-child+html #content .product .descrTitle .download {
+	float:right;
+	width:30px;
+	height:20px;
+	margin-right:85px;
+	display:inline;
+	font-size:13px;
+}
+#content .product .descrTitle .download a:link, #content .product .descrTitle .download a:visited {
+	background:url(http://img.disc-tools.com/main_sprite.gif) no-repeat -206px -194px;
+	padding-left:8px;
+}
+#content .product .descrTitle .download a:hover {
+	background:url(http://img.disc-tools.com/main_sprite.gif) no-repeat -206px -222px;
+	padding-left:8px;
+}
+#content .product .description {
+	width:auto;
+	height:auto;
+	font-size:13px;
+	margin:0 45px;
+	//margin-top:-17px;
+}
+#content .product .description h3 {color:#2f6486; font-weight:normal; font-size:14px; margin:20px 0 5px 0;}
+#content .product .description .googleAds {width:300px; height:auto; float:right}
+.separator {width:100%; height:30px; border-bottom:1px dashed #CCC; margin-bottom:50px}
+#featured_prod {margin:0 38px; width:auto}
+#featured_prod h2 {color:#4a7896; font-size:17px; font-weight:normal; margin:0 0 15px 0; padding-left:75px}
+#featured_prod .product {
+	width:275px;
+	height:83px;
+	float:left;
+	display:inline;
+	margin:0 0 30px 75px;
+}
+#featured_prod .product .overbutton {
+	clear: both;
+	position:absolute;
+	display:block;
+	width:275px;
+	height:83px;
+	cursor:pointer;
+	background:url(http://img.disc-tools.com/container_sprite.jpg) no-repeat -95px -357px;
+}
+#featured_prod .product .overbutton span.hover{
+	clear: both;
+	position:absolute;
+	display:block;
+	width:275px;
+	height:83px;
+	cursor:pointer;
+	background:url(http://img.disc-tools.com/container_sprite.jpg) no-repeat -370px -357px;
+}
+#featured_prod .product a .logo {
+	width:32px;
+	height:32px;
+	position:absolute;
+	z-index:2;
+	margin:17px 13px 0 20px;
+	float:left;
+	display:inline;
+	text-align: center;
+}
+#featured_prod .product a .title {
+	width:auto;
+	font-size:17px;
+	font-family:Tahoma, Geneva, sans-serif;
+	color:#333;
+	position:absolute;
+	z-index:2;
+	padding:14px 0 0 55px;
+	text-shadow:#FFF 0px 1px 0px;
+}
+#featured_prod .product a .title span {font-size:11px}
+#featured_prod .product a {text-decoration:none}
+/*******************************************************************************************************/
+#footer #copy {
+	font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size:13px;
+	color:#3a3a3a;
+	text-shadow:#e7e7e7 0px 1px 0px;
+	margin:85px 0 0 607px;
+	float:left;
+	display:inline;
+}
+.clear {clear:both; font-size:0}
+/******************************************************************/
+#contact_form {
+	width:360px;
+	height:auto;
+	margin:-15px 0 5px 240px;
+	-margin-top:-35px;
+}
+#contact_form h1 {
+	font-size:20px;
+	font-weight:normal;
+	font-family:Verdana, Geneva, sans-serif;
+	margin:0px;
+	color:#2f6486;
+	margin-bottom:13px;
+}
+#contact_form .title {width:auto;height:15px}
+#contact_form .title .start {width:auto; height:15px; float:left; background:url(http://img.disc-tools.com/contacts_sprite.gif) repeat-x 0 0; color:#FFF; font-size:10px; padding:1px 3px 0 5px}
+#contact_form .title .end {width:2px; height:15px; float:left; background:url(http://img.disc-tools.com/contacts_sprite.gif) no-repeat -137px 0; font-size:0;}
+#contact_form input {
+	border:1px solid #a7a7a7;
+	border-top:1px solid #7a7a7a;
+	border-bottom:1px solid #cdcdcd;
+	height:28px;
+	width:200px;
+	margin-top:-1px;
+	-margin-top:-2px;
+	background:url(http://img.disc-tools.com/contacts_sprite.gif) repeat-x 0 -112px;
+	padding-left:5px;
+	font-size:14px;
+	line-height:28px;
+	margin-bottom:10px;
+}
+#contact_form input:focus {background:#edf6ff url(http://img.disc-tools.com/container_sprite.jpg) no-repeat -95px -441px;}
+#contact_form .area {
+	border:1px solid #a7a7a7;
+	border-top:1px solid #7a7a7a;
+	border-bottom:1px solid #cdcdcd;
+	height:150px;
+	width:350px;
+	margin-top:-1px;
+	-margin-top:-2px;
+	background:url(http://img.disc-tools.com/contacts_sprite.gif) repeat-x 0 -112px;
+	padding-left:5px;
+	font-size:14px;
+	line-height:28px;
+	margin-bottom:10px;
+}
+#contact_form .area:focus {background:#edf6ff url(http://img.disc-tools.com/container_sprite.jpg) no-repeat -95px -441px;}
+#contact_form .key {width:167px}
+#contact_form .keySequence {width:175px; height:45px;}
+#contact_form #send {width:83px;height:35px; margin-top:20px}
+#contact_form #send .overbutton {
+	clear: both;
+	position:absolute;
+	display:block;
+	height: 35px;
+	width: 83px;
+	background: url(http://img.disc-tools.com/contacts_sprite.gif) no-repeat 0 -16px;
+	cursor: pointer;
+}
+#contact_form #send .overbutton span.hover {
+	position: absolute;
+	display: block;
+	height: 35px;
+	width: 83px;
+	background: url(http://img.disc-tools.com/contacts_sprite.gif) no-repeat -83px -16px;
+	cursor: pointer;
+}
+#contact_form .errorMessage {
+	width:auto;
+	height:37px;
+	margin:-5px 0 10px 0;
+	display: none;
+}
+#contact_form .errorMessage .left {
+	width:6px;
+	height:30px;
+	background:url(http://img.disc-tools.com/contacts_sprite.gif) no-repeat 0 -81px;
+	margin-top:7px;
+	float:left;
+}
+#contact_form .errorMessage .left .corner {
+	width:14px;
+	height:9px;
+	background:url(http://img.disc-tools.com/contacts_sprite.gif) no-repeat -14px -81px;
+	margin:-7px 0 0 13px;
+	position: absolute
+}
+#contact_form .errorMessage .center {
+	width:auto;
+	height:30px;
+	background:url(http://img.disc-tools.com/contacts_sprite.gif) repeat-x 0 -51px;
+	margin-top:7px;
+	float:left;
+	font-size:13px;
+	color:#900;
+	text-shadow: #FFF 0px 1px 0px;
+	line-height:30px;
+	padding:0 7px;
+}
+#contact_form .errorMessage .right {
+	width:6px;
+	height:30px;
+	background:url(http://img.disc-tools.com/contacts_sprite.gif) no-repeat -7px -81px;
+	margin-top:7px;
+	float:left;
+}
+#contact_form .error {border:1px solid #d26464}
+#contact_form .error:focus {background:#edf6ff url(http://img.disc-tools.com/container_sprite.jpg) no-repeat -95px -441px;border:1px solid #900}

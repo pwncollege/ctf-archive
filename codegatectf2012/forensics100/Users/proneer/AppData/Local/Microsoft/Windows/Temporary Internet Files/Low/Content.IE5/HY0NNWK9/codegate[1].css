@@ -1,0 +1,106 @@
+A:link {
+	COLOR: #ffffff; TEXT-DECORATION: none
+}
+A:visited {
+	COLOR: #ffffff; TEXT-DECORATION: none
+}
+A:hover {
+	COLOR: #ffe44f; TEXT-DECORATION: none
+}
+A:active {
+	COLOR: #ffe44f; TEXT-DECORATION: none
+}
+TD {
+	FONT-SIZE: 9pt; LINE-HEIGHT: 150%; FONT-FAMILY: "µ¸¿ò" 
+}
+
+
+BODY {
+	FONT-SIZE: 9pt; LINE-HEIGHT: 120%; COLOR: #4C4C4C; FONT-FAMILY: "µ¸¿ò"
+}
+/*·Î±×ÀÎ*/
+
+
+.b:link {
+	COLOR: #006600; TEXT-DECORATION: none
+}
+.b:visited {
+	COLOR: #006600; TEXT-DECORATION: none
+}
+.b:hover {
+	COLOR: #006600; TEXT-DECORATION: none
+}
+.b:active {
+	COLOR: #006600; TEXT-DECORATION: none
+}
+
+.A_1:link {
+	COLOR: #ffffff; FONT-SIZE: 12pt; TEXT-DECORATION: none
+}
+.A_1:visited {
+	COLOR: #ffffff; FONT-SIZE: 12pt; TEXT-DECORATION: none
+}
+.A_1:hover {
+	COLOR: #ffffff; FONT-SIZE:12pt; TEXT-DECORATION: none
+}
+.A_1:active {
+	COLOR: #ffffff; FONT-SIZE: 12pt; TEXT-DECORATION: none
+}
+
+/*ÀÛÀº±Û¾¾*/
+.text_1 {
+	FONT-SIZE:8pt; COLOR: #ffffff;  FONT-FAMILY: "µ¸¿ò"
+}
+
+/* ¼­ºê¸Þ´º ¿ÞÂÊ ¸¶Áø*/
+.lm_1{
+	PADDING-LEFT: 8px
+}
+
+
+/* Å¾ Å×µÎ¸®*/
+.boder_1 {
+	BORDER-RIGHT: #E5E2D1 1px solid; BORDER-TOP: #E5E2D1 1px solid; BORDER-LEFT: #E5E2D1 1px solid; BORDER-BOTTOM: #E5E2D1 1px solid
+}
+
+.b_text {
+	FONT-SIZE: 9pt; font-weight:bold; COLOR: #03368F; FONT-FAMILY: "µ¸¿ò"
+}
+
+.text {
+	FONT-SIZE: 9pt; COLOR: #03368F; FONT-FAMILY: "µ¸¿ò"
+}
+
+.text_menu {
+	FONT-SIZE: 9pt; COLOR: #ffffff; FONT-FAMILY: "µ¸¿ò"
+}
+
+.text_left {
+	FONT-SIZE: 9pt; COLOR: #4C4C4C; FONT-FAMILY: "µ¸¿ò"
+}
+.s_text {
+	FONT-SIZE: 8pt; LINE-HEIGHT: 130%;FONT-FAMILY: "µ¸¿ò"
+}
+.big_text {
+	FONT-SIZE: 10pt; COLOR: #03368F; FONT-FAMILY: "µ¸¿ò"
+}
+
+.p01 {
+	PADDING-LEFT: 10px; PADDING-right: 10px; PADDING-BOTTOM:4; PADDING-TOP: 6px
+	}
+.p01_1 {
+	PADDING-BOTTOM:4px; PADDING-TOP: 4px
+	}
+.p02 {
+	PADDING-LEFT: 16px; PADDING-right: 16px; PADDING-BOTTOM:6; PADDING-TOP: 9px
+	}	
+.p03 {
+	PADDING-LEFT: 10px; PADDING-BOTTOM:8; PADDING-TOP: 9px
+	}
+.p01_b {
+	PADDING-LEFT: 10px; PADDING-BOTTOM:5; PADDING-TOP: 4px ; font-weight:bold
+	}
+
+.td {  font-family: "±¼¸²", "seoul", "arial", "MS Gothic"; font-size: 9pt; color: #717171 ; line-height: 12pt;}
+
+

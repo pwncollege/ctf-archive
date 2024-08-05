@@ -1,0 +1,64 @@
+/* Ensure that our assumptions about the default browser colors are correct. */
+BODY { color: #000000; background-color: #FFFFFF; }
+BODY a:link { color: #0000FF; }
+BODY a:hover { color: #0000FF; }
+BODY a:active { color: #0000FF; }
+BODY a:visited { color: #800080; }
+
+BODY {
+  margin: 4px;
+}
+DIV#content {
+  font: 12px Arial;
+}
+DIV#insert {
+  display: none;
+}
+
+/* Two ways to do icons with these rules:
+   <img class='icon' src='%userIconPath%'>
+   <div class='icon'><div style='height:1px;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="%userIconPath%")'></div></div>
+*/
+
+DIV.chat {
+  padding: 4px 2px;
+}
+DIV.chat DIV.Nth {
+  margin: 7px 0px 0px 0px;
+}
+DIV.chat SPAN.salutation-o {
+  display: block;
+  font-weight: bold;
+  margin: 0px 0px 1px;
+  vertical-align:text-top;
+  padding-top: 1px;
+  border-top: 2px solid black;
+}
+DIV.chat SPAN.salutation-i {
+  display: block;
+  font-weight: bold;
+  margin: 0px 0px 1px;
+  vertical-align:text-top;
+  padding-top: 1px;
+  border-top: 2px solid black;
+}
+DIV.out {
+  text-align: left;
+  height: 1px;
+}
+DIV.in {
+  text-align: left;
+  height: 1px;
+}
+
+DIV.clear {
+  clear: both;
+  height: 1px;
+  overflow: hidden;
+}
+
+DIV.break {
+  height: 1px;
+  margin: 3px 0px 0px 0px;
+  overflow: hidden;
+}

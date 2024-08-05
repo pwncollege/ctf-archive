@@ -1,0 +1,31 @@
+/* Ensure that our assumptions about the default browser colors are correct. */
+BODY { color: #000000; background-color: #FFFFFF; }
+BODY a:link { color: #0000FF; }
+BODY a:hover { color: #0000FF; }
+BODY a:active { color: #0000FF; }
+BODY a:visited { color: #800080; }
+
+BODY {
+  margin: 4px;
+}
+DIV#content {
+  font: 12px Arial;
+}
+DIV#insert {
+  display: none;
+}
+
+DIV.system1st {
+  margin: 4px 0px 4px 0px;
+}
+DIV.systemNth {
+  margin: 4px 0px 4px 0px;
+}
+
+DIV.chat DIV.msg {
+  margin: 4px 0px 0px 0px;
+  padding-left: 11px;
+}
+DIV.chat DIV.1st {
+  text-indent: -11px;
+}

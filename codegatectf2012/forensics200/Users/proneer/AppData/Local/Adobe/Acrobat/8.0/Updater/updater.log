@@ -1,0 +1,23 @@
+02/12/2012 (00:13:19) : Entering RegisterAppWithAUM() with msiHandle bd04
+02/12/2012 (00:13:19) : Entering InstallerQIsReader()
+02/12/2012 (00:13:19) :     the product code provided by the installer is {AC76BA86-1042-0000-7760-000000000003}
+02/12/2012 (00:13:19) :     this corresponds to appID acrobat8pro-ko_KR
+02/12/2012 (00:13:19) : Leaving InstallerQIsReader()
+02/12/2012 (00:13:19) : Loading AUM Integration library at path C:\Program Files\Adobe\Acrobat 8.0\Acrobat\AdobeUpdater.dll.
+02/12/2012 (00:13:20) : Successfully loaded AUM integration library
+02/12/2012 (00:13:20) : Successfully found all library entry points.  Library is valid.
+02/12/2012 (00:13:20) : Entering GetAppID()
+02/12/2012 (00:13:20) :     from within an installer context
+02/12/2012 (00:13:20) : Entering InstallerQIsReader()
+02/12/2012 (00:13:20) :     the product code provided by the installer is {AC76BA86-1042-0000-7760-000000000003}
+02/12/2012 (00:13:20) :     this corresponds to appID acrobat8pro-ko_KR
+02/12/2012 (00:13:20) : Leaving InstallerQIsReader()
+02/12/2012 (00:13:20) :     appID is acrobat8pro-ko_KR
+02/12/2012 (00:13:20) : Leaving GetAppID()
+02/12/2012 (00:13:20) : Entering InstallerQIsReader()
+02/12/2012 (00:13:20) :     the product code provided by the installer is {AC76BA86-1042-0000-7760-000000000003}
+02/12/2012 (00:13:20) :     this corresponds to appID acrobat8pro-ko_KR
+02/12/2012 (00:13:20) : Leaving InstallerQIsReader()
+02/12/2012 (00:13:20) : GetAppDispName() - appDispName is Adobe Acrobat 8 Professional - Korean
+02/12/2012 (00:13:20) : Calling AUMRegisterApplication with appID acrobat8pro-ko_KR with appDispName Adobe Acrobat 8 Professional - Korean and with appPath C:\Program Files\Adobe\Acrobat 8.0\Acrobat
+02/12/2012 (00:13:20) : AUMRegisterApplication returns => 0

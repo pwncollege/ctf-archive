@@ -1,0 +1,2 @@
+<?xml version="1.0"?>
+<BrowserInfo><Browser><Name>Microsoft Internet Explorer</Name><Path>"C:\Program Files\Internet Explorer\IEXPLORE.EXE"</Path><Resolution>0</Resolution><IsDefault>False</IsDefault><DDE><Service>IExplore</Service><TopicOpenURL>WWW_OpenURL</TopicOpenURL><ItemOpenURL>"%s",,0xffffffff,3,,,,</ItemOpenURL><TopicActivate>WWW_Activate</TopicActivate><ItemActivate>0xffffffff,0</ItemActivate></DDE></Browser><InternalBrowser><Resolution>0</Resolution><IsDefault>True</IsDefault></InternalBrowser></BrowserInfo>

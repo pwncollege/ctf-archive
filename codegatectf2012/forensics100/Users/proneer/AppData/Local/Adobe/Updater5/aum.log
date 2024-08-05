@@ -1,0 +1,45 @@
+2/12/2012 3:54:16 AM: >>> Adobe Updater Log Begin >>>
+2/12/2012 3:54:16 AM: cmdline option: -logFile = C:\Users\proneer\AppData\Local\Adobe\Updater5\aum.log
+2/12/2012 3:54:16 AM: cmdline option: -logLevel = 2
+2/12/2012 3:54:16 AM: Display Language requested = 
+2/12/2012 3:54:16 AM: Valid AppID added from global xml file = acrobat8pro-ko_KR
+2/12/2012 3:54:20 AM: Valid AppID added from PCD:  = typesupport1
+2/12/2012 3:54:20 AM: Valid AppID added from PCD:  = defaultlanguage3
+2/12/2012 3:54:20 AM: Valid AppID added from PCD:  = estoolkit2
+2/12/2012 3:54:20 AM: Valid AppID added from PCD:  = fonts1
+2/12/2012 3:54:20 AM: Valid AppID added from PCD:  = colorja1
+2/12/2012 3:54:20 AM: Valid AppID added from PCD:  = anchorservice1
+2/12/2012 3:54:20 AM: Valid AppID added from PCD:  = acrobat8
+2/12/2012 3:54:20 AM: Valid AppID added from PCD:  = extensionmanager1
+2/12/2012 3:54:21 AM: Valid AppID added from PCD:  = helpviewer1
+2/12/2012 3:54:21 AM: Valid AppID added from PCD:  = asgm2
+2/12/2012 3:54:21 AM: Valid AppID added from PCD:  = bridge2
+2/12/2012 3:54:21 AM: Valid AppID added from PCD:  = devicecentral1
+2/12/2012 3:54:22 AM: Valid AppID added from PCD:  = assetservice3
+2/12/2012 3:54:22 AM: Valid AppID added from PCD:  = stockphotos1
+2/12/2012 3:54:22 AM: Valid AppID added from PCD:  = cameraraw4
+2/12/2012 3:54:22 AM: Valid AppID added from PCD:  = sing1
+2/12/2012 3:54:22 AM: Valid AppID added from PCD:  = colormotion1
+2/12/2012 3:54:22 AM: Valid AppID added from PCD:  = winsoftlinguistics1
+2/12/2012 3:54:22 AM: Valid AppID added from PCD:  = pdfl8
+2/12/2012 3:54:22 AM: Valid AppID added from PCD:  = colornaextra1
+2/12/2012 3:54:22 AM: Valid AppID added from PCD:  = xmppanels1
+2/12/2012 3:54:22 AM: Valid AppID added from PCD:  = coloreuextra1
+2/12/2012 3:54:22 AM: Valid AppID added from PCD:  = colorphotoshop1
+2/12/2012 3:54:22 AM: Valid AppID added from PCD:  = colorcommon1
+2/12/2012 3:54:22 AM: Valid AppID added from PCD:  = photoshop10-ko_KR
+2/12/2012 3:54:23 AM: Valid AppID added from PCD:  = designsuitepremium3-ko_KR
+2/12/2012 3:54:23 AM: Valid AppID added from PCD:  = workflowautomationscripts2
+2/12/2012 3:54:23 AM: Valid AppID added from PCD:  = cmaps1
+2/12/2012 3:54:23 AM: Valid AppID added from PCD:  = versioncueclient3
+2/12/2012 3:54:23 AM: No Startup mode - likely to be launched manually.
+2/12/2012 3:54:23 AM: GetAppIDUpdates: getting available update info for AppID: acrobat8pro-ko_KR
+2/12/2012 3:54:31 AM: GetAppIDUpdates: getting .upd file: http://swupmf.adobe.com/manifest/50/win/acrobat8pro-ko_KR.upd
+2/12/2012 3:54:31 AM: GetAppIDUpdates: GetManifestProcessingError = 3
+2/12/2012 3:54:31 AM: GetAppIDUpdates: getting available update info for AppID: AdobeUpdater
+2/12/2012 3:54:32 AM: GetAppIDUpdates: getting .upd file: http://swupmf.adobe.com/manifest/50/win/AdobeUpdater.upd
+2/12/2012 3:54:32 AM: GetAppIDUpdates: GetManifestProcessingError = 3
+2/12/2012 3:54:34 AM: No manual/schedule workflow to process next
+2/12/2012 3:54:34 AM: <<< Adobe Updater Log End <<<
+
+

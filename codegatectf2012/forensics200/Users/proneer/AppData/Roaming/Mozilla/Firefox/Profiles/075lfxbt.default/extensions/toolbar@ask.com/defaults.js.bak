@@ -1,0 +1,97 @@
+/***
+ * Default Ask.com Toolbar Preferences.
+*/
+
+// Toolbar system preferences
+pref("extensions.asktb.logging-enabled", true);
+// If asktb.logging-enabled is true, then supported values for level are: all, info, debug, warn, error.
+// Use "all" to turn on all levels of debugging. Multiple specific levels can be specified by separating them with commas. ex. error,warn.
+pref("extensions.asktb.log-level", "warn,error");  // use "all" for verbose logs
+
+pref("extensions.asktb.tb-id", "toolbar@ask.com");
+pref("extensions.asktb.tb", "{TB_NAME}");  // installer populates this during install time
+pref("extensions.asktb.v", "{TB_VERSION}");
+pref("extensions.asktb.r", "1");
+pref("extensions.asktb.build", "15590"); // build system populates this
+pref("extensions.asktb.id", "{TB_GUID}");   // installer populated this GUID during install time
+pref("extensions.asktb.sa-enabled", "{TB_SA_ENABLED}");
+pref("extensions.asktb.said", "{TB_SA_GUID}");
+pref("extensions.asktb.l", "9");
+pref("extensions.asktb.cbid", "");
+pref("extensions.asktb.o", "");
+pref("extensions.asktb.distribution-type", "dis");
+pref("extensions.asktb.default-channel", "web-channel");
+pref("extensions.asktb.default-channel-url-mask", "");
+pref("extensions.asktb.qsrc", "");
+pref("extensions.asktb.locale", "");
+pref("extensions.asktb.location", ""); // Install API location value (ex: from IP). Should not be changed from original install API value.
+pref("extensions.asktb.dtid", "{TB_DTID}");
+pref("extensions.asktb.hpr-enabled", "{HPRENABLED}");
+pref("extensions.asktb.hpr-url", "{HPRURL}");
+pref("extensions.asktb.ask-browse-enabled", false);
+pref("extensions.asktb.new-tab-enabled", false);
+pref("extensions.asktb.new-tab-opt-out", false);
+pref("extensions.asktb.abar-war-enabled",true);
+pref("extensions.asktb.autofill-competitor-query-enabled", true);
+pref("extensions.asktb.autofill-text-highlight-enabled", true);
+pref("extensions.asktb.http-header-whitelist-hosts", "");
+pref("extensions.asktb.http-header-whitelist-uri", "");
+
+// Server APIs
+pref("extensions.asktb.installed-uri", "http://websearch.ask.com/installed?client=ff&tb={tb}&v={v}&r=0&build={build}&id={id}&said={said}&dtid={dtid}&browser-lang={browser-lang}");
+pref("extensions.asktb.update-uri", "http://websearch.ask.com/update?client=ff&tb={tb}&v={v}&r={r}&build={build}&cbid={cbid}&id={id}&said={said}&locale={locale}&dtid={dtid}&crumb={crumb}");
+pref("extensions.asktb.redirect-uri", "http://websearch.ask.com/redirect?client=ff&src=kw&tb={tb}&o={o}&locale={locale}&apn_uid={id}&apn_ptnrs={cbid}&apn_sauid={said}&apn_dtid={dtid}&q={query}");
+pref("extensions.asktb.redirect-uri-chrome", "http://websearch.ask.com/redirect?client=ff&amp;src=crm&amp;tb={tb}&amp;o={o}&amp;locale={locale}&amp;apn_uid={id}&amp;apn_ptnrs={cbid}&amp;apn_sauid={said}&amp;apn_dtid={dtid}&amp;q={searchTerms}"); // Note: redirect-uri-chrome has & escaped
+pref("extensions.asktb.search-plugin-suggestions-url", ""); // from update API response
+
+// Search website (Domain)
+pref("extensions.asktb.search-site-domain", "ask.com"); // all lowercase
+
+// Other Search Plugin (chrome search) data
+pref("extensions.asktb.ff-keyword-uri-default", "http://www.google.com/search?ie=UTF-8&oe=UTF-8&sourceid=navclient&gfns=1&q=");
+pref("extensions.asktb.search-plugin-file", "askcom.xml"); // askcom.xml, etc.
+pref("extensions.asktb.search-plugin-engine", "Ask.com"); // must match askcom.xml
+
+// Toolbar internal prefs
+pref("extensions.asktb.tb-macros-reg-loc", "{TB_MACRO_REG_LOC}");
+pref("extensions.asktb.update-reg-loc", "{TB_UPDATE_REG_LOC}");
+pref("extensions.asktb.fresh-install", true);  // new installs/updates are considered as "fresh" installs to trigger config updates
+pref("extensions.asktb.last-config-req", "0");
+pref("extensions.asktb.refresh-iterval", "86400000");  // 24 hours
+pref("extensions.asktb.feed-refresh-iterval", "3600000");  // 1 hour
+pref("extensions.asktb.sync-request-timeout", "5000"); // 5 seconds
+pref("extensions.asktb.overlay-reloaded-using-restart", false);
+pref("extensions.asktb.first-launch", false);
+pref("extensions.asktb.first-launch-url", "{TB_FIRST_LAUNCH_URL}");
+pref("extensions.asktb.tb-locale-changed-via-options", false);
+pref("extensions.asktb.first-restart-after-config-update", false);
+pref("extensions.asktb.apn-analytics-reporting-url-regex","http:\\/\\/rdr\\.apnanalytics\\.com\\/tbr\\/button\\.jhtml.*");
+pref("extensions.asktb.custom-command-url-regex", "http:\\/\\/.*?\\.ask\\.com\\/customize\\/command.*");
+
+//Toolbar user preferences
+pref("extensions.asktb.save-searches", true);
+pref("extensions.asktb.show-labels", true);
+pref("extensions.asktb.clear-searches-on-exit", false);
+
+// Toolbar utility preferences
+pref("extensions.asktb.maps-searches", "");
+
+// Toolbar user agent (FF3.6 and earlier), also used for HTTP header injection (all FF versions)
+pref("general.useragent.extra.asktb", "AskTb{TB_NAME}/{TB_VERSION}");
+
+pref("extensions.asktb.search-history-queries", "");
+
+//Ask Browse - Sendori
+pref("extensions.asktb.common-url-typo-regexp-arr","^(http://)?(ww|qq|wq|qw|wwq|wqw|qww|wqq|qwq|qqw|wwwq|wwqw|wqww|qwww|wwqq|wqwq|wqqw|qqww|qwwq|qwqw|wqqq|qqqw|qqwq|qwqq|qqqq|wwww)(\.)([^\.]+\..*)$||\\.(co[^m|\\s]|c[^o|\\s]m|[^c|\\s]om|cmo|mco|moc|ocm|omc)$||\\.(c.om|co.m|com.|.com)$");
+
+//ABAR war
+pref("extensions.asktb.abar-war-regex","[conduit|ask|qbyrd|search-results]\\.com");
+pref("extensions.asktb.abar-war-timeout","6000");
+
+//AUTOFILL
+pref("extensions.asktb.autofill-competitor-regex-arr",".*www\\.google\\.co.*[&|\\?|#]q=([^&]*)&?.*||.*search\\.yahoo\\.co.*[&|\\?|#]p=([^&]*)&?.*||.*www\\.bing\\.co.*[&|\\?|#]q=([^&]*)&?.*||.*search\\.conduit\\.co.*[&|\\?|#]q=([^&]*)&?.*||.*search\\.aol\\.co.*[&|\\?|#]q=([^&]*)&?.*");
+pref("extensions.asktb.autofill-limit","45");
+
+//Notification
+pref("extensions.asktb.force-show-notification",false);
+

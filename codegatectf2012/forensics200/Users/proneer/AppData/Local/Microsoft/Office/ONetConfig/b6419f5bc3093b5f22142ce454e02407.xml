@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<AppConfig Version="14.0.5596.4000" ExpireMinutes="10080" GraceMinutes="1440" GenerationDate="2/11/2012" GenerationTime="1:27 AM">
+ <URLs>
+  <Research>http://office.microsoft.com/research/query.asmx</Research>
+  <AwsTdClient>http://office.microsoft.com/download/file.aspx?AssetID=|0&amp;ax=1&amp;ctt=71&amp;origin=|0</AwsTdClient>
+  <ORedir>http://officeredir.microsoft.com/r</ORedir>
+  <SqmServer>http://sqm.msn.com/sqm/office/sqmserver.dll</SqmServer>
+  <AwsTcQuery14>http://office.microsoft.com/client/tcquery14.aspx</AwsTcQuery14>
+  <ClViewClientHelpId>http://office.microsoft.com/client/helphome14.aspx</ClViewClientHelpId>
+  <ClViewClientHome>http://office.microsoft.com/client/helphome14.aspx</ClViewClientHome>
+  <ClViewClientPreview>http://office.microsoft.com/client/helppreview14.aspx</ClViewClientPreview>
+  <ClViewClientTemplate>http://office.microsoft.com/client/helptemplate14.aspx</ClViewClientTemplate>
+  <ClViewClientSearch>http://office.microsoft.com/client/searchresults14.aspx</ClViewClientSearch>
+  <ClViewClientSearchRedir>http://office.microsoft.com/search/redir.aspx</ClViewClientSearchRedir>
+  <ClViewClientToc>http://office.microsoft.com/search/toc14.aspx</ClViewClientToc>
+  <ClViewClientUpdate>http://office.microsoft.com/search/clvupd14.aspx</ClViewClientUpdate>
+  <ClViewClientTocSync>http://office.microsoft.com/client/tocsync14.aspx</ClViewClientTocSync>
+  <AwsTcPreview>http://office.microsoft.com/search/tcpreview14.aspx</AwsTcPreview>
+  <AwsDglx2>http://office.microsoft.com/clipart/dglx2.aspx</AwsDglx2>
+  <AwsCgQuery14>http://office.microsoft.com/client/cgquery14.aspx</AwsCgQuery14>
+  <AwsCsxQuery14>http://office.microsoft.com/client/csxquery14.aspx</AwsCsxQuery14>
+  <WacAssetQuery>http://officeimages.microsoft.com/clipart/dglxasset.aspx?AssetID={0}&amp;LCID={1}&amp;app=waw&amp;ver=14</WacAssetQuery>
+  <WacSeeSimilarQuery>http://office.microsoft.com/clipart/seesimilardglx.aspx</WacSeeSimilarQuery>
+ </URLs>
+</AppConfig>

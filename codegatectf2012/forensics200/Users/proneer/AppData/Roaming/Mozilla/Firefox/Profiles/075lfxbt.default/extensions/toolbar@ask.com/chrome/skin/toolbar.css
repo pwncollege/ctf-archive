@@ -1,0 +1,291 @@
+/* Copyright (C) 2008-2010 APN, LLC. All rights reserved */ /* Toolbar */
+@
+namespace html  "http: //www.w3.org /1999/xhtml";
+
+toolbar#asktb {
+	padding: 0px;
+	margin: 0;
+	-moz-binding: url("chrome://asktoolbar/content/bindings.xml#toolbar");
+}
+
+toolbarbutton#asktb-btn-service-provider {
+	padding: 0 6px 0 10px;
+	margin: 0;
+}
+
+hbox#asktb-searchbox-border-container {
+	border: #8e8e8e 2px solid;
+}
+
+textbox#asktb-searchbox {
+	min-width: 150px;
+	width: 200px;
+	height: 20px !important;
+	padding: 0 0 1px 0;
+	margin: 0px;
+	-moz-binding: url("chrome://asktoolbar/content/bindings.xml#asktb-searchbox");
+}
+
+textbox#asktb-searchbox>.autocomplete-textbox-container {
+	
+}
+
+textbox#asktb-searchbox>.autocomplete-result-popupset {
+	max-width: 0px !important;
+	width: 0px !important;
+	min-width: 0% !important;
+	min-height: 0% !important;
+}
+	
+toolbarbutton#asktb-default-channel {
+	padding: 1px 0 0 0;
+	margin: 0 4px 0 -1px;
+	-moz-appearance: none;
+	background: none;
+	border: none;
+	position: relative !important;
+	width: 4px !important;
+}
+
+toolbarbutton#asktb-searchbtn {
+	margin: 0px;
+	padding: 0px;
+}
+
+toolbarbutton#asktb-searchbtn:hover {
+	border: none;
+	-moz-appearance: none;
+	margin: 0px;
+	padding: 0px;
+	cursor: pointer;
+}
+
+splitter#asktb-splitter {
+	background-color: transparent;
+	background-image: url('chrome://asktoolbar/skin/gripper.png');
+	background-repeat: no-repeat;
+	margin-right: 2px;
+	margin-left: 2px;
+	background-position: center center;
+	border: none;
+	padding: 0px;
+	width: 16px;
+}
+
+menuitem.asktb-feed-item {
+	padding: 1px 0 0 0;
+}
+
+menupopup#asktb-btn-news-menu menuitem.asktb-feed-item  image {
+    height: 16px;
+    width: 16px;
+}
+menupopup#asktb-btn-games-menu menuitem.asktb-feed-item  image {
+	height: 30px;
+	width: 30px;
+}
+
+toolbaritem#asktb-options-overflow-container {
+	padding: 0 2px 0 0;
+	margin: 0px;
+}
+
+toolbaritem#asktb-app-buttons>toolbarbutton {
+	margin-right: 1px;
+	margin-left: 1px;
+}
+
+/************ Options ********************************************************/
+label.asktb-pref-header {
+	font-weight: bolder;
+	font-size: 12px;
+}
+
+text.inline-row-text {
+	margin-top: 4px;
+}
+
+text.hyperlink {
+	cursor: pointer;
+	color: blue;
+	text-decoration: underline;
+}
+
+text.bold-hyperlink {
+	cursor: pointer;
+	color: blue;
+	text-decoration: underline;
+	font-weight: bold;
+}
+
+toolbar[mode="full"] .toolbarbutton-1,
+toolbar[mode="full"] .toolbarbutton-menubutton-button {
+	min-width: 16px;
+}
+
+#tag_update {
+	display: block;
+	border-left: 1px solid #373737;
+	border-right: 1px solid #373737;
+	border-bottom: 1px solid #373737;
+	position: absolute;
+	z-index: 1;
+}
+
+#tag_update ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+#tag_update li {
+	display: block;
+	clear: both;
+}
+
+#tag_update li:hover {
+	color: #fff;
+	background-color: #373737;
+	background-image: none;
+}
+
+/************Toolbar items spacing and styling *******************************/
+toolbarbutton#asktb-default-channel>.toolbarbutton-icon {
+	margin: 0px;
+	padding: 0px;
+}
+
+toolbarbutton#asktb-default-channel>.toolbarbutton-menubutton-dropmarker {
+	margin: 0px;
+	padding: 0px;
+}
+
+toolbarbutton#asktb-item-options>.toolbarbutton-menubutton-dropmarker {
+	padding: 0 3px 0 3px;
+}
+
+toolbarbutton#asktb-item-options>.toolbarbutton-text {
+	padding: 0 0 0 20px;
+}
+
+toolbarbutton>.toolbarbutton-text {
+	margin: 0px;
+	padding: 0 0 1px 0;
+}
+
+toolbarbutton>.toolbarbutton-menu-dropmarker {
+	margin: 0px;
+	padding: 0px 3px 0px 3px;
+}
+
+toolbarbutton#asktb-btn-service-provider>.toolbarbutton-icon {
+	margin: 0px 3px 0px 0px;
+}
+
+/************XBL Bindings and Styling for Search Suggestions******************/
+.ssMenuitem {
+	height: 20px;
+	margin: 0px;
+	padding: 0 0 0 35px;
+}
+
+.ssTextEntered { /*class for controlling the ss text -entered in text box*/
+	color: #000000;
+	padding: 0;
+	margin: 0;
+}
+
+.ssTextRemaining { /*class for controlling the ss text -suggestion*/
+	color: #000000; 
+	font-weight: bold;
+	padding: 0;
+	margin: 0;
+	overflow: hidden;
+}
+
+.ssTextHeader { /*class for controlling the ss text header - History/ Suggestions etc*/
+	color: grey;
+	font-size: xx-small;
+}
+
+hbox[highlightOn="true"] .ssMenuitem {
+	background: black url('chrome://asktoolbar/skin/bg.png') repeat-x;
+}
+
+hbox[highlightOn="true"] .ssTextEntered,
+hbox[highlightOn="true"] .ssTextRemaining,
+hbox[highlightOn="true"] .ssTextHeader {
+	color: white;
+}
+
+hbox.asktb-ssMenuitem {
+	-moz-binding: url("chrome://asktoolbar/content/ss-popup-bindings.xml#ssMenuitem");
+}
+
+.asktb-ssPopup {
+	-moz-binding: url("chrome://asktoolbar/content/ss-popup-bindings.xml#ssPopup");
+	padding: 0;
+	border: 1px solid black;
+	-moz-appearance: none;
+	overflow: auto;
+	background: white;
+}
+
+.asktb-sh-listbox {
+	-moz-appearance: none;
+	border:none;
+	padding:0;
+	overflow: auto;
+	margin:0;
+}
+.asktb-Listitem {
+	-moz-binding: url("chrome://asktoolbar/content/ss-popup-bindings.xml#Listitem");
+}
+
+.asktb-suggestions-popup-link {
+	font-size: xx-small;
+    margin-left: 5px;
+    text-decoration: underline;
+    color: blue;
+    cursor: pointer;
+}
+/************Widget popup window styling *************************************/
+.asktb-popup-window {
+    -moz-appearance: none;
+    padding:0;
+    margin:0;
+    border: 1px solid grey;
+    background-color: white;
+}
+.asktb-popup-titlebar {
+    background: grey url('chrome://asktoolbar/skin/titlebar_bg.png') repeat-x;
+    color: black;
+}
+.asktb-popup-titlebar-label {
+    padding:3px 2px 0px 2px;
+    font-weight: bold;
+    color:black;    
+}
+.asktb-popup-titlebar-close {
+    padding:3px 4px 3px 3px;
+}
+
+
+/*** ONLY FOR DEFAULT VANILLA CONFIG , for versions >= 1.8.x *****/
+toolbaritem#asktb-app-buttons {
+    display: none;	
+}
+splitter#asktb-splitter {
+	display: none;	
+}
+
+/***********Dynamic buttons*****************************************************/
+.atb-type-dynamic-ticker {
+	-moz-binding: url("chrome://asktoolbar/content/button-bindings.xml#menu-button-ticker-binding");
+}
+
+.atb-ticker-link {
+	margin-top: 0px;
+	text-decoration:none;
+	cursor: pointer;
+}

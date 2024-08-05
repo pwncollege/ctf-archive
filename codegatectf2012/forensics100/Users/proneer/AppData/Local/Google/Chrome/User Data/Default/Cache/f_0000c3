@@ -1,0 +1,323 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="google-site-verification" content="cC-8xOerZ3opiLx9VloUCzc6SgMfOZHYihJzWA19-KI" />
+<meta name="msvalidate.01" content="79C78EB33B8812273BEAA273668E9D92" />
+<title>SANS Computer Forensics Training, Incident Response</title>
+
+
+<meta name="keywords" content="computer forensics training, Rob Lee, sans forensics" />
+<meta name="description" content="SANS Computer Forensics Training Community: discover computer forensic tools and techniques for e-Discovery, investigation and incident response." />
+<link rel="canonical" href="http://computer-forensics.sans.org/" />
+<link rel="stylesheet" href="/css/design/styles" type="text/css" />
+<link rel="stylesheet" href="/css/site_selector" type="text/css" />
+
+<link rel="stylesheet" href="/css/slider" type="text/css" media="screen, projection" />
+<link rel="stylesheet" href="/css/layouts" type="text/css" media="screen, projection, print" />
+
+
+
+<script src="/js/jquery_1.2.6" type="text/javascript"></script>
+<script src="/js/slideshow" type="text/javascript"></script>
+<script src="/js/jquery-1.2.6" type="text/javascript"></script>
+<script src="/js/jquery.localscroll-1.2.5" type="text/javascript"></script>
+<script src="/js/jquery.scrollto-1.3.3" type="text/javascript"></script>
+<script src="/js/jquery.serialscroll-1.2.1" type="text/javascript"></script>
+<script src="/js/slider" type="text/javascript"></script>
+<link rel="stylesheet" type="text/css" href="/css/site" />
+
+<!-- Added Cross Domain Customizations 9.23.11 DB -->
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-6384910-4']);
+  _gaq.push(['_trackPageview']); 
+  _gaq.push(['_setLocalRemoteServerMode']);
+  _gaq.push(['b._setAccount', 'UA-25324117-2']);
+  _gaq.push(['b._setDomainName', 'sans.org']);
+  _gaq.push(['b._addIgnoredRef', 'sans.org']);   
+  _gaq.push(['b._trackPageview']);
+  
+  
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+
+</head>
+
+<body>
+    
+<div class="bodywrap featurewrap homepage">
+<div class="container default-navigation-all">
+
+
+<!-- header -->
+<div class="header">
+
+<a href="/"><img src="/images/design-site/logo.png" alt="SANS Computer Forensics Training, Incident Response" class="logo" /></a>
+
+<ul class="site-selector">
+ <li class="site-switcher"><a href="#"><span class="hidden">SANS Site Network</span></a>
+  <ul class="sites">
+    <li class="current-site">Current Site</li>
+    <li class="forensics "><a href="http://computer-forensics.sans.org"><img src="/images/design/custom/site-selector/site-icons/forensics.png" alt="forensics" />Computer Forensics</a></li>
+   <li class="selector-help">Choose a different site <a href="/help/site-network"><span class="hidden">Help</span></a></li><li class="sans "><a href="http://www.sans.org"><img src="/images/design/custom/site-selector/site-icons/sans.png" alt="sans" />Training</a></li>
+<li class="giac "><a href="http://www.giac.org"><img src="/images/design/custom/site-selector/site-icons/giac.png" alt="giac" />Certification</a></li>
+<li class="isc "><a href="http://isc.sans.org"><img src="/images/design/custom/site-selector/site-icons/isc.png" alt="isc" />Internet Storm Center</a></li>
+<li class="sti "><a href="http://www.sans.edu"><img src="/images/design/custom/site-selector/site-icons/sti.png" alt="sti" />Cyber Security Graduate School</a></li>
+<li class="awareness "><a href="http://www.securingthehuman.org"><img src="/images/design/custom/site-selector/site-icons/awareness.png" alt="awareness" />Security Awareness Training</a></li>
+<li class="pentest "><a href="http://pen-testing.sans.org"><img src="/images/design/custom/site-selector/site-icons/pentest.png" alt="pentest" />Penetration Testing</a></li>
+<li class="audit "><a href="http://it-audit.sans.org"><img src="/images/design/custom/site-selector/site-icons/audit.png" alt="audit" />IT Audit</a></li>
+<li class="ssi last"><a href="http://software-security.sans.org"><img src="/images/design/custom/site-selector/site-icons/ssi.png" alt="ssi" />Software Security</a></li>
+  </ul>
+ </li>
+</ul>
+
+<div class="top-menu">
+<!-- Begin Google Site Search -->
+<div class="search-form">
+<form action="https://computer-forensics.sans.org/search/results" method="post" id="cse-search-box">
+<input type="hidden" name="_xsrf_token" value="2ecffb5ef7db8a0bece1368909bd7832a1b618ee"  />
+<input type="text" id="q" name="q" value="" class="search-input" /><input id="search-button" type="image" title="Search" name="sa" value="Search" class="search-submit" src="/images/icons/custom/search.png" /><input type="text" id="_website" name="_website" value="" size="1" onchange="this.value=null" /></form>
+<script type="text/javascript" src="http://www.google.com/cse/brand?form=cse-search-box&lang=en"></script>
+</div><!-- / .search-form -->
+
+<div class="clear"></div>
+    
+<ul class="dropdown">
+ <!-- <li class="root-item active"><a href="#">Active</a> -->
+ <li class="root-item "><a href="/community">Community</a>
+ <ul>
+    <li class="first"><a href="/blog">Blog</a></li>
+    <li><a href="/community/challenges">Challenges</a></li>
+    <li><a href="/community/links">Links</a></li>
+    <li><a href="/community/downloads">SIFT Kit / Downloads</a></li>
+    <li><a href="/community/summits">Summit Archives</a></li>
+    <li><a href="/community/webcasts">Webcasts</a></li>
+    <li><a href="/community/whitepapers">Whitepapers</a></li>
+	<li class="last"><a href="/community/lethal_forensicator">SANS Lethal Forensicator Coin</a></li>
+ </ul>
+ </li>
+ <li class="root-item "><a href="/courses">Courses</a>
+    <ul>
+            <li class="first"><a href="/courses/description/computer-forensic-investigations-windows-in-depth-1207">Windows Forensics<br />FOR408</a></li>
+            <li><a href="/courses/description/advanced-computer-forensic-analysis-incident-response-98">Advanced Forensics<br />FOR508</a></li>
+            <li><a href="/courses/description/advanced-filesystem-recovery-memory-forensics-141">Memory Forensics<br />FOR526</a></li>
+            <li><a href="/courses/description/network-forensics-1227">Network Forensics<br />FOR558</a></li>
+            <li><a href="/courses/description/mobile-device-forensics-1297">Mobile Forensics<br />FOR563</a></li>
+            <li><a href="/courses/description/reverse-engineering-malware-malware-analysis-tools-techniques-54">Malware Analysis<br />FOR610</a></li>
+        <li><a href="/media/courses/forensics_curriculum.pdf">Forensics Brochure</a>
+    <li><a href="/sift-kit/essentials">SIFT Toolkit - Essentials</a></li>
+    <li><a href="/sift-kit/advanced">SIFT Toolkit - Advanced</a></li>
+    <li><a href="/courses/assessment">Free Assessment</a></li>
+    <li class="last"><a href="/events">Register Now</a></li>
+    </ul>
+ </li>
+ 
+ <li class="root-item "><a href="/events">Events</a>
+ <ul>
+  <li class="first"><a href="/events">Forensic Events List</a></li>
+  <li class="last"><a href="/events/summits/">Summits</a></li>
+ </ul>
+ </li>
+ <li class="root-item "><a href="/certification">Certification</a>
+  <ul>
+  <li class="first"><a href="/certification/gcfe">GCFE - Forensic Examiner</a></li>
+  <li><a href="/certification/gcfa">GCFA - Forensic Analyst</a></li>
+  <li><a href="/certification/grem">GREM - Malware Analyst</a></li>
+  <li><a href="/certification/analysts">Certified Analysts</a></li>
+  <li><a href="/certification/ethics">GIAC Code of Ethics</a></li> 
+  <li class="last"><a href="http://www.giac.org">GIAC Homepage</a></li>
+  </ul>
+ </li>
+ <li class="root-item "><a href="/instructors">Instructors</a>
+ <ul>
+    <li class="first"><a href="/instructors">SANS Instructors</a></li>
+    <li class="last"><a href="/instructors/author">Author Statement</a></li>
+ </ul>
+ </li>
+ <li class="root-item "><a href="/about">About</a>
+ <ul>
+  <li class="first"><a href="/about">About</a></li>
+  <li class="last"><a href="/about/press">Press Room</a></li>
+ </ul>
+ </li>
+</ul><!-- end .dropdown -->
+</div><!-- end .top-menu -->
+<div class="clear"></div><!-- end .clear -->
+</div><!-- end .header-->
+</div><!--  end .container -->
+
+    <!-- Header -->
+    <div class="container">
+ 
+        
+    <!-- slider -->
+<div id="slider">
+
+  <!-- element with overflow applied -->
+  <div class="scroll">
+    <!-- the element that will be scrolled during the effect -->
+    <div class="scroll-container">
+      <!-- our individual panels -->
+        
+                        <div class="panel" id="sample">
+                <div id="slideshow">
+<img src="/images/tab-slider/image-1.jpg" alt="" class="active" />
+<img src="/images/tab-slider/image-2.jpg" alt="" />
+<img src="/images/tab-slider/image-3.jpg" alt="" />
+</div><!-- / #slideshow -->                </div>    </div>
+  </div>
+
+
+
+<div id="slider-shadow"></div>
+
+</div>
+<!-- /slider -->
+ 
+    
+    </div><!-- end .container -->
+    <!--/ header -->
+
+
+<!-- /container -->
+<div class="container page ">
+
+
+  <div class="register-now">
+<p>Looking to purchase SANS digital forensics training?</p>
+<a class="register-button" href="/events/"><span>&nbsp;</span></a>
+</div><div id="homepage-boxes">
+<div class="alt-bg box first-box">
+<h3><a href="/about/#mission">Mission Statement</a></h3>
+<p>Every organization will eventually deal with cyber-crime. Fraud, intrusion, insider threats, phishing and other cyber-crimes are now a fact of life. If you are an IT or law enforcement professional and don&#39;t know how to look for and sort out these cases, your skills are becoming less valuable every day.</p>
+<a href="/about#mission" class="more-link">Read More</a>
+</div><!-- / alt-bg box -->
+
+<div class="alt-bg box second-box">
+<h3><a href="/community">Community Resources</a></h3>
+<p>The SANS Computer Forensics and e-Discovery Community offers digital forensics professionals an opportunity to learn, dicuss, and share current developments in the field. It also provides information regarding forensics training, certification, and events.</p>
+<a href="/community" class="more-link">Read More</a>
+</div><!-- / alt-bg box -->
+
+<div class="alt-bg box third-box">
+<h3><a href="/courses">Course Overview</a></h3>
+<p>Unpatched, unprotected computers connected to the Internet are compromised in less than 3 days. The Computer Forensics, Investigation and Response course from SANS will teach you techniques and tools for sucessful forensics investigations in a hands-on and practical way; for both Windows and Linux</p>
+<a href="/courses" class="more-link">Read More</a>
+</div><!-- / alt-bg box -->
+
+<div class="alt-bg box fourth-box">
+<h3><a href="/instructors/author" class="more-link">Author Statement</a></h3>
+<img class="news-headline" src="/images/design-site/news-headline.jpg" alt="Newspaper Headline" title="Newspaper" />
+<p class="quote">"Headlines similar to these are now a reality as former students have emailed me regularly about how they were able to use their forensic skills in very real situations."<br />
+<span class="quotee">- Rob Lee, SANS Faculty Fellow</span></p>
+<a href="/instructors/author" class="more-link">Read More</a>
+</div><!-- / alt-bg box -->
+</div><!-- / #homepage-boxes -->
+
+<div class="clear"></div><!-- / .clear --><div class="text-center">
+<a href="https://www.sans.org/info/94074/cf12d5bcdc03f0444d97707875923341hgs87" target="_top">
+    <img src="https://www.sans.org/images/banners/10836.jpg" alt="SANS Secure Singapore 2012" title="SANS Secure Singapore 2012" height="90" width="785" border="0" />
+</a></div> 
+  <div class="clear"></div>
+</div>
+<!-- /container -->
+<!-- Bottom Content -->
+<div class="bottom-content">
+<div class="container">
+
+<div class="footer-column" style="margin-right:10px">
+<h3>Latest Blog Posts</h3>
+        <p><a href="/blog/2012/02/10/digital-forensics-case-leads-android-malwarechrome-browser-bugs-and-it-guy-shoots-daughters-laptop">Digital Forensics Case Leads: Android Malware,Chrome Browser Bugs and IT gu [...]</a><br />
+        February 10, 2012 - 4:34 PM
+</p>
+            <p><a href="/blog/2012/02/02/digital-forensics-case-leads-the-new-forensics-the-cybermilitia-and-bill-gates-gets-behind-open-source">Digital Forensics Case Leads: The New Forensics, The CyberMilitia and Bill  [...]</a><br />
+        February 02, 2012 - 6:45 PM
+</p>
+            <p><a href="/blog/2012/01/25/digital-forensic-sifting-colorized-super-timeline-template-for-log2timeline-output-files">Digital Forensic SIFTing: Colorized Super Timeline Template for Log2timelin [...]</a><br />
+        January 25, 2012 - 6:02 AM
+</p>
+    </div>
+
+<div class="footer-column" style="margin-right:30px">
+<h3>Latest Tweets</h3>
+            <p><a href="http://twitter.com/sansforensics/statuses/168493086660509697">@sansforensics: Perl Script to Look for Meterpreter with Vola [...]</a><br />
+            February 12, 2012 - 12:34 AM</p>
+                    <p><a href="http://twitter.com/sansforensics/statuses/168405039252115457">@sansforensics: @djcoax Yes... looks like it might be October [...]</a><br />
+            February 11, 2012 - 6:44 PM</p>
+                    <p><a href="http://twitter.com/sansforensics/statuses/168095099832639488">@sansforensics: RT @robtlee: RT @syngress: Windows Forensic A [...]</a><br />
+            February 10, 2012 - 10:12 PM</p>
+        </div>
+
+<div class="footer-column">
+<h3>Latest Papers</h3>
+    <p><a href="/community/papers/gcfa/grow-forensic-tools-taxonomy-python-libraries-helpful-forensic-analysis_6879">Grow Your Own Forensic Tools: A Taxonomy of Python Libraries Helpful for Forensic Analysis</a><br />
+    By Terrence OConnor</p>
+    <p><a href="/community/papers/gcfa/integrating-forensic-investigation-methodology-ediscovery_5088">Integrating Forensic Investigation Methodology into eDiscovery</a><br />
+    By Colin Chisholm</p>
+    <p><a href="/community/papers/gcfa/mastering-super-timeline-log2timeline_5028">Mastering the Super Timeline With log2timeline</a><br />
+    By Kristinn Gudjonsson</p>
+</div>
+<div class="clear"></div>
+<div class="footer-quote-box">
+    <p>"This is awesome! We're seeing details that most people don't even know exist."<br />- John Wright, Info Tech, Inc.</p>
+    <p>"Rob is great, just like all of the other SANS instructors I've had."<br />- Chris O'Keefe, The Community Preservation Corp</p>
+    <p>"This course is valuable to Law Enforcement professionals that conduct computer crime investigations."<br />- Reggie Harris, Federal Agent - DPE, OIG</p>
+</div>
+
+</div>
+</div><!-- end .bottom-content -->
+<!-- Footer -->
+<div id="footer">
+<div class="container">
+<img src="/images/design-site/logo-footer.png" alt="SANS Computer Forensics Training, Incident Response" class="logo-footer" />
+
+<ul class="site-selector">
+ <li class="site-switcher"><a href="#"><span class="hidden">SANS Site Network</span></a>
+  <ul class="sites">
+    <li class="current-site">Current Site</li>
+    <li class="forensics "><a href="http://computer-forensics.sans.org"><img src="/images/design/custom/site-selector/site-icons/forensics.png" alt="forensics" />Computer Forensics</a></li>
+   <li class="selector-help">Choose a different site <a href="/help/site-network"><span class="hidden">Help</span></a></li><li class="sans "><a href="http://www.sans.org"><img src="/images/design/custom/site-selector/site-icons/sans.png" alt="sans" />Training</a></li>
+<li class="giac "><a href="http://www.giac.org"><img src="/images/design/custom/site-selector/site-icons/giac.png" alt="giac" />Certification</a></li>
+<li class="isc "><a href="http://isc.sans.org"><img src="/images/design/custom/site-selector/site-icons/isc.png" alt="isc" />Internet Storm Center</a></li>
+<li class="sti "><a href="http://www.sans.edu"><img src="/images/design/custom/site-selector/site-icons/sti.png" alt="sti" />Cyber Security Graduate School</a></li>
+<li class="awareness "><a href="http://www.securingthehuman.org"><img src="/images/design/custom/site-selector/site-icons/awareness.png" alt="awareness" />Security Awareness Training</a></li>
+<li class="pentest "><a href="http://pen-testing.sans.org"><img src="/images/design/custom/site-selector/site-icons/pentest.png" alt="pentest" />Penetration Testing</a></li>
+<li class="audit "><a href="http://it-audit.sans.org"><img src="/images/design/custom/site-selector/site-icons/audit.png" alt="audit" />IT Audit</a></li>
+<li class="ssi last"><a href="http://software-security.sans.org"><img src="/images/design/custom/site-selector/site-icons/ssi.png" alt="ssi" />Software Security</a></li>
+  </ul>
+ </li>
+</ul>
+
+<div class="latest-icons">
+<a href="http://twitter.com/sansforensics"><img src="/images/design/custom/icons/twitter-icon.png" alt="Twitter" /></a>
+<a href="https://www.facebook.com/pages/SANS-Institute/173623382673767"><img src="/images/design/custom/icons/facebook-icon.png" alt="Facebook" /></a>
+<a href="http://computer-forensics.sans.org/blog/feed/"><img src="/images/design/custom/icons/rss-icon.png" alt="RSS" /></a>
+</div><!-- end .latest-icons -->
+
+<div class="bottom-nav align-right">
+<ul>
+ <li><a href="/community/">Community</a></li>
+ <li><a href="/courses">Courses</a></li>
+ <li><a href="/events/">Events</a></li>
+ <li><a href="/certification/">Certification</a></li>
+ <li class="last"><a href="/instructors">Instructors</a></li>
+</ul>
+<p class="copyright align-right">&copy; 2008 - 2012 The SANS&#8482; Institute</p>
+</div><!-- end .bottom-nav align-right-->
+</div><!-- end .container-->
+</div><!-- end .footer-->
+
+</div><!-- end .body -->
+
+
+</body>
+</html>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Activation_Service_Users>
+<Publishers>
+<Publisher>
+<Name>Adobe</Name>
+<Products>
+<Product>guid={2E4528EC-5ACB-4D19-98DD-6CC3594EB1A1};lang=ALL</Product>
+<Product>guid={AC76BA86-1042-0000-7760-000000000003};lang=jo_KR</Product>
+<Product>guid={AC76BA86-1042-0000-7760-000000000003};lang=ko_KR</Product>
+</Products>
+</Publisher>
+</Publishers>
+</Activation_Service_Users>

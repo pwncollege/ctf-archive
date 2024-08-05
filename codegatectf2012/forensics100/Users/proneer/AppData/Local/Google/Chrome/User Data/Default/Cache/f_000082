@@ -1,0 +1,642 @@
+﻿/// <reference path="jquery-1.3.2-vsdoc2.js" />
+
+$(document).ready(function() {
+    var title = document.title;
+
+    // Loading Div 생성
+    makeLoadingDiv();
+
+    // 모든 Ajax 작동시 로딩중 표시
+    $("#divLoading").ajaxStart(function() {
+        title = document.title;
+        var width = $(this).width();
+        var height = $(this).height();
+
+        nowScroll = getNowScroll();
+        nowSize = getClientSize();
+
+        var left = nowSize.X / 2 + nowScroll.X;
+        var top = nowSize.Y / 2 + nowScroll.Y;
+
+        $(this).css({ "left": left, "top": top });
+        // html 을 설정해 줌으로써 IE 에서도 flash 가 항상 새로 start 될수 있도록 한다.
+        $(this).html("<object classid='clsid:D27CDB6E-AE6D-11cf-96B8-444553540000' codebase='http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=version=9,0,0,0' width='100%' id='loadingLarge' height='100%' ><param name='movie' value='" + __picsUrl + "/os2/flash/newLoadingSmall.swf'/><param name='FlashVars' value='false'/><param name='quality' value='best'/><param name='menu' value='false'/><param name='wmode' value='transparent'/><param name='allowScriptAccess' value='always'/><!--[if !IE]> <--><object type='application/x-shockwave-flash' data='" + __picsUrl + "/os2/flash/newLoadingSmall.swf' name='loadingLarge' width='100%' height='100%' allowScriptAccess='always' menu='false' scale='noscale' flashvars='false'  wmode='transparent'/><!--[if !IE]> <--></object><!--> <![endif]--></object>");
+        $(this).show();
+    });
+
+    // 모든 Ajax 작동 종료시 로딩중 숨김
+    $("#divLoading").ajaxStop(function() {
+        $(this).hide();
+        document.title = title;
+    });
+});
+
+ // 전역 Script Error 처리
+window.onerror = function(message, url, line) {
+	gWriteScriptError(message, url, line);
+	//return true;  // Front 에서도 에러가 보여야 하므로 주석을 해지하면 안됨
+}
+
+ // Script Error Write
+ function gWriteScriptError(message, url, line) {
+ 	if (message != '' && url != '') {
+ 		//alert("Error: " + message + "url:" + url + "line: " + line);
+ 		var img = new Image();
+
+ 		var errText = "[os2pcid=" + $.cookie("ospcid") + "]"
+								+ ",\t\n[message=" + message + "]"
+								+ ",\t\n[url=" + url + "]"
+								+ ",\t\n[line=" + line + "]"
+
+ 		var gFindingUrl;
+ 		
+ 		if (__findingUrl != null && __findingUrl != 'undefined') {
+ 			gFindingUrl = __findingUrl;
+ 		}
+ 		else {
+ 			gFindingUrl = "http://finding.about.co.kr";
+ 		}
+ 		
+ 		img.src = gFindingUrl + "/Common/ScriptErrorLog/WriteLog.aspx?errText=" + errText;
+ 	}
+ }
+
+
+// 실제로 class 를 page-loading 으로 적는 것으로는 적용이 안되기 때문에 class의 내용을 inline style 로 적었음.
+function makeLoadingDiv() {
+	if (document.getElementById("divLoading") == null) {
+		var str = '';
+		str += "<div id='divLoading' class='page-loading' style='z-index:1002;width:218px;height:50px;margin-left:-109px;text-align:center;position:absolute;'>";
+		// 내용은 ajaxStart 에서 설정하는 것으로 수정
+		// 내용을 바꾸지 않으면 IE 에서 Flash 가 새로 시작하지 않는 현상 때문
+		//str += "<object classid='clsid:D27CDB6E-AE6D-11cf-96B8-444553540000' codebase='http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=version=9,0,0,0' width='100%' id='loadingLarge' height='100%' ><param name='movie' value='" + __picsUrl + "/os2/flash/newLoadingSmall.swf'/><param name='FlashVars' value='false'/><param name='quality' value='best'/><param name='menu' value='false'/><param name='wmode' value='transparent'/><param name='allowScriptAccess' value='always'/><!--[if !IE]> <--><object type='application/x-shockwave-flash' data='" + __picsUrl + "/os2/flash/newLoadingSmall.swf' name='loadingLarge' width='100%' height='100%' allowScriptAccess='always' menu='false' scale='noscale' flashvars='false'  wmode='transparent'/><!--[if !IE]> <--></object><!--> <![endif]--></object>";
+		str += "</div>";
+
+		$("body").append(str);
+		$("#divLoading").hide(); 		// div tag 안에서 display:none 을 했을 경우에는 최초 ajax 호출 시에 플래시기 안보인다.
+	}
+}
+
+function imageOver(imgs) {
+	imgs.src = imgs.src.replace("off.gif", "on.gif");
+}
+function imageOut(imgs) {
+	imgs.src = imgs.src.replace("on.gif", "off.gif");
+}
+
+
+// 현재 스크롤 위치 가져오기
+var getNowScroll = function() {
+
+	var de = document.documentElement;
+	var b = document.body;
+	var now = {};
+
+	now.X = document.all ? (!de.scrollLeft ? b.scrollLeft : de.scrollLeft) : (window.pageXOffset ? window.pageXOffset : window.scrollX);
+	now.Y = document.all ? (!de.scrollTop ? b.scrollTop : de.scrollTop) : (window.pageYOffset ? window.pageYOffset : window.scrollY);
+
+	return now;
+}
+
+getClientSize = function() {
+	var myWidth = 0, myHeight = 0;
+	var now = {};
+	
+	if (typeof (window.innerWidth) == 'number') {
+		//Non-IE
+		myWidth = window.innerWidth;
+		myHeight = window.innerHeight;
+	} else if (document.documentElement &&
+      (document.documentElement.clientWidth || document.documentElement.clientHeight)) {
+		//IE 6+ in 'standards compliant mode'
+		myWidth = document.documentElement.clientWidth;
+		myHeight = document.documentElement.clientHeight;
+	} else if (document.body && (document.body.clientWidth || document.body.clientHeight)) {
+		//IE 4 compatible
+		myWidth = document.body.clientWidth;
+		myHeight = document.body.clientHeight;
+	}
+	
+	now.X = myWidth;
+	now.Y = myHeight;
+
+	return now;
+}
+
+function commonAjaxErrorHandler(status, statusText) {
+	//alert(status + ":" + statusText);
+	alert('현재 서비스가 원활하지 않습니다. 잠시 후 다시 시도해주시기 부탁드립니다. 감사합니다');
+	//window.top.location.href = '에러페이지.htm';
+}
+
+// 검색없음 Html String을 반환한다.
+getNoneString = function()
+{
+	var none = "";
+	none += "<table id='None' summary='제품 목록' class='prod-list'>";
+	none += "	<colgroup>";
+	none += "		<col width='30'>";
+	none += "		<col width='120'>";
+	none += "		<col>";
+	none += "		<col width='63'>";
+	none += "		<col width='160'>";
+	none += "	</colgroup>";
+	none += "	<tbody>";
+	none += "		<tr class='lastLine'>";
+	none += "			<td colspan='5'>";
+	none += "				<p class='list-none'>";
+	none += "					<span>검색결과</span>가 없습니다.";
+	none += "				</p>";
+	none += "			</td>";
+	none += "		</tr>";
+	none += "	</tbody>";
+	none += "</table>";
+
+	return none;
+}
+
+
+getListHeader = function(listingType)
+{
+	if (listingType.toLowerCase() == "sublist" || listingType.toLowerCase() == "list") {
+		return listHeader;
+	}
+	else if (listingType.toLowerCase() == "text") {
+		return textHeader;
+	}
+	else {
+		return null;
+	}
+}
+
+// 3자리마다 콤마 찍어주기
+function setComma(num) {
+	if (isNaN(num))
+		return "";
+
+	var strNum = num.toString();
+	for (var i = 0; i < strNum.length - 1; i++) {
+		if (strNum.charAt(i) != "0")
+			break;
+	}
+
+	if (i == strNum.length)
+		return "";
+
+	strNum = strNum.substr(i);
+	var retString = "";
+	var groupStartIndex = 0;
+	for (i = strNum.length % 3 == 0 ? 3 : strNum.length % 3; i < strNum.length; i = i + 3) {
+		retString = retString + strNum.substr(groupStartIndex, i - groupStartIndex) + ",";
+		groupStartIndex += (i - groupStartIndex);
+	}
+
+	retString = retString + strNum.substr(groupStartIndex);
+	return retString;
+}
+
+// 3자리마다 콤마 찍어주기
+var gSetComma = function(num) {
+	return setComma(num);
+}
+
+
+$.fn.rotatepN = function(options)
+{
+	var settings = $.extend({
+		list: 'li',
+		items: 'table.prod-listn',
+		buttons: {
+			prev: 'p.prod-prev a',
+			next: 'p.prod-next a'
+		},
+		visible: 3,
+		lastVisible: 'last',
+		setIndex: 0,
+		OnIndexChanged: null
+	}, options);
+	return this.each(function()
+	{
+		var self = this,
+						list = $(settings.list, self),
+						items = $(settings.items, list),
+						buttons = {
+							prev: $(settings.buttons.prev, this),
+							next: $(settings.buttons.next, this)
+						};
+
+		var maxIndex = Math.ceil(items.length / settings.visible);
+
+		init();
+		function move(direction)
+		{
+			var index = 0;
+
+			switch (direction)
+			{
+				case 'prev': // 뒤쪽 화살표
+					index = ++settings.setIndex;
+					// 마지막 셋트를 지난 경우 첫번째 셋트로 돌림.
+					if (index == maxIndex)
+					{
+						index = 0;
+					}
+
+					// 마지막 셋트이면서 꽉 차지 않은 경우
+					if (index == 0 && (items.length % settings.visible) > 0)
+					{
+						list.append($(items.filter(':lt(' + (items.length % settings.visible) + ')')));
+					}
+					else
+					{
+						list.append($(items.filter(':lt(' + settings.visible + ')')));
+					}
+
+					settings.setIndex = index;
+					break;
+				case 'next': // 앞쪽 화살표
+					index = --settings.setIndex;
+
+					// 첫번째 셋트에서 마지막 셋트로 돌림
+					if (index < 0)
+					{
+						index = maxIndex - 1;
+					}
+
+					// 마지막 셋트이면서 꽉 차지 않은 경우
+					if (index == (maxIndex - 1) && (items.length % settings.visible) > 0)
+					{
+						list.prepend($(items.filter(':gt(' + (items.length - (items.length % settings.visible) - 1) + ')')));
+					}
+					else
+					{
+						list.prepend($(items.filter(':gt(' + (items.length - settings.visible - 1) + ')')));
+					}
+
+					settings.setIndex = index;
+					break;
+				default:
+			}
+
+			list = $(settings.list, self);
+			items = $(settings.items, list);
+			items.removeClass(settings.lastVisible).hide();
+
+			if (items.length > settings.visible)
+			{
+				var idxVisible = settings.visible;
+
+				// 꽉차지 않은 경우
+				if (index == (maxIndex - 1) && (items.length % settings.visible) > 0)
+				{
+					idxVisible = (items.length % settings.visible);
+				}
+
+				items.slice(0, idxVisible).show();
+				$(items[idxVisible - 1]).addClass(settings.lastVisible);
+			}
+			else
+			{
+				items.show();
+				items.filter(':last').addClass(settings.lastVisible);
+			}
+
+			if (settings.OnIndexChanged != null && typeof settings.OnIndexChanged == "function")
+			{
+				var args = new Object();
+				args.SelectedIndex = settings.setIndex;
+
+				settings.OnIndexChanged(args);
+			}
+		}
+		function init()
+		{
+			if (items.length <= settings.visible)
+			{
+				var button, img;
+
+				for (button in buttons)
+				{
+					if (buttons.hasOwnProperty(button))
+					{
+						img = $('img', buttons[button]);
+						img.attr('src', function()
+						{
+							var src = this.getAttribute('src');
+							return src.replace('_on.', '_off.');
+						});
+					}
+				}
+				items.show();
+				items.filter(':last').addClass(settings.lastVisible);
+			} else
+			{
+				items.hide();
+				items.slice(0, settings.visible).css('display', 'block');
+				$(items[settings.visible - 1]).addClass(settings.lastVisible);
+			}
+		}
+		buttons.prev.bind('click', function(e)
+		{
+			e.preventDefault();
+			if (items.length > settings.visible)
+			{
+				move('prev');
+			}
+		});
+		buttons.next.bind('click', function(e)
+		{
+			e.preventDefault();
+			if (items.length > settings.visible)
+			{
+				move('next');
+			}
+		});
+	});
+};
+
+
+// header_function.js 에도 getUrlParamVal 라는 똑같은 함수가 정의 되어있지만, 
+// header_function.js 가 로딩되기 전에 사용할 경우 에러가 발생하므로 이곳에 정의 했음
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
+//검색키워드값 추출(url 내 istop = y 파라메터로 헤더에서 키워드 검색여부 추측)
+function gGetUrlParamVal(name) {
+
+	var keyWord = "";
+	try {
+		var keyWordname = (name != "") ? name : "keyword";
+
+		var isTop = false;
+		var urlString = new String(window.location);
+		var markLocation = urlString.search(/\?/);
+
+		if (markLocation != -1) {
+
+			urlString = urlString.substr(markLocation + 1);
+			var paramArray = urlString.split(/&/g);
+			for (var i = 0; i < paramArray.length; i++) {
+
+				var arrayValue = paramArray[i].split(/=/);
+				if ((keyWordname == "istop") && (arrayValue[0].toLowerCase() == keyWordname)) {
+					keyWord = arrayValue[1].toLowerCase().replace("#keyword", "");
+				}
+				else if ((keyWordname != "istop") && (arrayValue[0].toLowerCase() == keyWordname)) {
+					//keyWord = decodeURIComponent(arrayValue[1].toLowerCase()).replace("#keyword", "");  // 공백이들어갈 자리에 + 기호가 나오는 현상 보정 by 이동열(2011.1.4)
+					keyWord = decodeURIComponent(arrayValue[1].toLowerCase().replace(/\+/g, ' ')).replace("#keyword", "");
+				}
+			}
+		}
+	}
+	catch (e) {
+		keyWord = "";
+	}
+
+	return keyWord;
+}
+
+// --------------------------------------------
+/// Util Functions
+// --------------------------------------------
+
+// 숫자에서 3자리마다 콤마(,) 를 넣는다.
+function gSetComma(nStr) {
+	nStr += '';
+	x = nStr.split('.');
+	x1 = x[0];
+	x2 = x.length > 1 ? '.' + x[1] : '';
+	var rgx = /(\d+)(\d{3})/;
+	while (rgx.test(x1)) {
+		x1 = x1.replace(rgx, '$1' + ',' + '$2');
+	}
+	return x1 + x2;
+}
+
+// 숫자에서 콤마(,) 를 제거한다.
+function gRemoveComma(n) {
+	return parseInt(n.replace(/,/g, ""));
+}
+
+//(function($) {
+//	$fn.gCheckOnlyNum = function() {
+//		this.keypress(function(event) {
+//			if (event.charCode != 0) {
+//				if (event.which && (event.which < 48 || event.which > 57)) {
+//					event.preventDefault();
+//				}
+//			}
+//		});
+//	};
+//})(jQuery);
+
+// combo (<select> tag) 에 option 을 추가한다
+function gAddOption(objID, strText, strValue) {
+	var option = document.createElement("OPTION");
+	option.text = strText.replace(']', '').replace('[', '');
+	option.value = strValue;
+	document.getElementById(objID).options.add(option);
+}
+
+// 이미지 사이즈 조정
+// ex) <img onload="gResizeImage(this, 200);">
+function gResizeImage(obj, max) {
+	if (obj == undefined || obj == null) return false;
+	if (max == undefined) max = 100;
+	if (obj.width > obj.height) {
+		if (obj.width > max) obj.width = max;
+	} else {
+		if (obj.height > max) obj.height = max;
+	}
+}
+
+// IE6 여부 판단
+// 특정 PC 에서는 IE8 임에도 불구하고 $.browser.version 정보가 6 으로 나오는 경우가 있어서 navigator.appVersion 정보가 같이 Check 한다.
+function gIsIE6Browser() {
+	if ($.browser.msie && parseInt($.browser.version) <= 6 && navigator.appVersion.indexOf("MSIE 8") < 0 && navigator.appVersion.indexOf("MSIE 7") < 0) {
+		return true;
+	}
+	else {
+		return false;
+	}
+}
+
+// 파라미터 존재여부 체크
+function gCheckUndefined(param) {
+	if (param == null || typeof(param) == 'undefined') {
+		return '';
+	}
+	else {
+		return param;
+	}
+}
+
+// css class 이름 변경
+function gSetClass(obj, value) {
+	obj.className = value;
+}
+
+
+// 개발시사용. 모든 Attribute 정보 보기
+function gShowInfo(idName) {
+	var strPrint = '';
+
+	var oAttribs = document.getElementById(idName).attributes;
+	for (var i = 0; i < oAttribs.length; i++) {
+		var oAttrib = oAttribs[i];
+
+		if (oAttrib.specified) {
+			strPrint += oAttrib.nodeName + '=' + oAttrib.nodeValue + "\n\n";
+		}
+	}
+
+	alert(strPrint);
+}
+
+// 문자를 일정한 사이즈에 맞게 자르고 "..."을 붙여준다.
+// targetText: 유니코드 기준, maxLength: byte 단위
+function gStringCut(targetText, maxLength) {
+  var resultStr = "";
+  var byteCnt = 0;
+  var strIdx = 0;
+
+  // 잘라낼 문자열의 바이트 크기가 maxLenth 보다 크면 처리
+  if (gGetBytesCount(targetText) > maxLength) {
+    while (byteCnt < maxLength - 3) {
+      // 받아온 문자열을 처음부터 한글자씩 덧붙인다.
+      resultStr += targetText.charAt(strIdx);
+
+      // 현재 위치 문자열의 바이트를 계산하여 더함 (한글 2Byte, 그외 1Byte)
+      byteCnt += gIsDoubleByte(targetText.charAt(strIdx)) ? 2 : 1;
+
+      // 문자열의 인덱스 1 증가
+      strIdx++;
+    }
+
+    // 잘려진 문자열의 마지막에 ... 붙여줌
+    resultStr += "...";
+  }
+  else {
+    resultStr = targetText;
+  }
+
+  return resultStr;
+}
+
+// 해당 char가 2바이트를 사용하는 unicode인지 체크
+function gIsDoubleByte(targetChar) {
+  if (targetChar.charCodeAt() > 255)
+    return true;
+  else
+    return false;
+}
+
+// 문자열의 바이트 수를 체크
+function gGetBytesCount(targetStr) {
+  var retByteCnt = 0;
+
+  for (var idx = 0; idx < targetStr.length; idx++) {
+    retByteCnt += gIsDoubleByte(targetStr.charAt(idx)) ? 2 : 1;
+  }
+
+  return retByteCnt;
+ }
+
+
+ OS2.Application.FindingCommon = function() {
+
+ }
+
+////////////////////////////////////////////////////////////////////////////////////////////
+ OS2.Application.FindingCommon.SetKeywordCookies = function(keyword) {
+    keyword = decodeURI(keyword); // wing -> 나의검색어에서 깨지지 않도록 decode 해줌
+    var count = 25; // # of pages to remember
+    var delim = "^"; // delimiter for pages in cookie
+
+    var str = $.cookie("KeyWord");
+    var arr = new Array();
+    if (str != null) arr = str.split(delim);
+    var cutKeyword = gGetStringCut(keyword, 30);
+
+    // 중복된 항목이 있다면 삭제한다
+    for (var i = 0; i < arr.length; i++) {
+        if (arr[i].toLowerCase() == cutKeyword.toLowerCase()) {
+            for (var j = i; j < arr.length - 1; j++)
+                arr[j] = arr[j + 1];
+
+            arr.length--;
+            break;
+        }
+    }
+
+
+    for (var i = arr.length - 1; i >= 0; i--)
+        arr[i + 1] = arr[i];
+
+    arr[0] = cutKeyword;
+
+    if (arr.length > count) {
+        arr.length = count;
+    }
+    $.cookie("KeyWord", arr.join(delim), { expires: 0, path: '/', domain: "about.co.kr" });
+
+   }
+
+var gGetStringCut = function(str, len) {
+    var l = 0;
+    for (var i = 0; i < str.length; i++) {
+        l += (str.charCodeAt(i) > 128) ? 2 : 1;
+        if (l > len) return str.substring(0, i);
+    }
+    return str;
+}
+
+
+///////////////////////////////////////////////////////////////////////////////////
+String.prototype.replaceAll = function(strChar, strChange) {
+    var strTmp = "";
+    for (i = 0; i < this.length; i++) {
+        if (this.charAt(i) != strChar) {
+            strTmp = strTmp + this.charAt(i);
+        } else {
+            strTmp = strTmp + strChange;
+        }
+    }
+    return strTmp;
+}
+
+String.prototype.toCurrency = function() {
+    try {
+        var result = "";
+        var txtNumber = this.replaceAll(",", "");
+        if (isNaN(txtNumber) || txtNumber == "") {
+            return "0";
+        } else {
+            var rxSplit = new RegExp('([0-9])([0-9][0-9][0-9][,.])');
+            var arrNumber = txtNumber.split('.');
+            arrNumber[0] += '.';
+            do {
+                arrNumber[0] = arrNumber[0].replace(rxSplit, '$1,$2');
+            } while (rxSplit.test(arrNumber[0]));
+
+            if (arrNumber.length > 1) {
+                result = arrNumber.join('');
+            } else {
+                result = arrNumber[0].split('.')[0];
+            }
+
+            if (result.indexOf(".") > -1) {
+                var tmpStr = result.split(".");
+                var tmpint = Number(tmpStr[1]);
+                if (!isNaN(tmpint)) {
+                    if (tmpint == 0)
+                        result = tmpStr[0];
+                    else
+                        result = tmpStr[0] + "." + tmpStr[1];
+                }
+            }
+        }
+
+        return result;
+    } catch (e) {
+        alert(e.message);
+    }
+}

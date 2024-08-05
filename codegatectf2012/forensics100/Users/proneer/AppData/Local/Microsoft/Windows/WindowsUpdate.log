@@ -1,0 +1,100 @@
+2012-02-11	18:36:37:916	 328	908	Misc	===========  Logging initialized (build: 7.3.7600.16385, tz: +0900)  ===========
+2012-02-11	18:36:37:916	 328	908	Misc	  = Process: C:\Windows\system32\wuauclt.exe
+2012-02-11	18:36:37:916	 328	908	AUClnt	Launched Client UI process
+2012-02-11	18:36:38:056	 328	908	Misc	===========  Logging initialized (build: 7.3.7600.16385, tz: +0900)  ===========
+2012-02-11	18:36:38:056	 328	908	Misc	  = Process: C:\Windows\system32\wuauclt.exe
+2012-02-11	18:36:38:056	 328	908	Misc	  = Module: C:\Windows\system32\wucltux.dll
+2012-02-11	18:36:38:056	 328	908	CltUI	AU client got new directive = 'Interactive Progress', serviceId = {7971F918-A847-4430-9279-4A52D1EFE18D}, return = 0
+2012-02-11	18:37:08:306	 328	908	CltUI	AU client got new directive = 'Reboot Pending', serviceId = {7971F918-A847-4430-9279-4A52D1EFE18D}, return = 0
+2012-02-11	18:37:13:150	 324	468	Misc	===========  Logging initialized (build: 7.3.7600.16385, tz: +0900)  ===========
+2012-02-11	18:37:13:150	 324	468	Misc	  = Process: C:\Windows\Explorer.EXE
+2012-02-11	18:37:13:150	 324	468	Misc	  = Module: C:\Windows\system32\wucltux.dll
+2012-02-11	18:37:13:150	 324	468	WUApp	WARNING: Call to GetInteractiveInstallProgress failed, hr=8024000C
+2012-02-11	19:06:39:524	2488	9bc	Misc	===========  Logging initialized (build: 7.3.7600.16385, tz: +0900)  ===========
+2012-02-11	19:06:39:540	2488	9bc	Misc	  = Process: C:\Windows\system32\wuauclt.exe
+2012-02-11	19:06:39:524	2488	9bc	AUClnt	Launched Client UI process
+2012-02-11	19:06:40:133	2488	9bc	Misc	===========  Logging initialized (build: 7.3.7600.16385, tz: +0900)  ===========
+2012-02-11	19:06:40:133	2488	9bc	Misc	  = Process: C:\Windows\system32\wuauclt.exe
+2012-02-11	19:06:40:133	2488	9bc	Misc	  = Module: C:\Windows\system32\wucltux.dll
+2012-02-11	19:06:40:133	2488	9bc	CltUI	AU client got new directive = 'Forced Reboot', serviceId = {7971F918-A847-4430-9279-4A52D1EFE18D}, return = 0
+2012-02-11	19:06:50:305	2488	9bc	CltUI	AU client got new directive = 'Shutdown', serviceId = {7971F918-A847-4430-9279-4A52D1EFE18D}, return = 0
+2012-02-12	03:00:27:826	2860	a80	Misc	===========  Logging initialized (build: 7.3.7600.16385, tz: +0900)  ===========
+2012-02-12	03:00:27:826	2860	a80	Misc	  = Process: C:\Windows\system32\wuauclt.exe
+2012-02-12	03:00:27:816	2860	a80	AUClnt	Launched Client UI process
+2012-02-12	03:00:28:039	2860	a80	Misc	===========  Logging initialized (build: 7.3.7600.16385, tz: +0900)  ===========
+2012-02-12	03:00:28:039	2860	a80	Misc	  = Process: C:\Windows\system32\wuauclt.exe
+2012-02-12	03:00:28:039	2860	a80	Misc	  = Module: C:\Windows\system32\wucltux.dll
+2012-02-12	03:00:28:039	2860	a80	CltUI	AU client got new directive = 'Download Progress', serviceId = {7971F918-A847-4430-9279-4A52D1EFE18D}, return = 0
+2012-02-12	03:00:28:074	2860	a80	CltUI	FATAL: Failed to show download progress, hr=8024AFFF
+2012-02-12	03:00:43:135	2496	a4c	Misc	===========  Logging initialized (build: 7.3.7600.16385, tz: +0900)  ===========
+2012-02-12	03:00:43:136	2496	a4c	Misc	  = Process: C:\Windows\system32\wuauclt.exe
+2012-02-12	03:00:43:134	2496	a4c	AUClnt	Launched Client UI process
+2012-02-12	03:00:43:167	2496	a4c	Misc	===========  Logging initialized (build: 7.3.7600.16385, tz: +0900)  ===========
+2012-02-12	03:00:43:167	2496	a4c	Misc	  = Process: C:\Windows\system32\wuauclt.exe
+2012-02-12	03:00:43:167	2496	a4c	Misc	  = Module: C:\Windows\system32\wucltux.dll
+2012-02-12	03:00:43:167	2496	a4c	CltUI	AU client got new directive = 'Download Progress', serviceId = {7971F918-A847-4430-9279-4A52D1EFE18D}, return = 0
+2012-02-12	03:00:43:180	2496	a4c	CltUI	FATAL: Failed to show download progress, hr=8024AFFF
+2012-02-12	03:00:58:214	1540	dfc	Misc	===========  Logging initialized (build: 7.3.7600.16385, tz: +0900)  ===========
+2012-02-12	03:00:58:214	1540	dfc	Misc	  = Process: C:\Windows\system32\wuauclt.exe
+2012-02-12	03:00:58:214	1540	dfc	AUClnt	Launched Client UI process
+2012-02-12	03:00:58:246	1540	dfc	Misc	===========  Logging initialized (build: 7.3.7600.16385, tz: +0900)  ===========
+2012-02-12	03:00:58:246	1540	dfc	Misc	  = Process: C:\Windows\system32\wuauclt.exe
+2012-02-12	03:00:58:246	1540	dfc	Misc	  = Module: C:\Windows\system32\wucltux.dll
+2012-02-12	03:00:58:246	1540	dfc	CltUI	AU client got new directive = 'Download Progress', serviceId = {7971F918-A847-4430-9279-4A52D1EFE18D}, return = 0
+2012-02-12	03:00:58:257	1540	dfc	CltUI	FATAL: Failed to show download progress, hr=8024AFFF
+2012-02-12	03:01:13:301	 928	a94	Misc	===========  Logging initialized (build: 7.3.7600.16385, tz: +0900)  ===========
+2012-02-12	03:01:13:301	 928	a94	Misc	  = Process: C:\Windows\system32\wuauclt.exe
+2012-02-12	03:01:13:299	 928	a94	AUClnt	Launched Client UI process
+2012-02-12	03:01:13:370	 928	a94	Misc	===========  Logging initialized (build: 7.3.7600.16385, tz: +0900)  ===========
+2012-02-12	03:01:13:371	 928	a94	Misc	  = Process: C:\Windows\system32\wuauclt.exe
+2012-02-12	03:01:13:371	 928	a94	Misc	  = Module: C:\Windows\system32\wucltux.dll
+2012-02-12	03:01:13:370	 928	a94	CltUI	AU client got new directive = 'Download Progress', serviceId = {7971F918-A847-4430-9279-4A52D1EFE18D}, return = 0
+2012-02-12	03:01:13:405	 928	a94	CltUI	FATAL: Failed to show download progress, hr=8024AFFF
+2012-02-12	03:01:28:453	3324	3fc	Misc	===========  Logging initialized (build: 7.3.7600.16385, tz: +0900)  ===========
+2012-02-12	03:01:28:453	3324	3fc	Misc	  = Process: C:\Windows\system32\wuauclt.exe
+2012-02-12	03:01:28:452	3324	3fc	AUClnt	Launched Client UI process
+2012-02-12	03:01:28:494	3324	3fc	Misc	===========  Logging initialized (build: 7.3.7600.16385, tz: +0900)  ===========
+2012-02-12	03:01:28:494	3324	3fc	Misc	  = Process: C:\Windows\system32\wuauclt.exe
+2012-02-12	03:01:28:494	3324	3fc	Misc	  = Module: C:\Windows\system32\wucltux.dll
+2012-02-12	03:01:28:494	3324	3fc	CltUI	AU client got new directive = 'Download Progress', serviceId = {7971F918-A847-4430-9279-4A52D1EFE18D}, return = 0
+2012-02-12	03:01:28:511	3324	3fc	CltUI	FATAL: Failed to show download progress, hr=8024AFFF
+2012-02-12	03:02:07:426	1352	a6c	Misc	===========  Logging initialized (build: 7.3.7600.16385, tz: +0900)  ===========
+2012-02-12	03:02:07:426	1352	a6c	Misc	  = Process: C:\Windows\system32\wuauclt.exe
+2012-02-12	03:02:07:424	1352	a6c	AUClnt	Launched Client UI process
+2012-02-12	03:02:07:472	1352	a6c	Misc	===========  Logging initialized (build: 7.3.7600.16385, tz: +0900)  ===========
+2012-02-12	03:02:07:472	1352	a6c	Misc	  = Process: C:\Windows\system32\wuauclt.exe
+2012-02-12	03:02:07:472	1352	a6c	Misc	  = Module: C:\Windows\system32\wucltux.dll
+2012-02-12	03:02:07:472	1352	a6c	CltUI	AU client got new directive = 'Download Progress', serviceId = {7971F918-A847-4430-9279-4A52D1EFE18D}, return = 0
+2012-02-12	03:03:59:371	1352	a6c	CltUI	AU client got new directive = 'Download Progress', serviceId = {7971F918-A847-4430-9279-4A52D1EFE18D}, return = 0
+2012-02-12	03:05:24:926	1352	a6c	CltUI	AU client got new directive = 'Download Progress', serviceId = {7971F918-A847-4430-9279-4A52D1EFE18D}, return = 0
+2012-02-12	03:06:50:639	1352	a6c	CltUI	AU client got new directive = 'Download Progress', serviceId = {7971F918-A847-4430-9279-4A52D1EFE18D}, return = 0
+2012-02-12	03:08:15:015	1352	a6c	CltUI	AU client got new directive = 'Download Progress', serviceId = {7971F918-A847-4430-9279-4A52D1EFE18D}, return = 0
+2012-02-12	03:09:39:722	1352	a6c	CltUI	AU client got new directive = 'Download Progress', serviceId = {7971F918-A847-4430-9279-4A52D1EFE18D}, return = 0
+2012-02-12	03:11:04:063	1352	a6c	CltUI	AU client got new directive = 'Download Progress', serviceId = {7971F918-A847-4430-9279-4A52D1EFE18D}, return = 0
+2012-02-12	03:12:28:603	1352	a6c	CltUI	AU client got new directive = 'Download Progress', serviceId = {7971F918-A847-4430-9279-4A52D1EFE18D}, return = 0
+2012-02-12	03:13:54:207	1352	a6c	CltUI	AU client got new directive = 'Download Progress', serviceId = {7971F918-A847-4430-9279-4A52D1EFE18D}, return = 0
+2012-02-12	03:15:19:679	1352	a6c	CltUI	AU client got new directive = 'Download Progress', serviceId = {7971F918-A847-4430-9279-4A52D1EFE18D}, return = 0
+2012-02-12	03:18:06:638	1352	a6c	CltUI	AU client got new directive = 'Download Progress', serviceId = {7971F918-A847-4430-9279-4A52D1EFE18D}, return = 0
+2012-02-12	03:19:31:302	1352	a6c	CltUI	AU client got new directive = 'Download Progress', serviceId = {7971F918-A847-4430-9279-4A52D1EFE18D}, return = 0
+2012-02-12	03:20:55:808	1352	a6c	CltUI	AU client got new directive = 'Download Progress', serviceId = {7971F918-A847-4430-9279-4A52D1EFE18D}, return = 0
+2012-02-12	03:22:20:480	1352	a6c	CltUI	AU client got new directive = 'Download Progress', serviceId = {7971F918-A847-4430-9279-4A52D1EFE18D}, return = 0
+2012-02-12	03:23:21:072	1352	a6c	CltUI	AU client got new directive = 'Download Progress', serviceId = {7971F918-A847-4430-9279-4A52D1EFE18D}, return = 0
+2012-02-12	03:26:13:311	1352	a6c	CltUI	AU client got new directive = 'Download Progress', serviceId = {7971F918-A847-4430-9279-4A52D1EFE18D}, return = 0
+2012-02-12	03:29:36:456	1352	a6c	CltUI	AU client got new directive = 'Download Progress', serviceId = {7971F918-A847-4430-9279-4A52D1EFE18D}, return = 0
+2012-02-12	03:30:52:245	1352	a6c	CltUI	AU client got new directive = 'Download Progress', serviceId = {7971F918-A847-4430-9279-4A52D1EFE18D}, return = 0
+2012-02-12	03:33:25:928	1352	a6c	CltUI	AU client got new directive = 'Download Progress', serviceId = {7971F918-A847-4430-9279-4A52D1EFE18D}, return = 0
+2012-02-12	03:36:19:239	1352	a6c	CltUI	AU client got new directive = 'Download Progress', serviceId = {7971F918-A847-4430-9279-4A52D1EFE18D}, return = 0
+2012-02-12	03:38:47:875	1352	a6c	CltUI	AU client got new directive = 'Download Progress', serviceId = {7971F918-A847-4430-9279-4A52D1EFE18D}, return = 0
+2012-02-12	03:42:05:666	1352	a6c	CltUI	AU client got new directive = 'Download Progress', serviceId = {7971F918-A847-4430-9279-4A52D1EFE18D}, return = 0
+2012-02-12	09:19:16:812	1352	a6c	CltUI	AU client got new directive = 'Download Progress', serviceId = {7971F918-A847-4430-9279-4A52D1EFE18D}, return = 0
+2012-02-12	09:29:10:292	1352	a6c	CltUI	AU client got new directive = 'Download Progress', serviceId = {7971F918-A847-4430-9279-4A52D1EFE18D}, return = 0
+2012-02-12	09:29:10:293	1352	a6c	CltUI	AU client got new directive = 'Download Progress', serviceId = {7971F918-A847-4430-9279-4A52D1EFE18D}, return = 0
+2012-02-12	09:36:48:305	1352	a6c	CltUI	AU client got new directive = 'Shutdown', serviceId = {7971F918-A847-4430-9279-4A52D1EFE18D}, return = 0
+2012-02-12	15:15:57:019	3260	fe8	Misc	===========  Logging initialized (build: 7.3.7600.16385, tz: +0900)  ===========
+2012-02-12	15:15:57:019	3260	fe8	Misc	  = Process: C:\Windows\system32\wuauclt.exe
+2012-02-12	15:15:57:004	3260	fe8	AUClnt	Launched Client UI process
+2012-02-12	15:15:57:421	3260	fe8	Misc	===========  Logging initialized (build: 7.3.7600.16385, tz: +0900)  ===========
+2012-02-12	15:15:57:421	3260	fe8	Misc	  = Process: C:\Windows\system32\wuauclt.exe
+2012-02-12	15:15:57:421	3260	fe8	Misc	  = Module: C:\Windows\system32\wucltux.dll
+2012-02-12	15:15:57:421	3260	fe8	CltUI	AU client got new directive = 'Download Progress', serviceId = {7971F918-A847-4430-9279-4A52D1EFE18D}, return = 0
+2012-02-12	15:23:28:308	3260	fe8	CltUI	AU client got new directive = 'Shutdown', serviceId = {7971F918-A847-4430-9279-4A52D1EFE18D}, return = 0

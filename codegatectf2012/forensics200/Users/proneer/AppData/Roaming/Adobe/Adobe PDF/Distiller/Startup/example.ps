@@ -1,0 +1,46 @@
+%
+% File: Startup Example.ps
+%
+% End-user startup PostScript job file.  Include any permanent PostScript into 
+% this file.  This file will be executed as an "unencapsulated job"*
+% each time the Acrobat Distiller application starts up.
+% 
+% *See "PostScript(R) Language Reference Manual, Third Edition," Chapter 3.7.7 
+%
+% NOTE: This file will be overwritten each time you install Acrobat Distiller.
+% We recommend you make a copy of this file to a different name and modify
+% that copy.
+%
+% Each of the items below is presented as an example as is commented out. To
+% actually use one of the examples, uncomment the line(s) of PostScript code by
+% deleting the "%" character and modify to suit your needs.
+%
+% Please be aware that any PostScript code in this file which needs to access
+% the filesystem must do so with fully qualified pathnames. Do not assume that
+% a "current directory" exists.
+%
+
+%%% PRE-LOADING FONTS INTO MEMORY
+%%% Load a font into the FontDirectory dictionary (local VM) 
+
+% /Courier findfont pop
+
+
+%%% IDIOM RECOGNITION
+%%% Idiom recognition enables the conversion of blends from
+%%% popular software such as Illustrator, FreeHand, Quark, and
+%%% Corel into Level 3 smooth shades.
+%%% In Acrobat 4.0 it was recommended to set the IdiomRecognition
+%%% flag in a startup file. But in Acrobat 5.0 and later, blends
+%%% conversion is controlled by a distillerparam (/DetectBlends)
+%%% in the job options file, and is settable from Distiller's
+%%% user interface.
+
+
+% (Processing Startup Example.ps...\n) print flush
+
+%  Insert your custom PostScript here...
+
+% (Processing Startup Example.ps done\n) print flush
+
+%  End of file.

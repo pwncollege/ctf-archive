@@ -1,0 +1,431 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="google-site-verification" content="cC-8xOerZ3opiLx9VloUCzc6SgMfOZHYihJzWA19-KI" />
+<meta name="msvalidate.01" content="79C78EB33B8812273BEAA273668E9D92" />
+<title>SANS Forensics Community Links</title>
+
+
+<meta name="keywords" content="sans forensics links" />
+<meta name="description" content="List of SANS computer forensics community links: resources, blogs, podcasts, and law enforcement links." />
+<link rel="canonical" href="http://computer-forensics.sans.org/community/links" />
+<link rel="stylesheet" href="/css/design/styles" type="text/css" />
+<link rel="stylesheet" href="/css/site_selector" type="text/css" />
+
+
+
+
+<link rel="stylesheet" type="text/css" href="/css/site" />
+
+<!-- Added Cross Domain Customizations 9.23.11 DB -->
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-6384910-4']);
+  _gaq.push(['_trackPageview']); 
+  _gaq.push(['_setLocalRemoteServerMode']);
+  _gaq.push(['b._setAccount', 'UA-25324117-2']);
+  _gaq.push(['b._setDomainName', 'sans.org']);
+  _gaq.push(['b._addIgnoredRef', 'sans.org']);   
+  _gaq.push(['b._trackPageview']);
+  
+  
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+
+</head>
+
+<body>
+    
+<div class="bodywrap ">
+<div class="container default-navigation-all">
+
+
+<!-- header -->
+<div class="header">
+
+<a href="/"><img src="/images/design-site/logo.png" alt="SANS Forensics Community Links" class="logo" /></a>
+
+<ul class="site-selector">
+ <li class="site-switcher"><a href="#"><span class="hidden">SANS Site Network</span></a>
+  <ul class="sites">
+    <li class="current-site">Current Site</li>
+    <li class="forensics "><a href="http://computer-forensics.sans.org"><img src="/images/design/custom/site-selector/site-icons/forensics.png" alt="forensics" />Computer Forensics</a></li>
+   <li class="selector-help">Choose a different site <a href="/help/site-network"><span class="hidden">Help</span></a></li><li class="sans "><a href="http://www.sans.org"><img src="/images/design/custom/site-selector/site-icons/sans.png" alt="sans" />Training</a></li>
+<li class="giac "><a href="http://www.giac.org"><img src="/images/design/custom/site-selector/site-icons/giac.png" alt="giac" />Certification</a></li>
+<li class="isc "><a href="http://isc.sans.org"><img src="/images/design/custom/site-selector/site-icons/isc.png" alt="isc" />Internet Storm Center</a></li>
+<li class="sti "><a href="http://www.sans.edu"><img src="/images/design/custom/site-selector/site-icons/sti.png" alt="sti" />Cyber Security Graduate School</a></li>
+<li class="awareness "><a href="http://www.securingthehuman.org"><img src="/images/design/custom/site-selector/site-icons/awareness.png" alt="awareness" />Security Awareness Training</a></li>
+<li class="pentest "><a href="http://pen-testing.sans.org"><img src="/images/design/custom/site-selector/site-icons/pentest.png" alt="pentest" />Penetration Testing</a></li>
+<li class="audit "><a href="http://it-audit.sans.org"><img src="/images/design/custom/site-selector/site-icons/audit.png" alt="audit" />IT Audit</a></li>
+<li class="ssi last"><a href="http://software-security.sans.org"><img src="/images/design/custom/site-selector/site-icons/ssi.png" alt="ssi" />Software Security</a></li>
+  </ul>
+ </li>
+</ul>
+
+<div class="top-menu">
+<!-- Begin Google Site Search -->
+<div class="search-form">
+<form action="https://computer-forensics.sans.org/search/results" method="post" id="cse-search-box">
+<input type="hidden" name="_xsrf_token" value="c6bb6f195271ab7cd71c32b1698a79d71c74c901"  />
+<input type="text" id="q" name="q" value="" class="search-input" /><input id="search-button" type="image" title="Search" name="sa" value="Search" class="search-submit" src="/images/icons/custom/search.png" /><input type="text" id="_website" name="_website" value="" size="1" onchange="this.value=null" /></form>
+<script type="text/javascript" src="http://www.google.com/cse/brand?form=cse-search-box&lang=en"></script>
+</div><!-- / .search-form -->
+
+<div class="clear"></div>
+    
+<ul class="dropdown">
+ <!-- <li class="root-item active"><a href="#">Active</a> -->
+ <li class="root-item active"><a href="/community">Community</a>
+ <ul>
+    <li class="first"><a href="/blog">Blog</a></li>
+    <li><a href="/community/challenges">Challenges</a></li>
+    <li><a href="/community/links">Links</a></li>
+    <li><a href="/community/downloads">SIFT Kit / Downloads</a></li>
+    <li><a href="/community/summits">Summit Archives</a></li>
+    <li><a href="/community/webcasts">Webcasts</a></li>
+    <li><a href="/community/whitepapers">Whitepapers</a></li>
+	<li class="last"><a href="/community/lethal_forensicator">SANS Lethal Forensicator Coin</a></li>
+ </ul>
+ </li>
+ <li class="root-item "><a href="/courses">Courses</a>
+    <ul>
+            <li class="first"><a href="/courses/description/computer-forensic-investigations-windows-in-depth-1207">Windows Forensics<br />FOR408</a></li>
+            <li><a href="/courses/description/advanced-computer-forensic-analysis-incident-response-98">Advanced Forensics<br />FOR508</a></li>
+            <li><a href="/courses/description/advanced-filesystem-recovery-memory-forensics-141">Memory Forensics<br />FOR526</a></li>
+            <li><a href="/courses/description/network-forensics-1227">Network Forensics<br />FOR558</a></li>
+            <li><a href="/courses/description/mobile-device-forensics-1297">Mobile Forensics<br />FOR563</a></li>
+            <li><a href="/courses/description/reverse-engineering-malware-malware-analysis-tools-techniques-54">Malware Analysis<br />FOR610</a></li>
+        <li><a href="/media/courses/forensics_curriculum.pdf">Forensics Brochure</a>
+    <li><a href="/sift-kit/essentials">SIFT Toolkit - Essentials</a></li>
+    <li><a href="/sift-kit/advanced">SIFT Toolkit - Advanced</a></li>
+    <li><a href="/courses/assessment">Free Assessment</a></li>
+    <li class="last"><a href="/events">Register Now</a></li>
+    </ul>
+ </li>
+ 
+ <li class="root-item "><a href="/events">Events</a>
+ <ul>
+  <li class="first"><a href="/events">Forensic Events List</a></li>
+  <li class="last"><a href="/events/summits/">Summits</a></li>
+ </ul>
+ </li>
+ <li class="root-item "><a href="/certification">Certification</a>
+  <ul>
+  <li class="first"><a href="/certification/gcfe">GCFE - Forensic Examiner</a></li>
+  <li><a href="/certification/gcfa">GCFA - Forensic Analyst</a></li>
+  <li><a href="/certification/grem">GREM - Malware Analyst</a></li>
+  <li><a href="/certification/analysts">Certified Analysts</a></li>
+  <li><a href="/certification/ethics">GIAC Code of Ethics</a></li> 
+  <li class="last"><a href="http://www.giac.org">GIAC Homepage</a></li>
+  </ul>
+ </li>
+ <li class="root-item "><a href="/instructors">Instructors</a>
+ <ul>
+    <li class="first"><a href="/instructors">SANS Instructors</a></li>
+    <li class="last"><a href="/instructors/author">Author Statement</a></li>
+ </ul>
+ </li>
+ <li class="root-item "><a href="/about">About</a>
+ <ul>
+  <li class="first"><a href="/about">About</a></li>
+  <li class="last"><a href="/about/press">Press Room</a></li>
+ </ul>
+ </li>
+</ul><!-- end .dropdown -->
+</div><!-- end .top-menu -->
+<div class="clear"></div><!-- end .clear -->
+</div><!-- end .header-->
+</div><!--  end .container -->
+
+    <!-- Header -->
+    <div class="container">
+
+    <div class="header-standard">
+      <h1 class="headerTitle">Community:</h1>
+      <span class="headerSubTitle "><h2>Links</h2></span>       
+    </div><!-- end .top-text -->
+    <div class="header-icon "></div><!-- end .top-icon icon-gallery -->
+    <div class="clear"></div><!-- end .clear -->
+ 
+    </div><!-- end .container -->
+     
+    <div class="container">
+<!-- middle -->
+    <div class="middle">
+      <!-- content -->
+      <div class="wrapper">
+        <div id="" class="content">
+
+<div class="layouts noheaders">
+      <!-- layout1 -->
+            <div class="layout1 col-1">
+        <h3>Resource Links</h3>
+<p>SANS Forensic Community provides analysts with a variety of forensic resources. Interact with your fellow analysts and forensic experts on the <a href="http://blogs.sans.org/computer-forensics/">SANS Forensic Blog</a>, discover solutions to forensic related issues with a multitude of <a href="http://computer-forensics.sans.org/community/whitepapers.php">White Papers</a>, or peruse a variety of industry related news and blog sites.</p>
+<p>SANS is continually updating and adding information to this page, so check back often to see what&#039;s new.</p>
+<hr />
+
+<h4>SANS</h4>
+<ul>
+ <li><a href="/blog">SANS Computer Forensics Blog</a></li>
+ <li><a href="http://www.sans.org/reading_room/whitepapers/forensics/">SANS Forensics Reading Room - White papers on Forensics</a></li>
+ <li><a href="http://www.sans.org/newsletters/">SANS Computer Security Newsletters</a></li>
+</ul>
+<hr />
+
+<h4>Washington Post Security Page</h4>
+<ul>
+ <li><a href="http://blog.washingtonpost.com/securityfix">Washington Post Security Fix Page</a></li> 
+</ul>
+<hr />
+
+<h4>Computer Forensic Blogs</h4>
+<ul>
+ <li><a href="http://windowsir.blogspot.com" target="_blank">Windows Incident Response Blog</a></li>
+ <li><a href="http://www.forensickb.com" target="_blank">Computer Forensics, Malware Analysis &amp; Digital Investigations</a></li>
+ <li><a href="http://cfed-ttf.blogspot.com" target="_blank">Computer Forensics Information</a></li>
+ <li><a href="http://seccure.blogspot.com" target="_blank">Forensic Secure Blog</a></li>
+ <li><a href="http://jessekornblum.livejournal.com" target="_blank">Jesse Kornblum's Blog</a></li>
+ <li><a href="http://computer.forensikblog.de/en/" target="_blank">Computer Forensics - International</a></li>
+ <li><a href="http://www.forensicblog.org" target="_blank">Forensic Computing</a></li>
+ <li><a href="http://geschonneck.com/index.php" target="_blank">Alexander Geschonneck's Security Blog</a></li>
+ <li><a href="http://www.forensicfocus.com" target="_blank">Forensic Focus Computer Forensic Community</a></li>
+ <li><a href="http://forensicir.blogspot.com" target="_blank">Forensic Incident Response Blog</a></li>
+ <li><a href="http://www.msuiche.net" target="_blank">Matthieu Suiche's Blog</a></li>
+ <li><a href="http://volatilesystems.blogspot.com/" target="_blank">Advanced Memory Forensics Blog</a></li>
+ <li><a href="http://blog.mandiant.com/" target="_blank">Mandiant Blog</a></li>
+ <li><a href="http://digfor.blogspot.com/" target="_blank">Digital Forensics Notes</a></li>
+ <li><a href="http://www.thedigitalstandard.blogspot.com/" target="_blank">The Digital Standard Blog</a></li> 
+ <li><a href="http://dfsforensics.blogspot.com/" target="_blank">Digital Forensics Solutions Blog</a></li>
+ <li><a href="http://www.forensicsblog.net/" target="_blank">Forensics Blog</a></li>
+ <li><a href="http://www.digitalforensicsource.com" target="_blank">Digital Forensics Source</a></li>
+</ul>
+<div class="top-link"><a href="#">Top of page</a></div><!-- / .top-link -->
+
+<h4>e-Discovery Blogs</h4>
+<ul>
+ <li><a href="http://ralphlosey.wordpress.com" target="_blank">Ralph Losey E-Discover Team Blog</a></li>
+ <li><a href="http://www.granick.com/blog" target="_blank">Granick Blog</a></li>
+ <li><a href="http://ridethelightning.senseient.com" target="_blank">Ride the Lightning Blog</a></li>
+ <li><a href="http://commonscold.typepad.com/eddupdate/" target="_blank">Electronic Data Discovery </a></li>
+ <li><a href="http://www.ediscoverylaw.com" target="_blank">Electronic Discovery Law</a></li>
+ <li><a href="http://legal-beagle.typepad.com/" target="_blank">Electronic Data Law</a></li>
+</ul>
+<div class="top-link"><a href="#">Top of page</a></div><!-- / .top-link -->
+
+<h4>Computer Forensics Podcasts</h4>
+<ul>
+ <li><a href="http://cyberspeak.libsyn.com" target="_blank">Cyberspeak's Podcasts</a></li>
+ <li><a href="http://forensic4cast.com" target="_blank">Forensic 4Cast</a></li> 
+</ul>
+<div class="top-link"><a href="#">Top of page</a></div><!-- / .top-link -->
+
+<h4>Computer Forensics Wiki</h4>
+<ul>
+ <li><a href="http://www.forensicswiki.org" target="_blank">Computer Forensics Wiki</a></li> 
+</ul>
+<div class="top-link"><a href="#">Top of page</a></div><!-- / .top-link -->
+
+<h4>Reverse-Engineering Malware</h4>
+Lenny Zeltser's fighting malware articles:
+<ul>
+ <li><a href="http://zeltser.com/fighting-malicious-software/" target="_blank">Fighting Malicious Software</a></li> 
+</ul>
+<div class="top-link"><a href="#">Top of page</a></div><!-- / .top-link -->
+
+<h4>The International Society of Forensic Computer Examiners</h4>
+<p><a href="/courses/description/computer-forensic-investigations-windows-in-depth-1207">FOR408</a> or <a href="/courses/description/advanced-computer-forensic-analysis-incident-response-98">FOR508</a> cover all of the necessary information to prepare for the ISFCE CCE certification process and is an ISFCE Authorized Training Center.</p>
+
+<div class="links-images-container">
+    <div><a href="http://www.isfce.com/" target="_blank"><img src="/images/design-site/isfce_logo.gif" title="International Society of Forensic Computer Examiners" alt="ISFCE Logo" /></a></div>
+    <div><a href="http://www.isfce.com/" target="_blank"><img src="/images/design-site/atc_logo.jpg" height="75"></a></div>
+</div>
+
+<div class="top-link"><a href="#">Top of page</a></div><!-- / .top-link -->
+
+<h4>Law Enforcement Links</h4>
+<p>This section is intended to provide Digital Forensic investigators a resource for appropriate contact and process logic contained in the Legal Spy guides published.</p>
+<p>These documents were created to assist Law enforcement and appropriate investigators of what can be provided and the methodology for request. The guides were generally considered confidential in nature when distributed. It is not my intent to break confidentiality of the source or creator. It is intended to assist in digital forensic discovery. Many of these documents are strictly intended for Law Enforcement and not corporate investigations. This should not deter the reader in my opinion using the contact information provided.</p>
+<p>The published documents contain appropriate process for requests and available detail from the source. Some links listed are example documents or public record examples of evidence gathered.  The guides/handbooks were originally created and provided for informational purposes to all law enforcement and legal requests. </p>
+<p>The following sources have been referenced and published from <a href="http://cryptome.org/" target="_blank">Cryptome.org</a>:</p>
+
+<ul>
+ <li><a href="http://cryptome.org/isp-spy/microsoft-spy.zip" target="_blank">Microsoft Online Services Global Criminal Compliance Handbook</a></li>
+ <li><a href="http://cryptome.org/isp-spy/paypal-spy.zip" target="_blank">eBay/PayPal Law Enforcement Guide</a></li>
+ <li><a href="http://cryptome.org/isp-spy/myspace-spy.pdf" target="_blank">MySpace.com Law Enforcement Investigators Guide</a></li>
+ <li><a href="http://cryptome.org/isp-spy/comcast-spy.pdf" target="_blank">Comcast Cable Law Enforcement Handbook</a></li>
+ <li><a href="http://cryptome.org/isp-spy/aol-spy.pdf" target="_blank">AOL Law Enforcement Manual</a></li>
+ <li><a href="http://cryptome.org/isp-spy/skype-spy.pdf" target="_blank">Responding to Law Enforcement Records Requests on Skype</a></li>
+ <li><a href="http://cryptome.org/isp-spy/cox-spy.pdf" target="_blank">Notice to parties serving subpoenas on Cox Communications</a></li>
+ <li><a href="http://cryptome.org/isp-spy/ning-spy.pdf" target="_blank">Ning Law Enforcement Compliance Guide</a></li>
+ <li><a href="http://cryptome.org/isp-spy/myyearbook-spy.pdf" target="_blank">myYearbook.com Law Enforcement Guidelines</a></li>
+ <li><a href="http://cryptome.org/isp-spy/stickam-spy.pdf" target="_blank">Law Enforcement Guide for Stickam.com</a></li>
+ <li><a href="http://cryptome.org/isp-spy/usps-spy.pdf" target="_blank">USPS Procedures 1</a> and <a href="http://cryptome.org/isp-spy/usps-spy2.pdf" target="_blank">USPS Procedures 2</a></li>
+ <li><a href="http://cryptome.org/isp-spy/cisco-spy.pdf" target="_blank">Cisco's Guide</a></li>
+ <li><a href="http://cryptome.org/3gpp/3gpp-spy.htm" target="_blank">3GPP Lawful Interception and Security</a></li>
+ <li><a href="http://cryptome.org/isp-spy/verizon-spy.pdf" target="_blank">Verizon Law Enforcement Legal Compliance Guide</a></li>
+ <li><a href="http://cryptome.org/isp-spy/sprint-spy2.pdf" target="_blank">Sprint CALEA Delivery System</a></li>
+ <li><a href="http://cryptome.org/isp-spy/sprint-spy.zip" target="_blank">Sprint Corporate Security Electronic Surveillance Manual</a></li>
+ <li><a href="http://cryptome.org/isp-spy/nextel-spy.pdf" target="_blank">Nextel's Guide For Law Enforcement</a></li>
+ <li><a href="http://cryptome.org/isp-spy/voicestream-spy.zip" target="_blank">Voicestream Law Enforcement Reference Guide</a></li>
+ <li><a href="http://cryptome.org/isp-spy/yahoo-spy.pdf" target="_blank">Yahoo Compliance Guide for Law Enforcement</a></li>
+ <li><a href="http://cryptome.org/isp-spy/sbc-ameritech-spy.pdf" target="_blank">Obtaining Customer Records from SBC-Ameritech</a></li>
+ <li><a href="http://cryptome.org/isp-spy/ameritech-spy.pdf" target="_blank">Ameritech Law Enforcement Reference Guide</a></li>
+ <li><a href="http://cryptome.org/isp-spy/cingular-spy.pdf" target="_blank">Cingular Wireless Legal Process &amp; Court Orders</a></li>
+ <li><a href="http://cryptome.org/isp-spy/cricket-spy.pdf" target="_blank">Cricket Communications</a></li>
+ <li><a href="http://cryptome.org/isp-spy/pactel-spy.pdf" target="_blank">Pactel Law Enforcement Reference Guide</a></li>
+ <li><a href="http://cryptome.org/isp-spy/gte-spy.pdf" target="_blank">GTE Security Control Information</a></li>
+</ul>
+
+<p>There are three key elements found in each guide. These assist the investigator when conducting an authorized investigation and they are:</p>
+<ol>
+ <li>Contact address, Phone number, email address and hours of  access for the Provider/Corporate Security</li>
+ <li>What detail can and cannot be delivered by the provider. This includes retention duration of the data available.</li>
+ <li>Description on the process and requirements for making a request. The capability of the provider response depends upon the authority of the request. A Statute or Judicial request is handled differently than a Law Enforcement inquiry as is a corporation's legal request. It should be understood; these requests do not come without cost. The cost to process a request may exceed $10,000 depending upon request and duration. Some requests cost much less. There are some providers that do not appear to have a charge associated with the service.</li>
+</ol>
+
+<p>In many of the guides, there is also a template or form to use when making a request. It is useful to know these details when conducting an investigation.  The same logic of Time Based Security can be applied to responding to evidence acquisition. The clock is ticking, the longer the delay, the greater the potential for lost evidence.</p>
+<p>Special thanks to Steven Dietz for compiling this list.</p>
+<div class="top-link"><a href="#">Top of page</a></div><!-- / .top-link -->      </div>
+      <div class="clear"></div>
+      <!--/ layout1 -->
+</div>
+
+
+          <div class="clear"></div>
+        </div>
+      </div>
+      <!--/ content -->
+
+      <!-- right navi -->
+      <div class="navigation">
+        
+        <div class="widget widget_pages">
+          <ul>
+
+
+
+          </ul>
+        </div>
+
+          <!-- widget: random blurb -->
+          <!-- /widget: random blurb -->
+
+          <!-- widget: ad -->
+          <div class="widget widget_ad">
+            <a href="https://www.sans.org/info/93044/5380a51c9373cf00e0117d889df80ee3hgs82" target="_top">
+    <img src="https://www.sans.org/images/banners/11039.jpg" alt="SANS 2012 - Orlando" title="SANS 2012 - Orlando" height="600" width="160" border="0" />
+</a>          </div>
+          <!-- /widget: ad -->
+
+
+
+      </div>
+      <!--/ right navi -->
+      <div class="clear"></div>
+      <div class="middle-bot">
+            </div>
+      <div class="clear"></div>
+    </div>
+    <!--/ middle -->
+
+</div>
+<!-- Bottom Content -->
+<div class="bottom-content">
+<div class="container">
+
+<div class="footer-column" style="margin-right:10px">
+<h3>Latest Blog Posts</h3>
+        <p><a href="/blog/2012/02/10/digital-forensics-case-leads-android-malwarechrome-browser-bugs-and-it-guy-shoots-daughters-laptop">Digital Forensics Case Leads: Android Malware,Chrome Browser Bugs and IT gu [...]</a><br />
+        February 10, 2012 - 4:34 PM
+</p>
+            <p><a href="/blog/2012/02/02/digital-forensics-case-leads-the-new-forensics-the-cybermilitia-and-bill-gates-gets-behind-open-source">Digital Forensics Case Leads: The New Forensics, The CyberMilitia and Bill  [...]</a><br />
+        February 02, 2012 - 6:45 PM
+</p>
+            <p><a href="/blog/2012/01/25/digital-forensic-sifting-colorized-super-timeline-template-for-log2timeline-output-files">Digital Forensic SIFTing: Colorized Super Timeline Template for Log2timelin [...]</a><br />
+        January 25, 2012 - 6:02 AM
+</p>
+    </div>
+
+<div class="footer-column" style="margin-right:30px">
+<h3>Latest Tweets</h3>
+            <p><a href="http://twitter.com/sansforensics/statuses/168493086660509697">@sansforensics: Perl Script to Look for Meterpreter with Vola [...]</a><br />
+            February 12, 2012 - 12:34 AM</p>
+                    <p><a href="http://twitter.com/sansforensics/statuses/168405039252115457">@sansforensics: @djcoax Yes... looks like it might be October [...]</a><br />
+            February 11, 2012 - 6:44 PM</p>
+                    <p><a href="http://twitter.com/sansforensics/statuses/168095099832639488">@sansforensics: RT @robtlee: RT @syngress: Windows Forensic A [...]</a><br />
+            February 10, 2012 - 10:12 PM</p>
+        </div>
+
+<div class="footer-column">
+<h3>Latest Papers</h3>
+    <p><a href="/community/papers/gcfa/grow-forensic-tools-taxonomy-python-libraries-helpful-forensic-analysis_6879">Grow Your Own Forensic Tools: A Taxonomy of Python Libraries Helpful for Forensic Analysis</a><br />
+    By Terrence OConnor</p>
+    <p><a href="/community/papers/gcfa/integrating-forensic-investigation-methodology-ediscovery_5088">Integrating Forensic Investigation Methodology into eDiscovery</a><br />
+    By Colin Chisholm</p>
+    <p><a href="/community/papers/gcfa/mastering-super-timeline-log2timeline_5028">Mastering the Super Timeline With log2timeline</a><br />
+    By Kristinn Gudjonsson</p>
+</div>
+<div class="clear"></div>
+<div class="footer-quote-box">
+    <p>"The class provided in-depth, real world, hands-on information."<br />- Robert Dale Drollinger, General Dynamic</p>
+    <p>"Rob is great, just like all of the other SANS instructors I've had."<br />- Chris O'Keefe, The Community Preservation Corp</p>
+    <p>"I had taken several other forensic courses prior to this one, but none of them or their instructors made understanding forensic methodologies and techniques as clear and understandable as Rob Lee and this course has."<br />- Nathon Heck, Purdue</p>
+</div>
+
+</div>
+</div><!-- end .bottom-content -->
+<!-- Footer -->
+<div id="footer">
+<div class="container">
+<img src="/images/design-site/logo-footer.png" alt="SANS Forensics Community Links" class="logo-footer" />
+
+<ul class="site-selector">
+ <li class="site-switcher"><a href="#"><span class="hidden">SANS Site Network</span></a>
+  <ul class="sites">
+    <li class="current-site">Current Site</li>
+    <li class="forensics "><a href="http://computer-forensics.sans.org"><img src="/images/design/custom/site-selector/site-icons/forensics.png" alt="forensics" />Computer Forensics</a></li>
+   <li class="selector-help">Choose a different site <a href="/help/site-network"><span class="hidden">Help</span></a></li><li class="sans "><a href="http://www.sans.org"><img src="/images/design/custom/site-selector/site-icons/sans.png" alt="sans" />Training</a></li>
+<li class="giac "><a href="http://www.giac.org"><img src="/images/design/custom/site-selector/site-icons/giac.png" alt="giac" />Certification</a></li>
+<li class="isc "><a href="http://isc.sans.org"><img src="/images/design/custom/site-selector/site-icons/isc.png" alt="isc" />Internet Storm Center</a></li>
+<li class="sti "><a href="http://www.sans.edu"><img src="/images/design/custom/site-selector/site-icons/sti.png" alt="sti" />Cyber Security Graduate School</a></li>
+<li class="awareness "><a href="http://www.securingthehuman.org"><img src="/images/design/custom/site-selector/site-icons/awareness.png" alt="awareness" />Security Awareness Training</a></li>
+<li class="pentest "><a href="http://pen-testing.sans.org"><img src="/images/design/custom/site-selector/site-icons/pentest.png" alt="pentest" />Penetration Testing</a></li>
+<li class="audit "><a href="http://it-audit.sans.org"><img src="/images/design/custom/site-selector/site-icons/audit.png" alt="audit" />IT Audit</a></li>
+<li class="ssi last"><a href="http://software-security.sans.org"><img src="/images/design/custom/site-selector/site-icons/ssi.png" alt="ssi" />Software Security</a></li>
+  </ul>
+ </li>
+</ul>
+
+<div class="latest-icons">
+<a href="http://twitter.com/sansforensics"><img src="/images/design/custom/icons/twitter-icon.png" alt="Twitter" /></a>
+<a href="https://www.facebook.com/pages/SANS-Institute/173623382673767"><img src="/images/design/custom/icons/facebook-icon.png" alt="Facebook" /></a>
+<a href="http://computer-forensics.sans.org/blog/feed/"><img src="/images/design/custom/icons/rss-icon.png" alt="RSS" /></a>
+</div><!-- end .latest-icons -->
+
+<div class="bottom-nav align-right">
+<ul>
+ <li><a href="/community/">Community</a></li>
+ <li><a href="/courses">Courses</a></li>
+ <li><a href="/events/">Events</a></li>
+ <li><a href="/certification/">Certification</a></li>
+ <li class="last"><a href="/instructors">Instructors</a></li>
+</ul>
+<p class="copyright align-right">&copy; 2008 - 2012 The SANS&#8482; Institute</p>
+</div><!-- end .bottom-nav align-right-->
+</div><!-- end .container-->
+</div><!-- end .footer-->
+
+</div><!-- end .body -->
+
+
+</body>
+</html>

@@ -1,0 +1,29 @@
+<?wpl version="1.0"?>
+<smil>
+  <head>
+    <meta name="Generator" content="Microsoft Windows Media Player -- 11.0.5428.4943"/>
+    <title>Music auto rated at 5 stars</title>
+  </head>
+  <body>
+    <seq>
+      <smartPlaylist version="1.0.0.0">
+        <querySet>
+          <sourceFilter id="{4202947A-A563-4B05-A754-A1B4B5989849}" name="Music in my library">
+            <fragment name="Effective Rating">
+              <argument name="condition">Is At Least</argument>
+              <argument name="value">5 stars</argument>
+            </fragment>
+            <fragment name="Sort by">
+              <argument name="value">Album Artist</argument>
+              <argument name="condition">Ascending</argument>
+            </fragment>
+            <fragment name="Sort by">
+              <argument name="value">Album Title</argument>
+              <argument name="condition">Ascending</argument>
+            </fragment>
+          </sourceFilter>
+        </querySet>
+      </smartPlaylist>
+    </seq>
+  </body>
+</smil>

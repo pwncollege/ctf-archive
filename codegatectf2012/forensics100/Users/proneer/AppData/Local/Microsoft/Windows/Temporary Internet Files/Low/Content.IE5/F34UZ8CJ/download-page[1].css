@@ -1,0 +1,435 @@
+/* {{{ download message */
+
+body {
+    background: #df4114;
+}
+
+body #outer-wrapper {
+    background: #df4114 url(/img/firefox/firstrun/background-mosaic.jpg) 50% 0 no-repeat;
+    min-height: 100%;
+    height: 100%;
+    min-width: 980px;
+    line-height: 1.4em;
+    font-family: Georgia, serif;
+    font-size: 16px;
+    color: #484848;
+}
+
+* html #download #header h1 a,
+* html #download #header h1 a:link,
+* html #download #header h1 a:visited {
+    background-image: url(/img/covehead/template/title-orange-ie6.png);
+}
+
+#download-message #main-feature h2,
+#download-message #main-feature-fallback h2 {
+    color: #fff;
+    text-align: center;
+    padding: 160px 50px 20px 50px;
+    font-size: 42px;
+    line-height: 1;
+}
+
+#download-message #main-feature h2 em,
+#download-message #main-feature-fallback h2 em {
+    display: block;
+}
+
+#download-message #content,
+#download-message #content-fallback {
+    margin: 0 15px;
+    padding: 5px 0 10px 0;
+    clear: left;
+    background: #fff;
+    zoom: 1;
+}
+
+#download-message p.manual-download,
+#download-message p.manual-download {
+    margin: 10px 100px 30px 100px;
+    font-size: 18px;
+    text-align: center;
+}
+
+/* }}} */
+/* {{{ install steps */
+
+#download ol.install-steps {
+    margin: 0 40px;
+    padding: 0;
+    clear: left;
+    zoom: 1;
+}
+
+#download ol.install-steps:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+#download ol.install-steps li {
+    padding: 235px 25px 30px 35px;
+    width: 230px;
+    margin: 0;
+    list-style-type: none;
+    float: left;
+    zoom: 1;
+}
+
+#download.win-download ol.install-steps {
+    background: url(/img/covehead/download/download-horizontal-win.jpg) 50% 0 no-repeat;
+}
+
+#download.osx-download ol.install-steps {
+    background: url(/img/covehead/download/download-horizontal-osx.jpg) 50% 0 no-repeat;
+}
+
+#download-thanks {
+    font-size: 20px;
+    font-style: italic;
+    margin: 0;
+    padding: 30px 100px;
+    text-align: center;
+}
+
+ol.install-steps li p {
+    font-size: 14px;
+    color: #69645c;
+    font-style: normal;
+    line-height: 1.5;
+}
+
+#download ol.install-steps li.two {
+    background-position: -755px 0;
+}
+
+#download ol.install-steps li.three {
+    background-position: -1510px 0;
+}
+
+/* }}} */
+/* {{{ sidebar */
+
+#download-sidebar .sidebar-divider {
+    height: 1px;
+        background-color: #edf2f5;
+        font-size: 0;
+}
+
+#download-sidebar h3 {
+    margin: 0 0 10px 0;
+    font-size: 22px;
+}
+
+#download-sidebar h3 span {
+    line-height: .95;
+}
+
+#download-sidebar #sidebar-newsletter h3 {
+    font-size: 16px;
+}
+
+#download-sidebar #sidebar-newsletter a {
+    margin-top: 1em;
+}
+
+#download-sidebar a.tweet {
+    background: #fff url(/img/covehead/download/twitter-button-icon) no-repeat 135px center;
+    padding: 8px 20px 8px 8px;
+    font-size: 12px;
+    color: #447bc4;
+    border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    box-shadow: -2px 2px 2px #888;
+    -moz-box-shadow: -2px 2px 2px #888;
+    -webkit-box-shadow: -2px 2px 2px #888;
+}
+
+#sidebar-mobile,
+#sidebar-webifyme,
+#sidebar-newsletter,
+#sidebar-twitter {
+    padding: 20px;
+}
+
+#sidebar-webifyme {
+    padding-right: 10px;
+}
+
+#download-sidebar {
+    display: inline-block;
+    background-color: #FFFFFF;
+    background-image: -moz-linear-gradient(#FFFFFF 95%, rgba(223, 239, 249, 0.15));
+    border: 1px solid #BDC6D7;
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+    box-shadow: 0 2px rgba(0, 0, 0, 0.1), 0 -2px #E5EFF8 inset, 0 0 2px rgba(223, 239, 249, 0.8) inset, 0 -5px 10px rgba(223, 239, 249, 0.5) inset;
+    line-height: 24px;
+    list-style-type: none;
+    margin: 30px;
+    padding: 0;
+    clear: left;
+    zoom: 1;
+}
+
+#download-sidebar:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+#download-sidebar #form-column1 {
+    width: 200px;
+    padding: 30px 100px 30px 30px;
+    float: left;
+    background: url(/img/covehead/download/newsletter-bg.png) 150px 28px no-repeat;
+}
+
+#download-sidebar #form-column2,
+#download-sidebar #form-column3 {
+    float: left;
+    width: 300px;
+    padding: 30px 30px 20px 0;
+}
+
+#download-sidebar #form-column3 {
+    width: 193px;
+}
+
+#sidebar-mobile img {
+    float: right;
+}
+
+#sidebar-webifyme img,
+#sidebar-twitter img {
+    float: right;
+}
+
+#download-sidebar form {
+    margin: 0;
+    padding: 0;
+}
+
+#download-sidebar form p {
+    margin: 0 0 15px 0;
+    color: #666;
+    font-style: italic;
+    line-height: 1.3;
+}
+
+#download-sidebar form h3 em {
+    display: block;
+}
+
+#download-sidebar form .email-field input,
+#download-sidebar form .country-field select {
+    border-style: solid;
+    border-width: 1px; 
+    border-color: #aaa #cdcdcd #cdcdcd #aaa;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    padding: 4px;
+    width: 250px;
+    background: #fff;
+    -moz-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1) inset
+    -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1) inset
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1) inset
+}
+
+#download-sidebar form .email-field input {
+    color: #666;
+}
+
+#download-sidebar form .email-field input:focus {
+    color: #000;
+}
+
+#download-sidebar form .field {
+    margin: 0 0 10px 0;
+}
+
+#download-sidebar form .privacy-check-label input {
+    float: left;
+}
+
+#download-sidebar form .privacy-check-label span {
+    display: block;
+    margin-left: 25px;
+    font-size: 12px;
+}
+
+#download-sidebar form .privacy-check-label a:link,
+#download-sidebar form .privacy-check-label a:visited {
+    text-decoration: underline;
+    color: #666;
+}
+
+#download-sidebar form .privacy-check-label a:hover,
+#download-sidebar form .privacy-check-label a:active {
+    color: #447BC4;
+}
+
+#download-sidebar form .button {
+    padding: 8px 0;
+    margin-right: 5px;
+    display: block;
+    width: 100%;
+    font-weight: normal;
+    font-style: italic;
+    text-shadow: 1px 1px rgba(0,0,0,0.2);
+    font-size: 16px;
+    font-family: georgia, serif;
+    border: 0;
+    -moz-box-shadow:    0 3px rgba(0,0,0,0.1), inset 0 -4px rgba(0,0,0,0.1);
+    -webkit-box-shadow: 0 3px rgba(0,0,0,0.1), inset 0 -4px rgba(0,0,0,0.1);
+    box-shadow:         0 3px rgba(0,0,0,0.1), inset 0 -4px rgba(0,0,0,0.1);
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    color: #fff;
+    overflow: visible;
+    background: #669be1; /* old browsers */
+    background: -moz-linear-gradient(top, #669be1 0%, #5784bf 100%); /* firefox */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#669be1), color-stop(100%,#5784bf)); /* webkit */
+    background: linear-gradient(top, #669be1 0%, #5784bf 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#669be1', endColorstr='#5784bf',GradientType=0 ); /* ie */
+    -moz-transition:   box-shadow 0.2s ease-in-out;
+    -webit-transition: box-shadow 0.2s ease-in-out;
+    transition:        box-shadow 0.2s ease-in-out;
+}
+
+#download-sidebar form .disclaimer {
+    margin: 8px 0 0 0;
+    font-size: 11px;
+    font-style: italic;
+    color: #888;
+}
+
+/* }}} */
+/* {{{ Custom Footer */
+
+#footer {
+    display: none;
+}
+
+#doc:after {
+    content: "";
+}
+
+.footer-links {
+    margin: 0 15px;
+    padding: 10px 0;
+    clear: both;
+    text-align: center;
+    color: #ccc;
+    font-size: 16px;
+    background: #fff;
+}
+
+.footer-links .footer-privacy {
+    margin-top: .5em;
+    font-size: .85em;
+}
+
+.footer-links .footer-privacy {
+    font-size: 11px;
+    margin-top: 15px;
+    padding-bottom: 5px;
+}
+.footer-links a,
+.footer-links a:link,
+.footer-links a:visited {
+    color: #555;
+}
+.footer-links .footer-privacy a,
+.footer-links .footer-privacy a:link,
+.footer-links .footer-privacy a:visited {
+    color: #999;
+}
+
+/* }}} */
+/* {{{ Fallback content */
+
+#download-fallback {
+    display: none;
+}
+
+#download-fallback li {
+    padding-bottom: 15px;
+}
+
+#content-fallback ul.home-download {
+    width: 400px;
+}
+
+#content-fallback .download-link span {
+    position: relative;
+    display: block;
+    background: url(/img/home/download-logo.png) 0 0 no-repeat;
+    font-family: georgia, serif;
+    font-style: italic;
+    font-weight: normal;
+    line-height: 18px;
+    padding: 10px 10px 0 112px;
+    margin-left: -25px;
+    padding-left: 55px;
+    font-size: 15px;
+    background-image: url(/img/download-logo-sub.png);
+    height: 40px;
+    line-height: 1;
+    padding-top: 8px;
+}
+
+#content-fallback .download-link span strong {
+    display: none;
+}
+
+#content-fallback .download-link span em {
+    display: block;
+    padding-top: 5px;
+}
+
+/* }}} */
+/* {{{ Brand Awareness Survey */
+
+#survey-box {
+    background: #f7f3da url(/img/covehead/download/survey-bg.jpg) -140px 0 no-repeat;
+    width: 685px;
+    padding: 30px 30px 30px 50px;
+    margin: 10px 10px 30px 10px;
+    border: 1px solid #D7D9E8;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    -webkit-box-shadow: 0 2px rgba(0, 0, 0, 0.05), 0 -2px rgba(0, 0, 0, 0.05) inset;
+    -moz-box-shadow: 0 2px rgba(0, 0, 0, 0.05), 0 -2px rgba(0, 0, 0, 0.05) inset;
+    box-shadow: 0 2px rgba(0, 0, 0, 0.05), 0 -2px rgba(0, 0, 0, 0.05) inset;
+    float: left;
+}
+
+#survey-box h3 {
+    clear: both;
+    float: left;
+    font-size: 28px;
+    line-height: 30px;
+    margin-top: 10px;
+    margin-right: 20px;
+    width: 290px;
+}
+
+#survey-box h3 span {
+}
+
+#survey-box iframe {
+    float: left;
+    width: 375px;
+}
+
+/* }}} */

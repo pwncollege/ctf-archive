@@ -1,0 +1,430 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta name="msvalidate.01" content="79C78EB33B8812273BEAA273668E9D92" />
+ <title>SANS: Computer Security News/Newsletters</title>
+ <link rel="shortcut icon" href="/favicon.ico" />
+ <meta http-equiv="Content-type" content="text/html; charset=ISO-8859-1" />
+  <meta name="robots" content="follow" /><meta name="description" content="The latest computer security news and newsletters brought to you by SANS." />
+<meta name="keywords" content="security news, security newsletters, computer security news" />
+<meta name="categories" content="security, news, newsletters" />
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-25324117-1']);
+  _gaq.push(['_trackPageview']);  
+  _gaq.push(['_setLocalRemoteServerMode']);
+  _gaq.push(['_setLocalGifPath', 'http://www.sans.org']);      
+    
+  _gaq.push(['b._setAccount', 'UA-25324117-2']);
+  _gaq.push(['b._setDomainName', 'sans.org']);  
+  _gaq.push(['b._addIgnoredRef', 'sans.org']);
+  _gaq.push(['b._trackPageview']);     
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+<script src="/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+    urchinTracker();
+</script>
+
+ <link rel="stylesheet" href="/css/new-style/master.php?cc=201103250102" type="text/css" media="screen, projection,print" />
+    		   <link rel="stylesheet" href="/css/new-style/styles.css?cc=20110325" type="text/css" media="screen, projection,print" />
+    		   <link rel="stylesheet" href="/css/new-style/site_selector.css?cc=20110325" type="text/css" media="screen, projection,print" />
+    		   <link rel="stylesheet" href="/css/new-style/site.css?cc=20110325" type="text/css" media="screen, projection,print" /><link rel="stylesheet" href="/css/newsletters.css?cc=20070629" type="text/css" media="screen, projection, print" />
+<script type="text/javascript" src="/expandable.js"></script>
+<script type="text/javascript" src="/menu.js"></script>
+
+
+</head>
+
+<body>
+<div class="noheader">
+<div class="container default-navigation-all">
+<!-- header -->
+<div class="header">
+<a href="/"><img src="/images/design-site/logo.png" alt="SANS Institute" class="logo" /></a>
+
+<ul class="site-selector">
+ <li class="site-switcher"><a href="#"><span class="hidden">SANS Site Network</span></a>
+  <ul class="sites">
+   <li class="current-site">Current Site</li>
+   <li class="sans"><a href=""><img src="/images/design/custom/site-selector/site-icons/sans.png" alt="sans" />Training</a></li>
+   <li class="selector-help">Choose a different site <a href="/help/site-network"><span class="hidden">Help</span></a></li>
+   <li class="giac"><a href="http://www.giac.org"><img src="/images/design/custom/site-selector/site-icons/giac.png" alt="giac" />Certification</a></li>
+   <li class="sti"><a href="http://www.sans.edu"><img src="/images/design/custom/site-selector/site-icons/sti.png" alt="sti" />Cyber Security Graduate School</a></li>
+   <li class="isc"><a href="http://isc.sans.edu"><img src="/images/design/custom/site-selector/site-icons/isc.png" alt="isc" />Internet Storm Center</a></li>
+   <li class="awareness"><a href="http://www.securingthehuman.org"><img src="/images/design/custom/site-selector/site-icons/awareness.png" alt="awareness" />Security Awareness Training</a></li>
+   <li class="forensics"><a href="http://computer-forensics.sans.org"><img src="/images/design/custom/site-selector/site-icons/forensics.png" alt="forensics" />Computer Forensics</a></li>
+   <li class="pentest "><a href="http://pen-testing.sans.org"><img src="/images/design/custom/site-selector/site-icons/pentest.png" alt="pentest">Penetration Testing</a></li>
+   <li class="audit"><a href="http://it-audit.sans.org"><img src="/images/design/custom/site-selector/site-icons/audit.png" alt="audit" />IT Audit</a></li>
+   <li class="ssi"><a href="http://software-security.sans.org"><img src="/images/design/custom/site-selector/site-icons/software-security.png" alt="ssi" />Software Security</a></li>
+  </ul>
+ </li>
+</ul>
+
+<div class="clear"></div>
+<div class="top-menu">
+<ul class="dropdown user-menu">
+ <li class="root-item login-status"><a href="https://www.sans.org/account/">Secure Access / Login<!-- |--></a>  </li>
+  <!-- <li class="root-item cart-status"><a href="#">My Cart <img src="/images/icons/silk/cart.png" /></a></li> -->
+ <li class="root-item">
+  <!-- Begin Google Site Search -->
+  <form action="/search/results/" method="post" id="cse-search-box" class="search-form">
+   <input type="text" id="q" name="q" value="" class="search-input" />
+   <input id="search-button" type="image" title="Search" name="sa" value="Search" class="search-submit" src="/images/icons2/custom/search.png" />
+  </form>
+  <script type="text/javascript" src="http://www.google.com/cse/brand?form=cse-search-box&lang=en"></script>
+ </li>
+</ul><!-- / .login-status -->
+
+<div class="clear"></div>
+<ul class="dropdown main-nav">
+
+ <li class="root-item"><a href="/find-training/" onClick="_gaq.push(['_trackEvent', 'FindTraining', 'Clicked', 'FindTrainingMenu']);">Find Training</a>
+  <ul>
+   <li class="first"><a href="/find-training/" onClick="_gaq.push(['_trackEvent', 'SearchForTraining', 'Clicked', 'FindTrainingMenu']);">Search For Training</a></li>
+   <li><a href="/security-training/bylocation/" onClick="_gaq.push(['_trackEvent', 'UpcomingEvents', 'Clicked', 'FindTrainingMenu']);">Upcoming Events</a></li>
+    <li><a href="/security-training/courses.php" onClick="_gaq.push(['_trackEvent', 'CourseList', 'Clicked', 'FindTrainingMenu']);">Course List</a>
+    <li><a href="/security-training/curriculums/index.php" onClick="_gaq.push(['_trackEvent', 'TrainingList', 'Clicked', 'FindTrainingMenu']);">Training Curricula &raquo;</a>
+     <ul>
+      <li class="first"><a href="/security-training/curriculums/security" onClick="_gaq.push(['_trackEvent', 'SecCurr', 'Clicked', 'FindTrainingMenu']);">Security</a></li>
+      <li class="no-top-radius"><a href="/security-training/curriculums/management" onClick="_gaq.push(['_trackEvent', 'MgtCurr', 'Clicked', 'FindTrainingMenu']);">Management</a></li>
+      <li class="no-top-radius"><a href="/security-training/curriculums/forensics" onClick="_gaq.push(['_trackEvent', 'ForCurr', 'Clicked', 'FindTrainingMenu']);">Forensics</a></li>
+      <li class="no-top-radius"><a href="/security-training/curriculums/developer" onClick="_gaq.push(['_trackEvent', 'DevCurr', 'Clicked', 'FindTrainingMenu']);">Secure Software Development</a></li>
+      <li class="no-top-radius"><a href="/security-training/curriculums/pen-test" onClick="_gaq.push(['_trackEvent', 'PenTestCurr', 'Clicked', 'FindTrainingMenu']);">Penetration Testing</a></li>
+      <li class="no-top-radius"><a href="/security-training/curriculums/system-administrator" onClick="_gaq.push(['_trackEvent', 'SysAdmCurr', 'Clicked', 'FindTrainingMenu']);">System Administration</a></li>
+      <li class="no-top-radius"><a href="/security-training/curriculums/incident-handler" onClick="_gaq.push(['_trackEvent', 'IncHandCurr', 'Clicked', 'FindTrainingMenu']);">Incident Handling</a></li>
+      <li class="no-top-radius"><a href="/security-training/curriculums/intrusion" onClick="_gaq.push(['_trackEvent', 'InstruAnCurr', 'Clicked', 'FindTrainingMenu']);">Intrusion Analysis</a></li>
+      <li class="no-top-radius"><a href="/security-training/curriculums/audit" onClick="_gaq.push(['_trackEvent', 'AuditCurr', 'Clicked', 'FindTrainingMenu']);">Audit</a></li>
+      <li class="no-top-radius"><a href="/security-training/curriculums/legal" onClick="_gaq.push(['_trackEvent', 'LegalCurr', 'Clicked', 'FindTrainingMenu']);">Legal</a></li>
+      <li class="no-top-radius last"><a href="/security-training/curriculums/cyber-guardian" onClick="_gaq.push(['_trackEvent', 'CyberGCurr', 'Clicked', 'FindTrainingMenu']);">Cyber Guardian</a></li>
+     </ul>
+    </li>
+    <li><a href="/security-training/discounts.php" onClick="_gaq.push(['_trackEvent', 'GroupDisc', 'Clicked', 'FindTrainingMenu']);">Group Discounts</a></li>
+   <li class="last"><a href="/security-training/calendars/" onClick="_gaq.push(['_trackEvent', 'Calendars', 'Clicked', 'FindTrainingMenu']);">Calendars</a></li>
+  </ul>
+ </li>
+
+ <li class="root-item"><a href="/security-training/" onClick="_gaq.push(['_trackEvent', 'LiveTraining', 'Clicked', 'LiveTrainingMenu']);">Live Training</a>
+  <ul>
+   <li class="first"><a href="/find-training/live" onClick="_gaq.push(['_trackEvent', 'SearchTraining', 'Clicked', 'LiveTrainingMenu']);">Search For Training</a></li>
+    <li><a href="/security-training/bylocation/" onClick="_gaq.push(['_trackEvent', 'UpcomEvents', 'Clicked', 'LiveTrainingMenu']);">Upcoming Events</a></li>
+    <li><a href="/summit/" onClick="_gaq.push(['_trackEvent', 'Summits', 'Clicked', 'LiveTrainingMenu']);">Summit Series</a></li>
+    <li><a href="/community_sans/" onClick="_gaq.push(['_trackEvent', 'Community', 'Clicked', 'LiveTrainingMenu']);">Community Events</a></li>
+    <li><a href="/mentor/" onClick="_gaq.push(['_trackEvent', 'Mentor', 'Clicked', 'LiveTrainingMenu']);">Mentor Program</a></li>
+    <li><a href="/onsite/" onClick="_gaq.push(['_trackEvent', 'Onsite', 'Clicked', 'LiveTrainingMenu']);">OnSite</a></li>
+    <li><a href="/partnership/" onClick="_gaq.push(['_trackEvent', 'Partners', 'Clicked', 'LiveTrainingMenu']);">Partnership Series</a></li>
+    <li><a href="/work-study" onClick="_gaq.push(['_trackEvent', 'WorkStudy', 'Clicked', 'LiveTrainingMenu']);">Work Study</a></li>
+    <li class="last"><a href="/coins/" onClick="_gaq.push(['_trackEvent', 'Coins', 'Clicked', 'LiveTrainingMenu']);">COINS</a></li>
+  </ul>
+ </li>
+
+ <li class="root-item"><a href="/online-security-training/" onClick="_gaq.push(['_trackEvent', 'OnlineTraining', 'Clicked', 'OnlineTrainingMenu']);">Online Training</a>
+  <ul>
+   <li class="first"><a href="/find-training/online" onClick="_gaq.push(['_trackEvent', 'SearchTraining', 'Clicked', 'OnlineTrainingMenu']);">Search For Training</a></li>
+   <li><a href="/virtual-training/vlive" onClick="_gaq.push(['_trackEvent', 'vLive', 'Clicked', 'OnlineTrainingMenu']);">vLive</a></li>
+   <li><a href="/ondemand/" onClick="_gaq.push(['_trackEvent', 'OnDemand', 'Clicked', 'OnlineTrainingMenu']);">OnDemand</a></li>
+   <li><a href="/virtual-training/event-simulcast" onClick="_gaq.push(['_trackEvent', 'Simulcast', 'Clicked', 'OnlineTrainingMenu']);">Simulcast &raquo;</a>
+     <ul>
+       <li class="first"><a href="/virtual-training/event-simulcast" onClick="_gaq.push(['_trackEvent', 'EventSimu', 'Clicked', 'OnlineTrainingMenu']);">Event</a></li>
+       <li class="last"><a href="/virtual-training/custom-simulcast" onClick="_gaq.push(['_trackEvent', 'CustSimu', 'Clicked', 'OnlineTrainingMenu']);">Custom</a></li>
+     </ul>
+   </li>
+   <li><a href="/security-awareness/" onClick="_gaq.push(['_trackEvent', 'SecAwareness', 'Clicked', 'OnlineTrainingMenu']);">Security Awareness</a></li>
+   <li class="last"><a href="/selfstudy/" onClick="_gaq.push(['_trackEvent', 'SelfStudy', 'Clicked', 'OnlineTrainingMenu']);">SelfStudy</a></li>
+  </ul>
+ </li>
+
+ <li class="root-item"><a href="/programs/" onClick="_gaq.push(['_trackEvent', 'Programs', 'Clicked', 'ProgramsMenu']);">Programs</a>
+  <ul>
+    <li class="first"><a href="/vouchers/" onClick="_gaq.push(['_trackEvent', 'VoucherCre', 'Clicked', 'ProgramsMenu']);">Voucher Credit</a></li>
+    <li><a href="/cyber-guardian" onClick="_gaq.push(['_trackEvent', 'CyberGuar', 'Clicked', 'ProgramsMenu']);">Cyber Guardian</a></li>
+    <li><a href="/cyber-ranges/" onClick="_gaq.push(['_trackEvent', 'CyberRang', 'Clicked', 'ProgramsMenu']);">Cyber Ranges</a></li>
+    <li class="last"><a href="/8570/" onClick="_gaq.push(['_trackEvent', 'Dod8570', 'Clicked', 'ProgramsMenu']);">DoD 8570</a></li>
+  </ul>
+ </li>
+
+ <li class="root-item"><a href="/security-resources/" onClick="_gaq.push(['_trackEvent', 'Resources', 'Clicked', 'ResourcesMenu']);">Resources</a>
+  <ul>
+    <li class="first"><a href="/reading_room/" onClick="_gaq.push(['_trackEvent', 'ReadingRoom', 'Clicked', 'ResourcesMenu']);">Reading Room</a></li>
+    <li><a href="/webcasts/" onClick="_gaq.push(['_trackEvent', 'Webcast', 'Clicked', 'ResourcesMenu']);">Webcasts</a></li>
+    <li><a href="/newsletters/" onClick="_gaq.push(['_trackEvent', 'Newsletter', 'Clicked', 'ResourcesMenu']);">Newsletters</a></li>
+    <li><a href="/top25-software-errors/" onClick="_gaq.push(['_trackEvent', 'Top25Err', 'Clicked', 'ResourcesMenu']);">Top 25 Programming Errors</a></li>
+    <li><a href="/critical-security-controls/" onClick="_gaq.push(['_trackEvent', 'CriticalControls', 'Clicked', 'ResourcesMenu']);">Top 20 Critical Controls</a></li>
+    <li><a href="/security-resources/policies/" onClick="_gaq.push(['_trackEvent', 'SecPolProj', 'Clicked', 'ResourcesMenu']);">Security Policy Project</a></li>
+    <li><a href="/security-resources/vendor_directory/" onClick="_gaq.push(['_trackEvent', 'FromVendor', 'Clicked', 'ResourcesMenu']);">From Vendors &raquo;</a>
+      <ul>
+        <li class="first"><a href="/security-resources/vendor_directory/" onClick="_gaq.push(['_trackEvent', 'BuyGuide', 'Clicked', 'ResourcesMenu']);">SANS Buyers Guide</a></li>
+        <li><a href="/security-resources/vendor_demos/" onClick="_gaq.push(['_trackEvent', 'SecToolDemo', 'Clicked', 'ResourcesMenu']);">Security Tool Demos</a></li>
+        <li class="last"><a href="/vendor-software-room/" onClick="_gaq.push(['_trackEvent', 'VendorBetaRoom', 'Clicked', 'ResourcesMenu']);">Vendor Software Beta Room</a></li>
+      </ul>
+    </li>
+    <li class="last"><a href="/security-resources/" onClick="_gaq.push(['_trackEvent', 'Additional', 'Clicked', 'ResourcesMenu']);">Additional Resources</a></li>
+  </ul>
+ </li>
+
+ <li class="root-item"><a href="/vendor/" class="vendor menu-vendor" onClick="_gaq.push(['_trackEvent', 'Vendor', 'Clicked', 'VendorMenu']);">Vendor</a>
+  <ul>
+    <li class="first"><a href="/vendor/" onClick="_gaq.push(['_trackEvent', 'Overview', 'Clicked', 'VendorMenu']);">Overview</a></li>
+    <li><a href="/vendor/sponsorship/" onClick="_gaq.push(['_trackEvent', 'Sponsor', 'Clicked', 'VendorMenu']);">Sponsorship</a></li>
+    <li><a href="/vendor/demographics/" onClick="_gaq.push(['_trackEvent', 'Demogra', 'Clicked', 'VendorMenu']);">Demographics</a></li>
+    <li><a href="/vendor/events/" onClick="_gaq.push(['_trackEvent', 'Events', 'Clicked', 'VendorMenu']);">Events</a></li>
+    <li class="last"><a href="/vendor/contact/" onClick="_gaq.push(['_trackEvent', 'Contact', 'Clicked', 'VendorMenu']);">Contact</a></li>
+  </ul>
+ </li>
+
+ <li class="root-item"><a href="/about/" class="about menu-about" onClick="_gaq.push(['_trackEvent', 'About', 'Clicked', 'AboutMenu']);">About</a>
+  <ul class="last-menu">
+    <li class="first"><a href="/about/sans.php" onClick="_gaq.push(['_trackEvent', 'AboutSans', 'Clicked', 'AboutMenu']);">About SANS</a></li>
+    <li><a href="/security-training/instructors.php" onClick="_gaq.push(['_trackEvent', 'CertInstru', 'Clicked', 'AboutMenu']);">Certified Instructors</a></li>
+    <li><a href="/about/contact.php" onClick="_gaq.push(['_trackEvent', 'ContactSans', 'Clicked', 'AboutMenu']);">Contact SANS</a></li>
+    <li><a href="/faq/" onClick="_gaq.push(['_trackEvent', 'SansFaq', 'Clicked', 'AboutMenu']);">SANS FAQ</a></li>
+    <li><a href="/link-to-us/" rel="nofollow" onClick="_gaq.push(['_trackEvent', 'LinkTo', 'Clicked', 'AboutMenu']);">Link to SANS</a></li>
+    <li><a href="/press/" onClick="_gaq.push(['_trackEvent', 'PressRoom', 'Clicked', 'AboutMenu']);">Press Room</a></li>
+    <li><a href="http://pgp.mit.edu:11371/pks/lookup?op=get&amp;search=0xA1694E46'" rel="nofollow" onClick="_gaq.push(['_trackEvent', 'PgpKey', 'Clicked', 'AboutMenu']);">PGP Key</a></li>
+    <li class="last"><a href="/key.txt" rel="nofollow" onClick="_gaq.push(['_trackEvent', 'PgpKeyLocal', 'Clicked', 'AboutMenu']);">PGP Key - Local Copy</a></li>
+  </ul>
+ </li>
+</ul><!-- / .dropdown -->
+</div><!-- / .top-menu -->
+
+<div class="clear"></div><!-- / .clear -->
+
+</div><!-- / .header -->
+</div><!--  end .container -->
+
+<div class="container">
+
+<div id="page-content">
+
+ <div id="page-title">
+    	<h1>Computer Security News/Newsletters</h1>
+ </div>
+
+
+<div style="float:left;width:150px">
+ <div id="newsletter-links">
+     <div id="active-news" class="links-split1">
+       <h4>Current Security Newsletters</h4>
+       <ul>
+        <li><a href="#newsbites">SANS NewsBites</a></li>
+        <li><a href="#risk">@RISK: The Consensus Security Alert</a></li>
+        <li><a href="#ouch">Ouch!</a></li>
+       </ul>
+     </div>
+ </div>
+
+</div>
+<div style="float:right;margin-top:20px"><a href="/reading_room/images/click.php?id=474" ><img src="http://www.sans.org/reading_room/banner.php?id=474" alt="BuyersGuide" border="0" height="60" width="468" /></a></div>
+<div class="clear"></div>
+ <div id="newsbites" class="index-card">
+   <a name="news"></a>
+     <div id="newsbites-desc" class="index-card-desc">
+	<h4>SANS NewsBites</h4>
+	<p>
+	SANS NewsBites is a semiweekly high-level executive summary of the most important news articles that have been published on computer security during the last week. Each news item is very briefly summarized and includes a reference on the web for detailed information, if possible.
+	</p>
+	<p>Spend five minutes per week to keep up with the high-level perspective of all the latest security news. New issues are delivered free every Tuesday and Friday.
+	</p>
+     </div>
+     <div id="newsbites-info" class="index-card-info">
+	  <dl>
+          <dt>news feed</dt>
+          <dd class="rss"><a href="/newsletters/newsbites/rss/" class="rss"><span>SANS NewsBites RSS</span></a></dd>
+          <dt><q>Search our past SANS NewBites archives.</q></dt>
+          <dd class="archive"><a href="/newsletters/newsbites/" class="archive"><span>Archive Available</span></a></dd>
+	  <dt><q>Get your FREE subscription to SANS NewsBites!</q></dt>
+          <dd class="signup"><a href="https://portal.sans.org/preferences.php" class="signup"><span>Sign Up Now</span></a></dd>
+          </dl>
+     </div>
+ </div>
+
+<div class="top-link">
+     <a href="#top" class="toplink"><span>top^</span></a>
+</div>
+
+
+
+ <div id="atrisk" class="index-card">
+   <a name="risk"></a>
+     <div id="atrisk-desc" class="index-card-desc">
+        <h4>@RISK: The Consensus Security Alert</h4>
+        <p>
+         The Critical Vulnerability Analysis and the Security Alert Consensus have merged to become @RISK: The Consensus Security Alert. Delivered every Thursday, @RISK first summarizes the three to eight vulnerabilities that matter most, tells what damage they do and how to protect yourself from them, and then adds a unique feature: a summary of the actions 15 giant organizations have taken to protect their users.
+        </p>
+        <p>
+        @RISK adds to the critical vulnerability list a complete catalog of all the new security vulnerabilities discovered during the past week. Thus in one bulletin, you get the critical ones, what others are doing to protect themselves, plus a complete list of the full spectrum of newly discovered vulnerabilities.
+        </p>
+        <p>
+        This is also the subscription list that receives SANS Flash Alerts when they come out two or three times a year. More than 130,000 people are subscribers.
+        </p>
+     </div>
+     <div id="atrisk-info" class="index-card-info">
+          <dl>
+          <dt>news feed(s)</dt>
+	  <dt>(full feed)</dt>
+          <dd class="rss"><a href="/newsletters/risk/rss/" class="rss"><span>SANS @Risk RSS (full feed)</span></a></dd>
+	  <dt>(part 1)</dt>
+          <dd class="rss"><a href="/newsletters/risk/rss/part1.php" class="rss"><span>SANS @Risk RSS (part 1)</span></a></dd>
+	  <dt>(part 2)</dt>
+          <dd class="rss"><a href="/newsletters/risk/rss/part2.php" class="rss"><span>SANS @Risk RSS (part 2)</span></a></dd>
+          <dt><q>Search our past SANS @Risk archives.</q></dt>
+          <dd class="archive"><a href="/newsletters/risk/" class="archive"><span>Archive Available</span></a></dd>
+          <dt><q>Get your FREE subscription to SANS @Risk!</q></dt>
+          <dd class="signup"><a href="https://portal.sans.org/preferences.php" class="signup"><span>Sign Up Now</span></a></dd>
+          </dl>
+     </div>
+ </div>
+
+<div class="top-link">
+     <a href="#top" class="toplink"><span>top^</span></a>
+</div>
+
+
+ <div id="ouch" class="index-card">
+   <a name="ouchnews"></a>
+     <div id="ouch-desc" class="index-card-desc">
+        <h4>Ouch!</h4>
+        <p>
+        <q>Wow! This is the first security awareness document that our users really like! Thank you, SANS</q>
+        </p>
+        <p>
+ That note came from the CISO of an 8,000 employee organization. OUCH! is the first consensus monthly security awareness report for end users.
+        </p>
+        <p>
+        It shows them what to look for and how to avoid phishing and other scams plus viruses and other malware -- using the latest attacks as examples. It also provides pointers to great resources like the amazing Phishing Self-Test. 460 organizations, large and small, helped make it a useful service. More than 100 security officers check each issue for accuracy, and readability before it is distributed to the community.
+        </p>
+        <p>
+        If you want to distribute OUCH to all your users you may either forward it or subscribe a single address that is a mailing list.
+        </p>
+     </div>
+     <div id="ouch-info" class="index-card-info">
+          <dl>
+          <dt><q>Search our past Ouch! archives.</q></dt>
+          <dd class="archive"><a href="/newsletters/ouch/" class="archive"><span>Archive Available</span></a></dd>
+          <dt><q>Get your FREE subscription to Ouch!</q></dt>
+          <dd class="signup"><a href="https://portal.sans.org/preferences.php" class="signup"><span>Sign Up Now</span></a></dd>
+          </dl>
+     </div>
+ </div>
+
+
+<div class="top-link">
+     <a href="#top" class="toplink"><span>top^</span></a>
+</div>
+
+
+</div>
+
+</div>
+<div class="clear"></div><!-- / .clear -->
+</div><!-- /container -->
+
+<!-- Bottom Content -->
+<div class="bottom-content">
+<div class="container">
+
+<div class="footer-column whitepapers">
+<h3>Latest Whitepapers</h3>
+                <p><a href="/reading_room/whitepapers/hackers
+/user-agent-field-analyzing-detecting-abnormal-malicious-organization_33874">The User Agent Field: Analyzing and Detecting the Abnormal or Malicious in your Organization</a><br />By Darren Manners</p>
+                            <p><a href="/reading_room/whitepapers/application
+/auditing-aspnet-applications-pci-dss-compliance_33869">Auditing ASP.NET applications for PCI DSS compliance</a><br />By Christian Moldes</p>
+                            <p><a href="/reading_room/whitepapers/hackers
+/profiling-hackers_33864">Profiling Hackers</a><br />By Larisa Long</p>
+            
+</div><!-- / .footer-column -->
+
+<div class="footer-column tweets">
+<h3>Latest Tweets</h3>
+                <p><a href="http://twitter.com/SANSInstitute/statuses/168079814631239681">@SANSInstitute: RT @hackmanj: #Infosec Daily Edition is out!  [...]</a><br />
+                Fri, 10 Feb 2012 21:12:05 +0000
+</p>
+                            <p><a href="http://twitter.com/SANSInstitute/statuses/168079475748249600">@SANSInstitute: Congratulations! RT @viceroyx1 Passed #GSEC y [...]</a><br />
+                Fri, 10 Feb 2012 21:10:44 +0000
+</p>
+                            <p><a href="http://twitter.com/SANSInstitute/statuses/168079093173190659">@SANSInstitute: #FF @robtlee @sansforensics #ComputerForensic [...]</a><br />
+                Fri, 10 Feb 2012 21:09:13 +0000
+</p>
+            
+
+</div><!-- / .footer-column -->
+
+<div class="footer-column contact">
+<h3>Contact Us</h3>
+<p>(301) 654-SANS (7267)<br />
+Mon-Fri 9am - 8pm EST/EDT<br />
+<a href="mailto:info@sans.org">info@sans.org</a></p>
+</div><!-- / .footer-column contact -->
+
+<div class="footer-quote-box">
+            <p>"It was a great learning experience that helped open my eyes wider. The instructor's knowledge was fantastic."<br />- Manuja Wikesekera, Melbourne Cricket Club</p>
+                    <p>"This has been a great way to get working knowledge that would have taken years of experience to learn."<br />- Josh Carlson, Nelnet</p>
+                    <p>"Expertise of the trainer is impressive, real life situations explained, very good manuals. Best training ever!"<br />- Jerry Robles de Medina, Godo CU</p>
+        </div>
+
+</div><!-- / .bottom-content -->
+</div><!-- / .container -->
+
+<!-- Footer -->
+<div id="footer">
+<div class="container">
+<img src="/images/design-site/logo-footer.png" alt="SANS: Computer Security Training, Network Security Research, InfoSec Resources" class="logo-footer" />
+
+<ul class="site-selector">
+ <li class="site-switcher"><a href="#"><span class="hidden">SANS Site Network</span></a>
+  <ul class="sites">
+   <li class="current-site">Current Site</li>
+   <li class="sans"><a href=""><img src="/images/design/custom/site-selector/site-icons/sans.png" alt="sans" />Training</a></li>
+   <li class="selector-help">Choose a different site <a href="/help/site-network"><span class="hidden">Help</span></a></li>
+   <li class="giac"><a href="http://www.giac.org"><img src="/images/design/custom/site-selector/site-icons/giac.png" alt="giac" />Certification</a></li>
+   <li class="sti"><a href="http://www.sans.edu"><img src="/images/design/custom/site-selector/site-icons/sti.png" alt="sti" />College</a></li>
+   <li class="isc"><a href="http://isc.sans.edu"><img src="/images/design/custom/site-selector/site-icons/isc.png" alt="isc" />Internet Storm Center</a></li>
+   <li class="awareness"><a href="http://www.securingthehuman.org"><img src="/images/design/custom/site-selector/site-icons/awareness.png" alt="awareness" />Security Awareness</a></li>
+   <li class="forensics"><a href="http://computer-forensics.sans.org"><img src="/images/design/custom/site-selector/site-icons/forensics.png" alt="forensics" />Computer Forensics</a></li>
+   <li class="audit"><a href="http://it-audit.sans.org"><img src="/images/design/custom/site-selector/site-icons/audit.png" alt="audit" />IT Audit</a></li>
+   <li class="ssi"><a href="http://software-security.sans.org"><img src="/images/design/custom/site-selector/site-icons/software-security.png" alt="ssi" />Software Security</a></li>
+   <li class="blogs last"><a href="http://blogs.sans.org"><img src="/images/design/custom/site-selector/site-icons/blogs.png" alt="blogs" />Latest News</a></li>
+  </ul>
+ </li>
+</ul>
+
+<div class="latest-icons">
+<a href="http://twitter.com/SANSInstitute"><img src="/images/design/custom/icons/twitter-icon.png" alt="Twitter" /></a>
+<a href="https://www.facebook.com/pages/SANS-Institute/173623382673767"><img src="/images/design/custom/icons/facebook-icon.png" alt="Facebook" /></a>
+<a href="/rss.php"><img src="/images/design/custom/icons/rss-icon.png" alt="RSS" /></a>
+</div><!-- end .latest-icons -->
+
+<div class="bottom-nav align-right">
+<ul>
+ <li><a href="/security-training/courses.php">Courses</a></li>
+ <li><a href="/security-training/">Live Training</a></li>
+ <li><a href="/online-security-training/">Online Training</a></li>
+ <li><a href="/security-resources.php">Resources</a></li>
+ <li><a href="/vendor/">Vendor</a></li>
+ <li><a href="privacy.php">Privacy Policy</a></li>
+ <li class="last"><a href="/about/">About</a></li>
+
+</ul>
+
+<p class="copyright align-right"><a href="http://www.sans.org/trademarkuse.pdf">Trademark Usage Policy</a> | &copy; 2000-2012 The SANS&#8482; Institute</p>
+</div><!-- end .bottom-nav align-right-->
+</div><!-- end .container-->
+</div><!-- end .footer-->
+</div>
+</div><!-- end .body -->
+
+
+</body>
+
+</html>

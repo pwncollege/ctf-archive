@@ -1,0 +1,400 @@
+#wrapper {margin:auto; width:960px;}
+#header {height:160px; width:956px;}
+#logo {float:left;}
+#button {float:left;}
+#searcher {float:right; width:318px;border:1px solid #949599;}
+#login {float:right; height:115px; overflow:hidden; margin-top:5px; width:318px;border:1px solid #949599;}
+#topmenu {height:33px;margin-bottom:2px; width:980px; margin-left:-2px; background-image:url('/templates/DFMAG/images/bgmenu.jpg'); background-repeat:no-repeat; }
+#left {float:left; width:153px; margin-right:5px; border:1px solid #949599;padding:0px;border-top:none;}
+#left2 {float:left;width:147px; margin-right:5px; border:0px solid #949599;padding:0px; margin-top:0px; padding:2px; padding-top:0px; padding-right:5px;overflow:hidden;}
+
+#space {float:left; width:153px; background-color:#FFFFFF; border:1px solid #fff;padding:0px; height:7px; margin-left:-1px; border-top:1px solid #949599;border-bottom:1px solid #949599;}
+#right {float:right; width:155px;margin-right:4px; border:none; color:#666;}
+#mainbody {width:635px;margin-left:160px;background-color:#FFF;overflow:hidden;}
+#latestnewstitle {}
+#latest_issue {width:635px; min-height:155px;}
+#next_issue {clear:both;margin:auto;width:635px;margin-top:5px;margin-bottom:5px; height:150px;}
+#footer {margin:auto;width:633px; border:1px solid #999;margin-top:5px;}
+
+ul.menu {margin-left: 0px; padding:0px;margin-top:0px;}
+ul.menu li {list-style:none; border-bottom:1px solid #949599;padding-top:3px; padding-bottom:2px;}
+ul.menu a {color:#666!important;text-decoration:none; padding-left:5px;}
+ul.menu a:hover {color:#000!important;text-decoration:none;}
+ul#mainlevel-nav {margin: 0;padding: 0; padding-bottom:5px;}
+
+p.readmore a {float:right;margin-right:5px;}
+/* hies the latest posts titles etc */
+div.joomla h1.pagetitle {margin-top:0px;padding: 5px 2px 2px; width: 631px; background-color: rgb(110, 110, 112); color: rgb(255, 255, 255); margin-bottom: -1px; font-weight: bold; font-size:12px; text-transform:uppercase; letter-spacing:normal;}
+div.joomla div.multicolumns h1.title {display:none;}
+div.joomla div.item-bg {
+border:1px solid #6e6e70!important;
+overflow:visible;
+padding:0px!important;
+width:313px!important;
+height:155px!important;
+margin-right:5px!important;
+margin-bottom:0px!important;
+margin-top:0px!important;
+}
+#twitterfeedrssdiv { color:#666; }
+#twitterfeedrssdiv a{ color:red; }
+.twitterfeeditem { margin-bottom:5px;}
+
+ul#mainlevel-nav li {display: inline; list-style-type: none; margin-left:3px; margin-top:0px;}
+ 
+a.mainlevel-nav{ 
+display: block;
+	float: left;
+	padding: 5px 5px 6px; /* Provides horizontal separation between menu items */
+	color:#FFF;
+	font-size:12px;
+	width:145px;
+	margin-right:2px;
+	 margin-left:3px;
+	background-color:#949599;
+	text-transform:uppercase;
+	text-decoration:none;
+	margin-bottom:5px;
+	margin-top:0px;
+}
+ul#mainlevel-nav a {
+	display: block;
+	float: left;
+	padding: 5px 5px 6px; /* Provides horizontal separation between menu items */
+	color:#FFF;
+	font-size:12px;
+	width:145px;
+	margin-right:2px;
+	 margin-left:3px;
+	background-color:#949599;
+	text-transform:uppercase;
+	text-decoration:none;
+	margin-bottom:5px;
+	margin-top:0px;
+	
+}
+
+ul#mainlevel-nav a:hover {
+  display: block;
+  float: left;
+  padding: 5px 5px 6px; /* Provides horizontal separation between menu items */
+  color:#FFF;
+  font-size:12px;
+  width:145px;
+  margin-right:2px;
+	 margin-left:3px;
+ background-color:#6e6e70;
+ text-transform:uppercase;
+ text-decoration:none;
+ margin-top:0px;
+
+}
+ul#mainlevel-nav a:active {
+  display: block;
+  float: left;
+  padding: 5px 5px 6px; /* Provides horizontal separation between menu items */
+  color:#FFF;
+  font-size:12px;
+  width:145px;
+  margin-right:2px;
+	 margin-left:3px;
+ background-color:#6e6e70;
+ text-transform:uppercase;
+ text-decoration:none;
+ margin-top:0px;
+}
+
+ul#mainlevel-nav #active_menu-nav {background:#6e6e70;color:#fff; margin-left:3px;  padding: 5px 5px 6px; margin-top:0px;}
+
+ /*login */
+form#form-login {width:150px;}
+.input {margin:none;border-left:none; border-right:none; border-top:none; border-bottom:none; width:135px;}
+
+body {
+	font-family:Arial, Helvetica, sans-serif; font-size:12px;
+}
+h1 {
+}
+h2 {
+}
+h3 {
+}
+p {
+color:#666;
+}
+a:link,
+a:active,
+a:visited {
+color:#000;
+text-decoration:none;
+}
+a:hover {
+text-decoration:underline;
+}
+a img { border:none; margin-bottom:5px;
+
+}
+
+/* ************************************************************************************************** */
+/* TEMPLATE LAYOUT CSS - DEFINE YOUR OWN TEMPLATE STYLES HERE										  */
+/* ************************************************************************************************** */
+
+/* ************************************************************************************************** */
+/* JOOMLA SPECIFIC CSS 																				  */
+/* ************************************************************************************************** */
+
+.adminform {
+}
+.article_seperator {
+}
+.back_button {
+}
+.blog {
+}
+.blog_more {
+}
+.blogsection {
+}
+.button {
+}
+.buttonheading {
+}
+.category {
+}
+.clip {
+}
+.componentheading {
+}
+.contact_email {
+}
+.content_rating {
+}
+.content_vote {
+}
+.contentdescription {
+}
+.contentheading {
+}
+.contentpagetitle {
+}
+.contentpane {
+}
+.contentpaneopen {
+}
+.contenttoc {
+}
+.createdate {
+}
+.dtree {
+}
+.dTreeNode {
+}
+.editlinktip {
+}
+.expander {
+}
+.form{
+}
+.highlight {
+}
+.inputbox {
+background-color:#CCCCCC;
+}
+.item {
+}
+.latestnews {
+}
+.message {
+}
+.message {
+}
+.modifydate {
+}
+.module {
+}
+.module h3 {
+}
+.module div {
+}
+.module div div {
+}
+.module div div div {
+}
+.module div div div div {
+}
+.moduletable {
+}
+.moduletable h3 {
+}
+.mosimage {
+}
+.mosimage_caption {
+}
+.mostread {
+}
+.newsfeed {
+}
+.node {
+}
+.pagenav {
+}
+.pagenav_next {
+}
+.pagenav_prev {
+}
+.pagenavbar {
+}
+.pagenavcounter {
+}
+.paramlist {
+}
+.pathway {
+}
+.poll {
+}
+.pollstableborder {
+}
+.profiler {
+}
+.readon {
+}
+.row1 {
+}
+.row2 {
+}
+.search {
+padding:3px;
+}
+.searchintro {
+}
+.sectiontableentry1 {
+}
+.sectiontableentry2 {
+}
+.sectiontablefooter {
+}
+.sectiontableheader {
+}
+.small {
+}
+.smalldark {
+}
+.syndicate {
+}
+.syndicate_text {
+}
+.tab {
+}
+.tabclass1 {
+}
+.tabclass2 {
+}
+.tab-page {
+}
+.text_area {
+}
+.toclink {
+}
+.toolbar {
+}
+.tooltip {
+}
+.wrapper {
+}
+iframe.wrapper {
+}
+
+/* ************************************************************************************************** */
+/* JOOMLA MENU CSS 																					  */
+/* ************************************************************************************************** */
+
+ul#mainlevel {
+}
+ul#mainlevel li {
+}
+
+a.mainlevel:link,
+a.mainlevel:active,
+a.mainlevel:visited {
+}
+a.mainlevel:hover {
+}
+a.mainlevel#active_menu {
+}
+
+a.sublevel:link,
+a.sublevel:active,
+a.sublevel:visited {
+}
+a.sublevel:hover {
+}
+a.sublevel#active_menu {
+}
+
+/* ************************************************************************************************** */
+/* OTHER MODULES AND COMPONENTS																		  */
+/* ************************************************************************************************** */
+/* Components and modules that should be part of every setup you do!								  */
+/* Add your own custom css for modules and components you install here!								  */
+/*																									  */
+/* ************************************************************************************************** */
+/* JOOMLA EXT MENU MODULE 																			  */
+/* ************************************************************************************************** */
+
+
+
+/* ************************************************************************************************** */
+/* JOOMLA DISPLAY NEWS BY BK MODULE																	  */
+/* ************************************************************************************************** */
+
+.dn-whole {
+}
+.dn-each {
+}
+span.dn-section {
+}
+a.dn-section {
+}
+span.dn-category {
+}
+a.dn-category {
+}
+span.dn-title {
+}
+a.dn-title{
+}
+span.dn-author {
+}
+span.dn-date {
+}
+span.dn-introtext {
+}
+
+/* ************************************************************************************************** */
+/* JOOMLA MINI FRONTPAGE MODULE	- NOTE THIS MODULE ALSO CONTAINS IT's OWN CSS FILE					  */
+/* ************************************************************************************************** */
+
+table.minifp {
+}
+td.minifp {
+}
+span.minifp-anotherlinks {
+}
+span.minifp-introtitle a {
+}
+span.minifp-date {
+}
+.minifp-full-link {
+}
+ul.minifp {
+}
+li.minifp {
+}
+li.minifp a{
+}
+.mceContentBody {
+	background:white;
+	height:100%
+}
+
+

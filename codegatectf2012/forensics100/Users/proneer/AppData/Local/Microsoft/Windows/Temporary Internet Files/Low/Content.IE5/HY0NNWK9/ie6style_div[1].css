@@ -1,0 +1,41 @@
+#header td#menu {
+	padding:18px 18px 0 75px;
+}
+#header td#search {
+	padding:13px 5px 0 0;
+}
+#header div#profile {
+	top:1px;
+	margin-left:-71px;
+}
+#logout {
+	padding-top:10px;
+}
+.column_right div.qstns{
+	margin-top:-3px;
+}
+.column_right form#register input#rememe {
+	border:none;
+}
+.tbl_ttl, .tbl_dsc, .tbl_intr {
+	margin:0 0 0 13px;
+}
+#section_b {
+	margin:0 0 20px 13px;
+}
+#bottom {
+	margin-bottom:-16px;
+}
+.column_right img.ie_fix{
+	margin-bottom:-5px;
+}
+#adv {
+/*	margin:0;
+	width:auto;*/
+}
+.column_right {
+	margin:73px 0 0 0;
+}
+.column_right .block {
+	margin-top:-3px;
+}

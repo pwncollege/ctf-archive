@@ -1,0 +1,56 @@
+Generated File. Do not edit.
+
+[HEADER]
+Version|0.15|$
+Arch|x86-msvc|$
+
+[PLUGINS]
+npGoogleUpdate3.dll|$
+C:\Users\proneer\AppData\Local\Google\Update\1.3.21.99\npGoogleUpdate3.dll|$
+1.3.21.99|$
+1328952930154|1|5|$
+Google Update|$
+Google Update|$
+2
+0|application/x-vnd.google.update3webcontrol.3|||$
+1|application/x-vnd.google.oneclickctrl.9|||$
+NPSPWRAP.DLL|$
+C:\PROGRA~1\MICROS~1\Office14\NPSPWRAP.DLL|$
+14.0.4761.1000|$
+1269429758000|1|5|$
+The plug-in allows you to open and edit files using Microsoft Office applications|$
+Microsoft Office 2010|$
+1
+0|application/x-sharepoint|SharePoint Plug-in for Firefox||$
+NPAUTHZ.DLL|$
+C:\PROGRA~1\MICROS~1\Office14\NPAUTHZ.DLL|$
+14.0.4730.1010|$
+1263040938000|1|5|$
+Office Authorization plug-in for NPAPI browsers|$
+Microsoft Office 2010|$
+1
+0|application/x-msoffice14|14.0.4730.1010|*|$
+NPSWF32.dll|$
+C:\Windows\system32\Macromed\Flash\NPSWF32.dll|$
+9.0.45.0|$
+1171955042000|1|1|$
+Shockwave Flash 9.0  r45|$
+Shockwave Flash|$
+2
+0|application/x-shockwave-flash|Adobe Flash movie|swf|$
+1|application/futuresplash|FutureSplash movie|spl|$
+nppdf32.dll|$
+C:\Program Files\Adobe\Acrobat 8.0\Acrobat\browser\nppdf32.dll|$
+8.0.0.456|$
+1161527072000|1|1|$
+Adobe PDF Plug-In For Firefox and Netscape|$
+Adobe Acrobat|$
+6
+0|application/pdf|Acrobat Portable Document Format|pdf|$
+1|application/vnd.adobe.x-mars|Acrobat Portable XML Document Format|mars|$
+2|application/vnd.fdf|Acrobat Forms Data Format|fdf|$
+3|application/vnd.adobe.xfdf|XML Version of Acrobat Forms Data Format|xfdf|$
+4|application/vnd.adobe.xdp+xml| Acrobat XML Data Package|xdp|$
+5|application/vnd.adobe.xfd+xml|Adobe FormFlow99 Data File|xfd|$
+
+[INVALID]

@@ -1,0 +1,17 @@
+.content-fragment.search-form .content-fragment-content .field-list-footer {
+    max-width: 280px;
+}
+
+.post-content.user-defined-markup, .post-summary {
+font-size: 1.05em;
+}
+
+.b8table td
+{
+border: 1px solid #cccccc;
+}
+
+.b8table td p
+{
+margin-bottom: 0px;
+}

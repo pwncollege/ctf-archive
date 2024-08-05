@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
+<head profile="http://gmpg.org/xfn/11">
+	<meta charset="UTF-8" />
+        <meta property="og:image" content="" />
+	<title>Web Browser Session Restore Forensics | DocBE</title>
+	<link rel="stylesheet" href="http://docbe.com/wp-content/themes/SimpleCTR/style.css" type="text/css" media="screen" />
+	<!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	<link rel="alternate" type="application/rss+xml" title="DocBE RSS Feed" href="http://docbe.com/feed/" />
+	<link rel="pingback" href="http://docbe.com/xmlrpc.php" />
+		<link rel="alternate" type="application/rss+xml" title="DocBE &raquo; Web Browser Session Restore Forensics Comments Feed" href="http://docbe.com/2012/01/05/web-browser-session-restore-forensics-3/feed/" />
+<script type='text/javascript' src='http://docbe.com/wp-includes/js/l10n.js?ver=20101110'></script>
+<script type='text/javascript' src='http://docbe.com/wp-includes/js/comment-reply.js?ver=20090102'></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://docbe.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://docbe.com/wp-includes/wlwmanifest.xml" /> 
+<link rel='index' title='DocBE' href='http://docbe.com/' />
+<link rel='start' title='route 66' href='http://docbe.com/2011/07/13/route-66/' />
+<link rel='prev' title='Using the Web Browser Interface' href='http://docbe.com/2012/01/05/using-the-web-browser-interface/' />
+<link rel='next' title='World Population Growth' href='http://docbe.com/2012/01/05/world-population-growth-4/' />
+<meta name="generator" content="WordPress 3.2.1" />
+<link rel='canonical' href='http://docbe.com/2012/01/05/web-browser-session-restore-forensics-3/' />
+<link rel='shortlink' href='http://docbe.com/?p=4740' />
+	<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+<script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+</head>
+
+<body>
+
+<div id="wrapper">
+
+	<header>
+				<span id="tlogo"><a href="http://docbe.com/">DocBE</a>
+				<div id="tlogo1">Document Sharer</div></span>
+					<nav>
+			<ul id="nav">
+				<li><a href="http://docbe.com/">Home</a></li>
+							</ul>
+		</nav>
+		<form method="get" id="search" action="http://docbe.com/">
+			<input type="text" name="s" value="Search Keywords" onblur="if(this.value=='') this.value='Search Keywords';" onfocus="if(this.value=='Search Keywords') this.value='';" id="s" />
+			<input type="submit" value="Search" id="searchsubmit" />
+		</form>
+	</header>
+
+     <div style="text-align: center;"><script type="text/javascript"><!--
+google_ad_client = "pub-5409796297664162";
+/* docbe, 728x90, created 10/10/11 */
+google_ad_slot = "3969769664";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+
+	<section>
+		<div id="content">
+
+	
+		<article class="post"><div style="float: right; margin-top:5px; margin-bottom:5px; margin-left:10px;"><a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" rel="nofollow">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script><br /><a name="fb_share" type="button_count" href="http://www.facebook.com/sharer.php" rel="nofollow">Share!</a><script src="http://static.ak.fbcdn.net/connect.php/js/FB.Share" type="text/javascript"></script></div><div id="breadcrumb"><div id="crumbs"><a href="http://docbe.com">Home</a> &rsaquo; <a href="http://docbe.com/category/docbe/" title="View all posts in DocBE">DocBE</a>  &rsaquo; <span class="current1">Web Browser Session Restore Forensics</span></div></div><script type="text/javascript"><!--
+google_ad_client = "pub-5409796297664162";
+/* docbe, 468x15, created 10/10/11 */
+google_ad_slot = "0313639312";
+google_ad_width = 468;
+google_ad_height = 15;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+			<h1><a href="http://docbe.com/2012/01/05/web-browser-session-restore-forensics-3/" rel="bookmark">Web Browser Session Restore Forensics</a></h1>
+			<div class="entry">
+<div style="float: right; margin-left: 5px;">
+<script type="text/javascript"><!--
+google_ad_client = "pub-5409796297664162";
+/* docbe, 300x250, created 10/10/11 */
+google_ad_slot = "2803038642";
+google_ad_width = 300;
+google_ad_height = 250;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+
+<p><iframe src="http://docs.google.com/gview?url=http%3A%2F%2Fcomputerforensics.parsonage.co.uk%2Fdownloads%2FWebBrowserSessionRestoreForensics.pdf&#038;embedded=true" style="width:585px; height:600px;" frameborder="0"></iframe></p>
+<p><a href="http://docbe.com/download.php?url=http%3A%2F%2Fcomputerforensics.parsonage.co.uk%2Fdownloads%2FWebBrowserSessionRestoreForensics.pdf">Download</a></p>
+<p><b> </b><br /><b> </b><br /> <b> Web Browser Session Restore Forensics </b><br /><b>&#8211; A valuable record of a user&#8217;s internet activity for <br />computer forensic examinations <br /></b> </p>
+<p><b>Each session of activity in a Mozilla browser is recorded by the browser so that in <br />the event of the browser crashing the session can be restored. Session Restore <br />saves all open windows and tabs, width, height, and position of each window, <br />scroll position within each scrollable area in each window, history of closed tabs <br />and windows, cookies, text typed in forms and information to restart downloads. <br />It is possible to recover multiple versions of this information in order to show a <br />user&#8217;s internet activity.  Other browsers also have the facility to restore a <br />previous session. <br /></b> </p>
+<p>&#169;     Harry Parsonage January 2010 <br />
+<hr />Web Browser Session Restore Forensics <br /><b>Introduction <br /></b> <br />In a recent examination I came across lots of urls in the unallocated space of a hard drive that were <br />of interest and which I discovered were part of information recorded by the Mozilla browser to <br />enable it to restore a user&#8217;s session in the event of a crash. A subsequent search revealed 66 <br />instances of full Session Restore files in unallocated space each of which could be used to show a <br />snapshot of the browser windows and tabs that the user had open at one point in time; in addition <br />there were many other fragments of session restore files.  <br /><b> </b><br /><b>Mozilla Session Restore <br /></b> <br />The MozillaWiki (1) describes the goals and objectives of Session Restore as  <br />&#8220;After a forced restart, restore the user&#8217;s workspace exactly as it was.&#8221;  <br />It goes on to state that the data saved will be &#8211; <br />&#61623;  All open windows and tabs <br />&#61623;  Width, height, and position of each window <br />&#61623;  Scroll position within each scrollable area in each window <br />&#61623;  Tab histories <br />&#61623;  Cookies <br />&#61623;  Text typed in forms <br />&#61623;  Restart downloads <br />The session restore data is saved during the session in a file <b><i>sessionstore.js</b></i> and is stored on disk as a <br />serialised JavaScript data structure, sometimes alternatively described as JSON (2) structure. At the <br />time of writing it is stored as plain text but there is reference on the MozillaWiki to the question as <br />to whether or not it should be encrypted for privacy reasons. The MozillaWiki also mentioned that <br />there is a backup of the file in sessionstore.bak, but I haven&#8217;t found a copy of such a file yet. <br />The <b><i>sessionstore.js</b></i> file is stored in the following location (in Vista) <br />C:UsersUserNameAppDataRoamingMozillaFirefoxProfiles########.default <br />and is deleted when the browser closes normally. <br />I haven&#8217;t tested this but I believe that there is a similar session restore facility in other Mozilla based <br />browsers like Netscape, SeaMonkey, K-Meleon, Flock and others. <br />The <b><i>sessionstore.js</b></i> file, in the simplest form, looks like this &#8211; <br />({&quot;windows&quot;:[{&quot;tabs&quot;:[{&quot;entries&quot;:[],&quot;attributes&quot;:{}}],&quot;selected&quot;:1,&quot;_closedTabs&quot;:[],&quot;_hosts&quot;:{},&quot;width&quot;:<br />&quot;1628&quot;,&quot;height&quot;:&quot;996&quot;,&quot;screenX&quot;:&quot;33&quot;,&quot;screenY&quot;:&quot;24&quot;,&quot;sizemode&quot;:&quot;maximized&quot;}],&quot;selectedWindow&quot;:<br />1,&quot;_closedWindows&quot;:[],&quot;session&quot;:{&quot;state&quot;:&quot;running&quot;,&quot;lastUpdate&quot;:1262210477090}}) </p>
+<p>&#169;     Harry Parsonage January 2010 <br />Page | 1  </p>
+<hr />Web Browser Session Restore Forensics <br />This is with one window open with no open tabs. The notations (2) used in the file structure are as <br />follows &#8211; <br />An object is an unordered set of name/value pairs. An object begins with { (left brace) and ends with <br />} (right brace). Each name is followed by : (colon) and the name/value pairs are separated by , <br />(comma). <br />An array is an ordered collection of values. An array begins with [ (left bracket) and ends with ] (right <br />bracket). Values are separated by , (comma). <br />A value can be a string in double quotes, or a number, or true or false or null, or an object or an <br />array. These structures can be nested. <br />A string is a collection of zero or more Unicode characters, wrapped in double quotes, using <br />backslash escapes. A character is represented as a single character string. A string is very much like a <br />C or Java string. <br />A number is very much like a C or Java number, except that the octal and hexadecimal formats are <br />not used. <br />In the example above both the name and value are enclosed in quotes but in a case I have examined <br />from 2008 just the values are in quotes. <br />The following is a <b><i>sessionstore.js</b></i> file where just one window with one tab is open. <br />({&quot;windows&quot;:[{&quot;tabs&quot;:[{&quot;entries&quot;:[{&quot;url&quot;:&quot;http://www.json.org/&quot;,&quot;title&quot;:&quot;JSON&quot;,&quot;ID&quot;:0,&quot;scroll&quot;:&quot;0,0&quot;}],&quot;<br />index&quot;:1,&quot;attributes&quot;:{&quot;image&quot;:&quot;http://www.json.org/favicon.gif&quot;},&quot;_formDataSaved&quot;:true}],&quot;selecte<br />d&quot;:1,&quot;_closedTabs&quot;:[],&quot;_hosts&quot;:{&quot;json.org&quot;:true,&quot;org&quot;:true,&quot;www.json.org&quot;:true},&quot;width&quot;:&quot;1628&quot;,&quot;hei<br />ght&quot;:&quot;996&quot;,&quot;screenX&quot;:&quot;33&quot;,&quot;screenY&quot;:&quot;24&quot;,&quot;sizemode&quot;:&quot;maximized&quot;}],&quot;selectedWindow&quot;:1,&quot;_closed<br />Windows&quot;:[],&quot;session&quot;:{&quot;state&quot;:&quot;running&quot;,&quot;lastUpdate&quot;:1262210916932}}) <br />In the next example the tab displaying the JSON web page has been closed and a new tab opened to <br />my web site. It can be seen that the JSON site details are recorded after the &quot;_closedTabs&quot; name. <br />Following that there is a list of hosts at &quot;_hosts&quot; and closed windows at &quot;_closedWindows&quot; which in <br />this case is an empty array []. <br />({&quot;windows&quot;:[{&quot;tabs&quot;:[{&quot;entries&quot;:[{&quot;url&quot;:&quot;http://computerforensics.parsonage.co.uk/&quot;,&quot;title&quot;:&quot;Compu<br />ter Forensics <br />Miscellany&quot;,&quot;ID&quot;:2,&quot;scroll&quot;:&quot;0,0&quot;}],&quot;index&quot;:1,&quot;attributes&quot;:{&quot;image&quot;:&quot;http://computerforensics.parson<br />age.co.uk/favicon.ico&quot;},&quot;pageStyle&quot;:&quot;CSS&quot;,&quot;_formDataSaved&quot;:true}],&quot;selected&quot;:1,&quot;_closedTabs&quot;:[{&quot;st<br />ate&quot;:{&quot;entries&quot;:[{&quot;url&quot;:&quot;http://www.json.org/&quot;,&quot;title&quot;:&quot;JSON&quot;,&quot;ID&quot;:0,&quot;scroll&quot;:&quot;0,0&quot;}],&quot;index&quot;:1,&quot;attribu<br />tes&quot;:{&quot;image&quot;:&quot;http://www.json.org/favicon.gif&quot;},&quot;_formDataSaved&quot;:true},&quot;title&quot;:&quot;JSON&quot;,&quot;image&quot;:&quot;ht<br />tp://www.json.org/favicon.gif&quot;,&quot;pos&quot;:0}],&quot;_hosts&quot;:{&quot;parsonage.co.uk&quot;:true,&quot;co.uk&quot;:true,&quot;uk&quot;:true,&quot;co<br />mputerforensics.parsonage.co.uk&quot;:true},&quot;width&quot;:&quot;1628&quot;,&quot;height&quot;:&quot;996&quot;,&quot;screenX&quot;:&quot;33&quot;,&quot;screenY&quot;:&quot;2<br />4&quot;,&quot;sizemode&quot;:&quot;maximized&quot;}],&quot;selectedWindow&quot;:1,&quot;_closedWindows&quot;:[],&quot;session&quot;:{&quot;state&quot;:&quot;running&quot;<br />,&quot;lastUpdate&quot;:1262211186521}}) </p>
+<p>&#169;     Harry Parsonage January 2010 <br />Page | 2  </p>
+<hr />Web Browser Session Restore Forensics <br />When more tabs are opened and closed and the pages being viewed are less basic than those in the <br />examples above the file becomes increasingly complex. Viewing the file in a suitable code editor will <br />assist by formatting the file into a more readable structure. <br /><b>Recovering Session Restore files <br /></b> <br />It is a trivial process to recover Session Restore files. I used the Case Processor File Finder script in <br />Encase and added a Custom File Type using <b>({&quot;windows&quot;:[{</b> as the header and <b>:{&quot;state&quot;:&quot;running&quot;}})</b> <br />as the footer. (NOTE: In the case I was examining from 2008 there was no &quot;lastUpdate&quot; name/value <br />pair. It may require some experimentation to find the exact structure in your case as these browsers <br />are constantly being developed). There is also an alternative <b>&#8220;state&#8221; </b>string of <b>&quot;stopped&quot; </b>which I used<b> <br /></b>in a second Custom File Type as the footer with the same header of <b>({&quot;windows&quot;:[{</b>, however I found <br />no instances of this in unallocated and the only two live files contained no windows and tab data. <br />You will need to use the escape character &#8220;&#8221; in the search string to escape the special characters <br />otherwise your search will not work. <br />I exported all the recovered Session Restore files as well as bookmarking them. <br /><b>Examining the Session Restore Files <br /></b> <br />Depending upon how many files are recovered, you might want to reduce the number of files by <br />using text strings searches to identify those files that might be of interest. <br />There is an online JSON Editor (3) where you can paste the contents of a <b><i>sessionstore.js</b></i> file and it <br />will build a tree structure displaying the values. </p>
+<p>&#169;     Harry Parsonage January 2010 <br />Page | 3  </p>
+<hr />Web Browser Session Restore Forensics <br />Allan Hay as also made available his JSON editor program, a single executable which can be used <br />offline. (4) <br />It would be a tedious process to examine many recovered Session Restore files using an editor so an <br />alternative method would be to use the Mozilla browser itself. <br />I did this using a Session Manager Add-In (5) as it had more functionality than Firefox alone. <br />The process I used was this &#8211; <br />1)  Have the folder containing the carved Session Restore files open. </p>
+<p>2)  Have the C:UsersUserNameAppDataRoamingMozillaFirefoxProfiles########.default <br />folder open. </p>
+<p>3)  Clear History and Close Firefox. </p>
+<p>4)  Drag and drop a copy of the first carved file into the ########.default folder and rename it <br />to <b><i>sessionstore.js <br /></b></i> <br />5)  Open Firefox and the Session Manager Add-In will recognise that there is a crashed session <br />available to restore. The manager will list the number of windows and tabs in the session <br />and also each web page title and url. Take a screenshot of the Session Manager to record <br />the details. </p>
+<p>6)  If required you could restore the session to the browser and see the detail of the web pages <br />if they currently exist with a live Internet connection. The pages will even be scrolled to the <br />location that was previously being viewed and the windows will be sized and located as they <br />were at the time of the session.  </p>
+<p>7)  The Closed Tabs and Closed Windows (if there are any) can be identified via the <br />ToolsSession Manager menu item. </p>
+<p>&#169;     Harry Parsonage January 2010 <br />Page | 4  </p>
+<hr />Web Browser Session Restore Forensics </p>
+<p> <img src='http://docbe.com/wp-includes/images/smilies/icon_cool.gif' alt='8)' class='wp-smiley' />  If the &#8220;lastUpdate&#8221; name/value pair is available in the Session Restore file this can be <br />decoded using TimeLord (6) to give the time and date of the session. </p>
+<p>Mark Woan has also developed an application to parse out the main parts (but not all) of the <br /><b><i>sessionstore.js </b></i>file and present it in a more readable format. (7) It can be used to parse all the files in <br />a single folder when a number of <b><i>sessionstore.js </b></i>files have been carved from a case. Using Mark&#8217;s <br />application it is possible to pipe all the results into a single file for easier reviewing. <br />As well as providing a snapshot in time of a user&#8217;s windows and tabs a <b><i>sessionstore.js </b></i>file can also <br />provide a history of browsing. Where a user has had a single tab open and then browsed to a <br />number of sites in that tab, each site visited is recorded in a list under that tab in the order in which <br />the sites were accessed. It is not known if there is a limit to the number of sites that can be listed but <br />I have observed in one test that there was a list of all of the 22 sites I had visited under one tab. Just <br />note that the Session Manager does not display this information but Mark&#8217;s parser does. <br />When parsed by Mark&#8217;s application the start of the list looked like this &#8211; <br />Entries <br />------- <br />title   : Computer Forensics Miscellany <br />url     : http://computerforensics.parsonage.co.uk/ </p>
+<p>title   : X-Ways Support Forum <br />url     : http://www.winhex.net/ </p>
+<p>title   : Telegraph Fantasy Football 2009/10 = Fantasy Football <br />url     : http://fantasyfootball.telegraph.co.uk/ </p>
+<p>&#169;     Harry Parsonage January 2010 <br />Page | 5  </p>
+<hr />Web Browser Session Restore Forensics <br />If you have found any sessions that are of interest you may then return to the JSON Editor and the <br />raw <b><i>sessionstore.js</b></i> file itself to examine it carefully so you can be satisfied that the Session Manager <br />or other tool is displaying what you would expect and so that you can explain what is being displayed <br />should this become necessary. </p>
+<p><b>Further opportunities for research in this area &#8211; Internet Explorer 8 <br /></b> <br />A brief examination of Internet Explorer 8 reveals that there is a similar Session Restore feature <br />available in this browser, which I believe was also available in Version 7 too. <br />The files relating to the feature are stored in &#8211; <br /><b>Windows XP </b><br />C:Documents and SettingsUserNameLocal SettingsApplication DataMicrosoftInternet <br />ExplorerRecoveryLast Active <br /><b>Windows Vista and Windows 7 in Normal Privilege Mode </b><br />C:UsersUserNameAppDataLocalMicrosoftInternet ExplorerRecoveryLast Active <br /><b>Windows Vista and Windows 7 in Elevated Administrator Privilege Mode </b><br />C:UsersUserNameAppDataLocalMicrosoftInternet ExplorerRecoveryHighLast Active <br />Whilst the browser session is active the files are stored in a folder named &#8220;Active&#8221; on the same level <br />as &#8220;Last Active&#8221; and when the browser closes normally they are moved from &#8220;Active&#8221; to &#8220;Last <br />Active&#8221;. <br />The Session restore files are named in the form &#8211; <br />{GUID}.dat and  <br />RecoveryStore. {GUID}.dat </p>
+<p>The files are stored in Microsoft&#8217;s Compound File Binary File Format (8) and the RecoveryStore. <br />{GUID}.dat file references each of the individual {GUID}.dat files. The individual {GUID}.dat files </p>
+<p>&#169;     Harry Parsonage January 2010 <br />Page | 6  </p>
+<hr />Web Browser Session Restore Forensics <br />appear to contain the details of each tab but are in binary format and so not as readily understood <br />as the Mozilla equivalents. The screenshot below shows one of the data streams in a {GUID}.dat file. </p>
+<p>When the user has suffered a browser crash the next time Internet Explorer is opened the user is <br />given the following option. </p>
+<p>Choosing &#8220;restore your last session&#8221; does just that. <br />If the browser has closed normally the user has the option to &#8220;Reopen Last Browsing Session&#8221;. </p>
+<p>&#169;     Harry Parsonage January 2010 <br />Page | 7  </p>
+<hr />Web Browser Session Restore Forensics </p>
+<p>It should be possible to examine a user&#8217;s previous browser session by copying the recovery files from <br />the suspect machine and placing them in the appropriate folder on an examiner&#8217;s machine. <br />Alternatively this could be done using the suspect computer running as a Virtual Machine. <br />In principle it may be possible to search for compound files in unallocated space and carry out the <br />same process as suggested for Mozilla but the likelihood of success will be considerably reduced. It <br />will no doubt be possible to recover artefacts of the {GUID}.dat files and draw some conclusions <br />from these. <br /><b>Opera Browser <br /></b> <br />I checked the Opera browser and found this too had a Session Restore facility stored in a raw text <br />file - <b><i>autosave.win</b></i>, with a backup file <b><i>autosave.win.bak</b></i>.  </p>
+<p>&#169;     Harry Parsonage January 2010 <br />Page | 8  </p>
+<hr />Web Browser Session Restore Forensics <br />The both files are located in the same folder &#8211; <br />XP  <br />C:Documents and SettingsUserNameApplication DataOperaOperasessions <br />Vista <br />C:Users UserName AppDataRoamingOperaOperaprofilesessions </p>
+<p>The files contain similar details to the Mozilla files and are much easier to read. <br />The file looks like this &#8211; <br />Opera Preferences version 2.1 <br />; Do not edit this file while Opera is running <br />; This file is stored in UTF-8 encoding </p>
+<p>[session] <br />version=7000 <br />window count=4 </p>
+<p>[1] <br />x=100 <br />y=100 <br />w=700 <br />h=500 <br />state=2 <br />restore to state=2 <br />id=173 <br />parent=0 </p>
+<p>&#8212;&#8212;/ snip / &#8212;&#8212; </p>
+<p>[2history url] <br />count=1 <br />0=http://www.amazon.co.uk/?ie=UTF8&amp;%2AVersion%2A=1&amp;tag=operasoft-<br />21&amp;link_code=hom&amp;%2Aentries%2A=0 </p>
+<p>[2history document type] <br />count=1 <br />0=6 </p>
+<p>[2history title] <br />count=1 <br />0=Amazon.co.uk: Low Prices in Electronics, Books, Sports Equipment &amp; more </p>
+<p>&#8212;&#8212;/ snip / &#8212;&#8212; </p>
+<p>&#169;     Harry Parsonage January 2010 <br />Page | 9  </p>
+<hr />
+
+<div style="float: right;"><g:plusone></g:plusone></div>
+<iframe src="http://www.facebook.com/plugins/like.php?href=http://docbe.com/2012/01/05/web-browser-session-restore-forensics-3/&amp;layout=standard&amp;show_faces=false&amp;width=440&amp;action=like&amp;font&amp;colorscheme=light&amp;height=30" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:440px; height:30px;" allowTransparency="true"></iframe><script type="text/javascript"><!--
+google_ad_client = "pub-5409796297664162";
+/* docbe, 468x15, created 10/10/11 */
+google_ad_slot = "0313639312";
+google_ad_width = 468;
+google_ad_height = 15;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+			</div>
+					</article>
+
+		
+
+	
+	 
+
+
+<div id="respond">
+
+	<h3>Leave a Reply</h3>
+
+	<div id="cancel-comment-reply">
+		<small><a rel="nofollow" id="cancel-comment-reply-link" href="/2012/01/05/web-browser-session-restore-forensics-3/#respond" style="display:none;">Click here to cancel reply.</a></small>
+	</div>
+
+
+	<form action="http://docbe.com/wp-comments-post.php" method="post" id="commentform">
+
+
+		<p>
+			<input type="text" name="author" id="author" value="" size="22" tabindex="1" aria-required='true' />
+			<label for="author">Name (<span style="color:red">*</span>)</label>
+		</p>
+
+		<p>
+			<input type="text" name="email" id="email" value="" size="22" tabindex="2" aria-required='true' />
+			<label for="email">Mail (will not be published) (<span style="color:red">*</span>)</label>
+		</p>
+
+		<p>
+			<input type="text" name="url" id="url" value="" size="22" tabindex="3" />
+			<label for="url">Website</label>
+		</p>
+
+
+		<p><textarea name="comment" id="comment" cols="100%" rows="10" tabindex="4"></textarea></p>
+
+		<p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="142a03bdd6" /></p>
+		<p>
+			<input name="submit" type="submit" id="submit" tabindex="5" value="Submit Comment" />
+			<input type='hidden' name='comment_post_ID' value='4740' id='comment_post_ID' />
+<input type='hidden' name='comment_parent' id='comment_parent' value='0' />
+		</p>
+
+	</form>
+
+
+</div>
+
+
+	
+    </div><!-- end #content -->
+    <aside>
+      <div id="sidebar1">
+				<div style="text-align: center;"><script type="text/javascript"><!--
+google_ad_client = "pub-5409796297664162";
+/* docbe, 160x600, created 10/10/11 */
+google_ad_slot = "6731044630";
+google_ad_width = 160;
+google_ad_height = 600;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+				</div>
+				<div class="section">
+					<h3>Categories</h3>
+					<ul>
+							<li class="cat-item cat-item-1"><a href="http://docbe.com/category/docbe/" title="View all posts filed under DocBE">DocBE</a> (5806)
+</li>
+					</ul>
+				</div><!-- .section -->
+
+
+			</div><!-- end #l-sidebar -->
+		</aside></section>
+<div style="text-align: center;"><script type="text/javascript"><!--
+google_ad_client = "pub-5409796297664162";
+/* docbe, 728x15, created 10/10/11 */
+google_ad_slot = "5771814448";
+google_ad_width = 728;
+google_ad_height = 15;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+<footer>&copy; 2011 <a href="http://docbe.com">DocBE</a>
+</footer>
+</div><!-- #wrapper -->
+<div id="su-footer-links" style="text-align: center;"></div><!-- Histats.com  START (hidden counter)-->
+<script type="text/javascript">document.write(unescape("%3Cscript src=%27http://s10.histats.com/js15.js%27 type=%27text/javascript%27%3E%3C/script%3E"));</script>
+<a href="http://www.histats.com" target="_blank" title="counter create hit" ><script  type="text/javascript" >
+try {Histats.start(1,1571347,4,0,0,0,"");
+Histats.track_hits();} catch(err){};
+</script></a>
+<noscript><a href="http://www.histats.com" target="_blank"><img  src="http://sstatic1.histats.com/0.gif?1571347&101" alt="counter create hit" border="0"></a></noscript>
+<!-- Histats.com  END  -->
+</body>
+</html>

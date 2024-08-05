@@ -1,0 +1,36 @@
+#download_Container{
+	width:900px;
+	background: url(../img/download/download_bg.gif) no-repeat left top;
+	background-position:0px 0px;	
+	line-height:20px;
+	margin:0 auto;
+	padding:15px 30px 0px 30px;
+}
+#download_Container{
+	width:900px;
+	margin:0 auto;
+}
+#download_Container ul{
+	margin:0;
+	padding:0 0 0 0;
+}
+#download_Container ul li.nor_sty1{
+	margin:0 0 0 15px;
+	padding: 0 0 0 0px;
+	line-height:18px;
+	list-style-type:disc;
+	color:#808080;
+}
+#download_Container ul li.nor_sty1_title{
+	margin:0;
+	padding:5px 0px 5px 0px;
+	line-height:18px;
+	font-weight:bold;
+	list-style-type:none;
+}
+#download_Container ul li.nor_sty1_btn{
+	margin:0;
+	padding: 15px 0 0 0px;
+	list-style-type:none;
+}
+

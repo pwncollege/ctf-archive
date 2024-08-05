@@ -1,0 +1,180 @@
+﻿<document WMSNameSpaceVersion="2.0">
+
+  <node name="Control Protocol" opcode="create" >
+    <node name="Object Store" opcode="create" >
+      <node name="RTSP" opcode="create" >
+        <node name="CLSID" opcode="create" type="string" value="{308786f0-8b15-11d2-b25f-006097d2e41e}" />
+        <node name="Enabled" opcode="create" type="int32" value="0x1" />
+        <node name="Properties" opcode="create" >
+          <node name="Protocol" opcode="create" type="string" value="RTSP,RTSPA,RTSPT,RTSPU,RTSPM" />
+        </node> <!-- Properties -->
+
+      </node> <!-- RTSP -->
+
+      <node name="Sessionless Multicast" opcode="create" >
+        <node name="CLSID" opcode="create" type="string" value="{f9377800-f38d-11d2-b26c-006097d2e41e}" />
+        <node name="Enabled" opcode="create" type="int32" value="0x1" />
+        <node name="Properties" opcode="create" >
+          <node name="Protocol" opcode="create" type="string" value="MCAST,RTP" />
+        </node> <!-- Properties -->
+
+      </node> <!-- Sessionless Multicast -->
+
+    </node> <!-- Object Store -->
+
+    <node name="Shared Properties" opcode="create" />
+  </node> <!-- Control Protocol -->
+
+  <node name="Data Protocol" opcode="create" >
+    <node name="Object Store" opcode="create" >
+      <node name="RTP" opcode="create" >
+        <node name="CLSID" opcode="create" type="string" value="{cbfb2e20-ab7b-11d2-b261-006097d2e41e}" />
+        <node name="Enabled" opcode="create" type="int32" value="0x1" />
+        <node name="Properties" opcode="create" >
+          <node name="Format" opcode="create" type="string" value="x-asf-pf" />
+          <node name="Protocol" opcode="create" type="string" value="RTP/AVP" />
+        </node> <!-- Properties -->
+
+      </node> <!-- RTP -->
+
+      <node name="RTP/ASF" opcode="create" >
+        <node name="CLSID" opcode="create" type="string" value="{149a44be-dc14-4e94-9cb0-c0268e77df9e}" />
+        <node name="Enabled" opcode="create" type="int32" value="0x1" />
+        <node name="Properties" opcode="create" >
+          <node name="Format" opcode="create" type="string" value="x-asfv2-pf,x-asfv2-grp-pf,x-asfv2-frag-pf" />
+          <node name="Protocol" opcode="create" type="string" value="RTP/AVP" />
+        </node> <!-- Properties -->
+
+      </node> <!-- RTP/ASF -->
+
+      <node name="RTP/AVP" opcode="create" >
+        <node name="CLSID" opcode="create" type="string" value="{d7335e2e-62eb-4ad0-96cd-b31c9d0f9f85}" />
+        <node name="Enabled" opcode="create" type="int32" value="0x1" />
+        <node name="Properties" opcode="create" >
+          <node name="Format" opcode="create" type="string" value="PCMU,L8,L16,MPA,G726-24,G726-40" />
+          <node name="Protocol" opcode="create" type="string" value="RTP/AVP" />
+        </node> <!-- Properties -->
+
+      </node> <!-- RTP/AVP -->
+
+      <node name="RTP/FEC" opcode="create" >
+        <node name="CLSID" opcode="create" type="string" value="{02DEFE42-F8FC-11d2-8670-00C04F6890ED}" />
+        <node name="Enabled" opcode="create" type="int32" value="0x1" />
+        <node name="Properties" opcode="create" >
+          <node name="Format" opcode="create" type="string" value="parityfec" />
+          <node name="Protocol" opcode="create" type="string" value="RTP/AVP" />
+        </node> <!-- Properties -->
+
+      </node> <!-- RTP/FEC -->
+
+      <node name="RTP/WMS-FEC" opcode="create" >
+        <node name="CLSID" opcode="create" type="string" value="{EDAB8E6B-746C-40db-A885-9E4A9EEF27A2}" />
+        <node name="Enabled" opcode="create" type="int32" value="0x1" />
+        <node name="Properties" opcode="create" >
+          <node name="Format" opcode="create" type="string" value="wms-fec" />
+          <node name="Protocol" opcode="create" type="string" value="RTP/AVP" />
+        </node> <!-- Properties -->
+
+      </node> <!-- RTP/WMS-FEC -->
+
+    </node> <!-- Object Store -->
+
+    <node name="Shared Properties" opcode="create" />
+  </node> <!-- Data Protocol -->
+
+  <node name="Feedback Protocol" opcode="create" >
+    <node name="Object Store" opcode="create" >
+      <node name="RTCP" opcode="create" >
+        <node name="CLSID" opcode="create" type="string" value="{ecfddc81-184e-11d3-ae84-00a0c95ec3f0}" />
+        <node name="Enabled" opcode="create" type="int32" value="0x1" />
+        <node name="Properties" opcode="create" >
+          <node name="Format" opcode="create" type="string" value="x-wms-rtx" />
+          <node name="Protocol" opcode="create" type="string" value="RTP/AVP" />
+        </node> <!-- Properties -->
+
+      </node> <!-- RTCP -->
+
+    </node> <!-- Object Store -->
+
+    <node name="Shared Properties" opcode="create" />
+  </node> <!-- Feedback Protocol -->
+
+  <node name="Network Source" opcode="create" >
+    <node name="Object Store" opcode="create" >
+      <node name="WMS Http Network Source" opcode="create" >
+        <node name="CLSID" opcode="create" type="string" value="{566A2EFF-5651-4020-AC1A-EB48E4571EA3}" />
+        <node name="Enabled" opcode="create" type="int32" value="0x1" />
+        <node name="Properties" opcode="create" >
+          <node name="Source Type" opcode="create" type="string" value="HTTP" />
+          <node name="DefaultHttpServerPort" opcode="create" type="int32" value="0x50" />
+          <node name="DefaultHttpServerSSLPort" opcode="create" type="int32" value="0x1bb" />
+          <node name="PacketBuffers" opcode="create" type="int32" value="0x8" />
+          <node name="EnableHTTP1_1" opcode="create" type="int32" value="0x1" />
+          <node name="OpenTimeout" opcode="create" type="int32" value="0x1e" />
+          <node name="SecondSegmentTimeout" opcode="create" type="int32" value="0x64" />
+          <node name="ControlAdapter" opcode="create" type="string" value="" />
+          <node name="PercentBWUsageForAccelStreaming" opcode="create" type="int32" value="0x55" />
+          <node name="Proxy Setting" opcode="create" type="int32" value="0x3" />
+          <node name="ProxyHostName" opcode="create" type="string" value="" />
+          <node name="ProxyPort" opcode="create" type="int32" value="0x50" />
+          <node name="ProxyBypassForLocal" opcode="create" type="int32" value="0x0" />
+        </node> <!-- Properties -->
+
+      </node> <!-- WMS Http Network Source -->
+
+      <node name="WMS Msbd Network Source" opcode="create" >
+        <node name="CLSID" opcode="create" type="string" value="{FB74F625-7D25-4455-B840-7B870B5B9322}" />
+        <node name="Enabled" opcode="create" type="int32" value="0x1" />
+        <node name="Properties" opcode="create" >
+          <node name="Source Type" opcode="create" type="string" value="ASFM" />
+          <node name="PacketBuffers" opcode="create" type="int32" value="0x8" />
+          <node name="DropProb" opcode="create" type="int32" value="0x0" />
+          <node name="DropGracePeriod" opcode="create" type="int32" value="0x0" />
+          <node name="FirstDropGracePeriod" opcode="create" type="int32" value="0x0" />
+          <node name="DropBurstDuration" opcode="create" type="int32" value="0x0" />
+          <node name="McastTimeout" opcode="create" type="int32" value="0x3a98" />
+          <node name="EnableIGMPv3" opcode="create" type="int32" value="0x1" />
+        </node> <!-- Properties -->
+
+      </node> <!-- WMS Msbd Network Source -->
+
+      <node name="WMS Network Source" opcode="create" >
+        <node name="CLSID" opcode="create" type="string" value="{ad763fa6-3b90-41ab-bd44-4f832beee55f}" />
+        <node name="Enabled" opcode="create" type="int32" value="0x1" />
+        <node name="Properties" opcode="create" >
+          <node name="Source Type" opcode="create" type="string" value="RTSP,XSDP,RTP,RTSPA,RTSPT,RTSPU,RTSPM" />
+          <node name="EnableATM" opcode="create" type="int32" value="0x1" />
+          <node name="MaximumMTU" opcode="create" type="int32" value="0x0" />
+          <node name="FirewallTimeout" opcode="create" type="int32" value="0x14" />
+          <node name="OpenTimeout" opcode="create" type="int32" value="0x1e" />
+          <node name="RtxDropProb" opcode="create" type="int32" value="0x0" />
+          <node name="DropProb" opcode="create" type="int32" value="0x0" />
+          <node name="DropGracePeriod" opcode="create" type="int32" value="0x0" />
+          <node name="FirstDropGracePeriod" opcode="create" type="int32" value="0x0" />
+          <node name="DropBurstDuration" opcode="create" type="int32" value="0x0" />
+          <node name="PacketPairDropProb" opcode="create" type="int32" value="0x0" />
+          <node name="NackAlgorithm" opcode="create" type="int32" value="0x2" />
+          <node name="NackRateMultiplier" opcode="create" type="int32" value="0x1" />
+          <node name="NackBurst" opcode="create" type="int32" value="0x5dc" />
+          <node name="NackTraceInterval" opcode="create" type="int32" value="0x3e8" />
+          <node name="NackRetry" opcode="create" type="int32" value="0x1" />
+          <node name="BurstProtection" opcode="create" type="int32" value="0x0" />
+          <node name="EmulateNetworkDisconnect" opcode="create" type="int32" value="0x0" />
+          <node name="AssertStrangeErrors" opcode="create" type="int32" value="0x0" />
+          <node name="PercentBWUsageForAccelStreaming" opcode="create" type="int32" value="0x55" />
+          <node name="Proxy Setting" opcode="create" type="int32" value="0x0" />
+          <node name="ProxyHostName" opcode="create" type="string" value="" />
+          <node name="ProxyPort" opcode="create" type="int32" value="0x22a" />
+          <node name="ProxyBypassForLocal" opcode="create" type="int32" value="0x0" />
+          <node name="PktGracePeriodAtEOSForBPP" opcode="create" type="int32" value="0x3e8" />
+          <node name="PktGracePeriodAtEOSForODP" opcode="create" type="int32" value="0x9c4" />
+        </node> <!-- Properties -->
+
+      </node> <!-- WMS Network Source -->
+
+    </node> <!-- Object Store -->
+
+    <node name="Shared Properties" opcode="create" />
+  </node> <!-- Network Source -->
+
+</document>

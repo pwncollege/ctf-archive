@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Forensic Insight</title>
+<link rel="shortcut icon" href="http://forensicinsight.org/wp-content/uploads/2011/11/FilterFeather2.gif" type="image/x-icon" />
+<link rel="profile" href="http://gmpg.org/xfn/11" />
+<!--[if lt IE 8]> <script src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE8.js"></script> <![endif]--><link rel="alternate" type="application/rss+xml" title="FORENSICINSIGHT &raquo; Feed" href="http://forensicinsight.org/feed" />
+<link rel="alternate" type="application/rss+xml" title="FORENSICINSIGHT &raquo; Comments Feed" href="http://forensicinsight.org/comments/feed" />
+				
+	<script type="text/javascript">//<![CDATA[
+	// Google Analytics for WordPress by Yoast v4.2.3 | http://yoast.com/wordpress/google-analytics/
+	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount','UA-20479500-3']);
+	_gaq.push(['_trackPageview']);
+	(function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	})();
+	//]]></script>
+<link rel="alternate" type="application/rss+xml" title="FORENSICINSIGHT &raquo; Home Comments Feed" href="http://forensicinsight.org/home/feed" />
+	<style type="text/css">
+	.wp-pagenavi{float:left !important; }
+	</style>
+  <link rel='stylesheet' id='sp-events-calendar-style-css'  href='http://forensicinsight.org/wp-content/plugins/the-events-calendar/resources/events.css?ver=3.3.1' type='text/css' media='all' />
+<link rel='stylesheet' id='pagelines-pro-css'  href='http://forensicinsight.org/wp-content/themes/platformpro/pro/pro.css?ver=153-11051175603' type='text/css' media='all' />
+<link rel='stylesheet' id='pagelines-stylesheet-css'  href='http://forensicinsight.org/wp-content/themes/platformpro/style.css?ver=153-011412144041' type='text/css' media='all' />
+<!--[if IE 7]>
+<link rel='stylesheet' id='ie7-style-css'  href='http://forensicinsight.org/wp-content/themes/platformpro/css/ie7.css?ver=1.5.3' type='text/css' media='all' />
+<![endif]-->
+<link rel='stylesheet' id='thickbox-css'  href='http://forensicinsight.org/wp-content/plugins/auto-thickbox-plus/thickbox.css?ver=20110904' type='text/css' media='all' />
+<link rel='stylesheet' id='superfish-css'  href='http://forensicinsight.org/wp-content/themes/platformpro/sections/nav/superfish.css?ver=1.5.3' type='text/css' media='screen' />
+<link rel='stylesheet' id='wp-pagenavi-style-css'  href='http://forensicinsight.org/wp-content/plugins/wp-pagenavi-style/css/css3_black.css?ver=1.0' type='text/css' media='all' />
+<script type='text/javascript' src='http://forensicinsight.org/wp-includes/js/jquery/jquery.js?ver=1.7.1'></script>
+<script type='text/javascript' src='http://forensicinsight.org/wp-content/plugins/the-events-calendar/resources/jquery.pjax.js?ver=3.3.1'></script>
+<script type='text/javascript' src='http://forensicinsight.org/wp-content/plugins/the-events-calendar/resources/events.js?ver=3.3.1'></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://forensicinsight.org/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://forensicinsight.org/wp-includes/wlwmanifest.xml" /> 
+<link rel='next' title='About' href='http://forensicinsight.org/about' />
+<meta name="generator" content="WordPress 3.3.1" />
+
+<!-- All in One SEO Pack 1.6.13.8 by Michael Torbert of Semper Fi Web Design[123,130] -->
+<meta name="description" content="Digital Forensic Community" />
+<meta name="keywords" content="digital forensics, investigation, forensics" />
+<link rel="canonical" href="http://forensicinsight.org/" />
+<!-- /all in one seo pack -->
+<script type="text/javascript">
+<!--
+/*****************************************************************
+***   COPY PROTECTED BY CHETANGOLE.COM/BLOG/WP-COPYPROTECT    ****
+******************************************************************/
+function clickIE4(){
+if (event.button==2){
+return false;
+}
+}
+function clickNS4(e){
+if (document.layers||document.getElementById&&!document.all){
+if (e.which==2||e.which==3){
+return false;
+}
+}
+}
+
+if (document.layers){
+document.captureEvents(Event.MOUSEDOWN);
+document.onmousedown=clickNS4;
+}
+else if (document.all&&!document.getElementById){
+document.onmousedown=clickIE4;
+}
+
+document.oncontextmenu=new Function("return false")
+// --> 
+</script>
+
+<script type="text/javascript">
+
+function disableSelection(target){
+if (typeof target.onselectstart!="undefined") //For IE 
+	target.onselectstart=function(){return false}
+else if (typeof target.style.MozUserSelect!="undefined") //For Firefox
+	target.style.MozUserSelect="none"
+else //All other route (For Opera)
+	target.onmousedown=function(){return false}
+target.style.cursor = "default"
+}
+</script>
+	<style type="text/css">
+	 .wp-pagenavi
+	{
+		font-size:12px !important;
+	}
+	</style>
+			
+<script type="text/javascript"> /* <![CDATA[ */ jQuery(document).ready(function() {  jQuery('ul.sf-menu').superfish({ delay: 100, speed: 'fast', autoArrows:  1, dropShadows: 1 });  }); /* ]]> */ </script>			
+
+<script type="text/javascript">
+/* <![CDATA[ */
+	var $j = jQuery.noConflict();
+	$j(document).ready(function () {
+$j('#cycle').cycle({fx: 'fade', sync: 1, timeout: 5000, speed: 2000, cleartype: true, cleartypeNoBg: true, pager: 'div#featurenav'});$j("div#featurenav").children("a").each(function() { if($j(this).html() == "1") { $j(this).attr("title", "forensicinsight");  }if($j(this).html() == "2") { $j(this).attr("title", "forensictoolkit");  }if($j(this).html() == "3") { $j(this).attr("title", "join forums");  } });	
+});
+
+/* ]]> */
+</script>
+<link rel="stylesheet" id="dynamic-css" href="http://forensicinsight.org/wp-content/themes/platformpro/css/dynamic.css?ver=153-011412121342" type="text/css" media="all" />
+	<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+<script type="text/javascript">
+//<![CDATA[
+	var screen_res = "1280 x 800"; 
+//]]>
+</script>
+</head>
+<body class="home page page-id-19 page-template page-template-page-alpha-php canvas ttype-alpha tmain-default">
+<div id="site" class="fullwidth"> <!-- #site // Wraps #header, #page-main, #footer - closed in footer -->
+	<div id="page"> <!-- #page // Wraps #header, #page-main - closed in footer -->
+		<div id="page-canvas">
+						<div id="header" class="container-group fix">
+				<div class="outline">
+					<div id="branding" class="container fix">
+	<div class="texture">
+		<div class="content">
+			<div class="content-pad">
+<div class="branding_wrap">
+	<a class="mainlogo-link" href="http://forensicinsight.org" title="FORENSICINSIGHT"><img class="mainlogo-img" src="http://forensicinsight.org/wp-content/uploads/2011/11/logo_forensicinsight.png" alt="FORENSICINSIGHT" /></a>		
+	
+	<div class="icons" style="bottom: 21px; right: 1px;">
+
+				<a target="_blank" href="http://forensicinsight.org/feed" class="rsslink"></a>
+				
+											<a target="_blank" href="http://twitter.com/forensicinsight" class="twitterlink"></a>
+																			
+	</div>
+</div>
+				<div class="clear"></div>
+			</div>
+		</div>
+	</div>
+</div>
+<div id="primary-nav" class="container fix">
+	<div class="texture">
+		<div class="content">
+			<div class="content-pad">
+	<div id="nav_row" class="main_nav fix">
+<ul id="menu-main-navi" class="main-nav sf-menu"><li id="menu-item-78" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-19 current_page_item menu-item-78"><a href="http://forensicinsight.org/" >Home</a></li>
+<li id="menu-item-76" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-76"><a href="http://forensicinsight.org/about" >About</a></li>
+<li id="menu-item-75" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-75"><a href="http://forensicinsight.org/research" >Research</a></li>
+<li id="menu-item-74" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-74"><a href="http://forensicinsight.org/articles" >Articles</a></li>
+<li id="menu-item-73" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-73"><a href="http://forensicinsight.org/tools" >Tools</a></li>
+<li id="menu-item-698" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-698"><a href="http://forensicinsight.org/insightforum" >Forum</a></li>
+<li id="menu-item-776" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-776"><a href="http://forensicinsight.org/stats" >Stats</a></li>
+<li id="menu-item-873" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-873"><a href="http://forensicinsight.org/events" >Events</a></li>
+</ul><form method="get" class="searchform" action="http://forensicinsight.org/" onsubmit="this.submit();return false;">
+	<fieldset>
+		<input type="text" value="Search" name="s" class="searchfield" onfocus="if (this.value == 'Search') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Search';}" />
+
+		<input type="image" class="submit btn" name="submit" src="http://forensicinsight.org/wp-content/themes/platformpro/images/search-btn.png" alt="Go" />
+	</fieldset>
+</form>
+	</div>
+
+				<div class="clear"></div>
+			</div>
+		</div>
+	</div>
+</div>
+<div id="secondnav" class="container fix">
+	<div class="texture">
+		<div class="content">
+			<div class="content-pad">
+				<div class="clear"></div>
+			</div>
+		</div>
+	</div>
+</div>
+				</div>
+			</div>
+						<div id="page-main" class="container-group fix"> <!-- #page-main // closed in footer -->
+				<div id="dynamic-content" class="outline fix">
+					<div id="feature" class="container fix">
+	<div class="texture">
+		<div class="content">
+			<div class="content-pad">
+		
+	<div id="feature_slider" class="insight-main-features fix">
+		<div id="feature-area">
+			<div id="cycle">
+									<div id="feature_365"  class="fcontainer text-right  fix" >
+							<div class="feature-wrap wcontent" style="background: url('http://forensicinsight.org/wp-content/uploads/2011/11/main_10.png') no-repeat top center" >
+								<div class="feature-pad fix">
+																		<div class="fcontent ">
+										<div class="dcol-pad fix">
+																								<div class="fheading">
+													<h2 class="ftitle"><small>welcome to</small>FORENSIC INSIGHT.</h2>
+												</div>
+												<div class="ftext">
+																										<div class="fexcerpt">
+													<p>The forensic insight is digital forensics community. Let’s talk freely about digital forensics.</p>
+													</div>
+																																																			</div>
+																						</div>
+										
+									</div>
+						
+									<div class="fmedia" style="">
+										<div class="dcol-pad">
+																																	
+										</div>
+									</div>
+																		<div class="clear"></div>
+								</div>
+							</div>
+						</div>
+											<div id="feature_354"  class="fcontainer text-right  fix" >
+							<div class="feature-wrap wcontent" style="background: url('http://forensicinsight.org/wp-content/uploads/2011/11/main_2.png') no-repeat top center" >
+								<div class="feature-pad fix">
+																		<div class="fcontent ">
+										<div class="dcol-pad fix">
+																								<div class="fheading">
+													<h2 class="ftitle"><small>Incident Response</small>FORENSIC TOOLKIT</h2>
+												</div>
+												<div class="ftext">
+																										<div class="fexcerpt">
+													<p>The toolkit of the forensicinsight is most appropriate for incident response.</p>
+													</div>
+																																																			</div>
+																						</div>
+										
+									</div>
+						
+									<div class="fmedia" style="">
+										<div class="dcol-pad">
+																																	
+										</div>
+									</div>
+																		<div class="clear"></div>
+								</div>
+							</div>
+						</div>
+											<div id="feature_346"  class="fcontainer text-bottom fstyle-darkbg-overlay fix" >
+							<div class="feature-wrap wcontent" style="background: url('http://forensicinsight.org/wp-content/uploads/2011/11/main_4.jpg') no-repeat top center" >
+								<div class="feature-pad fix">
+																		<div class="fcontent ">
+										<div class="dcol-pad fix">
+																								<div class="fheading">
+													<h2 class="ftitle"><small>Digital Forensics</small>Forum</h2>
+												</div>
+												<div class="ftext">
+																										<div class="fexcerpt">
+													<p>With your free membership, you can participate in conversations with experts.</p>
+													</div>
+																											<a class="pagelines-blink black-blink flink" href="http://forensicinsight.org/forums/forum/dff">
+															<span class="pagelines-blink-pad">
+																<span class="blink-arrow featurelink" >More</span>
+															</span>
+														</a>
+																																																			</div>
+																						</div>
+										
+									</div>
+						
+									<div class="fmedia" style="">
+										<div class="dcol-pad">
+																																	
+										</div>
+									</div>
+																		<div class="clear"></div>
+								</div>
+							</div>
+						</div>
+															
+			</div>
+		</div>
+		
+		<div id="feature-footer" class="nonav  fix">
+			<div class="feature-footer-pad">
+												<div id="featurenav" class="fix">
+					
+				</div>
+				<div class="clear"></div>
+			</div>
+		</div>
+		
+	</div>
+	<div class="clear"></div>
+				<div class="clear"></div>
+			</div>
+		</div>
+	</div>
+</div>
+<div id="boxes" class="container fix">
+	<div class="texture">
+		<div class="content">
+			<div class="content-pad">
+		<div class="dcol_container_3  fboxes fix">
+			<div id="fbox_238" class="dcol_3 dcol fbox">
+				<div class="dcol-pad inline_thumbs">	
+											<div class="fboxgraphic">
+							<img src="http://forensicinsight.org/wp-content/uploads/2011/11/tools.png" alt="Tools" style="width:64px" />						</div>
+											<div class="fboxinfo fix">
+							<div class="fboxtitle">
+								<h3>
+Tools								</h3>
+							</div>
+							<div class="fboxtext"><p><span style="font-size: 12px;">누구든지 쉽게 사용할 수 있는 오픈소스/프리웨어 디지털 포렌식 도구.</span></p>
+</div>
+						</div>
+										</div>
+			</div>
+			<div id="fbox_236" class="dcol_3 dcol fbox">
+				<div class="dcol-pad inline_thumbs">	
+											<div class="fboxgraphic">
+							<img src="http://forensicinsight.org/wp-content/uploads/2011/11/article.png" alt="Articles" style="width:64px" />						</div>
+											<div class="fboxinfo fix">
+							<div class="fboxtitle">
+								<h3>
+Articles								</h3>
+							</div>
+							<div class="fboxtext"><p><span style="font-size: 12px;">전문적인 디지털포렌식 기술 문서와 매달 업데이트되는 뉴스레터.</span></p>
+</div>
+						</div>
+										</div>
+			</div>
+			<div id="fbox_234" class="dcol_3 dcol fbox">
+				<div class="dcol-pad inline_thumbs">	
+											<div class="fboxgraphic">
+							<img src="http://forensicinsight.org/wp-content/uploads/2011/11/forum.png" alt="Forum" style="width:64px" />						</div>
+											<div class="fboxinfo fix">
+							<div class="fboxtitle">
+								<h3>
+Forum								</h3>
+							</div>
+							<div class="fboxtext"><p><span style="font-size: 12px;">디지털포렌식과 관련하여 자유롭게 질문하고 답할 수 있는 토론의 장.</span></p>
+</div>
+						</div>
+										</div>
+			</div>
+<div class="clear"></div>		</div>
+		<div class="clear"></div>
+				<div class="clear"></div>
+			</div>
+		</div>
+	</div>
+</div>
+<div id="maincontent" class="container fix">
+	<div class="texture">
+		<div class="content">
+			<div class="content-pad">
+<div id="pagelines_content" class="fullwidth fix">
+	
+		<div id="column-wrap" class="fix">
+		
+				<div id="column-main" class="mcolumn fix">
+			<div class="mcolumn-pad" >
+				<div id="theloop" class="copy fix">
+	<div class="copy-pad">
+<div class="post-19 page type-page status-publish hentry fpost" id="post-19">
+				
+				
+				
+					  	
+						<div class="entry_wrap fix">
+						
+							<div class="entry_content">
+																	<div class="clear"></div> 
+																</div>	
+							<div class="tags">
+								&nbsp;
+							</div>
+						</div>
+								</div>
+
+	<div class="clear"></div>
+	</div>
+</div>
+			</div>
+		</div>
+		
+				
+	</div>	
+	
+	
+</div>				<div class="clear"></div>
+			</div>
+		</div>
+	</div>
+</div>
+</div> <!-- END #dynamic-content -->
+
+<div id="morefoot_area"><div id="twitterbar" class="container fix">
+	<div class="texture">
+		<div class="content">
+			<div class="content-pad">
+<div class="tbubble"><span class="twitter">"[INSIGHT]: 2012년 02월 11일 인사이트 정기세미나 http://t.co/6VjWdP6Q&mdash;&nbsp;<a class="twitteraccount" href="http://twitter.com/#!/forensicinsight">forensicinsight</a></span></div>				<div class="clear"></div>
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+<div class="clear"></div>
+				
+</div> <!-- END #page-main from header -->
+</div> <!-- END #page-canvas from header -->
+</div> <!-- END #page from header -->
+
+<div  id="footer">
+	<div class="outline fix"><div id="footcols" class="container fix">
+	<div class="texture">
+		<div class="content">
+			<div class="content-pad">
+			<div id="fcolumns_container" class="dcol_container_5 fix">
+				
+									<div class="dcol_5 dcol">
+						<div class="dcol-pad">
+															<a class="home" href="http://forensicinsight.org" title="Home">
+									<img src="http://forensicinsight.org/wp-content/uploads/2011/11/FilterFeather7.png" alt="FORENSICINSIGHT" />
+								</a>
+													</div>
+					</div>
+					<div class="dcol_5 dcol">
+						<div class="dcol-pad">
+							<h3 class="widget-title">Pages</h3>
+								<div class="footer-links list-links"><ul><li class="page_item page-item-659"><a href="http://forensicinsight.org/insightforum" title="Forum">Forum</a></li><li class="page_item page-item-19 current_page_item"><a href="http://forensicinsight.org/" title="Home">Home</a></li><li class="page_item page-item-70"><a href="http://forensicinsight.org/members" title="Members">Members</a></li><li class="page_item page-item-430"><a href="http://forensicinsight.org/rootkit" title="rootkit">rootkit</a></li><li class="page_item page-item-704"><a href="http://forensicinsight.org/stats" title="Stats">Stats</a></li><li class="page_item page-item-21"><a href="http://forensicinsight.org/about" title="About">About</a></li><li class="page_item page-item-25"><a href="http://forensicinsight.org/research" title="Research">Research</a></li><li class="page_item page-item-28"><a href="http://forensicinsight.org/articles" title="Articles">Articles</a></li><li class="page_item page-item-31"><a href="http://forensicinsight.org/tools" title="Tools">Tools</a></li></ul></div>
+
+						</div>
+					</div>
+					<div class="dcol_5 dcol">
+						<div class="dcol-pad">
+							<h3 class="widget-title">The Latest</h3>
+								<ul class="latest_posts">
+																		<li class="list-item fix">
+											<div class="list_item_text">
+												<h5><a class="list_text_link" href="http://forensicinsight.org/archives/1089"><span class="list-title">2012년 02월 11일 정기세미나</span></a></h5>
+												<div class="list-excerpt">일 시 : 2012년 2월 11일 10:00 ~ 12:30 &nbsp; 발표 내용&nbsp;[&hellip;]</div>
+											</div>
+										</li>
+								</ul>
+						</div>
+					</div>
+					<div class="dcol_5 dcol">
+						<div class="dcol-pad">
+							<h3 class="widget-title">More</h3>
+							<div class="findent footer-more">
+								Thanks for dropping by! Feel free to join the discussion by leaving comments, and stay updated by subscribing to the <a href='http://forensicinsight.org/?feed=rss2'>RSS feed</a>.							</div>
+						</div>
+					</div>
+					<div class="dcol_5 dcol">
+						<div class="dcol-pad">
+							<div class="findent terms">
+								© 2011 FORENSICINSIGHT.							</div>
+						</div>
+					</div>
+							</div>	
+			<div class="clear"></div>
+						<div class="clear"></div>
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-20479500-3']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script><script type="text/javascript">
+disableSelection(document.body)
+</script>
+<!--
+<p class="small"> WassUp 1.8.3 timestamp: 2012-02-12 05:44:49AM UTC (02:44PM)<br />
+If above timestamp is not current time, this page is cached.</p> -->
+<script type='text/javascript' src='http://forensicinsight.org/wp-content/themes/platformpro/sections/nav/superfish.js?ver=1.0'></script>
+<script type='text/javascript' src='http://forensicinsight.org/wp-content/themes/platformpro/sections/nav/jquery.bgiframe.min.js?ver=1.0'></script>
+<script type='text/javascript' src='http://forensicinsight.org/wp-content/themes/platformpro/sections/features/jquery.cycle.js?ver=2.99'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var thickboxL10n = {"next":"Next >","prev":"< Prev","image":"Image","of":"of","close":"Close"};
+try{convertEntities(thickboxL10n);}catch(e){};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://forensicinsight.org/wp-content/plugins/auto-thickbox-plus/thickbox.js?ver=3.1-20110904'></script>
+
+<script type="text/javascript">
+var tb_pathToImage = "http://forensicinsight.org/wp-includes/js/thickbox/loadingAnimation.gif";
+var tb_closeImage = "http://forensicinsight.org/wp-includes/js/thickbox/tb-close.png";
+</script>
+</body>
+</html>

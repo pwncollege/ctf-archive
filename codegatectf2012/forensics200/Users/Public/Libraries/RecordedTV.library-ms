@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<libraryDescription xmlns="http://schemas.microsoft.com/windows/2009/library">
+  <name>@shell32.dll,-34615</name>
+  <ownerSID>S-1-5-18</ownerSID>
+  <isLibraryPinned>true</isLibraryPinned>
+  <iconReference>imageres.dll,-1008</iconReference>
+  <templateInfo>
+    <folderType>{5fa96407-7e77-483c-ac93-691d05850de8}</folderType>
+  </templateInfo>
+  <searchConnectorDescriptionList>
+    <searchConnectorDescription publisher="Microsoft" product="Windows">
+      <description>@shell32.dll,-34617</description>
+      <isDefaultSaveLocation>true</isDefaultSaveLocation>
+      <isDefaultNonOwnerSaveLocation>true</isDefaultNonOwnerSaveLocation>
+      <simpleLocation>
+        <url>shell:public\Recorded TV</url>
+      </simpleLocation>
+    </searchConnectorDescription>
+  </searchConnectorDescriptionList>
+</libraryDescription>

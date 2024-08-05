@@ -1,0 +1,73 @@
+#header div#profile {
+	right:3px;
+	left: auto;
+}
+.user_name b{
+	margin-bottom:-3px;
+}
+#profile b {
+	margin-bottom:-7px;
+}
+#logout {
+	height:25px;
+}
+#header td#search {
+	padding:0;
+}
+#content td#search form {
+padding:0 20px 20px 0px;
+}
+#header td#search form input#go {
+	margin-bottom:-3px;
+}
+#header div#profile {
+	top:1px;
+	margin-left:575px;
+}
+#header div#rs {
+	margin-left:-11px;
+	top:57px;
+}
+#page_head td#vers_dropdown {
+	padding-top:0px;
+}
+td#vers_dropdown .dd-action  {
+	padding-top:6px;
+}
+td#vers_dropdown #dropdown {
+	top:27px;
+}
+#content table#pr_lst td {
+	padding:10px 10px 0;
+}
+#content .rcmnd_td  table#pr_lst td {
+	padding:10px 0;
+}
+#leftColumn div.dd-container {
+	left:-5px;
+	top:0px;
+}
+#content td#wrong_vers input.sbmt {
+	margin-top:0px;
+}
+#content td#wrong_vers input.btncancel {
+	margin-bottom:-5px;
+}
+#i1_fix8 {
+	margin-left:3px;
+}
+#i2_fix8 {
+	margin-right:1px;
+}
+#section_a .content {
+	padding:11px 0 15px;
+}
+#section_b {
+	margin:0 0 20px 23px;
+}
+/*.ctgr_chng #commend_keyword{
+	top:29px;
+}*/
+#users_list td {
+	position: relative;
+}

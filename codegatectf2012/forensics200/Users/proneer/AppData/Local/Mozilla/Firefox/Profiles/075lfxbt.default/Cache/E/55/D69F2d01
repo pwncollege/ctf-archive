@@ -1,0 +1,1892 @@
+var WingateUtils = {
+
+  browser: {
+    agent: null,
+    version: null
+  },
+  imagePath: 'images/',
+  hideSelects: null,
+
+  addEventListener: function(eventAction, execFunction, parentObj){
+    parentObj = parentObj || window;
+    if(eventAction == null || execFunction == null || parentObj == null) return;
+    if(parentObj.addEventListener){
+      eventAction = eventAction.replace("on", "");
+      parentObj.addEventListener(eventAction, execFunction, false);
+    }
+    else if(parentObj.attachEvent)
+      parentObj.attachEvent(eventAction, execFunction);
+    else alert("could not add listner for '" + eventAction + "'.");
+  },
+
+  alterSelects: function (visibleState, docObj){
+    docObj = docObj || document;
+    var elements = docObj.getElementsByTagName("select");
+		for(var i=0; i < elements.length; i++){
+     	elements[i].style.visibility = visibleState;
+ 		}
+  },
+
+  alterSelectsCheck: function (visibleState, docObj){
+    if(this.hideSelects == null) this.getBrowserVersion();
+    if(this.hideSelects) this.alterSelects(visibleState, docObj);
+  },
+
+  appendParam: function (params, property, value){
+    params = params || {};
+    params[property] = value;
+    return params;
+  },
+
+  clearTimers: function (timersArray){
+    var timer;
+    for(var i=timersArray.length; i>=0; i--){
+      timer = timersArray.pop();
+      clearTimeout(timer);
+    }
+  },
+
+  convertProperty: function(str){
+    var pos;
+    while((pos = str.indexOf("-")+1) > 0){
+      str = str.replace("-"+str.charAt(pos),str.charAt(pos).toUpperCase());
+    }
+    return str;
+  },
+
+  deleteRow: function(rowElement){
+    var table = rowElement.parentNode.parentNode;
+    table.deleteRow(rowElement.rowIndex);
+  },
+
+  getBrowserType: function(){
+    if(!this.browser.agent){
+      var agent = navigator.userAgent;
+      if(agent.toLowerCase().indexOf('firefox') > -1) agent = "firefox";
+      else if(agent.toLowerCase().indexOf("safari") > -1) agent = "safari";
+      else if(agent.toLowerCase().indexOf("opera") > -1) agent = "opera";
+      else if(agent.toLowerCase().indexOf("msie") > -1) agent = "internet explorer";
+      else if(agent.toLowerCase().indexOf("mozilla") > -1) agent = "mozilla";
+      this.browser.agent = agent;
+    }
+    return this.browser.agent;
+  },
+
+  getBodyElement: function(element){
+    element = this.getDocumentElement(element);
+
+    if(element.documentElement && element.documentElement.clientHeight){
+      element = element.documentElement;
+    }
+    else if(element.body) element = element.body;
+    else element = null;
+    return element;
+  },
+
+  getBrowserVersion: function(){
+    if(!this.browser.version){
+      var agent = this.getBrowserType();
+      var version = navigator.appVersion.toLowerCase();
+      this.hideSelects = true;
+      if(agent == "mozilla"){
+        version = parseFloat(navigator.appVersion);
+      }
+      else if(agent == "safari"){
+        version = parseFloat(version.substring(version.toLowerCase().indexOf('version/')+8));
+        this.hideSelects = (version < 3);
+      }
+      else if(agent == "opera"){
+        version = parseFloat(version);
+        this.hideSelects = (version < 9);
+      }
+      else if(agent == "firefox"){
+        version = parseFloat(navigator.userAgent.substring(navigator.userAgent.toLowerCase().indexOf('firefox/')+8));
+        this.hideSelects = (version < 2);
+      }
+      else if(agent == "internet explorer"){
+        version = parseInt(version.substring(version.indexOf('msie')+5,version.indexOf(';',version.indexOf('msie'))));
+        this.hideSelects = (version < 7);
+      }
+      this.browser.version = version;
+    }
+    return this.browser.version;
+  },
+
+  getButton: function (btnClass, btnValue, btnOnclick, docObj){
+    docObj = docObj || document;
+    var btn = docObj.createElement('input');
+    btn.type = "button";
+    btn.className = btnClass;
+    btn.value = btnValue;
+    btn.onclick = btnOnclick;
+    return btn;
+  },
+
+  getNewButton: function (btnClass, btnValue, btnOnclick, docObj){
+    docObj = docObj || document;
+    var btn = docObj.createElement('a');
+    var innerBtn = docObj.createElement('span');
+    btn.className = btnClass;
+    btn.appendChild(innerBtn);
+    innerBtn.appendChild(docObj.createTextNode(btnValue));
+    btn.onclick = btnOnclick;
+    return btn;
+  },
+
+  getDocumentElement: function(element){
+    while(element.nodeType != 9) element = element.parentNode;
+    return element;
+  },
+
+  getElement: function(elementOrId, doc){
+    if(doc == null) doc = document;
+    try{
+      if(typeof elementOrId != "object"){
+        var element, winObj = window, count = 0;
+        do{
+          element = doc.getElementById(elementOrId);
+          winObj = winObj.parent;
+          doc = winObj.document;
+          count++;
+        }
+        while(element == null && doc != null && count<5);
+        elementOrId = element;
+      }
+    }
+    catch(err){
+      alert("There was an error when trying to get the element. " + err);
+      return null;
+    }
+    return elementOrId;
+  },
+
+  getElementsByClassName: function (className, tagName) {
+    var elements = document.getElementsByTagName(tagName);
+    var result = new Array();
+    for (var i = 0; elements != null && i < elements.length; i++) {
+      if (elements[i].className == className) result.push(elements[i]);
+    }
+    return result;
+  },
+
+  getElementId: function(elementOrId, doc, setId){
+    if(doc == null) doc = document;
+    try{
+      if(elementOrId.style != undefined) elementOrId = elementOrId.id;
+    }
+    catch(err){
+      alert("There was an error trying to get the element id. " +  err);
+      return null;
+    }
+    if(elementOrId == ""){
+      if(setId) elementOrId.id = "ww"+ new Date().getTime();
+      else alert('The id is blank or undefined');
+    }
+    return elementOrId;
+  },
+
+  getEventTarget: function (win, event){
+    var targ;
+    if (!event) var event = win.event;
+    if (event.target) targ = event.target;
+    else if (event.srcElement) targ = event.srcElement;
+    if (targ.nodeType == 3) targ = targ.parentNode; // Safari bug fix
+    return targ;
+  },
+
+  getImageButton: function(btnClass, params){
+    params.docObj = params.docObj || document;
+    var btn = params.docObj.createElement('img');
+    btn.src = this.getImagePath() + "pixel.gif";
+    btn.className = btnClass;
+    btn.onclick = params.action;
+    btn.onmouseover = function(){ this.className += "-over"; };
+    btn.onmouseout = function(){ this.className = btnClass; };
+    return btn;
+  },
+
+  getImagePath: function(){
+    return this.imagePath;
+  },
+
+  getMousePosition: function(e, docObj){
+    docObj = docObj || document;
+    var pos = {x:0, y:0};
+    if(docObj.captureEvents){
+      docObj.captureEvents(Event.MOUSEMOVE);
+      pos.x = e.pageX;
+      pos.y = e.pageY;
+    }
+    else{
+      pos.x = event.clientX + docObj.body.scrollLeft;
+      pos.y = event.clientY + docObj.body.scrollTop;
+    }
+    if (pos.x < 0) pos.x = 0;
+    if (pos.y < 0) pos.y = 0;
+    return pos;
+  },
+
+  getPosition: function (obj, deep) {
+    if(obj == null) return {x:0, y:0};
+    var xPos = 0;
+    var yPos = 0;
+    var tmpObj = obj;
+    xPos += tmpObj.offsetLeft;
+    yPos += tmpObj.offsetTop;
+    while (tmpObj = tmpObj.offsetParent) {
+      xPos += tmpObj.offsetLeft;
+      yPos += tmpObj.offsetTop;
+    }
+    if(deep){
+      while (obj = obj.parentNode) {
+        if(obj.scrollLeft) xPos -= obj.scrollLeft;
+        if(obj.scrollTop) yPos -= obj.scrollTop;
+      }
+    }
+    return {x:xPos, y:yPos};
+  },
+
+  getOpacity: function(element){
+    var opacity = null;
+    if(element.style.opacity) opacity = element.style.opacity*100;
+    else if(element.style.mozOpacity) opacity = element.style.mozOpacity*100;
+    else if(element.style.filter){
+      opacity = parseInt( element.style.filter.substring(element.style.filter.indexOf("=")) );
+    }
+    return opacity;
+  },
+
+  getPageDimensions: function(winObj){
+    if(winObj == null) winObj = window;
+    var bodyObj = WingateUtils.getBodyElement(winObj.document);
+    var area = {};
+    var pageWidth, pageHeight;
+    if (winObj.innerHeight && winObj.scrollMaxY) {
+      area.x = bodyObj.scrollWidth;
+      area.y = winObj.innerHeight + winObj.scrollMaxY;
+    }
+    else if (bodyObj.scrollHeight > bodyObj.offsetHeight){ // all but Explorer Mac
+      area.x = bodyObj.scrollWidth;
+      area.y = bodyObj.scrollHeight;
+    }
+    else { // Explorer Mac...would also work in Explorer 6 Strict, Mozilla and Safari
+      area.x = bodyObj.offsetWidth;
+      area.y = bodyObj.offsetHeight;
+    }
+    var windowWidth = 0, windowHeight = 0;
+    if (self.innerHeight) { // all except Explorer
+      windowWidth = winObj.innerWidth;
+      windowHeight = winObj.innerHeight;
+    }
+    else if (bodyObj.clientHeight) { // Explorer
+      windowWidth = bodyObj.clientWidth;
+      windowHeight = bodyObj.clientHeight;
+    }
+    if(area.y < windowHeight) pageHeight = windowHeight;
+    else pageHeight = area.y;
+    if(area.x < windowWidth) pageWidth = windowWidth;
+    else pageWidth = area.x;
+
+    return {
+      width:pageWidth,
+      height:pageHeight,
+      windowWidth:windowWidth,
+      windowHeight:windowHeight,
+      scroll: WingateUtils.getScroll(winObj)
+    };
+  },
+
+  getScroll: function(winObj){
+    var bodyObj = WingateUtils.getBodyElement(winObj.document);
+    var scroll = {
+      x:bodyObj.scrollLeft || winObj.pageXOffset || 0,
+      y:bodyObj.scrollTop || winObj.pageYOffset || 0
+    };
+    return scroll;
+  },
+
+  getStyle: function (elementOrId, styleProp){
+    var element = this.getElement(elementOrId);
+    if(element.currentStyle)
+      return element.currentStyle[this.convertProperty(styleProp)];
+    else if (window.getComputedStyle)
+      return document.defaultView.getComputedStyle(element,null).getPropertyValue(styleProp);
+    return null;
+  },
+
+  replaceRow: function (fromRow, toRow, deleteOldRow){
+    var size = fromRow.cells.length;
+    for(var i=0; i<size; i++) toRow.appendChild(fromRow.cells[0]);
+    toRow.id = fromRow.id;
+    if(deleteOldRow) this.deleteRow(fromRow);
+  },
+
+  removeEventListener: function(eventAction, execFunction, parentObj){
+    parentObj = parentObj || window;
+    if(eventAction == null || execFunction == null || parentObj == null) return;
+    if(parentObj.removeEventListener){
+      eventAction = eventAction.replace("on", "");
+      parentObj.removeEventListener(eventAction, execFunction, false);
+    }
+    else if(parentObj.detachEvent)
+      parentObj.detachEvent(eventAction, execFunction);
+    else alert("could not remove listner for '" + eventAction + "'.");
+  },
+
+  setOpacity: function(elementOrId, value){
+    var element = this.getElement(elementOrId);
+    element.style.filter = "alpha(opacity=" + value + ")"; //ie
+    element.style.mozOpacity = value/100; //old firefox
+    element.style.opacity = value/100; //w3c standard
+  }
+}
+
+
+if(window != top){
+  WingateUtils.Effects = top.WingateUtils.Effects;
+}
+else{
+
+  WingateUtils.Effects = {
+
+    fadeDefaults: {
+      interval:10,
+      repeat:1,
+      fadeFrom:100,
+      fadeTo:0,
+      delay: 0,
+      fadeOut: true,
+      setDiplayNone: false,
+      useHide: true
+    },
+    fadeObj: {
+      element: null,
+      elementArray: new Array(),
+      timers: new Array()
+    },
+    fadeIn: function(element, params){
+      this.fade(element, 100, params);
+    },
+    fadeOut: function(element, params){
+      this.fade(element, 0, params);
+    },
+    fade: function (element, fadeTo, params){
+      params = params || {};
+      if(element.id.length < 1) element.id = "wwF"+ new Date().getTime();
+      //alert("opacity=" + WingateUtils.getOpacity(element));
+      if(params.fadeFrom == 0 || (params.fadeFrom == null && WingateUtils.getOpacity(element) == 0)) params.fadeFrom = 1;
+      var fadeFrom = WingateUtils.getOpacity(element) || params.fadeFrom || this.fadeDefaults.fadeFrom;
+      if(fadeTo == null) fadeTo = this.fadeDefaults.fadeTo;
+      if(params.delay == null) params.delay = this.fadeDefaults.delay;
+      if(params.interval == null) params.interval = this.fadeDefaults.interval;
+      if(params.setDiplayNone == null) params.setDiplayNone = this.fadeDefaults.setDiplayNone;
+      if(params.useHide == null) params.useHide = !params.setDiplayNone;
+      //alert(element.className)
+      if(element.style.display == "none" || element.className == "hide"){
+        WingateUtils.setOpacity(element,0);
+        this.show(element);
+      }
+
+      //alert(fadeFrom+", "+fadeTo);
+      var steps = (fadeFrom - fadeTo)/5;
+      var opacity = fadeFrom, timeout = 0, deltaChange = -5;
+      if(steps < 0){
+        steps *= -1;
+        deltaChange *= -1;
+      }
+      steps = Math.round(steps);
+      //alert("steps="+steps+", deltaChange="+deltaChange);
+
+      if(this.fadeObj.timers.length > 0 && this.fadeObj.element == element) WingateUtils.clearTimers(this.fadeObj.timers);
+
+      this.fadeObj.element = element;
+      if(element.arrayIndex == null){
+        this.fadeObj.elementArray.push(element);
+        element.arrayIndex = this.fadeObj.elementArray.length-1;
+      }
+      for(var i=0; i<steps; i++){
+        timeout += params.interval;
+        opacity = Math.round(opacity+deltaChange);
+        if(opacity>100) break;
+        this.fadeObj.timers.push(setTimeout("WingateUtils.Effects.runSetOpacity(" + element.arrayIndex + "," + opacity + ")", params.delay + timeout));
+      }
+      this.fadeObj.timers.push(setTimeout("WingateUtils.Effects.runSetOpacity(" + element.arrayIndex + "," + fadeTo + ")", params.delay + timeout));
+      if(fadeTo <= 1){
+        if(params.setDiplayNone) this.fadeObj.timers.push(setTimeout("WingateUtils.Effects.diplayNone('" + element.arrayIndex + "')", params.delay + timeout));
+        else if(params.useHide) this.fadeObj.timers.push(setTimeout("WingateUtils.Effects.runHide('" + element.arrayIndex + "')", params.delay + timeout));
+      }
+    },
+    runSetOpacity: function(arrayIndex, opacity){
+      WingateUtils.setOpacity(this.fadeObj.elementArray[arrayIndex], opacity);
+    },
+    runHide: function(arrayIndex){
+      this.hide(this.fadeObj.elementArray[arrayIndex]);
+    },
+    cancelFade: function(){
+
+    },
+
+    hide: function(elementOrId){
+      this.display(elementOrId, false);
+    },
+    show: function(elementOrId){
+      this.display(elementOrId, true);
+    },
+    display: function (elementOrId, isShow){
+      //alert("isShow="+isShow);
+      var element = WingateUtils.getElement(elementOrId);
+      if(element.className && !isShow) element.oldClass = element.className;
+      element.className = isShow? (element.oldClass || "show") : "hide";
+      //alert("isShow=" + isShow + ", " + element.className);
+    },
+    diplayNone: function(arrayIndex){
+      var element = this.fadeObj.elementArray[arrayIndex];
+      element.style.display = "none";
+    },
+
+    highlight: function(element, params){
+      if(params == null) var params = {color:"#ffc"};
+      if(params.className != null){
+        if(element.prevName == null) element.prevName = element.className;
+        element.onmouseout = function (){
+          this.className = this.prevName;
+        }
+        element.className = params.className;
+      }
+      else{
+        if(element.prevBg == null) element.prevBg = element.style.backgroundColor;
+        element.onmouseout = function (){
+          this.style.backgroundColor = this.prevBg;
+        }
+        element.style.backgroundColor = params.color;
+      }
+    },
+
+    flashDefaults: {
+      delay: 500,
+      steps: 10,
+      speed: 30,
+      repeat: 1,
+      color: "#ff6"
+    },
+    flashObj: {
+      element: null,
+      elementArray: new Array(),
+      timers: new Array()
+    },
+    flashHighlight: function (element, params){
+      if(params == null) params = new Object();
+      if(element.id.length < 1) element.id = "wwFH"+ new Date().getTime();
+      if(params.delay == null) params.delay = this.flashDefaults.delay;
+      if(!params.steps) params.steps = this.flashDefaults.steps;
+      if(!params.speed) params.speed = this.flashDefaults.speed;
+      if(params.repeat == null) params.repeat = this.flashDefaults.repeat;
+      if(!params.color) params.color = this.flashDefaults.color;
+      if(!params.endColor){
+        if(!this.endColor) this.endColor = ((params.endColor = WingateUtils.getStyle(element, 'background-color')) != "transparent")? params.endColor : "#fff";
+        params.endColor = this.endColor;
+      }
+      params.color = this.parseColor(params.color);
+      params.endColor = this.parseColor(params.endColor);
+
+      var trans = {
+        r:((params.endColor.r-params.color.r)/params.steps),
+        g:((params.endColor.g-params.color.g)/params.steps),
+        b:((params.endColor.b-params.color.b)/params.steps)
+      };
+
+      var rgbString, timeout = 0;
+      if(this.flashObj.timers.length > 0 && this.flashObj.element == element) WingateUtils.clearTimers(this.flashObj.timers);
+
+      this.flashObj.element = element;
+      if(element.arrayIndex == null){
+        this.flashObj.elementArray.push(element);
+        element.arrayIndex = this.flashObj.elementArray.length-1;
+      }
+      for(var j=0; j<params.repeat; j++){
+        this.flashObj.timers.push(setTimeout('WingateUtils.Effects.runSetBackgroundColor("'+element.arrayIndex+'","'+params.color.hex+'")', timeout));
+        timeout += params.delay;
+        for(var i=0; i<params.steps; i++){
+          rgbString =  Math.round(params.color.r+(trans.r*i)) + ",";
+          rgbString += Math.round(params.color.g+(trans.g*i)) + ",";
+          rgbString += Math.round(params.color.b+(trans.b*i));
+          timeout += params.speed;
+          this.flashObj.timers.push(setTimeout('WingateUtils.Effects.runSetBackgroundColor("'+element.arrayIndex+'","rgb('+rgbString+')")', timeout));
+        }
+      }
+      timeout += params.speed;
+      this.flashObj.timers.push(setTimeout('WingateUtils.Effects.runSetBackgroundColor("'+element.arrayIndex+'","'+params.endColor.hex+'")', timeout));
+      //this.flashObj.timers.push(setTimeout('WingateUtils.Effects.runSetBackgroundColor("'+element.arrayIndex+'","inherit")', timeout));
+    },
+
+    runSetBackgroundColor: function(arrayIndex, color){
+      this.setBackgroundColor(this.flashObj.elementArray[arrayIndex], color);
+    },
+
+    parseColor: function (value){
+      var result = new Object();
+      var cols = new Array();
+      if(value.slice(0,4) == 'rgb(') {
+        cols = value.slice(4,value.length-1).split(',');
+        result.r = parseInt(cols[0]);
+        result.g = parseInt(cols[1]);
+        result.b = parseInt(cols[2]);
+        result.hex = "#"+result.r.toString(16)+result.g.toString(16)+result.b.toString(16);
+      }
+      else {
+        if(value.slice(0,1) == '#') {
+          if(value.length==4){
+            result.hex = "#";
+            for(var i=0;i<3;i++){
+              cols[i] = (value.charAt(i+1) + value.charAt(i+1)).toLowerCase();
+              result.hex += cols[i];
+            }
+          }
+          if(value.length==7){
+            for(var i=0;i<3;i++){
+              cols[i] = (value.charAt(i*2+1) + value.charAt(i*2+2)).toLowerCase();
+            }
+            result.hex = value.toLowerCase();
+          }
+        }
+        result.r = parseInt(cols[0],16);
+        result.g = parseInt(cols[1],16);
+        result.b = parseInt(cols[2],16);
+      }
+      return result;
+    },
+
+    setBackgroundColor: function (elementOrId, value){
+      var element = WingateUtils.getElement(elementOrId);
+      element.style.backgroundColor = value;
+    }
+  }
+}
+
+
+WingateUtils.Popup = function (iO, p){
+
+  var popupDefaults = {
+    opacity:100,
+    fadeFrom:55,
+    interval:15,
+    setDiplayNone:true,
+    initBusy: false,
+    makeClone:false,
+    top:"high-center",
+    left:"center",
+    highCenterMidpoint: 0.48,
+    width: "350px",
+    frameWidth: "500px",
+    height:"auto",
+    frameHeight: "400px",
+    useFade: true,
+    target: window.top,
+    interval: 4,
+    button1Value: "OK",
+    button2Value: "Cancel",
+    borderWidth: 2
+  };
+
+  var thisPopup = this;
+  var modal = null;
+  var insertObj = iO;
+  var params, isOpen = false;
+  var currentWin = null;
+
+  function init(parameters){
+    try{
+      setParams(parameters);
+
+      currentWin = params.target || popupDefaults.target;
+      if(currentWin == null) throw "Error, could not set target";
+
+      modal = createModal();
+      if(modal == null) throw "Error when trying to create popup";
+
+      size();
+      WingateUtils.addEventListener("onresize", position, currentWin);
+      position();
+      if(!params.initClosed) open();
+
+    }
+    catch(err){ alert(err); return; }
+  }
+  function setParams(parameters){
+    params = parameters || {};
+
+    if(!params.top){
+      params.top = popupDefaults.top;
+    }
+    else if(isNaN(params.top)){
+      if(params.top.indexOf("px") > -1) params.top = parseInt(params.top);
+      else if(params.top.toString().toLowerCase() != "center") params.top = popupDefaults.top;
+    }
+
+    if(!params.left){
+      params.left = popupDefaults.left;
+    }
+    else if(isNaN(params.left)){
+      if(params.left.indexOf("px") > -1) params.left = parseInt(params.left);
+      else params.left = popupDefaults.left;
+    }
+
+    if(params.fadeFrom == null) params.fadeFrom = popupDefaults.fadeFrom;
+    if(params.interval == null) params.interval = popupDefaults.interval;
+    if(params.setDiplayNone == null) params.setDiplayNone = popupDefaults.setDiplayNone;
+    if(params.opacity == null) params.opacity = popupDefaults.opacity;
+    if(params.useFade == null) params.useFade = popupDefaults.useFade;
+    if(params.interval == null) params.interval = popupDefaults.interval;
+    if(params.borderWidth == null) params.borderWidth = popupDefaults.borderWidth;
+    if(params.initBusy == null) params.initBusy = popupDefaults.initBusy;
+    if(params.makeClone == null) params.makeClone = popupDefaults.makeClone;
+    if(params.type == "iframe" || params.type == "titledFrame"){
+      params.useFade = false;
+      params.src = insertObj;
+      if(isFinite(params.width)) params.width += "px";
+      else if(!params.width || params.width.indexOf("px") < 1) params.width = popupDefaults.frameWidth;
+      if(isFinite(params.height)) params.height += "px";
+      else if(!params.height || params.height.indexOf("px") < 1) params.height = popupDefaults.frameHeight;
+    }
+    else{
+      if(isFinite(params.width)) params.width += "px";
+      else if(!params.width || params.width.indexOf("px") < 1) params.width = popupDefaults.width;
+      if(isFinite(params.height)) params.height += "px";
+      else if(!params.height || params.height.indexOf("px") < 1) params.height = popupDefaults.height;
+      if(params.yesValue) params.button1Value = params.yesValue;
+      if(params.noValue) params.button2Value = params.noValue;
+      if(params.yesCallBack) params.button1CallBack = params.yesCallBack;
+      if(params.noCallBack) params.button2CallBack = params.noCallBack;
+      if(typeof insertObj == "string") params.message = insertObj;
+      else params.htmlObj = insertObj;
+    }
+  }
+  function open(){
+    try{
+      modal.thisPopup = thisPopup;
+      WingateUtils.WindowManager.addPopup(currentWin, modal);
+    }
+    catch(err){ throw 'Error in WindowManager: ' + err; }
+    WingateUtils.alterSelectsCheck('hidden');
+
+    if(params.useFade){
+      WingateUtils.Effects.fade(modal, params.opacity, params);
+    }
+    else{
+      modal.style.visibility = "visible";
+      modal.style.display = "block";
+    }
+    isOpen = true;
+  }
+  function close(){
+    WingateUtils.alterSelectsCheck('visible');
+    if(params.useFade){
+      WingateUtils.Effects.fadeOut(modal,{interval:5, setDisplayNone:true});
+    }
+    else{
+      modal.style.display = "none";
+    }
+    WingateUtils.WindowManager.removePopup(currentWin);
+    isOpen = false;
+  }
+  function createModal(){
+    if (modal) {
+      div = modal;
+      while (div.firstChild) div.removeChild(div.firstChild);
+    }
+    else var div = currentWin.document.createElement('div');
+    if(div.id == "") div.id = "wwPopup" + new Date().getTime();
+    div.className = getPopupClass(params);
+    if(params.useFade) WingateUtils.setOpacity(div, 1);
+    else div.style.visibility = "hidden";
+    currentWin.document.body.appendChild(div);
+
+    if(params.type == "iframe" || params.type == "titledFrame") createIframe(div);
+    else{
+      if (params.message) {
+        params.htmlObj = currentWin.document.createElement('span');
+        params.htmlObj.innerHTML = params.message;
+      }
+
+      if(params.type == "message" || params.type == "prompt" || params.type == "confirm"){
+        if(params.type == "message"){
+          var btnObj = {};
+          btnObj.action = function(){ thisPopup.close(); };
+          btnObj.docObj = currentWin.document;
+          div.appendChild( WingateUtils.getImageButton("wwCloseBtn", btnObj) );
+        }
+        else{
+          if(!params.button1Value) params.button1Value = popupDefaults.button1Value;
+          if(!params.button2Value) params.button2Value = popupDefaults.button2Value;
+        }
+        if(params.makeClone) div.appendChild(params.htmlObj.cloneNode(true));
+        else div.appendChild(params.htmlObj);
+      }
+    }
+    var createButtons = false;
+    if(params.button1Value){
+      var newButton, maxButtons = 9;
+      if(params.type == "prompt") maxButtons = 1;
+
+      div.buttonDiv = currentWin.document.createElement('div');
+      div.buttonDiv.className = "wwButtonContainer";
+      div.appendChild(div.buttonDiv);
+      for(var i=1; i < (maxButtons+1) && (params['button'+i+'Value'] || params['button'+i+'CallBack']); i++){
+        if(params['button'+i+'CallBack'] == null) params['button'+i+'CallBack'] = function(){ close(); };
+        if (params.type == "titledFrame") {
+          newButton = WingateUtils.getNewButton('formButton', params['button' + i + 'Value'], params['button' + i + 'CallBack'], currentWin.document);
+        }
+        else newButton = WingateUtils.getButton('formButton', params['button' + i + 'Value'], params['button' + i + 'CallBack'], currentWin.document);
+        if(div.buttonDiv.firstChild){
+          div.buttonDiv.insertBefore(newButton, div.buttonDiv.firstChild);
+        }
+        else{
+          div.buttonDiv.appendChild(newButton);
+        }
+      }
+    }
+
+    div.style.top = "-1000px";
+    return div;
+  }
+
+  function createIframe(div){
+    div.className = getPopupClass({style:"frame"});
+
+    if(params.type == "titledFrame"){
+      if(params.windowTitle == null) alert("Error: The window title is undefined.");
+      div.titleDiv = currentWin.document.createElement('div');
+      div.titleDiv.className = "wwFrameTitle";
+      var btnObj = {};
+      btnObj.action = thisPopup.close;
+      btnObj.docObj = currentWin.document;
+
+      div.titleDiv.appendChild( WingateUtils.getImageButton("wwCloseBtn", btnObj) );
+      div.titleDiv.appendChild( currentWin.document.createTextNode(params.windowTitle) );
+      div.appendChild(div.titleDiv);
+    }
+
+    var frameElement = 'iframe';
+    if(WingateUtils.getBrowserType() == 'internet explorer'){
+      frameElement = '<IFRAME SRC="'+ WingateUtils.getImagePath() +'pixel.gif">';
+    }
+    div.iframe = currentWin.document.createElement(frameElement);
+    div.iframe.frameBorder = 0;
+    div.iframe.name = "wwFrame" + new Date().getTime();
+    div.appendChild(div.iframe);
+    showBusy(div);
+
+    top.popupFrame = div;
+    if(!params.initBusy) WingateUtils.addEventListener("onload",function(){ removeBusy(div); }, div.iframe);
+
+    div.iframe.src = params.src;
+  }
+
+  this.showBusy = showBusy;
+  this.removeBusy = removeBusy;
+  function showBusy(div){
+    if(div == null && modal != null) div = modal;
+    div.style.background = "#fff url("+ WingateUtils.getImagePath() +"frameLoading.gif) no-repeat center";
+    if(div.iframe) div.iframe.style.visibility = "hidden";
+  }
+  function removeBusy(div){
+    if(div == null && modal != null) div = modal;
+    div.style.backgroundImage = "none";
+    div.iframe.style.visibility = "visible";
+  }
+
+  function getPopupClass(params){
+    var popupClass = "ww";
+    if(params.style) popupClass += params.style.charAt(0).toUpperCase() + params.style.substring(1);
+    popupClass += "PopupDiv";
+    return popupClass;
+  }
+
+  function resize(width, height){
+    if(isFinite(width)) width += "px";
+    if(isFinite(height)) height += "px";
+    params.width = width;
+    params.height = height;
+
+    size();
+    position();
+  }
+
+  function size(){
+    modal.style.height = params.height;
+    modal.style.width = params.width;
+
+    if(params.type == "iframe" || params.type == "titledFrame"){
+      var height = modal.offsetHeight - params.borderWidth*2;
+      if (params.type == "titledFrame") {
+        height -= (WingateUtils.getBrowserType() != "internet explorer") ? modal.titleDiv.offsetHeight : -4;
+        if(modal.buttonDiv) height -= modal.buttonDiv.offsetHeight + 1;
+      }
+      modal.iframe.style.height = height + "px";
+      modal.iframe.style.width = (modal.offsetWidth - params.borderWidth*2) + "px";
+    }
+  }
+  function position(){
+    var windowDim = WingateUtils.getPageDimensions(currentWin);
+    var position = {x:0, y:0};
+
+    if(params.left == "center") position.x = windowDim.windowWidth/2 - modal.offsetWidth/2 +  + windowDim.scroll.x;
+    else position.x = parseInt(params.left) + windowDim.scroll.x;
+
+    if(isNaN(params.top) && params.top.indexOf("center") > -1){
+      var midpoint = 0.5;
+      if(params.top == "high-center") midpoint = popupDefaults.highCenterMidpoint;
+      if(windowDim.windowHeight/2 - modal.offsetHeight/2 > 0){
+        position.y = Math.round(windowDim.windowHeight*midpoint - modal.offsetHeight/2 + windowDim.scroll.y);
+      }
+    }
+    else position.y = params.top + windowDim.scroll.y;
+
+    modal.style.top = position.y + "px";
+    modal.style.left = position.x + "px";
+  }
+
+  function getId(){
+    return modal.id;
+  }
+  function getContainer(){
+    return modal;
+  }
+  function getFrame(){
+    return modal.getElementsByTagName('iframe').item(0);
+  }
+
+  this.open = open;
+  this.close = close;
+  this.resize = resize;
+  this.getId = getId;
+  this.getContainer = getContainer;
+  this.getFrame = getFrame;
+  this.setSwap = function(){} // depricated
+
+  init(p);
+
+}
+WingateUtils.Popup.Message = function (htmlString, params){
+  params = WingateUtils.appendParam(params, "type", "message");
+  this.popup = WingateUtils.Popup;
+  this.popup(htmlString, params);
+}
+WingateUtils.Popup.Prompt = function (htmlString, params){
+  params = WingateUtils.appendParam(params, "type", "prompt");
+  this.popup = WingateUtils.Popup;
+  this.popup(htmlString, params);
+}
+WingateUtils.Popup.Confirm = function (htmlString, cB, params){
+  params = WingateUtils.appendParam(params, "type", "confirm");
+  params.yesCallBack = cB;
+  this.popup = WingateUtils.Popup;
+  this.popup(htmlString, params);
+}
+WingateUtils.Popup.Error = function (htmlString, params){
+  params = WingateUtils.appendParam(params, "type", "prompt");
+  params = WingateUtils.appendParam(params, "style", "error");
+  this.popup = WingateUtils.Popup;
+  this.popup(htmlString, params);
+}
+WingateUtils.Popup.Warning = function (htmlString, params){
+  params = WingateUtils.appendParam(params, "type", "prompt");
+  params = WingateUtils.appendParam(params, "style", "warning");
+  this.popup = WingateUtils.Popup;
+  this.popup(htmlString, params);
+}
+WingateUtils.Popup.Frame = function (srcURL, params){
+  params = WingateUtils.appendParam(params, "type", "iframe");
+  this.popup = WingateUtils.Popup;
+  this.popup(srcURL, params);
+}
+WingateUtils.Popup.TitledFrame = function (srcURL, wT, params){
+  params = WingateUtils.appendParam(params, "type", "titledFrame");
+  params.windowTitle = wT;
+  this.popup = WingateUtils.Popup;
+  this.popup(srcURL, params);
+}
+
+
+WingateUtils.ToolTip = function(e, p){
+  var tipElement, params, docObj, tipPopup;
+  var defaults = {
+    width: 425,
+    xOffset: 0,
+    yOffset: 0,
+    zIndex: 90000
+  };
+
+  function init(el, input){
+    try{
+    tipElement = el;
+    if(tipElement == null) throw "The tooltip element is undefined";
+
+    setParams(input);
+
+    docObj = window.top.document;
+
+    tipPopup = createTipDiv();
+
+    tipElement.onmouseover = function(){
+      setDialog();
+      tipElement.timer = setTimeout(function(){ show(); }, 500);
+    }
+    tipElement.onmouseover();
+    tipElement.onmousemove = position;
+    tipElement.onmouseout = hide;
+    tipElement.onclick = function(){ this.blur(); }
+    tipElement.blur();
+    }catch(err){ alert("There was an error while trying to display the tooltip.\n\nError:" + err); }
+  }
+
+  function createTipDiv(){
+    if(docObj.tipPopup != null ) return docObj.tipPopup;
+
+    tipPopup = docObj.createElement("div");
+    tipPopup.id = "wwTooltipPopup";
+    tipPopup.style.zIndex = params.zIndex;
+    tipPopup.style.position = "absolute";
+    tipPopup.isOver = false;
+
+    var innerTop = docObj.createElement("div");
+    tipPopup.appendChild(innerTop);
+    innerTop.className = "innerTop";
+
+    var textDiv = docObj.createElement("div");
+    innerTop.appendChild(textDiv);
+    tipPopup.textDiv = textDiv;
+
+    var innerBtm = docObj.createElement("div");
+    tipPopup.appendChild(innerBtm);
+    innerBtm.className = "innerBottom";
+
+    textDiv.tipPopup = tipPopup;
+    textDiv.onmouseover = function(){this.tipPopup.isOver = true;};
+    textDiv.onmouseout = function(){this.tipPopup.isOver = false;};
+    tipPopup.style.display = "none";
+    docObj.body.appendChild(tipPopup);
+    docObj.tipPopup = tipPopup;
+
+    size();
+    textDiv.style.padding = "10px 10px 4px";
+
+    return tipPopup;
+  }
+
+  function show(){
+    WingateUtils.alterSelectsCheck('hidden');
+    tipPopup.style.display = "block";
+  }
+  function hide(){
+    if(tipElement.timer) clearTimeout(tipElement.timer);
+    tipPopup.style.display = "none";
+    WingateUtils.alterSelectsCheck('visible');
+  }
+
+  function setDialog(){
+    var tooltipObj, spanTags = tipElement.getElementsByTagName("span");
+    for(var i=0, spanTag; spanTag = spanTags[i]; i++){
+      if(spanTag.className.toLowerCase() == "tiptext"){
+        //tooltipObj = spanTag.cloneNode(true);
+        //tooltipObj.className = "";
+        tooltipObj = spanTag.innerHTML;
+        break;
+      }
+    }
+    if(tooltipObj == null) throw "The tipText is null or could not be found.";
+
+    //while(tipPopup.textDiv.firstChild) tipPopup.textDiv.removeChild(tipPopup.textDiv.firstChild);
+    //tipPopup.textDiv.appendChild(tooltipObj);
+    tipPopup.textDiv.innerHTML = tooltipObj;
+  }
+
+  function size(){
+    tipPopup.style.width = params.width + "px";
+  }
+
+  function position(eventObj){
+    if(params.container){
+      params.parentOffset = WingateUtils.getPosition(params.container);
+      if(window.pageXOffset) params.parentOffset.x -= window.pageXOffset;
+      if(window.pageYOffset) params.parentOffset.y -= window.pageYOffset;
+    }
+    var pos = WingateUtils.getMousePosition(eventObj, window.top.document);
+    tipPopup.style.left = (pos.x + params.xOffset + params.parentOffset.x) + "px";
+    tipPopup.style.top = (pos.y + params.yOffset + params.parentOffset.y) + "px";
+  }
+
+  function setParams(input){
+    params = input || {};
+
+    if(params.type == null) params.type = "tooltip";
+    if(params.zIndex == null) params.zIndex = defaults.zIndex;
+    if(params.width == null) params.width = defaults.width;
+    if(params.xOffset == null) params.xOffset = defaults.xOffset;
+    if(params.yOffset == null) params.yOffset = defaults.yOffset;
+
+    if(params.container == null) params.parentOffset = {x:0, y:0};
+
+    if(params.type == "help" || params.type == "tooltip"){
+      params.xOffset += 5;
+      params.yOffset += 5;
+    }
+  }
+
+  init(e, p);
+}
+WingateUtils.ToolTip.Help = function (element, params){
+  this.tip = WingateUtils.ToolTip;
+  params = params || {};
+  params.type = "help";
+  this.tip(element, params);
+}
+
+
+WingateUtils.Widget = {};
+
+WingateUtils.Widget.QuickSearch = function (obj, p){
+
+  var element = WingateUtils.getElement(obj);
+  var params = p || {};
+
+  this.BLANK_STRING = "Quick Search";
+  this.fadeColor = "#999";
+
+  this.remove = function(index){
+    var list = this.searchList, items = this.listItems;
+    var size = items.length;
+    for(var i=0; i<size; i++){
+      if(items[i].index == index){
+        list.removeChild(items[i]);
+        break;
+      }
+    }
+  }
+
+  this.catchInput = function(element){
+    try{
+      this.filterList(element.value.toLowerCase());
+    }
+    catch(err){ alert("Error: " + err); }
+  }
+
+  this.filterList = function(value){
+    var listItems = this.listItems;
+    var size = listItems.length;
+    for(var i=0; i<size; i++){
+      if(listItems[i].innerHTML.toLowerCase().indexOf(value) < 0) listItems[i].className = "hide";
+      else listItems[i].className = "";
+    }
+  }
+
+  this.inputElement = element.getElementsByTagName("input").item(0);
+  this.inputElement.owner = this;
+  this.inputElement.style.color = this.fadeColor;
+  this.inputElement.value = this.BLANK_STRING;
+  this.inputElement.onfocus = function(){
+    if(this.value == this.owner.BLANK_STRING){
+      this.value = "";
+      this.style.color = "#000";
+    }
+  }
+  this.inputElement.onblur = function(){
+    if(this.value == ""){
+      this.value = this.owner.BLANK_STRING;
+      this.style.color = this.owner.fadeColor;
+    }
+  }
+
+  this.inputElement.onkeyup = function(){
+    this.owner.catchInput(this);
+  }
+
+  var divElements = element.getElementsByTagName('div');
+  var size = divElements.length
+  for(var i=0; i<size; i++){
+    if(divElements.item(i).className == "wwSearchList"){
+      this.searchList = divElements.item(i);
+      break;
+    }
+  }
+  if(this.searchList == null){
+    alert("The search list could not be found");
+    return;
+  }
+  this.listItems = this.searchList.getElementsByTagName('div');
+
+  var listItems = this.listItems;
+  size = listItems.length;
+  for(var i=0; i<size; i++){
+    listItems[i].index = i;
+    listItems[i].onmouseover = function(){
+      this.className = "over";
+    }
+    listItems[i].onmouseout = function(){
+      this.className = "";
+    }
+    listItems[i].onclick = function(){
+      var index = this.index;
+      if(params.remove){
+        var parentElement = this.parentNode;
+        this.style.display = "none";
+      }
+      if(params.callBack != null){
+        var returnObj, inputs = this.getElementsByTagName('input');
+        if(inputs.length > 0){
+          var optionParams = new Object();
+          for(var i=0; input = inputs[i]; i++) params[input.name] = input.value;
+          returnObj = {id:this.id, index:index, obj:this, params:params};
+        }
+        else{
+          returnObj = {text:this.innerHTML, id:this.id, index:index, obj:this, params:params};
+        }
+        params.callBack(returnObj);
+      }
+    }
+  }
+}
+
+WingateUtils.Widget.MultiTier = function(elementId, p){
+  var thisObj = this;
+  var selects = new Array();
+  var params = p || {};
+
+  this.ajaxCallBack = function(stringArray){
+    var resultObj = getAjaxObject(stringArray);
+    if(resultObj.result == "success"){
+      revealTier(resultObj.nextSelect, resultObj.nextSelectOptions, resultObj);
+    }
+    else{
+      alert("Error: " + resultObj.result);
+    }
+  }
+
+  function getAjaxObject(stringArray){
+    var resultObj = {
+      result: stringArray[0][0].toLowerCase(),
+      hasChild: (stringArray[0][1].toLowerCase() == "true"),
+      nextSelect: stringArray[1][0],
+      nextSelectOptions: new Array(),
+      nextSelectContainerId: stringArray[1][1]
+    };
+    var size = stringArray.length;
+    for(var i=2; i<size; i++){
+      resultObj.nextSelectOptions.push({text:stringArray[i][0], id:stringArray[i][1]});
+    }
+    return resultObj;
+  }
+
+  function revealTier(objectId, optionsArray, altParams){
+    if(objectId != null){
+      var selectObj = document.getElementById(objectId);
+      selectObj.className = "";
+      if(altParams.nextSelectContainerId){
+        selectObj.container = document.getElementById(altParams.nextSelectContainerId);
+        selectObj.container.className = "";
+      }
+      selectObj.index = selects.push( selectObj )-1;
+      initSelect(selectObj, optionsArray, altParams);
+      return selectObj;
+    }
+    else return null;
+  }
+
+  function initSelect(selectObj, optionsArray, altParams){
+    if(optionsArray) appendOptions(selectObj, optionsArray);
+    if(altParams && altParams.hasChild){
+      selectObj.onkeyup = function(){ doChange(this) };
+      selectObj.onchange = function(){ doChange(this) };
+      if(selectObj.selectedIndex > 0){
+        doMultiTierAjax( selectObj.id, selectObj.options[selectObj.selectedIndex].id, thisObj.ajaxCallBack );
+      }
+    }
+  }
+
+  function doChange(selectObj){
+    hideChildSelects(selectObj);
+    if(selectObj.selectedIndex > 0){
+      doMultiTierAjax( selectObj.id, selectObj.options[selectObj.selectedIndex].id, thisObj.ajaxCallBack );
+    }
+  }
+
+  function appendOptions(selectObj, optionsArray){
+    if(selectObj == null) return;
+    var option, size = selectObj.options.length;
+    for(var i=1; i<size; i++) selectObj.remove(1);
+    size =  optionsArray.length;
+    for(var i=0; i<size; i++){
+      option = document.createElement('option');
+      option.id = optionsArray[i].id;
+      option.text = optionsArray[i].text;
+      try{
+        selectObj.add(option,null); // standards compliant
+      }
+      catch(ex){
+        selectObj.add(option); // IE only
+      }
+    }
+  }
+
+  function hideChildSelects(selectObj){
+    var size = selects.length, obj;
+    var start = selectObj.index + (selectObj.selectedIndex == 0? 1 : 2);
+    for(var i=start; i<size; i++){
+      obj = selects.pop()
+      if(obj.container) obj.container.className = "hide";
+      else obj.className = "hide";
+    }
+  }
+
+  var selectObj = document.getElementById(elementId);
+  selectObj.index = selects.length;
+  selects.push( selectObj );
+  initSelect(selects[0], null, {hasChild:true});
+
+}
+/* doMultiTierAjax() ----------------------------------
+ *  This function should be overloaded with a function
+ *  specific to the jsp the MultiTier is used on
+ */
+function doMultiTierAjax(selecter, optionId, callBack){
+  alert("Error, a doMultiTierAjax function is not defined.");
+}
+
+
+WingateUtils.MultiSelectList = function(tId, p){
+  var table = null, params;
+
+  function init(tableId, input){
+    table = document.getElementById(tableId);
+    if(table == null) throw "Could not find table '" + tableId + "'";
+
+    setParams(input);
+
+    var checkBox, row;
+    for(var i=0; row = table.rows[i]; i++){
+      mapNodes(row);
+
+      checkBox = document.createElement("input");
+      checkBox.type = "checkbox";
+      checkBox.name = params.name;
+      checkBox.style.display = "none";
+      row.checkBoxTd.appendChild(checkBox);
+      checkBox.checked = (row.checkBox.className == "checked");
+      checkBox.value = row.checkBox.name;
+      row.checkBox.inputField = checkBox;
+
+      row.onmouseover = function(){
+        this.className += "highlight";
+      }
+      row.onmouseout = function(){
+        this.className = this.className.replace("highlight","");
+      }
+      row.onclick = function(){
+        if(this.checkBox.className == "checked"){
+          this.checkBox.className = "unchecked";
+          this.checkBox.inputField.checked = false;
+        }
+        else{
+          this.checkBox.className = "checked";
+          this.checkBox.inputField.checked = true;
+        }
+      }
+    }
+  }
+
+  function setParams(input){
+    params = input || {};
+  }
+
+  function mapNodes(row){
+    row.checkBoxTd = row.cells[0];
+    row.checkBox = row.checkBoxTd.getElementsByTagName('img').item(0);
+  }
+
+  init(tId, p);
+}
+
+WingateUtils.Widget.SelectiveSearch = function (element, sO, p){
+  var defaults = {
+    searchType: "",
+    fadeColor: "#aaa",
+    activeColor: "#000"
+  }
+  var tableContainer = WingateUtils.getElement(element);
+  var searchOptionsId = sO;
+  var formElement = null;
+  var params = p || {};
+  var inputElement = null;
+  var searchType = "";
+  var options = new Object();
+  var searchButton = null;
+  var optionsDiv = null;
+  var thisObj = this;
+
+  if(!params.fadeColor) params.fadeColor = defaults.fadeColor;
+  if(!params.activeColor) params.activeColor = defaults.activeColor;
+  if(!params.searchType) params.searchType = defaults.searchType;
+
+  this.setInput = function( newPhrase, evalStr ){
+    inputElement.value = newPhrase;
+    inputElement.evalString = evalStr;
+    inputElement.hasPhrase = true;
+  }
+
+  this.setSearchType = function( newType ){
+    options.button.className = newType;
+    searchType.value = newType;
+  }
+
+  function init(){
+    inputElement = tableContainer.getElementsByTagName('input').item(0);
+    options.td = tableContainer.getElementsByTagName('td').item(0);
+    options.button = tableContainer.getElementsByTagName('a').item(0);
+    searchButton = document.getElementById('wwSearchButton');
+    searchType = document.createElement('input');
+    searchType.name = "type";
+    searchType.type = "hidden";
+    searchType.value = params.searchType;
+    optionsDiv = getOptionsElement();
+    tableContainer.rows[0].cells[0].appendChild(searchType);
+    formElement = inputElement.form;
+
+    inputElement.onblur = function(){
+      if(!this.hasPhrase){
+        this.value = this.blankString;
+        this.style.color = params.fadeColor;
+      }
+      this.blur();
+    }
+    inputElement.onfocus = function(){
+      if(!this.hasPhrase){
+        this.value = "";
+      }
+      this.style.color = params.activeColor;
+    }
+    inputElement.onkeyup = function(){
+      this.evalString = null;
+      this.hasPhrase = (this.value.replace(/ /g,"").length > 0);
+    }
+    inputElement.hasPhrase = (inputElement.value.length > 0);
+    inputElement.onblur();
+
+    options.button.onclick = function(){ revealOptions(); }
+    searchButton.onclick = function(){
+      if(inputElement.evalString){
+        alert(inputElement.evalString);
+        //eval(inputElement.evalString);
+      }
+      else if(inputElement.hasPhrase) formElement.submit();
+
+    }
+
+  }
+
+  function getFormElement(element){
+    var formObj = element;
+
+    while(formObj.tagName.toLowerCase() != "form" && formObj.nodeType != 9) formObj = formObj.parentNode;
+
+    if(formObj.nodeType == 9){
+      alert('Could not find form element');
+      return null;
+    }
+    else return formObj;
+  }
+
+  function revealOptions(){
+    var position = WingateUtils.getPosition(tableContainer);
+    optionsDiv.style.left = (position.x - 1) + "px";
+    optionsDiv.style.top = (position.y + tableContainer.offsetHeight) + "px";
+    optionsDiv.style.display = "block";
+
+    document.body.onmouseup = function(){
+      if(!optionsDiv.active) hideOptions();
+    }
+  }
+
+  function hideOptions(){
+    optionsDiv.style.display = "none";
+    document.body.onmouseup = null;
+  }
+
+  function getOptionsElement(){
+    var divObj = null;
+    if(searchOptionsId != null) divObj = WingateUtils.getElement(searchOptionsId);
+    else alert('No options element defined');
+
+    var linksArray = divObj.getElementsByTagName('a');
+    var size = linksArray.length;
+    for(var i=0; i<size; i++){
+      linksArray[i].span = document.createElement('span');
+      linksArray[i].span.appendChild(linksArray[i].childNodes[1]);
+      if(linksArray[i].className.indexOf(' selected') > 0){
+        options.selected = linksArray[i];
+        options.selected.span.className = "selected";
+        linksArray[i].className = linksArray[i].className.replace(" selected","");
+        thisObj.setSearchType(linksArray[i].className);
+        inputElement.blankString = params.blankPhrase || linksArray[i].span.innerHTML;
+      }
+      linksArray[i].appendChild(linksArray[i].span);
+
+      linksArray[i].onclick = function(){
+        thisObj.setSearchType(this.className);
+        options.selected.span.className = "";
+        options.selected = this;
+        this.span.className = "selected";
+        inputElement.blankString = params.blankPhrase || this.span.innerHTML;
+        inputElement.focus();
+        hideOptions();
+      }
+    }
+
+    divObj.onmouseover = function(){
+      this.active = true;
+    }
+    divObj.onmouseout = function(){
+      this.active = false;
+    }
+
+    return divObj;
+  }
+
+  init();
+}
+
+WingateUtils.DragDrop = function(){
+//  WingateUtils.addEventListener("onload", initDragDrop);
+  document.onmouseup = dragDropMouseUp;
+  document.onmousemove = dragDropMouseMove;
+  var currDragObj = null;
+  var dropSpot = null;
+  var currMouseOffset = null;
+  var dropContainerQueue = new Array();
+  var dragFlag = false;
+  var wwOnDrag = null;
+  var wwOnDrop = null;
+
+  this.queue = dropContainerQueue;
+
+  WingateUtils.addEventListener("onload", function(){
+    dropSpot = document.createElement("div");
+    dropSpot.id = "dragDropSpot";
+    document.body.appendChild(dropSpot);
+    dropSpot.display = "none";
+  });
+
+  /*** fired on mouse up ***/
+  function dragDropMouseUp(e){
+    if (currDragObj) {
+      e = e ? e : window.event;
+      var mousePos = WingateUtils.getMousePosition(e);
+
+      for (var i = 0; i < dropContainerQueue.length; i++) {
+        var dropCon = dropContainerQueue[i];
+        try{ dropCon.object.insertBefore(currDragObj, dropSpot); } catch(err){}
+      }
+
+      if(wwOnDrop) wwOnDrop(currDragObj, currDragObj.parentNode);
+      dropSpot.style.display = "none";
+      currDragObj.style.position = "static";
+      currDragObj.style.top = "";
+      currDragObj.style.left = "";
+      currDragObj.style.width = "";
+      currDragObj.style.height = "";
+      currDragObj.style.opacity = "";
+
+      currDragObj = null;
+    }
+  }
+
+  this.addDropContainer = function(obj){
+  	dropContainerQueue.push(new dropContainer(obj));
+  }
+
+  function dropContainer(obj){
+    //need to figure out how to check for scroll, & parent in frame
+    var pos = WingateUtils.getPosition(obj, true);
+  	this.x = pos.x;
+  	this.y = pos.y;
+  	this.width = obj.offsetWidth;
+  	this.height = obj.offsetHeight;
+  	this.object = obj;
+  }
+
+  /*** fired when mouse is moved ***/
+  function dragDropMouseMove(e){
+  	e = e ? e : window.event;
+  	var mousePos = WingateUtils.getMousePosition(e);
+
+  	if(currDragObj){
+      // position the drag object
+  		currDragObj.style.position = "absolute";
+  		currDragObj.style.top = (mousePos.y - currMouseOffset.y - currDragObj.parentNode.scrollTop) + "px";
+  		currDragObj.style.left = (mousePos.x - currMouseOffset.x - currDragObj.parentNode.scrollLeft) + "px";
+
+      // position dropSpot
+      var dropCon = null;
+      for(var i = 0; i < dropContainerQueue.length; i++) {
+        dropCon = dropContainerQueue[i];
+        if(mouseOverDropZone(mousePos, dropCon)){
+          var dropConChildren = dropCon.object.childNodes;
+          if(dropConChildren.length == 0){
+            dropCon.object.appendChild(dropSpot);
+            dropSpot.style.display = "block";
+          }
+          else {
+            for(var j = 0; j < dropConChildren.length; j++){
+              var child = dropConChildren[j];
+              var childPos = {
+                x: WingateUtils.getPosition(dropConChildren[j]).x,
+                y: WingateUtils.getPosition(dropConChildren[j]).y,
+                width: dropConChildren[j].offsetWidth,
+                height: dropConChildren[j].offsetHeight
+              };
+              //if the mouse is above the child, insert the dropspot above the child
+              if((mousePos.y - 10) < (childPos.y - dropCon.object.scrollTop) && child != currDragObj){
+                dropCon.object.insertBefore(dropSpot, child);
+                dropSpot.style.display = "block";
+                break;
+              }
+            }
+            //if it's the last child, append the dropspot to the drop container
+            if(j == dropConChildren.length && dropConChildren[j] != currDragObj){
+              dropCon.object.appendChild(dropSpot);
+              dropSpot.style.display = "block";
+            }
+          }
+        }
+        dropCon.width = dropCon.object.offsetWidth;
+        dropCon.height = dropCon.object.offsetHeight;
+      }
+
+      // dragFlag indicates element was just picked up, positions dropSpot where element used to be
+      if (dragFlag) {
+        currDragObj.parentNode.insertBefore(dropSpot, currDragObj);
+        dragFlag = false;
+      }
+
+  		return false;
+  	}
+  }
+
+  /*** shows if mouse is over the specified drop zone ***/
+  function mouseOverDropZone(mousePos, dropCon){
+    return (mousePos.x > dropCon.x && mousePos.x < dropCon.x + dropCon.width && mousePos.y > dropCon.y && mousePos.y < dropCon.y + dropCon.height) ? true : false;
+  }
+
+  /*** gets mouse offset from draggable object ***/
+  function getMouseOffset(obj, e){
+  	e = e ? e : window.event;
+  	var objPos = WingateUtils.getPosition(obj);
+  	var mousePos = WingateUtils.getMousePosition(e);
+
+  	return {x:mousePos.x - objPos.x, y:mousePos.y - objPos.y};
+  }
+
+  /*** creates the drag object ***/
+  this.makeDragObject = function(obj, p){
+  	if(!obj) return;
+
+    var params = p;
+    if (params) {
+      if (!params.handle) params.handle = obj;
+      if (params.ondrag) wwOnDrag = params.ondrag;
+      if (params.ondrop) wwOnDrop = params.ondrop;
+    } else {
+      params = new Object();
+      params.handle = obj;
+    }
+
+    params.handle.obj = obj;
+  	params.handle.onmousedown = function(e){
+      dragFlag = true;
+  		currDragObj = this.obj;
+      currDragObj.style.width = this.obj.offsetWidth + "px";
+      dropSpot.style.width = this.obj.offsetWidth + "px";
+      currDragObj.style.height = this.obj.offsetHeight + "px";
+      dropSpot.style.height = this.obj.offsetHeight + "px";
+  		currMouseOffset = getMouseOffset(currDragObj, e);
+
+      //passing currDragObj & currContainer back
+      if(wwOnDrag) wwOnDrag(currDragObj, currDragObj.parentNode);
+
+      //position initial dropspot
+      if (currDragObj.parentNode.childNodes.length > 1) {
+        currDragObj.parentNode.insertBefore(dropSpot, currDragObj.nextSibling);
+      }
+      else {
+        currDragObj.parentNode.appendChild(dropSpot);
+      }
+
+  		return false;
+  	}
+  }
+}
+
+WingateUtils.DropDown = function(id, title, optionList, p){
+  var dObj, parentId, formElement, params;
+  var paddingOffset = 10;
+
+  function init(){
+    try{
+      if(p && p.docObj) docObj = p.docObj;
+      else docObj = document;
+      setParams();
+      if(params.parentElement == null){
+        parentId = "dd" + id;
+        document.write('<span id="' + parentId + '"></span>');
+        WingateUtils.addEventListener("onload", postOnloadInit);
+      }
+      else{
+        parentId = params.parentElement;
+        postOnloadInit();
+      }
+
+    }
+    catch(err){ alert(err); }
+  }
+
+  function postOnloadInit(){
+    try{
+      dObj = docObj.getElementById(parentId);
+
+      formElement = docObj.createElement('input');
+      formElement.setAttribute('name', id);
+      formElement.setAttribute('id', 'hidden' + id);
+      formElement.setAttribute('type', 'hidden');
+      dObj.parentNode.insertBefore(formElement, dObj);
+
+      dObj.div = docObj.createElement('div');
+      dObj.div.defaultClass = "wwDropDownSelect";
+      dObj.div.className = dObj.div.defaultClass;
+      dObj.div.textNode = docObj.createTextNode(title);
+      dObj.div.appendChild(dObj.div.textNode);
+      dObj.appendChild(dObj.div);
+
+      dObj.optionsDiv = docObj.createElement('div');
+      dObj.optionsDiv.className = "wwDropDownOptions";
+      createOptions(optionList);
+      docObj.body.appendChild(dObj.optionsDiv);
+      dObj.optionsDiv.style.visibility = "hidden";
+      dObj.optionsDiv.style.display = "block";
+      var width = dObj.div.offsetWidth;
+      if(width < dObj.optionsDiv.offsetWidth){
+        width = dObj.optionsDiv.offsetWidth;
+      }
+      dObj.div.style.width = width + "px";
+      dObj.optionsDiv.style.width = (width + paddingOffset) + "px";
+      dObj.optionsDiv.style.display = "none";
+      dObj.optionsDiv.style.visibility = "visible";
+
+      initActions();
+    }
+    catch(err){ alert(err); }
+  }
+
+  function setParams(){
+    params = p || {};
+  }
+
+  function initActions(){
+    dObj.div.onclick = showOptions;
+    dObj.div.onmouseover = function(){
+      this.className = "wwDropDownSelect-active";
+    }
+    dObj.div.onmouseout = function(){
+      this.className = "wwDropDownSelect";
+    }
+    dObj.optionsDiv.onmouseover = function(){
+      this.isOver = true;
+    }
+    dObj.optionsDiv.onmouseout = function(){
+      this.isOver = false;
+    }
+  }
+
+  this.getValue = function(){
+    return formElement.value;
+  }
+
+  this.setOptions = function(optionsArray){
+    while(dObj.optionsDiv.firstChild) dObj.optionsDiv.removeChild(dObj.optionsDiv.firstChild);
+    createOptions(optionsArray);
+  }
+
+  function createOptions(optionsArray){
+    for(var i=0, opt, optTag; opt = optionsArray[i]; i++){
+      optTag = docObj.createElement('a');
+      optTag.className = opt.className;
+      optTag.href = "javascript:void(0);";
+      optTag.value = (opt.value) ? opt.value : opt.text;
+      if(opt.selected && opt.selected == true){
+        dObj.div.textNode.nodeValue = opt.text;
+        dObj.div.className = dObj.div.defaultClass + " " + opt.className;
+        formElement.value = optTag.value;
+      }
+      optTag.action = opt.action;
+      optTag.textNode = docObj.createTextNode(opt.text);
+      optTag.optType = opt.type;
+      optTag.onclick = function(){
+        if(this.action) this.action(this.value);
+        formElement.value = this.value;
+        dObj.div.textNode.nodeValue = this.textNode.nodeValue;
+        hideOptions(true);
+      }
+      optTag.appendChild(optTag.textNode);
+      dObj.optionsDiv.appendChild(optTag);
+    }
+  }
+
+  function showOptions(){
+    var pos = WingateUtils.getPosition(dObj.div);
+    dObj.optionsDiv.style.top = (pos.y + dObj.div.offsetHeight) + "px";
+    dObj.optionsDiv.style.left = pos.x + "px";
+    dObj.optionsDiv.style.display = "block";
+    docObj.body.onmouseup = hideOptions;
+  }
+
+  function hideOptions(forceClose){
+    if(forceClose || !dObj.optionsDiv.isOver){
+      dObj.optionsDiv.style.display = "none";
+      docObj.body.onmouseup = null;
+    }
+  }
+
+  init();
+}
+
+
+WindowManager = function(){
+
+  var blockerStartOpacity = 55;
+  var hideOverflow = true;
+  var useFade = true;
+  var pageFrames = null;
+  var baseIndex = 9000;
+
+  function push(windowObj, element){
+    if(windowObj.index == null){
+      windowObj.index = windowObj.elements.length;
+      windowObj.elements.push(new Array());
+    }
+    var elementIndex = windowObj.index+"."+windowObj.elements[windowObj.index].length;
+    windowObj.elements[windowObj.index].push(element);
+    return elementIndex;
+  }
+  function pop(windowObj){
+    return windowObj.elements[windowObj.index].pop();
+  }
+
+  this.addPopup = addPopup;
+  this.removePopup = removePopup;
+  this.closeCurrentPopup = closeCurrentPopup;
+  function addPopup(windowObj, element){
+    if(windowObj.blocker == null){
+      windowObj.blocker = windowObj.document.createElement("div");
+      windowObj.blocker.id = "wwPopupFadeLayer";
+      windowObj.document.body.appendChild(windowObj.blocker);
+      windowObj.prevOverflow = windowObj.document.body.style.overflow || "auto";
+      pageFrames = windowObj.document.getElementsByTagName("iframe");
+      windowObj.elements = new Array();
+    }
+    if(windowObj.elements.length == 0 || windowObj.elements[windowObj.index].length == 0){
+      /*if(pageFrames.length > 0){
+        var size = pageFrames.length;
+        element.hasFrame = (element.getElementsByTagName("iframe").length > 0);
+        for(var i=0; i<size; i++){
+          if(!element.hasFrame || this.pageFrames[i] != element.getElementsByTagName("iframe").item(0)){
+            this.hideScroll(this.pageFrames[i], this.pageFrames[i].contentDocument);
+            this.pageFrames[i].isHidden = true;
+          }
+        }
+      }*/
+      WingateUtils.addEventListener("onresize", function(){ sizeBlocker(windowObj); }, windowObj);
+      var dim = WingateUtils.getPageDimensions(windowObj);
+      if(hideOverflow) windowObj.document.body.style.overflow = "hidden";
+      windowObj.blocker.style.width = dim.width + "px";
+      windowObj.blocker.style.height = dim.height + "px";
+      if(useFade){
+        WingateUtils.setOpacity(windowObj.blocker, 1);
+        windowObj.blocker.style.display = "block";
+        WingateUtils.Effects.fade(windowObj.blocker, blockerStartOpacity, {interval:2});
+      }
+      else{
+        windowObj.blocker.style.display = "block";
+        WingateUtils.setOpacity(windowObj.blocker, blockerStartOpacity);
+      }
+      if(hideOverflow) windowObj.scrollTo(dim.scroll.x, dim.scroll.y);
+
+    }
+
+    element.style.zIndex = getNextIndex();
+    windowObj.blocker.style.zIndex = parseInt(element.style.zIndex)-1;
+
+    push(windowObj, element);
+  }
+
+  function sizeBlocker(windowObj){
+    var dim = WingateUtils.getPageDimensions(windowObj);
+    windowObj.blocker.style.width = dim.width + "px";
+    windowObj.blocker.style.height = dim.height + "px";
+  }
+
+  function getNextIndex(){
+    baseIndex += 2;
+    return baseIndex;
+  }
+  function closeCurrentPopup(windowObj){
+    var element = windowObj.elements[windowObj.index][windowObj.elements.length-1];
+    element.thisPopup.close();
+    //removePopup(windowObj);
+  }
+
+  function removePopup(windowObj){
+    pop(windowObj);
+    if(windowObj.elements[windowObj.index].length == 0){
+      if(useFade) WingateUtils.Effects.fadeOut(windowObj.blocker, {fadeFrom:blockerStartOpacity, interval:10, setDiplayNone:true});
+      else windowObj.blocker.style.display = "none";
+      if(hideOverflow) windowObj.document.body.style.overflow = windowObj.prevOverflow;
+      var size = pageFrames.length;
+      /*for(var i=0; i<size; i++){
+        if(this.pageFrames[i].isHidden){
+          this.showScroll(this.pageFrames[i], this.pageFrames[i].contentDocument);
+          this.pageFrames[i].isHidden = false;
+        }
+      }*/
+    }
+    else{
+      showNext(windowObj);
+    }
+  }
+
+  function hideScroll(winObj, docObj){
+    winObj.scroll = WingateUtils.getScroll(winObj);
+    winObj.prevOverflow = docObj.body.style.overflow || "auto";
+    docObj.body.style.overflow = "hidden";
+  }
+
+  function showScroll(winObj, docObj){
+    docObj.body.style.overflow = winObj.prevOverflow;
+    if(winObj.scrolling) winObj.scrollTo(winObj.scroll.x, winObj.scroll.y);
+  }
+
+  function getElement( elementIndex ){
+    elementIndex = elementIndex.split(".");
+    return windowObj.elements[parseInt(elementIndex[0])][parseInt(elementIndex[1])];
+  }
+
+  function showNext(windowObj){
+    var nextElement = windowObj.elements[windowObj.index][windowObj.elements[windowObj.index].length-1];
+    nextElement.style.zIndex = parseInt(windowObj.blocker.style.zIndex)+1;
+  }
+}
+
+if(window != top){
+  WingateUtils.Effects = top.WingateUtils.Effects;
+  WingateUtils.WindowManager = top.WingateUtils.WindowManager;
+ }
+else{
+  WingateUtils.WindowManager = new WindowManager();
+}

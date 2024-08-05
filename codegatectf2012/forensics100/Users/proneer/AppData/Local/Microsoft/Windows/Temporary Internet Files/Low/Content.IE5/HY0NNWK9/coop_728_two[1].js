@@ -1,0 +1,480 @@
+if(document.location.href=='http://www.brothersoft.com/download-frostwire-62030.html'){
+	    document.writeln('<script type="text/javascript"><!--');
+		document.writeln('google_ad_client = "pub-4067176986847577";');
+		document.writeln('/* BSCDP-frostwire-728,09-8-19 */');
+		document.writeln('google_ad_slot = "9208621096";');
+		document.writeln('google_ad_width = 728;');
+		document.writeln('google_ad_height = 90;');
+		document.writeln('//-->');
+		document.writeln('</script>');
+		document.writeln('<script type="text/javascript"');
+		document.writeln('src="http://pagead2.googlesyndication.com/pagead/show_ads.js">');
+		document.writeln('</script>');
+}else if(document.location.href=='http://www.brothersoft.com/download-photoscape-64064.html'){
+		document.writeln('<script type="text/javascript"><!--');
+		document.writeln('google_ad_client = "pub-4067176986847577";');
+		document.writeln('/* BSCDP-photoscape-728,09-8-19 */');
+		document.writeln('google_ad_slot = "9674596004";');
+		document.writeln('google_ad_width = 728;');
+		document.writeln('google_ad_height = 90;');
+		document.writeln('//-->');
+		document.writeln('</script>');
+		document.writeln('<script type="text/javascript"');
+		document.writeln('src="http://pagead2.googlesyndication.com/pagead/show_ads.js">');
+		document.writeln('</script>');
+
+}else if(document.location.href=='http://www.brothersoft.com/download-vdownloader-62293.html'){
+		document.writeln('<script type="text/javascript"><!--');
+		document.writeln('google_ad_client = "pub-4067176986847577";');
+		document.writeln('/* BSCDP-vdownloader-728,09-9-1 */');
+		document.writeln('google_ad_slot = "2009751891";');
+		document.writeln('google_ad_width = 728;');
+		document.writeln('google_ad_height = 90;');
+		document.writeln('//-->');
+		document.writeln('</script>');
+		document.writeln('<script type="text/javascript"');
+		document.writeln('src="http://pagead2.googlesyndication.com/pagead/show_ads.js">');
+		document.writeln('</script>');
+}else if(document.location.href=='http://www.brothersoft.com/download-fl-studio-66439.html'){
+		document.writeln('<script type="text/javascript"><!--');
+		document.writeln('google_ad_client = "pub-4067176986847577";');
+		document.writeln('/* BSCDP-flstudio-728,09-9-4 */');
+		document.writeln('google_ad_slot = "7080748777";');
+		document.writeln('google_ad_width = 728;');
+		document.writeln('google_ad_height = 90;');
+		document.writeln('//-->');
+		document.writeln('</script>');
+		document.writeln('<script type="text/javascript"');
+		document.writeln('src="http://pagead2.googlesyndication.com/pagead/show_ads.js">');
+		document.writeln('</script>');
+
+}else if(document.location.href=='http://www.brothersoft.com/download-gom-player-220181.html'){
+		document.writeln('<script type="text/javascript"><!--');
+		document.writeln('google_ad_client = "pub-4067176986847577";');
+		document.writeln('/* BSCDP-GOMPlayer-728,09-9-11 */');
+		document.writeln('google_ad_slot = "9259035227";');
+		document.writeln('google_ad_width = 728;');
+		document.writeln('google_ad_height = 90;');
+		document.writeln('//-->');
+		document.writeln('</script>');
+		document.writeln('<script type="text/javascript"');
+		document.writeln('src="http://pagead2.googlesyndication.com/pagead/show_ads.js">');
+		document.writeln('</script>');
+}else if(document.location.href=='http://www.brothersoft.com/download-sopcast-66299.html'){
+		document.writeln('<script type="text/javascript"><!--');
+		document.writeln('google_ad_client = "pub-4067176986847577";');
+		document.writeln('/* BSCDP-sopcast-728,09-9-29 */');
+		document.writeln('google_ad_slot = "0559717596";');
+		document.writeln('google_ad_width = 728;');
+		document.writeln('google_ad_height = 90;');
+		document.writeln('//-->');
+		document.writeln('</script>');
+		document.writeln('<script type="text/javascript"');
+		document.writeln('src="http://pagead2.googlesyndication.com/pagead/show_ads.js">');
+		document.writeln('</script>');
+}else if(document.location.href=='http://www.brothersoft.com/download-your-uninstaller-2008-12867.html' || document.location.href=='http://www.brothersoft.com/download-startup-faster-28252.html' || document.location.href=='http://www.brothersoft.com/download-boost-windows-273517.html' || document.location.href=='http://www.brothersoft.com/download-capture--send-68329.html'){
+		document.writeln('<script type="text/javascript"><!--');
+		document.writeln('google_ad_client = "pub-4067176986847577";');
+		document.writeln('/* BSCDP-ursoftware-728,09-9-29 */');
+		document.writeln('google_ad_slot = "7755217065";');
+		document.writeln('google_ad_width = 728;');
+		document.writeln('google_ad_height = 90;');
+		document.writeln('//-->');
+		document.writeln('</script>');
+		document.writeln('<script type="text/javascript"');
+		document.writeln('src="http://pagead2.googlesyndication.com/pagead/show_ads.js">');
+		document.writeln('</script>');
+}else if(document.location.href=='http://www.brothersoft.com/download-smart-defrag-52392.html'){
+		document.writeln('<script type="text/javascript"><!--');
+		document.writeln('google_ad_client = "pub-4067176986847577";');
+		document.writeln('/* BSCDP-smartdefrag-728,09-10-13 */');
+		document.writeln('google_ad_slot = "3850724849";');
+		document.writeln('google_ad_width = 728;');
+		document.writeln('google_ad_height = 90;');
+		document.writeln('//-->');
+		document.writeln('</script>');
+		document.writeln('<script type="text/javascript"');
+		document.writeln('src="http://pagead2.googlesyndication.com/pagead/show_ads.js">');
+		document.writeln('</script>');
+
+}else if(document.location.href=='http://www.brothersoft.com/download-jdownloader-171166.html'){
+		document.writeln('<script type="text/javascript"><!--');
+		document.writeln('google_ad_client = "pub-4067176986847577";');
+		document.writeln('/* BSCDP-jdownloader-728,09-10-14 */');
+		document.writeln('google_ad_slot = "6295936274";');
+		document.writeln('google_ad_width = 728;');
+		document.writeln('google_ad_height = 90;');
+		document.writeln('//-->');
+		document.writeln('</script>');
+		document.writeln('<script type="text/javascript"');
+		document.writeln('src="http://pagead2.googlesyndication.com/pagead/show_ads.js">');
+		document.writeln('</script>');
+}else if(document.location.href=='http://www.brothersoft.com/download-ie7pro-54469.html'){
+		document.writeln('<script type="text/javascript"><!--');
+		document.writeln('google_ad_client = "pub-4067176986847577";');
+		document.writeln('/* BSCDP-ie7pro-728,09-10-27 */');
+		document.writeln('google_ad_slot = "8656652128";');
+		document.writeln('google_ad_width = 728;');
+		document.writeln('google_ad_height = 90;');
+		document.writeln('//-->');
+		document.writeln('</script>');
+		document.writeln('<script type="text/javascript"');
+		document.writeln('src="http://pagead2.googlesyndication.com/pagead/show_ads.js">');
+		document.writeln('</script>');
+}else if(document.location.href=='http://www.brothersoft.com/download-mediacoder-62194.html'){
+		document.writeln('<script type="text/javascript"><!--');
+		document.writeln('google_ad_client = "pub-4067176986847577";');
+		document.writeln('/* BSCDP-mediacoder-728,09-11-2 */');
+		document.writeln('google_ad_slot = "1297523752";');
+		document.writeln('google_ad_width = 728;');
+		document.writeln('google_ad_height = 90;');
+		document.writeln('//-->');
+		document.writeln('</script>');
+		document.writeln('<script type="text/javascript"');
+		document.writeln('src="http://pagead2.googlesyndication.com/pagead/show_ads.js">');
+		document.writeln('</script>');
+}else if(document.location.href=='http://www.brothersoft.com/download-editplus-16751.html'){
+		document.writeln('<script type="text/javascript"><!--');
+		document.writeln('google_ad_client = "pub-4067176986847577";');
+		document.writeln('/* BSCDP-Editplus-728, 09-11-10 */');
+		document.writeln('google_ad_slot = "1111655488";');
+		document.writeln('google_ad_width = 728;');
+		document.writeln('google_ad_height = 90;');
+		document.writeln('//-->');
+		document.writeln('</script>');
+		document.writeln('<script type="text/javascript"');
+		document.writeln('src="http://pagead2.googlesyndication.com/pagead/show_ads.js">');
+		document.writeln('</script>');
+}else if(document.location.href=='http://www.brothersoft.com/download-3gp-player-76097.html'){
+		document.writeln('<script type="text/javascript"><!--');
+		document.writeln('google_ad_client = "pub-4067176986847577";');
+		document.writeln('/* BSCDP-3gpplayer-728,09-11-16 */');
+		document.writeln('google_ad_slot = "0882634638";');
+		document.writeln('google_ad_width = 728;');
+		document.writeln('google_ad_height = 90;');
+		document.writeln('//-->');
+		document.writeln('</script>');
+		document.writeln('<script type="text/javascript"');
+		document.writeln('src="http://pagead2.googlesyndication.com/pagead/show_ads.js">');
+		document.writeln('</script>');
+}else if(document.location.href=='http://www.brothersoft.com/download-digsby-110655.html'){
+		document.writeln('<script type="text/javascript"><!--');
+		document.writeln('google_ad_client = "pub-4067176986847577";');
+		document.writeln('/* BSCDP-Digsby-728,09-11-19 */');
+		document.writeln('google_ad_slot = "2418795371";');
+		document.writeln('google_ad_width = 728;');
+		document.writeln('google_ad_height = 90;');
+		document.writeln('//-->');
+		document.writeln('</script>');
+		document.writeln('<script type="text/javascript"');
+		document.writeln('src="http://pagead2.googlesyndication.com/pagead/show_ads.js">');
+		document.writeln('</script>');
+}else if(document.location.href=='http://www.brothersoft.com/download-izarc-23348.html'){
+		document.writeln('<script type="text/javascript"><!--');
+		document.writeln('google_ad_client = "pub-4067176986847577";');
+		document.writeln('/* BSCDP-izarc-728, created 12/7/09 */');
+		document.writeln('google_ad_slot = "7793911428";');
+		document.writeln('google_ad_width = 728;');
+		document.writeln('google_ad_height = 90;');
+		document.writeln('//-->');
+		document.writeln('</script>');
+		document.writeln('<script type="text/javascript"');
+		document.writeln('src="http://pagead2.googlesyndication.com/pagead/show_ads.js">');
+		document.writeln('</script>');
+}else if(document.location.href=='http://www.brothersoft.com/download-allplayer-15612.html'){
+		document.writeln('<script type="text/javascript"><!--');
+		document.writeln('google_ad_client = "pub-4067176986847577";');
+		document.writeln('/* BSCDP-allplayer-728,09-12-14 */');
+		document.writeln('google_ad_slot = "4240952274";');
+		document.writeln('google_ad_width = 728;');
+		document.writeln('google_ad_height = 90;');
+		document.writeln('//-->');
+		document.writeln('</script>');
+		document.writeln('<script type="text/javascript"');
+		document.writeln('src="http://pagead2.googlesyndication.com/pagead/show_ads.js">');
+		document.writeln('</script>');
+}else if(document.location.href=='http://www.brothersoft.com/download-little-fighter-2-65984.html'){
+		document.writeln('<script type="text/javascript"><!--');
+		document.writeln('google_ad_client = "pub-4067176986847577";');
+		document.writeln('/* BSCDP-LittleFighter-728,09-7-27 */');
+		document.writeln('google_ad_slot = "2505490921";');
+		document.writeln('google_ad_width = 728;');
+		document.writeln('google_ad_height = 90;');
+		document.writeln('//-->');
+		document.writeln('</script>');
+		document.writeln('<script type="text/javascript"');
+		document.writeln('src="http://pagead2.googlesyndication.com/pagead/show_ads.js">');
+		document.writeln('</script>');
+}else if(document.location.href=='http://www.brothersoft.com/download-izarc-command-line-add-on-281169.html'){
+		document.writeln('<script type="text/javascript"><!--');
+		document.writeln('google_ad_client = "pub-4067176986847577";');
+		document.writeln('/* BSCDP-izarc-728, created 12/7/09 */');
+		document.writeln('google_ad_slot = "7793911428";');
+		document.writeln('google_ad_width = 728;');
+		document.writeln('google_ad_height = 90;');
+		document.writeln('//-->');
+		document.writeln('</script>');
+		document.writeln('<script type="text/javascript"');
+		document.writeln('src="http://pagead2.googlesyndication.com/pagead/show_ads.js">');
+		document.writeln('</script>');
+}else if(document.location.href=='http://www.brothersoft.com/download-izarc2go-64328.html'){
+		document.writeln('<script type="text/javascript"><!--');
+		document.writeln('google_ad_client = "pub-4067176986847577";');
+		document.writeln('/* BSCDP-izarc-728, created 12/7/09 */');
+		document.writeln('google_ad_slot = "7793911428";');
+		document.writeln('google_ad_width = 728;');
+		document.writeln('google_ad_height = 90;');
+		document.writeln('//-->');
+		document.writeln('</script>');
+		document.writeln('<script type="text/javascript"');
+		document.writeln('src="http://pagead2.googlesyndication.com/pagead/show_ads.js">');
+		document.writeln('</script>');
+}else if(document.location.href=='http://www.brothersoft.com/download-unlocker-208761.html'){
+		document.writeln('<script type="text/javascript"><!--');
+		document.writeln('google_ad_client = "pub-4067176986847577";');
+		document.writeln('/* BSCDP-unlocker-728,10-1-26 */');
+		document.writeln('google_ad_slot = "3749664541";');
+		document.writeln('google_ad_width = 728;');
+		document.writeln('google_ad_height = 90;');
+		document.writeln('//-->');
+		document.writeln('</script>');
+		document.writeln('<script type="text/javascript"');
+		document.writeln('src="http://pagead2.googlesyndication.com/pagead/show_ads.js">');
+		document.writeln('</script>');
+}else if(document.location.href=='http://www.brothersoft.com/download-hotspot-shield-49569.html'){
+		document.writeln('<script type="text/javascript"><!--');
+		document.writeln('google_ad_client = "pub-4067176986847577";');
+		document.writeln('/* BSCDP-hotspotshield-728 ,10-1-27 */');
+		document.writeln('google_ad_slot = "3821486403";');
+		document.writeln('google_ad_width = 728;');
+		document.writeln('google_ad_height = 90;');
+		document.writeln('//-->');
+		document.writeln('</script>');
+		document.writeln('<script type="text/javascript"');
+		document.writeln('src="http://pagead2.googlesyndication.com/pagead/show_ads.js">');
+		document.writeln('</script>');
+}else if(document.location.href=='http://www.brothersoft.com/download-picpick-55932.html'){
+		document.writeln('<script type="text/javascript"><!--');
+		document.writeln('google_ad_client = "pub-4067176986847577";');
+		document.writeln('/* BSCDP-picpick-728,10-2-22 */');
+		document.writeln('google_ad_slot = "5612118192";');
+		document.writeln('google_ad_width = 728;');
+		document.writeln('google_ad_height = 90;');
+		document.writeln('//-->');
+		document.writeln('</script>');
+		document.writeln('<script type="text/javascript"');
+		document.writeln('src="http://pagead2.googlesyndication.com/pagead/show_ads.js">');
+		document.writeln('</script>');
+}else if(document.location.href=='http://www.brothersoft.com/download-orbit-downloader-54366.html'){
+		document.writeln('<script type="text/javascript"><!--');
+		document.writeln('google_ad_client = "pub-4067176986847577";');
+		document.writeln('/* BSCDP-orbit-728,10-3-2 */');
+		document.writeln('google_ad_slot = "4801238665";');
+		document.writeln('google_ad_width = 728;');
+		document.writeln('google_ad_height = 90;');
+		document.writeln('//-->');
+		document.writeln('</script>');
+		document.writeln('<script type="text/javascript"');
+		document.writeln('src="http://pagead2.googlesyndication.com/pagead/show_ads.js">');
+		document.writeln('</script>');
+}else if(document.location.href=='http://www.brothersoft.com/download-megacubo-300141.html'){
+		document.writeln('<script type="text/javascript"><!--');
+		document.writeln('google_ad_client = "pub-4067176986847577";');
+		document.writeln('/* BSCDP-megacubo-728,10-3-10 */');
+		document.writeln('google_ad_slot = "3780214113";');
+		document.writeln('google_ad_width = 728;');
+		document.writeln('google_ad_height = 90;');
+		document.writeln('//-->');
+		document.writeln('</script>');
+		document.writeln('<script type="text/javascript"');
+		document.writeln('src="http://pagead2.googlesyndication.com/pagead/show_ads.js">');
+		document.writeln('</script>');
+}else if(document.location.href=='http://www.brothersoft.com/download-vdownloader-346063.html'){
+		document.writeln('<script type="text/javascript"><!--');
+		document.writeln('google_ad_client = "pub-4067176986847577";');
+		document.writeln('/* BSCDP-vdownloader2-728,10-3-11 */');
+		document.writeln('google_ad_slot = "4414876278";');
+		document.writeln('google_ad_width = 728;');
+		document.writeln('google_ad_height = 90;');
+		document.writeln('//-->');
+		document.writeln('</script>');
+		document.writeln('<script type="text/javascript"');
+		document.writeln('src="http://pagead2.googlesyndication.com/pagead/show_ads.js">');
+		document.writeln('</script>');
+}else if(document.location.href=='http://www.brothersoft.com/download-need4-video-converter-153869.html'){
+		document.writeln('<script type="text/javascript"><!--');
+		document.writeln('google_ad_client = "pub-4067176986847577";');
+		document.writeln('/* BSCDP-need4-728,10-3-15 */');
+		document.writeln('google_ad_slot = "5089150902";');
+		document.writeln('google_ad_width = 728;');
+		document.writeln('google_ad_height = 90;');
+		document.writeln('//-->');
+		document.writeln('</script>');
+		document.writeln('<script type="text/javascript"');
+		document.writeln('src="http://pagead2.googlesyndication.com/pagead/show_ads.js">');
+		document.writeln('</script>');
+}else if(document.location.href=='http://www.brothersoft.com/download-msnplus-333605.html'){
+		document.writeln('<script type="text/javascript"><!--');
+		document.writeln('google_ad_client = "pub-4067176986847577";');
+		document.writeln('/* BSCDP-msnplus-728,10-3-17 */');
+		document.writeln('google_ad_slot = "1829835093";');
+		document.writeln('google_ad_width = 728;');
+		document.writeln('google_ad_height = 90;');
+		document.writeln('//-->');
+		document.writeln('</script>');
+		document.writeln('<script type="text/javascript"');
+		document.writeln('src="http://pagead2.googlesyndication.com/pagead/show_ads.js">');
+		document.writeln('</script>');
+}else if(document.location.href=='http://www.brothersoft.com/download-limewire-43484.html'){
+		document.writeln('<script type="text/javascript"><!--');
+		document.writeln('google_ad_client = "pub-4067176986847577";');
+		document.writeln('/* BSCDP-limewire-728,10-3-29 */');
+		document.writeln('google_ad_slot = "8859829564";');
+		document.writeln('google_ad_width = 728;');
+		document.writeln('google_ad_height = 90;');
+		document.writeln('//-->');
+		document.writeln('</script>');
+		document.writeln('<script type="text/javascript"');
+		document.writeln('src="http://pagead2.googlesyndication.com/pagead/show_ads.js">');
+		document.writeln('</script>');
+}else if(document.location.href=='http://www.brothersoft.com/download-nexus-radio-62989.html'){
+		document.writeln('<script type="text/javascript"><!--');
+		document.writeln('google_ad_client = "pub-4067176986847577";');
+		document.writeln('/* BSCDP-nexus-radio-728,10-7-19 */');
+		document.writeln('google_ad_slot = "6579549529";');
+		document.writeln('google_ad_width = 728;');
+		document.writeln('google_ad_height = 90;');
+		document.writeln('//-->');
+		document.writeln('</script>');
+		document.writeln('<script type="text/javascript"');
+		document.writeln('src="http://pagead2.googlesyndication.com/pagead/show_ads.js">');
+		document.writeln('</script>');
+}else if(document.location.href=='http://www.brothersoft.com/download-unlocker-60547.html'){
+		document.writeln('<script type="text/javascript"><!--');
+		document.writeln('google_ad_client = "pub-4067176986847577";');
+		document.writeln('/* BSCDP-unlocker-728,10-1-26 */');
+		document.writeln('google_ad_slot = "3749664541";');
+		document.writeln('google_ad_width = 728;');
+		document.writeln('google_ad_height = 90;');
+		document.writeln('//-->');
+		document.writeln('</script>');
+		document.writeln('<script type="text/javascript"');
+		document.writeln('src="http://pagead2.googlesyndication.com/pagead/show_ads.js">');
+		document.writeln('</script>');
+}else if(document.location.href=='http://www.brothersoft.com/download-avast-free-antivirus-330947.html' || document.location.href=='http://www.brothersoft.com/download-glary-utilities-46177.html'){
+		
+}else if(document.location.href=='http://www.brothersoft.com/download-opensubtitles-player-337467.html'){
+		document.writeln('<script type="text/javascript"><!--');
+		document.writeln('google_ad_client = "pub-4067176986847577";');
+		document.writeln('/* BSCDP-opensubtitles-728 11-1-19 */');
+		document.writeln('google_ad_slot = "4364382339";');
+		document.writeln('google_ad_width = 728;');
+		document.writeln('google_ad_height = 90;');
+		document.writeln('//-->');
+		document.writeln('</script>');
+		document.writeln('<script type="text/javascript"');
+		document.writeln('src="http://pagead2.googlesyndication.com/pagead/show_ads.js">');
+		document.writeln('</script>');
+}else if(document.location.href=='http://www.brothersoft.com/download-movie-subtitles-searcher-438563.html'){
+		document.writeln('<script type="text/javascript"><!--');
+		document.writeln('google_ad_client = "pub-4067176986847577";');
+		document.writeln('/* BSCDP-moviesubtitles-728 11-1-19 */');
+		document.writeln('google_ad_slot = "0212588050";');
+		document.writeln('google_ad_width = 728;');
+		document.writeln('google_ad_height = 90;');
+		document.writeln('//-->');
+		document.writeln('</script>');
+		document.writeln('<script type="text/javascript"');
+		document.writeln('src="http://pagead2.googlesyndication.com/pagead/show_ads.js">');
+		document.writeln('</script>');
+}else if(document.location.href=='http://www.brothersoft.com/download-open-subtitles-mkv-player-337467.html'){
+		document.writeln('<script type="text/javascript"><!--');
+		document.writeln('google_ad_client = "pub-4067176986847577";');
+		document.writeln('/* BSCDP-opensubtitles-728 11-1-19 */');
+		document.writeln('google_ad_slot = "4364382339";');
+		document.writeln('google_ad_width = 728;');
+		document.writeln('google_ad_height = 90;');
+		document.writeln('//-->');
+		document.writeln('</script>');
+		document.writeln('<script type="text/javascript"');
+		document.writeln('src="http://pagead2.googlesyndication.com/pagead/show_ads.js">');
+		document.writeln('</script>');
+}else if(document.location.href=='http://www.brothersoft.com/download-yowindow-weather-307283.html'){
+		document.writeln('<script type="text/javascript">');
+		document.writeln('google_ad_client = "pub-4067176986847577"; ');
+		document.writeln('/* BSCDP-yowindow-728 11-7-1 */ ');
+		document.writeln('google_ad_slot = "3889991191"; ');
+		document.writeln('google_ad_width = 728; ');
+		document.writeln('google_ad_height = 90; ');
+		document.writeln('</script> ');
+		document.writeln('<script type="text/javascript" ');
+		document.writeln('src=" http://pagead2.googlesyndication.com/pagead/show_ads.js "> ');
+		document.writeln('</script> ');
+}else if(document.location.href=='http://www.brothersoft.com/download-irfanview-all-plugins-164981.html'){
+	    document.writeln('<script type="text/javascript"><!--');
+		document.writeln('google_ad_client = "pub-4067176986847577";');
+		document.writeln('/* BSCDP-irfanview-728 11-8-4 */');
+		document.writeln('google_ad_slot = "3252361572";');
+		document.writeln('google_ad_width = 728;');
+		document.writeln('google_ad_height = 90;');
+		document.writeln('//-->');
+		document.writeln('</script>');
+		document.writeln('<script type="text/javascript" ');
+		document.writeln('src="http://pagead2.googlesyndication.com/pagead/show_ads.js">');
+		document.writeln('</script> ');
+}else if(document.location.href=='http://www.brothersoft.com/download-k-lite-codec-pack-61603.html' || document.location.href=='http://www.brothersoft.com/download-k-lite-codec-pack-basic-468073.html' || document.location.href=='http://www.brothersoft.com/download-k-lite-codec-pack-standard-468075.html'){
+	    document.writeln('<script type="text/javascript"><!--');
+		document.writeln('google_ad_client = "pub-4067176986847577";');
+		document.writeln('/* BSCDP-klite-728 11-8-4 */');
+		document.writeln('google_ad_slot = "9306669828";');
+		document.writeln('google_ad_width = 728;');
+		document.writeln('google_ad_height = 90;');
+		document.writeln('//-->');
+		document.writeln('</script>');
+		document.writeln('<script type="text/javascript" ');
+		document.writeln('src="http://pagead2.googlesyndication.com/pagead/show_ads.js">');
+		document.writeln('</script> ');
+}else if(document.location.href=='http://www.brothersoft.com/download-irfanview-6224.html'){
+	    document.writeln('<script type="text/javascript"><!--');
+		document.writeln('google_ad_client = "pub-4067176986847577";');
+		document.writeln('/* BSCDP-irfanview-728 11-8-4  */');
+		document.writeln('google_ad_slot = "3252361572";');
+		document.writeln('google_ad_width = 728;');
+		document.writeln('google_ad_height = 90;');
+		document.writeln('//-->');
+		document.writeln('</script>');
+		document.writeln('<script type="text/javascript" ');
+		document.writeln('src="http://pagead2.googlesyndication.com/pagead/show_ads.js">');
+		document.writeln('</script> ');
+
+}else if(document.location.href=='http://www.brothersoft.com/download-wise-registry-cleaner-free-version-60769.html'){
+	    document.writeln('<script type="text/javascript">');
+		document.writeln('google_ad_client = "ca-pub-4067176986847577";');
+		document.writeln('/* wisedownloadpage4 */');
+		document.writeln('google_ad_slot = "3846622204";');
+		document.writeln('google_ad_width = 728;');
+		document.writeln('google_ad_height = 90;');
+		document.writeln('</script>');
+		document.writeln('<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script>');
+	}else if(document.location.href=='http://www.brothersoft.com/download-wise-disk-cleaner-free-60675.html'){
+		document.writeln('<script type="text/javascript">');
+		document.writeln('google_ad_client = "ca-pub-4067176986847577";');
+		document.writeln('/* wisedownloadpage4 */');
+		document.writeln('google_ad_slot = "3846622204";');
+		document.writeln('google_ad_width = 728;');
+		document.writeln('google_ad_height = 90;');
+		document.writeln('</script>');
+		document.writeln('<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script>');
+	}else{
+		document.writeln('<script type="text/javascript"><!--');
+		document.writeln('google_ad_client = "pub-4067176986847577";');
+		document.writeln('/* BSCDP728,09-5-6 */');
+		document.writeln('google_ad_slot = "2555083191";');
+		document.writeln('google_ad_width = 728;');
+		document.writeln('google_ad_height = 90;');
+		document.writeln('//-->');
+		document.writeln('</script>');
+		document.writeln('<script type="text/javascript"');
+		document.writeln('src="http://pagead2.googlesyndication.com/pagead/show_ads.js">');
+		document.writeln('</script>');
+}

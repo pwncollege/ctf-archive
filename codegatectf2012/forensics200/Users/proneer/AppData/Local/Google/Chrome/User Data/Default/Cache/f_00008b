@@ -1,0 +1,1868 @@
+﻿///<reference path="jquery-1.3.2-vsdoc2.js" / >
+
+(function($) {
+	$.fn.searchWing = function(searchBox) {
+		// 초기 SelectedAttributes 값 ( 취소버튼시 원복을 위해 저장)
+		searchBox.defaultSelectedAttributes = decodeURIComponent(searchBox.PageState.SelectedAttributes);
+
+		// Full Container
+		var selectedFullAttributeDataObject;
+		selectedFullAttributeDataObject = new AttributeDataObject({ "InputData": "" });
+
+		// UI 출력시 페이지의 최초 데이터는 걸러진다.
+		var defaultAttributeDataObject;
+		defaultAttributeDataObject = new AttributeDataObject({ "InputData": searchBox.defaultSelectedAttributes });
+
+		// 상태 값 초기화.
+		// 윙 고정여부
+		searchBox.IsFixed = false;
+
+		// 가격 바 사이즈
+		var maxBarWidth = parseInt($("#" + searchBox.ID).attr("MaxBarWidth"));
+		var widthOfSlideButton = 15;
+
+		// 슬라이더 상 최대 최소값 (액수)
+		searchBox.MaxPrice = $("#" + searchBox.ID).attr("MaxPrice");
+		searchBox.MinPrice = $("#" + searchBox.ID).attr("MinPrice");
+
+		// 화면에 출력될 최대 최소값 (액수)
+		searchBox.selectedMaxPrice = $("#" + searchBox.ID).attr("SelectedMaxPrice");
+		searchBox.selectedMinPrice = $("#" + searchBox.ID).attr("SelectedMinPrice");
+
+		// 최대값과 최소값 사이의 갭
+		searchBox.MinMaxGap = searchBox.MaxPrice - searchBox.MinPrice;
+
+		// 실제 가격표시를 위해 사용되는 bar range (버튼을 제외한 중간 bar 라인)
+		searchBox.BarRangeWidth = maxBarWidth - widthOfSlideButton * 2;
+
+		// 픽셀당 가격 변동치 (계산 간소화를 위해 상수를 선계산)
+		searchBox.PricePerPixel = parseFloat(searchBox.MinMaxGap) / parseFloat(searchBox.BarRangeWidth);
+
+		// 가격당 픽셀 변동치 (계산 간소화를 위해 상수를 선계산)
+		searchBox.PixelPerPrice = parseFloat(searchBox.BarRangeWidth) / parseFloat(searchBox.MinMaxGap);
+
+		// UI 상태
+		var leftSliderPosition = document.getElementById(searchBox.ID + "_LeftSlider").style.left.replace("px", "");
+		var rightSliderPosition = document.getElementById(searchBox.ID + "_RightSlider").style.left.replace("px", "");
+		var rangeBarWidth = $("#" + searchBox.ID + "_imgSelectedRangeBar").width();
+
+		// 페이지 타입 (LP / SRP / 백화점관 / 클럽엣지)
+		searchBox.SearchWingLayoutType = $("#" + searchBox.ID).attr("SearchWingLayoutType");
+
+		// 쇼핑몰 검색 분리 상태
+		searchBox.IsMallListingSeparated = $("#" + searchBox.ID).attr("IsMallListingSeparated");
+
+		// 쇼핑몰 리스트 영역 이름
+		if (searchBox.IsMallListingSeparated == "True")
+			searchBox.divMallList = searchBox.ID + "_dlMallSetSeparated";
+		else if (searchBox.IsMallListingSeparated == "False")
+			searchBox.divMallList = searchBox.ID + "_dlMallSetInOne";
+
+
+		// 데이터 컨테이너에 항목 입력
+		var insertDataContainerItem = function(AttributeID, AttributeName, AttributeElementID, AttributeElementName) {
+			// 가격이나 할인율은 1개만 들어가므로 삭제 후 재입력
+			if (AttributeID == "PBPRateRange") {
+				selectedFullAttributeDataObject.deleteDataByAttrID("PBPRateRange");
+			}
+			else if (AttributeID == "VitemPriceRange") {
+				selectedFullAttributeDataObject.deleteDataByAttrID("VitemPriceRange");
+			}
+
+			selectedFullAttributeDataObject.insertData(AttributeID, AttributeElementID, AttributeName, AttributeElementName);
+		};
+
+		// 데이터 컨테이너에서 항목 삭제
+		var deleteDataContainerItem = function(AttributeID, AttributeElementID) {
+			// AttributeID, AttributeElementID 기준 삭제
+			if (AttributeID != undefined && AttributeElementID != undefined) {
+				selectedFullAttributeDataObject.deleteDataByAttrIdAttrElementId(AttributeID, AttributeElementID);
+			}
+			// AttributeID 기준 삭제
+			else if (AttributeID != undefined && AttributeElementID == undefined) {
+				selectedFullAttributeDataObject.deleteDataByAttrID(AttributeID);
+			}
+			// AttributeElementID 기준 삭제
+			else if (AttributeID == undefined && AttributeElementID != undefined) {
+				selectedFullAttributeDataObject.deleteDataByAttrElementID(AttributeElementID);
+			}
+		};
+
+		// 확대 버튼 바인드
+		$("#" + searchBox.ID).find("#btnWingExpand").bind("click", function() {
+			// expandAll();
+
+			// 윙을 확장
+			expandWing();
+
+			// '선택한 조건' 창은 조건이 있을 경우에만 오픈
+			if ((selectedFullAttributeDataObject.arrayObjectSet.length - defaultAttributeDataObject.arrayObjectSet.length) > 0)
+				openSelectedAttr();
+			else
+				closeSelectedAttr();
+
+			openColorList();
+			openPriceRangeBar();
+			openBrandList();
+			openMallList();
+			openMakerList();
+			openListingType();
+
+			// 버튼 이미지 '확장' -> '줄임'
+			$("#" + searchBox.ID).find("#btnWingExpand").hide();
+			$("#" + searchBox.ID).find("#btnWingReduce").show();
+
+			// Top으로 FixPosition
+			fixPositionTop();
+		});
+
+		$("#" + searchBox.ID).find("#btnWingExpandIcon").bind("click", function() {
+			expandWing();
+		});
+
+		// 축소 버튼 바인드
+		$("#" + searchBox.ID).find("#btnWingReduce").bind("click", function() {
+			// reduceAll();
+
+			// '선택한 조건' 창은 조건이 있을 경우에만 오픈
+			if ((selectedFullAttributeDataObject.arrayObjectSet.length - defaultAttributeDataObject.arrayObjectSet.length) > 0)
+				openSelectedAttr();
+			else
+				closeSelectedAttr();
+
+			closeColorList();
+			closePriceRangeBar();
+			closeBrandList();
+			closeMallList();
+			closeMakerList();
+			closeListingType();
+
+			// 버튼 이미지 '확장' -> '줄임'
+			$("#" + searchBox.ID).find("#btnWingReduce").hide();
+			$("#" + searchBox.ID).find("#btnWingExpand").show();
+
+			// 위치 고정 해제
+			unfixPosition();
+		});
+
+		$("#" + searchBox.ID).find("#btnWingReduceIcon").bind("click", function() {
+			reduceWing();
+		});
+
+
+		// 윙 확대
+		var expandWing = function() {
+			$("#" + searchBox.ID).find("#btnWingExpandIcon").hide();
+			$("#" + searchBox.ID).find("#btnWingReduceIcon").attr("style", "cursor:pointer;");
+			$("#" + searchBox.ID).find("#btnExtandAll").attr("style", "");
+
+			$("#" + searchBox.ID).removeClass("reduction");
+			$("#" + searchBox.ID).addClass("expand");
+		};
+
+		// 윙 축소 (가장 작은 형태)
+		var reduceWing = function() {
+			$("#" + searchBox.ID).find("#btnWingExpandIcon").attr("style", "cursor:pointer;");
+			$("#" + searchBox.ID).find("#btnWingReduceIcon").hide();
+			$("#" + searchBox.ID).find("#btnExtandAll").hide();
+
+			$("#" + searchBox.ID).removeClass("expand");
+			$("#" + searchBox.ID).addClass("reduction");
+		};
+
+		// 전체확장 버튼 바인드
+		$("#" + searchBox.ID).find("#btnExtandAll").bind("click", function() {
+			expandAll();
+		});
+
+		// 전체줄임
+		var reduceAll = function() {
+			// 모든 창을 닫고
+			closeSelectedAttr();
+			closeColorList();
+			closePriceRangeBar();
+			closeBrandList();
+			closeMallList();
+			closeMakerList();
+			closePBPRate();
+			closeListingType();
+
+			// 버튼 이미지 '확장' -> '줄임'
+			$("#" + searchBox.ID).find("#btnWingReduce").hide();
+			$("#" + searchBox.ID).find("#btnWingExpand").show();
+
+		};
+
+		// 전체확장
+		var expandAll = function() {
+			// 윙을 확장
+			expandWing();
+
+			// 모든 창을 열고
+			openSelectedAttr();
+			openColorList();
+			openPriceRangeBar();
+			openBrandList();
+			openMallList();
+			openMakerList();
+			openListingType();
+
+			// 위치 고정
+			fixPositionTop();
+
+			// 버튼 이미지 '확장' -> '줄임'
+			$("#" + searchBox.ID).find("#btnWingExpand").hide();
+			$("#" + searchBox.ID).find("#btnWingReduce").show();
+
+		};
+
+		// 고정 버튼 바인드
+		$("#" + searchBox.ID).find("#btnFixPosition").bind("click", function() {
+			fixPosition();
+		});
+
+		// 고정해제 버튼 바인드
+		$("#" + searchBox.ID).find("#btnUnfixPosition").bind("click", function() {
+			unfixPosition();
+		});
+
+		// 위치 고정
+		var fixPosition = function() {
+			searchBox.IsFixed = true;
+
+			$("#" + searchBox.ID).find("#btnFixPosition").hide();
+			$("#" + searchBox.ID).find("#btnUnfixPosition").show();
+		};
+
+		// 위치 고정 (시작 위치에 고정)
+		var fixPositionTop = function() {
+			searchBox.IsFixed = true;
+
+			$("#" + searchBox.ID).attr("style", "top:32px;");
+
+			$("#" + searchBox.ID).find("#btnFixPosition").hide();
+			$("#" + searchBox.ID).find("#btnUnfixPosition").show();
+
+			if (document.getElementById("divWingArea") != undefined)
+				$(document).scrollTop(parseInt($("#divWingArea")[0].offsetTop) + 120);
+		};
+
+		// 위치 고정해제
+		var unfixPosition = function() {
+			searchBox.IsFixed = false;
+
+			$("#" + searchBox.ID).find("#btnUnfixPosition").hide();
+			$("#" + searchBox.ID).find("#btnFixPosition").show();
+		};
+
+		// '선택한 조건' 창 열고닫기
+		$("#" + searchBox.ID).find("#btnSelectedAttr").bind("click", function() {
+			if ($("#" + searchBox.ID + "_divSelectedAttr").hasClass("offArea"))
+				openSelectedAttr();
+			else
+				closeSelectedAttr();
+		});
+
+		var openSelectedAttr = function() {
+			$("#" + searchBox.ID + "_divSelectedAttr").removeClass("offArea");
+			$("#" + searchBox.ID + "_divSelectedAttr").addClass("onArea");
+		};
+
+		var closeSelectedAttr = function() {
+			$("#" + searchBox.ID + "_divSelectedAttr").removeClass("onArea");
+			$("#" + searchBox.ID + "_divSelectedAttr").addClass("offArea");
+		};
+
+		// '색상검색' 창 열고닫기
+		$("#" + searchBox.ID).find("#btnColorList").bind("click", function() {
+			if ($("#" + searchBox.ID + "_divColorList").hasClass("offArea"))
+				openColorList();
+			else
+				closeColorList();
+		});
+
+		var openColorList = function() {
+			$("#" + searchBox.ID + "_divColorList").removeClass("offArea");
+			$("#" + searchBox.ID + "_divColorList").addClass("onArea");
+		};
+
+		var closeColorList = function() {
+			$("#" + searchBox.ID + "_divColorList").removeClass("onArea");
+			$("#" + searchBox.ID + "_divColorList").addClass("offArea");
+		};
+
+		// '가격대 검색' 창 열고닫기
+		$("#" + searchBox.ID).find("#btnPriceRangeBar").bind("click", function() {
+			if ($("#" + searchBox.ID + "_divPriceRangeBar").hasClass("offArea"))
+				openPriceRangeBar();
+			else
+				closePriceRangeBar();
+		});
+
+		var openPriceRangeBar = function() {
+			$("#" + searchBox.ID + "_divPriceRangeBar").removeClass("offArea");
+			$("#" + searchBox.ID + "_divPriceRangeBar").addClass("onArea");
+		};
+
+		var closePriceRangeBar = function() {
+			$("#" + searchBox.ID + "_divPriceRangeBar").removeClass("onArea");
+			$("#" + searchBox.ID + "_divPriceRangeBar").addClass("offArea");
+		};
+
+		// '브랜드 검색' 창 열고닫기
+		$("#" + searchBox.ID).find("#btnBrandList").bind("click", function() {
+			if ($("#" + searchBox.ID + "_divBrandList").hasClass("offArea"))
+				openBrandList();
+			else
+				closeBrandList();
+		});
+
+		var openBrandList = function() {
+			$("#" + searchBox.ID + "_divBrandList").removeClass("offArea");
+			$("#" + searchBox.ID + "_divBrandList").addClass("onArea");
+		};
+
+		var closeBrandList = function() {
+			$("#" + searchBox.ID + "_divBrandList").removeClass("onArea");
+			$("#" + searchBox.ID + "_divBrandList").addClass("offArea");
+		};
+
+		// '쇼핑몰 검색' 창 열고닫기
+		$("#" + searchBox.ID).find("#btnMallListInOne").bind("click", function() {
+			if ($("#" + searchBox.ID + "_divMallList").hasClass("offArea"))
+				openMallList();
+			else
+				closeMallList();
+		});
+
+		$("#" + searchBox.ID).find("#btnMallListSeparated").bind("click", function() {
+			if ($("#" + searchBox.ID + "_divMallList").hasClass("offArea"))
+				openMallList();
+			else
+				closeMallList();
+		});
+
+		var openMallList = function() {
+			$("#" + searchBox.ID + "_divMallList").removeClass("offArea");
+			$("#" + searchBox.ID + "_divMallList").addClass("onArea");
+		};
+
+		var closeMallList = function() {
+			$("#" + searchBox.ID + "_divMallList").removeClass("onArea");
+			$("#" + searchBox.ID + "_divMallList").addClass("offArea");
+		};
+
+		//'중대형몰' 창 열고닫기
+		$("#" + searchBox.ID).find("#btnMallListIsNotSoho").bind("click", function() {
+			if ($("#" + searchBox.ID + "_divMallListIsNotSoho").hasClass("mallOff"))
+				openMallListIsNotSoho();
+			else
+				closeMallListIsNotSoho();
+		});
+
+		var openMallListIsNotSoho = function() {
+			$("#" + searchBox.ID + "_divMallListIsNotSoho").removeClass("mallOff");
+			$("#" + searchBox.ID + "_divMallListIsNotSoho").addClass("mallOn");
+
+			$("#" + searchBox.ID + "_divMallListIsNotSoho").show();
+		};
+
+		var closeMallListIsNotSoho = function() {
+			$("#" + searchBox.ID + "_divMallListIsNotSoho").removeClass("mallOn");
+			$("#" + searchBox.ID + "_divMallListIsNotSoho").addClass("mallOff");
+
+			$("#" + searchBox.ID + "_divMallListIsNotSoho").show();
+		};
+
+		//'전문몰' 창 열고닫기
+		$("#" + searchBox.ID).find("#btnMallListIsSoho").bind("click", function() {
+			if ($("#" + searchBox.ID + "_divMallListIsSoho").hasClass("mallOff"))
+				openMallListIsSoho();
+			else
+				closeMallListIsSoho();
+		});
+
+		var openMallListIsSoho = function() {
+			$("#" + searchBox.ID + "_divMallListIsSoho").removeClass("mallOff");
+			$("#" + searchBox.ID + "_divMallListIsSoho").addClass("mallOn");
+		};
+
+		var closeMallListIsSoho = function() {
+			$("#" + searchBox.ID + "_divMallListIsSoho").removeClass("mallOn");
+			$("#" + searchBox.ID + "_divMallListIsSoho").addClass("mallOff");
+		};
+
+		// '제조사 검색' 창 열고닫기
+		$("#" + searchBox.ID).find("#btnMakerList").bind("click", function() {
+			if ($("#" + searchBox.ID + "_divMakerList").hasClass("offArea"))
+				openMakerList();
+			else
+				closeMakerList();
+		});
+
+		var openMakerList = function() {
+			$("#" + searchBox.ID + "_divMakerList").removeClass("offArea");
+			$("#" + searchBox.ID + "_divMakerList").addClass("onArea");
+		};
+
+		var closeMakerList = function() {
+			$("#" + searchBox.ID + "_divMakerList").removeClass("onArea");
+			$("#" + searchBox.ID + "_divMakerList").addClass("offArea");
+		};
+
+		
+		// '정렬변경 검색' 창 열고닫기
+		$("#" + searchBox.ID).find("#btnListingType").bind("click", function() {
+			if ($("#" + searchBox.ID + "_divListingType").hasClass("offArea"))
+				openListingType();
+			else
+				closeListingType();
+		});
+
+		var openListingType = function() {
+			$("#" + searchBox.ID + "_divListingType").removeClass("offArea");
+			$("#" + searchBox.ID + "_divListingType").addClass("onArea");
+		};
+
+		var closeListingType = function() {
+			$("#" + searchBox.ID + "_divListingType").removeClass("onArea");
+			$("#" + searchBox.ID + "_divListingType").addClass("offArea");
+		};
+
+		// 검색타입 (통합/퀵바이) 이벤트 바인드 SRPTabTypes
+		$("#" + searchBox.ID + "_btnSRPTabType").bind("click", function() {
+			// 값 변경에 따른 Event 발생.
+			if (searchBox.eventHandlers.SRPTabType_OnChange != null) {
+				var eventArg = new Object();
+
+				eventArg.SRPTabTypes = $(this).attr("SRPTabTypes");
+				eventArg.SelectedAttributes = selectedFullAttributeDataObject.outData();
+
+				searchBox.eventHandlers.SRPTabType_OnChange(document.getElementById(searchBox.ID), eventArg);
+			}
+		});
+
+		// 가격대바 draw 관련 코드
+		var drag = function(elementToDrag, width, height, minposX, minposY, maxposX, maxposY, move_cbfunc, end_cbfunc, evt) {
+
+			// 드래그가 시작되는 마우스위치(창기반 좌표계) 이다. 
+			var objX = parseInt(elementToDrag.style.left);
+			var objY = parseInt(elementToDrag.style.top);
+			if (isNaN(objX)) objX = minposX;
+			if (isNaN(objY)) objY = minposY;
+
+			var msX = evt.clientX;
+			var msY = evt.clientY;
+
+			// mousedown 이벤트후에 발생될 mousemove와 mouseup 이벤트에 반응할 
+			// 이벤트 처리기들을 등록한다. 
+			if (document.addEventListener) // DOM레빌 2 이벤트 모델 
+			{
+				// 포착 이벤트 처리기를 등록한다. 
+				document.addEventListener("mousemove", moveHandler, true);
+				document.addEventListener("mouseup", upHandler, true);
+			}
+			else if (document.attachEvent)  //IE 5 이상의 이벤트모델 
+			{
+				// IE 이벤트 모델에서는 엘리먼트에 대해 setCapture()를 호출하여 
+				// 이벤트를 포착한다. 
+				elementToDrag.setCapture();
+				elementToDrag.attachEvent("onmousemove", moveHandler);
+				elementToDrag.attachEvent("onmouseup", upHandler);
+
+				// 마우스 포착에 실패하면 mouseup 이벤트라고 간주한다. 
+				elementToDrag.attachEvent("onlosecapture", upHandler);
+			}
+			else {  // IE 4 이벤트모델 
+				// IE 4 에서는 attachEvent()나 setCapture()를 사용할수 없기 때문에 
+				// document 객체에 대해 이벤트 처리기를 직접 설정하고 마우스 이벤트가 
+				// 거품처럼 위로 올라가길 기대한다. 
+				var oldmovehandler = document.onmousemove;    //upHandler()에서 사용된다. 
+				var olduphandler = document.onmouseup;
+				document.onmousemove = moveHandler;
+				document.onmouseup = upHandler;
+			}
+
+			// 이 이벤트는 이미 처리했다.    
+			if (evt.stopPropagation) evt.stopPropagation();      // DOM레벨 2 
+			else evt.cancelBubble = true;                           // IE 
+
+			// 기본 동작 수행을 금지한다. 
+			if (evt.preventDefault) evt.preventDefault();       // DOM레벨 2 
+			else evt.returnValue = false;                           // IE 
+
+			/** 
+			* 다음은 엘리먼트가 드래그 될떄 mousemove 이벤트를 감지하는 이벤트 처리기이다. 
+			* 이 처리기가 하는 일은 엘리먼트를 이동시키는 것이다. 
+			**/
+			function moveHandler(e) {
+				if (!e) e = window.event;      // IE 이벤트모델 
+
+				// 엘리먼트를 현재 마우스 위치로이동한다.
+				// 이때 처음 마우스를 클릭했을때의 오프셋을 필요한 만큼 적용시킨다. 
+				var curX = msX - e.clientX;
+				if (isNaN(curX)) curX = minposX;
+				var newX = objX - curX;
+				if (newX < minposX) {
+					newX = minposX;
+				}
+				if (newX > maxposX) newX = maxposX;
+
+				var curY = msY - e.clientY;
+				if (isNaN(curY)) curY = minposY;
+				var newY = objY - curY;
+				if (newY < minposY) {
+					newY = minposY;
+				}
+				if (newY > maxposY) newY = maxposY;
+
+				elementToDrag.style.left = newX + "px";
+				elementToDrag.style.top = newY + "px";
+
+				// 다른쪽에서 이 이벤트를 볼수 없게 한다. 
+				if (e.stopPropagtion) e.stopPropagation();          // DOM 레빌 2 
+				else e.cancelBubble = true;                           // IE 
+
+				if (move_cbfunc) move_cbfunc(elementToDrag, newX, newY);
+			}
+
+			/* 
+			* 다음은 드래그가 끝났을때 발생하는 mouseup이벤트를 포착하는 이벤트 처리기이다 
+			*/
+			function upHandler(e) {
+				if (!e) e = window.event;      // IE 이벤트모델 
+
+				//capture한 이벤트 처리기를 등록 취소한다. 
+				if (document.removeEventListener)       //DOm 이벤트 모델 
+				{
+					document.removeEventListener("mouseup", upHandler, true);
+					document.removeEventListener("mousemove", moveHandler, true);
+				}
+				else if (document.detachEvent)          // IE 5와 그 이후 버전의 이벤트 모델 
+				{
+					elementToDrag.detachEvent("onlosecapture", upHandler);
+					elementToDrag.detachEvent("onmouseup", upHandler);
+					elementToDrag.detachEvent("onmousemove", moveHandler);
+					elementToDrag.releaseCapture();
+				}
+				else    // IE 4 이벤트 모델 
+				{
+					//원본 처리기가존재하면 이를 복구한다. 
+					document.onmouseup = olduphandler;
+					document.onmousemove = oldmovehandler;
+				}
+
+				// 이벤트가 더 전파되지 않게 한다. 121          // propagate : 널리 퍼지다, 보급되다 
+				if (e.stopPropagation) e.stopPropagation();     // DOM Level 2
+				else e.cancelBubble = true;                       // IE
+
+				// 이벤트 발동만을 위한 수정
+				//        if (end_cbfunc) end_cbfunc(elementToDrag, newX, newY);
+				if (end_cbfunc) end_cbfunc();
+
+				isDragging = false;
+			}
+		}
+
+		$("#" + searchBox.ID + "_LeftThumb").bind("mousedown", function(event) {
+			drag(document.getElementById(searchBox.ID + "_LeftSlider"), 0, 33, 0, 33, (parseInt(rightSliderPosition) - widthOfSlideButton), 0, slider_OnMove, slideMouseUp, event);
+
+			// 이벤트 Bubbling 중단.
+			if (event.stopPropagation) event.stopPropagation();      // DOM레벨 2
+			else event.cancelBubble = true;                           // IE
+		});
+
+		$("#" + searchBox.ID + "_RightThumb").bind("mousedown", function(event) {
+			drag(document.getElementById(searchBox.ID + "_RightSlider"), 0, 33, (parseInt(leftSliderPosition) + widthOfSlideButton), 33, maxBarWidth - widthOfSlideButton, 0, slider_OnMove, slideMouseUp, event);
+
+			// 이벤트 Bubbling 중단.
+			if (event.stopPropagation) event.stopPropagation();      // DOM레벨 2
+			else event.cancelBubble = true;                           // IE
+		});
+
+		// MouseMove 이벤트
+		var slider_OnMove = function(obj, posX, posY) {
+			switch (obj.id) {
+				case searchBox.ID + "_LeftSlider":
+					leftSliderPosition = posX;
+					break;
+				case searchBox.ID + "_RightSlider":
+					rightSliderPosition = posX;
+					break;
+			}
+
+			// 최저가격 범위 다시 계산 및 표시
+			searchBox.selectedMinPrice = parseInt(searchBox.PricePerPixel * parseFloat(leftSliderPosition)) + parseInt(searchBox.MinPrice);
+
+			// 최대가격 범위 다시 계산 및 표시
+			searchBox.selectedMaxPrice = parseInt(searchBox.PricePerPixel * parseFloat(rightSliderPosition - widthOfSlideButton)) + parseInt(searchBox.MinPrice);
+
+			// 단위 보정.
+			searchBox.selectedMinPrice = parseInt(searchBox.selectedMinPrice - searchBox.selectedMinPrice % 100);
+			searchBox.selectedMaxPrice = parseInt(searchBox.selectedMaxPrice - searchBox.selectedMaxPrice % 100);
+
+			// UI 갱신
+			updatePriceUI();
+		}
+
+		// MouseUp 시 이벤트
+		var slideMouseUp = function() {
+			// 선택된 제조사 리스트 추가
+			insertDataContainerItem("VitemPriceRange", "가격\\", searchBox.selectedMinPrice + "|" + searchBox.selectedMaxPrice, toMoneyString(searchBox.selectedMinPrice) + " ~ " + toMoneyString(searchBox.selectedMaxPrice));
+
+			// 가격대 선택시 기타 옵션 삭제
+			deleteListOptions();
+
+			// 선택한 조건 다시 그리기
+			updateSelectedAttrUI();
+
+			// 값 변경에 따른 Event 발생.
+			if (searchBox.eventHandlers.Price_OnChange != null) {
+				var eventArg = new Object();
+
+				eventArg.SelectedMaxPrice = searchBox.selectedMaxPrice;
+				eventArg.SelectedMinPrice = searchBox.selectedMinPrice;
+				eventArg.SelectedAttributes = selectedFullAttributeDataObject.outData();
+
+				searchBox.eventHandlers.Price_OnChange(document.getElementById(searchBox.ID), eventArg);
+			}
+		};
+
+		// 숫자만 입력 가능
+		$("#" + searchBox.ID + "_htxtMinPrice").keypress(function(event) {
+			if (event.which && (event.which > 47 && event.which < 58 || event.which == 8)) {
+			}
+			else {
+				event.preventDefault();
+			}
+		});
+
+		$("#" + searchBox.ID + "_htxtMinPrice").bind("change", function() {
+			var minValue = $("#" + searchBox.ID + "_htxtMinPrice").val();
+
+			minValue = minValue.replace(/[^0-9]*/g, "");
+
+			// 값 Validation Check
+			if (minValue == "" || parseInt(minValue) < parseInt(searchBox.MinPrice) || parseInt(minValue) > parseInt(searchBox.MaxPrice)) {
+				alert(toMoneyString(searchBox.MinPrice) + "~" + toMoneyString(searchBox.MaxPrice) + "원 사이의 숫자를 입력해 주세요.");
+				$("#" + searchBox.ID + "_htxtMinPrice").val(toMoneyString(searchBox.MinPrice));
+				minValue = searchBox.MinPrice;
+
+				return false;
+			}
+			else if (parseInt(minValue) > parseInt(searchBox.selectedMaxPrice)) {
+				alert(toMoneyString(searchBox.MinPrice) + "~" + toMoneyString(searchBox.selectedMaxPrice) + "원 사이의 숫자를 입력해 주세요.");
+				$("#" + searchBox.ID + "_htxtMinPrice").val(toMoneyString(searchBox.selectedMinPrice));
+				minValue = searchBox.selectedMinPrice;
+				return false;
+			}
+
+			if (minValue != "" && parseInt(minValue) < parseInt(searchBox.MinPrice)) {
+				searchBox.selectedMinPrice = searchBox.MinPrice;
+				$("#" + searchBox.ID + "_htxtMinPrice").val(toMoneyString(minValue));
+			}
+			else if (minValue != "" && parseInt(minValue) >= 0) {
+				searchBox.selectedMinPrice = minValue;
+				$("#" + searchBox.ID + "_htxtMinPrice").val(toMoneyString(minValue));
+			}
+			else {
+				$("#" + searchBox.ID + "_htxtMinPrice").val("");
+				searchBox.selectedMinValue = -1;
+			}
+
+			// 좌측 슬라이더 위치 재계산
+			if (searchBox.selectedMinValue == -1)
+				leftSliderPosition = 0;
+			else
+				leftSliderPosition = parseInt(parseFloat(searchBox.selectedMinPrice - searchBox.MinPrice) * parseFloat(searchBox.BarRangeWidth) / parseFloat(searchBox.MinMaxGap));
+
+			// UI 갱신
+			updatePriceUI();
+
+			// 선택된 제조사 리스트 추가 (가격대)
+			insertDataContainerItem("VitemPriceRange", "가격\\", searchBox.selectedMinPrice + "|" + searchBox.selectedMaxPrice, toMoneyString(searchBox.selectedMinPrice) + " ~ " + toMoneyString(searchBox.selectedMaxPrice));
+
+			// 가격대 선택시 기타 옵션 삭제
+			deleteListOptions();
+
+			// 선택한 조건 화면 리프레쉬
+			updateSelectedAttrUI();
+
+			// 값 변경에 따른 Event 발생.
+			if (searchBox.eventHandlers.Price_OnChange != null) {
+				var eventArg = new Object();
+
+				eventArg.SelectedMaxPrice = searchBox.selectedMaxPrice;
+				eventArg.SelectedMinPrice = searchBox.selectedMinPrice;
+				eventArg.SelectedAttributes = selectedFullAttributeDataObject.outData();
+
+				searchBox.eventHandlers.Price_OnChange(document.getElementById(searchBox.ID), eventArg);
+			}
+		});
+
+		// 숫자만 입력 가능
+		$("#" + searchBox.ID + "_htxtMaxPrice").keypress(function(event) {
+			if (event.which && (event.which > 47 && event.which < 58 || event.which == 8)) {
+			}
+			else {
+				event.preventDefault();
+			}
+		});
+
+		$("#" + searchBox.ID + "_htxtMaxPrice").bind("change", function() {
+
+			var maxValue = $("#" + searchBox.ID + "_htxtMaxPrice").val();
+
+			maxValue = maxValue.replace(/[^0-9]*/g, "");
+
+			// 값 Validation Check
+			if (maxValue == "" || parseInt(maxValue) < parseInt(searchBox.MinPrice) || parseInt(maxValue) > parseInt(searchBox.MaxPrice)) {
+				alert(toMoneyString(searchBox.MinPrice) + "~" + toMoneyString(searchBox.MaxPrice) + "원 사이의 숫자를 입력해 주세요.");
+				$("#" + searchBox.ID + "_htxtMaxPrice").val(toMoneyString(searchBox.MaxPrice));
+				maxValue = searchBox.MaxPrice;
+
+				return false;
+			}
+			else if (parseInt(maxValue) < parseInt(searchBox.selectedMinPrice)) {
+				alert(toMoneyString(searchBox.selectedMinPrice) + "~" + toMoneyString(searchBox.MaxPrice) + "원 사이의 숫자를 입력해 주세요.");
+				$("#" + searchBox.ID + "_htxtMaxPrice").val(toMoneyString(searchBox.selectedMaxPrice));
+				maxValue = searchBox.selectedMaxPrice;
+				return false;
+			}
+
+			if (maxValue != "" && maxValue > parseInt(searchBox.MaxPrice)) {
+				searchBox.selectedMaxPrice = searchBox.MaxPrice;
+				$("#" + searchBox.ID + "_htxtMaxPrice").val(toMoneyString(maxValue));
+			}
+			else if (maxValue != "" && parseInt(maxValue) >= 0) {
+				searchBox.selectedMaxPrice = maxValue;
+				$("#" + searchBox.ID + "_htxtMaxPrice").val(toMoneyString(maxValue));
+			}
+			else {
+				$("#" + searchBox.ID + "_htxtMaxPrice").val("");
+				searchBox.selectedMaxValue = -1;
+			}
+
+			// 우측 슬라이더 위치 재계산
+			if (searchBox.selectedMinValue == -1)
+				rightSliderPosition = 0;
+			else
+				rightSliderPosition = parseInt(parseFloat(searchBox.selectedMaxPrice - searchBox.MinPrice) * parseFloat(searchBox.BarRangeWidth) / parseFloat(searchBox.MinMaxGap)) + parseInt(widthOfSlideButton);
+
+			// UI 갱신
+			updatePriceUI();
+
+			// 선택된 제조사 리스트 추가(가격대)
+			insertDataContainerItem("VitemPriceRange", "가격\\", searchBox.selectedMinPrice + "|" + searchBox.selectedMaxPrice, toMoneyString(searchBox.selectedMinPrice) + " ~ " + toMoneyString(searchBox.selectedMaxPrice));
+
+			// 가격대 선택시 기타 옵션 삭제
+			deleteListOptions();
+
+			// 선택한 조건 화면 리프레쉬
+			updateSelectedAttrUI();
+
+			// 값 변경에 따른 Event 발생.
+			if (searchBox.eventHandlers.Price_OnChange != null) {
+				var eventArg = new Object();
+
+				eventArg.SelectedMaxPrice = searchBox.selectedMaxPrice;
+				eventArg.SelectedMinPrice = searchBox.selectedMinPrice;
+				eventArg.SelectedAttributes = selectedFullAttributeDataObject.outData();
+
+				searchBox.eventHandlers.Price_OnChange(document.getElementById(searchBox.ID), eventArg);
+			}
+		});
+
+		searchBox.setPositionLeftSlider = function() {
+			// 좌측 슬라이더 위치
+			leftSliderPosition = parseInt(maxBarWidth * (parseFloat(searchBox.selectedMinPrice) / parseFloat(searchBox.MaxPrice))) - widthOfSlideButton;
+
+			var leftSliderMaxPosition = maxBarWidth - widthOfSlideButton * 2;
+
+			if (leftSliderPosition <= widthOfSlideButton) {
+				leftSliderPosition = 0;
+				searchBox.selectedMinPrice = 0;
+			}
+			else if (leftSliderPosition >= leftSliderMaxPosition) {
+				leftSliderPosition = leftSliderMaxPosition;
+				searchBox.selectedMinPrice = searchBox.selectedMaxPrice;
+			}
+
+			// UI 갱신
+			updatePriceUI();
+		}
+
+		searchBox.setPositionRightSlider = function() {
+			// 우측 슬라이더 위치
+			rightSliderPosition = parseInt(maxBarWidth * (parseFloat(parseFloat(searchBox.selectedMaxPrice) / parseFloat(searchBox.MaxPrice))));
+
+			var rightSliderMaxPosition = maxBarWidth - widthOfSlideButton;
+
+			if (rightSliderPosition <= widthOfSlideButton) {
+				rightSliderPosition = widthOfSlideButton;
+				searchBox.selectedMaxPrice = 0;
+			}
+			else if (rightSliderPosition >= rightSliderMaxPosition) {
+				rightSliderPosition = rightSliderMaxPosition - 1;
+			}
+
+			// UI 갱신
+			updatePriceUI();
+		}
+
+		// os2.finding.Common.js 상의 setComma 함수를 사용함
+		var toMoneyString = setComma;
+
+		// 가격바 UI 재표시
+		var updatePriceUI = function() {
+			// 선택영역 표시 Bar
+			rangeBarWidth = parseInt(rightSliderPosition) - parseInt(leftSliderPosition);
+			document.getElementById(searchBox.ID + "_SelectedRangeBar").style.paddingLeft = parseInt(leftSliderPosition) + "px";
+			document.getElementById(searchBox.ID + "_imgSelectedRangeBar").style.width = rangeBarWidth + "px";
+			document.getElementById(searchBox.ID + "_LeftSlider").style.left = parseInt(leftSliderPosition) + "px";
+			document.getElementById(searchBox.ID + "_RightSlider").style.left = parseInt(rightSliderPosition) + "px";
+
+			document.getElementById(searchBox.ID + "_htxtMinPrice").value = toMoneyString(searchBox.selectedMinPrice);
+			document.getElementById(searchBox.ID + "_htxtMaxPrice").value = toMoneyString(searchBox.selectedMaxPrice);
+		};
+
+		var colorListAnchorBind = function() {
+			// 색상검색 팔레트 클릭 이벤트 바인드
+			$("#" + searchBox.ID).find("#divColorPalette").find("a").bind("click", function() {
+				// 전체 선택 : 모든 리스트 리셋 후 전체 선택만을 남김
+				if ($(this).attr("AttributeElementID") == "0") {
+					$("#" + searchBox.ID).find("#divColorPalette").find("a").attr("class", "");
+					$(this).attr("class", "on");
+
+					// 색상검색 리스트 전부 삭제
+					deleteDataContainerItem($(this).attr("AttributeID"));
+				}
+				else {
+					if ($(this).attr("class") == "") {
+						// 전체선택 해제
+						$("#" + searchBox.ID).find("#divColorPalette").find("a[AttributeElementID=0]").attr("class", "");
+						
+						$(this).attr("class", "on");
+
+						// 선택한 색상검색 데이터 입력
+						insertDataContainerItem($(this).attr("AttributeID"), $(this).attr("AttributeName"), $(this).attr("AttributeElementID"), $(this).attr("AttributeElementName"));
+					}
+					else {
+						$(this).attr("class", "");
+
+						// 만약 선택 항목이 하나도 없다면 전체 선택을 체크
+						if ($("#" + searchBox.ID).find("#divColorPalette").find("a[class=on]").length < 1)
+							$("#" + searchBox.ID).find("#divColorPalette").find("a[AttributeElementID=0]").attr("class", "on");
+
+						// 선택한 색상검색 데이터 삭제
+						deleteDataContainerItem($(this).attr("AttributeID"), $(this).attr("AttributeElementID"));
+					}
+				}
+
+				// 선택한 조건 refresh
+				updateSelectedAttrUI();
+
+				// 체크 변경에 따른 Event 발생.
+				if (searchBox.eventHandlers.ColorList_OnChange != null) {
+					var eventArg = new Object();
+
+					eventArg.CheckedColorId = $(this).attr("AttributeElementID");
+					eventArg.CheckedState = ($(this).attr("class") == "") ? "off" : "on";
+					eventArg.CheckedItemType = $(this).attr("AttributeID");
+					eventArg.SelectedAttributes = selectedFullAttributeDataObject.outData();
+
+					searchBox.eventHandlers.ColorList_OnChange(document.getElementById(searchBox.ID), eventArg);
+				}
+			});
+		};
+
+		// 색상검색 리스트 클릭 이벤트 최초 바인드
+		colorListAnchorBind();
+
+		var brandListAnchorBind = function() {
+			// 브랜드 리스트 체크박스 바인드
+			$("#" + searchBox.ID).find("#divBrandCheckList").find("input").bind("click", function() {
+
+				if ($(this).parent().find("label").attr("class") == "") {
+					$(this).parent().find("label").attr("class", "checkbox-checked");
+
+					// 하단부 선택한 브랜드 데이터 입력
+					insertDataContainerItem($(this).parent().attr("AttributeID"), $(this).parent().attr("AttributeName"), $(this).parent().attr("AttributeElementID"), $(this).parent().attr("AttributeElementName"));
+				}
+				else {
+					$(this).parent().find("label").attr("class", "");
+
+					// 하단부 선택한 브랜드 데이터 삭제
+					deleteDataContainerItem($(this).parent().attr("AttributeID"), $(this).parent().attr("AttributeElementID"));
+				}
+
+				// 브랜드 선택시 기타 옵션 삭제
+				deleteListOptions();
+
+				// 선택한 조건 refresh
+				updateSelectedAttrUI();
+
+				// 체크 변경에 따른 Event 발생.
+				if (searchBox.eventHandlers.BrandList_OnChange != null) {
+					var eventArg = new Object();
+
+					eventArg.CheckedBrandId = $(this).parent().attr("AttributeElementID");
+					eventArg.CheckedState = ($(this).parent().find("label").attr("class") == "") ? "off" : "on";
+					eventArg.CheckedItemType = $(this).parent().attr("AttributeID");
+					eventArg.SelectedAttributes = selectedFullAttributeDataObject.outData();
+
+					searchBox.eventHandlers.BrandList_OnChange(document.getElementById(searchBox.ID), eventArg);
+				}
+			});
+		};
+
+		// 브랜드 리스트 클릭 이벤트 최초 바인드
+		brandListAnchorBind();
+
+		// 브랜드 리스트 상의 '전체' 버튼 바인드
+		$("#" + searchBox.ID).find("#btnBrandListAll").bind("click", function() {
+			if (searchBox.eventHandlers.BrandListAllButton_OnClick != null) {
+				var eventArg = new Object();
+
+				searchBox.eventHandlers.BrandListAllButton_OnClick(document.getElementById(searchBox.ID), eventArg);
+			}
+		});
+
+		var mallListAnchorBind = function() {
+			// 쇼핑몰 리스트 체크박스 바인드
+			$("#" + searchBox.ID).find("#" + searchBox.divMallList).find("input").bind("click", function() {
+
+				if ($(this).parent().find("label").attr("class") == "") {
+					$(this).parent().find("label").attr("class", "checkbox-checked");
+
+					// 하단부 선택한 쇼핑몰 데이터 입력
+					insertDataContainerItem($(this).parent().attr("AttributeID"), $(this).parent().attr("AttributeName"), $(this).parent().attr("AttributeElementID"), $(this).parent().attr("AttributeElementName"));
+				}
+				else {
+					$(this).parent().find("label").attr("class", "");
+
+					// 하단부 선택한 쇼핑몰 데이터 삭제
+					deleteDataContainerItem($(this).parent().attr("AttributeID"), $(this).parent().attr("AttributeElementID"));
+				}
+
+				// 쇼핑몰 선택시 기타 옵션 삭제
+				deleteListOptions();
+
+				// 선택한 조건 refresh
+				updateSelectedAttrUI();
+
+				// 체크 변경에 따른 Event 발생.
+				if (searchBox.eventHandlers.MallList_OnChange != null) {
+					var eventArg = new Object();
+
+					eventArg.CheckedMallId = $(this).parent().attr("AttributeElementID");
+					eventArg.CheckedState = ($(this).parent().find("label").attr("class") == "") ? "off" : "on";
+					eventArg.CheckedItemType = $(this).parent().attr("AttributeID");
+					eventArg.SelectedAttributes = selectedFullAttributeDataObject.outData();
+
+					searchBox.eventHandlers.MallList_OnChange(document.getElementById(searchBox.ID), eventArg);
+				}
+			});
+		};
+
+		// 쇼핑몰 리스트 클릭 이벤트 최초 바인드
+		mallListAnchorBind();
+
+		// 쇼핑몰 리스트 상의 '전체' 버튼 바인드
+		$("#" + searchBox.ID).find("#" + searchBox.divMallList).find("div[class=s_opt]").find("a").bind("click", function() {
+
+			if (searchBox.eventHandlers.MallListAllButton_OnClick != null) {
+				var eventArg = new Object();
+
+				eventArg.MallStyle = $(this).attr("rel");
+
+				searchBox.eventHandlers.MallListAllButton_OnClick(document.getElementById(searchBox.ID), eventArg);
+			}
+		});
+
+
+		var makerListAnchorBind = function() {
+			// 제조사 리스트 체크박스 바인드
+			$("#" + searchBox.ID).find("#divMakerCheckList").find("input").bind("click", function() {
+
+				if ($(this).parent().find("label").attr("class") == "") {
+					$(this).parent().find("label").attr("class", "checkbox-checked");
+
+					// 하단부 선택한 제조사 데이터 입력
+					insertDataContainerItem($(this).parent().attr("AttributeID"), $(this).parent().attr("AttributeName"), $(this).parent().attr("AttributeElementID"), $(this).parent().attr("AttributeElementName"));
+				}
+				else {
+					$(this).parent().find("label").attr("class", "");
+
+					// 하단부 선택한 제조사 데이터 삭제
+					deleteDataContainerItem($(this).parent().attr("AttributeID"), $(this).parent().attr("AttributeElementID"));
+				}
+
+				// 제조사 선택시 기타 옵션 삭제
+				deleteListOptions();
+
+				// 선택한 조건 refresh
+				updateSelectedAttrUI();
+
+				// 체크 변경에 따른 Event 발생.
+				if (searchBox.eventHandlers.MakerList_OnChange != null) {
+					var eventArg = new Object();
+
+					eventArg.CheckedMakerId = $(this).parent().attr("AttributeElementID");
+					eventArg.CheckedState = ($(this).parent().find("label").attr("class") == "") ? "off" : "on";
+					eventArg.CheckedItemType = $(this).parent().attr("AttributeID");
+					eventArg.SelectedAttributes = selectedFullAttributeDataObject.outData();
+
+					searchBox.eventHandlers.MakerList_OnChange(document.getElementById(searchBox.ID), eventArg);
+				}
+			});
+		};
+
+		// 제조사 리스트 클릭 이벤트 최초 바인드
+		makerListAnchorBind();
+
+		// 제조사 리스트 상의 '전체' 버튼 바인드
+		$("#" + searchBox.ID).find("#btnMakerListAll").bind("click", function() {
+			if (searchBox.eventHandlers.MakerListAllButton_OnClick != null) {
+				var eventArg = new Object();
+
+				searchBox.eventHandlers.MakerListAllButton_OnClick(document.getElementById(searchBox.ID), eventArg);
+			}
+		});
+
+		
+		// 리스팅타입 버튼 바인드
+		$("#" + searchBox.ID).find("#divListingTypeBtns").find("a").bind("click", function() {
+			// 버튼 별로 셋팅
+			searchBox.setListingType($(this).attr("viewtype"));
+		});
+
+
+		// 선택한 조건을 출력할 Html을 가져옴
+		var paramDataToHtml = function(arrayResult) {
+			var retHtml = "";
+			var tempElemName = "";
+
+			for (var idx = 0; idx < arrayResult.length; idx++) {
+
+				switch (arrayResult[idx].AttributeID) {
+					case "IsDcCard":
+					case "IsStyleSearch":
+					case "IsSoldOut":
+					case "IsSellingPlan":
+						tempElemName = " [" + arrayResult[idx].AttributeName + "] " + arrayResult[idx].AttributeElementName;
+						break;
+					case "IsShippingPriceFree":
+					case "HasNointerestData":
+					case "HasCouponData":
+					case "HasEventData":
+					case "HasPoint":
+					case "ImageGroupID":
+						tempElemName = arrayResult[idx].AttributeElementName;
+						break;
+					default:
+						tempElemName = arrayResult[idx].AttributeName + " [" + arrayResult[idx].AttributeElementName + "]";
+						break;
+				}
+
+				retHtml += "<li AttributeID='" + arrayResult[idx].AttributeID + "' ><a AttributeElementID='" + arrayResult[idx].AttributeElementID + "' AttributeID='" + arrayResult[idx].AttributeID + "' title='삭제' style='cursor:pointer;'></a><span title='" + tempElemName + "'>" + gStringCut(tempElemName, 13) + "</span></li>"
+				// retHtml += "<li AttributeID='" + arrayResult[idx].AttributeID + "' ><a AttributeElementID='" + arrayResult[idx].AttributeElementID + "' AttributeID='" + arrayResult[idx].AttributeID + "' title='삭제' style='cursor:pointer;'></a><span title='" + tempElemName + "'>" + tempElemName + "</span></li>"
+			}
+
+			return retHtml;
+		};
+
+		// '선택한 조건' 다시 그리기
+		var updateSelectedAttrUI = function() {
+			var arrayAttr = selectedFullAttributeDataObject.notInArray(defaultAttributeDataObject.arrayObjectSet);
+
+			// 출력할 리스트가 있는 경우
+			if (arrayAttr.length > 0) {
+				$("#" + searchBox.ID).find("#ddSelectedAttrList").removeClass("snone");
+				$("#" + searchBox.ID).find("#ulSelectedAttrList").show();
+				$("#" + searchBox.ID).find("#ulSelectedAttrListNoItem").hide();
+
+				// List에 채워넣기
+				$("#" + searchBox.ID).find("#ulSelectedAttrList").html(paramDataToHtml(arrayAttr));
+
+				// '선택한 조건' 이벤트 바인드
+				selectedAttrEventBind();
+
+				// '해제' 버튼 바인드
+				$("#" + searchBox.ID).find("#btnSelectedAttrUnCheckAll").bind("click", function() {
+					// 전체 해제
+					removeSelectedAttrAll();
+				});
+
+				// '선택한 조건'이 1개라도 존재하면 윙을 확장하고 선택한 조건 창을 연다.
+				expandWing();
+				openSelectedAttr();
+			}
+			else {
+				$("#" + searchBox.ID).find("#ddSelectedAttrList").addClass("snone");
+				$("#" + searchBox.ID).find("#ulSelectedAttrList").hide();
+				$("#" + searchBox.ID).find("#ulSelectedAttrListNoItem").show();
+
+				// '해제' 버튼 바인드 제거
+				$("#" + searchBox.ID).find("#btnSelectedAttrUnCheckAll").unbind("click");
+			}
+		};
+
+		// 전체 해제
+		var removeSelectedAttrAll = function() {
+			// 선택한 조건 초기화 (페이지가 초기에 들고 있는 상태로 돌리기 위하여 기존의 페이지 스테이트로 원복)
+			//selectedFullAttributeDataObject.initData("");
+			selectedFullAttributeDataObject.initData(decodeURIComponent(searchBox.PageState.SelectedAttributes));
+
+			// 가격대 바 초기화
+			searchBox.selectedMinPrice = searchBox.MinPrice;
+			searchBox.selectedMaxPrice = searchBox.MaxPrice;
+
+			leftSliderPosition = 0;
+			rightSliderPosition = maxBarWidth - widthOfSlideButton;
+
+			// 슬라이드 바 UI refresh
+			updatePriceUI();
+
+			// 색상검색 초기화
+			$("#" + searchBox.ID).find("#divColorPalette").find("a").attr("class", "");
+			$("#" + searchBox.ID).find("#divColorPalette").find("a[AttributeElementID=0]").attr("class", "on");		// '전체' 에만 체크
+
+			// 브랜드 리스트 초기화
+			$("#" + searchBox.ID).find("#divBrandCheckList").find("li").find("input").attr("checked", false);
+			$("#" + searchBox.ID).find("#divBrandCheckList").find("li").find("label").attr("class", "");
+
+			// 쇼핑몰 리스트 초기화
+			$("#" + searchBox.ID).find("#" + searchBox.divMallList).find("li").find("input").attr("checked", false);
+			$("#" + searchBox.ID).find("#" + searchBox.divMallList).find("li").find("label").attr("class", "");
+
+			// 제조사 리스트 초기화
+			$("#" + searchBox.ID).find("#divMakerCheckList").find("li").find("input").attr("checked", false);
+			$("#" + searchBox.ID).find("#divMakerCheckList").find("li").find("label").attr("class", "");
+
+			// 할인율 리스트 초기화
+			$("#" + searchBox.ID).find("#divPBPRateBtns").find("input").attr("checked", false);
+			$("#" + searchBox.ID).find("#divPBPRateBtns").find("label").attr("class", "");
+
+			// 초기화
+			searchBox.MinPBPRate = 0;
+			searchBox.MaxPBPRate = 100;
+
+			// '선택한 조건' 다시 그리기
+			updateSelectedAttrUI();
+
+			// 전체 삭제에 따른 이벤트 발생
+			if (searchBox.eventHandlers.SelectedAttributeUncheckAllBtn_OnClick != null) {
+				var eventArg = new Object();
+
+				eventArg.SelectedAttributes = selectedFullAttributeDataObject.outData();
+
+				searchBox.eventHandlers.SelectedAttributeUncheckAllBtn_OnClick(document.getElementById(searchBox.ID), eventArg);
+			}
+		};
+
+		// '선택한 조건' 삭제 이벤트 바인드
+		var selectedAttrEventBind = function() {
+			$("#" + searchBox.ID).find("#ulSelectedAttrList").find("a").bind("click", function() {
+				// 데이터 삭제
+				deleteDataContainerItem($(this).attr("AttributeID"), $(this).attr("AttributeElementID"));
+
+				switch ($(this).attr("AttributeID")) {
+					case "ImageColorMask":
+						$("#" + searchBox.ID).find("#divColorPalette").find("a[AttributeElementID=" + $(this).attr("AttributeElementID") + "]").attr("class", "");
+
+						// 만약 선택 항목이 하나도 없다면 전체 선택을 체크
+						if ($("#" + searchBox.ID).find("#divColorPalette").find("a[class=on]").length < 1)
+							$("#" + searchBox.ID).find("#divColorPalette").find("a[AttributeElementID=0]").attr("class", "on");
+
+						// 체크 변경에 따른 Event 발생.
+						if (searchBox.eventHandlers.ColorList_OnChange != null) {
+							var eventArg = new Object();
+
+							eventArg.CheckedColorId = $(this).attr("AttributeElementID");
+							eventArg.CheckedState = "off";
+							eventArg.CheckedItemType = $(this).attr("AttributeID");
+							eventArg.SelectedAttributes = selectedFullAttributeDataObject.outData();
+
+							searchBox.eventHandlers.ColorList_OnChange(document.getElementById(searchBox.ID), eventArg);
+						}
+						break;
+					case "Brand":
+						// 브랜드 리스트 상 체크해제
+						$("#" + searchBox.ID).find("#divBrandCheckList").find("li[AttributeElementID=" + $(this).attr("AttributeElementID") + "]").find("input").attr("checked", false);
+						$("#" + searchBox.ID).find("#divBrandCheckList").find("li[AttributeElementID=" + $(this).attr("AttributeElementID") + "]").find("label").attr("class", "");
+
+						// 브랜드 선택시 기타 옵션 삭제
+						deleteListOptions();
+
+						// 체크 변경에 따른 Event 발생.
+						if (searchBox.eventHandlers.BrandList_OnChange != null) {
+							var eventArg = new Object();
+
+							eventArg.CheckedBrandId = $(this).attr("AttributeElementID");
+							eventArg.CheckedState = "off";
+							eventArg.CheckedItemType = $(this).attr("AttributeID");
+							eventArg.SelectedAttributes = selectedFullAttributeDataObject.outData();
+
+							searchBox.eventHandlers.BrandList_OnChange(document.getElementById(searchBox.ID), eventArg);
+						}
+						break;
+					case "Mall":
+						// 쇼핑몰 리스트 상 체크해제
+						$("#" + searchBox.ID).find("#" + searchBox.divMallList).find("li[AttributeElementID=" + $(this).attr("AttributeElementID") + "]").find("input").attr("checked", false);
+						$("#" + searchBox.ID).find("#" + searchBox.divMallList).find("li[AttributeElementID=" + $(this).attr("AttributeElementID") + "]").find("label").attr("class", "");
+
+						// 쇼핑몰 선택시 기타 옵션 삭제
+						deleteListOptions();
+
+						// 체크 변경에 따른 Event 발생.
+						if (searchBox.eventHandlers.MallList_OnChange != null) {
+							var eventArg = new Object();
+
+							eventArg.CheckedMallId = $(this).attr("AttributeElementID");
+							eventArg.CheckedState = "off";
+							eventArg.CheckedItemType = $(this).attr("AttributeID");
+							eventArg.SelectedAttributes = selectedFullAttributeDataObject.outData();
+
+							searchBox.eventHandlers.MallList_OnChange(document.getElementById(searchBox.ID), eventArg);
+						}
+						break;
+					case "Maker":
+						// 제조사 리스트 상 체크해제
+						$("#" + searchBox.ID).find("#divMakerCheckList").find("li[AttributeElementID=" + $(this).attr("AttributeElementID") + "]").find("input").attr("checked", false);
+						$("#" + searchBox.ID).find("#divMakerCheckList").find("li[AttributeElementID=" + $(this).attr("AttributeElementID") + "]").find("label").attr("class", "");
+
+						// 제조사 선택시 기타 옵션 삭제
+						deleteListOptions();
+
+						// 체크 변경에 따른 Event 발생.
+						if (searchBox.eventHandlers.MakerList_OnChange != null) {
+							var eventArg = new Object();
+
+							eventArg.CheckedMakerId = $(this).attr("AttributeElementID");
+							eventArg.CheckedState = "off";
+							eventArg.CheckedItemType = $(this).attr("AttributeID");
+							eventArg.SelectedAttributes = selectedFullAttributeDataObject.outData();
+
+							searchBox.eventHandlers.MakerList_OnChange(document.getElementById(searchBox.ID), eventArg);
+						}
+						break;
+					case "VitemPriceRange":
+						// 가격 슬라이드 바 refresh (최대 최소값으로)
+						searchBox.selectedMinPrice = searchBox.MinPrice;
+						searchBox.selectedMaxPrice = searchBox.MaxPrice;
+
+						leftSliderPosition = 0;
+						rightSliderPosition = maxBarWidth - widthOfSlideButton;
+
+						// 슬라이드 바 UI refresh
+						updatePriceUI();
+
+						// 가격대 선택시 기타 옵션 삭제
+						deleteListOptions();
+
+						// 값 변경에 따른 Event 발생.
+						if (searchBox.eventHandlers.Price_OnChange != null) {
+							var eventArg = new Object();
+
+							eventArg.SelectedMaxPrice = searchBox.selectedMaxPrice;
+							eventArg.SelectedMinPrice = searchBox.selectedMinPrice;
+							eventArg.SelectedAttributes = selectedFullAttributeDataObject.outData();
+
+							searchBox.eventHandlers.Price_OnChange(document.getElementById(searchBox.ID), eventArg);
+						}
+						break;
+					case "IsDcCard":
+						// 카드할인상품 여부 변경에 따른 Event 발생.
+						if (searchBox.eventHandlers.IsDcCard_OnChange != null) {
+							var eventArg = new Object();
+
+							eventArg.IsDcCard = false;
+							eventArg.SelectedAttributes = selectedFullAttributeDataObject.outData();
+
+							searchBox.eventHandlers.IsDcCard_OnChange(document.getElementById(searchBox.ID), eventArg);
+						}
+						break;	
+					case "IsStyleSearch":
+						// 스타일서치 여부 변경에 따른 Event 발생.
+						if (searchBox.eventHandlers.IsStyleSearch_OnChange != null) {
+							var eventArg = new Object();
+
+							eventArg.IsStyleSearch = false;
+							eventArg.SelectedAttributes = selectedFullAttributeDataObject.outData();
+
+							searchBox.eventHandlers.IsStyleSearch_OnChange(document.getElementById(searchBox.ID), eventArg);
+						}
+						break;
+					case "IsSoldOut":
+						// 판매중단상품 여부 변경에 따른 Event 발생.
+						if (searchBox.eventHandlers.IsSoldOut_OnChange != null) {
+							var eventArg = new Object();
+
+							eventArg.IsSoldOut = false;
+							eventArg.SelectedAttributes = selectedFullAttributeDataObject.outData();
+
+							searchBox.eventHandlers.IsSoldOut_OnChange(document.getElementById(searchBox.ID), eventArg);
+						}
+						break;
+					case "IsSellingPlan":
+						// 판매예정상품 여부 변경에 따른 Event 발생.
+						if (searchBox.eventHandlers.IsSellPlan_OnChange != null) {
+							var eventArg = new Object();
+
+							eventArg.IsSellPlan = false;
+							eventArg.SelectedAttributes = selectedFullAttributeDataObject.outData();
+
+							searchBox.eventHandlers.IsSellPlan_OnChange(document.getElementById(searchBox.ID), eventArg);
+						}
+						break;
+					case "IsShippingPriceFree":
+						// 혜택: 무료배송 여부 변경에 따른 Event 발생.
+						if (searchBox.eventHandlers.IsShippingPriceFree_OnChange != null) {
+							var eventArg = new Object();
+
+							eventArg.IsShippingPriceFree = false;
+							eventArg.SelectedAttributes = selectedFullAttributeDataObject.outData();
+
+							searchBox.eventHandlers.IsShippingPriceFree_OnChange(document.getElementById(searchBox.ID), eventArg);
+						}
+						break;
+					case "HasNointerestData":
+						// 혜택: 무이자 여부 변경에 따른 Event 발생.
+						if (searchBox.eventHandlers.HasNointerestData_OnChange != null) {
+							var eventArg = new Object();
+
+							eventArg.HasNointerestData = false;
+							eventArg.SelectedAttributes = selectedFullAttributeDataObject.outData();
+
+							searchBox.eventHandlers.HasNointerestData_OnChange(document.getElementById(searchBox.ID), eventArg);
+						}
+						break;
+					case "HasCouponData":
+						// 혜택: 쿠폰 여부 변경에 따른 Event 발생.
+						if (searchBox.eventHandlers.HasCouponData_OnChange != null) {
+							var eventArg = new Object();
+
+							eventArg.HasCouponData = false;
+							eventArg.SelectedAttributes = selectedFullAttributeDataObject.outData();
+
+							searchBox.eventHandlers.HasCouponData_OnChange(document.getElementById(searchBox.ID), eventArg);
+						}
+						break;
+					case "HasEventData":
+						// 혜택: 이벤트 여부 변경에 따른 Event 발생.
+						if (searchBox.eventHandlers.HasEventData_OnChange != null) {
+							var eventArg = new Object();
+
+							eventArg.HasEventData = false;
+							eventArg.SelectedAttributes = selectedFullAttributeDataObject.outData();
+
+							searchBox.eventHandlers.HasEventData_OnChange(document.getElementById(searchBox.ID), eventArg);
+						}
+						break;
+					case "HasPoint":
+						// 혜택: 적립금 여부 변경에 따른 Event 발생.
+						if (searchBox.eventHandlers.HasPoint_OnChange != null) {
+							var eventArg = new Object();
+
+							eventArg.HasPoint = false;
+							eventArg.SelectedAttributes = selectedFullAttributeDataObject.outData();
+
+							searchBox.eventHandlers.HasPoint_OnChange(document.getElementById(searchBox.ID), eventArg);
+						}
+						break;
+					// VItemAttrs 는  AttributeID가 해당 속성원 ID(숫자)이므로 정해진 AttributeID를 제외한 모두는 VItemAttrs                                                  
+					case "VItemAttrs":
+					default:
+						// 속성, 속성원 변경에 따른 Event 발생.
+						if (searchBox.eventHandlers.VItemAttrs_OnChange != null) {
+							var eventArg = new Object();
+
+							eventArg.VItemAttrID = $(this).attr("AttributeID");
+							eventArg.VItemAttrElemID = $(this).attr("AttributeElementID");
+							eventArg.SelectedAttributes = selectedFullAttributeDataObject.outData();
+
+							searchBox.eventHandlers.VItemAttrs_OnChange(document.getElementById(searchBox.ID), eventArg);
+						}
+						break;
+				}
+
+				// 삭제 후 UI 다시 그려주기
+				updateSelectedAttrUI();
+			});
+		};
+
+		// selectedAttributeDataObject들을 selectedAttr 기준으로 수정
+		// 화면을 다시 그려주기 위한 스테이트를 IsChangedObject에 담아서 출력
+		var initAttributeData = function(selectedAttr, IsChangedObject) {
+			var tempFullAttributeDataObject = new AttributeDataObject({ "InputData": selectedAttr });
+
+			// 색상검색 수정여부 체크 및 데이터 교환
+			var colorArrayOriginal = selectedFullAttributeDataObject.getColors();
+			var colorArrayModified = tempFullAttributeDataObject.getColors();
+
+			if (AttributeDataObject.compareArrayWithArray(colorArrayOriginal, colorArrayModified) == 0) {
+				IsChangedObject.Color = false;
+			}
+			else {
+				IsChangedObject.Color = true;
+			}
+			// 메모리 해제
+			colorArrayOriginal = colorArrayModified = null;
+
+			// 브랜드 수정여부 체크 및 데이터 교환
+			var brandArrayOriginal = selectedFullAttributeDataObject.getBrands();
+			var brandArrayModified = tempFullAttributeDataObject.getBrands();
+
+			if (AttributeDataObject.compareArrayWithArray(brandArrayOriginal, brandArrayModified) == 0) {
+				IsChangedObject.Brand = false;
+			}
+			else {
+				IsChangedObject.Brand = true;
+			}
+			// 메모리 해제
+			brandArrayOriginal = brandArrayModified = null;
+
+
+			// 쇼핑몰 수정여부 체크 및 데이터 교환
+			var mallArrayOriginal = selectedFullAttributeDataObject.getMalls();
+			var mallArrayModified = tempFullAttributeDataObject.getMalls();
+
+			if (AttributeDataObject.compareArrayWithArray(mallArrayOriginal, mallArrayModified) == 0) {
+				IsChangedObject.Mall = false;
+			}
+			else {
+				IsChangedObject.Mall = true;
+			}
+			// 메모리 해제
+			mallArrayOriginal = mallArrayModified = null;
+
+
+			// 제조사 수정여부 체크 및 데이터 교환
+			var makerArrayOriginal = selectedFullAttributeDataObject.getMakers();
+			var makerArrayModified = tempFullAttributeDataObject.getMakers();
+
+			if (AttributeDataObject.compareArrayWithArray(makerArrayOriginal, makerArrayModified) == 0) {
+				IsChangedObject.Maker = false;
+			}
+			else {
+				IsChangedObject.Maker = true;
+			}
+			// 메모리 해제
+			makerArrayOriginal = makerArrayModified = null;
+
+
+			// 가격대 수정여부 체크 및 데이터 교환
+			var priceArrayOriginal = selectedFullAttributeDataObject.getMakers();
+			var priceArrayModified = tempFullAttributeDataObject.getMakers();
+
+			if (AttributeDataObject.compareArrayWithArray(priceArrayOriginal, priceArrayModified) == 0) {
+				IsChangedObject.VitemPriceRange = false;
+			}
+			else {
+				IsChangedObject.VitemPriceRange = true;
+			}
+			// 메모리 해제
+			priceArrayOriginal = priceArrayModified = null;
+
+
+			// 할인율 수정여부 체크 및 데이터 교환
+			var PBPRateArrayOriginal = selectedFullAttributeDataObject.getPBPRates();
+			var PBPRateArrayModified = tempFullAttributeDataObject.getPBPRates();
+
+			if (AttributeDataObject.compareArrayWithArray(PBPRateArrayOriginal, PBPRateArrayModified) == 0) {
+				IsChangedObject.PBPRateRange = false;
+			}
+			else {
+				IsChangedObject.PBPRateRange = true;
+			}
+			// 메모리 해제
+			PBPRateArrayOriginal = PBPRateArrayModified = null;
+
+
+			// 변경된 AttributeDataObject로 수정
+			selectedFullAttributeDataObject = tempFullAttributeDataObject;
+
+			// '선택한 조건' 다시 그리기
+			updateSelectedAttrUI();
+		};
+
+		// 선택된 색상검색 목록의 모든 항목 다시 바인드 및 그리기
+		var redrawColorSelectedAttr = function() {
+			// 색상 검색 상의 모든 체크 해제
+			$("#" + searchBox.ID).find("#divColorPalette").find("a").attr("class", "");
+
+			var ColorList = selectedFullAttributeDataObject.getColors();
+
+			// 선택된 리스트가 없으면 전체 선택
+			if (ColorList.length < 1) {
+				$("#" + searchBox.ID).find("#divColorPalette").find("a[AttributeElementID=0]").attr("class", "on");
+			}
+			else {
+				for (var idx = 0; idx < ColorList.length; idx++) {
+					$("#" + searchBox.ID).find("#divColorPalette").find("a[AttributeElementID=" + ColorList[idx].AttributeElementID + "]").attr("class", "on");
+				}
+			}
+		};
+
+		// 선택된 브랜드 목록의 모든 항목 다시 바인드 및 그리기
+		var redrawBrandSelectedAttr = function() {
+			// 브랜드 리스트 상의 모든 체크 해제
+			$("#" + searchBox.ID).find("#divBrandCheckList").find("input").attr("checked", false);
+			$("#" + searchBox.ID).find("#divBrandCheckList").find("label").attr("class", "");
+
+			var BrandList = selectedFullAttributeDataObject.getBrands();
+
+			for (var idx = 0; idx < BrandList.length; idx++) {
+				$("#" + searchBox.ID).find("#divBrandCheckList").find("li[AttributeElementID=" + BrandList[idx].AttributeElementID + "]").find("input").attr("checked", true);
+				$("#" + searchBox.ID).find("#divBrandCheckList").find("li[AttributeElementID=" + BrandList[idx].AttributeElementID + "]").find("label").attr("class", "checkbox-checked");
+			}
+		};
+
+		// 선택된 쇼핑몰 목록의 모든 항목 다시 바인드 및 그리기
+		var redrawMallSelectedAttr = function() {
+			// 쇼핑몰 리스트 상의 모든 체크 해제
+			$("#" + searchBox.ID).find("#" + searchBox.divMallList).find("input").attr("checked", false);
+			$("#" + searchBox.ID).find("#" + searchBox.divMallList).find("label").attr("class", "");
+
+			var MallList = selectedFullAttributeDataObject.getMalls();
+
+			for (var idx = 0; idx < MallList.length; idx++) {
+				$("#" + searchBox.ID).find("#" + searchBox.divMallList).find("li[AttributeElementID=" + MallList[idx].AttributeElementID + "]").find("input").attr("checked", true);
+				$("#" + searchBox.ID).find("#" + searchBox.divMallList).find("li[AttributeElementID=" + MallList[idx].AttributeElementID + "]").find("label").attr("class", "checkbox-checked");
+			}
+		};
+
+		// 선택된 제조사 목록의 모든 항목 다시 바인드 및 그리기
+		var redrawMakerSelectedAttr = function() {
+			// 제조사 리스트 상의 모든 체크 해제
+			$("#" + searchBox.ID).find("#divMakerCheckList").find("input").attr("checked", false);
+			$("#" + searchBox.ID).find("#divMakerCheckList").find("label").attr("class", "");
+
+			var MakerList = selectedFullAttributeDataObject.getMakers();
+
+			for (var idx = 0; idx < MakerList.length; idx++) {
+				$("#" + searchBox.ID).find("#divMakerCheckList").find("li[AttributeElementID=" + MakerList[idx].AttributeElementID + "]").find("input").attr("checked", true);
+				$("#" + searchBox.ID).find("#divMakerCheckList").find("li[AttributeElementID=" + MakerList[idx].AttributeElementID + "]").find("label").attr("class", "checkbox-checked");
+			}
+		};
+
+		// 선택된 가격대 목록의 모든 항목 다시 바인드 및 그리기
+		var redrawPriceSelectedAttr = function() {
+			// 제조사 리스트 상의 모든 체크 해제
+
+			var PriceList = selectedFullAttributeDataObject.getVItemPrices();
+
+			if (PriceList.length > 0) {
+				var Prices = PriceList[0].AttributeElementID.split('|');
+
+				searchBox.selectedMinPrice = parseInt(Prices[0]);
+				if (searchBox.selectedMinPrice < 0 || searchBox.selectedMinPrice < searchBox.MinPrice)
+					searchBox.selectedMinPrice = searchBox.MinPrice;
+
+				searchBox.selectedMaxPrice = parseInt(Prices[1]);
+				if (searchBox.selectedMaxPrice < 0 || searchBox.selectedMaxPrice > searchBox.MaxPrice)
+					searchBox.selectedMaxPrice = searchBox.MaxPrice;
+
+				// 슬라이드 위치 계산
+				leftSliderPosition = parseInt(parseFloat(searchBox.selectedMinPrice - searchBox.MinPrice) * parseFloat(searchBox.BarRangeWidth) / parseFloat(searchBox.MinMaxGap));
+				rightSliderPosition = parseInt(parseFloat(searchBox.selectedMaxPrice - searchBox.MinPrice) * parseFloat(searchBox.BarRangeWidth) / parseFloat(searchBox.MinMaxGap)) + parseInt(widthOfSlideButton);
+			}
+			else {
+				searchBox.selectedMinPrice = searchBox.MinPrice;
+				searchBox.selectedMaxPrice = searchBox.MaxPrice;
+				// 좌측 슬라이더 위치
+				leftSliderPosition = 0;
+				// 우측 슬라이더 위치
+				rightSliderPosition = parseInt(maxBarWidth - widthOfSlideButton);
+			}
+
+			// UI 갱신
+			updatePriceUI();
+		};
+
+		// 선택된 할인율 목록의 모든 항목 다시 바인드 및 그리기
+		var redrawPBPRateSelectedAttr = function() {
+			// 할인율 리스트 상의 모든 체크 해제
+			$("#" + searchBox.ID).find("#divPBPRateBtns").find("input").attr("checked", false);
+			$("#" + searchBox.ID).find("#divPBPRateBtns").find("label").attr("class", "");
+
+			var PBPRateList = selectedFullAttributeDataObject.getPBPRates();
+
+			if (PBPRateList.length > 0) {
+				var MinMaxPBPRates = PBPRateList[0].AttributeElementID.split('|');
+
+				searchBox.MinPBPRate = parseInt(MinMaxPBPRates[0]);
+				searchBox.MaxPBPRate = parseInt(MinMaxPBPRates[1]);
+
+				var PBPRate = selectedFullAttributeDataObject.getPBPRate(PBPRateList[0]);
+
+				// 화면상에 체크
+				$("#" + searchBox.ID).find("#divPBPRateBtns").find("li[PBPRate=" + PBPRate + "]").find("input").attr("checked", true);
+				$("#" + searchBox.ID).find("#divPBPRateBtns").find("li[PBPRate=" + PBPRate + "]").find("label").attr("class", "checkbox-checked");
+			}
+		};
+
+		// 리스트 부분의 옵션들을 삭제하는 메서드
+		var deleteListOptions = function() {
+			deleteDataContainerItem("IsDcCard");								// 카드할인상품
+			deleteDataContainerItem("IsStyleSearch");           // 스타일검색
+			deleteDataContainerItem("IsSoldOut");               // 판매상태 : 판매중단상품
+			deleteDataContainerItem("IsSellingPlan");               // 판매상태 : 판매예정상품
+			deleteDataContainerItem("IsShippingPriceFree");   // 혜택 : 무료배송
+			deleteDataContainerItem("HasNointerestData");    // 혜택 : 무이자
+			deleteDataContainerItem("HasCouponData");       // 혜택 : 쿠폰
+			deleteDataContainerItem("HasEventData");          // 혜택 : 이벤트
+			deleteDataContainerItem("HasPoint");                // 혜택 : 적립금
+		};
+
+		// 현재의 SearchWing 설정용 외부 노출 메서드 시작
+
+		// 리스팅 타입 변경
+		searchBox.setListingType = function(listingType) {
+			// 다른 리스트 버튼 디자인 초기화
+			$("#" + searchBox.ID).find("#divListingTypeBtns").find("a.on").attr("class", "");
+			// 현재 버튼 업
+			$("#" + searchBox.ID + "_ha" + listingType).attr("class", "on");
+
+			var eventArg = new Object();
+			eventArg.ViewType = listingType;
+
+			searchBox.ViewType = listingType;
+
+			// 버튼에 따라 이벤트 발생
+			switch (listingType) {
+				case "ListView":
+					if (searchBox.eventHandlers.haListView_OnClick != null)
+						searchBox.eventHandlers.haListView_OnClick(document.getElementById(searchBox.ID), eventArg);
+					break;
+				case "ImageView":
+					if (searchBox.eventHandlers.haImageView_OnClick != null)
+						searchBox.eventHandlers.haImageView_OnClick(document.getElementById(searchBox.ID), eventArg);
+					break;
+				case "MiddleImageView":
+					if (searchBox.eventHandlers.haMiddleImageView_OnClick != null)
+						searchBox.eventHandlers.haMiddleImageView_OnClick(document.getElementById(searchBox.ID), eventArg);
+					break;
+				case "TwoColumnView":
+					if (searchBox.eventHandlers.haTwoColumnView_OnClick != null)
+						searchBox.eventHandlers.haTwoColumnView_OnClick(document.getElementById(searchBox.ID), eventArg);
+					break;
+				case "GroupedCatalogView":
+					if (searchBox.eventHandlers.haGroupedCatalogView_OnClick != null)
+						searchBox.eventHandlers.haGroupedCatalogView_OnClick(document.getElementById(searchBox.ID), eventArg);
+					break;
+			}
+		}
+
+		// 타입별로 아이콘 보이기
+		searchBox.showListingType = function(type) {
+			$("#" + searchBox.ID + "_ha" + type).show();
+		}
+
+		// 타입별로 아이콘 숨기기
+		searchBox.hideListingType = function(type) {
+			$("#" + searchBox.ID + "_ha" + type).hide();
+		}
+
+		searchBox.setAttributes = function(gPageState) {
+			if (gPageState.SelectedAttributes == undefined)
+				return;
+
+			var IsChanged = new Object();
+			IsChanged.Color = false;
+			IsChanged.Brand = false;
+			IsChanged.Mall = false;
+			IsChanged.Maker = false;
+			IsChanged.VitemPriceRange = false;
+			IsChanged.PBPRateRange = false;
+
+			// 받은 데이터로 수정
+			searchBox.defaultSelectedAttributes = decodeURIComponent(gPageState.SelectedAttributes);
+
+			// 데이터 수정
+			initAttributeData(searchBox.defaultSelectedAttributes, IsChanged);
+
+			// 색상검색 데이터가 변경되었을때만 redraw
+			if (IsChanged.Color) {
+				// 선택된 브랜드 목록의 모든 항목 다시 바인드 및 그리기
+				redrawColorSelectedAttr();
+			}
+
+			// 브랜드 데이터가 변경되었을때만 redraw
+			if (IsChanged.Brand) {
+				// 선택된 브랜드 목록의 모든 항목 다시 바인드 및 그리기
+				redrawBrandSelectedAttr();
+			}
+
+			// 쇼핑몰 데이터가 변경되었을때만 redraw
+			if (IsChanged.Mall) {
+				// 선택된 쇼핑몰 목록의 모든 항목 다시 바인드 및 그리기
+				redrawMallSelectedAttr();
+			}
+
+			// 제작사 데이터가 변경되었을때만 redraw
+			if (IsChanged.Maker) {
+				// 선택된 쇼핑몰 목록의 모든 항목 다시 바인드 및 그리기
+				redrawMakerSelectedAttr();
+			}
+
+			// 가격대 데이터가 변경되었을때만 redraw
+			if (IsChanged.VitemPriceRange) {
+				// 선택된 쇼핑몰 목록의 모든 항목 다시 바인드 및 그리기
+				redrawPriceSelectedAttr();
+			}
+
+			// 할인율 데이터가 변경되었을때만 redraw
+			if (IsChanged.PBPRateRange) {
+				// 선택된 쇼핑몰 목록의 모든 항목 다시 바인드 및 그리기
+				redrawPBPRateSelectedAttr();
+			}
+
+			// FindingType에 따라 화면 상의 List 조건 변경
+			if (gPageState.FindingType != undefined) {
+				// LP, SRP
+				if (searchBox.SearchWingLayoutType == "LP" || searchBox.SearchWingLayoutType == "SRP") {
+					// All / AllMitem / Catalog
+					if (gPageState.FindingType == "All" || gPageState.FindingType == "AllMItem" || gPageState.FindingType == "Catalog") {
+						$("#" + searchBox.ID + "_haListView").show();
+						$("#" + searchBox.ID + "_haImageView").show();
+						$("#" + searchBox.ID + "_haMiddleImageView").show();
+						$("#" + searchBox.ID + "_haTwoColumnView").show();
+						$("#" + searchBox.ID + "_haGroupedCatalogView").show();
+					}
+					else {
+						$("#" + searchBox.ID + "_haListView").show();
+						$("#" + searchBox.ID + "_haImageView").show();
+						$("#" + searchBox.ID + "_haMiddleImageView").show();
+						$("#" + searchBox.ID + "_haTwoColumnView").show();
+						$("#" + searchBox.ID + "_haGroupedCatalogView").hide();
+
+						if (gPageState.ViewType != undefined && gPageState.ViewType == "GroupedCatalogView") {
+							gPageState.ViewType = "ListView";
+						}
+					}
+				}
+				// 백화점, 클럽엣지
+				else if (searchBox.SearchWingLayoutType == "Department" || searchBox.SearchWingLayoutType == "TopFashion") {
+					$("#" + searchBox.ID + "_haListView").show();
+					$("#" + searchBox.ID + "_haImageView").show();
+					$("#" + searchBox.ID + "_haMiddleImageView").show();
+					$("#" + searchBox.ID + "_haTwoColumnView").show();
+					$("#" + searchBox.ID + "_haGroupedCatalogView").hide();
+
+					if (gPageState.ViewType != undefined && gPageState.ViewType == "GroupedCatalogView") {
+						gPageState.ViewType = "ListView";
+					}
+				}
+				// 패션앳 & 해외쇼핑 & 기타 : 리스트, 이미지, 중이미지형
+				else {
+					$("#" + searchBox.ID + "_haListView").show();
+					$("#" + searchBox.ID + "_haImageView").show();
+					$("#" + searchBox.ID + "_haMiddleImageView").show();
+					$("#" + searchBox.ID + "_haTwoColumnView").hide();
+					$("#" + searchBox.ID + "_haGroupedCatalogView").hide();
+
+					if (gPageState.ViewType != undefined && (gPageState.ViewType == "GroupedCatalogView" || gPageState.ViewType == "TwoColumnView")) {
+						gPageState.ViewType = "ListView";
+					}
+				}
+
+				// viewType 바인드 (먼저 클리어)
+				$("#" + searchBox.ID).find("#divListingTypeBtns").find("a").removeClass("on");
+
+				if (gPageState.ViewType != undefined) {
+					$("#" + searchBox.ID + "_ha" + gPageState.ViewType).addClass("on");
+				}
+
+				searchBox.ViewType = gPageState.ViewType;
+			}
+
+			// 현재 선택된 조건이 하나라도 존재한다면 윙을 확대하고 '선택한 조건' 창을 연다
+			if (selectedFullAttributeDataObject.arrayObjectSet.length > 0) {
+				expandWing();
+				openSelectedAttr();
+			}
+		};
+
+		// 현재의 user control 상태로 gPageState를 업뎃하는 외부 메서드
+		searchBox.copyToPageState = function(gPageState) {
+			selectedFullAttributeDataObject.copyToPageState(gPageState);
+
+			gPageState.ViewType = searchBox.ViewType;
+
+			// encodeURIComponent를 사용하여 인코딩
+			gPageState.SelectedAttributes = encodeURIComponent(gPageState.SelectedAttributes);
+		};
+
+		// 현재 서치윙 보이기
+		searchBox.show = function() {
+			$("#" + searchBox.ID).show();
+		};
+
+		// 현재 서치윙 숨기기
+		searchBox.hide = function() {
+			$("#" + searchBox.ID).hide();
+		};
+
+		// 현재의 SearchWing 설정용 외부 노출 메서드 끝
+
+		// 윙 floating 코드 시작
+		/*사용자 설정 값 시작*/
+		var $doc = $(document);
+		var $layer = $("#" + searchBox.ID); // 레이어 셀렉팅
+		var top = $doc.scrollTop(); //현재 스크롤바 위치  
+		var layerTopOffset = -165;   // 레이어 높이 상한선, 단위:px
+		var minTop = 32;
+		var speed = "fast";     // 따라다닐 속도 : "slow", "normal", or "fast" or numeric(단위:msec)
+		var easing = 'linear'; // 따라다니는 방법 기본 두가지 linear, swing 
+		/*사용자 설정 값 끝*/
+
+		// 스크롤 바를 내린 상태에서 리프레시 했을 경우를 위해  
+		if (top > 0)
+			$doc.scrollTop(layerTopOffset + top);
+		else
+			$doc.scrollTop(0);
+
+		//스크롤이벤트가 발생하면
+		$(window).scroll(function() {
+			// 고정상태가 아닐 때만 수정
+			if (!searchBox.IsFixed) {
+				if (document.getElementById("divWingArea") != undefined)
+					yPosition = $doc.scrollTop() + layerTopOffset - $("#divWingArea")[0].offsetTop;
+				else
+					yPosition = $doc.scrollTop() + layerTopOffset;
+
+				if (yPosition < minTop) yPosition = minTop;
+
+				$layer.animate({ "top": yPosition }, { duration: speed, easing: easing, queue: false });
+			}
+		});
+		// 윙 floating 코드 끝
+
+		// 초기화 설정용
+		searchBox.setAttributes(searchBox.PageState);
+	}
+})(jQuery);
+
+
+OS2.Application.SearchWing = function() {
+}
+
+OS2.Application.SearchWing.init = function(controlID, eventHandlers, pageState) {
+
+if (document.getElementById(controlID) == null || typeof document.getElementById(controlID) === "undefined") {
+	return null;
+}
+
+var searchBox = new Object();
+
+  searchBox.ID = controlID;
+  searchBox.eventHandlers = eventHandlers;
+  searchBox.PageState = new Object();
+  $.extend(searchBox.PageState, pageState);
+
+  jQuery("#" + controlID).searchWing(searchBox);
+
+  return searchBox;
+}

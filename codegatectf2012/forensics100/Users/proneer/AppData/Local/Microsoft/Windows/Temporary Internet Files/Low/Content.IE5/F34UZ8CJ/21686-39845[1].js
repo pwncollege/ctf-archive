@@ -1,0 +1,7 @@
+/* charset "utf-8"; */
+/* Pieces: socialBookmarking */
+/* base_path_placeholder */
+/* @JAVASCRIPT socialBookmarking */
+Core.register("social-Bookmarking",function(a){return{init:function(){a.listen(["SOCIAL-BOOKMARKING"],this.handleNotification,this)},handleNotification:function(h){var b=h.data;var q=null;var r=null;var l=null;var i=null;var f=null;var t=null;var k="";var e="";var s=0;var d=0;var m=0;var o=null;var c=[];var u=0;var g=0;var l=null;var n=[];var p=null;if(!b){b=document.getElementById("review_options")||document.getElementById("socialmedia_options")}var j=$(b);if(j.hasClass("socializated")){return}j.addClass("socializated");q=j.find("ul.social_options")[0];o=b.getElementsByTagName("form")[0];c=o.elements;g=c.length;for(;u<g;u++){l=c[u];i=l.value.split("#");k=i[0];t=i[1];f=i[2];e=l.className;r=document.createElement("li");r.className="iframe_"+e;s=f-1;n=q.getElementsByTagName("li");d=n.length;if(d===0){q.appendChild(r)}else{m=Math.min(s,d);p=n[m-1];$(r).insertAfter(p)}l=document.createElement("iframe");l.frameBorder="0";l.scrolling="no";l.allowTransparency="true";l.style.height=t+"px";l.src=k;r.appendChild(l)}b=q=r=l=i=null;j=c=f=t=k=e=null;s=d=m=o=null;u=g=l=n=p=null},destroy:function(){a.stopListen([],this)}}});
+/* @end JAVASCRIPT socialBookmarking */
+/* js_templates_placeholder */

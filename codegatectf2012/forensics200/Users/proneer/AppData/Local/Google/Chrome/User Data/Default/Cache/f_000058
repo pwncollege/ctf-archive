@@ -1,0 +1,834 @@
+@import "common.css"; 
+
+/*body {background:url(http://img.gomtv.com/images/common/bg_sub_body.gif) repeat-x left top;}*/
+body 
+
+/* google ±¤°í ½ºÅ¸ÀÏ :: Start */
+
+/** ¼öÁ¤ ¹× Ã·°¡ 2008 02 15 **/
+#google_ad {clear:both;width:468px;height:60px;padding:15px 122px 10px 122px;font:11px/14px;border:1px solid #e3e3e3;}
+*html #google_ad {width:715px;height:85px;}
+#google_ad_main {clear:both;width:468px;height:60px;padding:15px 15px 10px 15px;font:11px/14px;border:1px solid #e3e3e3;}
+*html #google_ad_main {width:500px;height:85px;}
+/** ¼öÁ¤ ¹× Ã·°¡ 2008 02 15 **/
+
+/*#google_ad {clear:both;width:683px;height:118px;padding:15px 15px 0 15px;font:11px/14px;border:1px solid #e3e3e3;}
+*html #google_ad {width:715px;height:135px;}*/
+#google_ad .google {display:block;margin-bottom:10px;}
+#google_ad .google a {font:bold 11px dotum,'µ¸¿ò';color:#565656;letter-spacing:-1px;}
+#google_ad p {padding-left:9px;padding-bottom:5px;font:normal 11px/18px dotum,'µ¸¿ò';color:#898989;letter-spacing:-1px;}
+#google_ad p a {font:bold 12px dotum,'µ¸¿ò';color:#FF7100;text-decoration:underline;}
+#google_ad p .url {padding-left:5px;color:#FF7100;}
+
+.google_ad_margin_10_20 {margin:10px 0 20px;}
+.google_ad_margin_10_10 {margin:10px 0 10px;}
+.google_ad_margin_10_0 {margin:10px 0 0px;}
+/* google ±¤°í ½ºÅ¸ÀÏ :: End */
+
+
+/* Header Area Start */
+#products_top {width:900px;min-height:144px;background:url(http://img.gomtv.com/images/products/bg_product_header.gif) no-repeat left bottom;}
+*html #products_top {height:142px;}
+
+#products_top #search_form2 {margin-bottom:13px;background-image:url(http://img.gomtv.com/images/products/bg_product_top_search_form.gif)}
+
+#products_top .products_search {height:91px;padding-top:10px;}
+*html #products_top .products_search {height:101px;}
+#products_top .logo_img {float:left;padding:21px 0 0 8px;}
+
+#products_header_tab {clear:both;height:35px;background:url(http://img.gomtv.com/images/products/bg_top_tab.gif) repeat-x left bottom;}
+#products_header_tab li {float:left;}
+#products_header_tab li.right {float:right;}
+#products_header_tab img {display:block;}
+
+#products_top_bar {width:900px;min-height:26px;padding-top:2px;background:#505050 url(http://img.gomtv.com/images/products/products_top_bar.gif) no-repeat left bottom;}
+*html #products_top_bar {height:26px;}
+#products_top_bar .btn_mytv {float:left;height:25px;padding:0 0 0 12px;margin:1px 113px 0 0;}
+#products_top_bar .btn_channel {float:right;height:25px;margin:1px 0 0 0;padding-right:13px;}
+#products_top_bar .logo {position:relative;float:left;padding:3px 0 0 13px;margin-right:20px;}
+#products_top_bar .logo .layer {position:absolute;left:11px;top:22px;width:101px;height:141px;padding-top:5px;background:url(http://img.gomtv.com/images/openChannel/bg_top_link_layer.gif) no-repeat;}
+#products_top_bar .logo .layer li {padding-left:21px;background:url(http://img.gomtv.com/images/common/bul/bul_13.gif) no-repeat 13px 7px;}
+#products_top_bar .logo .layer li a {font:normal 12px dotum,'µ¸¿ò';color:#B5B5B5;}
+#products_top_bar .logo .layer li a:hover {text-decoration:underline;}
+#products_top_bar .logo .layer li strong {font-weight:bold;color:#FFA200;}
+#products_top_bar .logo .layer2 {position:absolute;left:11px;top:22px;}
+#products_top_bar .logo .layer2 li {padding-left:21px;background:url(http://img.gomtv.com/images/common/bul/bul_13.gif) no-repeat 13px 7px;}
+#products_top_bar .logo .layer2 li a {font:normal 12px dotum,'µ¸¿ò';color:#C9C9C9; text-decoration:none; line-height:18px;}
+#products_top_bar .logo .layer2 li a:hover {text-decoration:underline;}
+#products_top_bar .btn_set {float:right;padding-right:11px;margin-bottom:5px;}
+#products_top_bar .btn_set img {vertical-align:middle;}
+#products_top_bar .btn_set .btn1 {margin-right:7px;}
+#products_top_bar .btn_set .bar {margin:5px 5px 0;}
+
+/* Header Area End */
+
+/* Main Area Start */
+#btn_area {clear:both;height:19px;margin:10px 0 20px;}
+#btn_area ul {height:19px;}
+#btn_area .left {float:left;}
+#btn_area .left li {float:left;padding-right:5px;}
+#btn_area .right {float:right;}
+#btn_area .right li {float:left;padding-left:5px;}
+#btn_area img {display:block;}
+#btn_area_center {clear:both;height:27px;text-align:center;margin:10px 0 20px;}
+#btn_area_center img {display:inline;}
+
+#promotion_area {height:218px;margin-bottom:20px;background:url(http://img.gomtv.com/images/products/promotion_bg.jpg) no-repeat left top;}
+#promotion_area li {float:left;}
+#promotion_area li img {display:block;}
+#promotion_area .prev {width:34px;padding-top:98px;text-align:left;}
+#promotion_area .next {width:34px;padding-top:98px;text-align:right;}
+#promotion_area .link {width:432px;padding-top:28px;}
+
+#subMain_list {clear:both;margin-bottom:20px;}
+#subMain_list h5 {margin-bottom:4px;height:22px;border-bottom:2px solid #a3a3a3;}
+*html #subMain_list h5 {height:24px;}
+#subMain_list .more {float:right;margin-top:-5px;}
+*html #subMain_list .more {float:right;margin-top:-13px;}
+
+#subMain_tab {clear:both;margin-bottom:20px;}
+#subMain_tab h5 {height:19px;}
+#subMain_tab .more {float:right;margin-top:-5px;}
+*html #subMain_tab .more {float:right;margin-top:-13px;}
+
+/* #tab_menu ¼³Á¤ :: Start */
+#subMain_tab #tab_menu {margin-bottom:8px;}
+#tab_menu.tab_1 li a {padding-right:19px;padding-left:16px;}
+*html #tab_menu.tab_1 li a {padding-right:19px;padding-left:15px;}
+#tab_menu.tab_2 li a {padding-right:18px;padding-left:14px;}
+*html #tab_menu.tab_2 li a {padding-right:18px;padding-left:13px;}
+#tab_menu.tab_2 li.on a {padding-right:20px;padding-left:16px;}
+/* #tab_menu ¼³Á¤ :: End */
+
+#subMain_li10 {clear:both;width:500px;overflow:auto;}
+#subMain_li10 a:hover {text-decoration:underline;}
+#subMain_li10 li {float:left;font-family:dotum,'µ¸¿ò';color:#898989;border-bottom:1px solid #ececec;}
+#subMain_li10 .tit {width:380px;height:19px;padding:5px 0 0 35px;font-size:12px;background-repeat:no-repeat;background-position:10px 6px;}
+*html #subMain_li10 .tit {width:415px;height:25px;padding:6px 0 0 35px;}
+#subMain_li10 .date {width:85px;height:18px;padding-top:6px;font-size:11px;text-align:center;}
+*html #subMain_li10 .date {height:25px;padding-top:7px;}
+#subMain_li10 li strong {padding-right:5px;}
+#subMain_li10 .bg {background-color:#f8f8f8}
+#subMain_li10 .l1 {background-image:url(http://img.gomtv.com/images/common/icon/icon_no_1_2.gif);}
+#subMain_li10 .l2 {background-image:url(http://img.gomtv.com/images/common/icon/icon_no_2_2.gif);}
+#subMain_li10 .l3 {background-image:url(http://img.gomtv.com/images/common/icon/icon_no_3_2.gif);}
+#subMain_li10 .l4 {background-image:url(http://img.gomtv.com/images/common/icon/icon_no_4_1.gif);}
+#subMain_li10 .l5 {background-image:url(http://img.gomtv.com/images/common/icon/icon_no_5_1.gif);}
+#subMain_li10 .l6 {background-image:url(http://img.gomtv.com/images/common/icon/icon_no_6_1.gif);}
+#subMain_li10 .l7 {background-image:url(http://img.gomtv.com/images/common/icon/icon_no_7_1.gif);}
+#subMain_li10 .l8 {background-image:url(http://img.gomtv.com/images/common/icon/icon_no_8_1.gif);}
+#subMain_li10 .l9 {background-image:url(http://img.gomtv.com/images/common/icon/icon_no_9_1.gif);}
+#subMain_li10 .l10 {background-image:url(http://img.gomtv.com/images/common/icon/icon_no_10_1.gif);}
+
+#product_info {height:168px;padding:25px 0 0 7px;margin-bottom:20px;background:url(http://img.gomtv.com/images/products/bg_products.gif) no-repeat left top;}
+*html #product_info {height:193px;}
+#product_info dt {position:relative;float:left;width:264px;margin-right:30px;text-align:center;}
+#product_info dt .btn {position:absolute;left:0;top:120px;width:264px;text-align:center;}
+#product_info dd {float:left;width:390px;font:normal 11px/13px dotum,'µ¸¿ò';color:#898989;letter-spacing:-1px;}
+#product_info dd img {display:block;margin-bottom:20px;}
+#product_info dd a {font:normal 11px/13px dotum,'µ¸¿ò';color:#898989;text-decoration:underline;}
+
+#product_content_wrap {clear:both;margin-top:10px;}
+
+#sub_tab {clear:both;height:26px;overflow:hidden;border-bottom:1px solid #c4c4c4;}
+#sub_tab ul.right {float:right;}
+*html #sub_tab {height:27px;}
+#sub_tab li {float:left;font:normal 12px/16px dotum,'µ¸¿ò';color:#d9d9d9;background:url(http://img.gomtv.com/images/common/bul/bul_off.gif) no-repeat 11px 12px;}
+#sub_tab li a {display:block;height:20px;padding:7px 13px 0 20px;font:normal 12px dotum,'µ¸¿ò';color:#898989;letter-spacing:-1px;background:url(http://img.gomtv.com/images/products/bg_tab_bar.gif) no-repeat right 7px;}
+*html #sub_tab li a {display:inline;height:26px;padding-right:12px;}
+#sub_tab li.on {background:url(http://img.gomtv.com/images/common/bul/bul_on.gif) no-repeat 11px 12px;}
+#sub_tab li.on a {color:#363636;}
+#sub_tab li a.last {background-position:right -100px;}
+#sub_tab.mt0 {margin-top:-15px;}
+
+.sub_tab {clear:both;height:26px;overflow:hidden;border-bottom:1px solid #c4c4c4;}
+.sub_tab ul.right {float:right;}
+*html .sub_tab {height:27px;}
+.sub_tab li {float:left;font:normal 12px/16px dotum,'µ¸¿ò';color:#d9d9d9;background:url(http://img.gomtv.com/images/common/bul/bul_off.gif) no-repeat 11px 12px;}
+.sub_tab li a {display:block;height:20px;padding:7px 13px 0 20px;font:normal 12px dotum,'µ¸¿ò';color:#898989;letter-spacing:-1px;background:url(http://img.gomtv.com/images/products/bg_tab_bar.gif) no-repeat right 7px;}
+*html .sub_tab li a {display:inline;height:26px;padding-right:12px;}
+.sub_tab li.on {background:url(http://img.gomtv.com/images/common/bul/bul_on.gif) no-repeat 11px 12px;}
+.sub_tab li.on a {color:#363636;}
+.sub_tab li a.last {background-position:right -100px;}
+.sub_tab.mt0 {margin-top:-15px;}
+
+#wp_search_bar {height:30px;padding-top:10px;margin-bottom:15px;font:bold 12px dotum,'µ¸¿ò';color:#565656;text-align:center;background:url(http://img.gomtv.com/images/products/bg_search_bar.gif) no-repeat left top;}
+*html #wp_search_bar {height:40px;}
+#wp_search_bar .text {width:298px;height:19px;padding:3px;border:1px solid #ccc;font:normal 12px dotum,'µ¸¿ò';color:#898989;}
+#wp_search_bar select {width:119px;height:19px;font:normal 12px dotum,'µ¸¿ò';color:#898989;}
+#wp_search_bar select, #wp_search_bar input, #wp_search_bar img {vertical-align:middle;}
+#wp_search_bar input, #wp_search_bar img {margin-bottom:1px;}
+
+#pds_list {clear:both;margin:15px 0;border-top:2px solid #e2e2e2;border-bottom:4px solid #f4f4f4;}
+#pds_list a:hover {text-decoration:underline;}
+#pds_list dl {clear:both;padding:15px 10px 12px;border-bottom:1px solid #e2e2e2;}
+#pds_list dt {padding-left:7px;margin-bottom:7px;font:bold 12px dotum,'µ¸¿ò';color:#363636;letter-spacing:-1px;background:url(http://img.gomtv.com/images/common/bul/bul_06.gif) no-repeat left 4px;}
+#pds_list dt a {font:bold 12px/14px dotum,'µ¸¿ò';color:#363636;}
+#pds_list dd .cont {width:593px;margin-bottom:7px;padding-left:7px;font:normal 11px/14px dotum,'µ¸¿ò';color:#898989;}
+*html #pds_list dd .cont {width:600px;}
+#pds_list dd .cont a {font:normal 11px/14px dotum,'µ¸¿ò';color:#898989;}
+#pds_list dd .info {padding-left:7px;font:normal 11px dotum,'µ¸¿ò';color:#b4b3b3;}
+#pds_list dd .info strong {color:#929292;}
+#pds_list dd .info .bar {color:#b4b3b3;padding:0 5px;}
+#pds_list dd .btn {float:right;margin-top:-74px;}
+
+#wp_tbl {clear:both;border-top:2px solid #ffbc3d;border-bottom:4px solid #f4f4f4;}
+#wp_tbl th, #wp_tbl td {border-right:1px solid #e3ded5;border-bottom:1px solid #e3ded5;}
+#wp_tbl th.r, #wp_tbl td.r {border-right:0;}
+#wp_tbl th {height:26px;font:normal 11px dotum,'µ¸¿ò';color:#535353;background-color:#fdfaed;}
+*html #wp_tbl th {padding-top:2px;}
+#wp_tbl td {padding:2px 10px 3px;font:normal 12px dotum,'µ¸¿ò';color:#898989;}
+*html #wp_tbl td {padding:4px 10px 3px;}
+*html #wp_tbl td img, *html #wp_tbl td input {margin-top:-2px;}
+#wp_tbl td img {vertical-align:middle;}
+#wp_tbl td strong {color:#565656;}
+#wp_tbl td p.dot {padding-left:14px;margin:5px 0;font:normal 11px dotum,'µ¸¿ò';color:#aaaaaa;letter-spacing:-1px;background:url(http://img.gomtv.com/images/common/bul/bul_00.gif) no-repeat 7px 5px;}
+#wp_tbl td span {font:normal 11px dotum,'µ¸¿ò';color:#aaaaaa;}
+#wp_tbl td.file {color:#ff7e00;}
+#wp_tbl td.file a {color:#ff7e00;}
+#wp_tbl td.file a:hover {text-decoration:underline;}
+#wp_tbl a.url {color:#ff7e00;}
+#wp_tbl a.url:hover {text-decoration:underline;}
+#wp_tbl .content {min-height:280px;padding:20px 10px;}
+*html #wp_tbl .content {height:320px;}
+#wp_tbl .content2 {min-height:210px;padding:20px 10px;}
+*html #wp_tbl .content2 {height:250px;}
+#wp_tbl .content3 {min-height:210px;padding:20px 10px;}
+*html #wp_tbl .content3 {height:250px;}
+#wp_tbl .edit_area {min-height:290px;padding:10px 0;}
+*html #wp_tbl .edit_area {height:310px;}
+#wp_tbl input {height:19px;padding:3px;font:normal 12px dotum,'µ¸¿ò';color:#898989;border:1px solid #cccccc;}
+#wp_tbl input.title {width:580px;}
+#wp_tbl input.file {width:480px;}
+#wp_tbl input.qna_title {width:500px;}
+#wp_tbl input.qna_mail {width:330px;}
+#wp_tbl input.qna_file {width:550px;}
+#wp_tbl input.order1 {width:260px;}
+#wp_tbl input.post {width:60px;}
+#wp_tbl input.address {width:300px;margin-top:3px;}
+#wp_tbl input, #wp_tbl img {vertical-align:middle;}
+#wp_tbl td select.area {width:120px;font:normal 12px dotum,'µ¸¿ò';color:#898989;}
+#wp_tbl .smi_content_tit {margin:13px 0 8px;font:bold 12px dotum,'µ¸¿ò';color:#898989;}
+#wp_tbl .smi_content {width:670px;height:180px;padding:10px;margin-bottom:5px;border:1px solid #d4d4d4;overflow:auto;}
+*html #wp_tbl .smi_content {width:690px;height:200px;}
+#wp_tbl .smi_content {
+	scrollbar-face-color:#FFFFFF;
+	scrollbar-highlight-color:#FFFFFF;
+	scrollbar-shadow-color:#FFFFFF;
+	scrollbar-3dlight-color:#D4D4D4;
+	scrollbar-arrow-color:#CCCCCC;
+	scrollbar-track-color:#D4D4D4;
+	scrollbar-darkshadow-color:#D4D4D4;
+	scrollbar-base-color:#FFFFFF;
+}
+/* google ±¤°í µé¾î°¡´Â ¼¿ */
+#wp_tbl .google_ad_area {border:0;padding:0;}
+
+/* Ãß°¡ ½ºÅ¸ÀÏ */
+#wp_tbl1 {clear}
+#wp_tbl1 th, #wp_tbl1 td {border-right:1px solid #e3ded5;border-bottom:1px solid #e3ded5;}
+#wp_tbl1 th.r, #wp_tbl1 td.r {border-right:0;}
+#wp_tbl1 th {height:26px;font:normal 11px dotum,'µ¸¿ò';color:#535353;background-color:#fdfaed;}
+*html #wp_tb1l th {padding-top:2px;}
+#wp_tbl1 td {padding:2px 10px 3px;font:normal 12px dotum,'µ¸¿ò';color:#898989;}
+*html #wp_tbl1 td {padding:4px 10px 3px;}
+*html #wp_tbl1 td img, *html #wp_tbl1 td input {margin-top:-2px;}
+#wp_tbl1 td img {vertical-align:middle;}
+#wp_tbl1 td strong {color:#565656;}
+#wp_tbl1 td p.dot {padding-left:14px;margin:5px 0;font:normal 11px dotum,'µ¸¿ò';color:#aaaaaa;letter-spacing:-1px;background:url(http://img.gomtv.com/images/common/bul/bul_00.gif) no-repeat 7px 5px;}
+#wp_tbl1 td span {font:normal 11px dotum,'µ¸¿ò';color:#aaaaaa;}
+#wp_tbl1 td.file {color:#ff7e00;}
+#wp_tbl1 td.file a {color:#ff7e00;}
+#wp_tbl1 td.file a:hover {text-decoration:underline;}
+#wp_tbl1 a.url {color:#ff7e00;}
+#wp_tbl1 a.url:hover {text-decoration:underline;}
+#wp_tbl1 .content {min-height:280px;padding:20px 10px;}
+*html #wp_tbl1 .content {height:320px;}
+#wp_tbl1 .content2 {min-height:210px;padding:20px 10px;}
+*html #wp_tbl1 .content2 {height:250px;}
+#wp_tbl1 .content3 {min-height:210px;padding:20px 10px;}
+*html #wp_tbl1 .content3 {height:250px;}
+#wp_tbl1 .edit_area {min-height:290px;padding:10px 0;}
+*html #wp_tbl1 .edit_area {height:310px;}
+#wp_tbl1 input {height:19px;padding:3px;font:normal 12px dotum,'µ¸¿ò';color:#898989;border:1px solid #cccccc;}
+#wp_tbl1 input.title {width:580px;}
+#wp_tbl1 input.file {width:480px;}
+#wp_tbl1 input.qna_title {width:500px;}
+#wp_tbl1 input.qna_mail {width:330px;}
+#wp_tbl1 input.qna_file {width:550px;}
+#wp_tbl1 input.order1 {width:260px;}
+#wp_tbl1 input.post {width:60px;}
+#wp_tbl1 input.address {width:300px;margin-top:3px;}
+#wp_tbl1 input, #wp_tbl img {vertical-align:middle;}
+#wp_tbl1 td select.area {width:120px;font:normal 12px dotum,'µ¸¿ò';color:#898989;}
+#wp_tbl1 .smi_content_tit {margin:13px 0 8px;font:bold 12px dotum,'µ¸¿ò';color:#898989;}
+#wp_tbl1 .smi_content {width:670px;height:180px;padding:10px;margin-bottom:5px;border:1px solid #d4d4d4;overflow:auto;}
+*html #wp_tbl1 .smi_content {width:690px;height:200px;}
+#wp_tbl1 .smi_content {
+	scrollbar-face-color:#FFFFFF;
+	scrollbar-highlight-color:#FFFFFF;
+	scrollbar-shadow-color:#FFFFFF;
+	scrollbar-3dlight-color:#D4D4D4;
+	scrollbar-arrow-color:#CCCCCC;
+	scrollbar-track-color:#D4D4D4;
+	scrollbar-darkshadow-color:#D4D4D4;
+	scrollbar-base-color:#FFFFFF;
+}
+/* google ±¤°í µé¾î°¡´Â ¼¿ */
+#wp_tbl1 .google_ad_area {border:0;padding:0;}
+
+#pds_list_snap {clear:both;margin-bottom:15px;border-bottom:4px solid #f4f4f4;}
+#pds_list_snap a:hover {text-decoration:underline;}
+#pds_list_snap dl {clear:both;height:121px;padding:15px 0 0 12px;border-bottom:1px solid #e2e2e2;}
+*html #pds_list_snap dl {height:137px;}
+#pds_list_snap dt {float:left;width:135px;height:100px;margin-right:10px;padding:2px;border:1px solid #e1e1e1;}
+#pds_list_snap dt img {display:block;}
+#pds_list_snap dd {float:left;width:552px;}
+#pds_list_snap dd.tit {height:27px;padding-top:7px;margin-bottom:15px;font:bold 12px dotum,'µ¸¿ò';color:#363636;letter-spacing:-1px;background:url(http://img.gomtv.com/images/products/bg_dot_line.gif) repeat-x left bottom;}
+*html #pds_list_snap dd.tit {height:34px;}
+#pds_list_snap dd.tit a {font:bold 12px dotum,'µ¸¿ò';color:#363636;}
+#pds_list_snap dd.tit a.bul {padding-left:8px;background:url(http://img.gomtv.com/images/common/bul/bul_06.gif) no-repeat left 4px;}
+#pds_list_snap dd.tit .btn {float:right;margin-top:-18px;margin-right:10px;}
+#pds_list_snap dd .cont {padding-left:8px;width:460px;margin-bottom:10px;font:normal 11px/14px dotum,'µ¸¿ò';color:#898989;}
+*html #pds_list_snap dd .cont {width:468px;}
+#pds_list_snap dd .cont a {font:normal 11px/14px dotum,'µ¸¿ò';color:#898989;}
+#pds_list_snap dd .info {padding-left:8px;font:normal 11px dotum,'µ¸¿ò';color:#b4b3b3;}
+#pds_list_snap dd .info strong {color:#929292;}
+#pds_list_snap dd .info .bar {color:#b4b3b3;padding:0 5px;}
+
+#wp_reply {clear:both;background:url(http://img.gomtv.com/images/products/bg_reply_b.gif) repeat-y left top;}
+#wp_reply h5 {height:21px;padding:8px 0 0 15px;font:normal 11px dotum,'µ¸¿ò';color:#aaaaaa;background:url(http://img.gomtv.com/images/products/bg_reply_a.gif) no-repeat left top;}
+*html #wp_reply h5 {height:29px;padding:9px 0 0 15px;}
+#wp_reply h5 strong {font-size:12px;color:#565656;}
+#wp_reply h5 .alert {color:#ff7e00;}
+#wp_reply h5 .bar {color:#d4d0ce;padding:0 5px;}
+#wp_reply p {height:62px;font:12px;padding:14px 0 0 14px;background:url(http://img.gomtv.com/images/products/bg_reply_b.gif) repeat-y left top;}
+*html #wp_reply p {height:72px;}
+#wp_reply p textarea {width:610px;height:43px;padding:3px;border:1px solid #d9d9d9;font:normal 11px/14px dotum,'µ¸¿ò';color:#898989;}
+#wp_reply p img, #wp_reply p textarea {vertical-align:middle;}
+#wp_reply ul {width:665px;padding:0 15px 31px;overflow:auto;background:url(http://img.gomtv.com/images/products/bg_reply_d.gif) no-repeat left bottom;}
+*html #wp_reply ul {width:715px;}
+#wp_reply li {float:left;margin-top:-1px;font:normal 12px dotum,'µ¸¿ò';color:#898989;border-top:1px solid #f1f1f1;}
+#wp_reply li.user {clear:both;width:81px;padding:7px 0 6px 10px;font-weight:bold;color:#888888;overflow:hidden;word-break:break-all;}
+*html #wp_reply li.user {clear:both;width:91px;}
+#wp_reply li.text {width:503px;padding:7px 0 6px 10px;word-break:break-all}
+*html #wp_reply li.text {width:513px;word-break:break-all;}
+#wp_reply li.date {width:70px;padding:7px 10px 6px 0;font-size:11px;color:#bbbbbb;text-align:right;}
+*html #wp_reply li.date {width:80px;}
+#wp_reply li.text img.del {vertical-align:middle;margin:0 0 4px 5px;}
+#wp_reply .personal {float:right;margin:-25 10 0 0px;}
+
+#wp_list {clear:both;margin-bottom:15px;width:715px;border-bottom:4px solid #F4F4F4;empty-cells:show;}
+#wp_list th {position:relative;height:26px;font:normal 11px dotum,'µ¸¿ò';color:#FF7E00;letter-spacing:-1px;background:#FBF5DC;}
+*html #wp_list th {padding-top:3px;}
+#wp_list th.left {background:#FBF5DC url(http://img.gomtv.com/images/common/bg_title_left.gif) no-repeat left top;}
+#wp_list th.right {background:#FBF5DC url(http://img.gomtv.com/images/common/bg_title_right.gif) no-repeat right top;}
+#wp_list th .bar {position:relative;float:left;}
+*html #wp_list th .bar {position:absolute;left:0;top:6px;}
+#wp_list td {height:28px;text-align:center;border-bottom:1px solid #ECECEC;font:normal 11px dotum,'µ¸¿ò';color:#898989;}
+#wp_list td.no {font:bold 11px dotum,'µ¸¿ò';color:#898989;}
+#wp_list td.title {padding-left:10px;text-align:left;}
+#wp_list td.title a {padding-left:5px;background:url(http://img.gomtv.com/images/common/bul/bul_05.gif) no-repeat 0 4px;}
+#wp_list td.title a:hover {color:#363636;text-decoration:underline;}
+#wp_list td.title span {color:#FF7E00;}
+#wp_list td.title strong {color:#FF7E00;padding-left:5px;}
+#wp_list td.title img {margin-left:5px;vertical-align:middle;margin-bottom:4px;}
+#wp_list td.cate {font-size:12px;text-align:left;padding-left:15px;}
+#wp_list td.stat {font-weight:bold;color:#898989;}
+#wp_list td.stat span {color:#1CAABF;}
+#wp_list td.snap img {margin:10px 0;}
+#wp_list td.scrap {padding-left:10px;text-align:left;}
+#wp_list td.scrap a.tit {color:#363636;padding-left:5px;background:url(http://img.gomtv.com/images/common/bul/bul_05.gif) no-repeat 0 4px;}
+#wp_list td.scrap a.tit:hover {color:#363636;text-decoration:underline;}
+#wp_list td.scrap img {margin:0 0 -1px 3px;}
+#wp_list td.scrap .ch {display:block;padding:3px 0 0 5px;font:normal 11px dotum,'µ¸¿ò';color:#FF7200;}
+#wp_list td.scrap .ch a {font:normal 11px dotum,'µ¸¿ò';color:#FF7200;}
+#wp_list td.scrap .ch a:hover {text-decoration:underline;}
+
+#wp_list .notice td {color:#c69c6d;}
+#wp_list .notice td.title a {color:#ff7e00;}
+#wp_list .notice td.title a:hover {color:#ff7e00;text-decoration:underline;}
+
+#wp_list.smi_list {margin-top:15px;}
+.wp_list_mt10 {margin-top:10px;}
+
+#wp_free_movie {clear:both;padding-bottom:25px;margin-bottom:10px;background:url(http://img.gomtv.com/images/products/bg_free_movie.gif) no-repeat left bottom;}
+#wp_free_movie h5 {height:22px;padding-left:20px;font:bold 12px dotum,'µ¸¿ò';color:#4b4b4b;letter-spacing:-1px;background:url(http://img.gomtv.com/images/common/bul/bul_10.gif) no-repeat 12px 3px;}
+#wp_free_movie h5 .more {float:right;margin:-13px 13px 0 0;}
+#wp_free_movie ul {height:145;overflow:hidden;}
+#wp_free_movie li {float:left;}
+#wp_free_movie li.prev {width:24px;padding-top:26px;}
+#wp_free_movie li.next {width:13px;padding-top:26px;text-align:right;}
+#wp_free_movie li.cont {margin-right:10px;width:97px;height:139px;border:1px solid #e5e5e5;padding:2px;}
+#wp_free_movie li.cont img {display:block;}
+
+#gom_shop_bottom_img {clear:both;margin-top:25px;}
+#gom_shop_bottom_img img {display:block;}
+
+#gom_shop_bottom {clear:both;width:880px;height:41px;padding:15px 0 0 20px;margin:0 auto 10px;font:normal 11px/16px dotum,'µ¸¿ò';color:#898989;text-align:left;background:url(http://img.gomtv.com/images/products/bg_gom_shop_bottom.gif) no-repeat left top;}
+*html #gom_shop_bottom {clear:both;width:900px;height:56px;}
+#gom_shop_bottom span {color:#c2a27f;}
+#gom_shop_bottom a {font:normal 11px/16px dotum,'µ¸¿ò';color:#c2a27f;}
+#gom_shop_bottom a:hover {text-decoration:underline;}
+
+#dmb_area {clear:both;margin-bottom:10px;}
+#dmb_area h5 {height:23px;padding:3px 0 0 16px;font:bold 12px/16px dotum,'µ¸¿ò';color:#aaaaaa;background:url(http://img.gomtv.com/images/common/bul/bul_tit3.gif) no-repeat left 3px;}
+*html #dmb_area h5 {height:26px;}
+#dmb_area h5 span {color:#494949;}
+#dmb_area h5 .btn {float:right;margin-top:-19px;}
+#dmb_area dl {clear:both;width:705px;height:315px;padding:5px;background:url(http://img.gomtv.com/images/products/bg_dmb_area.gif) no-repeat left top;}
+*html #dmb_area dl {width:715px;height:296px;}
+#dmb_area dt {float:left;width:311px;height:304px;overflow:hidden;margin-right:6px;text-align:center;}
+#dmb_area dd {float:left;width:284px;height:304;padding-left:20px;}
+*html #dmb_area dd {width:365px;}
+
+#dmb_area ul {float:left;width:100px;padding-top:7px;margin-right:35px;margin-top:26px;}
+#dmb_area ul.r {margin-right:0;}
+#dmb_area ul.mt0 {margin-top:0;}
+#dmb_area li {height:26px;padding-left:9px;font:normal 12px dotum,'µ¸¿ò';color:#737373;background:url(http://img.gomtv.com/images/common/bul/bul_25.gif) no-repeat left 4px;}
+#dmb_area li.on {background:url(http://img.gomtv.com/images/common/bul/bul_26.gif) no-repeat left 2px;}
+#dmb_area li.on a {font:bold 12px dotum,'µ¸¿ò';color:#ff7e00;}
+#dmb_area li a {font:normal 12px dotum,'µ¸¿ò';color:#737373;}
+#dmb_area li a:hover {text-decoration:underline;}
+
+#wp_real_ranking {clear:both;height:110px;padding:7px;margin-bottom:10px;background:url(http://img.gomtv.com/images/products/bg_real_ranking.gif) no-repeat left top;}
+*html #wp_real_ranking {height:124px;}
+#wp_real_ranking dt {float:left;margin-right:23px;}
+#wp_real_ranking dt img {display:block;}
+#wp_real_ranking dd {float:left;}
+#wp_real_ranking dd h5 {width:221px;font:bold 12px dotum,'µ¸¿ò';color:#4b4b4b;padding:5px 0 5px;margin:0 0 5px;border-bottom:1px solid #f1f1f1;}
+#wp_real_ranking dd h5 span {color:#ff7e00;}
+#wp_real_ranking dd h5 .btn {float:right;margin-top:-12px;}
+
+#rank_list {clear:both;padding-bottom:5px;width:221px;overflow:hidden;}
+#rank_list li {float:left;height:18px;}
+#rank_list li.num {clear:both;width:22px;}
+#rank_list li.num img {margin-right:4px;margin-bottom:-1px;}
+#rank_list li.title {width:171px;}
+#rank_list li.ranking {padding-top:4px;width:28px;height:14px;font:normal 11px dotum,'µ¸¿ò';color:#898989;}
+*html #rank_list li.ranking {height:18px;}
+
+#gs_promotion_banner {clear:both;margin-bottom:20px;}
+
+#gs_main_div {clear:both;margin-bottom:20px;}
+#gs_main_div h5 {height:19px;}
+#gs_main_div .wrap {width:482px;height:155px;padding:18px 0 0 18px;overflow-x:hidden;}
+*html #gs_main_div .wrap {width:500px;height:173px;}
+#gs_main_div .shop_best {background:url(http://img.gomtv.com/images/products/bg_gs_shop_best.gif) no-repeat left top;}
+#gs_main_div .shop_products {background:url(http://img.gomtv.com/images/products/bg_gs_shop_products.gif) no-repeat left top;}
+#gs_main_div dl {float:left;margin-right:12px;}
+#gs_main_div dt {width:107px;height:107px;margin-bottom:5px;padding:1px 0 0 1px;background:url(http://img.gomtv.com/images/products/bg_gs_main_snap.gif) no-repeat left top;}
+*html #gs_main_div dt {width:108px;height:108px;}
+#gs_main_div dd {width:103px;text-align:center;font:normal 12px/14px dotum,'µ¸¿ò';color:#898989;}
+#gs_main_div dd a {font:normal 12px/14px dotum,'µ¸¿ò';color:#898989;}
+#gs_main_div dd a:hover {text-decoration:underline;}
+
+#special_shop {clear:both;}
+#special_shop h5 {height:19px;}
+
+#product {clear:both;margin-bottom:20px;background:url(http://img.gomtv.com/images/products/bg_products_middle.gif) repeat-y left top;}
+#product .top {height:5px;overflow:hidden;background:url(http://img.gomtv.com/images/products/bg_products_top.gif) no-repeat left top;}
+#product .bottom {clear:both;height:25px;overflow:hidden;background:url(http://img.gomtv.com/images/products/bg_products_bottom.gif) no-repeat left bottom;}
+*html #product .bottom {height:22px;}
+#product .photo {float:left;width:229px;margin-right:20px;padding:15px 0 0 20px;background:url(http://img.gomtv.com/images/products/bg_photo_right.gif) no-repeat right 15px;}
+*html #product .photo {width:249px;}
+#product .photo img {display:block;}
+#product .photo .big {float:left;width:198px;height:198px;margin-bottom:7px;border:5px solid #dadada;}
+*html #product .photo .big {width:208px;height:208px;}
+#product .photo .snap {float:left;margin-right:6px;width:63px;height:63px;border:1px solid #dadada;}
+#product .photo .btn {float:left;width:208px;margin-top:25px;text-align:center;}
+#product .photo .btn img {margin:0 auto;}
+#product .info_box {float:left;width:426px;margin-top:20px;}
+#product .info_box h5 {height:31px;font:bold 16px dotum,'µ¸¿ò';color:#363636;}
+#product .info_box h5 span {color:#1795b5;}
+#product .info_box .p1 {width:426px;overflow:auto;padding:10px 0;border-top:2px solid #ffb038;border-bottom:1px solid #ece4d8;background-color:#fffbf5;}
+#product .info_box .p2 {width:426px;overflow:auto;padding:10px 0;border-bottom:1px solid #e5e5e5;}
+#product .info_box .p3 {width:426px;overflow:auto;padding:10px 0;border-bottom:1px solid #e5e5e5;background-color:#f9f9f9;}
+#product .info_box .btns {margin-top:15px;}
+#product .info_box ul {width:404px;margin-left:10px;}
+#product .info_box li {float:left;font:normal 12px/16px dotum,'µ¸¿ò';color:#898989;margin-bottom:2px;}
+#product .info_box li.t {clear:both;width:87px;padding:4px 0 0 7px;font-size:11px;color:#565656;background:url(http://img.gomtv.com/images/common/bul/bul_00.gif) no-repeat left 8px;}
+*html #product .info_box li.t {width:94px;}
+#product .info_box li.v {width:310px;padding-top:3px;}
+#product .info_box li.f {width:310px;}
+#product .info_box li.a {clear:both;width:82px;padding:4px 0 0 12px;font-size:11px;color:#565656;font-weight:bold;background:url(http://img.gomtv.com/images/common/bul/bul_alert.gif) no-repeat left 4px;}}
+*html #product .info_box li.t {width:94px;}
+#product .info_box li span.msg {font-size:11px;color:#c69c6d;}
+#product .info_box li strong {color:#ff0000;}
+#product .info_box li select {width:56px;font:normal 12px dotum,'µ¸¿ò';color:#898989;}
+#product .info_box li select.long {width:260px;font:normal 12px dotum,'µ¸¿ò';color:#898989;}
+#product .content {clear:both;min-height:200px;margin:15px 20px 0;font:normal 12px/18px dotum,'µ¸¿ò';color:#898989;}
+*html #product .content {height:200px;}
+
+#cart_step {height:81px;margin:10px 0 20px;}
+#cart_step li {float:left;}
+#cart_step li img {vertical-align:top;}
+
+#cart_in {clear:both;margin-bottom:15px;}
+#cart_in .wrap {background:url(http://img.gomtv.com/images/products/bg_table_top.gif) no-repeat left top;}
+#cart_in .btn {text-align:center;margin:10px 0 5px;}
+#cart_in th {height:26px;font:normal 11px dotum,'µ¸¿ò';color:#535353;background:url(http://img.gomtv.com/images/products/bg_th_bar.gif) no-repeat right 7px;}
+#cart_in th.last {background-position:right -200px;}
+#cart_in td {height:70px;font:normal 11px dotum,'µ¸¿ò';color:#535353;text-align:center;border-bottom:1px solid #e5e5e5;}
+#cart_in td.title {text-align:left;}
+#cart_in td.title span.bul {padding-left:15px;background:url(http://img.gomtv.com/images/common/bul/bul_05.gif) no-repeat 8px 4px;}
+#cart_in td.title p {padding:2px 0 0 13px;font:normal 11px dotum,'µ¸¿ò';color:#aaaaaa;}
+#cart_in td.title p span {color:#c69c6d;}
+#cart_in td.title p em {font-size:12px;font-style:normal;}
+#cart_in td a {font:normal 11px dotum,'µ¸¿ò';color:#535353;}
+#cart_in td a:hover {text-decoration:underline;}
+#cart_in td .money {color:#ff7e00;}
+#cart_in td .count {width:28px;height:19px;border:1px solid #ccc;font:normal 12px dotum,'µ¸¿ò';color:#898989;text-align:center;}
+#cart_in td input, #cart_in td img {vertical-align:middle;}
+#cart_in .total {padding:7px 10px;font:normal 12px dotum,'µ¸¿ò';color:#aaaaaa;letter-spacing:-1px;background-color:#f4f4f4;text-align:right;}
+#cart_in .total strong {color:#535353;}
+#cart_in .total .total_money {padding-left:15px;font:bold 14px dotum,'µ¸¿ò';color:#ff0000;letter-spacing:0;}
+#cart_in .total .left {float:left;margin-top:-17px;padding-left:10px;font:normal 11px dotum,'µ¸¿ò';color:#aaaaaa;letter-spacing:-1px;}
+*html #cart_in .total .left {margin-top:-22px;}
+#cart_in .total .left em {font-size:12px;font-style:normal;}
+#cart_in .msg {padding:15px 0 12px 20px;border-bottom:1px solid #f1f1f1;font:normal 11px dotum,'µ¸¿ò';color:#a9a9a9;letter-spacing:-1px;background:url(http://img.gomtv.com/images/common/bul/bul_07.gif) no-repeat 12px 18px;}
+#cart_in .msg a {font:normal 11px dotum,'µ¸¿ò';color:#c69c6d;}
+#cart_in .msg a:hover {text-decoration:underline;}
+
+#cart_user_txt {font:normal 11px/18px dotum,'µ¸¿ò';color:#a9a9a9;letter-spacing:-1px;}
+#cart_user_txt h6 {font:bold 11px/18px dotum,'µ¸¿ò';color:#898989;padding-left:19px;background:url(http://img.gomtv.com/images/common/bul/bul_07.gif) no-repeat 10px 4px;}
+#cart_user_txt p {padding:2px 0 7px 19px;}
+#cart_user_txt span {color:#c69c6d;}
+#cart_user_txt em {font-size:12px;font-style:normal;}
+#cart_user_txt img {vertical-align:middle;}
+
+#cart_login_check {margin-bottom:115px;}
+#no_order {margin-bottom:190px;}
+
+#msg_image {clear:both;}
+
+#contract_wrap {width:711px;height:360px;border:1px solid #cccccc;}
+*html #contract_wrap {width:713px;height:362px;}
+
+#order_member_info {clear:both;margin-bottom:15px;}
+#order_member_info .order_wp_tbl {border-bottom:0;}
+
+#send_info {clear:both;margin-bottom:15px;}
+#send_info p.like {margin-top:-2px;font:normal 11px dotum,'µ¸¿ò';color:#898989;}
+#send_info p.like .bar {font-weight:normal;color:#cccccc;padding:0 3px;}
+#send_info p.like input {vertical-align:middle;margin-bottom:3px;}
+#send_info .order_wp_tbl {border-bottom:0;}
+
+#order_cash_type {clear:both;margin-bottom:15px;}
+#order_cash_type p {height:25px;padding:5px 0 0 21px;font:bold 12px dotum,'µ¸¿ò';color:#898989;background:url(http://img.gomtv.com/images/products/bg_gray_bar.gif) no-repeat left top;}
+*html #order_cash_type p {height:30px;}
+#order_cash_type input {margin-bottom:-2px;}
+#order_cash_type p span {display:block;padding-top:3px;padding-left:7px;background:url(http://img.gomtv.com/images/common/bul/bul_18.gif) no-repeat left 6px;}
+
+#shop_contract {clear:both;}
+#shop_contract p {height:25px;margin-top:5px;padding:5px 0 0 21px;font:bold 12px dotum,'µ¸¿ò';color:#898989;background:url(http://img.gomtv.com/images/products/bg_gray_bar.gif) no-repeat left top;}
+*html #shop_contract p {height:30px;}
+#shop_contract input {margin-bottom:-2px;}
+
+#gs_subtitle {height:23px;padding-left:15px;padding-top:1px;font:bold 12px dotum,'µ¸¿ò';color:#363636;background:url(http://img.gomtv.com/images/common/bul/bul_tit3.gif) no-repeat left top;}
+
+#order_num {width:695px;padding:10px 10px 0 10px;overflow:auto;background:#f5f5f5 url(http://img.gomtv.com/images/products/bg_on_a.gif) no-repeat left top;}
+*html #order_num {width:715px;}
+#order_num .left {float:left;margin-right:9px;}
+#order_num .right {float:left;}
+#order_num dl {width:343px;}
+#order_num dt {height:35px;padding:4px 0 0 12px;font:bold 11px dotum,'µ¸¿ò';color:#565656;letter-spacing:-1px;background:url(http://img.gomtv.com/images/products/bg_on_in_a.gif) no-repeat left bottom;}
+*html #order_num dt {height:39px;}
+#order_num dd.cont {background:url(http://img.gomtv.com/images/products/bg_on_in_b.gif) repeat-y left top;}
+#order_num dd.h1 {height:110px;}
+#order_num dd.btn {height:41px;text-align:center;background:url(http://img.gomtv.com/images/products/bg_on_in_c.gif) no-repeat left bottom;}
+#order_num ul {margin:0 11px;width:321px;overflow:auto;}
+#order_num li {float:left;height:33px;border-bottom:1px solid #ececec;font:normal 12px dotum,'µ¸¿ò';color:#898989;}
+*html #order_num li {height:34px;}
+#order_num li.tit {width:78px;height:22px;padding:11px 0 0 9px;background:url(http://img.gomtv.com/images/commonPage/bg_bar.gif) no-repeat right 12px;}
+*html #order_num li.tit {width:87px;height:34px;}
+#order_num li.form {width:216px;height:27px;padding:6px 0 0 18px;}
+*html #order_num li.form {width:234px;height:34px;}
+#order_num li input.text {font:normal 12px dotum,'µ¸¿ò';color:#565656;height:19px;border:1px solid #ccc;}
+#order_num li input.name {width:197px;}
+#order_num li input.num {width:78px;}
+#order_num li input.mail {width:100px;}
+#order_num li input.userid {width:172px;}
+#order_num_bottom {height:10px;font:1px/1px;background:#f5f5f5 url(http://img.gomtv.com/images/products/bg_on_b.gif) no-repeat left bottom;}
+/* Main Area End */
+
+/* Left Area Start */
+#wp_lnb {padding-bottom:4px;margin-bottom:10px;background:url(http://img.gomtv.com/images/products/bg_lnb_c.gif) no-repeat left bottom;}
+#wp_lnb ol {padding-top:4px;background:url(http://img.gomtv.com/images/products/bg_lnb_a.gif) no-repeat left top;}
+#wp_lnb li {padding-bottom:9px;background:url(http://img.gomtv.com/images/products/bg_lnb_b.gif) repeat-y left top;}
+#wp_lnb span {display:block;height:22px;padding:7px 0 0 10px;font:bold 12px dotum,'µ¸¿ò';color:#fff;background:url(http://img.gomtv.com/images/products/bg_lnb_d1.gif) no-repeat left top;}
+*html #wp_lnb span {height:29px;}
+#wp_lnb ul li {padding-bottom:0px;}
+#wp_lnb ul li a {display:block;margin-left:11px;width:137px;height:19px;padding:8px 0 0 9px;font:normal 12px dotum,'µ¸¿ò';color:#565656;border-bottom:1px solid #e2e2e2;background:url(http://img.gomtv.com/images/common/bul/bul_24.gif) no-repeat 1px 11px;}
+*html #wp_lnb ul li a {width:146px;height:28px;}
+#wp_lnb ul li a:hover {text-decoration:none;}
+#wp_lnb ul li.last a {border-bottom:0;}
+
+#wp_download {padding-bottom:5px;margin-bottom:10px;background:#585858 url(http://img.gomtv.com/images/products/bg_l_down_b.gif) no-repeat left bottom;}
+#wp_download h5 {height:19px;padding:9px 0 0 10px;font:bold 12px dotum,'µ¸¿ò';color:#fff;background:url(http://img.gomtv.com/images/products/bg_l_down_a.gif) no-repeat left top;}
+*html #wp_download h5 {height:28px;}
+#wp_download ul {margin:0 5px;}
+#wp_download li {width:160px;height:30px;vertical-align:top;border-bottom:1px solid #f58f1f;background:url(http://img.gomtv.com/images/products/bg_l_down_mid.gif) no-repeat left top;}
+*html #wp_download li {height:31px;}
+#wp_download li.first {background:url(http://img.gomtv.com/images/products/bg_l_down_first.gif) no-repeat left top;}
+#wp_download li.last {border-bottom:0;background:url(http://img.gomtv.com/images/products/bg_l_down_last.gif) no-repeat left top;}
+*html #wp_download li.last {height:30px;}
+#wp_download li a {display:block;width:124px;height:21px;padding:9px 0 0 36px;font:bold 11px dotum,'µ¸¿ò';color:#623e0a;letter-spacing:-1px;}
+*html #wp_download li a {width:160px;height:30px;}
+#wp_download li span {display:block;background-position:9px 6px;background-repeat:no-repeat;}
+*html #wp_download li span {background-position:9px middle;}
+#wp_download li .gom_pack {background-image:url(http://img.gomtv.com/images/products/icon_l_gom_pack.gif);}
+#wp_download li .gom_player {background-image:url(http://img.gomtv.com/images/products/icon_l_gom_player.gif);}
+#wp_download li .gom_audio {background-image:url(http://img.gomtv.com/images/products/icon_l_gom_audio.gif);}
+#wp_download li .gom_search {background-image:url(http://img.gomtv.com/images/products/icon_l_gom_search.gif);}
+#wp_download li .gom_rec {background-image:url(http://img.gomtv.com/images/products/icon_l_gom_rec.gif);}
+#wp_download li .gom_dj {background-image:url(http://img.gomtv.com/images/products/icon_l_gom_dj.gif);}
+#wp_download li .gom_remote {background-image:url(http://img.gomtv.com/images/products/icon_l_gom_remote.gif);}
+
+#wp_list_wrap {padding-bottom:4px;margin-bottom:10px;background:url(http://img.gomtv.com/images/products/bg_l_list_c.gif) no-repeat left bottom;}
+#wp_list_wrap ul {padding:10px 0 6px 0;background:url(http://img.gomtv.com/images/products/bg_l_list_b.gif) repeat-y left top;}
+#wp_list_wrap li {height:18px;font:normal 12px dotum,'µ¸¿ò';padding-left:16px;background:url(http://img.gomtv.com/images/common/bul/bul_00.gif) no-repeat 10px 4px;}
+#wp_list_wrap li a {font:normal 12px dotum,'µ¸¿ò';color:#898989;}
+#wp_list_wrap h5 {height:20px;padding:9px 0 0 10px;font:bold 12px dotum,'µ¸¿ò';color:#4b4b4b;background:url(http://img.gomtv.com/images/products/bg_l_list_a2.gif) no-repeat left bottom;}
+*html #wp_list_wrap h5 {height:29px;}
+#wp_list_wrap h5.top {background:url(http://img.gomtv.com/images/products/bg_l_list_a.gif) no-repeat left bottom;}
+#wp_list_wrap h5 .more {float:right;margin-top:-12px;margin-right:12px;}
+
+#lm_banner {margin-bottom:10px;}
+
+#wp_cate_menu {clear:both;margin-bottom:10px;padding-bottom:10px;background:#585858 url(http://img.gomtv.com/images/products/bg_cate_menu_b.gif) no-repeat left bottom;}
+#wp_cate_menu h5 {height:24px;padding:9px 0 0 10px;font:bold 12px dotum,'µ¸¿ò';color:#fff;background:#585858 url(http://img.gomtv.com/images/products/bg_cate_menu_a.gif) no-repeat left top;}
+*html #wp_cate_menu h5 {height:33px;}
+#wp_cate_menu li.menu {padding:5px 0 0 20px;font:normal 12px/16px dotum,'µ¸¿ò';color:#CACACA;background:#585858 url(http://img.gomtv.com/images/common/bul/bul_24.gif) no-repeat 12px 8px;}
+#wp_cate_menu li.menu a {font:normal 12px/16px dotum,'µ¸¿ò';color:#CACACA;}
+#wp_cate_menu li.menu a:hover {color:#fff;}
+#wp_cate_menu li.line {height:7px;font:1px/1px;background:#585858 url(http://img.gomtv.com/images/products/bg_cate_menu_line.gif) no-repeat left top;}
+
+/* CSSÃß°¡ºÎºÐ 090619 */
+#gs_main_div_new {clear:both;margin-bottom:20px;}
+#gs_main_div_new h5 {height:19px;}
+#gs_main_div_new li {margin-bottom:3px;}
+
+#wp_cate_menu_new li {padding-bottom:5px;}
+
+#wp_right_list_wrap_new {padding-bottom:4px;margin-bottom:10px;background:url(http://img.gomtv.com/images/products/bg_r_list_c_new.gif) no-repeat left bottom;}
+#wp_right_list_wrap_new ul {padding:10px 0 6px 0;background:url(http://img.gomtv.com/images/products/bg_r_list_b_new.gif) repeat-y left top;}
+#wp_right_list_wrap_new li {height:18px;font:normal 12px dotum,'µ¸¿ò';padding-left:16px;background:url(http://img.gomtv.com/images/common/bul/bul_00.gif) no-repeat 10px 4px;}
+#wp_right_list_wrap_new li a {font:normal 12px dotum,'µ¸¿ò';color:#898989;}
+#wp_right_list_wrap_new h5 {height:20px;padding:9px 0 0 10px;font:bold 12px dotum,'µ¸¿ò';color:#4b4b4b;background:url(http://img.gomtv.com/images/products/bg_r_list_a2.gif) no-repeat left bottom;}
+*html #wp_right_list_wrap_new h5 {height:29px;}
+#wp_right_list_wrap_new h5.top {background:url(http://img.gomtv.com/images/products/bg_r_list_a_new.gif) no-repeat left bottom;}
+#wp_right_list_wrap_new h5 .more {float:right;margin-top:-12px;margin-right:12px;}
+/* CSSÃß°¡ºÎºÐ 090619 */
+
+#send_result {height:56px;margin-bottom:20px;padding-top:170px;text-align:center;background:url(http://img.gomtv.com/images/products/msg_image_1.gif) no-repeat left top;}
+*html #send_result {height:226px;}
+
+#no_member_send {clear:both;}
+#no_member_send h5 {height:23px;padding-left:15px;padding-top:1px;font:bold 12px dotum,'µ¸¿ò';color:#363636;background:url(http://img.gomtv.com/images/common/bul/bul_tit3.gif) no-repeat left top;}
+/* Left Area End */
+
+/* Right Area Start */
+#hotTop10_r {height:21px;padding:11px 0 0 11px;font:bold 12px dotum,'µ¸¿ò';color:#4b4b4b;background:url(http://img.gomtv.com/images/products/bg_rm_tab_title.gif) no-repeat left top;}
+*html #hotTop10_r {height:32px;}
+#hotTop10_r span {color:#ffa000;}
+#hotTop10_r img {vertical-align:top;}
+
+#right_tab {width:200px;height:34px;overflow:hidden;background:url(http://img.gomtv.com/images/music/bg_rm_tab_01.gif) repeat-y left top;}
+#right_tab li {float:left;text-align:center;}
+#right_tab a {display:block;height:20px;padding-top:7px;font:normal 11px dotum,'µ¸¿ò';letter-spacing:-1px;}
+*html #right_tab a {height:27px;}
+#right_tab a.tab_l {width:100px;color:#898989;background:url(http://img.gomtv.com/images/products/bg_rm_tab_l_off.gif) no-repeat left top;}
+#right_tab a.tab_r {width:100px;color:#898989;background:url(http://img.gomtv.com/images/products/bg_rm_tab_r_off.gif) no-repeat left top;}
+#right_tab .on a.tab_l {width:100px;font-weight:normal;color:#4B4B4B;background:url(http://img.gomtv.com/images/products/bg_rm_tab_l_on.gif) no-repeat left top;}
+#right_tab .on a.tab_r {width:100px;font-weight:normal;color:#4B4B4B;background:url(http://img.gomtv.com/images/products/bg_rm_tab_r_on.gif) no-repeat left top;}
+
+#tab_list {clear:both;margin-bottom:10px;padding-bottom:5px;width:200px;overflow:hidden;background:url(http://img.gomtv.com/images/products/bg_rm_tab_02.gif) no-repeat left bottom;}
+#tab_list li {float:left;height:20px;}
+#tab_list li.num {clear:both;width:27px;text-align:right;border-left:2px solid #D7D7D7;}
+*html #tab_list li.num {width:29px;}
+#tab_list li.num img {margin-right:4px;margin-bottom:-1px;}
+#tab_list li.title {width:140px;}
+#tab_list li.ranking {padding-top:4px;width:29px;height:16px;border-right:2px solid #D7D7D7;font:normal 11px dotum,'µ¸¿ò';color:#898989;}
+*html #tab_list li.ranking {width:31px;height:20px;}
+
+#right_banner {margin-bottom:10px;}
+
+#r_gomshop_event {clear:both;margin-bottom:10px;background:url(http://img.gomtv.com/images/products/bg_r_box_b.gif) no-repeat left bottom;}
+#r_gomshop_event dt {height:20px;padding:10px 0 0 11px;font:bold 12px dotum,'µ¸¿ò';color:#4b4b4b;letter-spacing:-1px;background:url(http://img.gomtv.com/images/products/bg_r_box_a.gif) no-repeat left top;}
+*html #r_gomshop_event dt {height:30px;}
+#r_gomshop_event dt span {color:#ffa000;}
+#r_gomshop_event dd {padding:0 10px 10px 10px;}
+#r_gomshop_event dd img {display:block;}
+#r_gomshop_event dd .border {position:absolute;}
+
+#with_gom {clear:both;background:url(http://img.gomtv.com/images/products/bg_r_box_b.gif) no-repeat left bottom;}
+#with_gom h5 {height:20px;padding:10px 0 0 11px;font:bold 12px dotum,'µ¸¿ò';color:#4b4b4b;letter-spacing:-1px;background:url(http://img.gomtv.com/images/products/bg_r_box_a.gif) no-repeat left top;}
+*html #with_gom h5 {height:30px;}
+#with_gom h5 span {color:#ffa000;}
+#with_gom dl {clear:both;margin:0 10px 0;width:178px;padding:0 0 0 2px;overflow:auto;border-top:1px solid #ebebeb;}
+*html #with_gom dl {width:180px;}
+#with_gom dt {float:left;margin:10px 5px 0 0;width:95px;height:71px;padding:3px;border:1px solid #d7d7d7;}
+#with_gom dt img {display:block;}
+#with_gom dd.btn {float:left;margin-top:20px;width:70px;font:bold 12px dotum,'µ¸¿ò';color:#818181;letter-spacing:-1px;}
+#with_gom dd.btn img {margin-top:9px;}
+#with_gom dd.txt {clear:both;float:left;width:170px;margin-top:7px;padding:0 0 10px 6px;font:normal 11px dotum,'µ¸¿ò';color:#898989;letter-spacing:-1px;background:url(http://img.gomtv.com/images/common/bul/bul_00.gif) no-repeat left 4px;}
+*html #with_gom dd.txt {width:176px;}
+
+/* CSSÃß°¡ºÎºÐ 090619 */
+#with_gom_new {clear:both;background:url(http://img.gomtv.com/images/products/bg_r_box_b.gif) no-repeat left bottom;}
+#with_gom_new h5 {height:20px;padding:10px 0 0 11px;font:bold 12px dotum,'µ¸¿ò';color:#4b4b4b;letter-spacing:-1px;background:url(http://img.gomtv.com/images/products/bg_r_box_a.gif) no-repeat left top;}
+*html #with_gom_new h5 {height:30px;}
+#with_gom_new li { padding:0 0 4px 10px;}
+#with_gom_new li.taemin {padding-top:7px;}
+/* CSSÃß°¡ºÎºÐ 090619 */
+
+#my_shopping_info {padding-bottom:14px;margin-bottom:10px;background:url(http://img.gomtv.com/images/products/bg_my_shopping_d.gif) no-repeat left bottom;}
+#my_shopping_info h5 {height:24px;padding:9px 0 0 11px;font:bold 12px dotum,'µ¸¿ò';color:#fff;background:url(http://img.gomtv.com/images/products/bg_my_shopping_a.gif) no-repeat left top;}
+*html #my_shopping_info h5 {height:33px;}
+#my_shopping_info ul {width:200px;overflow-y:auto;}
+#my_shopping_info li {float:left;font:normal 11px dotum,'µ¸¿ò';color:#565656;}
+#my_shopping_info li a {font:bold 11px dotum,'µ¸¿ò';color:#ff4800;}
+#my_shopping_info li a:hover {text-decoration:underline;}
+#my_shopping_info li.t {width:65px;height:14px;padding:5px 0 0 29px;background:url(http://img.gomtv.com/images/products/bg_my_shopping_b.gif) no-repeat left top;}
+*html #my_shopping_info li.t {width:94px;height:19px;}
+#my_shopping_info li.c {width:97px;height:14px;padding:5px 0 0 9px;background:url(http://img.gomtv.com/images/products/bg_my_shopping_c.gif) no-repeat left top;}
+*html #my_shopping_info li.c {width:106px;height:19px;}
+#my_shopping_info li.line {width:200px;height:9px;font:1px/1px;background:url(http://img.gomtv.com/images/products/bg_my_shopping_line.gif) no-repeat left top;}
+
+#wp_right_list_wrap {padding-bottom:4px;margin-bottom:10px;background:url(http://img.gomtv.com/images/products/bg_r_list_c.gif) no-repeat left bottom;}
+#wp_right_list_wrap ul {padding:10px 0 6px 0;background:url(http://img.gomtv.com/images/products/bg_r_list_b.gif) repeat-y left top;}
+#wp_right_list_wrap li {height:18px;font:normal 12px dotum,'µ¸¿ò';padding-left:16px;background:url(http://img.gomtv.com/images/common/bul/bul_00.gif) no-repeat 10px 4px;}
+#wp_right_list_wrap li a {font:normal 12px dotum,'µ¸¿ò';color:#898989;}
+#wp_right_list_wrap h5 {height:20px;padding:9px 0 0 10px;font:bold 12px dotum,'µ¸¿ò';color:#4b4b4b;background:url(http://img.gomtv.com/images/products/bg_r_list_a2.gif) no-repeat left bottom;}
+*html #wp_right_list_wrap h5 {height:29px;}
+#wp_right_list_wrap h5.top {background:url(http://img.gomtv.com/images/products/bg_r_list_a.gif) no-repeat left bottom;}
+#wp_right_list_wrap h5 .more {float:right;margin-top:-12px;margin-right:12px;}
+
+#wp_right_tip_wrap {clear:both;padding-bottom:4px;margin-bottom:10px;background:url(http://img.gomtv.com/images/products/bg_r_list_c.gif) no-repeat left bottom;}
+#wp_right_tip_wrap h5 {height:20px;padding:9px 0 0 10px;font:bold 12px dotum,'µ¸¿ò';color:#4b4b4b;letter-spacing:-1px;background:url(http://img.gomtv.com/images/products/bg_r_list_a2.gif) no-repeat left bottom;}
+*html #wp_right_tip_wrap h5 {height:29px;}
+#wp_right_tip_wrap h5.top {background:url(http://img.gomtv.com/images/products/bg_r_list_a.gif) no-repeat left bottom;}
+#wp_right_tip_wrap h5 .more {float:right;margin-top:-12px;margin-right:12px;}
+#wp_right_tip_wrap h5 span {color:#ffa000;}
+#wp_right_tip_wrap dl {padding:10px 10px 0;background:url(http://img.gomtv.com/images/products/bg_r_list_b.gif) repeat-y left top;}
+#wp_right_tip_wrap dt {padding-left:13px;font:bold 11px dotum,'µ¸¿ò';color:#656565;letter-spacing:-1px;background:url(http://img.gomtv.com/images/common/bul/bul_arrow.gif) no-repeat left top;}
+
+#gomtv_service {height:28px;padding-top:9px;text-align:center;background:url(http://img.gomtv.com/images/products/bg_gomtv_service.gif) no-repeat left top;}
+*html #gomtv_service {height:37px;}
+#gomtv_service select {width:180px;font:normal 12px dotum,'µ¸¿ò';color:#898989;}
+/* Right Area End */
+
+/* 080127 [Ãß°¡] :: Start */
+#search_failed_smi {height:186px;margin-bottom:20px;text-align:center;background:url(http://img.gomtv.com/images/products/bg_search_failed.gif) no-repeat left top;}
+#search_failed_smi h5 {padding-top:40px;margin:0 0 10px 0;font:bold 14px dotum,'µ¸¿ò';color:#565656;text-align:center;height:34px;}
+#search_failed_smi h5 img {vertical-align:middle;margin-right:15px;}
+#search_failed_smi p {font:normal 11px/18px dotum,'µ¸¿ò';color:#898989;}
+
+/* 081126 [¼öÁ¤] :: Start */
+#codec_msg_box { background:#fff; border:10px solid #f5f5f5;}
+#codec_msg { background:#fff; border:1px solid #e1e1e1;}
+#codec_msg_txt { margin:30px; line-height:20px; font:bold 16px dotum,'µ¸¿ò';color:#ff7e00;text-align:center;}
+#codec_msg_txt2 { margin:30px; line-height:20px; font:bold 16px dotum,'µ¸¿ò';color:#ff7e00;text-align:center;}
+#codec_msg_txt2 strong {font:bold 14px dotum,'µ¸¿ò';color:#565656;}
+#codec_msg_txt2 img {vertical-align:middle;margin-right:15px;}
+
+#codec_txt { margin:10px 0; }
+#codec_txt li {padding-left:19px; font:normal 12px/18px dotum,'µ¸¿ò';color:#898989;background:url(http://img.gomtv.com/images/common/bul/bul_07.gif) no-repeat 10px 5px; }
+#codec_txt li strong { font:bold 12px/18px dotum,'µ¸¿ò';color:#565656;}
+#codec_txt ul { margin:5px 0 20px 0; }
+#codec_txt ul li { padding-left:15px; font:normal 12px/18px dotum,'µ¸¿ò';color:#898989;background:url(http://img.gomtv.com/images/common/bul/bul_00.gif) no-repeat 7px 7px;}
+#codec_txt ul li.url {font:normal 12px dotum,'µ¸¿ò';color:#ca9d6c;}
+#codec_txt ul li.dwlink { background:none; margin:3px 0 10px 0; }
+#codec_txt ul li.dwlink a.download_link { display:inline-block; font:normal 16px Gulim,'±¼¸²'; width:190px; height:34px; background:url(http://img.gomtv.com/images/products/btn_codec_dw.gif) no-repeat left top; color:#000; font-weight:bold; text-decoration:none; line-height:34px; text-align:center;  margin:0; }
+#codec_txt ul li.dwlink a.download_link:hover { background:url(http://img.gomtv.com/images/products/btn_codec_dw.gif) no-repeat left center; }
+#codec_txt ul li.dwlink a.download_link:active { background:url(http://img.gomtv.com/images/products/btn_codec_dw.gif) no-repeat left bottom; }
+#codec_txt ul li.dwlink span.codec_linkinfo { display:inline-block; margin:0 0 0 10px; }
+#codec_txt ul li a {color:#ff7e00;text-decoration:underline;}
+#codec_txt .point {color:#b37633;}
+/* 081126 [¼öÁ¤] :: End */
+
+/* 081126 ¼öÁ¤ - ÁÖ¼® Ã³¸®
+#codec_msg {height:66px;padding-top:50px;font:bold 14px dotum,'µ¸¿ò';color:#ff7e00;text-align:center;background:url(http://img.gomtv.com/images/products/bg_codec_msg.gif) no-repeat left top;}
+*html #codec_msg {height:116px;}
+
+#codec_msg2 {height:76px;padding-top:40px;font:bold 14px dotum,'µ¸¿ò';color:#ff7e00;text-align:center;background:url(http://img.gomtv.com/images/products/bg_codec_msg.gif) no-repeat left top;}
+*html #codec_msg2 {height:116px;}
+#codec_msg2 strong {font:bold 14px dotum,'µ¸¿ò';color:#565656;}
+#codec_msg2 img {vertical-align:middle;margin-right:15px;}
+
+#codec_txt {padding-top:15px;}
+#codec_txt li {padding:0 10px 10px 19px;font:normal 12px/18px dotum,'µ¸¿ò';color:#898989;background:url(http://img.gomtv.com/images/common/bul/bul_07.gif) no-repeat 10px 5px;}
+#codec_txt li strong {font:bold 12px/18px dotum,'µ¸¿ò';color:#565656;}
+#codec_txt ul {padding:3px 0 0;margin-left:-19px;}
+#codec_txt ul li{padding:0 0 0 19px;font:normal 12px/18px dotum,'µ¸¿ò';color:#898989;background:url(http://img.gomtv.com/images/common/bul/bul_00.gif) no-repeat 12px 7px;}
+#codec_txt ul li .url {font:normal 12px dotum,'µ¸¿ò';color:#ca9d6c;}
+#codec_txt ul li .download_link {font:normal 12px dotum,'µ¸¿ò';color:#5790a8;text-decoration:underline;}
+#codec_txt .point {color:#b37633;}
+*/
+
+#codec_txt_box { margin:0 9px 0 10px;}
+#codec_txt_box .top {height:5px;font:1px/1px;background:url(http://img.gomtv.com/images/products/bg_codec_txt_a.gif) no-repeat left top;}
+#codec_txt_box .bottom {height:5px;font:1px/1px;background:url(http://img.gomtv.com/images/products/bg_codec_txt_b.gif) no-repeat left bottom;}
+#codec_txt_box p {padding:5px 15px;font:normal 12px/18px dotum,'µ¸¿ò';color:#565656;background-color:#f9f3ed;}
+#codec_txt_box p strong {color:#565656;}
+#codec_txt_box .d2 {padding-left:13px;color:#b37633;}
+#codec_txt_box .ps {color:#898989 !important;}
+#codec_txt_box .ps strong {color:#898989 !important;}
+
+#alert_box {margin:40px 9px 0 10px;background:url(http://img.gomtv.com/images/products/bg_alert_msg_b.gif) repeat-y left top;}
+#alert_box h5 {height:22px;padding-top:10px;font:bold 12px dotum,'µ¸¿ò';color:#777777;text-align:center;background:url(http://img.gomtv.com/images/products/bg_alert_msg_a.gif) no-repeat left top;}
+*html #alert_box h5 {height:32px;}
+#alert_box ul {padding:15px 0 10px 0;background:url(http://img.gomtv.com/images/products/bg_alert_msg_c.gif) no-repeat left bottom;}
+#alert_box li {margin-bottom:10px;padding-left:21px;font:normal 11px/18px dotum,'µ¸¿ò';color:#898989;background:url(http://img.gomtv.com/images/common/bul/bul_00.gif) no-repeat 15px 7px;}
+
+/* 080127 [Ãß°¡] :: End */
+
+.l1 {background-image:url(http://img.gomtv.com/images/common/icon/icon_no_1_2.gif);}
+.l2 {background-image:url(http://img.gomtv.com/images/common/icon/icon_no_2_2.gif);}
+.l3 {background-image:url(http://img.gomtv.com/images/common/icon/icon_no_3_2.gif);}
+.l4 {background-image:url(http://img.gomtv.com/images/common/icon/icon_no_4_1.gif);}
+.l5 {background-image:url(http://img.gomtv.com/images/common/icon/icon_no_5_1.gif);}
+.l6 {background-image:url(http://img.gomtv.com/images/common/icon/icon_no_6_1.gif);}
+.l7 {background-image:url(http://img.gomtv.com/images/common/icon/icon_no_7_1.gif);}
+.l8 {background-image:url(http://img.gomtv.com/images/common/icon/icon_no_8_1.gif);}
+.l9 {background-image:url(http://img.gomtv.com/images/common/icon/icon_no_9_1.gif);}
+.l10 {background-image:url(http://img.gomtv.com/images/common/icon/icon_no_10_1.gif);}
+
+#subMain_a1_li10 {clear:both;width:500px;overflow:auto;}
+#subMain_a1_li10 a:hover {text-decoration:underline;}
+#subMain_a1_li10 li {float:left;font-family:dotum,'µ¸¿ò';color:#898989;border-bottom:1px solid #ececec;}
+#subMain_a1_li10 .date {width:85px;height:18px;padding-top:6px;font-size:11px;text-align:center;}
+*html #subMain_a1_li10 .date {height:25px;padding-top:7px;}
+#subMain_a1_li10 li strong {padding-right:5px;}
+#subMain_a1_li10 .bg {background-color:#f8f8f8}
+
+#subMain_a1_li10 .tit1 {width:230px;height:19px;padding:5px 0 0 35px;font-size:12px;background-repeat:no-repeat;background-position:10px 6px;}
+*html #subMain_a1_li10 .tit1 {width:235px;height:25px;padding:6px 0 0 35px;}
+
+#subMain_a1_li10 .tit2 {width:125px;height:19px;padding:5px 0 0 25px;font-size:12px;background-repeat:no-repeat;background-position:10px 6px;}
+*html #subMain_a1_li10 .tit2 {width:160px;height:25px;padding:6px 0 0 35px;}
+
+#subMain_a1_li10 .tit3 {width:70px;height:19px;padding:5px 0 0 15px;font-size:12px;background-repeat:no-repeat;background-position:10px 6px;}
+*html #subMain_a1_li10 .tit3 {width:105px;height:25px;padding:6px 0 0 35px;}
+
+
+/* °í°´¼¾ÅÍ ¼³¹®Á¶»ç */
+.survey { clear:both; float:left; border-bottom:4px solid #f4f4f4; }
+.service_survey { clear:both; float:left; width:665px; *width:680px; padding:10px 0 10px 10px; margin-bottom:10px; font:normal 11px dotum,'µ¸¿ò'; color:#606060; background:#f9f9f9; border:1px solid #e8e8e8; }
+.service_survey_unit { float:left; width:320px; margin-right:10px; }
+.service_survey_unit h3 { padding:10px; font:normal 11px dotum,'µ¸¿ò'; }
+.service_survey_unit ul { float:left; padding:0 15px; }
+.service_survey_unit li { float:left; width:100%; line-height:20px; }
+.service_survey_unit li span { float:left; width:80px; }
+.service_survey input.radio { float:left; }
+.service_survey p { float:left; width:630px; *width:650px; padding:10px; font-size:12px; text-align:center; }
+.service_survey p img { margin-top:10px; }
+
+.survey_layer { clear:both; float:left; width:100%; height:160px; padding-top:20px; color:#8d8d8d; }
+.position_1 { background:url(http://img.gomtv.com/images/customer/survey_layer_bg.gif) no-repeat left top;}
+.position_2 { background:url(http://img.gomtv.com/images/customer/survey_layer_bg.gif) no-repeat right top; }
+
+.survey_layer input.text { width:230px; height:16px; border:1px solid #ddd; }
+.survey_layer li.tit { line-height:30px; }
+.survey img.banner { margin-bottom:2px; }

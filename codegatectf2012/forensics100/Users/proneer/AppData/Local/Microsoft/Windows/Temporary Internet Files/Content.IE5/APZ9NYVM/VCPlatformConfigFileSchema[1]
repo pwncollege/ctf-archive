@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="VCPlatformConfigurationFile">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Platform" minOccurs="1" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Directories" minOccurs="1" maxOccurs="1">
+                <xs:complexType>
+                  <xs:attribute name="Include" type="xs:string" />
+                  <xs:attribute name="Library" type="xs:string" />
+                  <xs:attribute name="Path" type="xs:string" />
+                  <xs:attribute name="Reference" type="xs:string" />
+                  <xs:attribute name="Source" type="xs:string" />
+                </xs:complexType>
+              </xs:element>
+			<xs:element name="PlatformData" minOccurs="0" maxOccurs="1">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:any processContents="skip" minOccurs="0" maxOccurs="unbounded"></xs:any>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+            </xs:sequence>
+            <xs:attribute name="Name" type="xs:string" />
+            <xs:attribute name="Identifier" type="xs:string" />
+
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+      <xs:attribute name="Version">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="8.00" />
+            <xs:enumeration value="8,00" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

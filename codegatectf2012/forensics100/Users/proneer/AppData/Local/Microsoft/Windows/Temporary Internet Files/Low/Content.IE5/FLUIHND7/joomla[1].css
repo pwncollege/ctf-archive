@@ -1,0 +1,484 @@
+/* Copyright (C) 2007 - 2009 YOOtheme GmbH */
+
+/*
+ * general
+ * used by Jommla core components
+ */
+ 
+ #nbill-page-intro {border:1px solid #6e6e70;border-bottom:none; padding:3px;margin-top:0px;}
+ #nbill_form {border:1px solid #6e6e70; border-top:none; padding:3px;margin-top:0px;min-height:287px
+ ;margin-bottom:0px;}
+ #nbill_form_spacer {height:5px!important;}
+div.joomla h1 { font-size: 150%; }
+div.joomla h2 { font-size: 140%; }
+div.joomla h3 { font-size: 130%; }
+div.joomla h4 { font-size: 125%; }
+div.joomla h5 { font-size: 120%; }
+div.joomla h6 { font-size: 110%; }
+
+div.joomla h1 {
+	letter-spacing: normal;
+}
+
+div.joomla h2,
+div.joomla h3,
+div.joomla h4,
+div.joomla h5 {
+	letter-spacing:normal;
+	color:#666666;
+}
+
+div.joomla p {	margin:0px; }
+
+div.joomla h1.pagetitle {
+}
+
+div.joomla div.description {
+	margin: 10px 0px 10px 0px;
+	overflow: hidden;
+}
+
+div.joomla div.description img.left {
+	margin-right: 15px;
+	float: left;
+}
+
+div.joomla div.description img.right {
+	margin-left: 15px;
+	float: right;
+}
+
+div.joomla div.filter {
+	margin: 10px 0px 10px 0px;
+}
+
+div.joomla th {
+	padding: 5px 5px 5px 5px;
+	background: #ebebeb;
+	border-bottom: 1px solid #b4b4b4;
+	font-weight : bold;
+}
+
+div.joomla tr.even td {
+	padding: 5px 5px 5px 5px;
+	background: #f0f0f0;
+	border-bottom: 1px solid #dcdcdc;
+}
+
+div.joomla tr.odd td {
+	padding: 5px 5px 5px 5px;
+	background: #fafafa;
+	border-bottom: 1px solid #dcdcdc;
+}
+ 
+div.joomla span.number {
+	color: #969696;
+	font-style: italic;
+}
+
+/* floats */
+div.joomla .float-left { float: left; overflow: visible; }
+div.joomla .float-right { float: right; overflow: hidden; }
+
+div.joomla .width25 { width: 24.999%; }
+div.joomla .width33 { width: 33.333%; }
+div.joomla .width50 { width: 315px;}
+div.joomla .width100 { width: 100%; }
+
+/*
+ * com_content
+ * blog layout (frontpage, category, section)
+ * sub selectors: blog
+ */
+ 
+div.joomla div.blog div.description {  
+	margin: 10px 0px 15px 0px;
+	padding-bottom: 20px;
+	border-bottom: 1px #c8c8c8 dotted;
+}
+
+div.joomla div.leadingarticles {
+	overflow: hidden;
+}
+
+div.joomla div.teaserarticles {
+	overflow: visible;
+}
+
+div.joomla div.item {
+	margin-bottom: 15px;
+}
+
+div.joomla div.item-bg {
+	padding-bottom: 2px;
+	border-bottom: 1px #c8c8c8 dotted;
+	overflow: hidden;
+}
+
+div.joomla div.multicolumns div.item {
+	margin: 0px 0px 5px 5px;
+}
+
+div.joomla div.multicolumns div.first div.item {
+	margin-left: 0px;
+}
+
+div.joomla div.multicolumns div.last div.item {
+	margin-right: 0px;
+}
+
+div.joomla div.morearticles {
+	margin: 5px 0px 5px 0px;
+}
+
+div.joomla div.morearticles h3{
+	background-color:#6E6E70;
+	color:#FFFFFF;
+	font-size:12px;
+	font-weight:bold;
+	letter-spacing:normal;
+	margin-bottom:-1px;
+	margin-top:0;
+	padding:5px 2px 2px;
+	text-transform:uppercase;
+	width:630px;
+	clear:both;
+	
+}
+
+div.joomla div.morearticles ul{
+	color:#6e6e70;
+	font-size:12px;
+	font-weight:normal;
+	letter-spacing:normal;
+	margin-bottom:5px;
+	margin-top:0;
+	padding:5px 2px 2px;
+	text-transform:uppercase;
+	width:631px;
+	
+}
+
+div.joomla div.morearticles li{
+	border:1px solid #6e6e70;
+	font-size:12px;
+	font-weight:normal;
+	letter-spacing:normal;
+	margin-left:-1px;
+	margin-bottom:3px;
+	margin-top:0px;
+	padding:5px 2px 2px;
+	text-transform:uppercase;
+	width:627px;
+	
+}
+
+
+
+div.joomla div.pagination {
+	text-align: center;
+	border:1px solid #6e6e70;
+	font-size:12px;
+	font-weight:normal;
+	letter-spacing:normal;
+	margin-left:0px;
+	margin-bottom:3px;
+	margin-top:0px;
+	padding:5px 2px 2px;
+	width:627px;
+}
+
+div.joomla div.pagination p.results {
+}
+
+/*
+ * com_content
+ * list layout (frontpage, category, section)
+ * sub selectors: sectionlist, categorylist
+ */
+
+/*
+ * com_content
+ * article layout
+ * sub seletors: article
+ */
+
+div.joomla div.headline {
+	overflow: hidden;
+	background-color:#6e6e70;
+	padding:5px;
+	height:11px;
+	text-transform:uppercase;
+}
+
+div.joomla h1.title {
+	width: auto;
+	font-size:12px;
+	color:#FFF;
+	font-weight:normal;
+	float: left;
+	margin:0px 0 0px 0;
+}
+
+div.joomla div.multicolumns h1.title {
+	font-size: 200%;
+	letter-spacing: -1px;
+}
+
+div.joomla span.icon {
+	display: block;
+	margin-top: 0px;
+	float: right;
+}
+
+div.joomla div.multicolumns span.icon {
+	margin-top: 5px;
+}
+
+div.joomla span.edit {
+	margin-left: 10px;
+	float: left;
+}
+
+div.joomla span.pdf {
+	margin-right: 5px;
+}
+
+div.joomla span.print {
+	margin-right: 5px;
+}
+
+div.joomla span.email {
+}
+
+div.joomla span.printscreen {
+}
+
+div.joomla p.iteminfo {
+	margin: 0px 0px 15px 0px;
+}
+
+div.joomla p.articleinfo {
+	background-color:#CCC;
+	color:#000;
+}
+
+div.joomla p.articleinfo span.modified,
+div.joomla p.articleinfo span.author,
+div.joomla p.articleinfo span.created,
+div.joomla p.articleinfo span.url {
+	display: inline;
+	float:left;
+	font-size: 12px;
+	color:#000!important;
+	font-weight:normal!important;
+	font-style:normal!important;
+	margin-left:5px;
+}
+
+div.joomla p.articleinfo span.author {
+	color: #969696;
+	font-style: italic;
+}
+
+div.joomla p.articleinfo span.created {
+	font-weight: bold;
+}
+
+/*
+ * com_content
+ * editing an article
+ * sub seletors: edit-article
+ */
+
+div.joomla div.edit-article fieldset {
+	margin-bottom: 30px;
+}
+
+div.joomla div.edit-article fieldset div {
+	overflow: hidden;
+}
+
+div.joomla div.edit-article label.label-left {
+	display: block;
+	width: 150px;
+	float: left;
+}
+
+div.joomla div.edit-article div.save {
+	margin: 0px;
+	float: right;
+}
+
+div.joomla div.edit-article div#editor-xtd-buttons {
+	margin-bottom: 0px;
+	overflow: hidden;
+}
+
+div.joomla div.edit-article div#editor-xtd-buttons div {
+	margin: 0px;
+}
+
+div.joomla div.edit-article div#editor-xtd-buttons div.button2-left {
+	margin-right: 5px;
+}
+
+div.joomla div.edit-article div#editor-xtd-buttons a:link,
+div.joomla div.edit-article div#editor-xtd-buttons a:visited,
+div.joomla div.edit-article div#editor-xtd-buttons a:hover {
+	color: #323232;
+}
+
+/*
+ * com_weblinks
+ * sub seletors: weblinks
+ */
+
+div.joomla div.weblinks fieldset {
+}
+
+div.joomla div.weblinks fieldset div {
+	overflow: hidden;
+}
+
+div.joomla div.weblinks label.label-left {
+	display: block;
+	width: 150px;
+	float: left;
+}
+
+/*
+ * com_search
+ * sub seletors: search
+ */
+
+div.joomla div.search p.info {
+	margin: 0px;
+	color: #969696;
+	font-style: italic;
+}
+
+div.joomla div.search span.highlight {
+	background: #ffffaa;
+}
+
+/*
+ * com_poll
+ * sub seletors: poll
+ */
+
+div.joomla div.poll fieldset {
+	margin: 15px 0px 10px 0px;
+}
+
+/*
+ * com_contact
+ * sub seletors: contact
+ */
+
+div.joomla div.contact h1 {
+	margin-bottom: 0px;
+	font-size: 250%;
+	font-weight: normal;
+	letter-spacing: -1px;
+}
+
+div.joomla div.contact h2 {
+	margin-bottom: 10px;
+	font-size: 120%;
+	font-weight: normal;
+	text-transform: uppercase;
+	letter-spacing: 0px;
+}
+
+div.joomla div.contact div.image {
+	float: right;
+}
+
+div.joomla div.contact table {
+	margin-bottom: 10px;
+}
+
+div.joomla div.contact label.label-top {
+	display: block;
+}
+
+/*
+ * com_user
+ * sub seletors: user
+ */
+
+div.joomla div.user label.label-left,
+div.joomla div.user span.label-left  {
+	display: block;
+	width: 130px;
+	float: left;
+}
+
+/*
+ * mod_newsflash
+ */
+
+div.module-newsflash {
+	overflow: hidden;
+}
+
+div.module-newsflash div.item {
+	padding-bottom: 15px;
+	overflow: hidden;
+}
+
+div.module-newsflash div.last {
+	padding-bottom: 0px;
+}
+
+/*
+ * legacy Joomla styling only for third party components
+ */
+
+.contentheading,
+.componentheading {
+	background-color:#6e6e70;
+	color:#FFF;
+	margin: 0px 0px 0px 0px;
+	padding-left:5px;
+	padding-top:4px;
+	padding-bottom:3px;
+	font-size: 12px;
+	letter-spacing: 0px;
+	font-weight:bold;
+	text-transform:uppercase;
+}
+
+/*
+ * Joomla! system tooltips
+ */
+ 
+.tool-tip {
+	float: left;
+	background: #ffc;
+	border: 1px solid #D4D5AA;
+	padding: 5px;
+	max-width: 200px;
+	color: #323232;
+}
+
+.tool-title {
+	padding: 0;
+	margin: 0;
+	font-size: 100%;
+	font-weight: bold;
+	margin-top: -15px;
+	padding-top: 15px;
+	padding-bottom: 5px;
+	background: url(../../system/images/selector-arrow.png) no-repeat;
+}
+
+.tool-text {
+	font-size: 100%;
+	margin: 0;
+}
+
+div.joomla p.articleinfo span.modified {display:none!important;}
+
+#nbill_form_spacer {height:5px!important;}

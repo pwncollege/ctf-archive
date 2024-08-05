@@ -1,0 +1,54 @@
+#overviewContainer{
+	width:900px;
+	line-height:16px;
+	margin:auto;	
+	padding:15px 0 0 0;
+	}
+#overviewContainer h1{
+	font-size:14pt;
+	font-weight:bold;
+	color:#000000;
+	}
+#overviewContainer ul{
+	margin:0;
+	padding:0;
+	}
+#overviewContainer ul li.nor_sty1{
+	margin:0 0 0 15px;
+	padding: 0 0 0 0px;
+	line-height:18px;
+	list-style-type:disc;
+	color:#808080;
+	}
+
+#overviewContainer ul li a{
+	color:#0088cc;
+	text-decoration:none;
+	line-height:15px;
+	}
+
+#overviewContainer ul li a:hover{
+	color:#0088cc;
+	text-decoration:underline;
+	line-height:15px;
+	}
+#overviewContainer ul li.nor_sty1_title{
+	margin:0;
+	padding:5px 0px 5px 0px;
+	line-height:18px;
+	font-weight:bold;
+	list-style-type:none;
+	}
+#overviewContainer ul li.nor_sty1_btn{
+	margin:0;
+	padding: 15px 0 0 0px;
+	list-style-type:none;
+	}
+#overviewContainer ul li.nor_sty2{
+	margin:0;
+	padding: 1px 0 0 0px;
+	list-style-type:none;
+	}
+blockquote {
+	margin-left:25px;
+}

@@ -1,0 +1,188 @@
+FONT	{FONT-FAMILY: Verdana,Helvetica; FONT-SIZE: 12px}
+TD		{FONT-FAMILY: Verdana,Helvetica; FONT-SIZE: 12px}
+BODY	{FONT-FAMILY: Verdana,Helvetica; FONT-SIZE: 12px}
+P		{FONT-FAMILY: Verdana,Helvetica; FONT-SIZE: 12px}
+DIV		{FONT-FAMILY: Verdana,Helvetica; FONT-SIZE: 12px}
+
+/* Based on the original Style Sheet for the fisubsilver v2 Theme for phpBB version 2+
+Edited by Daz  - http:/www.forumimages.com - last updated 23-03-03 */
+
+
+/* Gets rid of the need for border="0" on hyperlinked images */
+img{border:0}
+
+/* The content of the posts (body of text) */
+body{background:#ffffff;color:#000000;font:12px Verdana,Arial,Helvetica,sans-serif;margin:6px;padding:0;
+scrollbar-3dlight-color:#d1d7dc;
+scrollbar-arrow-color:#006699;
+scrollbar-darkshadow-color:#98aab1;
+scrollbar-face-color:#dee3e7;
+scrollbar-highlight-color:#ffffff;
+scrollbar-shadow-color:#dee3e7;
+scrollbar-track-color:#efefef}
+
+.maintable {
+  width: 100%;
+  border-width: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
+  padding: 0;
+}
+
+
+.mainside {
+width: 156px;
+vertical-align: top;
+}
+
+.main {
+vertical-align: top;
+}
+
+.pagetitle {
+background: #EAEDF4 url('../images/cellpic3.gif');
+height: 27px;
+width: 100%;
+border: 0px;
+//padding: 4px;
+vertical-align: middle;
+                  }
+
+
+
+/* General text */
+.gensmall{font-size:10px}
+td.genmed,.genmed{font-size:11px}
+.explaintitle{font-size:11px;font-weight:bold;color:#5c81b1}
+
+/* General page style */
+a:link,a:active,a:visited,a.postlink{color:#006699;text-decoration:none}
+a:hover{color:#dd6900}
+
+/* titles for the topics:could specify viewed link colour too */
+.topictitle{font-size:11px;font-weight:bold}
+a.topictitle:visited{color:#5493b4}
+a.topictitle:hover{color:#dd6900}
+
+/* Name of poster in viewmsg.php and viewtopic.php and other places */
+.name{font-size:11px;font-weight: bold}
+
+hr{border: 0px solid #ffffff;border-top-width:1px;height:0px}
+
+/* Category gradients*/
+td.cat{font-weight:bold;letter-spacing:1px;background:#d9e2ec url(images/cellpic1.gif);
+height:29px;text-indent:4px}
+
+/* Main table cell colours and backgrounds */
+.row1{background:#eaedf4}
+.row2,.helpline{background:#d9e2ec}
+.row3{background:#cedcec}
+td.spacerow{background:#cad9ea}
+
+/* This is for the table cell above the Topics,Post & Last posts on the index.php */
+td.rowpic{background:url(images/cellpic2.jpg) #ffffff repeat-y}
+
+/* Table Header cells */
+th{background:#005eb2 url(images/cellpic3.gif);color:#deeef3;font-size:11px;
+font-weight:bold;height:27px;white-space:nowrap;text-align:center;padding-left:8px;padding-right:8px}
+
+/* This is the border line & background colour round the entire page */
+.bodyline{background:#ffffff;border:1px solid #98aab1}
+
+/* This is the outline round the main forum tables */
+.forumline{background:#ffffff;border:1px solid #006699}
+
+/* The largest text used in the index page title and toptic title etc. */
+.maintitle,h1{
+font:bold 20px/120% "Trebuchet MS",Verdana,Arial,Helvetica,sans-serif;text-decoration:none;color:#5c81b1}
+
+.subtitle,h2{font:bold 18px/180% "Trebuchet MS",Verdana,Arial,Helvetica,sans-serif;
+text-decoration:none}
+
+/* Used for the navigation text,(Page 1,2,3 etc) and the navigation bar when in a forum */
+.nav{font-size:11px;font-weight:bold}
+.postbody{font-size:12px;line-height:125%}
+
+/* Location,number of posts,post date etc */
+.postdetails{font-size:10px;color:#00396a}
+
+/* Quote blocks */
+.quote{background:#fafafa;border:1px solid #d1d7dc;color:#444444;
+font-size:11px;line-height:125%}
+
+/* Code blocks */
+.code{background:#fafafa;border:1px solid #d1d7dc;color:#006600;
+font:12px Courier,"Courier New",sans-serif;padding:5px}
+
+/* This is for the error messages that pop up */
+.errorline{background:#add8e6;border:1px solid #006699}
+
+/* Form elements */
+input{border-color: #000000; color:#000000; background-color: #EAEDF4; font:normal 11px Verdana,Arial,Helvetica,sans-serif;border-width: 1px 1px 1px 1px}
+textarea{border-color: #000000; color:#000000; background-color: #EAEDF4; font:normal 11px Verdana,Arial,Helvetica,sans-serif;border-width: 1px 1px 1px 1px}
+select{border-color: #000000; color:#000000; font:normal 11px Verdana,Arial,Helvetica,sans-serif}
+
+/* The text input fields background colour */
+input.post,textarea.post,select{background:#EAEDF4}
+input{text-indent:2px}
+
+/* The buttons used for bbCode styling in message post */
+/* fixed for fisubsilver cpg */
+input.button{background: #e5ebf3; color:#000000; font:11px Verdana,Arial,Helvetica,sans-serif}
+
+/* The main submit button option */
+/* fixed for fisubsilver cpg */
+input.mainoption{background: #e5ebf3;font-weight:bold}
+
+/* None-bold submit button */
+/* fixed for fisubsilver cpg */
+input.liteoption{background: #e5ebf3;font-weight:normal}
+
+/* This is the line in the posting page which shows the rollover
+help line. Colour value in row2 */
+.helpline{border-style:none}
+
+/* This is the gradient background at the top of the page */
+.topbkg{background: #dbe3ee url(images/cellpic_bkg.jpg) repeat-x}
+.topnav{font-size:10px;background: #e5ebf3 url(images/cellpic_nav.gif) repeat-x;color:#dd6900;height:11px;white-space:nowrap;border: 0px solid #91a0ae;border-width: 1px 0px 1px 0px}
+.topnav2{font-size:10px;color:#dd6900;height:21px;white-space:nowrap;border: 0px}
+
+/* Admin & Moderator Colours MODification */
+.admin,.mod{font-size:11px;font-weight:bold}
+.admin,a.admin,a.admin:visited{color:#ffa34f}
+.mod,a.mod,a.mod:visited{color:#006600}
+a.admin:hover,a.mod:hover{color:#dd6900}
+
+/* Specify the space around images */
+.imgtopic,.imgicon{margin-left:3px}
+.imgspace{margin-left:1px;margin-right:2px}
+.imgfolder{margin:1px;margin-left:4px;margin-right:4px}
+
+/* Background images for tables */
+.tbl{border-collapse:collapse;height:4px;width:100%}
+.tbll{background: url(images/tb4_l.gif) no-repeat;width:8px}
+.tblbot{background: url(images/tb4_m.gif) repeat-x;width:100%}
+.tblr{background: url(images/tb4_r.gif) no-repeat;width:8px}
+
+.adminitem {  border: 0;  padding: 0;  width: 130px;  display: table-cell;  vertical-align: bottom;  text-align: center;}.adminitem span {  display: block;  width: 120px;  color: #000;  font-weight: bold;  text-decoration: none;  border: 1px solid #069;  background: #FAFAFA;}
+
+legend {
+  font-weight: bold;
+}
+fieldset {
+  border: #069 solid 1px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.title 		 {BACKGROUND: none; COLOR: #006699; FONT-SIZE: 13px; FONT-WEIGHT: bold; FONT-FAMILY: Verdana, Helvetica; TEXT-DECORATION: none}
+.content 	 {BACKGROUND: none; COLOR: #006699 FONT-SIZE: 10px; FONT-FAMILY: Verdana, Helvetica}
+.block-title {BACKGROUND: none; COLOR: #006699; FONT-SIZE: 11px; FONT-FAMILY: Verdana, Helvetica}
+.storytitle  {BACKGROUND: none; COLOR: #DEEEF3; FONT-SIZE: 11px; FONT-WEIGHT: bold; FONT-FAMILY: Verdana, Helvetica; TEXT-DECORATION: none}
+.storycat	 {BACKGROUND: none; COLOR: #006699; FONT-SIZE: 10px; FONT-WEIGHT: bold; FONT-FAMILY: Verdana, Helvetica; TEXT-DECORATION: underline}
+.boxtitle 	 {BACKGROUND: none; COLOR: #006699; FONT-SIZE: 10px; FONT-WEIGHT: bold; FONT-FAMILY: Verdana, Helvetica; TEXT-DECORATION: none}
+.boxcontent  {BACKGROUND: none; COLOR: #006699; FONT-SIZE: 10px; FONT-FAMILY: Verdana, Helvetica}
+.option 	 {BACKGROUND: none; COLOR: #006699; FONT-SIZE: 10px; FONT-WEIGHT: bold; FONT-FAMILY: Verdana, Helvetica; TEXT-DECORATION: none}
+.tiny		 {BACKGROUND: none; COLOR: #006699; FONT-SIZE: 10px; FONT-WEIGHT: normal; FONT-FAMILY: Verdana, Helvetica; TEXT-DECORATION: none}
+.small		 {BACKGROUND: none; COLOR: #006699; FONT-SIZE: 9px; FONT-WEIGHT: normal; FONT-FAMILY: Verdana, Helvetica; TEXT-DECORATION: none}
+.bodyline,.forumline {  border: 1px #98AAB1 solid;  background: #FFF;}.navmenu img {  margin: 1px 5px;}.gen {  font-size: 12px;}.genmed {  font-size: 11px;}.gensmall {  font-size: 10px;}

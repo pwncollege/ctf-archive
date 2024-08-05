@@ -1,0 +1,247 @@
+<?xml version="1.0"?>
+
+<bindings id="SearchSuggestionsPopupBindings" xmlns="http://www.mozilla.org/xbl"
+	xmlns:html="http://www.w3.org/1999/xhtml"
+	xmlns:xul="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+	xmlns:xbl="http://www.mozilla.org/xbl">
+	<binding id="ssMenuitem" extends="xul:hbox">
+		<content>
+			<xul:hbox flex="1" anonid="parentbox" class="ssMenuitem" maxheight="22" selected="false" xbl:inherits="index-no" highlightOn="false" >
+				<xul:hbox flex="1" style="overflow:hidden;" >
+					<xul:label flex="0" value="" crop="right" anonid="sb-text" class="ssTextEntered" xbl:inherits="value=sb-text" />
+					<xul:label flex="1" value="" crop="right" anonid="rem-text" class="ssTextRemaining" xbl:inherits="value=rem-text" />
+			    </xul:hbox>
+			    <xul:hbox maxwidth="60" align="right">
+					<xul:label flex="0" value="" anonid="header" class="ssTextHeader" xbl:inherits="value=header" />
+			    </xul:hbox>
+			</xul:hbox>
+		</content>
+		<implementation>
+			<field name="isSelected">false</field>
+			<field name="userInputValue">null</field>
+			<method name="toggleHighlight">
+				<parameter name="isHighlightOn" />
+				<parameter name="color" />
+				<body>
+                <![CDATA[
+                       if(isHighlightOn) {
+                           this.setAttribute('highlightOn','true');
+                       }
+                       else {
+                           this.setAttribute('highlightOn','false');
+                       }
+                       this.isSelected = isHighlightOn ? true : false;
+                ]]>
+				</body>
+			</method>
+			<method name="_setSBValToMenuitemVal">
+				<parameter name="value" />
+				<body>
+                <![CDATA[
+                    var sbval = null;
+                    if(typeof(value) != "undefined" ) {
+                        sbval = value;
+                    } else {
+                        sbval = document.getAnonymousElementByAttribute(this,'anonid','sb-text').getAttribute('value') + document.getAnonymousElementByAttribute(this,'anonid','rem-text').getAttribute('value'); //Default value
+                    }
+                    document.getElementById("asktb-searchbox").value = sbval;                    
+                ]]>
+				</body>
+			</method>
+		</implementation>
+		<handlers>
+
+			<handler event="mouseout">
+            <![CDATA[
+                 this.toggleHighlight(false);
+            ]]>
+			</handler>
+			<handler event="mouseover">
+            <![CDATA[ 
+                var parentPopup = this.parentNode.parentNode.parentNode;
+                if (parentPopup._selectedIndex >= 0 && parentPopup._selectedIndex  <  parentPopup.getVisibleRows().length ) {
+                    parentPopup.getVisibleRows()[parentPopup._selectedIndex].toggleHighlight(false);
+                }	                    
+                this.toggleHighlight(true);
+                //this.parentNode.parentNode.parentNode.selectedIndex = this.getAttribute('index-no');
+            ]]>
+			</handler>
+			<handler event="click">
+            <![CDATA[
+                this._setSBValToMenuitemVal();  // 11 ms
+                if (ATB.Logger.isDebugEnabled()) { ATB.Logger.debug("Suggestion selected from suggestions popup,initating search"); }
+                ATB.Core.defaultSearchAction();  // 15 ms
+                ATB.Suggestions.closeSuggestionsPopup();
+                event.stopPropagation();
+            ]]>
+			</handler>
+		</handlers>
+	</binding>
+	<binding id="Listitem" extends="chrome://global/content/bindings/listbox.xml#listitem">
+		<implementation>
+			<method name="toggleHighlight">
+				<parameter name="isHighlightOn" />
+				<parameter name="color" />
+				<body>
+                <![CDATA[
+                    this.style.background = isHighlightOn ? "#ffffff url('chrome://asktoolbar/skin/bg.png') repeat-x"  : "none";                       
+                ]]>
+				</body>
+			</method>
+			<method name="_setSBValToMenuitemVal">
+				<parameter name="value" />
+				<body>
+                <![CDATA[
+                    var sbval = null;
+                    if(typeof(value) != "undefined" ) {
+                        sbval = value;
+                    } else {
+                        sbval = document.getAnonymousElementByAttribute(this,'anonid','sb-text').getAttribute('value') + document.getAnonymousElementByAttribute(this,'anonid','rem-text').getAttribute('value'); //Default value
+                    }
+                    document.getElementById("asktb-searchbox").value = sbval;                    
+                ]]>
+				</body>
+			</method>
+		</implementation>
+		<handlers>
+			<handler event="mouseout">
+            <![CDATA[
+                this.childNodes[0].toggleHighlight(false);
+            ]]>
+			</handler>
+			<handler event="mouseover">
+            <![CDATA[ 
+                this.childNodes[0].toggleHighlight(true);                
+            ]]>
+			</handler>
+			<handler event="click">
+            <![CDATA[
+                this.childNodes[0].click();
+            ]]>
+			</handler>
+		</handlers>
+	</binding>
+	<binding id="ssPopup" extends="chrome://global/content/bindings/popup.xml#panel">
+	    <implementation>
+			<field name="isPopupOpen">false</field>
+			<field name="userInputValue">null</field>
+			<field name="_selectedIndex">-1</field>
+			<!--Used for maintaining a the selected/ highlighted index-->
+			<property name="selectedIndex">
+				<setter>
+                <![CDATA[
+	                try{	                
+	                    var popup = this;
+	                        function getItem(index) {
+	                            var item = null;
+	                            var rows = this.getVisibleRows();
+	                            return rows[index];
+	                        }
+	                    
+	                    var rowCount = this.getVisibleRows().length;
+	                    if (this._selectedIndex >= 0 && this._selectedIndex  <  rowCount ) {
+	                        this.getVisibleRows()[this._selectedIndex].toggleHighlight(false);
+	                    }
+	                    if (val >= rowCount) {
+	                        this._selectedIndex = -1;
+	                    } else if (val < -1) {
+	                        this._selectedIndex = rowCount - 1;
+	                    } else {
+	                        this._selectedIndex = val;
+	                    }
+	                    if (this._selectedIndex < 0 || this._selectedIndex >= rowCount) {                        
+	                        return;
+	                    }
+						var item = this.getVisibleRows()[this._selectedIndex];
+	                    item.toggleHighlight(true,"blue");
+	                    item._setSBValToMenuitemVal();
+                    } catch(e) {
+                        ATB.Logger.error("Error occured while setting selectedIndex for popup:" + e);
+                    }
+                ]]>
+				</setter>
+				<getter>
+                <![CDATA[ 
+                    return this._selectedIndex;
+                ]]>
+				</getter>
+			</property>
+
+			<method name="closePopup">
+				<body>
+                <![CDATA[
+                    try {
+                        if (this.isPopupOpen) {
+                            this.userInputValue =  document.getElementById("asktb-searchbox").value;
+                            this.hidePopup();
+                        }
+                    } catch (e) {
+                        ATB.Logger.error("Error occured while closing popup:" + e);                        
+                    }
+                ]]>
+				</body>
+			</method>
+			<method name="getRowCount">
+				<body>
+                <![CDATA[
+                    try {
+	                    var rowCount = 0,i=0;var visibleRows = [];
+	                    /*for(i=0; i<this.childNodes[0].childNodes.length ;i++) {
+	                        if(this.childNodes[0].childNodes[i].getAttribute("hidden") == "false") {
+	                            rowCount++;
+	                        }
+	                    }*/
+	                    var rows = this.getElementsByClassName("asktb-ssMenuitem");
+	                    for(i=0;i<rows.length;i++) {
+	                        if(rows[i].getAttribute("hidden") == "false") {
+	                            visibleRows.push(rows[i]);
+	                        }
+	                    }
+	                    return visibleRows;
+                    } catch (e) {
+                        ATB.Logger.error("Error occured while getting rowCount for popup:" + e);                        
+                    }
+                ]]>
+				</body>
+			</method>
+			<method name="getVisibleRows">
+				<body>
+                <![CDATA[
+                    try {
+                        var visibleRows = [];
+	                    var rows = this.getElementsByClassName("asktb-ssMenuitem");
+	                    for(i=0;i<rows.length;i++) {
+	                        if(rows[i].getAttribute("hidden") == "false") {
+	                            visibleRows.push(rows[i]);
+	                        }
+	                    }
+	                    return visibleRows;
+                    } catch (e) {
+                        ATB.Logger.error("Error occured while getting getVisibleRows for popup:" + e);                        
+                    }
+                ]]>
+				</body>
+			</method>
+		</implementation>
+		<handlers>
+			<handler event="popuphiding">
+            <![CDATA[
+                this.selectedIndex = -1;
+                this.isPopupOpen = false;
+            ]]>
+			</handler>
+			<handler event="popupshowing">
+            <![CDATA[ 
+                this.selectedIndex = -1;
+                this.isPopupOpen = true;
+            ]]>
+			</handler>
+			<handler event="mouseout">
+            <![CDATA[ 
+                this.selectedIndex = -1;
+                document.getElementById("asktb-searchbox").value = this.userInputValue;
+            ]]>
+			</handler>
+		</handlers>
+	</binding>	
+</bindings>

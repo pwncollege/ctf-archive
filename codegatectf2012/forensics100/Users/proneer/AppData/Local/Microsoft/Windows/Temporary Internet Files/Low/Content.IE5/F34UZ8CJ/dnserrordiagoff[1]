@@ -1,0 +1,175 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+
+    <head>
+        <link rel="stylesheet" type="text/css" href="ErrorPageTemplate.css" >
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Internet Explorer cannot display the webpage</title>
+        <script src="errorPageStrings.js" language="javascript" type="text/javascript">
+        </script>
+        <script src="httpErrorPagesScripts.js" language="javascript" type="text/javascript">
+        </script>
+    </head>
+
+    <body onLoad="javascript:initConnectionStatus();initGoBack();initMoreInfo('infoBlockID');">
+
+        <table width="730" cellpadding="0" cellspacing="0" border="0">
+
+        <!-- Error title -->
+            <tr>
+                <td id="infoIconAlign" width="60" align="left" valign="top" rowspan="2">
+                    <img src="noConnect.png" id="infoIcon" alt="Info icon">
+                </td>
+                <td id="mainTitleAlign" valign="middle" align="left" width="*">
+                    <h1 id="mainTitle">Internet Explorer cannot display the webpage</h1>
+                </td>
+            </tr>
+
+            <tr>
+                <!-- This row is for HTTP status code, as well as the divider-->
+                <td id="statusCodeAlign" class="errorCodeAndDivider" align="right">&nbsp;
+                    <div class="divider"></div>
+                </td>
+            </tr>
+
+        <!-- What you can do -->
+            <tr>
+                <td>
+                    &nbsp;
+                </td>
+                <td id="whatToTryAlign" valign="top" align="left">
+                    <h2 id="whatToTry">What you can try:</h2>
+                </td>
+            </tr>
+
+        <!-- Check Connection Status-->
+            <tr>
+                <td >
+                    &nbsp;
+                </td>
+                <td id="checkConnectionID" align="left" valign="middle">
+                    <h4>
+                    <table>
+                        <tr>
+                            <td valign="top">
+                                <img src="bullet.png" border="0" alt="" class="actionIcon">
+                            </td>
+                            <td valign="top">
+                                <span id="checkConnection">You are not connected to the Internet. Check your Internet connection</span>
+                            </td>
+                         </tr>
+                    </table>
+                    </h4>
+                </td>
+            </tr>
+
+        <!-- retype address -->
+            <tr>
+                <td >
+                    &nbsp;
+                </td>
+                <td id="retypeAddressAlign" align="left" valign="middle">
+                    <h4>
+                        <table>
+                            <tr>
+                                <td valign="top">
+                                    <img src="bullet.png" border="0" alt="" class="actionIcon">
+                                </td>
+                                <td valign="top">
+                                    <ID id="retypeAddress">Retype the address.</ID>
+                                </td>
+                            </tr>
+                        </table>
+                    </h4>
+                </td>
+            </tr>
+
+        <!-- back to previous page -->
+            <tr>
+                <td >
+                    &nbsp;
+                </td>
+                <td id="goBackAlign" align="left" valign="middle">
+                    <h4>
+                        <table>
+                            <tr>
+                                <td valign="top">
+                                    <img src="bullet.png" border="0" alt="" class="actionIcon">
+                                </td>
+                                <td valign="top">
+                                    <span id="goBackContainer"></span>
+                                    <noscript><ID id="goBack">Go back to the previous page.</ID></noscript>
+                                </td>
+                            </tr>
+                        </table>
+                    </h4>
+                </td>
+            </tr>
+
+
+        <!-- Error Body -->
+            <tr>
+                <td>
+                    &nbsp;
+                </td>
+                <td id="likelyCausesAlign" valign="top" align="left">
+                    <h3 id="likelyCauses">Most likely causes:</h3>
+                    <ul>
+                        <li id="causeNotConnected">You are not connected to the Internet.</li>
+                        <li id="causeSiteProblem">The website is encountering problems.</li>
+                        <li id="causeErrorInAddress">There might be a typing error in the address.</li>
+                    </ul>
+                </td>
+            </tr>
+
+
+        <!-- InfoBlock -->
+            <tr>
+                <td id="infoBlockAlign" align="right" valign="top">
+                    &nbsp;
+                </td>
+                <td id="moreInfoAlign" align="left" valign="middle">
+                    <h4>
+                        <table>
+                            <tr>
+                                <td valign="top">
+                                    <a href="#" onclick="javascript:expandCollapse('infoBlockID', true); return false;"><img src="down.png" id="infoBlockIDImage" border="0" class="actionIcon" alt="More information"></a>
+                                </td>
+                                <td valign="top">
+                                    <span id="moreInfoContainer"></span>
+                                    <noscript><ID id="moreInformation">More information</ID></noscript>
+                                </td>
+                            </tr>
+                        </table>
+                    </h4>
+                    <div id="infoBlockID" class="infoBlock" style="display: none">
+                        <p>
+                            <ID id="errorExpl1">This problem can be caused by a variety of issues, including:</ID>
+                                <ul>
+                                <li id="errorExpl2">Internet connectivity has been lost.</li>
+                                <li id="errorExpl3">The website is temporarily unavailable.</li>
+                                <li id="errorExpl4">The Domain Name Server (DNS) is not reachable.</li>
+                                <li id="errorExpl5">The Domain Name Server (DNS) does not have a listing for the website's domain.</li>
+                                <li id="errorExpl6">If this is an HTTPS (secure) address, click tools, click Internet Options, click Advanced, and check to be sure the SSL and TLS protocols are enabled under the security section.</li>
+                            </ul>
+                        </p>
+                        <p id="offlineUsers"><b>For offline users</b></p>
+                        <p id="viewSubscribedFeeds1">
+                            You can still view subscribed feeds and some recently viewed webpages.<br/>
+                            To view subscribed feeds:
+                            <ol>
+                                <li id="viewSubscribedFeeds2">Click the Favorites button <img src="favcenter.png" border="0">, click <b>Feeds</b>, and then click the feed you want to view.</li>
+                            </ol>
+                        </p>
+                        <p id="viewRecentWebpages1">To view recently visited webpages (might not work on all pages):
+                            <ol>
+                                <li id="viewRecentWebpages2">Press Alt, click <b>File</b>, and then click <b>Work Offline</b>.</li>
+                                <li id="viewRecentWebpages3">Click the Favorites button <img src="favcenter.png" border="0">, click <b>History</b>, and then click the page you want to view.</li>
+                            </ol>
+                        </p>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>

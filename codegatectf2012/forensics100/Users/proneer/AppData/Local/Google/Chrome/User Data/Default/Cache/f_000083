@@ -1,0 +1,501 @@
+﻿///<reference path="../Common/Scripts/jquery-1.3.2-vsdoc2.js" />
+// 김명훈 2011.01.31 최초작성
+// LP/SRP userControl 선택 리스트에 사용하는 컨테이너
+
+var AttributeDataObject = function(AttributeData) {
+	// 데이터 타입 
+
+	// AttributeID : 특성 아이디
+	// AttributeName : 특성 이름
+	// AttributeElementID : 특성원 아이디
+	// AttributeElementName : 특성원 이름
+
+	// 초기 데이터 형태  [AttributeID_AttributeElementID_AttributeName_AttributeElementName]![AttributeID_AttributeElementID_AttributeName_AttributeElementName] 
+	// delimiter
+	this.derimCharObj = '!';
+	this.derimCharElem = '_';
+
+	// var arrayObjectSet = strSet;
+	//  var arrayObjectSet = { 'AttributeID': 'Brand', 'AttributeName': '브랜드', 'AttributeElementID': 1234, 'AttributeElementName': '센스' };
+	this.arrayObjectSet = new Array();
+
+	// 데이터 입력
+	this.insertData = function(AttributeID, AttributeElementID, AttributeName, AttributeElementName) {
+		// AttributeID, AttributeElementID 기준으로 동일한 아이템이 존재하면 삭제 후 입력함
+		this.deleteDataByAttrIdAttrElementId(AttributeID, AttributeElementID);
+
+		this.arrayObjectSet[this.arrayObjectSet.length] = { 'AttributeID': AttributeID, 'AttributeElementID': AttributeElementID, 'AttributeName': AttributeName, 'AttributeElementName': AttributeElementName };
+	};
+
+	// 데이터 삭제 (idx 기준)
+	this.deleteDataByIdx = function(idx) {
+		this.arrayObjectSet.splice(idx, 1);
+	};
+
+	// 데이터 삭제 (AttributeID 기준 : 해당 AttributeID은 전부 삭제)
+	this.deleteDataByAttrID = function(AttributeID) {
+		for (var idx = 0; idx < this.arrayObjectSet.length; idx++) {
+			if (this.arrayObjectSet[idx].AttributeID == AttributeID) {
+				this.arrayObjectSet.splice(idx--, 1);
+			}
+		}
+	};
+
+	// 데이터 삭제 ( AttributeID, AttributeElementID 기준 : 특정 삭제)
+	this.deleteDataByAttrIdAttrElementId = function(AttributeID, AttributeElementID) {
+		for (var idx = 0; idx < this.arrayObjectSet.length; idx++) {
+			if (this.arrayObjectSet[idx].AttributeID == AttributeID && this.arrayObjectSet[idx].AttributeElementID == AttributeElementID) {
+				this.arrayObjectSet.splice(idx, 1);
+				break;
+			}
+		}
+	};
+
+	// 초기 데이터 입력
+	this.initData = function(strSet) {
+		this.arrayObjectSet = new Array();
+
+		// 초기 데이터 형태  [AttributeID_AttributeElementID_AttributeName_AttributeElementName]![AttributeID_AttributeElementID_AttributeName_AttributeElementName] 
+		var rowDatas = strSet.split(this.derimCharObj);
+
+		for (var idx = 0; idx < rowDatas.length; idx++) {
+			var elementDatas = rowDatas[idx].replace('[', '').replace(']', '').split(this.derimCharElem);
+
+			if (elementDatas.length > 3)
+				this.arrayObjectSet[idx] = { 'AttributeID': elementDatas[0], 'AttributeElementID': elementDatas[1], 'AttributeName': elementDatas[2], 'AttributeElementName': elementDatas[3] };
+		}
+	};
+
+	// 데이터 출력
+	// 데이터 형태  [AttributeID_AttributeElementID_AttributeName_AttributeElementName]![AttributeID_AttributeElementID_AttributeName_AttributeElementName] 
+	this.outData = function() {
+		var outputString = '';
+
+		for (var idx = 0; idx < this.arrayObjectSet.length; idx++) {
+			outputString += "[" + this.arrayObjectSet[idx].AttributeID + this.derimCharElem + this.arrayObjectSet[idx].AttributeElementID + this.derimCharElem + this.arrayObjectSet[idx].AttributeName + this.derimCharElem + this.arrayObjectSet[idx].AttributeElementName + ']!';
+		}
+
+		// 끝이 '!' 로 끝나면 마지막 '!'을 제거
+		if (outputString[outputString.length - 1] == this.derimCharObj) {
+			outputString = outputString.substr(0, outputString.length - 1)
+		}
+
+		return outputString;
+	};
+
+	// 데이터 출력
+	// 데이터 형태  [AttributeID_AttributeElementID_AttributeName_AttributeElementName],[AttributeID_AttributeElementID_AttributeName_AttributeElementName]
+	this.outDataByAttributeID = function(AttributeID) {
+		var outputString = '';
+
+		for (var idx = 0; idx < this.arrayObjectSet.length; idx++) {
+			if (this.arrayObjectSet[idx].AttributeID == AttributeID)
+				outputString += "[" + this.arrayObjectSet[idx].AttributeID + this.derimCharElem + this.arrayObjectSet[idx].AttributeElementID + this.derimCharElem + this.arrayObjectSet[idx].AttributeName + this.derimCharElem + this.arrayObjectSet[idx].AttributeElementName + ']!';
+		}
+
+		// 끝이 '!' 로 끝나면 마지막 '!'을 제거
+		if (outputString[outputString.length - 1] == this.derimCharObj) {
+			outputString = outputString.substr(0, outputString.length - 1)
+		}
+
+		return outputString;
+	};
+
+	// 데이터 뒤에 추가
+	this.appendDataWithArray = function(arraySet) {
+		for (var idx = 0; idx < arraySet.length; idx++) {
+			this.arrayObjectSet.push(arraySet[idx]);
+		}
+	};
+
+	// 데이터 뒤에 추가
+	this.appendData = function(strSet) {
+
+		// 초기 데이터 형태  [AttributeID_AttributeElementID_AttributeName_AttributeElementName]![AttributeID_AttributeElementID_AttributeName_AttributeElementName]
+		var rowDatas = strSet.split(this.derimCharObj);
+
+		for (var idx = 0; idx < rowDatas.length; idx++) {
+			var elementDatas = rowDatas[idx].replace('[', '').replace(']', '').split(this.derimCharElem);
+
+			this.arrayObjectSet.push({ 'AttributeID': elementDatas[0], 'AttributeElementID': elementDatas[1], 'AttributeName': elementDatas[2], 'AttributeElementName': elementDatas[3] });
+		}
+	};
+
+	// 주어진 AttributeID의 목록만 뽑기
+	this.arrayInAttrID = function(AttributeID) {
+		var retArray = new Array();
+		var retIdx = 0;
+
+		for (var idx = 0; idx < this.arrayObjectSet.length; idx++) {
+			if (this.arrayObjectSet[idx].AttributeID == AttributeID) {
+				retArray[retIdx++] = this.arrayObjectSet[idx];
+			}
+		}
+
+		return retArray;
+	};
+
+	// 현재 오브젝트의 상태대로 parameter로 받은 gPageState를 업뎃 (setParams : gPageState의 내용 중 업데이트될 목록 형식 : "Brand,Mall")
+	this.copyToPageState = function(gPageState) {
+		var BrandIDs = new Array();
+		var MallIDs = new Array();
+		var MakerIDs = new Array();
+		var VItemAttrs = new Array();
+		var ImageColorMask = new Array();
+
+		// 전처리 (하나씩만 바인드되는 목록들을 리셋)
+		gPageState.MinPBPRate = -1;
+		gPageState.MaxPBPRate = -1;
+		gPageState.MinVItemPrice = -1;
+		gPageState.MaxVItemPrice = -1;
+		gPageState.IsDcCard = "Unknown";
+		gPageState.IsStyleSearch = "Unknown";
+		gPageState.IsSoldOut = "Unknown";
+		gPageState.IsSellingPlan = "Unknown";
+		gPageState.IsShippingPriceFree = "Unknown";
+		gPageState.HasNointerestData = "Unknown";
+		gPageState.HasCouponData = "Unknown";
+		gPageState.HasEventData = "Unknown";
+		gPageState.HasPoint = "Unknown";
+		gPageState.ImageColorMask = -1;
+		gPageState.ImageGroupID = "";
+
+		// gPageState 에 속성 채워주는 로직.
+		// arrayObjectSet 을 1번 루프돌며 위치에 맞춰 넣어줌
+		for (var idx = 0; idx < this.arrayObjectSet.length; idx++) {
+
+			switch (this.arrayObjectSet[idx].AttributeID) {
+				// 브랜드         
+				case "Brand":
+					BrandIDs.push(this.arrayObjectSet[idx].AttributeElementID);
+					break;
+				// 쇼핑몰         
+				case "Mall":
+					MallIDs.push(this.arrayObjectSet[idx].AttributeElementID);
+					break;
+				// 제조사         
+				case "Maker":
+					MakerIDs.push(this.arrayObjectSet[idx].AttributeElementID);
+					break;
+				// 할인율         
+				case "PBPRateRange":
+					var strSplitSet = this.arrayObjectSet[idx].AttributeElementID.split('|');
+					gPageState.MinPBPRate = strSplitSet[0];
+					gPageState.MaxPBPRate = strSplitSet[1];
+					break;
+				// 가격대         
+				case "VitemPriceRange":
+					var strSplitSet = this.arrayObjectSet[idx].AttributeElementID.split('|');
+					gPageState.MinVItemPrice = strSplitSet[0];
+					gPageState.MaxVItemPrice = strSplitSet[1];
+					break;
+				// 카드할인 여부                  
+				case "IsDcCard":
+					// "True", "False", "Unknown"
+					gPageState.IsDcCard = this.arrayObjectSet[idx].AttributeElementID;
+					break;
+				// 스타일서치 여부                 
+				case "IsStyleSearch":
+					// "True", "False", "Unknown"
+					gPageState.IsStyleSearch = this.arrayObjectSet[idx].AttributeElementID;
+					break;
+				// 판매상태 : 판매중단상품        
+				case "IsSoldOut":
+					gPageState.IsSoldOut = this.arrayObjectSet[idx].AttributeElementID;
+					break;
+				// 판매상태 : 판매예정상품        
+				case "IsSellingPlan":
+					gPageState.IsSellingPlan = this.arrayObjectSet[idx].AttributeElementID;
+					break;
+				// 혜택 : 무료배송        
+				case "IsShippingPriceFree":
+					gPageState.IsShippingPriceFree = this.arrayObjectSet[idx].AttributeElementID;
+					break;
+				// 혜택 : 무이자        
+				case "HasNointerestData":
+					gPageState.HasNointerestData = this.arrayObjectSet[idx].AttributeElementID;
+					break;
+				// 혜택 : 쿠폰        
+				case "HasCouponData":
+					gPageState.HasCouponData = this.arrayObjectSet[idx].AttributeElementID;
+					break;
+				// 혜택 : 이벤트        
+				case "HasEventData":
+					gPageState.HasEventData = this.arrayObjectSet[idx].AttributeElementID;
+					break;
+				// 혜택 : 적립금        
+				case "HasPoint":
+					gPageState.HasPoint = this.arrayObjectSet[idx].AttributeElementID;
+					break;
+				// 색상검색 Mask           
+				case "ImageColorMask":
+					ImageColorMask.push(this.arrayObjectSet[idx].AttributeElementID);
+					break;
+				// 동일이미지검색  
+				case "ImageGroupID":
+					gPageState.ImageGroupID = this.arrayObjectSet[idx].AttributeElementID;
+					break;
+				// VItemAttrs (ID가 일반 숫자인 것들) 일단 VItemAttrs array에 쌓아넣고 후에 스트링으로 변환                                    
+				default:
+					if (VItemAttrs["array_" + this.arrayObjectSet[idx].AttributeID] == undefined) {
+						VItemAttrs["array_" + this.arrayObjectSet[idx].AttributeID] = new Array();
+					}
+					VItemAttrs["array_" + this.arrayObjectSet[idx].AttributeID].push(this.arrayObjectSet[idx].AttributeID + "_" + this.arrayObjectSet[idx].AttributeElementID);
+					break;
+			}
+		}
+
+		// 브랜드 후처리
+		gPageState.BrandIDs = BrandIDs.join(',');
+
+		// 쇼핑몰 후처리
+		gPageState.MallIDs = MallIDs.join(',');
+
+		// 제조사 후처리
+		gPageState.MakerIDs = MakerIDs.join(',');
+
+		// VItemAttrs 후처리
+		var retStr = "";
+
+		for (var item in VItemAttrs) {
+			retStr += ("[" + VItemAttrs[item].join(',') + "],");
+		}
+
+		if (retStr.lastIndexOf(',') == retStr.length - 1)
+			retStr = retStr.substr(0, retStr.length - 1);
+
+		gPageState.VItemAttrs = retStr;
+
+		// 색상검색 후처리
+		gPageState.ImageColorMask = -1;
+
+		var tempSum = 0;
+		for (i = 0; i < ImageColorMask.length; i++)
+			tempSum = tempSum | ImageColorMask[i];
+
+		if (tempSum > 0)
+			gPageState.ImageColorMask = tempSum;
+
+		gPageState.SelectedAttributes = this.outData();
+	}
+
+	// 색상검색 목록만 출력
+	this.getColors = function() {
+		// object 목록으로 넘길때
+		return this.arrayInAttrID("ImageColorMask");
+	};
+
+	// 브랜드 목록만 출력
+	this.getBrands = function() {
+		// object 목록으로 넘길때
+		return this.arrayInAttrID("Brand");
+	};
+
+	// 쇼핑몰 목록만 출력
+	this.getMalls = function() {
+		// object 목록으로 넘길때
+		return this.arrayInAttrID("Mall");
+	};
+
+	// 제조사 목록만 출력
+	this.getMakers = function() {
+		// object 목록으로 넘길때
+		return this.arrayInAttrID("Maker");
+	};
+
+	// VitemAttribute 목록만 출력
+	this.getVitemAttrs = function() {
+		var arrayRet = new Array();
+
+		// AttributeID이 숫자인 항목들만 출력
+		for (var idx = 0; idx < this.arrayObjectSet.length; idx++) {
+			if (!isNaN(this.arrayObjectSet[idx].AttributeID))
+				arrayRet.push(this.arrayObjectSet[idx]);
+		}
+
+		return arrayRet;
+	};
+
+	// 할인율 목록만 출력 (MinPBPRate / MaxPBPRate)
+	this.getPBPRates = function() {
+		// object 목록으로 넘길때
+		return this.arrayInAttrID("PBPRateRange");
+	};
+
+	// 가격대 목록만 출력 (MinVItemPrice / MaxVItemPrice)
+	this.getVItemPrices = function() {
+		// object 목록으로 넘길때
+		return this.arrayInAttrID("VitemPriceRange");
+	};
+
+	// PriceRangeSelector 목록만 출력 (PBPRateRange, VitemPriceRange, Maker )
+	this.getPriceRangeSelectorLists = function() {
+		/*
+		var AttrIDs = ["Maker", "PBPRateRange", "VitemPriceRange"];
+
+    var retArray = new Array();
+		var retIdx = 0;
+
+    for (var idx = 0; idx < this.arrayObjectSet.length; idx++) {
+		for (var attrIdx = 0; attrIdx < AttrIDs.length; attrIdx++) {
+		if (this.arrayObjectSet[idx].AttributeID == AttrIDs[attrIdx]) {
+		retArray[retIdx++] = this.arrayObjectSet[idx];
+		}
+		}
+		}
+
+    return retArray;
+		*/
+
+		return this.arrayInAttrID("Maker");
+	};
+
+	// PBPRateRange 오브젝트로 부터 어떤 버튼에 바인드가 되어야하는지 리턴
+	this.getPBPRate = function(objectElement) {
+		if (objectElement.AttributeID != "PBPRateRange")
+			return null;
+
+		var datas = objectElement.AttributeElementID.split('|');
+
+		if (datas.length > 1) {
+			// 8~100% 8%이상 버튼
+			if (datas[0] == '8' && datas[1] == '100')
+				return "8";
+			// 6~7.9% 6%이상 버튼
+			else if (datas[0] == '6' && datas[1] == '7.9')
+				return "6";
+			// 4~5.9% 4%이상 버튼
+			else if (datas[0] == '4' && datas[1] == '5.9')
+				return "4";
+			// 2~3.9% 2%이상 버튼
+			else if (datas[0] == '1' && datas[1] == '3.9')
+				return "2";
+		}
+
+		return null;
+	};
+
+	// 페이징 목록을 뽑아주는 경우 필요한 인덱스 정보
+	this.startElementIndex = 0;
+	this.endElementIndex = 0;
+	this.lastPageIndex = 0;
+
+	// 다음 pageIndex로 넘어갔는지 체크
+	// 목록 추가시 자동으로 다음 페이지로 넘겨야하는가를 체크하기 위함
+	this.hasNextPage = function(pageIndex, pageSize) {
+		var endElementLength = parseInt(pageIndex + 1) * parseInt(pageSize);
+
+		if (endElementLength <= this.arrayObjectSet.length)
+			return true;
+		else
+			return false;
+	}
+
+	// 현 pageIndex의 리턴목록이 없는지 체크
+	// 목록 추가시 자동으로 전 페이지로 넘겨야하는가를 체크하기 위함
+	this.hasNoItemsInThisPage = function(pageIndex, pageSize) {
+		if (pageIndex < 1)
+			return false;
+
+		var endElementLength = parseInt(pageIndex) * parseInt(pageSize);
+
+		if (endElementLength >= this.arrayObjectSet.length)
+			return true;
+		else
+			return false;
+	}
+
+	// 주어진 pageSize 에서 현재 최대 pageIndex가 얼마인지 도출
+	this.getMaxPageIndex = function(pageSize) {
+		return parseInt(parseFloat(this.arrayObjectSet.length - 1) / parseFloat(pageSize));
+	}
+
+	// 페이징된 목록을 리턴
+	this.pagingArray = function(pageIndex, pageSize) {
+		var retArray = new Array();
+		var retIdx = 0;
+
+		this.startElementIndex = parseInt(pageIndex) * parseInt(pageSize);
+		this.endElementIndex = this.startElementIndex + parseInt(pageSize) - 1;
+		this.lastPageIndex = parseInt(parseFloat(this.arrayObjectSet.length - 1) / parseFloat(pageSize));
+
+		for (var idx = this.startElementIndex; idx < this.arrayObjectSet.length; idx++) {
+			if (idx <= this.endElementIndex) {
+				retArray[retIdx++] = this.arrayObjectSet[idx];
+			}
+			else {
+				break;
+			}
+		}
+
+		return retArray;
+	};
+
+	// targetArray에 들어 있지 않은 array만 출력
+	this.notInArray = function(targetArray) {
+		var retArray = new Array();
+
+		for (var idx = 0; idx < this.arrayObjectSet.length; idx++) {
+			// targetArray 내부에 같은 element가 있는지 비교
+			for (var targetIdx = 0; targetIdx < targetArray.length; targetIdx++) {
+				if (this.arrayObjectSet[idx].AttributeID == targetArray[targetIdx].AttributeID && this.arrayObjectSet[idx].AttributeElementID == targetArray[targetIdx].AttributeElementID)
+					break;
+			}
+
+			if (targetIdx == targetArray.length)
+				retArray.push(this.arrayObjectSet[idx]);
+		}
+
+		return retArray;
+	};
+
+	// targetArray와 현 인스턴스 내의 array (this.arrayObjectSet)가 동일한 내용인지 체크 
+	this.compareWith = function(targetArray) {
+		if (targetArray.length != this.arrayObjectSet.length)
+			return -1;
+
+		for (idx = 0; idx < this.arrayObjectSet.length; idx++) {
+			if (targetArray[idx].AttributeID != this.arrayObjectSet[idx].AttributeID || targetArray[idx].AttributeElementID != this.arrayObjectSet[idx].AttributeElementID)
+				return -1;
+		}
+
+		return 0;
+	};
+
+	// 초기화 시퀀스
+	if (AttributeData == undefined || AttributeData == null)
+		return false;
+
+	if (AttributeData.InputData != undefined || AttributeData.InputData != null)
+		this.initData(AttributeData.InputData);
+
+	/* AttributeDataObject Utils Start */
+	// targetArray와 srcArray 비교
+	AttributeDataObject.compareArrayWithArray = function(targetArray, srcArray) {
+		if (targetArray.length != srcArray.length)
+			return -1;
+
+		for (idx = 0; idx < targetArray.length; idx++) {
+			if (targetArray[idx].AttributeID != srcArray[idx].AttributeID || targetArray[idx].AttributeElementID != srcArray[idx].AttributeElementID)
+				return -1;
+		}
+	};
+
+	// AttrID에 해당하는 Object를 지운 후 insert 하고 그에 따른 SelectedAttr을 출력
+	AttributeDataObject.replaceSelectedAttr = function(gPageState, AttrID, AttrElemID, AttrNm, AttrElemNm) {
+		var tempObj = new AttributeDataObject({ "InputData": gPageState.SelectedAttributes });
+
+		// 해당 AttrID 오브젝트를 삭제
+		tempObj.deleteDataByAttrID(AttrID);
+		// 추가
+		tempObj.insertData(AttrID, AttrElemID, AttrNm, AttrElemNm);
+
+		var retStr = tempObj.outData();
+
+		// 메모리 해제
+		tempObj = null;
+
+		return retStr;
+	};
+	/* AttributeDataObject Utils End */
+};

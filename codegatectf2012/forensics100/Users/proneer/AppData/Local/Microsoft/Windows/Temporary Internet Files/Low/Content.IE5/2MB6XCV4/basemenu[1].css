@@ -1,0 +1,409 @@
+/* ! Global Navigation */
+body,h1,h2,h3,h4,h5,h6,p,dl,dt,dd,ul,ol,li,th,td,div,blockquote,pre,form,fieldset,textarea{margin:0;padding:0;}
+h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}
+ol,ul{list-style:none;}
+table{border-collapse:collapse;border-spacing:0;}
+img,fieldset,table,th,td{border:none;}
+input{*margin:-1px 0;}
+em,cite{font-style:normal;}
+:focus{outline:none;}
+
+html { 
+	background-color:#fff; 
+	font: 0.75em Arial, Arial Black, Verdana;
+	color:#2f2f2f;
+	overflow-y:scroll;
+}
+img { 
+	border: 0; 
+}
+
+p{
+	margin:0;
+	padding:0;
+}
+#globalNavigation{
+	width:100%;
+	height:24px;
+	background: url(../img/globalnavi_bg.gif) repeat-x left; 
+	background-position:0px 0px;
+	clear:both;
+}
+#globalNavigation #GN_header{
+	width:960px;
+	margin:0 auto;
+}
+#globalNavigation #GN_header ul{
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+#globalNavigation #GN_header ul li.section{
+	height:24px;
+	border-left:1px solid #dfdfdf;
+	display: inline;
+	float: left;
+}
+
+
+#globalNavigation #GN_header ul li.m1{
+	height:24px;
+	padding:2px 15px 0px 15px;
+	background: url(../img/globalnavi_gomlab_off.gif) no-repeat left top;
+	background-position:0px 0px;
+	line-height:20px;
+	display: inline;
+	float: left;
+}
+#globalNavigation #GN_header ul li.m1_selected{
+	height:24px;
+	padding:2px 15px 0px 15px;
+	background: url(../img/globalnavi_gomlab_on.gif) no-repeat left top;
+	background-position:0px 0px;
+	line-height:20px;
+	display: inline;
+	float: left;
+}
+
+
+#globalNavigation #GN_header ul li img{
+	vertical-align:middle;
+	}
+#globalNavigation #GN_header ul li.m2{
+	background: url(../img/globalnavi_playerbg_off.gif) no-repeat left top;
+	background-position:0px 0px;
+	padding: 2px 15px 0 36px;
+	height:24px;
+	line-height:18px;
+	display: inline;
+	float: left;
+}
+#globalNavigation #GN_header ul li.m2_selected{
+	background: url(../img/globalnavi_playerbg_on.gif) no-repeat left top;
+	background-position:0px 0px;
+	padding: 2px 15px 0 36px;
+	height:24px;
+	line-height:18px;
+	display: inline;
+	vertical-align:middle;
+	float: left;
+}
+#globalNavigation #GN_header ul li.m3{
+	padding: 2px 15px 0px 36px;
+	background: url(../img/globalnavi_converterbg_off.gif) no-repeat left top;
+	background-position:0px 0px;
+	height:24px;
+	line-height:18px;
+	display: inline;
+	vertical-align:middle;
+	float: left;
+}
+#globalNavigation #GN_header ul li.m3_selected{
+	padding: 2px 15px 0px 36px;
+	background: url(../img/globalnavi_converterbg_on.gif) no-repeat left top;
+	background-position:0px 0px;
+	height:24px;
+	line-height:18px;
+	display: inline;
+	vertical-align:middle;
+	float: left;
+}	
+#globalNavigation #GN_header ul li.member{
+	padding: 0 15px 0 15px;
+	height:24px;
+	line-height:21px;
+	display: inline;
+	float: right;
+}
+#globalNavigation #GN_header ul li a, a:hover{
+	color:#777777;
+	line-height:18px;
+	text-decoration:none;
+}
+
+#globalNavigation #GN_header ul li a.blue{
+	color:#0088cc;
+	line-height:18px;
+	text-decoration:none;
+}
+
+#globalNavigation #GN_header ul li a:hover.blue{
+	color:#0088cc;
+	line-height:18px;
+	text-decoration:underline;
+}
+/*****************************************************************************/
+#Logo_Wrap{
+	width:960px;
+	margin:0 auto;	
+	clear:both;
+}
+#Logo_Wrap #TopHeader{
+	width:960px;
+	margin:28px 0px 0px 0px;
+}
+#Logo_Wrap  #TopHeader ul{
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+#Logo_Wrap #TopHeader ul li.logo{
+	height:43px;
+	display: inline;
+	float: left;
+}
+#Logo_Wrap  #TopHeader ul li.seo{
+	font-size:8pt;
+	padding:16px 0px 0px 10px;
+	color:#9e9e9e;
+	display: inline;
+	float: left;
+}
+
+h1 {
+	font-size:8pt;
+	color:#9e9e9e;
+	font-weight:normal;
+}
+
+/*****************************************************************************/
+/* ! Software Navigation */
+#menuWrap{
+	width:960px;
+	margin:0 auto;
+	clear:both;
+}
+
+/* !-- Navigation */
+.basemenu{
+	font: bold;
+	background: url(../img/gray.jpg) repeat-x left; 
+	width: 960px;
+	height:38px;
+	margin:0;
+	padding:2px 0px;
+}
+
+.basemenu ul{
+	z-index:1;
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+/*Top level list items*/
+.basemenu ul li{
+	position: relative;
+	display: inline;
+	float: left;
+}
+
+.basemenu ul li.radiusLeft{
+	position: relative;
+	width:12px;
+	height:36px;
+	background: url(../img/gray.jpg) no-repeat left top;
+	display: inline;
+	float: left;
+	margin:0px;
+}
+
+
+/*Top level menu link items style*/
+
+
+
+* html .basemenu ul li a{ /*IE6 hack to get sub menu links to behave correctly*/
+	display: inline-block;
+}
+
+.basemenu ul li a:link, .basemenu ul li a:visited{
+	color: white;
+
+}
+
+.basemenu ul li a.selected{ /*CSS class that's dynamically added to the currently active menu items' LI A element*/
+/*	background: black; */
+	color: white;
+	background: url(../img/naviOnBg.jpg) repeat-x left top; 
+	background-position:0px -1px; 
+}
+
+
+.basemenu ul li a, .basemenu ul li a:visited{
+	width:125px;
+	text-align:center;
+	line-height:36px;
+	height:37px;
+	display: block;
+	color: white;
+	border-right: 1px solid #202020;
+	font-size:1.2em;
+	font-weight:bold;
+	text-decoration: none;
+	text-shadow: 1px 1px 0px  #000;
+}
+
+.basemenu ul li a:hover{
+	line-height:36px;
+	background: black; /*background of menu items during onmouseover (hover state)*/
+	color: white;
+	background: url(../img/naviOnBg.jpg) repeat-x left top;
+	background-position:0px -1px;
+	text-shadow: 1px 1px 0px  #000;
+}
+
+
+.basemenu ul li ul li a, .basemenu ul li ul li a:visited, .basemenu ul li ul li a:link{
+	margin: 0;
+	width:170px;
+	font-size:9pt;
+	font-weight:normal;
+	text-align:left;
+	height:20px;
+	line-height:20px;
+	.line-height:16px;/*IE6, IE7*/
+	line-height:16px\9; /*IE8*/
+	display: block;
+	color: white;
+	background: #414141;
+	border-right: 1px solid #202020;
+	padding:5px;
+}
+
+.basemenu ul li ul li a:hover{
+	margin: 0;
+	width:170px;
+	font-size:9pt;
+	font-weight:normal;
+	text-align:left;
+	height:20px;
+	line-height:20px;
+	.line-height:16px;/*IE6, IE7*/
+	line-height:16px\9; /*IE8*/
+	background: black; /*background of menu items during onmouseover (hover state)*/
+	color: white;
+	background: url(../img/naviOnBg3.gif) repeat-x left top;
+	background-position:0px -1px;
+	padding:5px;
+}
+
+.basemenu ul li.naviFirst a:hover{
+	background: black; /*background of menu items during onmouseover (hover state)*/
+	color: white;
+	background: url(../img/naviOnBg2.gif) repeat-x left top;
+	background-position:0px -1px;
+}	
+
+
+.basemenu ul li.menufix{
+	background: black; /*background of menu items during onmouseover (hover state)*/
+	color: white;
+	background: url(../img/naviOnBg.jpg) repeat-x left top;
+	background-position:0px -1px;
+}
+
+
+/*1st sub level menu*/
+.basemenu ul li ul{
+	position: absolute;
+	left: 0;
+	display: none; /*collapse all sub menus to begin with*/
+	visibility: hidden;
+
+}
+
+/*Sub level menu list items (undo style from Top level List Items)*/
+.basemenu ul li ul li{
+	display: list-item;
+	float: none;
+}
+
+/**** Sub Menu Bottom style (lee jaekab/2011 10 07) ****/
+/*
+.basemenu ul li ul li.subbottom{
+	margin: 0;
+	height:4px;
+	display: list-item;
+	border:none;
+	float: none;
+	border-bottom-left-radius:5px;
+	border-bottom-right-radius:5px;
+	-moz-border-radius-bottomleft: 5px;
+	-moz-border-radius-bottomright: 5px;
+	-webkit-border-bottom-left-radius: 5px;
+	-webkit-border-bottom-right-radius: 5px;
+	background: #414141; 
+}
+*/
+
+.basemenu ul li ul li a.nonelink, .basemenu ul li ul li a:hover.nonelink, .basemenu ul li ul li a:link.nonelink, .basemenu ul li ul li a:visited.nonelink{
+	font: normal 13px Verdana;
+	width: 170px; /*width of sub menus*/
+	margin: 0;
+	border-top-width: 0;
+	border-bottom-left-radius:5px;
+	border-bottom-right-radius:5px;
+	-moz-border-radius-bottomleft: 5px;
+	-moz-border-radius-bottomright: 5px;
+	-webkit-border-bottom-left-radius: 5px;
+	-webkit-border-bottom-right-radius: 5px;
+	border-bottom: none;
+	height:20px;
+	line-height:20px;
+	.line-height:16px;/*IE6, IE7*/
+	line-height:16px\9; /*IE8*/
+}
+/**** Sub Menu Bottom style (lee jaekab/2011 10 07) ****/
+
+
+
+/*All subsequent sub menu levels vertical offset after 1st level sub menu */
+.basemenu ul li ul li ul{
+	top: 0;
+}
+
+/* Sub level menu links style */
+.basemenu ul li ul li a{
+	font: normal 13px Verdana;
+	width: 170px; /*width of sub menus*/
+	margin: 0;
+	border-top-width: 0;
+	border-bottom: 1px solid gray;
+}
+
+/* Holly Hack for IE \*/
+* html .basemenu{height: 1%;} /*Holly Hack for IE7 and below*/
+
+
+/* ######### CSS classes applied to down and right arrow img  ######### */
+
+.downarrowclass{
+	position: absolute;
+	top: 12px;
+	right: 7px;
+}
+
+.rightarrowclass{
+	position: absolute;
+	top: 6px;
+	right: 5px;
+}
+
+/* ######### CSS for shadow added to sub menus  ######### */
+
+.ddshadow{ /*shadow for NON CSS3 capable browsers*/
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 0;
+	height: 0;
+	background: silver;
+
+}
+
+.toplevelshadow{ /*shadow opacity for NON CSS3 capable browsers. Doesn't work in IE*/
+	opacity: 0.8;
+}

@@ -1,0 +1,222 @@
+<?xml version="1.0"?>
+<bindings id="atbButtonsBinding" xmlns="http://www.mozilla.org/xbl"
+	xmlns:html="http://www.w3.org/1999/xhtml"
+	xmlns:xul="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+	xmlns:xbl="http://www.mozilla.org/xbl">
+	<binding id="menu-button-ticker-binding" display="xul:menu" extends="chrome://global/content/bindings/button.xml#menu-button-base">
+		<resources>
+			<stylesheet src="chrome://global/skin/toolbarbutton.css"/>
+			<stylesheet src="chrome://asktoolbar/skin/toolbar.css"/>
+		</resources>
+		
+		<content>
+			<children includes="observes|template|menupopup|panel|tooltip"/>
+			<xul:hbox flex="1" align="center">
+				<xul:hbox flex="1" align="center" allowevents="true" anonid="button" style="margin-right: 4px;">
+					<xul:image anonid="image" class="toolbarbutton-icon" xbl:inherits="validate,src=image,toolbarmode,buttonstyle,label"/>
+					<xul:label anonid="label" class="toolbarbutton-text" crop="right" flex="1" xbl:inherits="value=label,accesskey,crop,dragover-top,toolbarmode,buttonstyle"/>
+				</xul:hbox>
+				<xul:vbox anonid="atb-ticker-box" width="150" maxheight="16" minheight="16" style="overflow:hidden;" xbl:inherits="rendering-enabled,max-ticker-items,width=ticker-width,tick-speed,ticker-label-display-time" />	
+				<xul:dropmarker anonid="dropmarker" allowevents="true" type="menu" class="toolbarbutton-menu-dropmarker" xbl:inherits="disabled,label"/>
+			</xul:hbox>			
+		</content>
+
+		<implementation>
+			<constructor>
+				if(document.getAnonymousElementByAttribute(this,'anonid','atb-ticker-box').childNodes.length == 0) {//add chevron logic too
+					document.getAnonymousElementByAttribute(this,'anonid','atb-ticker-box').setAttribute("hidden","true");					
+				}
+			</constructor>
+			<destructor>
+				this._tick(false);
+			</destructor>
+			<field name="_items">
+				document.getAnonymousElementByAttribute(this,'anonid','atb-ticker-box').childNodes
+			</field>
+			<field name="_count">0</field>
+			<field name="tickerLabelDisplayTime">
+				document.getAnonymousElementByAttribute(this,'anonid','atb-ticker-box').hasAttribute("ticker-label-display-time") ? parseInt(document.getAnonymousElementByAttribute(this,'anonid','atb-ticker-box').getAttribute("ticker-label-display-time")) : 3000;			
+			</field>
+			<field name="tickerSpeed">
+				document.getAnonymousElementByAttribute(this,'anonid','atb-ticker-box').hasAttribute("ticker-speed") ? parseInt(document.getAnonymousElementByAttribute(this,'anonid','atb-ticker-box').getAttribute("ticker-speed")) : 50;
+			</field>
+			<field name="maxLabels">
+				document.getAnonymousElementByAttribute(this,'anonid','atb-ticker-box').hasAttribute("max-ticker-items") ? parseInt(document.getAnonymousElementByAttribute(this,'anonid','atb-ticker-box').getAttribute("max-ticker-items")) : 12;
+			</field>
+			<field name="_wt">null</field>
+			<field name="_ts">null</field>
+			<field name="_enableTick">false</field>
+			<property name="tickerEnabledAttr">
+				<setter>
+                <![CDATA[
+	                if(val) {
+	                	this.setAttribute("rendering-enabled","true");
+	                } else {
+	                	this.setAttribute("rendering-enabled","false");
+	                }
+                ]]>
+				</setter>
+				<getter>
+                <![CDATA[ 
+                    return (this.getAttribute("rendering-enabled") == "true");
+                ]]>
+				</getter>
+			</property>
+			<property name="inChevron">
+				<setter>
+                <![CDATA[
+	                
+                ]]>
+				</setter>
+				<getter>
+                <![CDATA[ 
+                    if(this.parentNode && this.parentNode.id == "asktb-overflowmenu"){
+						return true;
+					} else {
+						return false;
+					}	
+                ]]>
+				</getter>
+			</property>			
+			<method name="getTicker">
+				<body>
+                <![CDATA[
+					return document.getAnonymousElementByAttribute(this,'anonid','atb-ticker-box');						
+                ]]>
+				</body>
+			</method>
+			<method name="_tick">
+				<parameter name="enable" />
+				<parameter name="tickerObj" />
+				<body>
+                <![CDATA[
+                    var tickerBox = tickerObj.getTicker();
+					if(enable) {
+						if((tickerObj._count) >= -16){
+							var tickerItemNode = tickerBox.firstChild;
+							tickerItemNode.style.marginTop= tickerObj._count-- + "px";
+							tickerObj._ts = setTimeout(function(){return tickerObj._tick(true,tickerObj)}, tickerObj.tickerSpeed);
+							return;
+						} else {
+							var tickerItemNode = tickerBox.firstChild;
+							tickerBox.removeChild(tickerItemNode);
+							tickerBox.appendChild(tickerItemNode);
+							tickerItemNode.style.marginTop= 0 + "px";			
+							tickerObj._wt = setTimeout(function(){return tickerObj._tick(true,tickerObj)}, tickerObj.tickerLabelDisplayTime );
+							tickerObj._count=0;
+							return;
+						}
+					} else {
+						if(tickerObj._ts)clearInterval(tickerObj._ts);
+						if(tickerObj._wt)clearInterval(tickerObj._wt);
+						tickerBox.firstChild.style.marginTop = 0 + "px";
+						tickerObj._count=0;
+						return;
+					}                   
+                ]]>
+				</body>
+			</method>
+			<method name="tick">
+				<parameter name="enable" />
+				<parameter name="forceEnable" />
+				<body>
+                <![CDATA[
+                	if(!this.inChevron || forceEnable) {                		
+	                	if(enable && !this._enableTick && this.tickerEnabledAttr) {
+							this._enableTick = true;				
+							document.getAnonymousElementByAttribute(this,'anonid','label').setAttribute("hidden","true");
+							document.getAnonymousElementByAttribute(this,'anonid','atb-ticker-box').setAttribute("hidden","false");
+							ATB.Prefs.setBoolPref("ticker-enabled-" + this.getAttribute('id') , true);
+							ATB.Events.handleTbButtonAreaNarrowing(ATB.Utils.getAvailableBrowserWidth());
+							this._tick(this._enableTick,this);
+						} else if(!enable && this._enableTick && !this.tickerEnabledAttr) {
+							this._enableTick = false;
+							document.getAnonymousElementByAttribute(this,'anonid','label').setAttribute("hidden","false");
+							document.getAnonymousElementByAttribute(this,'anonid','atb-ticker-box').setAttribute("hidden","true");
+							ATB.Prefs.setBoolPref("ticker-enabled-" + this.getAttribute('id') , false);
+							ATB.Events.handleTbButtonAreaWidening(ATB.Utils.getAvailableBrowserWidth());
+							this._tick(this._enableTick,this);
+						}	
+					}			  
+                ]]>
+				</body>
+			</method>
+			<method name="setTickerItems">
+				<parameter name="newItems" />
+				<body>
+                <![CDATA[
+					if(newItems.length > 0){
+						var tickerBox = this.getTicker();
+						//Remove old labels if any
+						while(tickerBox.hasChildNodes()){
+							tickerBox.removeChild(tickerBox.lastChild);
+						}
+						//Add new ones
+						for (var i = 0; i < this.maxLabels; i++) {
+							if(typeof(newItems[i]) != "undefined") {
+								var label = newItems[i].label ? newItems[i].label : "";
+								var link = newItems[i].link ? newItems[i].link : "";
+								tickerBox.appendChild(this._makeLabel(label,link,i+1));							
+							}
+						}
+					}
+					this._items = document.getAnonymousElementByAttribute(this,'anonid','atb-ticker-box').childnodes;
+					return;
+                ]]>
+				</body>
+			</method>
+			<method name="handleClick">
+				<parameter name="event" />
+				<parameter name="funcToExec"/>
+				<body>
+                <![CDATA[
+					if((event.originalTarget.getAttribute('anonid').substr(0,10)== "tickerItem")){
+						//code to open link in current/new tab
+						if(event.originalTarget.hasAttribute('link')) {
+							openUILinkIn(event.originalTarget.getAttribute('link'), "current"); //TODO:A custom url function like custom-command-listener might be better
+						}
+						event.stopPropagation();						
+					} else {
+						funcToExec(this);
+					}
+                ]]>
+				</body>
+			</method>
+			<method name="_makeLabel">
+				<parameter name="value" />
+				<parameter name="link" />
+				<parameter name="index"/>
+				<body>
+                <![CDATA[
+					var label = document.createElement("label");
+					label.setAttribute("value",value);
+					label.setAttribute("anonid","tickerItem" + index);
+					label.setAttribute("allowevents",true);
+					label.setAttribute("link",link);
+					label.setAttribute("crop","end");
+					label.setAttribute("class","atb-ticker-link");
+					label.setAttribute("tooltiptext",value);				
+					return label;
+                ]]>
+				</body>
+			</method>
+		</implementation>
+		<handlers>
+			<handler event="mouseover">
+            <![CDATA[
+                if(this._enableTick) {
+					this._tick(false,this);
+				}
+            ]]>
+			</handler>			
+			<handler event="mouseout">
+            <![CDATA[ 
+                if(this._enableTick) {
+					this._tick(true,this);
+				}
+            ]]>
+			</handler>
+		</handlers>
+	</binding>
+</bindings>
+	

@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>ARTICLES | FORENSICINSIGHT</title>
+<link rel="shortcut icon" href="http://forensicinsight.org/wp-content/uploads/2011/11/FilterFeather2.gif" type="image/x-icon" />
+<link rel="profile" href="http://gmpg.org/xfn/11" />
+<!--[if lt IE 8]> <script src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE8.js"></script> <![endif]--><link rel="alternate" type="application/rss+xml" title="FORENSICINSIGHT &raquo; Feed" href="http://forensicinsight.org/feed" />
+<link rel="alternate" type="application/rss+xml" title="FORENSICINSIGHT &raquo; Comments Feed" href="http://forensicinsight.org/comments/feed" />
+				
+	<script type="text/javascript">//<![CDATA[
+	// Google Analytics for WordPress by Yoast v4.2.3 | http://yoast.com/wordpress/google-analytics/
+	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount','UA-20479500-3']);
+	_gaq.push(['_trackPageview']);
+	(function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	})();
+	//]]></script>
+	<style type="text/css">
+	.wp-pagenavi{float:left !important; }
+	</style>
+  <link rel='stylesheet' id='sp-events-calendar-style-css'  href='http://forensicinsight.org/wp-content/plugins/the-events-calendar/resources/events.css?ver=3.3.1' type='text/css' media='all' />
+<link rel='stylesheet' id='pagelines-pro-css'  href='http://forensicinsight.org/wp-content/themes/platformpro/pro/pro.css?ver=153-11051175603' type='text/css' media='all' />
+<link rel='stylesheet' id='pagelines-stylesheet-css'  href='http://forensicinsight.org/wp-content/themes/platformpro/style.css?ver=153-011412144041' type='text/css' media='all' />
+<!--[if IE 7]>
+<link rel='stylesheet' id='ie7-style-css'  href='http://forensicinsight.org/wp-content/themes/platformpro/css/ie7.css?ver=1.5.3' type='text/css' media='all' />
+<![endif]-->
+<link rel='stylesheet' id='thickbox-css'  href='http://forensicinsight.org/wp-content/plugins/auto-thickbox-plus/thickbox.css?ver=20110904' type='text/css' media='all' />
+<link rel='stylesheet' id='superfish-css'  href='http://forensicinsight.org/wp-content/themes/platformpro/sections/nav/superfish.css?ver=1.5.3' type='text/css' media='screen' />
+<link rel='stylesheet' id='wp-pagenavi-style-css'  href='http://forensicinsight.org/wp-content/plugins/wp-pagenavi-style/css/css3_black.css?ver=1.0' type='text/css' media='all' />
+<script type='text/javascript' src='http://forensicinsight.org/wp-includes/js/jquery/jquery.js?ver=1.7.1'></script>
+<script type='text/javascript' src='http://forensicinsight.org/wp-content/plugins/the-events-calendar/resources/jquery.pjax.js?ver=3.3.1'></script>
+<script type='text/javascript' src='http://forensicinsight.org/wp-content/plugins/the-events-calendar/resources/events.js?ver=3.3.1'></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://forensicinsight.org/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://forensicinsight.org/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 3.3.1" />
+
+<!-- All in One SEO Pack 1.6.13.8 by Michael Torbert of Semper Fi Web Design[123,138] -->
+
+<meta name="keywords" content="seminar,newletter,slide,carving,event log,android,database forensics,newsletter" />
+
+<link rel="canonical" href="http://forensicinsight.org/articles/" />
+<!-- /all in one seo pack -->
+<script type="text/javascript">
+<!--
+/*****************************************************************
+***   COPY PROTECTED BY CHETANGOLE.COM/BLOG/WP-COPYPROTECT    ****
+******************************************************************/
+function clickIE4(){
+if (event.button==2){
+return false;
+}
+}
+function clickNS4(e){
+if (document.layers||document.getElementById&&!document.all){
+if (e.which==2||e.which==3){
+return false;
+}
+}
+}
+
+if (document.layers){
+document.captureEvents(Event.MOUSEDOWN);
+document.onmousedown=clickNS4;
+}
+else if (document.all&&!document.getElementById){
+document.onmousedown=clickIE4;
+}
+
+document.oncontextmenu=new Function("return false")
+// --> 
+</script>
+
+<script type="text/javascript">
+
+function disableSelection(target){
+if (typeof target.onselectstart!="undefined") //For IE 
+	target.onselectstart=function(){return false}
+else if (typeof target.style.MozUserSelect!="undefined") //For Firefox
+	target.style.MozUserSelect="none"
+else //All other route (For Opera)
+	target.onmousedown=function(){return false}
+target.style.cursor = "default"
+}
+</script>
+	<style type="text/css">
+	 .wp-pagenavi
+	{
+		font-size:12px !important;
+	}
+	</style>
+			
+<script type="text/javascript"> /* <![CDATA[ */ jQuery(document).ready(function() {  jQuery('ul.sf-menu').superfish({ delay: 100, speed: 'fast', autoArrows:  1, dropShadows: 1 });  }); /* ]]> */ </script>			
+
+<link rel="stylesheet" id="dynamic-css" href="http://forensicinsight.org/wp-content/themes/platformpro/css/dynamic.css?ver=153-011412121342" type="text/css" media="all" />
+	<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+<script type="text/javascript">
+//<![CDATA[
+	var screen_res = "1280 x 800"; 
+//]]>
+</script>
+</head>
+<body class="blog canvas ttype-posts tmain-posts">
+<div id="site" class="one-sidebar-right"> <!-- #site // Wraps #header, #page-main, #footer - closed in footer -->
+	<div id="page"> <!-- #page // Wraps #header, #page-main - closed in footer -->
+		<div id="page-canvas">
+						<div id="header" class="container-group fix">
+				<div class="outline">
+					<div id="branding" class="container fix">
+	<div class="texture">
+		<div class="content">
+			<div class="content-pad">
+<div class="branding_wrap">
+	<a class="mainlogo-link" href="http://forensicinsight.org" title="FORENSICINSIGHT"><img class="mainlogo-img" src="http://forensicinsight.org/wp-content/uploads/2011/11/logo_forensicinsight.png" alt="FORENSICINSIGHT" /></a>		
+	
+	<div class="icons" style="bottom: 21px; right: 1px;">
+
+				<a target="_blank" href="http://forensicinsight.org/feed" class="rsslink"></a>
+				
+											<a target="_blank" href="http://twitter.com/forensicinsight" class="twitterlink"></a>
+																			
+	</div>
+</div>
+				<div class="clear"></div>
+			</div>
+		</div>
+	</div>
+</div>
+<div id="primary-nav" class="container fix">
+	<div class="texture">
+		<div class="content">
+			<div class="content-pad">
+	<div id="nav_row" class="main_nav fix">
+<ul id="menu-main-navi" class="main-nav sf-menu"><li id="menu-item-78" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-78"><a href="http://forensicinsight.org/" >Home</a></li>
+<li id="menu-item-76" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-76"><a href="http://forensicinsight.org/about" >About</a></li>
+<li id="menu-item-75" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-75"><a href="http://forensicinsight.org/research" >Research</a></li>
+<li id="menu-item-74" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-28 current_page_item current_page_parent menu-item-74"><a href="http://forensicinsight.org/articles" >Articles</a></li>
+<li id="menu-item-73" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-73"><a href="http://forensicinsight.org/tools" >Tools</a></li>
+<li id="menu-item-698" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-698"><a href="http://forensicinsight.org/insightforum" >Forum</a></li>
+<li id="menu-item-776" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-776"><a href="http://forensicinsight.org/stats" >Stats</a></li>
+<li id="menu-item-873" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-873"><a href="http://forensicinsight.org/events" >Events</a></li>
+</ul><form method="get" class="searchform" action="http://forensicinsight.org/" onsubmit="this.submit();return false;">
+	<fieldset>
+		<input type="text" value="Search" name="s" class="searchfield" onfocus="if (this.value == 'Search') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Search';}" />
+
+		<input type="image" class="submit btn" name="submit" src="http://forensicinsight.org/wp-content/themes/platformpro/images/search-btn.png" alt="Go" />
+	</fieldset>
+</form>
+	</div>
+
+				<div class="clear"></div>
+			</div>
+		</div>
+	</div>
+</div>
+<div id="secondnav" class="container fix">
+	<div class="texture">
+		<div class="content">
+			<div class="content-pad">
+				<div class="clear"></div>
+			</div>
+		</div>
+	</div>
+</div>
+				</div>
+			</div>
+						<div id="page-main" class="container-group fix"> <!-- #page-main // closed in footer -->
+				<div id="dynamic-content" class="outline fix">
+					<div id="maincontent" class="container fix">
+	<div class="texture">
+		<div class="content">
+			<div class="content-pad">
+<div id="pagelines_content" class="one-sidebar-right fix">
+	
+		<div id="column-wrap" class="fix">
+		
+				<div id="column-main" class="mcolumn fix">
+			<div class="mcolumn-pad" >
+				<div id="postsinfo" class="copy fix">
+	<div class="copy-pad">
+	<div class="clear"></div>
+	</div>
+</div>
+<div id="theloop" class="copy fix">
+	<div class="copy-pad">
+<div class="post-1089 post type-post status-publish format-standard hentry category-notice tag-seminar fpost" id="post-1089">
+				
+				
+					
+						<div class="post-meta fix">	
+							
+							<div class="post-header fix post-nothumb" style="" >
+																<div class="post-title-section fix">
+
+									<div class="post-title fix">
+										
+										<h2 class="entry-title"><a href="http://forensicinsight.org/archives/1089" title="2012년 02월 11일 정기세미나" rel="bookmark">2012년 02월 11일 정기세미나</a></h2>
+<div class="metabar"><em><span class="sword">By</span> <span class="author vcard"><span class="fn"><a href="http://forensicinsight.org/archives/author/proneer" title="Posts by proneer" rel="author">proneer</a></span></span> <span class="sword">On</span> <span class="date time published" title="2012-02-10T10:50:10+0000">2012/02/10</span>  &middot; <span class="post-comments"><a href="http://forensicinsight.org/archives/1089#comments"><span class="dsq-postid" rel="1089 http://forensicinsight.org/?p=1089">Leave a Comment</span></a></span>  </em></div>										
+									</div>
+
+
+								</div>
+
+							</div>				
+						</div>
+					
+								</div>
+
+<div class="post-858 post type-post status-publish format-standard hentry category-newsletter tag-newletter fpost" id="post-858">
+				
+				
+					
+						<div class="post-meta fix">	
+							
+							<div class="post-header fix post-nothumb" style="" >
+																<div class="post-title-section fix">
+
+									<div class="post-title fix">
+										
+										<h2 class="entry-title"><a href="http://forensicinsight.org/archives/858" title="2012년 01월 디지털포렌식 뉴스레터" rel="bookmark">2012년 01월 디지털포렌식 뉴스레터</a></h2>
+<div class="metabar"><em><span class="sword">By</span> <span class="author vcard"><span class="fn"><a href="http://forensicinsight.org/archives/author/proneer" title="Posts by proneer" rel="author">proneer</a></span></span> <span class="sword">On</span> <span class="date time published" title="2012-02-01T09:46:36+0000">2012/02/01</span>  &middot; <span class="post-comments"><a href="http://forensicinsight.org/archives/858#comments"><span class="dsq-postid" rel="858 http://forensicinsight.org/?p=858">Leave a Comment</span></a></span>  </em></div>										
+									</div>
+
+
+								</div>
+
+							</div>				
+						</div>
+					
+								</div>
+
+<div class="post-912 post type-post status-publish format-standard hentry category-slides tag-slide fpost" id="post-912">
+				
+				
+					
+						<div class="post-meta fix">	
+							
+							<div class="post-header fix post-nothumb" style="" >
+																<div class="post-title-section fix">
+
+									<div class="post-title fix">
+										
+										<h2 class="entry-title"><a href="http://forensicinsight.org/archives/912" title="세미나 발표자료 모음" rel="bookmark">세미나 발표자료 모음</a></h2>
+<div class="metabar"><em><span class="sword">By</span> <span class="author vcard"><span class="fn"><a href="http://forensicinsight.org/archives/author/proneer" title="Posts by proneer" rel="author">proneer</a></span></span> <span class="sword">On</span> <span class="date time published" title="2012-01-30T11:11:41+0000">2012/01/30</span>  &middot; <span class="post-comments"><a href="http://forensicinsight.org/archives/912#comments"><span class="dsq-postid" rel="912 http://forensicinsight.org/?p=912">5 Comments</span></a></span>  </em></div>										
+									</div>
+
+
+								</div>
+
+							</div>				
+						</div>
+					
+								</div>
+
+<div class="post-979 post type-post status-publish format-standard hentry category-tools tag-carving tag-event-log fpost" id="post-979">
+				
+				
+					
+						<div class="post-meta fix">	
+							
+							<div class="post-header fix post-nothumb" style="" >
+																<div class="post-title-section fix">
+
+									<div class="post-title fix">
+										
+										<h2 class="entry-title"><a href="http://forensicinsight.org/archives/979" title="이벤트 로그 레코드 카빙 도구 (EVT Record Carver)" rel="bookmark">이벤트 로그 레코드 카빙 도구 (EVT Record Carver)</a></h2>
+<div class="metabar"><em><span class="sword">By</span> <span class="author vcard"><span class="fn"><a href="http://forensicinsight.org/archives/author/proneer" title="Posts by proneer" rel="author">proneer</a></span></span> <span class="sword">On</span> <span class="date time published" title="2012-01-25T18:19:03+0000">2012/01/25</span>  &middot; <span class="post-comments"><a href="http://forensicinsight.org/archives/979#comments"><span class="dsq-postid" rel="979 http://forensicinsight.org/?p=979">Leave a Comment</span></a></span>  </em></div>										
+									</div>
+
+
+								</div>
+
+							</div>				
+						</div>
+					
+								</div>
+
+<div class="post-973 post type-post status-publish format-standard hentry category-notice tag-android tag-database-forensics tag-seminar fpost" id="post-973">
+				
+				
+					
+						<div class="post-meta fix">	
+							
+							<div class="post-header fix post-nothumb" style="" >
+																<div class="post-title-section fix">
+
+									<div class="post-title fix">
+										
+										<h2 class="entry-title"><a href="http://forensicinsight.org/archives/973" title="2012년 01년 28일 정기세미나" rel="bookmark">2012년 01년 28일 정기세미나</a></h2>
+<div class="metabar"><em><span class="sword">By</span> <span class="author vcard"><span class="fn"><a href="http://forensicinsight.org/archives/author/proneer" title="Posts by proneer" rel="author">proneer</a></span></span> <span class="sword">On</span> <span class="date time published" title="2012-01-25T10:59:49+0000">2012/01/25</span>  &middot; <span class="post-comments"><a href="http://forensicinsight.org/archives/973#comments"><span class="dsq-postid" rel="973 http://forensicinsight.org/?p=973">Leave a Comment</span></a></span>  </em></div>										
+									</div>
+
+
+								</div>
+
+							</div>				
+						</div>
+					
+								</div>
+
+<div class="post-904 post type-post status-publish format-standard hentry category-notice tag-seminar fpost" id="post-904">
+				
+				
+					
+						<div class="post-meta fix">	
+							
+							<div class="post-header fix post-nothumb" style="" >
+																<div class="post-title-section fix">
+
+									<div class="post-title fix">
+										
+										<h2 class="entry-title"><a href="http://forensicinsight.org/archives/904" title="2012년 01월 14일 정기세미나" rel="bookmark">2012년 01월 14일 정기세미나</a></h2>
+<div class="metabar"><em><span class="sword">By</span> <span class="author vcard"><span class="fn"><a href="http://forensicinsight.org/archives/author/proneer" title="Posts by proneer" rel="author">proneer</a></span></span> <span class="sword">On</span> <span class="date time published" title="2012-01-12T11:04:09+0000">2012/01/12</span>  &middot; <span class="post-comments"><a href="http://forensicinsight.org/archives/904#comments"><span class="dsq-postid" rel="904 http://forensicinsight.org/?p=904">Leave a Comment</span></a></span>  </em></div>										
+									</div>
+
+
+								</div>
+
+							</div>				
+						</div>
+					
+								</div>
+
+<div class="post-891 post type-post status-publish format-standard hentry category-notice tag-seminar fpost" id="post-891">
+				
+				
+					
+						<div class="post-meta fix">	
+							
+							<div class="post-header fix post-nothumb" style="" >
+																<div class="post-title-section fix">
+
+									<div class="post-title fix">
+										
+										<h2 class="entry-title"><a href="http://forensicinsight.org/archives/891" title="2012년 01월 07일 정기세미나" rel="bookmark">2012년 01월 07일 정기세미나</a></h2>
+<div class="metabar"><em><span class="sword">By</span> <span class="author vcard"><span class="fn"><a href="http://forensicinsight.org/archives/author/proneer" title="Posts by proneer" rel="author">proneer</a></span></span> <span class="sword">On</span> <span class="date time published" title="2012-01-10T13:45:33+0000">2012/01/10</span>  &middot; <span class="post-comments"><a href="http://forensicinsight.org/archives/891#comments"><span class="dsq-postid" rel="891 http://forensicinsight.org/?p=891">Leave a Comment</span></a></span>  </em></div>										
+									</div>
+
+
+								</div>
+
+							</div>				
+						</div>
+					
+								</div>
+
+<div class="post-628 post type-post status-publish format-standard hentry category-newsletter tag-newsletter-2 fpost" id="post-628">
+				
+				
+					
+						<div class="post-meta fix">	
+							
+							<div class="post-header fix post-nothumb" style="" >
+																<div class="post-title-section fix">
+
+									<div class="post-title fix">
+										
+										<h2 class="entry-title"><a href="http://forensicinsight.org/archives/628" title="2011년 12월 디지털포렌식 뉴스레터" rel="bookmark">2011년 12월 디지털포렌식 뉴스레터</a></h2>
+<div class="metabar"><em><span class="sword">By</span> <span class="author vcard"><span class="fn"><a href="http://forensicinsight.org/archives/author/proneer" title="Posts by proneer" rel="author">proneer</a></span></span> <span class="sword">On</span> <span class="date time published" title="2012-01-02T13:31:51+0000">2012/01/02</span>  &middot; <span class="post-comments"><a href="http://forensicinsight.org/archives/628#comments"><span class="dsq-postid" rel="628 http://forensicinsight.org/?p=628">Leave a Comment</span></a></span>  </em></div>										
+									</div>
+
+
+								</div>
+
+							</div>				
+						</div>
+					
+								</div>
+
+<div class="post-267 post type-post status-publish format-standard hentry category-newsletter tag-newsletter-2 fpost" id="post-267">
+				
+				
+					
+						<div class="post-meta fix">	
+							
+							<div class="post-header fix post-nothumb" style="" >
+																<div class="post-title-section fix">
+
+									<div class="post-title fix">
+										
+										<h2 class="entry-title"><a href="http://forensicinsight.org/archives/267" title="2011년 11월 디지털포렌식 뉴스레터" rel="bookmark">2011년 11월 디지털포렌식 뉴스레터</a></h2>
+<div class="metabar"><em><span class="sword">By</span> <span class="author vcard"><span class="fn"><a href="http://forensicinsight.org/archives/author/proneer" title="Posts by proneer" rel="author">proneer</a></span></span> <span class="sword">On</span> <span class="date time published" title="2011-11-23T13:20:44+0000">2011/11/23</span>  &middot; <span class="post-comments"><a href="http://forensicinsight.org/archives/267#comments"><span class="dsq-postid" rel="267 http://forensicinsight.org/?p=267">Leave a Comment</span></a></span>  </em></div>										
+									</div>
+
+
+								</div>
+
+							</div>				
+						</div>
+					
+								</div>
+
+    <script type="text/javascript">
+    // <![CDATA[
+        var disqus_shortname = 'forensicinsight';
+        var disqus_domain = 'disqus.com';
+        (function () {
+            var nodes = document.getElementsByTagName('span');
+            for (var i = 0, url; i < nodes.length; i++) {
+                if (nodes[i].className.indexOf('dsq-postid') != -1) {
+                    nodes[i].parentNode.setAttribute('data-disqus-identifier', nodes[i].getAttribute('rel'));
+                    url = nodes[i].parentNode.href.split('#', 1);
+                    if (url.length == 1) { url = url[0]; }
+                    else { url = url[1]; }
+                    nodes[i].parentNode.href = url + '#disqus_thread';
+                }
+            }
+            var s = document.createElement('script'); s.async = true;
+            s.type = 'text/javascript';
+            s.src = 'http://' + disqus_domain + '/forums/' + disqus_shortname + '/count.js';
+            (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+        }());
+    //]]>
+    </script>
+	<div class="clear"></div>
+	</div>
+</div>
+<div id="pagination" class="copy fix">
+	<div class="copy-pad">
+				
+		<div class="clear"></div>
+	</div>
+</div>
+			</div>
+		</div>
+		
+				
+	</div>	
+	
+	
+	<script>jQuery(document).ready(function(){forum_patch();})</script>
+	<div id="sidebar-wrap" class="fix">
+			<div id="sidebar1" class="scolumn fix" >
+				<div class="scolumn-pad">
+					<div id="sidebar_primary" class="copy fix">
+	<div class="copy-pad">
+	<ul id="list_sidebar_primary" class="sidebar_widgets fix">
+		<li id="categories-4" class="widget_categories widget fix"><div class="widget-pad"><h3 class="widget-title">Categories</h3>		<ul>
+	<li class="cat-item cat-item-45"><a href="http://forensicinsight.org/archives/category/notice" title="View all posts filed under 0&#215;00 Notice">0&#215;00 Notice</a>
+</li>
+	<li class="cat-item cat-item-34"><a href="http://forensicinsight.org/archives/category/newsletter" title="View all posts filed under 0&#215;01 Newsletter">0&#215;01 Newsletter</a>
+</li>
+	<li class="cat-item cat-item-47"><a href="http://forensicinsight.org/archives/category/slides" title="View all posts filed under 0x0A Slides">0x0A Slides</a>
+</li>
+	<li class="cat-item cat-item-51"><a href="http://forensicinsight.org/archives/category/tools" title="View all posts filed under 0x0B Tools">0x0B Tools</a>
+</li>
+		</ul>
+</div></li>	        <li id="wp-cumulus" class="wp_cumulus_widget widget fix"><div class="widget-pad">						<!-- SWFObject embed by Geoff Stearns geoff@deconcept.com http://blog.deconcept.com/swfobject/ --><script type="text/javascript" src="http://forensicinsight.org/wp-content/plugins/wp-cumulus/swfobject.js"></script><div id="wpcumuluswidgetcontent2642126"><p><a href='http://forensicinsight.org/archives/tag/android' class='tag-link-50' title='1 topic' style='font-size: 8pt;'>android</a>
+<a href='http://forensicinsight.org/archives/tag/carving' class='tag-link-53' title='1 topic' style='font-size: 8pt;'>carving</a>
+<a href='http://forensicinsight.org/archives/tag/database-forensics' class='tag-link-49' title='1 topic' style='font-size: 8pt;'>database forensics</a>
+<a href='http://forensicinsight.org/archives/tag/event-log' class='tag-link-52' title='1 topic' style='font-size: 8pt;'>event log</a>
+<a href='http://forensicinsight.org/archives/tag/newletter' class='tag-link-54' title='1 topic' style='font-size: 8pt;'>newletter</a>
+<a href='http://forensicinsight.org/archives/tag/newsletter-2' class='tag-link-37' title='2 topics' style='font-size: 14.3pt;'>newsletter</a>
+<a href='http://forensicinsight.org/archives/tag/seminar' class='tag-link-46' title='4 topics' style='font-size: 22pt;'>seminar</a>
+<a href='http://forensicinsight.org/archives/tag/slide' class='tag-link-48' title='1 topic' style='font-size: 8pt;'>slide</a></p><p>WP Cumulus Flash tag cloud by <a href="http://www.roytanck.com" rel="nofollow">Roy Tanck</a> requires <a href="http://www.macromedia.com/go/getflashplayer">Flash Player</a> 9 or better.</p></div><script type="text/javascript">var widget_so6137687 = new SWFObject("http://forensicinsight.org/wp-content/plugins/wp-cumulus/tagcloud.swf?r=6211032", "tagcloudflash", "160", "160", "9", "#ffffff");widget_so6137687.addParam("allowScriptAccess", "always");widget_so6137687.addVariable("tcolor", "0x333333");widget_so6137687.addVariable("tcolor2", "0x333333");widget_so6137687.addVariable("hicolor", "0x000000");widget_so6137687.addVariable("tspeed", "100");widget_so6137687.addVariable("distr", "true");widget_so6137687.addVariable("mode", "tags");widget_so6137687.addVariable("tagcloud", "%3Ctags%3E%3Ca+href%3D%27http%3A%2F%2Fforensicinsight.org%2Farchives%2Ftag%2Fandroid%27+class%3D%27tag-link-50%27+title%3D%271+topic%27+style%3D%27font-size%3A+8pt%3B%27%3Eandroid%3C%2Fa%3E%0A%3Ca+href%3D%27http%3A%2F%2Fforensicinsight.org%2Farchives%2Ftag%2Fcarving%27+class%3D%27tag-link-53%27+title%3D%271+topic%27+style%3D%27font-size%3A+8pt%3B%27%3Ecarving%3C%2Fa%3E%0A%3Ca+href%3D%27http%3A%2F%2Fforensicinsight.org%2Farchives%2Ftag%2Fdatabase-forensics%27+class%3D%27tag-link-49%27+title%3D%271+topic%27+style%3D%27font-size%3A+8pt%3B%27%3Edatabase+forensics%3C%2Fa%3E%0A%3Ca+href%3D%27http%3A%2F%2Fforensicinsight.org%2Farchives%2Ftag%2Fevent-log%27+class%3D%27tag-link-52%27+title%3D%271+topic%27+style%3D%27font-size%3A+8pt%3B%27%3Eevent+log%3C%2Fa%3E%0A%3Ca+href%3D%27http%3A%2F%2Fforensicinsight.org%2Farchives%2Ftag%2Fnewletter%27+class%3D%27tag-link-54%27+title%3D%271+topic%27+style%3D%27font-size%3A+8pt%3B%27%3Enewletter%3C%2Fa%3E%0A%3Ca+href%3D%27http%3A%2F%2Fforensicinsight.org%2Farchives%2Ftag%2Fnewsletter-2%27+class%3D%27tag-link-37%27+title%3D%272+topics%27+style%3D%27font-size%3A+14.3pt%3B%27%3Enewsletter%3C%2Fa%3E%0A%3Ca+href%3D%27http%3A%2F%2Fforensicinsight.org%2Farchives%2Ftag%2Fseminar%27+class%3D%27tag-link-46%27+title%3D%274+topics%27+style%3D%27font-size%3A+22pt%3B%27%3Eseminar%3C%2Fa%3E%0A%3Ca+href%3D%27http%3A%2F%2Fforensicinsight.org%2Farchives%2Ftag%2Fslide%27+class%3D%27tag-link-48%27+title%3D%271+topic%27+style%3D%27font-size%3A+8pt%3B%27%3Eslide%3C%2Fa%3E%3C%2Ftags%3E");widget_so6137687.write("wpcumuluswidgetcontent2642126");</script>	        </div></li>				<li id="recent-posts-4" class="widget_recent_entries widget fix"><div class="widget-pad">		<h3 class="widget-title">Recent Posts</h3>		<ul>
+				<li><a href="http://forensicinsight.org/archives/1089" title="2012년 02월 11일 정기세미나">2012년 02월 11일 정기세미나</a></li>
+				<li><a href="http://forensicinsight.org/archives/858" title="2012년 01월 디지털포렌식 뉴스레터">2012년 01월 디지털포렌식 뉴스레터</a></li>
+				<li><a href="http://forensicinsight.org/archives/912" title="세미나 발표자료 모음">세미나 발표자료 모음</a></li>
+				<li><a href="http://forensicinsight.org/archives/979" title="이벤트 로그 레코드 카빙 도구 (EVT Record Carver)">이벤트 로그 레코드 카빙 도구 (EVT Record Carver)</a></li>
+				<li><a href="http://forensicinsight.org/archives/973" title="2012년 01년 28일 정기세미나">2012년 01년 28일 정기세미나</a></li>
+				</ul>
+		</div></li><li id="recent-comments-4" class="widget_recent_comments widget fix"><div class="widget-pad"><h3 class="widget-title">Recent Comments</h3><ul id="recentcomments"><li class="recentcomments"><a href="http://www.facebook.com/n0fate" onclick="javascript:_gaq.push(['_trackEvent','outbound-commentauthor','http://www.facebook.com']);"  rel='external nofollow' class='url'>Kyeongsik Lee</a> on <a href="http://forensicinsight.org/archives/912#comment-15">세미나 발표자료 모음</a></li><li class="recentcomments"><a href="http://www.facebook.com/proneer" onclick="javascript:_gaq.push(['_trackEvent','outbound-commentauthor','http://www.facebook.com']);"  rel='external nofollow' class='url'>Jinkook Kim</a> on <a href="http://forensicinsight.org/archives/912#comment-14">세미나 발표자료 모음</a></li><li class="recentcomments">demantos on <a href="http://forensicinsight.org/archives/912#comment-13">세미나 발표자료 모음</a></li><li class="recentcomments"><a href="http://www.facebook.com/proneer" onclick="javascript:_gaq.push(['_trackEvent','outbound-commentauthor','http://www.facebook.com']);"  rel='external nofollow' class='url'>Jinkook Kim</a> on <a href="http://forensicinsight.org/archives/912#comment-12">세미나 발표자료 모음</a></li><li class="recentcomments">Jisung Han on <a href="http://forensicinsight.org/archives/912#comment-11">세미나 발표자료 모음</a></li></ul></div></li>	</ul>
+	<div class="clear"></div>
+	</div>
+</div>
+	
+				</div>
+			</div>
+			</div>		
+
+</div>				<div class="clear"></div>
+			</div>
+		</div>
+	</div>
+</div>
+</div> <!-- END #dynamic-content -->
+
+<div id="morefoot_area"><div id="twitterbar" class="container fix">
+	<div class="texture">
+		<div class="content">
+			<div class="content-pad">
+<div class="tbubble"><span class="twitter">"[INSIGHT]: 2012년 02월 11일 인사이트 정기세미나 http://t.co/6VjWdP6Q&mdash;&nbsp;<a class="twitteraccount" href="http://twitter.com/#!/forensicinsight">forensicinsight</a></span></div>				<div class="clear"></div>
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+<div class="clear"></div>
+				
+</div> <!-- END #page-main from header -->
+</div> <!-- END #page-canvas from header -->
+</div> <!-- END #page from header -->
+
+<div  id="footer">
+	<div class="outline fix"><div id="footcols" class="container fix">
+	<div class="texture">
+		<div class="content">
+			<div class="content-pad">
+			<div id="fcolumns_container" class="dcol_container_5 fix">
+				
+									<div class="dcol_5 dcol">
+						<div class="dcol-pad">
+															<a class="home" href="http://forensicinsight.org" title="Home">
+									<img src="http://forensicinsight.org/wp-content/uploads/2011/11/FilterFeather7.png" alt="FORENSICINSIGHT" />
+								</a>
+													</div>
+					</div>
+					<div class="dcol_5 dcol">
+						<div class="dcol-pad">
+							<h3 class="widget-title">Pages</h3>
+								<div class="footer-links list-links"><ul><li class="page_item page-item-659"><a href="http://forensicinsight.org/insightforum" title="Forum">Forum</a></li><li class="page_item page-item-19"><a href="http://forensicinsight.org/" title="Home">Home</a></li><li class="page_item page-item-70"><a href="http://forensicinsight.org/members" title="Members">Members</a></li><li class="page_item page-item-430"><a href="http://forensicinsight.org/rootkit" title="rootkit">rootkit</a></li><li class="page_item page-item-704"><a href="http://forensicinsight.org/stats" title="Stats">Stats</a></li><li class="page_item page-item-21"><a href="http://forensicinsight.org/about" title="About">About</a></li><li class="page_item page-item-25"><a href="http://forensicinsight.org/research" title="Research">Research</a></li><li class="page_item page-item-28 current_page_item"><a href="http://forensicinsight.org/articles" title="Articles">Articles</a></li><li class="page_item page-item-31"><a href="http://forensicinsight.org/tools" title="Tools">Tools</a></li></ul></div>
+
+						</div>
+					</div>
+					<div class="dcol_5 dcol">
+						<div class="dcol-pad">
+							<h3 class="widget-title">The Latest</h3>
+								<ul class="latest_posts">
+																		<li class="list-item fix">
+											<div class="list_item_text">
+												<h5><a class="list_text_link" href="http://forensicinsight.org/archives/1089"><span class="list-title">2012년 02월 11일 정기세미나</span></a></h5>
+												<div class="list-excerpt">일 시 : 2012년 2월 11일 10:00 ~ 12:30 &nbsp; 발표 내용&nbsp;[&hellip;]</div>
+											</div>
+										</li>
+								</ul>
+						</div>
+					</div>
+					<div class="dcol_5 dcol">
+						<div class="dcol-pad">
+							<h3 class="widget-title">More</h3>
+							<div class="findent footer-more">
+								Thanks for dropping by! Feel free to join the discussion by leaving comments, and stay updated by subscribing to the <a href='http://forensicinsight.org/?feed=rss2'>RSS feed</a>.							</div>
+						</div>
+					</div>
+					<div class="dcol_5 dcol">
+						<div class="dcol-pad">
+							<div class="findent terms">
+								© 2011 FORENSICINSIGHT.							</div>
+						</div>
+					</div>
+							</div>	
+			<div class="clear"></div>
+						<div class="clear"></div>
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-20479500-3']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script><script type="text/javascript">
+disableSelection(document.body)
+</script>
+<!--
+<p class="small"> WassUp 1.8.3 timestamp: 2012-02-11 11:09:55AM UTC (08:09PM)<br />
+If above timestamp is not current time, this page is cached.</p> -->
+<script type='text/javascript' src='http://forensicinsight.org/wp-content/themes/platformpro/sections/nav/superfish.js?ver=1.0'></script>
+<script type='text/javascript' src='http://forensicinsight.org/wp-content/themes/platformpro/sections/nav/jquery.bgiframe.min.js?ver=1.0'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var thickboxL10n = {"next":"Next >","prev":"< Prev","image":"Image","of":"of","close":"Close"};
+try{convertEntities(thickboxL10n);}catch(e){};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://forensicinsight.org/wp-content/plugins/auto-thickbox-plus/thickbox.js?ver=3.1-20110904'></script>
+
+<script type="text/javascript">
+var tb_pathToImage = "http://forensicinsight.org/wp-includes/js/thickbox/loadingAnimation.gif";
+var tb_closeImage = "http://forensicinsight.org/wp-includes/js/thickbox/tb-close.png";
+</script>
+</body>
+</html>

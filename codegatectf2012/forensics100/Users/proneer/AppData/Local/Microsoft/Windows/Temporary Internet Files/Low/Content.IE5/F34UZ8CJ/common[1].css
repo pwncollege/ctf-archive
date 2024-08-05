@@ -1,0 +1,150 @@
+@charset "utf-8";
+
+*,html {margin:0;padding:0;}
+html{overflow-y: scroll;}
+body,div,em,table,th,td,ul,li,ol,dl,dt,dd,form,fieldset,input,textarea,select, p, span, strong {
+	margin:0; padding:0;
+	font-family:Tahoma,Verdana,Dotum,Gulim,Arial;font-size:12px;line-height:16px;color:#666666;
+}
+
+h1,h2,h3,h4{margin:0;padding:0;font-size:0;line-height:0;}
+h1{display:none;}
+
+ul, li, ol, dl, dt, dd{list-style:none;vertical-align:top;}
+table {border-collapse: collapse;word-break:break-all;border:0;}
+td, th {word-break:break-all;empty-cells: show;}
+caption{display:none;}
+img{margin:0;padding:0;border:0;}
+img.btn{cursor:pointer;vertical-align:middle;}
+fieldset, img{border: none;}
+legend{position:absolute; width:0; height:0; font-size:0; line-height:0; overflow:hidden; visibility:hidden;}
+em{font-style:normal;}
+label{}
+
+input{border:0;vertical-align:middle;}
+input.txt{height:17px;padding:2px 0 0 2px;border-top:1px solid #8b8b8b;border-left:1px solid #8b8b8b;border-bottom:1px solid #c8c8c8;border-right:1px solid #c8c8c8;}
+input.file{height:21px;margin:3px 0;border-top:1px solid #8b8b8b;border-left:1px solid #8b8b8b;border-bottom:1px solid #c8c8c8;border-right:1px solid #c8c8c8;background:#fff;}
+
+textarea.txt{overflow:auto;padding:0 0 0 2px;border-top:1px solid #8b8b8b;border-left:1px solid #8b8b8b;border-bottom:1px solid #c8c8c8;border-right:1px solid #c8c8c8;vertical-align:middle;}
+select{border-top:1px solid #8b8b8b;border-left:1px solid #8b8b8b;border-bottom:1px solid #c8c8c8;border-right:1px solid #c8c8c8;vertical-align:middle;}
+
+a:link, a:visited, a:active {color:#666666;font-size:12px;line-height:16px;font-family:Tahoma,Verdana,Dotum,Gulim,Arial;text-decoration:none;}
+a:hover {color:#666666;font-size:12px;line-height:16px;font-family:Tahoma,Verdana,Dotum,Gulim,Arial;text-decoration:none;}
+a em{text-decoration:underline;}
+
+.fl{float:left !important;}
+.fr{float:right !important;}
+.cb{clear:both !important;}
+.clear{width:100% !important;clear:both !important;}
+.fbox{width:100%;overflow:hidden;}
+.fixed {display:block;}/* Custom Classes */
+.fixed:after {content:"."; display:block; height:0; clear:both; visibility:hidden;}
+/* \*/ .fixed {min-height:1%;} /* */
+* html .fixed {height:1%;}
+
+.bornone {border:none !important;}
+
+.vtop{vertical-align:top !important;}
+.vmid{vertical-align:middle !important;}
+.vbtm{vertical-align:bottom !important;}
+.txtC{text-align:center !important;}
+.txtL{text-align:left !important;}
+.txtR{text-align:right !important;}
+
+.mt0{margin-top:0 !important;}
+.mt3{margin-top:3px !important;}
+.mt4{margin-top:4px !important;}
+.mt5{margin-top:5px !important;}
+.mt8{margin-top:8px !important;}
+.mt10{margin-top:10px !important;}
+.mt13{margin-top:13px !important;}
+.mt14{margin-top:14px !important;}
+.mt15{margin-top:15px !important;}
+.mt17{margin-top:17px !important;}
+.mt18{margin-top:18px !important;}
+.mt19{margin-top:19px !important;}
+.mt20{margin-top:20px !important;}
+.mt22{margin-top:22px !important;}
+.mt25{margin-top:25px !important;}
+.mt30{margin-top:30px !important;}
+.mt38{margin-top:38px !important;}
+.mt46{margin-top:46px !important;}
+.mt49{margin-top:49px !important;}
+.mt72{margin-top:72px !important;}
+.ml5{margin-left:5px !important;}
+.ml19{margin-left:19px !important;}
+.ml20{margin-left:20px !important;}
+.mb0{margin-bottom:0 !important;}
+
+
+.png24{tmp:expression(setPng24(this));} /* png */
+#accessibility {position:absolute;width:0;height:0;overflow:hidden;visibility:hidden;font-size:0;}
+
+.bld{color:#5a90cb !important;}/* sky blue */
+.bld2{color:#203c8d !important;}/* blue */
+.bld3{color:#ff8432;}/* orange */
+.bld4{color:#5baf00;}/* Green */
+.bld5 {color:#ffb413;}/* orange2 */
+.bld6 {color:#ff8432;}/* orange3 */
+
+/* btn위치 */
+p.btnC {margin:10px 0 0 0;text-align:center;}/* Center 정렬 버튼 */
+p.btnR{margin:10px 0 0 0;text-align:right;}
+.btnR2 {width:100%;margin:27px 0 0 0;padding:10px 0 0 0;text-align:right;border-top:1px solid #DDE0E7;}
+.btnR3 {overflow:hidden;float:right;margin:12px 0 10px 0;*margin:12px 0 0 0;padding:0 10px 0 0;}
+.btnR3 span {float:left;display:block;padding:0 11px 0 0;background:url('http://image.ahnlab.com/global/site/images/common/blt/bg_sort4.gif') no-repeat right 2px;}
+.btnR3 img {margin-left:10px;_margin-left:7px;}
+.btnSearch {width:100%;padding-top:10px;border-top:1px solid #DDE0E7;}
+.btnSearch .btnR {float:right;margin:0;padding:0;}
+.btnSearch .btnR span {float:left;display:block;padding:0 11px 0 0;background:url('http://image.ahnlab.com/global/site/images/common/blt/bg_sort4.gif') no-repeat right 7px;}
+.btnSearch .btnR img {margin-left:11px;}
+.btnSearch .btnR .close {margin-top:3px;}
+
+
+/* Tab */
+.tabBox {position:relative;}
+.tabBox select {position:absolute;top:5px;right:0;}
+ul.tab{clear:both;display:block;width:703px;padding-left:10px;background:url('http://image.ahnlab.com/global/site/images/common/layout/bg_tab.gif') repeat-x;}
+ul.tab:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}
+ul.tab li{display:block;float:left;height:34px;margin-right:2px;font-size:0;line-height:0;}
+ul.tab li a{display:inline-block;height:34px;background:url('http://image.ahnlab.com/global/site/images/common/layout/bg_taboff_body.gif') no-repeat left bottom;}
+ul.tab li a span {display:inline-block;height:22px;padding:11px 15px 1px 16px;font-size:12px;line-height:16px;font-weight:bold;color:#989898;text-align:center;background:url('http://image.ahnlab.com/global/site/images/common/layout/bg_taboff.gif') no-repeat right bottom;cursor:pointer;}
+ul.tab li a:hover{background:url('http://image.ahnlab.com/global/site/images/common/layout/bg_tabover_body.gif') no-repeat left bottom;}
+ul.tab li a:hover span{color:#5b5b5b;background:url('http://image.ahnlab.com/global/site/images/common/layout/bg_tabover.gif') no-repeat right bottom;}
+ul.tab li.on a{background:url('http://image.ahnlab.com/global/site/images/common/layout/bg_tabon_body.gif') no-repeat left bottom;}
+ul.tab li.on a span{height:25px;padding:9px 15px 0 16px;color:#333;background:url('http://image.ahnlab.com/global/site/images/common/layout/bg_tabon.gif') no-repeat right bottom;}
+ul.tab li.on a:hover{background:url('http://image.ahnlab.com/global/site/images/common/layout/bg_tabon_body.gif') no-repeat left bottom;}
+ul.tab li.on a:hover span{color:#333;background:url('http://image.ahnlab.com/global/site/images/common/layout/bg_tabon.gif') no-repeat right bottom;}
+.tabBox .btnPrint {position:absolute;top:12px;right:10px;}
+
+
+/* pop Print */
+body#printWrap{margin:0;padding:0;background:none;}
+body#printWrap #popWrap{margin:0;padding:15px 15px 30px 15px;}
+body#printWrap #main{float:none;width:713px;margin:0;padding:0;}
+body#printWrap .btnSearch {width:713px;}
+body#printWrap h4.infoTxt1 {height:26px;padding-left:0;vertical-align:top;}
+body#printWrap h4.infoTxt1 strong {padding-left:6px;}
+body#printWrap h4.infoTxt1 strong, body#printWrap .virdlView h4.infoTxt1 {background-image:none;}
+body#printWrap h4.infoTxt1 img {vertical-align:2px;}
+body#printWrap .virdlView h4.infoTxt1 {height:26px;padding-left:8px;}
+body#printWrap .virdlView h4.infoTxt1 strong {padding-left:6px;}
+body#printWrap .virdlView p {padding:0 0 40px 20px}
+body#printWrap .virdlView dl {padding:0 0 14px 20px;}
+body#printWrap .virdlView dl dt, .virdlView dl dd {padding-bottom:16px;}
+body#printWrap .virdlView dl dd p {padding:0 0 16px 0}
+
+body#printWrap h5.info {height:23px;margin-top:18px;background:none;border-bottom:2px solid #BBC2CF;}
+body#printWrap h5.info, body#printWrap h5.info2 {padding:0 0 0 8px;background:none;}
+body#printWrap h5.info img, body#printWrap h5.info2 img {padding-left:13px;background:url('http://image.ahnlab.com/global/site/images/common/blt/blt_h5.gif') no-repeat 0 4px;}
+
+/* error */
+body#error {position:relative;min-width:713px;height:100%;min-height:350px;background-image:none;}
+body#error #container {position:absolute;top:316px;left:50%;width:713px;margin-left:-352px;}
+body#error h1 {display:block;height:41px;}
+body#error #contents {width:713px;padding:0 0 71px 0;}
+body#error .superLine {width:713px;background:url('http://image.ahnlab.com/global/site/images/common/blt/bg_super_line.gif') no-repeat left bottom;}
+body#error .superLine .errBox {padding:35px 0 30px 0;border-top:4px solid #09409A;}
+body#error .superLine .errBox, body#error #container .superLine .errBox2 {text-align:center;}
+body#error .superLine .errBox2 {padding:30px 0 0 0;background:url('http://image.ahnlab.com/global/site/images/common/blt/bg_sinfo.gif') no-repeat left top;}
+body#error .superLine .errBox2 p {margin-top:29px;color:#333;line-height:20px;}

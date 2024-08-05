@@ -1,0 +1,116 @@
+﻿/* sitewide overrides */
+
+/* Sitemaps are currently only element using "section-grid-5col-near" */
+table.section_section-grid-5col-near li { font-size: .73em }
+table.section_section-grid-5col-near li a { color: #666666; }
+table.section_section-grid-5col-near li a:visited { color: #808080; }
+
+/* Targeted to get the side-list items in feature pages */
+.containerOneFourthNear .topic_body_full a.link_expandAll,
+.containerOneFourthNear .topic_body_full a.link_collapseAll,
+.containerOneFourthNear .topic_body_full a.link_collapseAll:visited,
+.containerOneFourthNear .topic_body_full a.link_expandAll:visited
+{ display: none; }
+.containerOneFourthNear .topic_body_full div.section div.section p.para,
+.containerOneFourthNear .topic_body_full .lastElement p.para
+{ margin-bottom: 10px; }
+.containerOneFourthNear .topic_body_full div.section div.section p.para span.ui,
+.containerOneFourthNear .topic_body_full .lastElement p.para span.ui
+{
+	margin-top: 15px;
+	display: block;
+}
+
+/* Apply same near indent as p and h* get */
+.section_oly-aml-near select { margin-left: 16px; }
+
+/* Override for footer content to make sure it stays inside the fixed
+   width area between logos */
+#FooterCopyright { vertical-align: top; }
+#FooterLinks
+{
+	display: inline-block; 
+	width: 450px;
+}
+#FooterText
+{ 
+	font-size: .9em;
+	margin: 0px 120px;
+	padding: 11px 0px;
+}
+
+/* Override to make tab control titles render with the same look and feel as 
+   other headers in the site */
+div.tabBody h2.tabControlTitle
+{
+	margin-bottom: 16px;
+	font-size: 146%;
+}
+
+/* one-half basic template padding */
+.sectionInteriorRow { padding-top: 10px; } /* original: 20 */
+.sectionMiddle { padding-top: 12px; } /* original: 24 */
+.sectionBottom { padding-top: 20px; } /* original: 40 */
+
+/* FB overrides; methods for hiding <p> tags, defining iframe, and tightening fb table spacing */
+.fb_hidden_p { display: none; }
+.fb_iframe
+{
+    border: none;
+    overflow: hidden;
+    margin: 5px 0 0 0;
+}
+table.table_fb_table p { margin-bottom:0px; }
+
+/* newsletter overrides */
+#ms_wol_cp_newsletter_window
+{
+    position: absolute;
+    left: 50%;
+    z-index: 102;
+    background: transparent;
+    border: none;
+    text-align: center;
+}
+#ms_wol_cp_newsletter_overlay
+{
+    position: absolute;
+    left: 0px;
+    margin: 0px;
+    padding: 0px;
+    background: #131313;
+    opacity: .85; /* setting for non-IE 6 browsers */
+    filter: alpha(opacity=85); /* setting for IE 6 */
+    z-index: 101;
+    top: 0px;
+}
+#ms_wol_cp_newsletter_close_left, #ms_wol_cp_newsletter_close_right
+{
+    font-size: 1.0em;
+    width: 13px;
+    height: 20px;
+}
+#ms_wol_cp_newsletter_close_middle
+{
+    font-size: 1.15em;
+    height: 20px;
+    background: url(http://res1.windows.microsoft.com/resbox/en/Windows%207/main/4/d/4d4178ac-79c0-45ee-b02f-7dafb88aba8b/4d4178ac-79c0-45ee-b02f-7dafb88aba8b.png) left top repeat-x;
+    padding-top: 4px;
+    padding-bottom: 0px;
+    padding-right: 5px;
+    padding-left: 5px;
+    text-align: center;
+    color: #FFFFFF;
+    font-family: inherit;
+    cursor: pointer;
+    vertical-align:top;
+}
+#ms_wol_cp_newsletter_iframe
+{
+    margin:0px;
+    margin-top:-10px;
+}
+table.table_newsletter_table { cursor: pointer; }
+table.table_newsletter_table span.caption { display: none; }
+
+

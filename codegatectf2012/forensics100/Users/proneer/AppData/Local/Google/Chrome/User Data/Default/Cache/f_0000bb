@@ -1,0 +1,1798 @@
+
+.style-block {
+        clear:both;   
+        margin-bottom:10px;
+        }
+
+.style-desc {
+        margin-bottom:10px;
+        padding:10px 0 0 135px;
+        }
+
+#onsite-style {
+        position:relative;
+        float:left;
+        display:block;
+        width:125px;
+        height:125px;
+        margin:25px 10px 5px 0;
+        background-image: url('/images/home/training/onsite_style.jpg');
+        background-repeat: no-repeat;
+        text-decoration:none;
+        }
+
+#athome-style {
+        position:relative;
+        float:left;
+        display:block;
+        width:125px;
+        height:125px;
+        margin:25px 10px 5px 0;
+        background-image: url('/images/home/training/athome_style.jpg');
+        background-repeat: no-repeat;
+        text-decoration:none;
+        }
+
+#partnership-style {
+        position:relative;
+        float:left;
+        display:block;
+        width:125px;
+        height:125px;
+        margin:25px 10px 5px 0;
+        background-image: url('/images/home/training/partnership_style.jpg');
+        background-repeat: no-repeat;
+        text-decoration:none;
+        }
+
+#voucher-style {
+        position:relative;
+        float:left;
+        display:block;
+        width:125px;
+        height:125px;
+        margin:25px 10px 5px 0;
+        background-image: url('/images/home/training/voucher_style.jpg');
+        background-repeat: no-repeat;
+        text-decoration:none;
+        }
+
+#mentor-style {
+        position:relative;
+        float:left;
+        display:block;
+        width:125px;
+        height:125px;
+        margin:25px 10px 5px 0;
+        background-image: url('/images/home/training/mentor_style.jpg');
+        background-repeat: no-repeat;
+        text-decoration:none;
+        }
+#cyber-guardian-style {
+        position:relative;
+        float:left;
+        display:block;
+        width:125px;
+        height:125px;
+        margin:25px 10px 5px 0;
+        background-image: url('/images/home/training/cyber_guardian_style.jpg');
+        background-repeat: no-repeat;
+        text-decoration:none;
+        }
+
+#sti-style {
+        position:relative;
+        float:left;
+        display:block;
+        width:125px;
+        height:125px;
+        margin:25px 10px 5px 0;
+        background-image: url('/images/home/training/sti_style.jpg');
+        background-repeat: no-repeat;
+        text-decoration:none;
+        }
+
+#ondemand-style {
+        position:relative;
+        float:left;
+        display:block;
+        width:125px;
+        height:125px;
+        margin:25px 10px 5px 0;
+        background-image: url('/images/home/training/ondemand_style.jpg');
+        background-repeat: no-repeat;
+        text-decoration:none;
+        }
+
+#dod-style {
+        position:relative;
+        float:left;
+        display:block;
+        width:125px;
+        height:125px;
+        margin:25px 10px 5px 0;
+        background-image: url('/images/home/training/dod_style.jpg');
+        background-repeat: no-repeat;
+        text-decoration:none;
+        }
+
+#simulcast-style {
+        position:relative;
+        float:left;
+        display:block;
+        width:125px;
+        height:125px;
+        margin:25px 10px 5px 0;
+        background-image: url('/images/home/training/simulcast_logos.jpg');
+        background-repeat: no-repeat;
+        text-decoration:none;
+        }
+        
+/* Adding for Custom SEC560 Description July 2010 DB */
+     
+#custom-560 {
+        float: left;
+        width: 55%;
+}
+
+#te-logo {
+        position:relative;
+        float:left;
+/*	top:63px;*/
+	left:0px;
+	display:block;
+        width:477px;
+        height:207px;
+        background-image: url("/forensics-incident-response-summit-2012/te_logobg.gif");
+        background-position: top left;
+        background-repeat: no-repeat; 
+        }
+
+#te-logo ul {
+        _margin-left:0; /*IE 7 doesn't see this*/
+        *margin-left:60px; /* IE 7 sees this */
+        }
+
+#te-altlogo {
+        position:absolute;
+        top:60px/*180px*/;
+        left:306px;
+        display:block;
+        width:477px;
+        height:207px;
+        background-image: url("/forensics-incident-response-summit-2012/te_logobg.gif");
+        background-position: top left;
+        background-repeat: no-repeat;
+        }
+
+#te-logo a {
+        color:#DDD;
+        }
+
+#te-logo a:hover {
+        color:#F7C73E;
+	text-decoration:none;
+        }
+
+
+#te-altlogo a {
+        color:#DDD;
+        }
+
+#te-altlogo a:hover {
+        color:#F7C73E;
+        text-decoration:none;
+        }
+
+#te-logo p {
+	position:absolute;
+        top:110px !important;
+        top:120px;
+        left:20px !important;
+        left:-8px;
+	width:400px;
+	text-align:center;
+        color:#F7C73E;
+	}
+
+#te-city-date {
+	position:absolute;
+	top:147px;
+	right:500px;
+	color:#FFF;
+        text-align:center;
+        font:bold 9pt/11pt sans-serif;
+	z-index:800;
+}
+
+#te-iconlogo a {
+        position:absolute;
+        top:60px/*181px*/;
+	        left:-2px;
+	        display:block;
+        width:303px;
+        height:207px;
+        background-image: url("/forensics-incident-response-summit-2012/te_iconlogo.png");
+        background-position: top left;
+        background-repeat: no-repeat;
+        }
+
+#te-iconlogo a:hover {
+	text-decoration:none;
+        }
+
+
+#te-photo, #te-photo-class, #te-summit, #te-hotel, #te-hosted-regular, #te-hosted-sourcefire, #te-hosted-usenix, #te-hosted-nic {
+        position:relative;
+		top:0px;
+		float:left;
+		margin-left:5px;
+        width:303px;
+        height:207px;
+        background-position: top left;
+        background-repeat: no-repeat;  
+        }
+
+#te-photo {
+		background-image: url("/forensics-incident-response-summit-2012/te_photo.jpg");
+		}
+
+#te-photo-class {
+        background-image: url("/training_events/images/te_class7.jpg");
+        }
+
+#te-summit {
+        background-image: url("/forensics-incident-response-summit-2012/te_summitlogo.jpg");
+        }
+
+
+#te-hotel {
+        background-image: url("/forensics-incident-response-summit-2012/te_hotel.jpg");
+        }
+
+#te-hosted-regular {
+        background-image: url("/training_events/images/te_hosted.jpg");
+        }
+
+
+#te-hosted-sourcefire {
+        background-image: url("/training_events/images/te_hosted_sourcefire.jpg");
+        }
+
+#te-hosted-usenix {
+        background-image: url("/training_events/images/te_hosted_usenix.jpg");
+        }
+
+#te-hosted-nic {
+        background-image: url("/training_events/images/te_hosted_nic.jpg");
+        }
+        
+/* Adding for Video Addition to SEC560 Description July 2010 DB */
+
+#te-video {
+        float: right;
+        display:block;
+        width:350px;
+        height:225px;
+        background-image:none;
+        background-position: top left;
+        background-repeat: no-repeat;  
+        }
+
+#te-video-class {
+        position:absolute;
+        top:180px;
+        left:480px;
+        display:block;
+        width:350px;
+        height:225px;
+        background-image:none;
+        background-position: top left;
+        background-repeat: no-repeat;
+        }               
+
+ul.ww-links {
+        list-style-type: none;
+        list-style-image: none;
+        position:absolute;
+        top:33px;
+		left:20px;
+        color:#183D5C;
+        }
+
+
+ul.ww-links li {
+        padding:0px;
+        }
+
+ul.te-links1 {
+	list-style-type: none;
+	list-style-image: none;
+	position:absolute;
+   top:90px;
+	margin:15px 0 0 40px;
+	color:#183D5C;
+	}
+
+ul.te-links1 li {
+	padding:0;
+        }
+
+ul.te-links2 {
+        list-style-type: none;
+        list-style-image: none;
+        position:absolute;
+        top:106px;
+        left:160px;
+	color:#183D5C;
+        }
+
+ul.te-links2 li {
+	padding:0;
+        }
+
+ul.te-links3 {
+        list-style-type: none;
+        list-style-image: none;
+        position:absolute;
+        top:113px/*97px*/;
+        left:300px;
+	color:#183D5C;
+        }
+
+ul.te-links3 li {
+	padding:0;
+        }
+
+#upcomingevents ul, #webcastlinks ul, #checkthem ul.altbackground, #courselinks_inset ul.altbackground, ul#sublist {
+        margin-left:0;
+        min-width:129px;
+        background-color:#F3F3F3;
+        border: 1px solid #DDD;
+        padding-left:20px;
+        }
+
+#upcomingevents dl {
+    margin:10px 0;
+    padding:0;
+    min-width:129px;
+    background-color:#F3F3F3;
+    text-align:left;
+}
+
+
+#upcomingevents dt {
+    padding:5px 0 5px 7px;
+    font-size:10pt;
+    font-weight:bold;
+    border:1px solid #DDD;
+    background-color:#FFF;
+}
+
+#upcomingevents dd {
+    margin:0;
+    padding:5px 0 5px 7px;
+    font-weight:normal;
+    border:1px solid #DDD;
+    border-top:none;
+}
+
+#upcomingevents dd a {
+    display:block;
+    padding:4px 0 4px 7px;
+}
+
+#upcomingevents dd a:hover {
+    background-color:#DDD;
+    text-decoration:none;
+}
+
+
+
+#te-giac-count {
+    position:relative;
+	top:210px;
+    width:320px;
+    height:44px;
+    background-image: url("/training_events/images/te_giac.gif");
+    background-position: top left;
+    background-repeat: no-repeat;
+    }
+
+
+a.medal {
+        position:absolute;
+        top:270px;
+        left:0px;
+        display:block;
+        width:44px;
+        height:44px;
+	z-index:1000;
+	text-decoration:none;
+        }
+
+span#medal{
+        background-image: url("/training_events/images/te_giac_big.png");
+        background-position: top left;
+        background-repeat: no-repeat;
+        visibility:hidden;
+        }
+
+html>body a.medal:hover {
+	position:absolute;
+	top:270px;
+	left:-20px;
+        display:block;
+	clear:both;
+        width:83px;
+        height:83px;
+        z-index:3000;
+        text-decoration:none;
+        background-image: url("/training_events/images/te_giac_big.png");
+        background-position: top left;
+        background-repeat: no-repeat;
+        visibility:visible !important;
+        visibility:hidden;
+        }
+
+#te-giac-count p {
+        position:absolute;
+        top:3px;
+	color:#1D567D;
+        width:330px;
+        font:8pt/9pt 'trebuchet ms', verdana, sans-serif;
+        text-align:center;
+        }
+
+#te-giac-count a {
+        position:relative;
+        top:0;
+	color:#1D567D;
+        font:8pt/9pt 'trebuchet ms', verdana, sans-serif;
+        text-align:center;
+        }
+
+#te-giac-count a:hover {
+	color:#006259;
+	text-decoration:none;
+        }
+
+#te-quote-bar {
+	position:absolute;
+ 			top:280px;
+		left:320px;
+    width:372px;
+    height:44px;
+    background-image: url("/training_events/images/te_quote.gif");
+    background-position: top left;
+    background-repeat: no-repeat;
+    }
+
+#te-quote-bar p {
+	position:relative;
+	top:3px;
+	color:#1D567D;
+        width:350px;
+        font:8pt/10pt 'trebuchet ms', verdana, sans-serif;
+        text-align:center;
+        }
+
+#te-register a {
+        position:absolute;
+ 			top:290px;
+	        left:692px;
+        display:block;
+        width:88px;
+        height:44px;
+        background-image: url("/training_events/images/te_reg_btn.gif");
+        background-position: top left;
+        background-repeat: no-repeat;
+	text-decoration:none;
+        }
+
+#te-register-footer a {
+		clear:left;
+        position:relative;
+        top:0;
+        left:662px;
+	*left:25px;
+        display:block;
+        width:88px;
+        height:44px;
+        background-image: url("/training_events/images/te_reg_btn.gif");
+        background-position: top left;
+        background-repeat: no-repeat;
+        text-decoration:none;
+        }
+
+
+#te-soldout a {
+        position:absolute;
+        top:295px;
+        left:692px;
+        display:block;
+        width:88px;
+        height:44px;
+        background-image: url("/training_events/images/te_soldoutwl_btn.gif");
+        background-position: top left;
+        background-repeat: no-repeat;
+        text-decoration:none;
+        }
+#te-soldout2 a{
+        position:absolute;
+        top:168px;
+        left:155px;
+        display:block;
+        width:88px;
+        height:44px;
+        background-image: url("/training_events/images/te_soldoutwl_btn.gif");
+        background-position: top left; 
+        background-repeat: no-repeat;
+        text-decoration:none;
+        }
+
+#te-soldout-footer a {
+        position:relative;
+        top:0;
+        left:662px;
+	*left:0;
+        display:block;
+        width:88px;
+        height:44px;
+        background-image: url("/training_events/images/te_soldoutwl_btn.gif");
+        background-position: top left;
+        background-repeat: no-repeat;
+        text-decoration:none;
+        }
+
+#te-nowaiting {
+        position:absolute;
+        top:410px;
+        left:692px;
+        display:block;
+        width:88px;
+        height:44px;
+        background-image: url("/images/sold_out.gif");
+        background-position: top left;
+        background-repeat: no-repeat;
+        text-decoration:none;
+        }
+
+#te-nowaiting-footer {
+        position:relative;
+        top:0;
+        left:662px;
+        *left:0;
+        display:block;
+        width:88px;
+        height:44px;
+        background-image: url("/images/sold_out.gif");
+        background-position: top left;
+        background-repeat: no-repeat;
+        text-decoration:none;
+        }
+
+#te-request a {
+        position:absolute;
+        top:392px;
+        left:692px;
+        display:block;
+        width:88px;
+        height:44px;
+        background-image: url("/training_events/images/te_request_btn.gif");
+        background-position: top left;
+        background-repeat: no-repeat;
+        text-decoration:none;
+        }
+
+#te-request-footer a {
+        position:relative;
+        top:0;
+        left:662px;
+        *left:25px;
+        display:block;
+        width:88px;
+        height:44px;
+        background-image: url("/training_events/images/te_request_btn.gif");
+        background-position: top left;
+        background-repeat: no-repeat;
+        text-decoration:none;
+        }
+
+
+#te-type {
+	width:100%;
+	top:10px/*138px*/;
+	padding-top:25px;
+	margin:0 0 15px 0;
+	height:30px;
+	display: block;
+    z-index: 900;
+	}
+
+#te-menu, #te-menu ul {
+	position:relative;
+	text-align:left;
+	width:100%;
+	height:21px;
+	padding: 0;
+	margin: 0;
+	list-style-type: none;
+	list-style-image: none;
+    z-index: 900;
+        }
+
+#te-menu li {
+	float:left;
+	display: inline;
+	padding:0 0 0 0;
+	margin:0 0 0 1px;
+        }
+
+
+
+
+
+/* college types buttons */
+
+#te-menu li a {
+        display:block;
+        width:111px;
+        height:30px;
+        background-position: top left;
+        background-repeat: no-repeat;
+        text-decoration:none;
+        }
+
+#te-menu li ul {
+        position:absolute;
+	left:-9999em;
+        padding: 0 0 0 0;
+        margin: 0 0 0 0 !important;
+        margin: 25px 0 0 0;
+	height:.1px;
+        }
+
+#te-menu li ul li a {
+        color:#FFF;
+        width:382.5px;
+        height:auto;
+        padding:5px;
+        font:9pt/12pt 'trebuchet ms', verdana, sans-serif;
+        background-image: none;
+        text-decoration:none;
+        }
+
+#te-menu li ul li{
+        height:auto;
+        padding:0px;
+        margin:0px;
+        }
+
+#te-menu li ul li a.wideload {
+        width:775px;
+        }
+
+#te-menu li ul li.leftload{
+        position:relative;
+        float:left;
+        clear:both;
+        }
+
+
+
+#te-menu li ul li.rightload{
+        position:relative;
+        left:392px;
+        clear:both;
+        }
+
+
+#te-menu li:hover ul, #te-menu li.crhover ul {
+        left:1px;
+        }
+
+li#te-gray {
+        width: 111.3px;
+        height: 30px;
+        background-image: url("/training_events/images/new-course-btns/te_btn_bg_lt_grey.gif");
+        }
+
+li#te-audit a {
+        background-image: url("/training_events/images/new-course-btns/te_btn_bg_green.gif");
+        }
+
+li#te-audit ul li a {
+        background-color:#267972;
+        }
+
+li#te-audit ul li a:hover {
+        background-color:#006259;
+        }
+
+li#te-legal a {
+        background-image: url("/training_events/images/new-course-btns/te_btn_bg_purple.gif");
+        }
+
+li#te-legal ul li a {
+        background-color:#873F7F;
+        }
+
+li#te-legal ul li a:hover {
+        background-color:#721D69;
+        }
+
+li#te-management a {
+        background-image: url("/training_events/images/new-course-btns/te_btn_bg_blue.gif");
+        }
+
+li#te-management ul li a {
+        background-color:#267090;
+        }
+
+li#te-management ul li a:hover {
+        background-color:#00577D;
+        }
+
+li#te-developer a {
+        background-image: url("/training_events/images/new-course-btns/te_btn_bg_orange.gif");
+        }
+
+li#te-developer ul li a {
+        background-color:#FD812D;
+        }
+
+li#te-developer ul li a:hover {
+        background-color:#E06703;
+        }
+
+li#te-security a {
+        background-image: url("/training_events/images/new-course-btns/te_btn_bg_red.gif");
+        }
+
+li#te-security ul li a {
+        background-color:#AA404C;
+        }
+
+li#te-security ul li a:hover {
+        background-color:#9B1E2D;
+        }
+
+
+li#te-forensics a {
+        background-image: url("/training_events/images/new-course-btns/te_btn_bg_grey.gif");
+        }
+
+li#te-forensics ul li a {
+        background-color:#333333;
+        }
+
+li#te-forensics ul li a:hover {
+        background-color:#000000;
+        }
+
+
+li#te-special a {
+        background-image: url("/training_events/images/new-course-btns/te_btn_bg_navy.gif");
+        }
+
+li#te-special ul li a {
+        background-color:#153753;
+        }
+
+li#te-special ul li a:hover {
+        background-color:#122E46;
+        }
+
+li#te-hosted a {
+        background-image: url("/training_events/images/new-course-btns/te_btn_bg_navy.gif");
+        }
+
+li#te-hosted ul li a {
+        color: #00577D;
+        background-color:#CCC;
+        }
+
+li#te-hosted ul li a:hover {
+        background-color:#DDD;
+        }
+
+
+li#te-special ul li a.hosted {
+        color: #00577D;
+        background-color:#CCC;
+        }
+
+li#te-special ul li a.hosted:hover {
+        background-color:#DDD;
+        }
+
+#select-course {
+        position: absolute;
+        width:785px;
+        height:44px;
+		top:5px/*123px*/;
+        background-image: url("/training_events/images/select-box-courses.gif");
+        background-repeat: no-repeat;
+        }
+
+
+#select-course1 {
+        position: absolute;
+        width:785px;
+	height:44px;
+        top:123px;
+        background-image: url("/training_events/images/te_select_box1.gif");
+        background-repeat: no-repeat;
+        }
+
+#select-course2 {
+        position: absolute;
+        width:785px;
+        height:44px;
+        top:123px;
+        background-image: url("/training_events/images/te_select_box2.gif");
+        background-repeat: no-repeat;
+        }
+
+#select-course3 {
+        position: absolute;
+        width:785px;
+        height:44px;
+        top:123px;
+        background-image: url("/training_events/images/te_select_box3.gif");
+        background-repeat: no-repeat;
+        }
+
+#select-course4 {
+        position: absolute;
+        width:785px;
+        height:44px;
+        top:123px;
+        background-image: url("/training_events/images/te_select_box4.gif");
+        background-repeat: no-repeat;
+        }
+
+#select-course5 {
+        position: absolute;
+        width:785px;
+        height:44px;
+        top:123px;
+        background-image: url("/training_events/images/te_select_box5.gif");
+        background-repeat: no-repeat;
+        }
+
+#select-course6 {
+        position: absolute;
+        width:785px;
+        height:44px;
+        top:123px;
+        background-image: url("/training_events/images/te_select_box6.gif");
+        background-repeat: no-repeat;
+        }
+
+
+.tuition-hosted {
+        color: #FFF;
+        background-color:#122E46;
+        }
+
+td.hosted {
+        color: #00577D;
+        background-color:#CCC;
+        border:1px solid #DDD;
+        }
+
+td.hosted:hover {
+        background-color:#DDD;
+        }
+
+.column { position:relative;
+           top:0px;
+           float:left;
+           padding:10px 5px 5px 0;
+         }
+
+#link-section { 
+        position:relative;
+        z-index:800;
+        }
+
+.links { 
+	position:relative;
+        top:0px;
+        float:right;
+        padding:0px 5px 5px 10px;
+        width:150px;
+        border-left: 1px solid #DDD;
+        text-align:center;
+       	}
+
+.links p{
+	position:relative;
+	text-indent:0px;
+	z-index:1000;
+       	}
+
+#te-maincontent {
+        position:relative;
+        top:320px;
+        clear:both;
+        display:block;
+        }
+#te-stuff {
+        }
+#te-headerexception {
+        position:absolute;
+        top:325px/*440px*/;
+        float:left;
+        width:600px;
+        clear:both;
+        display:block;
+        }
+
+#te-trainingstuff {
+        clear:both;
+        display:block;
+        margin-top:50px;
+        }
+
+#te-bootcamp, #te-pdf, #te-certification, #te-partner {
+        position:relative;
+        display:block;
+        clear:both;
+        margin-bottom:12px;
+        padding:5px;
+        background-color:#F3F3F3;
+        border:1px solid #DDD;
+	z-index:1000;
+}
+
+.te-collegetype-bar {
+	color:#FFF;
+	margin-left:27px;
+	padding-top:2px;
+	text-align:center;
+        font:bold 11pt/11pt 'trebuchet ms', verdana, sans-serif;
+        background-image: url("/training_events/images/te_bar_right_navy.gif");        background-position: top right;
+        background-repeat: no-repeat;
+        }
+
+#te-type-bar {
+        background-color:#122E46;        color:#FFF;
+        text-align:center;
+        font:bold 11pt/11pt 'trebuchet ms', verdana, sans-serif;
+        background-image: url("/training_events/images/te_bar_left_navy.gif");        background-position: top left;
+        background-repeat: no-repeat;
+        }
+
+#te-title-date-instructor {
+	text-align:center;
+	}
+
+#te-laptop {
+	display:block;
+        width:100%;
+        height:66px;
+        background-image: url("/training_events/images/te_laptop_required.gif");
+        background-position: top center;
+        background-repeat: no-repeat;
+        text-align:center;
+	margin-bottom:15px;
+        }
+
+#te-laptop a {
+	display:block;
+	width:100%;
+	height:66px;
+        background-image: url("/training_events/images/te_laptop_required.gif");
+        background-position: top center;
+        background-repeat: no-repeat;
+        text-align:center;
+	text-decoration:none;
+        }
+
+#te-laptop a:hover {
+        display:block;
+        width:100%;
+        height:66px;
+        background-image: url("/training_events/images/te_laptop_required_hover.gif");
+        background-position: top center;
+        background-repeat: no-repeat;
+        text-align:center;
+        text-decoration:none;
+        }
+
+#te-laptop-recommended {
+	display:block;
+        width:100%;
+        height:66px;
+        background-image: url("/training_events/images/te_laptop_recommended.gif");
+        background-position: top center;
+        background-repeat: no-repeat;
+        text-align:center;
+	margin-bottom:15px;
+        }
+
+#te-laptop-recommended a {
+	display:block;
+	width:100%;
+	height:66px;
+        background-image: url("/training_events/images/te_laptop_recommended.gif");
+        background-position: top center;
+        background-repeat: no-repeat;
+        text-align:center;
+	text-decoration:none;
+        }
+
+#te-laptop-recommended a:hover {
+        display:block;
+        width:100%;
+        height:66px;
+        background-image: url("/training_events/images/te_laptop_recommended_hover.gif");
+        background-position: top center;
+        background-repeat: no-repeat;
+        text-align:center;
+        text-decoration:none;
+        }
+
+#te-laptop-provided {
+        display:block;
+        width:100%;
+        height:66px;
+        background-image: url("/training_events/images/te_laptop_provided.gif");
+        background-position: top center;
+        background-repeat: no-repeat;
+        text-align:center;
+        margin-bottom:15px;
+        }
+
+#te-laptop-provided a {
+        display:block;
+        width:100%;
+        height:66px;
+        background-image: url("/training_events/images/te_laptop_provided.gif");
+        background-position: top center;
+        background-repeat: no-repeat;
+        text-align:center;
+        text-decoration:none;
+        }
+
+#te-laptop-provided a:hover {
+        display:block;
+        width:100%;
+        height:66px;
+        background-image: url("/training_events/images/te_laptop_provided_hover.gif");
+        background-position: top center;
+        background-repeat: no-repeat;
+        text-align:center;
+        text-decoration:none;
+        }
+        
+#te-laptop-provideds {
+        display:block;
+        width:100%;
+        height:66px;
+        background-image: url("/training_events/images/te_laptop_provided2.gif");
+        background-position: top center;
+        background-repeat: no-repeat;
+        text-align:center;
+        margin-bottom:15px;
+        }
+
+#te-laptop-provideds a {
+        display:block;
+        width:100%;
+        height:66px;
+        background-image: url("/training_events/images/te_laptop_provided2.gif");
+        background-position: top center;
+        background-repeat: no-repeat;
+        text-align:center;
+        text-decoration:none;
+        }
+        
+#te-laptop-provideds a:hover {
+        display:block;
+        width:100%;
+        height:66px;
+        background-image: url("/training_events/images/te_laptop_provided2_hover.gif");
+        background-position: top center;
+        background-repeat: no-repeat;
+        text-align:center;
+        text-decoration:none;
+        }
+
+
+#te-laptop-free {
+	display:block;
+        width:100%;
+        height:66px;
+        background-image: url("/training_events/images/te_laptop_free.gif");
+        background-position: top center;
+        background-repeat: no-repeat;
+        text-align:center;
+	margin-bottom:15px;
+        }
+
+#te-laptop-free a {
+	display:block;
+	width:100%;
+	height:66px;
+        background-image: url("/training_events/images/te_laptop_free.gif");
+        background-position: top center;
+        background-repeat: no-repeat;
+        text-align:center;
+	text-decoration:none;
+        }
+
+#te-laptop-free a:hover {
+        display:block;
+        width:100%;
+        height:66px;
+        background-image: url("/training_events/images/te_laptop_free.gif");
+        background-position: top center;
+        background-repeat: no-repeat;
+        text-align:center;
+        text-decoration:none;
+        }
+
+
+#te-comp {
+        display:block;
+        width:100%;
+        height:66px;
+        background-image: url("/training_events/images/te_comp_required.gif");
+        background-position: top center;
+        background-repeat: no-repeat;
+        text-align:center;
+        margin-bottom:15px;
+        }
+
+#te-comp a {
+        display:block;
+        width:100%;
+        height:66px;
+        background-image: url("/training_events/images/te_comp_required.gif");
+        background-position: top center;
+        background-repeat: no-repeat;
+        text-align:center;
+        text-decoration:none;
+        }
+
+#te-comp a:hover {
+        display:block;
+        width:100%;
+        height:66px;
+        background-image: url("/training_events/images/te_comp_required_hover.gif");
+        background-position: top center;
+        background-repeat: no-repeat;
+        text-align:center;
+        text-decoration:none;
+        }
+
+#te-comp-recommended {
+        display:block;
+        width:100%;
+        height:66px;
+        background-image: url("/training_events/images/te_comp_recommended.gif");
+        background-position: top center;
+        background-repeat: no-repeat;
+        text-align:center;
+        margin-bottom:15px;
+        }
+
+#te-comp-recommended a {
+        display:block;
+        width:100%;
+        height:66px;
+        background-image: url("/training_events/images/te_comp_recommended.gif");
+        background-position: top center;
+        background-repeat: no-repeat;
+        text-align:center;
+        text-decoration:none;
+        }
+
+#te-comp-recommended a:hover {
+        display:block;
+        width:100%;
+        height:66px;
+        background-image: url("/training_events/images/te_comp_recommended_hover.gif");
+        background-position: top center;
+        background-repeat: no-repeat;
+        text-align:center;
+        text-decoration:none;
+        }
+
+#te-topic-list {
+	margin-bottom:15px;
+}
+
+#te-topic-list ul.level1 {
+	font:bold 9pt/13pt 'trebuchet ms', verdana, sans-serif;
+	color: #00577D;	 
+}
+
+#te-topic-list ul.level3 {
+        font:9pt/13pt 'trebuchet ms', verdana, sans-serif;
+        color: #000;
+        /*  not sure why 3rd level was bold :-/ 
+         font:bold 9pt/13pt 'trebuchet ms', verdana, sans-serif;
+         color: #00577D;
+        :: commented 2006-09-07 bec */
+}
+
+#te-topic-list ul.level2 {
+        font:9pt/13pt 'trebuchet ms', verdana, sans-serif;
+        color: #000;
+}
+
+#te-topic-list ul.level4 {
+        font:9pt/13pt 'trebuchet ms', verdana, sans-serif;
+        color: #000;
+}
+
+#te-event-description {
+	margin-bottom:15px;
+}
+
+#te-author-statement {
+	position:relative;
+	display:block;
+	clear:both;
+    padding:5px;
+    background-color:#F3F3F3;
+	border:1px solid #DDD;
+	margin-bottom:15px;
+}
+
+.te-topic-split1 {
+                text-align:left;
+                float:left;
+                width:300px;
+              }
+
+.te-topic-split2 { 
+		float:right;
+                text-align:left;
+                width:300px;
+              }
+
+.tagline {
+    color:#fff;
+    margin:30px 0 0 85px;
+    font-size:18px;
+    }
+
+/* events.php page styles */
+
+.event-block {
+	position:relative;
+	padding:15px 15px 15px 0;
+	background-color:#122E46;
+	height:100%;
+        background-image: url("/training_events/images/event_cornertop.gif");
+        background-position: top left;
+        background-repeat: no-repeat;
+	}
+
+
+#event-block-footer {
+	position:absolute;
+	left:0px;
+	bottom:0px;
+	display:block;
+	height:120px;
+	width:600px;
+	background-color:#122E46;
+        background-image: url("/training_events/images/event_cornerbottom.gif");
+        background-position: top left;
+        background-repeat: no-repeat;
+        }
+
+.event-day-list {
+ 	clear:both;
+        position:relative;
+        border:1px solid #CCC;
+        margin:15px 0 15px 0;
+        padding:5px;
+        background-color:#FFF;
+        width:600px;
+        z-index:100;
+        }
+
+.event-day-list p {
+  padding:3px;
+  border-left:1px solid #FFF;
+  border-right:1px solid #FFF;
+  border-bottom:1px solid #FFF;
+  text-align:left;
+  }
+
+.event-day-list1 p {
+  padding:3px;
+  border-left:1px solid #FFF;
+  border-right:1px solid #FFF;
+  border-bottom:1px solid #FFF;
+  text-align:center;
+  }
+
+.event-day-list1 {
+	position:relative;
+	float:right;
+	top:15px;
+	left:-5px;
+	border:1px solid #CCC;
+	margin:15px 0 15px 0;
+	padding:5px;
+	background-color:#FFF;
+	width:370px;
+	z-index:100;
+	}
+
+
+
+.event-day-list2 p {
+  padding:3px;
+  border-left:1px solid #FFF;
+  border-right:1px solid #FFF;
+  border-bottom:1px solid #FFF;
+  text-align:center;
+  }
+
+.event-day-list2 {
+	position:relative;
+	float:right;
+	top:15px;
+	left:-5px;
+	border:1px solid #CCC;
+	margin:15px 0 15px 0;
+	padding:5px;
+	background-color:#FFF;
+	width:370px;
+	z-index:100;
+	}
+
+
+
+.event-day-list3 p {
+  padding:3px;
+  border-left:1px solid #FFF;
+  border-right:1px solid #FFF;
+  border-bottom:1px solid #FFF;
+  text-align:center;
+  }
+
+.event-day-list3 {
+	position:relative;
+	float:right;
+	top:15px;
+	left:-5px;
+	border:1px solid #CCC;
+	margin:15px 0 15px 0;
+	padding:5px;
+	background-color:#FFF;
+	width:370px;
+	z-index:100;
+	}
+
+
+
+.event-day-list4 p {
+  padding:3px;
+  border-left:1px solid #FFF;
+  border-right:1px solid #FFF;
+  border-bottom:1px solid #FFF;
+  text-align:center;
+  }
+
+.event-day-list4 {
+	position:relative;
+	float:right;
+	top:15px;
+	left:-5px;
+	border:1px solid #CCC;
+	margin:15px 0 15px 0;
+	padding:5px;
+	background-color:#FFF;
+	width:370px;
+	z-index:100;
+	}
+
+
+
+.event-day-list5 p {
+  padding:3px;
+  border-left:1px solid #FFF;
+  border-right:1px solid #FFF;
+  border-bottom:1px solid #FFF;
+  text-align:center;
+  }
+
+.event-day-list5 {
+	position:relative;
+	float:right;
+	top:15px;
+	left:-5px;
+	border:1px solid #CCC;
+	margin:15px 0 15px 0;
+	padding:5px;
+	background-color:#FFF;
+	width:370px;
+	z-index:100;
+	}
+
+
+
+.event-day-list6 p {
+  padding:3px;
+  border-left:1px solid #FFF;
+  border-right:1px solid #FFF;
+  border-bottom:1px solid #FFF;
+  text-align:center;
+  }
+
+.event-day-list6 {
+	position:relative;
+	float:right;
+	top:15px;
+	left:-5px;
+	border:1px solid #CCC;
+	margin:15px 0 15px 0;
+	padding:5px;
+	background-color:#FFF;
+	width:370px;
+	z-index:100;
+	}
+
+
+
+.event-day-list7 p {
+  padding:3px;
+  border-left:1px solid #FFF;
+  border-right:1px solid #FFF;
+  border-bottom:1px solid #FFF;
+  text-align:center;
+  }
+
+.event-day-list7 {
+	position:relative;
+	float:right;
+	top:15px;
+	left:-5px;
+	border:1px solid #CCC;
+	margin:15px 0 15px 0;
+	padding:5px;
+	background-color:#FFF;
+	width:370px;
+	z-index:100;
+	}
+
+
+
+.event-day-list8 p {
+  padding:3px;
+  border-left:1px solid #FFF;
+  border-right:1px solid #FFF;
+  border-bottom:1px solid #FFF;
+  text-align:center;
+  }
+
+.event-day-list8 {
+	position:relative;
+	float:right;
+	top:15px;
+	left:-5px;
+	border:1px solid #CCC;
+	margin:15px 0 15px 0;
+	padding:5px;
+	background-color:#FFF;
+	width:370px;
+	z-index:100;
+	}
+
+
+
+.event-day-list9 p {
+  padding:3px;
+  border-left:1px solid #FFF;
+  border-right:1px solid #FFF;
+  border-bottom:1px solid #FFF;
+  text-align:center;
+  }
+
+.event-day-list9 {
+	position:relative;
+	float:right;
+	top:15px;
+	left:-5px;
+	border:1px solid #CCC;
+	margin:15px 0 15px 0;
+	padding:5px;
+	background-color:#FFF;
+	width:370px;
+	z-index:100;
+	}
+
+
+
+
+#event-nav-list {
+        position:absolute;
+        padding:20px 0 0 0;
+        top:20px;
+        left:20px;
+        width:509px;
+        height:350px;
+        display:block;
+        background-image: url("/training_events/images/event_controlbg.gif");
+        background-position: top center;
+        background-repeat: no-repeat;
+        }
+
+
+#event-nav-list li {
+	padding:5px;
+	margin-left:-10px;
+        list-style-type: none;
+        list-style-image: none;
+	}
+
+#event-nav-list a {
+        color:#CCC;
+        text-decoration: none;
+        }
+
+#event-nav-list a:hover {
+        color:#CCC;
+        text-decoration:underline;
+        }
+
+
+html>body #event-nav-list li:hover {
+        background-color:#CCC;
+        background-image: url("/training_events/images/event_listcircle.gif");
+        background-position: top left;
+        background-repeat: no-repeat;
+        }
+
+
+html>body #event-nav-list li:hover a {
+        color:#215777;
+        background-color:#CCC;
+        }
+
+
+
+html>body #event-nav-list a:hover {
+        color:#215777;
+        text-decoration: none;
+        }
+
+.event-AUD {
+        background-color:#006259;
+        color:#FFF;
+        }
+
+.event-AUD:hover {
+        background-color:#267972;
+        color:#FFF;
+        }
+
+.event-AUD a {
+        color:#FFF;
+        text-decoration:none;
+        }
+
+.event-AUD a:hover {
+        color:#FFF;
+        text-decoration:underline;
+        }
+
+
+.event-MGT {
+        background-color:#00577D;
+        color:#FFF;
+        }
+
+.event-MGT:hover {
+        background-color:#267090;
+        color:#FFF;
+        }
+
+.event-MGT a {
+        color:#FFF;
+        text-decoration:none;
+        }
+
+.event-MGT a:hover {
+        color:#FFF;
+        text-decoration:underline;
+        }
+
+.event-LEG {
+        background-color:#721D69;
+        color:#FFF;
+        }
+
+.event-LEG:hover {
+        background-color:#873F7F;
+        color:#FFF;
+        }
+
+.event-LEG a {
+        color:#FFF;
+        text-decoration:none;
+        }
+
+.event-LEG a:hover {
+        color:#FFF;
+        text-decoration:underline;
+        }
+
+
+.event-SEC {
+        background-color:#9B1E2D;
+        color:#FFF;
+        }
+
+.event-SEC:hover {
+        background-color:#AA404C;
+        color:#FFF;
+        }
+
+.event-SEC a {
+        color:#FFF;
+        text-decoration:none;
+        }
+
+.event-SEC a:hover {
+        color:#FFF;
+        text-decoration:underline;
+        }
+
+
+
+
+.event-FOR {
+        background-color:#333333;
+        color:#FFF;
+        }
+
+.event-FOR:hover {
+        background-color:#000000;
+        color:#FFF;
+        }
+
+.event-FOR a {
+        color:#FFF;
+        text-decoration:none;
+        }
+
+.event-FOR a:hover {
+        color:#FFF;
+        text-decoration:underline;
+        }
+
+
+
+
+
+
+.event-DEV {
+        background-color:#E06703;
+        color:#FFF;
+        }
+
+.event-DEV:hover {
+        background-color:#FD812D;
+        color:#FFF;
+        }
+
+.event-DEV a {
+        color:#FFF;
+        text-decoration:none;
+        }
+
+.event-DEV a:hover {
+        color:#FFF;
+        text-decoration:underline;
+        }
+
+.event-SPECIAL {
+        background-color:#122E46;
+        color:#FFF;
+        }
+
+.event-SPECIAL:hover {
+        background-color:#153753;
+        color:#FFF;
+        }
+
+.event-SPECIAL a {
+        color:#FFF;
+        text-decoration:none;
+        }
+
+.event-SPECIAL a:hover {
+        color:#FFF;
+        text-decoration:underline;
+        }
+
+
+.event-HOSTED {
+        background-color:#122E46;
+        color:#FFF;
+        }
+
+.event-HOSTED:hover {
+        background-color:#153753;
+        color:#FFF;
+        }
+
+.event-HOSTED a {
+        color:#FFF;
+        text-decoration:none;
+        }
+
+.event-HOSTED a:hover {
+        color:#FFF;
+        text-decoration:underline;
+        }
+        
+        
+/********************************* Dear Colleague STI Image 9/12/11 DB *****************************************/       
+
+.sti-image {
+	float: left;
+    height: 35%;
+	padding: 0 65px 100px 5px;
+	background-image: url("/images/logos/sti.gif");
+    background-repeat: no-repeat;
+    
+    } 
+
+
+/********************************* Display of summit-agenda.jpg on Summit pages ******************************/
+.summit-agenda a {
+	display: block;
+	width: 600px;
+	height: 38px;
+	overflow: hidden;
+	margin-top: 15px;
+	}
+
+.summit-agenda a:hover img {
+	margin-top: -38px;
+	}
+
+/* ie6 needs this fix*/
+.summit-agenda a:hover {
+	zoom: 1;
+	}
+
+
+/********************************* Summit selector buttons ******************************/
+.summit-selector {
+	background-position: 0 0;
+	width:285px;
+	height:93px;
+	display:block;
+	text-decoration:none;
+	float:left;
+	margin-right:15px;
+	}
+
+.summit-selector:hover {
+	background-position:285px 0;
+	text-decoration:none;
+	}
+
+.pci-compliance-btn {
+	background:url(/images/summits/pci-compliance-btn.jpg);
+	}
+
+.e-data-btn {
+	background:url(/images/summits/e-data-btn.jpg);
+	}
+
+/* http://www.sans.org/forensics-incident-response-summit-2012/  */

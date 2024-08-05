@@ -1,0 +1,1165 @@
+﻿/// <reference path="jquery-1.3.2-vsdoc2.js" />
+
+(function($) {
+	$.fn.ListControl = function(listControl) {
+
+		// Full Container
+		var selectedFullAttributeDataObject = new AttributeDataObject({ "InputData": decodeURIComponent(listControl.PageState.SelectedAttributes) });
+
+		// Scroll 이벤트에서 발생하는 비동기 이미지 로딩의 로딩 여부 전역변수
+		listControl.isImageLoaded = false;
+
+		// ------------------------------------------------------------------
+		// 이벤트 바인딩
+		// ------------------------------------------------------------------
+		// 찜버튼 클릭 (상품이미지 옆에 붙어있는 작은 찜 버튼)
+		$("[id=aZzimSelected]").bind("click", function() { // aZzimSelected 는 runat=server 가 아님
+			if (listControl.eventHandlers.aZzimSelected_OnClick != null && typeof listControl.eventHandlers.aZzimSelected_OnClick === "function") {
+				listControl.eventHandlers.aZzimSelected_OnClick($(this), null);
+			}
+		});
+
+		// 비교버튼 클릭 (상품이미지 옆에 붙어있는 작은 비교 버튼)
+		$("[id$=aCompareSelected]").bind("click", function() { // aCompareSelected 는 runat=server 가 아님
+			if (listControl.eventHandlers.aCompareSelected_OnClick != null && typeof listControl.eventHandlers.aCompareSelected_OnClick === "function") {
+				listControl.eventHandlers.aCompareSelected_OnClick($(this), null);
+			}
+		});
+
+		// 스타일검색 클릭(상품이미지 마우스오버시 나타나는 버튼)
+		$("#" + listControl.ID).find("[id$=aStyleSearch]").bind("click", function() {
+			if (listControl.eventHandlers.aStyleSearch_OnClick != null && typeof listControl.eventHandlers.aStyleSearch_OnClick === "function") {
+				var $SelectedItem = $(this).closest('[id$=_htbItem]');
+
+				var eventArg = new Object();
+				eventArg.CatalogID = $SelectedItem.attr("CatalogID");
+				eventArg.MallID = $SelectedItem.attr("MallID");
+				eventArg.ForeColor = $SelectedItem.attr("ForeColor");
+				eventArg.Edge = $SelectedItem.attr("Edge");
+				eventArg.Texture = $SelectedItem.attr("Texture");
+				eventArg.ItemID = $SelectedItem.attr("MItemID");
+				eventArg.RepresentDisplayCategory = $SelectedItem.attr("RepresentDisplayCategory");
+
+				listControl.eventHandlers.aStyleSearch_OnClick($(this), eventArg);
+			}
+		});
+
+		// 스타일검색2 클릭 (구매하기 버튼쪽)
+		$("#" + listControl.ID).find("[id$=aStyleSearch2]").bind("click", function() {
+			if (listControl.eventHandlers.aStyleSearch2_OnClick != null && typeof listControl.eventHandlers.aStyleSearch2_OnClick === "function") {
+				var $SelectedItem = $(this).closest('[id$=_htbItem]');
+
+				var eventArg = new Object();
+				eventArg.CatalogID = $SelectedItem.attr("CatalogID");
+				eventArg.MallID = $SelectedItem.attr("MallID");
+				eventArg.ForeColor = $SelectedItem.attr("ForeColor");
+				eventArg.Edge = $SelectedItem.attr("Edge");
+				eventArg.Texture = $SelectedItem.attr("Texture");
+				eventArg.ItemID = $SelectedItem.attr("MItemID");
+				eventArg.RepresentDisplayCategory = $SelectedItem.attr("RepresentDisplayCategory");
+
+				listControl.eventHandlers.aStyleSearch2_OnClick($(this), eventArg);
+			}
+		});
+
+		// 같은샵상품보기 클릭 (레이어 안에 있는 형태)
+		$("#" + listControl.ID).find("[id$=aSameMallSearch]").bind("click", function() {
+			if (listControl.eventHandlers.aSameMallSearch_OnClick != null && typeof listControl.eventHandlers.aSameMallSearch_OnClick === "function") {
+
+				var $SelectedItem = $(this).closest('[id$=_htbItem]');
+
+				var AttrElemID = $SelectedItem.attr("MallID");
+				var AttrElemNm = $(this).text().substring($(this).text().indexOf('[') + 1, $(this).text().indexOf(']'));
+				var AttrID = "Mall";
+				var AttrNm = "쇼핑몰";
+
+				var eventArg = new Object();
+
+				// Attribute 의 몰정보를 초기화하고, 선택한 몰정보만 넣는다
+				selectedFullAttributeDataObject.deleteDataByAttrID(AttrID);
+				selectedFullAttributeDataObject.insertData(AttrID, AttrElemID, AttrNm, AttrElemNm);
+
+				// 하단 검색 조건을 해지한다
+				deleteAttributeUnderCondition();
+
+				eventArg.SelectedAttributes = selectedFullAttributeDataObject.outData();
+
+				listControl.eventHandlers.aSameMallSearch_OnClick($(this), eventArg);
+			}
+		});
+
+		// 같은샵상품보기 클릭 (레이어가 아닌 노출되어있는 형태)
+		$("#" + listControl.ID).find("[id$=aSameMallSearch2]").bind("click", function() {
+			if (listControl.eventHandlers.aSameMallSearch2_OnClick != null && typeof listControl.eventHandlers.aSameMallSearch2_OnClick === "function") {
+				var $SelectedItem = $(this).closest('[id$=_htbItem]');
+
+				var AttrElemID = $SelectedItem.attr("MallID");
+				var AttrElemNm = $(this).attr("MallName");
+				var AttrID = "Mall";
+				var AttrNm = "쇼핑몰";
+
+				var eventArg = new Object();
+
+				// Attribute 의 몰정보를 초기화하고, 선택한 몰정보만 넣는다
+				selectedFullAttributeDataObject.deleteDataByAttrID(AttrID);
+				selectedFullAttributeDataObject.insertData(AttrID, AttrElemID, AttrNm, AttrElemNm);
+
+				// 하단 검색 조건을 해지한다
+				deleteAttributeUnderCondition();
+
+				eventArg.SelectedAttributes = selectedFullAttributeDataObject.outData();
+
+				listControl.eventHandlers.aSameMallSearch2_OnClick($(this), eventArg);
+			}
+		});
+
+		// 샵명 클릭 (aSameMallSearch_OnClick 이벤트 사용)
+		$("#" + listControl.ID).find("[id$=aMallName]").bind("click", function() {
+			if (listControl.eventHandlers.aSameMallSearch_OnClick != null && typeof listControl.eventHandlers.aSameMallSearch_OnClick === "function") {
+
+				var $SelectedItem = $(this).closest('[id$=_htbItem]');
+
+				var AttrElemID = $SelectedItem.attr("MallID");
+				var AttrElemNm = $(this).text();
+				var AttrID = "Mall";
+				var AttrNm = "쇼핑몰";
+
+				var eventArg = new Object();
+
+				// Attribute 의 몰정보를 초기화하고, 선택한 몰정보만 넣는다
+				selectedFullAttributeDataObject.deleteDataByAttrID(AttrID);
+				selectedFullAttributeDataObject.insertData(AttrID, AttrElemID, AttrNm, AttrElemNm);
+
+				// 하단 검색 조건을 해지한다
+				deleteAttributeUnderCondition();
+
+				eventArg.SelectedAttributes = selectedFullAttributeDataObject.outData();
+
+				listControl.eventHandlers.aSameMallSearch_OnClick($(this), eventArg);
+			}
+		});
+
+		// 샵전체상품보기 클릭
+		$("#" + listControl.ID).find("[id$=aSameMallSearchAll]").bind("click", function() {
+			if (listControl.eventHandlers.aSameMallSearchAll_OnClick != null && typeof listControl.eventHandlers.aSameMallSearchAll_OnClick === "function") {
+				var $SelectedItem = $(this).closest('[id$=_htbItem]');
+
+				var eventArg = new Object();
+				eventArg.MallIDs = $SelectedItem.attr("MallID");
+				listControl.eventHandlers.aSameMallSearchAll_OnClick($(this), eventArg); return false;
+			}
+		});
+
+
+		// 같은 제조사 상품보기 클릭
+		$("#" + listControl.ID).find("[id$=aSameMakerSearch]").bind("click", function() {
+			if (listControl.eventHandlers.aSameMakerSearch_OnClick != null && typeof listControl.eventHandlers.aSameMakerSearch_OnClick === "function") {
+				var $SelectedItem = $(this).closest('[id$=_htbItem]');
+
+				var AttrElemID = $SelectedItem.attr("MakerID");
+				var AttrElemNm = $(this).text().substring($(this).text().indexOf('[') + 1, $(this).text().indexOf(']'));
+				var AttrID = "Maker";
+				var AttrNm = "제조사";
+
+				var eventArg = new Object();
+
+				// Attribute 의 제조사정보를 초기화하고, 선택한 제조사정보만 넣는다
+				selectedFullAttributeDataObject.deleteDataByAttrID(AttrID);
+				selectedFullAttributeDataObject.insertData(AttrID, AttrElemID, AttrNm, AttrElemNm);
+
+				// 하단 검색 조건을 해지한다
+				deleteAttributeUnderCondition();
+
+				eventArg.SelectedAttributes = selectedFullAttributeDataObject.outData();
+
+				listControl.eventHandlers.aSameMakerSearch_OnClick($(this), eventArg);
+			}
+		});
+
+		// 제조사명 클릭 (aSameMakerSearch_OnClick 이벤트 사용)
+		$("#" + listControl.ID).find("[id^=aMakerName]").bind("click", function() {
+			if (listControl.eventHandlers.aSameMakerSearch_OnClick != null && typeof listControl.eventHandlers.aSameMakerSearch_OnClick === "function") {
+				var $SelectedItem = $(this).closest('[id$=_htbItem]');
+
+				var AttrElemID = $SelectedItem.attr("MakerID");
+				var AttrElemNm = $(this).text();
+				var AttrID = "Maker";
+				var AttrNm = "제조사";
+
+				var eventArg = new Object();
+
+				// Attribute 의 제조사정보를 초기화하고, 선택한 제조사정보만 넣는다
+				selectedFullAttributeDataObject.deleteDataByAttrID(AttrID);
+				selectedFullAttributeDataObject.insertData(AttrID, AttrElemID, AttrNm, AttrElemNm);
+
+				// 하단 검색 조건을 해지한다
+				deleteAttributeUnderCondition();
+
+				eventArg.SelectedAttributes = selectedFullAttributeDataObject.outData();
+
+				listControl.eventHandlers.aSameMakerSearch_OnClick($(this), eventArg);
+			}
+		});
+
+
+		// 같은 브랜드 상품보기 클릭
+		$("#" + listControl.ID).find("[id$=aSameBrandSearch]").bind("click", function() {
+			if (listControl.eventHandlers.aSameBrandSearch_OnClick != null && typeof listControl.eventHandlers.aSameBrandSearch_OnClick === "function") {
+				var $SelectedItem = $(this).closest('[id$=_htbItem]');
+
+				var AttrElemID = $SelectedItem.attr("BrandID");
+				var AttrElemNm = $(this).text().substring($(this).text().indexOf('[') + 1, $(this).text().indexOf(']'));
+				var AttrID = "Brand";
+				var AttrNm = "브랜드";
+
+				var eventArg = new Object();
+
+				// Attribute 의 브랜드정보를 초기화하고, 선택한 브랜드정보만 넣는다
+				selectedFullAttributeDataObject.deleteDataByAttrID(AttrID);
+				selectedFullAttributeDataObject.insertData(AttrID, AttrElemID, AttrNm, AttrElemNm);
+
+				// 하단 검색 조건을 해지한다
+				deleteAttributeUnderCondition();
+
+				eventArg.SelectedAttributes = selectedFullAttributeDataObject.outData();
+
+				listControl.eventHandlers.aSameBrandSearch_OnClick($(this), eventArg);
+			}
+		});
+
+
+		// 브랜드명 클릭 (aSameBrandSearch_OnClick 이벤트 사용)
+		$("#" + listControl.ID).find("[id^=aBrandName]").bind("click", function() {
+			if (listControl.eventHandlers.aSameBrandSearch_OnClick != null && typeof listControl.eventHandlers.aSameBrandSearch_OnClick === "function") {
+				var $SelectedItem = $(this).closest('[id$=_htbItem]');
+
+				var AttrElemID = $SelectedItem.attr("BrandID");
+				var AttrElemNm = $(this).text();
+				var AttrID = "Brand";
+				var AttrNm = "브랜드";
+
+				var eventArg = new Object();
+
+				// Attribute 의 브랜드정보를 초기화하고, 선택한 브랜드정보만 넣는다
+				selectedFullAttributeDataObject.deleteDataByAttrID(AttrID);
+				selectedFullAttributeDataObject.insertData(AttrID, AttrElemID, AttrNm, AttrElemNm);
+
+				// 하단 검색 조건을 해지한다
+				deleteAttributeUnderCondition();
+
+				eventArg.SelectedAttributes = selectedFullAttributeDataObject.outData();
+
+				listControl.eventHandlers.aSameBrandSearch_OnClick($(this), eventArg);
+			}
+		});
+
+		// 대표전시카테고리 링크 클릭
+		$("#" + listControl.ID).find("[id$=aRepresentDisplayCategory]").bind("click", function() {
+			if (listControl.eventHandlers.aRepresentDisplayCategory_OnClick != null && typeof listControl.eventHandlers.aRepresentDisplayCategory_OnClick === "function") {
+				var eventArg = new Object();
+				eventArg.DisplayCategoryCode = $(this).attr("RepresentDisplayCategory");
+				eventArg.DisplayCategoryName = $(this).text();
+
+				listControl.eventHandlers.aRepresentDisplayCategory_OnClick($(this), eventArg); return false;
+			}
+		});
+
+		// 찜, 상품비교 체크박스 클릭
+		$("#" + listControl.ID).find("[id$=ListControlCompareCheckbox]").bind("click", function() {
+			var chk = $(this);
+			var eventArg = new Object();
+
+			// 모두 숨김
+			$(document).find("[id$=aZzimSelected]").add("[id$=aCompareSelected]").each(function() {
+				$(this).hide();
+			});
+
+			// 체크된 것이 하나도 없을 경우에는 빠져나간다.
+			if ($("#" + listControl.ID).find("input[id$=ListControlCompareCheckbox]:checked").length < 1) return;
+
+			// 가장가까운 것을 보여줌
+			chk.parent().find("[id$=aZzimSelected]").get(0).style.display = '';
+
+			// 카탈로그만 보여준다
+			if (chk.attr("IsCatalog").toLowerCase() == "true") {
+				chk.parent().find("[id$=aCompareSelected]").get(0).style.display = '';
+			}
+		});
+
+		// 동일이미지검색
+		$("#" + listControl.ID).find("[id$=aSameImageSearch]").bind("click", function() {
+			if (listControl.eventHandlers.aSameImageSearch_OnClick != null && typeof listControl.eventHandlers.aSameImageSearch_OnClick === "function") {
+				var $SelectedItem = $(this).closest('[id$=_htbItem]');
+
+				var AttrElemID = $SelectedItem.attr("ImageGroupID");
+				var AttrElemNm = "동일이미지검색";
+				var AttrID = "ImageGroupID";
+				var AttrNm = "동일이미지검색";
+
+				var eventArg = new Object();
+
+				// Attribute 의 동일이미지정보를 초기화하고, 선택한 동일이미지정보만 넣는다
+				selectedFullAttributeDataObject.deleteDataByAttrID(AttrID);
+				selectedFullAttributeDataObject.insertData(AttrID, AttrElemID, AttrNm, AttrElemNm);
+
+				// 하단 검색 조건을 해지한다
+				deleteAttributeUnderCondition();
+
+				eventArg.SelectedAttributes = selectedFullAttributeDataObject.outData();
+
+				listControl.eventHandlers.aSameImageSearch_OnClick($(this), eventArg);
+			}
+		});
+
+		// 현재의 user control 상태로 gPageState를 업뎃하는 외부 메서드
+		listControl.copyToPageState = function(gPageState) {
+			//encodeURIComponent(selectedFullAttributeDataObject.copyToPageState(gPageState));
+
+			selectedFullAttributeDataObject.copyToPageState(gPageState);
+
+			// encodeURIComponent를 사용하여 인코딩
+			gPageState.SelectedAttributes = encodeURIComponent(gPageState.SelectedAttributes);
+		};
+
+		// gPageState 로 부터 현재 SelectedAttribute 값을 셋팅하는 외부 메서드
+		listControl.setAttributes = function(gPageState) {
+			if (gPageState.SelectedAttributes == undefined)
+				return;
+
+			// 받은 데이터로 수정
+
+			selectedFullAttributeDataObject = new AttributeDataObject({ "InputData": decodeURIComponent(gPageState.SelectedAttributes) });
+		};
+
+		// 선택된 카탈로그 비교하기
+		listControl.compareCheckedCatalog = function(id) {
+			var capacity = 10;
+
+			// 선택된 카탈로그ID를 가져온다.
+			var arrCatalogID = getCheckedCatalogArray(id);
+			// 선택된 상품ID를 가져온다.
+			var arrItemID = getCheckedItemArray(id);
+
+			var bridgeType = "OutBridge";
+			var ChannelID = "";
+			var IsInBridge = false;
+			var targetUrl = "";
+			var inbridgeUrl = "";
+
+			if (arrItemID.length > 0) {
+				if (arrCatalogID.length > 1) {
+					if (confirm("일반상품은 비교할 수 없습니다.\r\n계속 하시겠습니까?")) {
+						// 상품이 선택된 경우 체크를 모두 없앤다.
+						uncheckedItemCheckbox(id, true);
+					}
+					else {
+						uncheckedItemCheckbox(id, false);
+						return false;
+					}
+				}
+				else {
+					alert("일반상품은 비교할 수 없으며, 가격비교 상품을 2개 이상 선택해주세요.");
+					uncheckedItemCheckbox(id, true);
+					return false;
+				}
+			}
+
+			if (arrCatalogID.length < 2) {
+				alert("가격비교 상품을 2개 이상 선택해주세요.");
+				return;
+			}
+			else {
+				// 묶음보기에서는 체크박스를 1개만 고르고 검색을 할경우 10개 이상이어도 비교가 가능하도록 한다
+				// 체크된 체크박스 갯수
+				var checkedCheckBoxCnt = $("input[id$='ListControlCompareCheckbox'][IsCatalog='true']:checked").length;
+
+				if (checkedCheckBoxCnt > 1 && (arrCatalogID.length > capacity)) {
+					alert("최대 " + String(capacity) + "개까지만 비교할 수 있습니다.\r\n다시 선택해주세요.");
+					return false;
+				}
+			}
+
+			// bridge유형및 채널아이디를 checkbox에서 조회함.
+			if (typeof (id) == 'undefined') { 			// ListControlCompareCheckbox 로 끝나는것.
+				bridgeType = $("input[id$='ListControlCompareCheckbox']").attr("bridgetype");
+				ChannelID = $("input[id$='ListControlCompareCheckbox']").attr("channelid");
+			}
+			else {  			// ListControlCompareCheckbox 로 끝나는것.
+				bridgeType = $("input[id$='ListControlCompareCheckbox']", $(id)).attr("bridgetype");
+				ChannelID = $("input[id$='ListControlCompareCheckbox']", $(id)).attr("channelid");
+			}
+
+			IsInBridge = bridgeType.toLowerCase() == "inbridge";
+
+			// 비교상품 구현
+			//alert(arrCatalogID.join(","));
+			targetUrl = __findingUrl + "/Catalog/PopupSimilarityProduct.aspx?catalogIDs=" + arrCatalogID.join(",");
+
+			if (IsInBridge == true) {
+				window.open(__homeUrl + "/InBridge.aspx?ChannelID=" + ChannelID + "&targetUrl=" + encodeURIComponent(targetUrl), "GoComparePriceClick", "width=940,height=630,scrollbars=no");
+			}
+			else {
+				window.open(targetUrl, "GoComparePriceClick", "width=1020,height=730,scrollbars=yes");
+			}
+		};
+
+		// 선택된 카탈로그 찜하기
+		listControl.zzimCheckedCatalog = function(id) {
+			var capacity = 100;
+			var arrCatalogID = getCheckedCatalogArray();
+			var arrItemID = getCheckedItemArray();
+			var bridgeType = "OutBridge";
+			var ChannelID = "";
+			var IsInBridge = false;
+			var targetUrl = "";
+			var inbridgeUrl = "";
+
+			if (arrCatalogID.length == 0 && arrItemID.length == 0) {
+				alert("찜하실 상품을 1개 이상 선택해주세요.");
+				return false;
+			}
+			else if ((arrCatalogID.length + arrItemID.length) > capacity) {
+				alert(String(capacity) + "개 이하만 찜할 수 있습니다.\r\n다시 선택해주세요.");
+				return false;
+			}
+
+			// bridge유형및 채널아이디를 checkbox에서 조회함.
+			if (typeof (id) == 'undefined') { 			// ListControlCompareCheckbox 로 끝나는것.
+				bridgeType = $("input[id$='ListControlCompareCheckbox']").attr("bridgetype");
+				ChannelID = $("input[id$='ListControlCompareCheckbox']").attr("channelid");
+			}
+			else {  			// ListControlCompareCheckbox 로 끝나는것.
+				bridgeType = $("input[id$='ListControlCompareCheckbox']", $(id)).attr("bridgetype");
+				ChannelID = $("input[id$='ListControlCompareCheckbox']", $(id)).attr("channelid");
+			}
+
+			IsInBridge = bridgeType.toLowerCase() == "inbridge";
+
+			// 비교상품 구현
+			//alert(arrCatalogID.join(","));
+			targetUrl = __memberUrl + '/MyBuy/PickProduct/PickItemPop.aspx?catalogid=' + arrCatalogID.join(",") + '&itemid=' + arrItemID.join(",");
+
+			if (IsInBridge == true) {
+				window.open(__homeUrl + "/InBridge.aspx?ChannelID=" + ChannelID + "&targetUrl=" + encodeURIComponent(targetUrl), "productZzim", "left=100,top=100,width=335, height=290, resizable=no, scrollbar=no, status=no");
+			}
+			else {
+				window.open(targetUrl, "productZzim", "left=100,top=100,width=335, height=290, resizable=no, scrollbar=no, status=no");
+			}
+		}
+
+		// 스타일 검색실행
+		listControl.redirectStyleSearch = function(pageSate, e) {
+			top.document.location.href = __findingUrl + '/Corner/StyleSearch/Search.aspx?'
+					+ 'Keyword=' + gCheckUndefined(pageSate.Keyword, '')
+					+ '&KeywordsInclude=' + gCheckUndefined(pageSate.KeywordsInclude, '')
+					+ '&KeywordsExclude=' + gCheckUndefined(pageSate.KeywordsExclude, '')
+					+ '&DisplayCategories=' + gCheckUndefined(pageSate.DisplayCategories, '')
+					//+ '&MinVItemPrice=' + gCheckUndefined(pageSate.MinVItemPrice, '')
+					//+ '&MaxVItemPrice=' + gCheckUndefined(pageSate.MaxVItemPrice, '')
+					+ '&ForeColor=' + e.ForeColor
+					+ '&Edge=' + e.Edge
+					+ '&Texture=' + e.Texture
+					+ '&SelectedKeyword=' + gCheckUndefined(pageSate.Keyword, '')				// 스타일검색 페이지에서 선택한스타일을 보여주기 위한 파라미터(명시적으로 넘긴다)
+					+ '&SelectedCatalogID=' + gCheckUndefined(e.CatalogID, '')		// 스타일검색 페이지에서 선택한스타일을 보여주기 위한 파라미터(명시적으로 넘긴다)
+					+ '&SelectedDisplayCategories=' + gCheckUndefined(pageSate.DisplayCategories, '')		// 스타일검색 페이지에서 선택한스타일을 보여주기 위한 파라미터(명시적으로 넘긴다)
+					+ '&SelectedItemID=' + e.ItemID				// 스타일검색 페이지에서 선택한스타일을 보여주기 위한 파라미터(명시적으로 넘긴다)
+					+ '&RepresentDisplayCategory=' + gCheckUndefined(e.RepresentDisplayCategory, '')		// 대표전시카테고리
+					+ '&UseRepresentDisplayCategory=' + gCheckUndefined(pageSate.UseRepresentDisplayCategory, '') // 대표전시카테고리사용여부(스타일검색, 스타일업로드 에서는 대표전시카테고리를 사용하지 않기 때문에 N 이 설정됨)
+				;
+		}
+
+		// 이미지 Lazy 로딩
+		listControl.loadLazyItemImage = function() {
+			setTimeout(lazyImageLoad, 100);
+		}
+
+		// 내부 Util 함수 들
+		// 선택된 카탈로그의 ID Array로 변환한다.
+		// <params value="id">컨트롤 아이디</params>
+		function getCheckedCatalogArray(id) {
+			var $checkbox = null;
+
+			var arrCatalogID = new Array();
+			var splCatalogID = null;
+
+			// ListControlCompareCheckbox 이름을 가진것 중에서 checked 된것들
+			if (typeof (id) == 'undefined') {  			// ListControlCompareCheckbox 로 끝나는것.
+				var $CheckedCompareCheckBox = $("input[id$='ListControlCompareCheckbox'][IsCatalog='true']:checked");
+			}
+			else { // ListControlCompareCheckbox 로 끝나는것.
+				var $CheckedCompareCheckBox = $("input[id$='ListControlCompareCheckbox'][IsCatalog='true']:checked", $(id));
+			}
+
+			$CheckedCompareCheckBox.each(function(i) {
+				$checkbox = $(this);
+
+				splCatalogID = $checkbox.val().split(",");
+
+				if (typeof splCatalogID.length == "undefined") {
+					pushItemByArray(arrCatalogID, splCatalogID);
+				}
+				else {
+					for (var i = 0; i < splCatalogID.length; i++) {
+						pushItemByArray(arrCatalogID, splCatalogID[i]);
+					}
+				}
+			});
+
+			return arrCatalogID;
+		}
+
+
+		// 선택된 상품의 ID Array로 변환한다.
+		// <params value="id">컨트롤 아이디</params>
+		function getCheckedItemArray(id) {
+			var $checkbox = null;
+
+			var arrItemID = new Array();
+			var splItemID = null;
+
+			// ListControlCompareCheckbox 이름을 가진것 중에서 checked 된것들
+			if (typeof (id) == 'undefined') {  			// ListControlCompareCheckbox 로 끝나는것.
+				var $CheckedCompareCheckBox = $("input[id$='ListControlCompareCheckbox'][IsCatalog='false']:checked");
+			}
+			else { // ListControlCompareCheckbox 로 끝나는것.
+				var $CheckedCompareCheckBox = $("input[id$='ListControlCompareCheckbox'][IsCatalog='false']:checked", $(id));
+			}
+
+			$CheckedCompareCheckBox.each(function(i) {
+				$checkbox = $(this);
+
+				splItemID = $checkbox.val().split(",");
+
+				if (typeof splItemID.length == "undefined") {
+					pushItemByArray(arrItemID, splItemID);
+				}
+				else {
+					for (var i = 0; i < splItemID.length; i++) {
+						pushItemByArray(arrItemID, splItemID[i]);
+					}
+				}
+			});
+
+			return arrItemID;
+		}
+
+		// Array에 value를 추가한다.
+		function pushItemByArray(target, value) {
+			if (typeof target == "undefined") {
+				target = new Array();
+			}
+
+			target.push(value);
+		}
+
+		// 상품선택박스의 체크를 해제시킨다.
+		// <params value="id">컨트롤 아이디</params>
+		// <params value="isItem">상품여부(true : 상품만, false : 상품 + 카탈로그)</params>
+		function uncheckedItemCheckbox(id, isItem) {
+			var itemAttr = isItem ? "[IsCatalog='false']" : "";
+
+			if (typeof (id) == 'undefined') { 			// ListControlCompareCheckbox 로 끝나는것.
+				var $CheckedCompareCheckBox = $("input[id$='ListControlCompareCheckbox']" + itemAttr + ":checked");
+			}
+			else {  			// ListControlCompareCheckbox 로 끝나는것.
+				var $CheckedCompareCheckBox = $("input[id$='ListControlCompareCheckbox']" + itemAttr + ":checked", $(id));
+			}
+
+			$CheckedCompareCheckBox.attr("checked", "");
+		}
+
+		// 하단 검색 조건을 해지한다
+		function deleteAttributeUnderCondition() {
+			selectedFullAttributeDataObject.deleteDataByAttrID("IsStyleSearch"); 					    // 스타일검색
+			selectedFullAttributeDataObject.deleteDataByAttrID("IsSoldOut"); 							    // 판매상태 : 판매중단상품
+			selectedFullAttributeDataObject.deleteDataByAttrID("IsSellingPlan"); 					    // 판매상태 : 판매예정상품
+			selectedFullAttributeDataObject.deleteDataByAttrID("IsShippingPriceFree"); 				// 혜택 : 무료배송
+			selectedFullAttributeDataObject.deleteDataByAttrID("HasNointerestData"); 					// 혜택 : 무이자
+			selectedFullAttributeDataObject.deleteDataByAttrID("HasCouponData"); 							// 혜택 : 쿠폰
+			selectedFullAttributeDataObject.deleteDataByAttrID("HasEventData"); 							// 혜택 : 이벤트
+			selectedFullAttributeDataObject.deleteDataByAttrID("HasPoint"); 								   // 혜택 : 적립금
+		}
+
+		// 아이템 이미지 로딩
+		function lazyImageLoad() {
+			$('img[data-href]').each(function() {
+				$(this).attr("src", $(this).attr("data-href"));
+				//$(this).removeAttr("data-href");
+			});
+		}
+
+		//스크롤이벤트가 발생하면
+		$(window).scroll(function() {
+			if (listControl.isImageLoaded == false) {
+				lazyImageLoad();
+				listControl.isImageLoaded = true;
+			}
+		});
+	};
+})(jQuery);
+
+
+OS2.Application.ListControl = function() {
+
+}
+
+OS2.Application.ListControl.init = function(controlID, eventHandlers, pageState) {
+
+	if (document.getElementById(controlID) == null || typeof document.getElementById(controlID) === "undefined") {
+		return null;
+	}
+
+	var listControl = new Object();
+
+	listControl.ID = controlID;
+	listControl.eventHandlers = eventHandlers;
+	listControl.PageState = new Object();
+	$.extend(listControl.PageState, pageState);
+
+	jQuery("#" + controlID).ListControl(listControl);
+
+	return listControl;
+}
+
+
+
+// ----------------------------------------------------------
+// 페이지에서 inline 으로 호출 하는 함수들(외부 노출 함수들) 시작
+// ----------------------------------------------------------
+
+// 상품이미지에 마우스를 올려놓았을 때 나타나는 이미지 show
+var showVItemLayerMenu = function(sender) {
+	$(sender).find("[id$=_VItemImageLayerMenu]").show();
+}
+
+// 상품이미지에 마우스를 올려놓았을 때 나타나는 이미지 hide
+var hideVItemLayerMenu = function(sender) {
+	$(sender).find("[id$=_VItemImageLayerMenu]").hide();
+}
+
+// 어바웃 최저가 가격갱신일 Layer show
+var showLowestLayer = function(sender) {
+
+	var $this = $(sender);
+	var layer = $this.find('div.date');
+
+	layer.css('z-index', '1000');
+	layer.attr("ismouseenter", "y");  // 즉시 보여주지 않고 시간차를 주기 위함
+	//$('div.prodLN').css('z-index', '30'); // 2단형에서 혜택이 있는 부분에 가려지는 현상을 없애기 위함
+	$('div.prodLN').attr("style", "z-index:30;");
+
+	setTimeout(function() {  // 즉시 보여주지 않고 시간차를 주기 위함
+		showLayer(layer);
+	}, 500);
+}
+
+// 어바웃 최저가 가격갱신일 Layer hide
+var hideLowestLayer = function(sender) {
+	var $this = $(sender);
+	var layer = $this.find('div.date');
+
+	layer.css('z-index', '');
+	//$('div.prodLN').css('z-index', ''); // 2단형에서 혜택이 있는 부분에 가려지는 현상을 없애기 위함
+	$('div.prodLN').attr("style", "z-index:0;");
+	layer.attr("ismouseenter", "n");  // 즉시 보여주지 않고 시간차를 주기 위함
+	layer.hide();
+}
+
+// 묶음보기의 더보기/닫기
+var toggleMoreGroupedCatalog = function(sender, SetCatalogID) {
+
+	// Toggle 대상(IsToggle=y) 을 toggle 처리
+	$("ul[SetCatalogID=" + SetCatalogID + "]").find("[IsToggle=y]").toggle();
+
+	// 더보기, 닫기 UI 처리
+	if (sender.className == 'slidingBar open') {
+		sender.innerHTML = sender.innerHTML.replace('더보기', '닫기');
+		sender.className = 'slidingBar close';
+	}
+	else {
+		sender.innerHTML = sender.innerHTML.replace('닫기', '더보기');
+		sender.className = 'slidingBar open';
+	}
+}
+
+// 리스트의 각종 아이템을 클릭했을 때 실행되는 메인 함수
+var doClickJobListControl = function(SelectedItem, jobId, sender) {
+
+	var $SelectedItem = $('[id=' + SelectedItem.attr('id') + ']');
+
+	// 공통 ListControl 이 두개 이상 있는 경우 처리 (QuickBuy, 묶음보기)
+	if ($SelectedItem.length > 1) {
+		$this = $(sender);
+
+		// 가장 가까운 곳에 있는 객체로 filtering
+		$SelectedItem = $this.closest('[id=' + SelectedItem.attr('id') + ']');
+	}
+
+	// 개발참조용
+	//gShowInfo($SelectedItem.attr("id"));  // gShowInfo 는 os2.finding.Common.js 에 있음
+	//return;
+
+	var VItemID = $SelectedItem.attr("VItemID");
+	var CatalogID = $SelectedItem.attr("CatalogID");
+	var ViewCode = $SelectedItem.attr("ViewCode");
+	var ViewItemIndex = $SelectedItem.attr("ViewItemIndex");
+	var VItemType = $SelectedItem.attr("VItemType");
+	var IsCatalog = ($SelectedItem.attr("IsCatalog") == 'True');
+	var ItemID = $SelectedItem.attr("MItemID");
+	var MallID = $SelectedItem.attr("MallID");
+	var cpcType = IsCatalog ? 1 : 0										// 카탈로그일 경우 1 , 일반상품일 경우 0
+	var type = IsCatalog ? "catalog" : "product"
+	var ID = IsCatalog ? CatalogID : ItemID
+	var claimType = IsCatalog ? 1 : 0; 									// 신고하기 (카탈로그일 경우 1, 일반상품 0)
+	var BridgeType = $SelectedItem.attr("bridgetype");
+	var ChannelID = $SelectedItem.attr("channelid");
+	var RepresentDisplayCategory = $SelectedItem.attr("RepresentDisplayCategory"); 	// 대표전시 카테고리
+	var IsRequiredAdultAuth = $SelectedItem.attr("IsRequiredAdultAuth")  // 성인상품인 경우 :  로그인을 안했을 경우 1, 로그인을 했고 성인인 경우 0, 로그인을 했고 성인이 아닌경우 1, 성인상품이 아닌경우 : 항상 0 값이 들어있음
+	var IsUnderAge = $SelectedItem.attr("IsUnderAge")   // [로그인을 안한 경우 : 0], [로그인을 한 경우 : 성인 - 0, 미성년자 - 1]
+	//var ViewTabIndex = $SelectedItem.attr("ViewTabIndex");
+	var ItemIndex = $SelectedItem.attr("ViewItemIndex");
+
+	var IsInBridge = false;
+	var inBridgeType = 1; 	// 1:inbridge.aspx?dispaly... params형식
+	// 2:inbridge.aspx?channalid=xxx&targetUrl=...형식
+	var targetUrl = ""; 		// 이동하거나 window.open할 url
+	var options = ""; 			// window.open시 windows창의 option
+	var title = ""; 				// window.open시 title
+	var IsOpen = true; 		// window.open인지의 여부
+
+
+	if (ViewCode == null || ViewCode == "undefined") {
+		ViewCode = "";
+	}
+
+	if (ViewItemIndex == null || ViewItemIndex == "undefined") {
+		ViewItemIndex = "0";
+	}
+
+	//	if (ViewTabIndex == null || ViewTabIndex == "undefined") {
+	//		ViewTabIndex = "";
+	//	}
+
+	if (IsRequiredAdultAuth == null || IsRequiredAdultAuth == "undefined") {
+		IsRequiredAdultAuth = "0";
+	}
+
+	if (IsUnderAge == null || IsUnderAge == "undefined") {
+		IsUnderAge = "0";
+	}
+
+	if (cpcType == null || cpcType == "undefined") {
+		cpcType = IsCatalog ? 1 : 0												// 카탈로그일 경우 1 , 일반상품일 경우 0
+	}
+
+	if (BridgeType == null || BridgeType == "undefined") {
+		BridgeType = "OutBridge";
+	}
+
+	if (ChannelID == null || ChannelID == "undefined") {
+		ChannelID = "";
+	}
+
+	if (RepresentDisplayCategory == null || RepresentDisplayCategory == "undefined") {
+		RepresentDisplayCategory = "";
+	}
+
+	IsInBridge = (BridgeType.toLowerCase() == "inbridge");
+
+	// gPageState 로 부터 얻는 정보들
+	if (gPageState != null && gPageState != 'undefined') {
+		var DisplayCategories = '';
+		if (gPageState.DisplayCategories != null && gPageState.DisplayCategories != "undefined") {
+			DisplayCategories = gPageState.DisplayCategories;
+		}
+
+		var UseRepresentDisplayCategory = '';
+		if (gPageState.UseRepresentDisplayCategory != null && gPageState.UseRepresentDisplayCategory != "undefined") {
+			UseRepresentDisplayCategory = gPageState.UseRepresentDisplayCategory;
+		}
+	}
+
+	// JobID 별로 할일을 적는다.
+	switch (jobId) {
+		case "VItemImageClick":
+		case "MainDescriptionClick":
+		case "VItemNameClick":
+		case "SetAttrElementClick": 	// 묶음보기의 속성제목
+		case "MatchingItemCountClick": // 묶음보기의 판매샵 갯수
+		case "GoComparePriceClick":
+		case "MallLogoClick": //몰 로고 클릭
+		case "GoBuyClick": //구매하기 클릭
+		case "BenefitClick": // 일반상품 혜택 링크 클릭
+		case "MallLogotClick": // 일반상품 몰로고 클릭
+
+			// Browsing Log Write
+			writeBrowsingLogByListControl(ItemIndex, ItemID, CatalogID, VItemID);
+
+			if (IsCatalog) {		// 카탈로그일경우
+				if (IsRequiredAdultAuth == "1") {
+					if (checkUnderAge(IsUnderAge)) return;
+					targetUrl = __memberSSLUrl + '/login/AdultLogin.aspx?next_url=' + encodeURIComponent(__homeUrl + '/hybridmain.aspx?isCatalog=1&catalogIDs=' + CatalogID + '&cpcType=' + cpcType + '&viewCode=' + ViewCode + '&viewItemIndex=' + ViewItemIndex + '&RepresentDisplayCategory=' + RepresentDisplayCategory + '&SelectedVItemID=' + VItemID + '&' + makeHybridCallbackData());
+				}
+				else {
+					targetUrl = __homeUrl + '/hybridmain.aspx?isCatalog=1&catalogIDs=' + CatalogID + '&cpcType=' + cpcType + '&viewCode=' + ViewCode + '&viewItemIndex=' + ViewItemIndex + '&RepresentDisplayCategory=' + RepresentDisplayCategory + '&SelectedVItemID=' + VItemID + '&' + makeHybridCallbackData();
+				}
+			}
+			else {								// 일반상품일경우 - 성인용품이라 하더라도 해당 사이트 구매페이지로 이동시킨다.
+				if (IsRequiredAdultAuth == "1") {
+					if (checkUnderAge(IsUnderAge)) return;
+					targetUrl = __memberSSLUrl + '/login/AdultLogin.aspx?next_url=' + encodeURIComponent(__homeUrl + '/hybridmain.aspx?isCatalog=0&mallId=' + MallID + '&itemId=' + ItemID + '&cpcType=' + cpcType + '&viewCode=' + ViewCode + '&viewItemIndex=' + ViewItemIndex + '&RepresentDisplayCategory=' + RepresentDisplayCategory + '&SelectedVItemID=' + VItemID + '&' + makeHybridCallbackData());
+				}
+				else {
+					targetUrl = __homeUrl + '/hybridmain.aspx?isCatalog=0&mallId=' + MallID + '&itemId=' + ItemID + '&cpcType=' + cpcType + '&viewCode=' + ViewCode + '&viewItemIndex=' + ViewItemIndex + '&RepresentDisplayCategory=' + RepresentDisplayCategory + '&SelectedVItemID=' + VItemID + '&' + makeHybridCallbackData();
+				}
+			}
+
+			// inbridgeurl 유형을 지정
+			inBridgeType = 1;
+			break;
+		case "ZoomClick": // 확대보기
+
+			if (IsRequiredAdultAuth == "1") {
+				if (checkUnderAge(IsUnderAge)) return;
+				if (IsCatalog) {
+					targetUrl = __memberSSLUrl + '/login/AdultLogin.aspx?next_url=' + encodeURIComponent(__findingUrl + '/Catalog/PopupCatalogImageView.aspx?catalogIDs=' + CatalogID + '&itemIDs=' + ItemID + '&viewCode=' + ViewCode + '&viewItemIndex=' + ViewItemIndex + '&RepresentDisplayCategory=' + RepresentDisplayCategory);
+					options = "width=614, height=668";
+
+				}
+				else {
+					targetUrl = __memberSSLUrl + '/login/AdultLogin.aspx?next_url=' + encodeURIComponent(__findingUrl + '/Category/PopupItemImageView.aspx?catalogIDs=' + CatalogID + '&itemIDs=' + ItemID + '&viewCode=' + ViewCode + '&viewItemIndex=' + ViewItemIndex + '&RepresentDisplayCategory=' + RepresentDisplayCategory);
+					options = "width=352, height=410";
+
+				}
+			}
+			else {
+				if (IsCatalog) {
+					targetUrl = __findingUrl + '/Catalog/PopupCatalogImageView.aspx?catalogIDs=' + CatalogID + '&itemIDs=' + ItemID + '&viewCode=' + ViewCode + '&viewItemIndex=' + ViewItemIndex + '&RepresentDisplayCategory=' + RepresentDisplayCategory;
+					options = "width=614, height=668";
+
+				}
+				else {
+					targetUrl = __findingUrl + '/Category/PopupItemImageView.aspx?catalogIDs=' + CatalogID + '&itemIDs=' + ItemID + '&viewCode=' + ViewCode + '&viewItemIndex=' + ViewItemIndex + '&RepresentDisplayCategory=' + RepresentDisplayCategory;
+					options = "width=480, height=490";
+				}
+			}
+			// inbridgeurl 유형을 지정
+			inBridgeType = 2;
+			break;
+		case "WarningClick": // 신고하기
+			targetUrl = __memberUrl + '/Complain/ProductComplain_simple.aspx?type=' + claimType + '&id=' + ID + '&mallID=' + MallID + '&viewCode=' + ViewCode + '&viewItemIndex=' + ViewItemIndex + '&RepresentDisplayCategory=' + RepresentDisplayCategory;
+			title = "warnning";
+			options = "location=0,status=0,scrollbars=1,width=350,height=260";
+
+			// inbridgeurl 유형을 지정
+			inBridgeType = 2;
+			break;
+		case "ReviewCountClick":
+			// Browsing Log Write
+			writeBrowsingLogByListControl(ItemIndex, ItemID, CatalogID, VItemID);
+
+			if (IsRequiredAdultAuth == "1") {
+				if (checkUnderAge(IsUnderAge)) return;
+				if (IsCatalog) {
+					targetUrl = __memberSSLUrl + '/login/AdultLogin.aspx?next_url=' + encodeURIComponent(__pcpUrl + '/ProductInfo.aspx?DisplayCategories=' + DisplayCategories + '&CatalogIDs=' + CatalogID + '&Tab=tab5' + '&viewCode=' + ViewCode + '&viewItemIndex=' + ViewItemIndex + '&RepresentDisplayCategory=' + RepresentDisplayCategory);
+				}
+				else {
+					targetUrl = __memberSSLUrl + '/login/AdultLogin.aspx?next_url=' + encodeURIComponent(__homeUrl + '/hybridmain.aspx?isCatalog=0&mallId=' + MallID + '&itemId=' + ItemID + '&cpcType=' + cpcType + '&viewCode=' + ViewCode + '&viewItemIndex=' + ViewItemIndex + '&RepresentDisplayCategory=' + RepresentDisplayCategory + '&' + makeHybridCallbackData());
+				}
+			}
+			else {
+				if (IsCatalog) {
+					targetUrl = __pcpUrl + '/ProductInfo.aspx?DisplayCategories=' + DisplayCategories + '&CatalogIDs=' + CatalogID + '&Tab=tab5' + '&viewCode=' + ViewCode + '&viewItemIndex=' + ViewItemIndex + '&RepresentDisplayCategory=' + RepresentDisplayCategory;
+				}
+				else {
+					targetUrl = __homeUrl + '/hybridmain.aspx?isCatalog=0&mallId=' + MallID + '&itemId=' + ItemID + '&cpcType=' + cpcType + '&viewCode=' + ViewCode + '&viewItemIndex=' + ViewItemIndex + '&RepresentDisplayCategory=' + RepresentDisplayCategory + '&' + makeHybridCallbackData();
+				}
+			}
+			break;
+		case "ExpertReviewCountClick":
+			// Browsing Log Write
+			writeBrowsingLogByListControl(ItemIndex, ItemID, CatalogID, VItemID);
+
+			if (IsRequiredAdultAuth == "1") {
+				if (checkUnderAge(IsUnderAge)) return;
+				targetUrl = __memberSSLUrl + '/login/AdultLogin.aspx?next_url=' + encodeURIComponent(__pcpUrl + '/ProductInfo.aspx?DisplayCategories=' + DisplayCategories + '&CatalogIDs=' + CatalogID + '&Tab=tab4' + '&viewCode=' + ViewCode + '&viewItemIndex=' + ViewItemIndex + '&RepresentDisplayCategory=' + RepresentDisplayCategory);
+			}
+			else {
+				targetUrl = __pcpUrl + '/ProductInfo.aspx?DisplayCategories=' + DisplayCategories + '&CatalogIDs=' + CatalogID + '&Tab=tab4' + '&viewCode=' + ViewCode + '&viewItemIndex=' + ViewItemIndex + '&RepresentDisplayCategory=' + RepresentDisplayCategory;
+			}
+
+			// inbridgeurl 유형을 지정
+			inBridgeType = 1;
+			break;
+		case "ShopZzimClick":
+			targetUrl = __memberUrl + '/MyBuy/PickProduct/PickShopPop.aspx?&mid=' + MallID + '&viewCode=' + ViewCode + '&viewItemIndex=' + ViewItemIndex + '&RepresentDisplayCategory=' + RepresentDisplayCategory;
+			title = "shopZzim";
+			options = "left=100,top=100, width=350, height=260, resizable=no, scrollbars=no, status=no";
+
+			// inbridgeurl 유형을 지정
+			inBridgeType = 2;
+			break;
+		case "ZzimProductClick":
+			if (IsCatalog) {	// 카탈로그일경우
+				targetUrl = __memberUrl + '/MyBuy/PickProduct/PickItemPop.aspx?catalogid=' + ID + '&viewCode=' + ViewCode + '&viewItemIndex=' + ViewItemIndex + '&RepresentDisplayCategory=' + RepresentDisplayCategory;
+				title = "productZzim";
+				options = "left=100,top=100,width=345, height=250, resizable=no, scrollbars=no, status=no";
+			}
+			else {
+				targetUrl = __memberUrl + '/MyBuy/PickProduct/PickItemPop.aspx?itemid=' + ID + '&viewCode=' + ViewCode + '&viewItemIndex=' + ViewItemIndex + '&RepresentDisplayCategory=' + RepresentDisplayCategory;
+				title = "productZzim";
+				options = "left=100,top=100,width=345, height=250, resizable=no, scrollbars=no, status=no";
+			}
+
+			// inbridgeurl 유형을 지정
+			inBridgeType = 2;
+
+			break;
+		case "CatalogClick":
+			// Browsing Log Write
+			writeBrowsingLogByListControl(ItemIndex, ItemID, CatalogID, VItemID);
+
+			if (IsRequiredAdultAuth == "1") {
+				if (checkUnderAge(IsUnderAge)) return;
+				parent.window.location.href = __memberSSLUrl + '/login/AdultLogin.aspx?next_url=' + encodeURIComponent(__homeUrl + "/hybridmain.aspx?isCatalog=1&catalogIDs=" + CatalogID + "&displayCategories=" + DisplayCategories + '&viewCode=' + ViewCode + '&viewItemIndex=' + ViewItemIndex + '&RepresentDisplayCategory=' + RepresentDisplayCategory);
+				IsOpen = false;
+			}
+			else {
+				parent.window.location.href = __homeUrl + "/hybridmain.aspx?isCatalog=1&catalogIDs=" + CatalogID + "&displayCategories=" + DisplayCategories + '&viewCode=' + ViewCode + '&viewItemIndex=' + ViewItemIndex + '&RepresentDisplayCategory=' + RepresentDisplayCategory;
+				IsOpen = false;
+			}
+
+			// inbridgeurl 유형을 지정
+			inBridgeType = 1;
+			break;
+		case "GoComparePriceClick_FromPCP": 	// pcp 의 유사상품비교가격비교클릭에서는 Ajax 데이터를 모두 가져갈 경우 파라미터 값이 중복으로 넘어가는 문제가 있다
+		case "ImageClick_FromPCP": 								// pcp 의 유사상품비교이미지클릭에서는 Ajax 데이터를 모두 가져갈 경우 파라미터 값이 중복으로 넘어가는 문제가 있다
+			if (IsCatalog) {		// 카탈로그일경우
+				if (IsRequiredAdultAuth == "1") {
+					if (checkUnderAge(IsUnderAge)) return;
+					targetUrl = __memberSSLUrl + '/login/AdultLogin.aspx?next_url=' + encodeURIComponent(__homeUrl + '/hybridmain.aspx?isCatalog=1&catalogIDs=' + CatalogID + '&cpcType=' + cpcType + '&viewCode=' + ViewCode + '&viewItemIndex=' + ViewItemIndex + '&RepresentDisplayCategory=' + RepresentDisplayCategory);
+				}
+				else {
+					targetUrl = __homeUrl + '/hybridmain.aspx?isCatalog=1&catalogIDs=' + CatalogID + '&cpcType=' + cpcType + '&viewCode=' + ViewCode + '&viewItemIndex=' + ViewItemIndex + '&RepresentDisplayCategory=' + RepresentDisplayCategory;
+				}
+			}
+			else {								// 일반상품일경우
+				if (IsRequiredAdultAuth == "1") {
+					if (checkUnderAge(IsUnderAge)) return;
+					targetUrl = __memberSSLUrl + '/login/AdultLogin.aspx?next_url=' + encodeURIComponent(__homeUrl + '/hybridmain.aspx?isCatalog=0&mallId=' + MallID + '&itemId=' + ItemID + '&cpcType=' + cpcType + '&viewCode=' + ViewCode + '&viewItemIndex=' + ViewItemIndex + '&RepresentDisplayCategory=' + RepresentDisplayCategory);
+				}
+				else {
+					targetUrl = __homeUrl + '/hybridmain.aspx?isCatalog=0&mallId=' + MallID + '&itemId=' + ItemID + '&cpcType=' + cpcType + '&viewCode=' + ViewCode + '&viewItemIndex=' + ViewItemIndex + '&RepresentDisplayCategory=' + RepresentDisplayCategory;
+				}
+			}
+
+			// inbridgeurl 유형을 지정
+			inBridgeType = 1;
+			break;
+		case "WingItemNameClick":
+			if (IsCatalog) {		// 카탈로그일경우
+				targetUrl = __homeUrl + '/hybridmain.aspx?isCatalog=1&fromWhere=HybridWing&catalogIDs=' + CatalogID + '&ItemIndex=' + ItemIndex + '&cpcType=' + cpcType + '&viewCode=' + ViewCode + '&selectedVItemID=' + VItemID + '&' + makeHybridCallbackData();
+			}
+			else {
+				targetUrl = __homeUrl + '/hybridmain.aspx?isCatalog=0&fromWhere=HybridWing&mallId=' + MallID + '&itemId=' + ItemID + '&cpcType=' + cpcType + '&ItemIndex=' + ItemIndex + '&viewCode=' + ViewCode + '&selectedVItemID=' + VItemID + '&' + makeHybridCallbackData();
+			}
+
+			top.window.location.href = targetUrl;
+
+			IsOpen = false;
+
+			// inbridgeurl 유형을 지정
+			inBridgeType = 1;
+			break;
+		case "WriteReviewClick": // 상품평 쓰기 (일반상품도 모두 작성가능함 from V3)
+			if (IsRequiredAdultAuth == "1") {
+				if (checkUnderAge(IsUnderAge)) return;
+				targetUrl = __memberSSLUrl + '/login/AdultLogin.aspx?next_url=' + encodeURIComponent(__homeUrl + '/hybridmain.aspx?isCatalog=1&tab=tab5&catalogIDs=' + CatalogID + '&cpcType=' + cpcType + '&viewCode=' + ViewCode + '&viewItemIndex=' + ViewItemIndex + '&RepresentDisplayCategory=' + RepresentDisplayCategory + '&' + makeHybridCallbackData());
+			}
+			else {
+				targetUrl = __homeUrl + '/hybridmain.aspx?isCatalog=1&tab=tab5&catalogIDs=' + CatalogID + '&cpcType=' + cpcType + '&viewCode=' + ViewCode + '&viewItemIndex=' + ViewItemIndex + '&RepresentDisplayCategory=' + RepresentDisplayCategory + '&' + makeHybridCallbackData();
+			}
+
+			// inbridgeurl 유형을 지정
+			inBridgeType = 1;
+			break;
+		case "GoItemCompareClick": // 일반상품 - 가격비교하기
+			// Browsing Log Write
+			writeBrowsingLogByListControl(ItemIndex, ItemID, CatalogID, VItemID);
+
+			if (!IsCatalog) {		// 일반상품인 경우에만 띄운다.(pcp로 이동)
+				if (IsRequiredAdultAuth == "1") {
+					if (checkUnderAge(IsUnderAge)) return;
+					targetUrl = __memberSSLUrl + '/login/AdultLogin.aspx?next_url=' + encodeURIComponent(__homeUrl + '/hybridmain.aspx?isCatalog=1&catalogIDs=' + CatalogID + '&cpcType=' + cpcType + '&viewCode=' + ViewCode + '&viewItemIndex=' + ViewItemIndex + '&RepresentDisplayCategory=' + RepresentDisplayCategory + '&' + makeHybridCallbackData());
+				}
+				else {
+					targetUrl = __homeUrl + '/hybridmain.aspx?isCatalog=1&catalogIDs=' + CatalogID + '&cpcType=' + cpcType + '&viewCode=' + ViewCode + '&viewItemIndex=' + ViewItemIndex + '&RepresentDisplayCategory=' + RepresentDisplayCategory + '&' + makeHybridCallbackData();
+				}
+			}
+
+			// inbridgeurl 유형을 지정
+			inBridgeType = 1;
+			break;
+		case "GoProductInfoClick": // 상품정보
+			// Browsing Log Write
+			writeBrowsingLogByListControl(ItemIndex, ItemID, CatalogID, VItemID);
+
+			if (IsCatalog) {		// 카탈로그일경우
+				if (IsRequiredAdultAuth == "1") {
+					if (checkUnderAge(IsUnderAge)) return;
+					targetUrl = __memberSSLUrl + '/login/AdultLogin.aspx?next_url=' + encodeURIComponent(__homeUrl + '/hybridmain.aspx?isCatalog=1&tab=tab1&catalogIDs=' + CatalogID + '&cpcType=' + cpcType + '&viewCode=' + ViewCode + '&viewItemIndex=' + ViewItemIndex + '&RepresentDisplayCategory=' + RepresentDisplayCategory + '&' + makeHybridCallbackData());
+				}
+				else {
+					targetUrl = __homeUrl + '/hybridmain.aspx?isCatalog=1&tab=tab1&catalogIDs=' + CatalogID + '&cpcType=' + cpcType + '&viewCode=' + ViewCode + '&viewItemIndex=' + ViewItemIndex + '&RepresentDisplayCategory=' + RepresentDisplayCategory + '&' + makeHybridCallbackData();
+				}
+			}
+			// inbridgeurl 유형을 지정
+			inBridgeType = 1;
+			break;
+		case "GoSimilarCompareClick": //유사상품비교
+			// Browsing Log Write
+			writeBrowsingLogByListControl(ItemIndex, ItemID, CatalogID, VItemID);
+
+			if (IsCatalog) {		// 카탈로그일경우
+				if (IsRequiredAdultAuth == "1") {
+					if (checkUnderAge(IsUnderAge)) return;
+					targetUrl = __memberSSLUrl + '/login/AdultLogin.aspx?next_url=' + encodeURIComponent(__homeUrl + '/hybridmain.aspx?isCatalog=1&tab=tab3&catalogIDs=' + CatalogID + '&cpcType=' + cpcType + '&viewCode=' + ViewCode + '&viewItemIndex=' + ViewItemIndex + '&RepresentDisplayCategory=' + RepresentDisplayCategory + '&' + makeHybridCallbackData());
+				}
+				else {
+					targetUrl = __homeUrl + '/hybridmain.aspx?isCatalog=1&tab=tab3&catalogIDs=' + CatalogID + '&cpcType=' + cpcType + '&viewCode=' + ViewCode + '&viewItemIndex=' + ViewItemIndex + '&RepresentDisplayCategory=' + RepresentDisplayCategory + '&' + makeHybridCallbackData();
+				}
+			}
+			// inbridgeurl 유형을 지정
+			inBridgeType = 1;
+			break;
+		default:
+			return;
+			break;
+	}
+
+	// inbridgeType에 따라서 url을 만든다.
+	if (IsInBridge == true) {
+		if (inBridgeType == 1) {
+			var uniqueUrl = "";
+			// 카탈로그인 경우
+			if (IsCatalog == true) {
+				uniqueUrl = "CatalogID=" + CatalogID;
+			}
+			else {
+				uniqueUrl = "MallID=" + MallID + "&ItemID=" + ItemID;
+			}
+
+			targetUrl = __homeUrl + "/InBridge.aspx?ChannelID=" + ChannelID + "&" + uniqueUrl + "&" + inbridgeParameters();
+		}
+		else {
+			targetUrl = __homeUrl + "/InBridge.aspx?ChannelID=" + ChannelID + "&targetUrl=" + encodeURIComponent(targetUrl);
+		}
+	}
+
+	// window.open인 경우 새창을 띄운다.
+	if (IsOpen == true) {
+		if (options != "") {
+			window.open(targetUrl, title, options);
+		}
+		else {
+			window.open(targetUrl);
+		}
+	}
+}
+
+
+// ----------------------------------------------------------
+// 페이지에서 inline 으로 호출 하는 함수들(외부 노출 함수들) 끝
+// ----------------------------------------------------------
+
+// 미성년자 여부 검사
+function checkUnderAge(IsUnderAge) {
+	if (IsUnderAge == "1") {
+		alert('19세미만 청소년은 이용할 수 없습니다.');
+		return true;
+	}
+
+	return false;
+}
+
+// 즉시 보여주지 않고 시간차를 주기 위함
+function showLayer(obj) {
+	if ($(obj).attr("ismouseenter") == "y") {  // 즉시 보여주지 않고 시간차를 주기 위함
+		$(obj).css("z-index", "1000");
+		$(obj).show();
+	}
+}
+
+// Hybrid 로 넘겼다가 다시 사용할 목적으로 parameter 들을 생성 합니다.
+// 이미 사용하는 파라미터 들은 제거 합니다.
+function makeHybridCallbackData() {
+
+	var serialized = [];
+	for (var key in gPageState) {
+		var value = gPageState[key];
+		if (key.indexOf('=') !== -1) throw "argument state";
+
+		// hybrid 에서 이미 정의된 파라미터값은 gPageState 값을 사용하지 않는다.
+		// 제거를 하지 않으면, 받는쪽에서 request 를 할때 배열 형태값을 받게 된다.
+		if (containHybridparameter(key) == false) {
+			//serialized[serialized.length] = key + '=' + escape(value);
+			serialized[serialized.length] = key + '=' + value;   //2010.11.23 수정 by 이동열(한글처리 변경으로 인한 escape 제거)
+		}
+	}
+
+	return serialized.join('&');
+}
+
+// Hybrid 에서 사용하는 정의된 파라미터가 있는지 검사한다.
+function containHybridparameter(key) {
+	var retValue = false;
+
+	var UsedParameter = Array();
+	UsedParameter.push('isCatalog');
+	UsedParameter.push('catalogIDs');
+	UsedParameter.push('cpcType');
+	UsedParameter.push('viewCode');
+	//UsedParameter.push('viewDisplayCategories');
+	UsedParameter.push('viewItemIndex');
+	//UsedParameter.push('viewTabIndex');
+	UsedParameter.push('mallId');
+	UsedParameter.push('itemId');
+	UsedParameter.push('SelectedVItemID');
+
+	for (var i = 0; i < UsedParameter.length; i++) {
+		if (key.toLowerCase() == UsedParameter[i].toLowerCase()) {
+			retValue = true;
+			break;
+		}
+	}
+
+	return retValue;
+}
+
+// inbridge로 넘길 paramater를 만든다. (gPageState에서 추출한 정보들)
+function inbridgeParameters() {
+
+	var serialized = new Array();
+	var parameters = new Array()
+
+	parameters.push("DisplayCategories");
+	parameters.push("Keyword");
+	parameters.push("PageIndex");
+	parameters.push("PageSize");
+	parameters.push("FindingType");
+	parameters.push("ListingType");
+	parameters.push("SortType");
+
+	for (var i = 0; i < parameters.length; i++) {
+		serialized.push(parameters[i] + '=' + escape(gPageState[parameters[i]]));
+	}
+
+	return serialized.join('&');
+}
+
+// Browsing Log Write By ListControl
+function writeBrowsingLogByListControl(itemIndex, itemID, catalogID, vItemID) {
+	if (typeof (writeBrowsingLog) === 'function') {
+		writeBrowsingLog(itemIndex, itemID, catalogID, vItemID);
+	}
+}

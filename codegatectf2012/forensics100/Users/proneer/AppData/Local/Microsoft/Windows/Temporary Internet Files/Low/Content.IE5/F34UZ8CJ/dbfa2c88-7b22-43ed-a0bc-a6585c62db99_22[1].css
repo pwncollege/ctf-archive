@@ -1,0 +1,45 @@
+/* Setting up header */
+div.section h2.title_section span.phrase
+{ 
+	color: #11a1d9; 
+	font-weight: 300;
+	font-size: 240%;	
+	margin-bottom: 14px;
+	display: block;
+}
+
+div.section h2.title_section img
+{
+	margin-bottom: 20px;
+}
+
+div.section h3.title_section 
+{
+	color: #11a1d9; 
+	font-size: 150%;
+	font-weight: 400;
+}
+
+.section_section-grid-2col-near td.grid-first { padding-right: 75px; }
+
+a { color: #11a1d9; }
+
+div.section_oly-aml a { color: #33ffff; }
+
+div.section_oly-aml-near { width: 40%; left: 35px; top: 20px; }
+
+.section_section-grid-2col-near div.section_oly-aml-near { left: 0px; top: 0px; }
+
+div.section_oly-aml-near h3.title_section { font-size: 225%; font-weight: 400; }
+div.section_oly-aml-near h4.title_section { font-size: 150%; font-weight: 500; color: #FFFFFF; }
+
+.section_section-grid-2col-near td div.section_oly-aml-near a { color: #11a1d9; }
+.section_section-grid-2col-near td div.section_oly-aml-near h4.title_section { 	color: #11a1d9; 
+	font-size: 150%;
+	font-weight: 400; margin-bottom: 8px; }
+.section_section-grid-2col-near td div.section_oly-aml-near { width: 70%;  }
+.section_section-grid-2col-near td div.section_oly-aml { padding-top: 0px; }
+
+.section_section-grid-3col-near td.grid { width: 50%; }
+.section_section-grid-3col-near td.grid-mid { display: none; }
+.section_section-grid-3col-near td.grid-last p.para { text-align: right; }

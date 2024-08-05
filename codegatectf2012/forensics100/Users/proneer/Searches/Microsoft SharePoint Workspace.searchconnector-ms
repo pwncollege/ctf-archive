@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<searchConnectorDescription xmlns="http://schemas.microsoft.com/windows/2009/searchConnector">
+  <description></description>
+  <isSearchOnlyItem>true</isSearchOnlyItem>
+  <includeInStartMenuScope>true</includeInStartMenuScope>
+  <templateInfo>
+    <folderType>{982725EE-6F47-479E-B447-812BFA7D2E8F}</folderType>
+  </templateInfo>
+  <simpleLocation>
+    <url>SharePointWorkspaceSearch://{S-1-5-21-2799891821-2818454870-1039873877-1000}/</url>
+    <serialized>MBAAAEAFCAAAAAAAADAAAAAAAYUgAAQBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAA4LAUAwHA2S17D7pEnhSY2VEw0pGI7KqAAAAiCQLVvPsTBAaAEGAyBQZAAFAvBQaA4GA0BwVA8GAyBwaAMHAwBQYAMGAlBwUAUGAhBgcAMGAoBgOA8CAvAweAMFAtAQMA0CA1AQLAIDAxAQLAIDA3AQOAkDA4AQOAEDA4AgMAEDAtAgMAgDAxAAOAQDA1AANAgDA3AAMA0CAxAAMAMDA5AAOAcDAzAAOAcDA3AQLAEDAwAAMAADA9BwLAAAAAAAAAAAAAAA</serialized>
+  </simpleLocation>
+</searchConnectorDescription>

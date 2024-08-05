@@ -1,0 +1,163 @@
+body {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-family: "Arial", sans-serif;
+    background: #FFFFFF url(chrome://asktoolbar/skin/newtab_bkg.png) repeat-x;
+}
+
+.hidden {
+	visibility: hidden;
+}
+
+#container {
+    width: 800px;
+    margin: 0 auto 0 auto;
+}
+
+#container #title {
+    font-size: 24px;
+    color: #999999;
+    margin-top: 30px;
+    text-align: left;
+}
+
+#container #search {
+	width: 800px;
+	height: 90px;
+	margin-top: 40px;
+}
+
+#container #search-box {
+    background: transparent url(chrome://asktoolbar/skin/newtab_search_bkg.png) no-repeat;
+    width: 552px;
+    height: 90px;
+    margin: 0 auto;
+}
+
+#container #search-box #search-form {
+    padding: 30px 40px 0 40px;
+}
+
+#container #search-box #search-form #search-input {
+    width: 72%;
+    color: #999999;
+    font-style: italic;
+}
+
+#container #search-box #search-form .focus#search-input {
+    color: black;
+    font-style: normal;
+}
+
+#container #search-box #tagline {
+	text-align: right;
+	padding: 12px 10px;
+	color: #999999;
+	font-size: 11px;
+}
+
+#container #content {
+    width: 800px;
+    height: 100%;
+    margin-top: 50px;
+    text-align: left;
+}
+
+#container #content .content-title {
+	font-size: 14px;
+	color: #999999;
+	padding-bottom: 5px;
+    border-bottom: 1px solid #CCCCCC;
+}
+
+#container #content #history {
+    float: left;
+    width: 375px;
+    font-size: 11px;
+}
+
+#container #content #history a {
+    color: #0068CC;
+    text-decoration: none;
+}
+
+#container #content #history .disabled {
+    color: #666666;
+}
+
+#container #content #history a:hover {
+    text-decoration: underline;
+}
+
+#container #content #history #more-history {
+    text-align: right;
+}
+
+#container #content #history #locations .location {
+    padding-top: 10px;
+    height: 16px;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+#container #content #history #locations .location-icon {
+    margin-bottom: -3px;
+    width: 16px;
+    height: 16px;
+}
+
+#container #content #history #locations .location-link {
+    padding-left: 10px;
+}
+
+#container #content #weather {
+	float: right;
+	width: 375px;
+}
+
+#container #content #weather-form {
+	font-size: 11px;
+	color: #666666;
+	padding-top: 10px;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+#container #content #weather-form #weather-icon {
+    margin-bottom: -3px;
+}
+
+#container #content #weather-form label {
+    padding: 0 10px;
+}
+
+#container #content #weather-form #zip-input {
+    margin-right: 8px;
+}
+
+#container #footer {
+	position: absolute;
+	width: 800px;
+	margin-top: 40px;
+	bottom: 15px;
+    font-size: 11px;
+    color: #666666;
+}
+
+#container .freeze#footer {
+    top: 400px;
+}
+
+#container #footer span {
+    padding: 0 1px;
+}
+
+#container #footer span a {
+    color: #0068CC;
+    text-decoration: none;
+}
+
+#container #footer span a:hover {
+    text-decoration: underline;
+}

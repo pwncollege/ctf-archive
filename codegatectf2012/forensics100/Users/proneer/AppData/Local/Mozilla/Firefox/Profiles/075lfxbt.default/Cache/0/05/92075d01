@@ -1,0 +1,292 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>The ADFSL Conference on Digital Forensics, Security and Law</title>
+<link rel="stylesheet" type="text/css" href="/include/style.css">
+<meta name="GENERATOR" content="Microsoft FrontPage 6.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<!--mstheme--><link rel="stylesheet" type="text/css" href="_themes/ice174/ice11011.css"><meta name="Microsoft Theme" content="ice174 1011">
+</head>
+
+<body>
+
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%" height="100%" id="table2">
+	<tr>
+		<td colspan=4 >
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+	<tr>
+		<td >
+		<p>&nbsp;<img border="0" src="images/conferencelogo-main.gif" width="488" height="38"></p>
+		</td>
+		<td align="right" >
+		<img border="0" src="images/keyboard.jpg" width="200" height="62"></td>
+	</tr>
+</table>
+       </td>
+	</tr>
+	<tr>
+		<td bgcolor="#336699">&nbsp;</td>
+		<td bgcolor="#336699">&nbsp;</td>
+		<td bgcolor="#336699" height="26" align="center">
+		&nbsp;</td>
+		<td bgcolor="#336699">&nbsp;</td>
+	</tr>
+	<tr>
+		<td bgcolor="#336699">&nbsp;</td>
+		<td><img border="0" src="/images/corner1.gif" width="22" height="28"></td>
+		<td class="banner" height="26" background="/images/topbg.gif">
+		<!--webbot bot="Navigation" s-type="banner" s-orientation="horizontal" s-rendering="graphics" startspan --><img src="_derived/index.htm_cmp_ice174010_bnr.gif" width="300" height="19" border="0" alt="Conference"><!--webbot bot="Navigation" i-checksum="20810" endspan --></td>
+		<td><img border="0" src="/images/corner2.gif" width="28" height="28"></td>
+	</tr>
+	<tr>
+		<td class="leftcolumn" valign="top" bgcolor="#336699">
+		<p align="center">
+		<!--webbot bot="Navigation" s-orientation="vertical" s-rendering="graphics" s-type="siblings" b-include-home="FALSE" b-include-up="FALSE" startspan --><img src="_derived/index.htm_cmp_ice174010_vbtn_p.gif" width="147" height="31" border="0" alt="Conference"><br><script language="JavaScript"><!--
+MSFPhover = 
+  (((navigator.appName == "Netscape") && 
+  (parseInt(navigator.appVersion) >= 3 )) || 
+  ((navigator.appName == "Microsoft Internet Explorer") && 
+  (parseInt(navigator.appVersion) >= 4 ))); 
+function MSFPpreload(img) 
+{
+  var a=new Image(); a.src=img; return a; 
+}
+// --></script><script language="JavaScript"><!--
+if(MSFPhover) { MSFPnav1n=MSFPpreload("_derived/audience.htm_cmp_ice174010_vbtn.gif"); MSFPnav1h=MSFPpreload("_derived/audience.htm_cmp_ice174010_vbtn_a.gif"); }
+// --></script><a href="audience.htm" language="JavaScript" onmouseover="if(MSFPhover) document['MSFPnav1'].src=MSFPnav1h.src" onmouseout="if(MSFPhover) document['MSFPnav1'].src=MSFPnav1n.src"><img src="_derived/audience.htm_cmp_ice174010_vbtn.gif" width="147" height="31" border="0" alt="Audience" name="MSFPnav1"></a><br><script language="JavaScript"><!--
+if(MSFPhover) { MSFPnav2n=MSFPpreload("_derived/focus.htm_cmp_ice174010_vbtn.gif"); MSFPnav2h=MSFPpreload("_derived/focus.htm_cmp_ice174010_vbtn_a.gif"); }
+// --></script><a href="focus.htm" language="JavaScript" onmouseover="if(MSFPhover) document['MSFPnav2'].src=MSFPnav2h.src" onmouseout="if(MSFPhover) document['MSFPnav2'].src=MSFPnav2n.src"><img src="_derived/focus.htm_cmp_ice174010_vbtn.gif" width="147" height="31" border="0" alt="Focus" name="MSFPnav2"></a><br><script language="JavaScript"><!--
+if(MSFPhover) { MSFPnav3n=MSFPpreload("_derived/callforpapers.htm_cmp_ice174010_vbtn.gif"); MSFPnav3h=MSFPpreload("_derived/callforpapers.htm_cmp_ice174010_vbtn_a.gif"); }
+// --></script><a href="callforpapers.htm" language="JavaScript" onmouseover="if(MSFPhover) document['MSFPnav3'].src=MSFPnav3h.src" onmouseout="if(MSFPhover) document['MSFPnav3'].src=MSFPnav3n.src"><img src="_derived/callforpapers.htm_cmp_ice174010_vbtn.gif" width="147" height="31" border="0" alt="Call for Papers" name="MSFPnav3"></a><br><script language="JavaScript"><!--
+if(MSFPhover) { MSFPnav4n=MSFPpreload("_derived/authorinstructions.htm_cmp_ice174010_vbtn.gif"); MSFPnav4h=MSFPpreload("_derived/authorinstructions.htm_cmp_ice174010_vbtn_a.gif"); }
+// --></script><a href="authorinstructions.htm" language="JavaScript" onmouseover="if(MSFPhover) document['MSFPnav4'].src=MSFPnav4h.src" onmouseout="if(MSFPhover) document['MSFPnav4'].src=MSFPnav4n.src"><img src="_derived/authorinstructions.htm_cmp_ice174010_vbtn.gif" width="147" height="31" border="0" alt="Author Instructions" name="MSFPnav4"></a><br><script language="JavaScript"><!--
+if(MSFPhover) { MSFPnav5n=MSFPpreload("_derived/committee.htm_cmp_ice174010_vbtn.gif"); MSFPnav5h=MSFPpreload("_derived/committee.htm_cmp_ice174010_vbtn_a.gif"); }
+// --></script><a href="committee.htm" language="JavaScript" onmouseover="if(MSFPhover) document['MSFPnav5'].src=MSFPnav5h.src" onmouseout="if(MSFPhover) document['MSFPnav5'].src=MSFPnav5n.src"><img src="_derived/committee.htm_cmp_ice174010_vbtn.gif" width="147" height="31" border="0" alt="Committee" name="MSFPnav5"></a><br><script language="JavaScript"><!--
+if(MSFPhover) { MSFPnav6n=MSFPpreload("_derived/keynote.htm_cmp_ice174010_vbtn.gif"); MSFPnav6h=MSFPpreload("_derived/keynote.htm_cmp_ice174010_vbtn_a.gif"); }
+// --></script><a href="keynote.htm" language="JavaScript" onmouseover="if(MSFPhover) document['MSFPnav6'].src=MSFPnav6h.src" onmouseout="if(MSFPhover) document['MSFPnav6'].src=MSFPnav6n.src"><img src="_derived/keynote.htm_cmp_ice174010_vbtn.gif" width="147" height="31" border="0" alt="Keynote" name="MSFPnav6"></a><br><script language="JavaScript"><!--
+if(MSFPhover) { MSFPnav7n=MSFPpreload("_derived/schedule.htm_cmp_ice174010_vbtn.gif"); MSFPnav7h=MSFPpreload("_derived/schedule.htm_cmp_ice174010_vbtn_a.gif"); }
+// --></script><a href="schedule.htm" language="JavaScript" onmouseover="if(MSFPhover) document['MSFPnav7'].src=MSFPnav7h.src" onmouseout="if(MSFPhover) document['MSFPnav7'].src=MSFPnav7n.src"><img src="_derived/schedule.htm_cmp_ice174010_vbtn.gif" width="147" height="31" border="0" alt="Speakers / Schedule" name="MSFPnav7"></a><br><script language="JavaScript"><!--
+if(MSFPhover) { MSFPnav8n=MSFPpreload("_derived/venue.htm_cmp_ice174010_vbtn.gif"); MSFPnav8h=MSFPpreload("_derived/venue.htm_cmp_ice174010_vbtn_a.gif"); }
+// --></script><a href="venue.htm" language="JavaScript" onmouseover="if(MSFPhover) document['MSFPnav8'].src=MSFPnav8h.src" onmouseout="if(MSFPhover) document['MSFPnav8'].src=MSFPnav8n.src"><img src="_derived/venue.htm_cmp_ice174010_vbtn.gif" width="147" height="31" border="0" alt="Venue / Hotel" name="MSFPnav8"></a><br><script language="JavaScript"><!--
+if(MSFPhover) { MSFPnav9n=MSFPpreload("_derived/registration.htm_cmp_ice174010_vbtn.gif"); MSFPnav9h=MSFPpreload("_derived/registration.htm_cmp_ice174010_vbtn_a.gif"); }
+// --></script><a href="registration.htm" language="JavaScript" onmouseover="if(MSFPhover) document['MSFPnav9'].src=MSFPnav9h.src" onmouseout="if(MSFPhover) document['MSFPnav9'].src=MSFPnav9n.src"><img src="_derived/registration.htm_cmp_ice174010_vbtn.gif" width="147" height="31" border="0" alt="Registration" name="MSFPnav9"></a><br><script language="JavaScript"><!--
+if(MSFPhover) { MSFPnav10n=MSFPpreload("_derived/affiliates.htm_cmp_ice174010_vbtn.gif"); MSFPnav10h=MSFPpreload("_derived/affiliates.htm_cmp_ice174010_vbtn_a.gif"); }
+// --></script><a href="affiliates.htm" language="JavaScript" onmouseover="if(MSFPhover) document['MSFPnav10'].src=MSFPnav10h.src" onmouseout="if(MSFPhover) document['MSFPnav10'].src=MSFPnav10n.src"><img src="_derived/affiliates.htm_cmp_ice174010_vbtn.gif" width="147" height="31" border="0" alt="Affiliates / Sponsors" name="MSFPnav10"></a><br><script language="JavaScript"><!--
+if(MSFPhover) { MSFPnav11n=MSFPpreload("_derived/links.htm_cmp_ice174010_vbtn.gif"); MSFPnav11h=MSFPpreload("_derived/links.htm_cmp_ice174010_vbtn_a.gif"); }
+// --></script><a href="links.htm" language="JavaScript" onmouseover="if(MSFPhover) document['MSFPnav11'].src=MSFPnav11h.src" onmouseout="if(MSFPhover) document['MSFPnav11'].src=MSFPnav11n.src"><img src="_derived/links.htm_cmp_ice174010_vbtn.gif" width="147" height="31" border="0" alt="Links" name="MSFPnav11"></a><br><script language="JavaScript"><!--
+if(MSFPhover) { MSFPnav12n=MSFPpreload("_derived/contact.htm_cmp_ice174010_vbtn.gif"); MSFPnav12h=MSFPpreload("_derived/contact.htm_cmp_ice174010_vbtn_a.gif"); }
+// --></script><a href="contact.htm" language="JavaScript" onmouseover="if(MSFPhover) document['MSFPnav12'].src=MSFPnav12h.src" onmouseout="if(MSFPhover) document['MSFPnav12'].src=MSFPnav12n.src"><img src="_derived/contact.htm_cmp_ice174010_vbtn.gif" width="147" height="31" border="0" alt="Contacts" name="MSFPnav12"></a><br><script language="JavaScript"><!--
+if(MSFPhover) { MSFPnav13n=MSFPpreload("subscriptions/_derived/proceedings_2011.htm_cmp_ice174010_vbtn.gif"); MSFPnav13h=MSFPpreload("subscriptions/_derived/proceedings_2011.htm_cmp_ice174010_vbtn_a.gif"); }
+// --></script><a href="subscriptions/proceedings_2011.htm" language="JavaScript" onmouseover="if(MSFPhover) document['MSFPnav13'].src=MSFPnav13h.src" onmouseout="if(MSFPhover) document['MSFPnav13'].src=MSFPnav13n.src"><img src="subscriptions/_derived/proceedings_2011.htm_cmp_ice174010_vbtn.gif" width="147" height="31" border="0" alt="Proceedings 2011" name="MSFPnav13"></a><br><script language="JavaScript"><!--
+if(MSFPhover) { MSFPnav14n=MSFPpreload("subscriptions/_derived/proceedings_2010.htm_cmp_ice174010_vbtn.gif"); MSFPnav14h=MSFPpreload("subscriptions/_derived/proceedings_2010.htm_cmp_ice174010_vbtn_a.gif"); }
+// --></script><a href="subscriptions/proceedings_2010.htm" language="JavaScript" onmouseover="if(MSFPhover) document['MSFPnav14'].src=MSFPnav14h.src" onmouseout="if(MSFPhover) document['MSFPnav14'].src=MSFPnav14n.src"><img src="subscriptions/_derived/proceedings_2010.htm_cmp_ice174010_vbtn.gif" width="147" height="31" border="0" alt="Proceedings 2010" name="MSFPnav14"></a><br><script language="JavaScript"><!--
+if(MSFPhover) { MSFPnav15n=MSFPpreload("subscriptions/_derived/proceedings_2009.htm_cmp_ice174010_vbtn.gif"); MSFPnav15h=MSFPpreload("subscriptions/_derived/proceedings_2009.htm_cmp_ice174010_vbtn_a.gif"); }
+// --></script><a href="subscriptions/proceedings_2009.htm" language="JavaScript" onmouseover="if(MSFPhover) document['MSFPnav15'].src=MSFPnav15h.src" onmouseout="if(MSFPhover) document['MSFPnav15'].src=MSFPnav15n.src"><img src="subscriptions/_derived/proceedings_2009.htm_cmp_ice174010_vbtn.gif" width="147" height="31" border="0" alt="Proceedings 2009" name="MSFPnav15"></a><br><script language="JavaScript"><!--
+if(MSFPhover) { MSFPnav16n=MSFPpreload("subscriptions/_derived/proceedings_2008.htm_cmp_ice174010_vbtn.gif"); MSFPnav16h=MSFPpreload("subscriptions/_derived/proceedings_2008.htm_cmp_ice174010_vbtn_a.gif"); }
+// --></script><a href="subscriptions/proceedings_2008.htm" language="JavaScript" onmouseover="if(MSFPhover) document['MSFPnav16'].src=MSFPnav16h.src" onmouseout="if(MSFPhover) document['MSFPnav16'].src=MSFPnav16n.src"><img src="subscriptions/_derived/proceedings_2008.htm_cmp_ice174010_vbtn.gif" width="147" height="31" border="0" alt="Proceedings 2008" name="MSFPnav16"></a><br><script language="JavaScript"><!--
+if(MSFPhover) { MSFPnav17n=MSFPpreload("subscriptions/_derived/proceedings_2007.htm_cmp_ice174010_vbtn.gif"); MSFPnav17h=MSFPpreload("subscriptions/_derived/proceedings_2007.htm_cmp_ice174010_vbtn_a.gif"); }
+// --></script><a href="subscriptions/proceedings_2007.htm" language="JavaScript" onmouseover="if(MSFPhover) document['MSFPnav17'].src=MSFPnav17h.src" onmouseout="if(MSFPhover) document['MSFPnav17'].src=MSFPnav17n.src"><img src="subscriptions/_derived/proceedings_2007.htm_cmp_ice174010_vbtn.gif" width="147" height="31" border="0" alt="Proceedings 2007" name="MSFPnav17"></a><br><script language="JavaScript"><!--
+if(MSFPhover) { MSFPnav18n=MSFPpreload("subscriptions/_derived/proceedings_2006.htm_cmp_ice174010_vbtn.gif"); MSFPnav18h=MSFPpreload("subscriptions/_derived/proceedings_2006.htm_cmp_ice174010_vbtn_a.gif"); }
+// --></script><a href="subscriptions/proceedings_2006.htm" language="JavaScript" onmouseover="if(MSFPhover) document['MSFPnav18'].src=MSFPnav18h.src" onmouseout="if(MSFPhover) document['MSFPnav18'].src=MSFPnav18n.src"><img src="subscriptions/_derived/proceedings_2006.htm_cmp_ice174010_vbtn.gif" width="147" height="31" border="0" alt="Proceedings 2006" name="MSFPnav18"></a><!--webbot bot="Navigation" i-checksum="50987" endspan --></p>
+		<p>&nbsp;</p>
+				<p align="center"><font size="1">We would like to acknowledge 
+				the support of the 2011 conference <br>
+				by the following organizations.</font></p>
+		<p align="center">&nbsp;</p>
+			<div align="center">
+			<table border="2" width="151" cellspacing="0" cellpadding="0" id="table18" height="44">
+				<tr>
+					<td bgcolor="#FFFFFF">
+					<p align="center">
+				<img border="0" src="images/longwood_small.gif" width="130" height="28"></td>
+				</tr>
+			</table>
+			</div>
+			<p align="center">&nbsp;</p>
+			<div align="center">
+			<table border="2" width="128" cellspacing="0" cellpadding="0" id="table17">
+				<tr>
+					<td bgcolor="#FFFFFF">
+					<p align="center">
+				<img border="0" src="images/ECU-Col-Logo.gif" width="120" height="89"></td>
+				</tr>
+			</table>
+			</div>	
+		<div align="center">
+		    <p>&nbsp;</p>			
+			<table border="2" width="151" cellspacing="0" cellpadding="0" id="table7">
+				<tr>
+					<td bgcolor="#000000">
+					<center><a href="http://www.jdfsl.org/">
+					<img alt="Journal of Digital Forensics, Security and Law" src="images/JDFSL.jpg" width="141" height="191" border="0"></a> 
+					</center></td>
+				</tr>
+			</table>
+			<p>&nbsp;</p>
+			<table border="2" width="151" cellspacing="0" cellpadding="0" id="table19">
+				<tr>
+					<td bgcolor="#000000">
+					<center>
+					<span style="font-size: 12.0pt; font-family: 'Times New Roman',serif">
+				<img id="_x0000_i1025" src="images/DFI-sm.gif" alt=" " border="1" width="142" height="54"></span></center></td>
+				</tr>
+			</table>
+			<p>
+<!--			
+			<p align="center">&nbsp;</p>
+			<table border="2" width="151" cellspacing="0" cellpadding="0" id="table8">
+				<tr>
+					<td bgcolor="#FFFFFF">
+					<p align="center">
+				<b><font size="4" color="#800080">Journal <br>
+				of <br>
+				Network Forensics</font></b></td>
+				</tr>
+			</table>
+			<p align="center">&nbsp;</p>
+			<table border="2" width="151" cellspacing="0" cellpadding="0" id="table9">
+				<tr>
+					<td bgcolor="#FFFFFF">
+					<p align="center">
+				<b><font size="4" color="#808080">Small Scale Digital Device 
+				Forensics Journal</font></b></td>
+				</tr>
+			</table>
+			
+-->
+					</div>
+		</td>
+		<td background="/images/leftbg.gif">&nbsp;</td>
+		<td width="100%" height="90%" valign="top">&nbsp;<table border="0" width="500" cellspacing="5" cellpadding="5" id="table4">
+			<tr>
+				<td>
+				<strong>
+				<img alt="Association of Digital Forensics Security and Law" src="images/adfslgraphic-small.jpg" border="0" width="114" height="100" align="left"></strong><p>&nbsp;</p>
+				<p><font size="4">
+				<b>The 2012 ADFSL Conference</b></font><font size="4"><b> on </b> </font>
+				</p>
+				<p><font size="4">
+				<b>Digital Forensics, 
+				Security and Law</b> </font>
+				</p>
+				<p><font size="3"><b>May</b></font><b><font size="3"> 30-31, 2012</font></b></p>
+				<p><font size="3"><b>Richmond, Virginia USA</b></font></p>
+				<p>&nbsp;</p>
+				<p><b><u>Conference</u></b></p>
+				<p>&nbsp;</p>
+				<p>Digital forensics is playing a more prominent role in law 
+				enforcement, network security, and information assurance. The 
+				field of study encompasses not just digital evidence, but also 
+				the areas of cyber law, sociology, and security to name a few. 
+				Its increasing importance is reflected in its growing role 
+				within crime investigations, civil cases and homeland security.<br>
+				<br>
+				An in-depth understanding of digital forensics is needed by 
+				college students who will be entering the various fields within 
+				technology, business, criminal justice, law, and homeland 
+				security. Currently, many professionals in those fields are 
+				still not well-prepared to understand the use and management of 
+				digital evidence – or the use of digital forensics in 
+				determining the causes of security breaches, or the avoidance of 
+				security breaches altogether. <br>
+				<br>
+				Today, many professionals are working with others from different 
+				fields - lawyers are working with IT managers, law enforcement 
+				are working with forensics engineers. Well, at least they are 
+				trying. Unless properly prepared, many of these professionals 
+				will not be able to communicate and work effectively with each 
+				other. Those communications will continue in their frequency and 
+				importance. The demand for forensics and investigative work by 
+				knowledgeable professionals will continue to call upon our 
+				academic institutions to provide that education for the 
+				foreseeable future. <br>
+				<br>
+				While some topics or courses will be needed in a variety of 
+				majors such as criminal justice and computer science, an 
+				enhanced level of study should be provided for those wishing to 
+				have a more solid foundation in digital forensics, security and 
+				law. By providing a conference addressing research and 
+				curriculum in the related disciplines of digital forensics, 
+				information assurance and law, we hope to provide an avenue 
+				which will provide for a more comprehensive and richer learning 
+				environment.</p>
+				<p>&nbsp;</p>
+				<p><b><u>Background</u></b></p>
+				<p>&nbsp;</p>
+				<p>The ADFSL Conference on Digital Forensics, Security and Law is the official annual conference of the ADFSL, the Association of Digital Forensics Security and Law.</p>
+				<p>&nbsp;</p>
+				<p>The first annual conference of the ADFSL Conference on 
+				Digital Forensics, Security and Law was held in Las Vegas, 
+				Nevada, USA on April 20-21, 2006. <br>
+				<br>
+				The second annual conference of the ADFSL Conference on Digital 
+				Forensics, Security and Law was held in Alexandria, Virginia USA 
+				on April 18-20, 2007. <br>
+				<br>
+				The third annual conference of the ADFSL Conference on Digital 
+				Forensics, Security and Law was held in Oklahoma City, Oklahoma, 
+				USA on April 23-25, 2008. <br>
+				<br>
+				The fourth annual conference of the ADFSL Conference on Digital 
+				Forensics, Security and Law was held in Burlington, Vermont, 
+				USA on May 20-22, 2009. <br>
+				<br>
+				The fifth annual conference of the ADFSL Conference on Digital 
+				Forensics, Security and Law was held in St. Paul, Minnesota, 
+				USA on May 19-21, 2010. <br>
+				<br>
+				The sixth annual conference of the ADFSL Conference on Digital 
+				Forensics, Security and Law was held in Richmond, Virginia, 
+				USA on May 25-27, 2011.</p>
+				<p>
+				<br>
+				The seventh annual conference of the ADFSL Conference on Digital 
+				Forensics, Security and Law will be held in Richmond, Virginia, 
+				USA on May 30-31, 2012. <br>
+&nbsp;</p>
+		<p>The conference is managed by the Association of Digital Forensics 
+		Security and Law (ADFSL).</p>
+				<p>&nbsp;</p>
+				<p>Association of Digital Forensics, Security and Law<br>
+				1642 Horsepen Hills Road<br>
+				Maidens, Virginia 23102<br>
+				Tel: 804-402-9239<br>
+				Fax: 804-680-3038<br>
+				E-mail: <a href="mailto:admin@adfsl.org">admin@adfsl.org</a><br>
+				Website: <a href="http://www.adfsl.org">http://www.adfsl.org</a></p>
+				<p>&nbsp;</p>
+				<p>See also:</p>
+				<ul>
+					<li><a href="http://www.adfsl.org">Association of Digital 
+					Forensics, Security and Law (ADFSL)</a></li>
+					<li><a href="http://www.jdfsl.org">The Journal of Digital 
+					Forensics, Security and Law (JDFSL)</a></li>
+				</ul>
+				</td>
+			</tr>
+			</table>
+		</td>
+		<td background="/images/rightbg.gif">&nbsp;</td>
+	</tr>
+	<tr>
+		<td bgcolor="#336699">
+		<img border="0" src="/images/space.gif" width="167" height="1"></td>
+		<td><img border="0" src="/images/corner3.gif" width="22" height="24"></td>
+		<td width="100%" background="/images/btmbg.gif">&nbsp;</td>
+		<td><img border="0" src="/images/corner4.gif" width="28" height="24"></td>
+	</tr>
+	<tr>
+		<td bgcolor="#336699">&nbsp;</td>
+		<td bgcolor="#336699">&nbsp;</td>
+		<td height="26" bgcolor="#336699" align="center"><font color="#FFFFFF">
+		<!--webbot bot="Include" u-include="/include/copyright.htm" tag="BODY" startspan -->
+<p><font face="Verdana" size="1">Copyright &copy; 2012 Association of Digital 
+Forensics, Security and Law (ADFSL)</font></p>
+<!--webbot bot="Include" i-checksum="51960" endspan --></font></td>
+		<td bgcolor="#336699">&nbsp;</td>
+	</tr>
+</table>
+</body>
+</html>

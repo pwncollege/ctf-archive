@@ -1,0 +1,486 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta name="msvalidate.01" content="79C78EB33B8812273BEAA273668E9D92" />
+ <title>SANS InfoSec Reading Room - Forensics</title>
+ <link rel="shortcut icon" href="/favicon.ico" />
+ <meta http-equiv="Content-type" content="text/html; charset=ISO-8859-1" />
+  <meta name="robots" content="follow" />
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-25324117-1']);
+  _gaq.push(['_trackPageview']);  
+  _gaq.push(['_setLocalRemoteServerMode']);
+  _gaq.push(['_setLocalGifPath', 'http://www.sans.org']);      
+    
+  _gaq.push(['b._setAccount', 'UA-25324117-2']);
+  _gaq.push(['b._setDomainName', 'sans.org']);  
+  _gaq.push(['b._addIgnoredRef', 'sans.org']);
+  _gaq.push(['b._trackPageview']);     
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+<script src="/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+    urchinTracker();
+</script>
+
+ <link rel="stylesheet" href="/css/new-style/master.php?cc=201103250102" type="text/css" media="screen, projection,print" />
+    		   <link rel="stylesheet" href="/css/new-style/styles.css?cc=20110325" type="text/css" media="screen, projection,print" />
+    		   <link rel="stylesheet" href="/css/new-style/site_selector.css?cc=20110325" type="text/css" media="screen, projection,print" />
+    		   <link rel="stylesheet" href="/css/new-style/site.css?cc=20110325" type="text/css" media="screen, projection,print" /><link rel="stylesheet" href="/css/reading_room.css?cc=20070629" type="text/css" media="screen, projection, print" />
+<script type="text/javascript" src="/expandable.js"></script>
+<script type="text/javascript" src="/menu.js"></script>
+
+
+</head>
+
+<body>
+<div class="noheader">
+<div class="container default-navigation-all">
+<!-- header -->
+<div class="header">
+<a href="/"><img src="/images/design-site/logo.png" alt="SANS Institute" class="logo" /></a>
+
+<ul class="site-selector">
+ <li class="site-switcher"><a href="#"><span class="hidden">SANS Site Network</span></a>
+  <ul class="sites">
+   <li class="current-site">Current Site</li>
+   <li class="sans"><a href=""><img src="/images/design/custom/site-selector/site-icons/sans.png" alt="sans" />Training</a></li>
+   <li class="selector-help">Choose a different site <a href="/help/site-network"><span class="hidden">Help</span></a></li>
+   <li class="giac"><a href="http://www.giac.org"><img src="/images/design/custom/site-selector/site-icons/giac.png" alt="giac" />Certification</a></li>
+   <li class="sti"><a href="http://www.sans.edu"><img src="/images/design/custom/site-selector/site-icons/sti.png" alt="sti" />Cyber Security Graduate School</a></li>
+   <li class="isc"><a href="http://isc.sans.edu"><img src="/images/design/custom/site-selector/site-icons/isc.png" alt="isc" />Internet Storm Center</a></li>
+   <li class="awareness"><a href="http://www.securingthehuman.org"><img src="/images/design/custom/site-selector/site-icons/awareness.png" alt="awareness" />Security Awareness Training</a></li>
+   <li class="forensics"><a href="http://computer-forensics.sans.org"><img src="/images/design/custom/site-selector/site-icons/forensics.png" alt="forensics" />Computer Forensics</a></li>
+   <li class="pentest "><a href="http://pen-testing.sans.org"><img src="/images/design/custom/site-selector/site-icons/pentest.png" alt="pentest">Penetration Testing</a></li>
+   <li class="audit"><a href="http://it-audit.sans.org"><img src="/images/design/custom/site-selector/site-icons/audit.png" alt="audit" />IT Audit</a></li>
+   <li class="ssi"><a href="http://software-security.sans.org"><img src="/images/design/custom/site-selector/site-icons/software-security.png" alt="ssi" />Software Security</a></li>
+  </ul>
+ </li>
+</ul>
+
+<div class="clear"></div>
+<div class="top-menu">
+<ul class="dropdown user-menu">
+ <li class="root-item login-status"><a href="https://www.sans.org/account/">Secure Access / Login<!-- |--></a>  </li>
+  <!-- <li class="root-item cart-status"><a href="#">My Cart <img src="/images/icons/silk/cart.png" /></a></li> -->
+ <li class="root-item">
+  <!-- Begin Google Site Search -->
+  <form action="/search/results/" method="post" id="cse-search-box" class="search-form">
+   <input type="text" id="q" name="q" value="" class="search-input" />
+   <input id="search-button" type="image" title="Search" name="sa" value="Search" class="search-submit" src="/images/icons2/custom/search.png" />
+  </form>
+  <script type="text/javascript" src="http://www.google.com/cse/brand?form=cse-search-box&lang=en"></script>
+ </li>
+</ul><!-- / .login-status -->
+
+<div class="clear"></div>
+<ul class="dropdown main-nav">
+
+ <li class="root-item"><a href="/find-training/" onClick="_gaq.push(['_trackEvent', 'FindTraining', 'Clicked', 'FindTrainingMenu']);">Find Training</a>
+  <ul>
+   <li class="first"><a href="/find-training/" onClick="_gaq.push(['_trackEvent', 'SearchForTraining', 'Clicked', 'FindTrainingMenu']);">Search For Training</a></li>
+   <li><a href="/security-training/bylocation/" onClick="_gaq.push(['_trackEvent', 'UpcomingEvents', 'Clicked', 'FindTrainingMenu']);">Upcoming Events</a></li>
+    <li><a href="/security-training/courses.php" onClick="_gaq.push(['_trackEvent', 'CourseList', 'Clicked', 'FindTrainingMenu']);">Course List</a>
+    <li><a href="/security-training/curriculums/index.php" onClick="_gaq.push(['_trackEvent', 'TrainingList', 'Clicked', 'FindTrainingMenu']);">Training Curricula &raquo;</a>
+     <ul>
+      <li class="first"><a href="/security-training/curriculums/security" onClick="_gaq.push(['_trackEvent', 'SecCurr', 'Clicked', 'FindTrainingMenu']);">Security</a></li>
+      <li class="no-top-radius"><a href="/security-training/curriculums/management" onClick="_gaq.push(['_trackEvent', 'MgtCurr', 'Clicked', 'FindTrainingMenu']);">Management</a></li>
+      <li class="no-top-radius"><a href="/security-training/curriculums/forensics" onClick="_gaq.push(['_trackEvent', 'ForCurr', 'Clicked', 'FindTrainingMenu']);">Forensics</a></li>
+      <li class="no-top-radius"><a href="/security-training/curriculums/developer" onClick="_gaq.push(['_trackEvent', 'DevCurr', 'Clicked', 'FindTrainingMenu']);">Secure Software Development</a></li>
+      <li class="no-top-radius"><a href="/security-training/curriculums/pen-test" onClick="_gaq.push(['_trackEvent', 'PenTestCurr', 'Clicked', 'FindTrainingMenu']);">Penetration Testing</a></li>
+      <li class="no-top-radius"><a href="/security-training/curriculums/system-administrator" onClick="_gaq.push(['_trackEvent', 'SysAdmCurr', 'Clicked', 'FindTrainingMenu']);">System Administration</a></li>
+      <li class="no-top-radius"><a href="/security-training/curriculums/incident-handler" onClick="_gaq.push(['_trackEvent', 'IncHandCurr', 'Clicked', 'FindTrainingMenu']);">Incident Handling</a></li>
+      <li class="no-top-radius"><a href="/security-training/curriculums/intrusion" onClick="_gaq.push(['_trackEvent', 'InstruAnCurr', 'Clicked', 'FindTrainingMenu']);">Intrusion Analysis</a></li>
+      <li class="no-top-radius"><a href="/security-training/curriculums/audit" onClick="_gaq.push(['_trackEvent', 'AuditCurr', 'Clicked', 'FindTrainingMenu']);">Audit</a></li>
+      <li class="no-top-radius"><a href="/security-training/curriculums/legal" onClick="_gaq.push(['_trackEvent', 'LegalCurr', 'Clicked', 'FindTrainingMenu']);">Legal</a></li>
+      <li class="no-top-radius last"><a href="/security-training/curriculums/cyber-guardian" onClick="_gaq.push(['_trackEvent', 'CyberGCurr', 'Clicked', 'FindTrainingMenu']);">Cyber Guardian</a></li>
+     </ul>
+    </li>
+    <li><a href="/security-training/discounts.php" onClick="_gaq.push(['_trackEvent', 'GroupDisc', 'Clicked', 'FindTrainingMenu']);">Group Discounts</a></li>
+   <li class="last"><a href="/security-training/calendars/" onClick="_gaq.push(['_trackEvent', 'Calendars', 'Clicked', 'FindTrainingMenu']);">Calendars</a></li>
+  </ul>
+ </li>
+
+ <li class="root-item"><a href="/security-training/" onClick="_gaq.push(['_trackEvent', 'LiveTraining', 'Clicked', 'LiveTrainingMenu']);">Live Training</a>
+  <ul>
+   <li class="first"><a href="/find-training/live" onClick="_gaq.push(['_trackEvent', 'SearchTraining', 'Clicked', 'LiveTrainingMenu']);">Search For Training</a></li>
+    <li><a href="/security-training/bylocation/" onClick="_gaq.push(['_trackEvent', 'UpcomEvents', 'Clicked', 'LiveTrainingMenu']);">Upcoming Events</a></li>
+    <li><a href="/summit/" onClick="_gaq.push(['_trackEvent', 'Summits', 'Clicked', 'LiveTrainingMenu']);">Summit Series</a></li>
+    <li><a href="/community_sans/" onClick="_gaq.push(['_trackEvent', 'Community', 'Clicked', 'LiveTrainingMenu']);">Community Events</a></li>
+    <li><a href="/mentor/" onClick="_gaq.push(['_trackEvent', 'Mentor', 'Clicked', 'LiveTrainingMenu']);">Mentor Program</a></li>
+    <li><a href="/onsite/" onClick="_gaq.push(['_trackEvent', 'Onsite', 'Clicked', 'LiveTrainingMenu']);">OnSite</a></li>
+    <li><a href="/partnership/" onClick="_gaq.push(['_trackEvent', 'Partners', 'Clicked', 'LiveTrainingMenu']);">Partnership Series</a></li>
+    <li><a href="/work-study" onClick="_gaq.push(['_trackEvent', 'WorkStudy', 'Clicked', 'LiveTrainingMenu']);">Work Study</a></li>
+    <li class="last"><a href="/coins/" onClick="_gaq.push(['_trackEvent', 'Coins', 'Clicked', 'LiveTrainingMenu']);">COINS</a></li>
+  </ul>
+ </li>
+
+ <li class="root-item"><a href="/online-security-training/" onClick="_gaq.push(['_trackEvent', 'OnlineTraining', 'Clicked', 'OnlineTrainingMenu']);">Online Training</a>
+  <ul>
+   <li class="first"><a href="/find-training/online" onClick="_gaq.push(['_trackEvent', 'SearchTraining', 'Clicked', 'OnlineTrainingMenu']);">Search For Training</a></li>
+   <li><a href="/virtual-training/vlive" onClick="_gaq.push(['_trackEvent', 'vLive', 'Clicked', 'OnlineTrainingMenu']);">vLive</a></li>
+   <li><a href="/ondemand/" onClick="_gaq.push(['_trackEvent', 'OnDemand', 'Clicked', 'OnlineTrainingMenu']);">OnDemand</a></li>
+   <li><a href="/virtual-training/event-simulcast" onClick="_gaq.push(['_trackEvent', 'Simulcast', 'Clicked', 'OnlineTrainingMenu']);">Simulcast &raquo;</a>
+     <ul>
+       <li class="first"><a href="/virtual-training/event-simulcast" onClick="_gaq.push(['_trackEvent', 'EventSimu', 'Clicked', 'OnlineTrainingMenu']);">Event</a></li>
+       <li class="last"><a href="/virtual-training/custom-simulcast" onClick="_gaq.push(['_trackEvent', 'CustSimu', 'Clicked', 'OnlineTrainingMenu']);">Custom</a></li>
+     </ul>
+   </li>
+   <li><a href="/security-awareness/" onClick="_gaq.push(['_trackEvent', 'SecAwareness', 'Clicked', 'OnlineTrainingMenu']);">Security Awareness</a></li>
+   <li class="last"><a href="/selfstudy/" onClick="_gaq.push(['_trackEvent', 'SelfStudy', 'Clicked', 'OnlineTrainingMenu']);">SelfStudy</a></li>
+  </ul>
+ </li>
+
+ <li class="root-item"><a href="/programs/" onClick="_gaq.push(['_trackEvent', 'Programs', 'Clicked', 'ProgramsMenu']);">Programs</a>
+  <ul>
+    <li class="first"><a href="/vouchers/" onClick="_gaq.push(['_trackEvent', 'VoucherCre', 'Clicked', 'ProgramsMenu']);">Voucher Credit</a></li>
+    <li><a href="/cyber-guardian" onClick="_gaq.push(['_trackEvent', 'CyberGuar', 'Clicked', 'ProgramsMenu']);">Cyber Guardian</a></li>
+    <li><a href="/cyber-ranges/" onClick="_gaq.push(['_trackEvent', 'CyberRang', 'Clicked', 'ProgramsMenu']);">Cyber Ranges</a></li>
+    <li class="last"><a href="/8570/" onClick="_gaq.push(['_trackEvent', 'Dod8570', 'Clicked', 'ProgramsMenu']);">DoD 8570</a></li>
+  </ul>
+ </li>
+
+ <li class="root-item"><a href="/security-resources/" onClick="_gaq.push(['_trackEvent', 'Resources', 'Clicked', 'ResourcesMenu']);">Resources</a>
+  <ul>
+    <li class="first"><a href="/reading_room/" onClick="_gaq.push(['_trackEvent', 'ReadingRoom', 'Clicked', 'ResourcesMenu']);">Reading Room</a></li>
+    <li><a href="/webcasts/" onClick="_gaq.push(['_trackEvent', 'Webcast', 'Clicked', 'ResourcesMenu']);">Webcasts</a></li>
+    <li><a href="/newsletters/" onClick="_gaq.push(['_trackEvent', 'Newsletter', 'Clicked', 'ResourcesMenu']);">Newsletters</a></li>
+    <li><a href="/top25-software-errors/" onClick="_gaq.push(['_trackEvent', 'Top25Err', 'Clicked', 'ResourcesMenu']);">Top 25 Programming Errors</a></li>
+    <li><a href="/critical-security-controls/" onClick="_gaq.push(['_trackEvent', 'CriticalControls', 'Clicked', 'ResourcesMenu']);">Top 20 Critical Controls</a></li>
+    <li><a href="/security-resources/policies/" onClick="_gaq.push(['_trackEvent', 'SecPolProj', 'Clicked', 'ResourcesMenu']);">Security Policy Project</a></li>
+    <li><a href="/security-resources/vendor_directory/" onClick="_gaq.push(['_trackEvent', 'FromVendor', 'Clicked', 'ResourcesMenu']);">From Vendors &raquo;</a>
+      <ul>
+        <li class="first"><a href="/security-resources/vendor_directory/" onClick="_gaq.push(['_trackEvent', 'BuyGuide', 'Clicked', 'ResourcesMenu']);">SANS Buyers Guide</a></li>
+        <li><a href="/security-resources/vendor_demos/" onClick="_gaq.push(['_trackEvent', 'SecToolDemo', 'Clicked', 'ResourcesMenu']);">Security Tool Demos</a></li>
+        <li class="last"><a href="/vendor-software-room/" onClick="_gaq.push(['_trackEvent', 'VendorBetaRoom', 'Clicked', 'ResourcesMenu']);">Vendor Software Beta Room</a></li>
+      </ul>
+    </li>
+    <li class="last"><a href="/security-resources/" onClick="_gaq.push(['_trackEvent', 'Additional', 'Clicked', 'ResourcesMenu']);">Additional Resources</a></li>
+  </ul>
+ </li>
+
+ <li class="root-item"><a href="/vendor/" class="vendor menu-vendor" onClick="_gaq.push(['_trackEvent', 'Vendor', 'Clicked', 'VendorMenu']);">Vendor</a>
+  <ul>
+    <li class="first"><a href="/vendor/" onClick="_gaq.push(['_trackEvent', 'Overview', 'Clicked', 'VendorMenu']);">Overview</a></li>
+    <li><a href="/vendor/sponsorship/" onClick="_gaq.push(['_trackEvent', 'Sponsor', 'Clicked', 'VendorMenu']);">Sponsorship</a></li>
+    <li><a href="/vendor/demographics/" onClick="_gaq.push(['_trackEvent', 'Demogra', 'Clicked', 'VendorMenu']);">Demographics</a></li>
+    <li><a href="/vendor/events/" onClick="_gaq.push(['_trackEvent', 'Events', 'Clicked', 'VendorMenu']);">Events</a></li>
+    <li class="last"><a href="/vendor/contact/" onClick="_gaq.push(['_trackEvent', 'Contact', 'Clicked', 'VendorMenu']);">Contact</a></li>
+  </ul>
+ </li>
+
+ <li class="root-item"><a href="/about/" class="about menu-about" onClick="_gaq.push(['_trackEvent', 'About', 'Clicked', 'AboutMenu']);">About</a>
+  <ul class="last-menu">
+    <li class="first"><a href="/about/sans.php" onClick="_gaq.push(['_trackEvent', 'AboutSans', 'Clicked', 'AboutMenu']);">About SANS</a></li>
+    <li><a href="/security-training/instructors.php" onClick="_gaq.push(['_trackEvent', 'CertInstru', 'Clicked', 'AboutMenu']);">Certified Instructors</a></li>
+    <li><a href="/about/contact.php" onClick="_gaq.push(['_trackEvent', 'ContactSans', 'Clicked', 'AboutMenu']);">Contact SANS</a></li>
+    <li><a href="/faq/" onClick="_gaq.push(['_trackEvent', 'SansFaq', 'Clicked', 'AboutMenu']);">SANS FAQ</a></li>
+    <li><a href="/link-to-us/" rel="nofollow" onClick="_gaq.push(['_trackEvent', 'LinkTo', 'Clicked', 'AboutMenu']);">Link to SANS</a></li>
+    <li><a href="/press/" onClick="_gaq.push(['_trackEvent', 'PressRoom', 'Clicked', 'AboutMenu']);">Press Room</a></li>
+    <li><a href="http://pgp.mit.edu:11371/pks/lookup?op=get&amp;search=0xA1694E46'" rel="nofollow" onClick="_gaq.push(['_trackEvent', 'PgpKey', 'Clicked', 'AboutMenu']);">PGP Key</a></li>
+    <li class="last"><a href="/key.txt" rel="nofollow" onClick="_gaq.push(['_trackEvent', 'PgpKeyLocal', 'Clicked', 'AboutMenu']);">PGP Key - Local Copy</a></li>
+  </ul>
+ </li>
+</ul><!-- / .dropdown -->
+</div><!-- / .top-menu -->
+
+<div class="clear"></div><!-- / .clear -->
+
+</div><!-- / .header -->
+</div><!--  end .container -->
+
+<div class="container">
+
+
+<div id="page-content">
+
+ <div id="page-title">
+   <h1>SANS InfoSec Reading Room - Forensics</h1>
+ </div>
+
+<div><a href="/reading_room/">&lt;&lt;Reading Room Home</a></div>
+
+ <div class="column">
+
+Most of the computer security white papers in the Reading Room have been written by students seeking GIAC certification to fulfill part of their certification requirements and are provided by SANS as a resource to benefit the security community at large. SANS attempts to ensure the accuracy of information, but papers are published "as is". Errors or inconsistencies may exist or may be introduced over time as material becomes dated. If you suspect a serious error, please contact <a href="mailto:webmaster@sans.org">webmaster@sans.org</a>. 
+
+<p><div id="rr-banner"><a href="/reading_room/images/click.php?id=553"  target="_blank"><img src="http://www.sans.org/reading_room/banner.php?id=553" alt="ArcSight" border="0" height="60" width="468" /></a></div></p><h5>Featuring 20 papers as of Feb 12, 2012</h5>
+<dl>
+ <dt><a target="_blank" href="/reading_room/whitepapers/forensics/iphone-backup-files-penetration-tester-039-s-treasure_33859"><img src="/images/pdf.gif" border="0" alt="PDF" /> <font size="2">iPhone Backup Files. A Penetration Tester&#039;s Treasure</font></a></dt>
+ <dd><strong>By: Darren Manners <font size="-2">(posted on February 7, 2012)</font></strong></dd>
+ <dd>
+ One of the noticeable changes in recent technology history is the emergence of the smart phone. Technological advances in these fields have created devices that have almost the equivalent power and functionality of desktop computers.<!-- <dd> - <a href="/reading_room/papers/download.php?id=33859&amp;c=952361236fea5d2693e4baafae673fa9">download paper <img src="/images/pdf.gif" border="0" alt="PDF" /></a></dd>-->
+</dl>
+<dl>
+ <dt><a target="_blank" href="/reading_room/whitepapers/forensics/what-039-s-name-uncover-meaning-windows-files-processes_33849"><img src="/images/pdf.gif" border="0" alt="PDF" /> <font size="2">What&#039;s in a Name: Uncover the Meaning behind Windows Files and Processes</font></a></dt>
+ <dd><strong>By: Larisa Long <font size="-2">(posted on February 7, 2012)</font></strong></dd>
+ <dd>
+ When a system has been compromised, forensic analysts have to be part researcher and part investigator. They must be able to parse out known or healthy files to eliminate them as possible clues. Like the old saying goes: know what you don&amp;#8223;t know, but know where to find the answers.<!-- <dd> - <a href="/reading_room/papers/download.php?id=33849&amp;c=952361236fea5d2693e4baafae673fa9">download paper <img src="/images/pdf.gif" border="0" alt="PDF" /></a></dd>-->
+</dl>
+<dl>
+ <dt><a target="_blank" href="/reading_room/whitepapers/forensics/computer-forensic-timeline-analysis-tapestry_33836"><img src="/images/pdf.gif" border="0" alt="PDF" /> <font size="2">Computer Forensic Timeline Analysis with Tapestry</font></a></dt>
+ <dd><strong>By: Derek Edwards <font size="-2">(posted on November 29, 2011)</font></strong></dd>
+ <dd>
+ One question commonly asked of investigators and incident responders is, &quot;What
+happened?&quot; The answer often takes the form of a story designed to convey understanding of complex mechanisms and interactions in a simple, straightforward way.<!-- <dd> - <a href="/reading_room/papers/download.php?id=33836&amp;c=952361236fea5d2693e4baafae673fa9">download paper <img src="/images/pdf.gif" border="0" alt="PDF" /></a></dd>-->
+</dl>
+<dl>
+ <dt><a target="_blank" href="/reading_room/whitepapers/forensics/identifying-malicious-code-infections-network_33739"><img src="/images/pdf.gif" border="0" alt="PDF" /> <font size="2">Identifying Malicious Code Infections Out of Network</font></a></dt>
+ <dd><strong>By: Ken Dunham <font size="-2">(posted on August 29, 2011)</font></strong></dd>
+ <dd>
+ Forensics is a complex subject, where details matter greatly. Even more complicated are investigations where forensic methods are used to further understand, identify, capture, and mature and understanding of a malicious attack that may have taken place on a computer.<!-- <dd> - <a href="/reading_room/papers/download.php?id=33739&amp;c=952361236fea5d2693e4baafae673fa9">download paper <img src="/images/pdf.gif" border="0" alt="PDF" /></a></dd>-->
+</dl>
+<dl>
+ <dt><a target="_blank" href="/reading_room/whitepapers/forensics/wireless-networks-windows-registry-computer-been_33659"><img src="/images/pdf.gif" border="0" alt="PDF" /> <font size="2">Wireless Networks and the Windows Registry - Just where has your computer been?</font></a></dt>
+ <dd><strong>By: Jonathan Risto <font size="-2">(posted on May 6, 2011)</font></strong></dd>
+ <dd>
+ The Windows Registry stores all of the information that is needed by the host operating system. This database contains all of the configurations, settings and options that are both created initially by the operating system, as well as user configuring settings and installed software.<!-- <dd> - <a href="/reading_room/papers/download.php?id=33659&amp;c=952361236fea5d2693e4baafae673fa9">download paper <img src="/images/pdf.gif" border="0" alt="PDF" /></a></dd>-->
+</dl>
+<dl>
+ <dt><a target="_blank" href="/reading_room/whitepapers/forensics/grow-forensic-tools-taxonomy-python-libraries-helpful-forensic-analysis_33453"><img src="/images/pdf.gif" border="0" alt="PDF" /> <font size="2">Grow Your Own Forensic Tools: A Taxonomy of Python Libraries Helpful for Forensic Analysis</font></a></dt>
+ <dd><strong>By: T.J. OConnor <font size="-2">(posted on September 13, 2010)</font></strong></dd>
+ <dd>
+ Forensics tools exist in abundance on the Web. Want to find a tool to dump the Windows SAM database out of volatile memory? Google and you will quickly find out that it exists. Want to mount and examine the contents of an iPhone backup? A tool exists to solve that problem as well. But what happens when a tool does not already exist? Anyone who has recently performed a forensic investigation knows that you are often left with a sense of frustration, knowing data existed only you had a tool that could access it.<!-- <dd> - <a href="/reading_room/papers/download.php?id=33453&amp;c=952361236fea5d2693e4baafae673fa9">download paper <img src="/images/pdf.gif" border="0" alt="PDF" /></a></dd>-->
+</dl>
+<dl>
+ <dt><a target="_blank" href="/reading_room/whitepapers/forensics/integrating-forensic-investigation-methodology-ediscovery_33448"><img src="/images/pdf.gif" border="0" alt="PDF" /> <font size="2">Integrating Forensic Investigation Methodology into eDiscovery</font></a></dt>
+ <dd><strong>By: Colin Chisholm <font size="-2">(posted on September 8, 2010)</font></strong></dd>
+ <dd>
+ The intent of this paper is twofold; to provide a primer on the eDiscovery
+process for forensic analysts and to provide guidance on the application of forensic investigative methodology to said process.
+Even though security practitioners such as forensic analysts operate in the legal vertical, they necessarily view and approach eDiscovery from a different perspective than legal professionals. This paper proposes that both parties can benefit when they integrate their processes; forensic tools and techniques have been used in the collection, analysis and presentation of evidence in the legal system for years. The history, and precedent, of applying forensic science to the legal process can be leveraged into the eDiscovery process. This paper will also detail how the scope and work for a forensic investigator during the eDiscovery process differs from a typical forensic investigation.
+<!-- <dd> - <a href="/reading_room/papers/download.php?id=33448&amp;c=952361236fea5d2693e4baafae673fa9">download paper <img src="/images/pdf.gif" border="0" alt="PDF" /></a></dd>-->
+</dl>
+<dl>
+ <dt><a target="_blank" href="/reading_room/whitepapers/forensics/reverse-engineering-microsoft-exfat-file-system_33274"><img src="/images/pdf.gif" border="0" alt="PDF" /> <font size="2">Reverse Engineering the Microsoft exFAT File System</font></a></dt>
+ <dd><strong>By: Robert Shullich <font size="-2">(posted on February 18, 2010)</font></strong></dd>
+ <dd>
+ As Technology pushes the limits of removable media - so drives the need for a new file system in order to support the larger capacities and faster access speeds being designed. Microsoft&#039;s answer to this need is the new Extended FAT File System (exFAT) which has been made available on its newer operating systems and which will be supported on the new secure digital extended capacity (SDXC) storage media. This new file system is proprietary and requires licensing from Microsoft and little has been published about exFAT&#039;s internals. Yet in order to perform a full and proper digital forensics examination of the media, the file system layout and organization must be known. This paper takes a look under the hood of exFAT and demystifies the file system structure in order to be an aid in the performance of a digital investigation. <!-- <dd> - <a href="/reading_room/papers/download.php?id=33274&amp;c=952361236fea5d2693e4baafae673fa9">download paper <img src="/images/pdf.gif" border="0" alt="PDF" /></a></dd>-->
+</dl>
+<dl>
+ <dt><a target="_blank" href="/reading_room/whitepapers/forensics/remotely-accessing-sensitive-resources_33269"><img src="/images/pdf.gif" border="0" alt="PDF" /> <font size="2">Remotely Accessing Sensitive Resources</font></a></dt>
+ <dd><strong>By: Jason  Ragland <font size="-2">(posted on February 18, 2010)</font></strong></dd>
+ <dd>
+ Often travelers require access to digital resources to perform work from off-site locations such as conferences, hotels, and homes.  These resources can include emails, research, medical, financial data, server management applications, or any number of other things that may have a very high need for confidentiality and integrity.  The acceptable methods for access vary based on a variety of factors such as size, complexity, available types of network connectivity, and bandwidth.  Access to email is often easily provided via a secure website and a password, for example.  If the resource consists of gigabytes of research data, it isn’t as simple.<!-- <dd> - <a href="/reading_room/papers/download.php?id=33269&amp;c=952361236fea5d2693e4baafae673fa9">download paper <img src="/images/pdf.gif" border="0" alt="PDF" /></a></dd>-->
+</dl>
+<dl>
+ <dt><a target="_blank" href="/reading_room/whitepapers/forensics/mac-os-malware-analysis_33178"><img src="/images/pdf.gif" border="0" alt="PDF" /> <font size="2">Mac OS X Malware Analysis</font></a></dt>
+ <dd><strong>By: Joel Yonts <font size="-2">(posted on September 8, 2009)</font></strong></dd>
+ <dd>
+ As Apple&#039;s market share raises so will the Malware!   Will incident responders be ready to address this rising threat?  Leveraging the knowledge and experience from the mature windows based malware analysis environment, a roadmap will be built that will equip those already 
+familiar with malware analysis to make the transition to the Mac OS X platform.  Topics covered will include analysis of filesystem events, network traffic capture &amp; analysis, live response tools, and examination of OS X constructs such as executable file structure and supporting 
+configuration files. 
+<!-- <dd> - <a href="/reading_room/papers/download.php?id=33178&amp;c=952361236fea5d2693e4baafae673fa9">download paper <img src="/images/pdf.gif" border="0" alt="PDF" /></a></dd>-->
+</dl>
+<dl>
+ <dt><a target="_blank" href="/reading_room/whitepapers/forensics/techniques-tools-recovering-analyzing-data-volatile-memory_33049"><img src="/images/pdf.gif" border="0" alt="PDF" /> <font size="2">Techniques and Tools for Recovering and Analyzing Data from Volatile Memory</font></a></dt>
+ <dd><strong>By: Kristine Amari <font size="-2">(posted on March 26, 2009)</font></strong></dd>
+ <dd>
+ There are many relatively new tools available that have been developed in order to recover and dissect the information that can be gleaned from volatile memory, but because this is a relatively new and fast-growing field many forensic analysts do not know or take advantage of these assets.<!-- <dd> - <a href="/reading_room/papers/download.php?id=33049&amp;c=952361236fea5d2693e4baafae673fa9">download paper <img src="/images/pdf.gif" border="0" alt="PDF" /></a></dd>-->
+</dl>
+<dl>
+ <dt><a target="_blank" href="/reading_room/whitepapers/forensics/data-carving-concepts_32969"><img src="/images/pdf.gif" border="0" alt="PDF" /> <font size="2">Data Carving Concepts</font></a></dt>
+ <dd><strong>By: Antonio Merola <font size="-2">(posted on November 19, 2008)</font></strong></dd>
+ <dd>
+ <!-- <dd> - <a href="/reading_room/papers/download.php?id=32969&amp;c=952361236fea5d2693e4baafae673fa9">download paper <img src="/images/pdf.gif" border="0" alt="PDF" /></a></dd>-->
+</dl>
+<dl>
+ <dt><a target="_blank" href="/reading_room/whitepapers/forensics/mobile-device-forensics_32888"><img src="/images/pdf.gif" border="0" alt="PDF" /> <font size="2">Mobile Device Forensics</font></a></dt>
+ <dd><strong>By: Andrew Martin <font size="-2">(posted on September 5, 2008)</font></strong></dd>
+ <dd>
+ <!-- <dd> - <a href="/reading_room/papers/download.php?id=32888&amp;c=952361236fea5d2693e4baafae673fa9">download paper <img src="/images/pdf.gif" border="0" alt="PDF" /></a></dd>-->
+</dl>
+<dl>
+ <dt><a target="_blank" href="/reading_room/whitepapers/forensics/forensic-primer-usenet-evidence_32829"><img src="/images/pdf.gif" border="0" alt="PDF" /> <font size="2">A Forensic Primer for Usenet Evidence</font></a></dt>
+ <dd><strong>By: Mark Lachniet <font size="-2">(posted on June 25, 2008)</font></strong></dd>
+ <dd>
+ <!-- <dd> - <a href="/reading_room/papers/download.php?id=32829&amp;c=952361236fea5d2693e4baafae673fa9">download paper <img src="/images/pdf.gif" border="0" alt="PDF" /></a></dd>-->
+</dl>
+<dl>
+ <dt><a target="_blank" href="/reading_room/whitepapers/forensics/ex-tip-extensible-timeline-analysis-framework-perl_32767"><img src="/images/pdf.gif" border="0" alt="PDF" /> <font size="2">Ex-Tip: An Extensible Timeline Analysis Framework in Perl</font></a></dt>
+ <dd><strong>By: Michael Cloppert <font size="-2">(posted on May 21, 2008)</font></strong></dd>
+ <dd>
+ <!-- <dd> - <a href="/reading_room/papers/download.php?id=32767&amp;c=952361236fea5d2693e4baafae673fa9">download paper <img src="/images/pdf.gif" border="0" alt="PDF" /></a></dd>-->
+</dl>
+<dl>
+ <dt><a target="_blank" href="/reading_room/whitepapers/forensics/advantage-ext3-journaling-file-system-forensic-investigation_2011"><img src="/images/pdf.gif" border="0" alt="PDF" /> <font size="2">Taking advantage of Ext3 journaling file system in a forensic investigation</font></a></dt>
+ <dd><strong>By: Gregorio Narvaez <font size="-2">(posted on December 11, 2007)</font></strong></dd>
+ <dd>
+ <!-- <dd> - <a href="/reading_room/papers/download.php?id=2011&amp;c=952361236fea5d2693e4baafae673fa9">download paper <img src="/images/pdf.gif" border="0" alt="PDF" /></a></dd>-->
+</dl>
+<dl>
+ <dt><a target="_blank" href="/reading_room/whitepapers/forensics/forensic-analysis-sql-server-2005-database-server_1906"><img src="/images/pdf.gif" border="0" alt="PDF" /> <font size="2">Forensic Analysis of a SQL Server 2005 Database Server</font></a></dt>
+ <dd><strong>By: Kevvie Fowler <font size="-2">(posted on September 28, 2007)</font></strong></dd>
+ <dd>
+ <!-- <dd> - <a href="/reading_room/papers/download.php?id=1906&amp;c=952361236fea5d2693e4baafae673fa9">download paper <img src="/images/pdf.gif" border="0" alt="PDF" /></a></dd>-->
+</dl>
+<dl>
+ <dt><a target="_blank" href="/reading_room/whitepapers/forensics/forensic-analysis-compromised-intranet-server_1652"><img src="/images/pdf.gif" border="0" alt="PDF" /> <font size="2">Forensic Analysis of a Compromised Intranet Server</font></a></dt>
+ <dd><strong>By: Roberto Obialero <font size="-2">(posted on June 8, 2006)</font></strong></dd>
+ <dd>
+ This document details the forensic analysis process of a compromised Intranet server, from the verification stage to the dissection of malware code, supported by an explanation of the followed methodology.<!-- <dd> - <a href="/reading_room/papers/download.php?id=1652&amp;c=952361236fea5d2693e4baafae673fa9">download paper <img src="/images/pdf.gif" border="0" alt="PDF" /></a></dd>-->
+</dl>
+<dl>
+ <dt><a target="_blank" href="/reading_room/whitepapers/forensics/forensic-investigator_1453"><img src="/images/pdf.gif" border="0" alt="PDF" /> <font size="2">Becoming a Forensic Investigator</font></a></dt>
+ <dd><strong>By: Mark Maher <font size="-2">(posted on August 15, 2004)</font></strong></dd>
+ <dd>
+ One of the forensic analyst's primary functions is the dissemination of the forensic process to the intended audience. To do their jobs successfully, they must write forensic reports that are both technically accurate and easy to read.<!-- <dd> - <a href="/reading_room/papers/download.php?id=1453&amp;c=952361236fea5d2693e4baafae673fa9">download paper <img src="/images/pdf.gif" border="0" alt="PDF" /></a></dd>-->
+</dl>
+<dl>
+ <dt><a target="_blank" href="/reading_room/whitepapers/forensics/case-forensics-tools-cross-domain-data-transfers_1126"><img src="/images/pdf.gif" border="0" alt="PDF" /> <font size="2">A Case for Forensics Tools in Cross-Domain Data Transfers</font></a></dt>
+ <dd><strong>By: Dwane Knott <font size="-2">(posted on October 31, 2003)</font></strong></dd>
+ <dd>
+ Corporate and government organizations dependence on computers and networks for storage and movement of data raises significant security issues. This paper presents three options, the most practical is more fully discussed.<!-- <dd> - <a href="/reading_room/papers/download.php?id=1126&amp;c=952361236fea5d2693e4baafae673fa9">download paper <img src="/images/pdf.gif" border="0" alt="PDF" /></a></dd>-->
+</dl>
+
+ </div>
+ <div class="links">
+           <a href="/reading_room/"><img src="/images/rr_logo_sm.jpg" alt="SANS Reading Room" /></a>
+ 
+<!--
+<div class="small-logo">
+<a href="/"><span>SANS Home</span></a>
+</div>
+-->
+
+<div id="checkthem">
+<h6>Check Them Out!</h6>
+<ul class="altbackground">
+<li><a href="/info/94229" title="SANS 2012"><strong>SANS 2012</strong></a></li>
+<li><a href="https://www.securingthehuman.org/" title="https://www.securingthehuman.org/">Security Awareness Training</a></li>
+<li><a href="/top-cyber-security-risks/" title="Top Cyber Security Risks">Top Cyber Security Risks</a></li>
+<li><a href="/reading_room/" title="Reading Room">SANS Reading Room</a></li>
+<li><a href="/security-training/roadmap.php" title="Career Roadmap">Career Roadmap</a></li>
+<li><a href="http://isc.sans.edu">Storm Center</a></li>
+<li><a href="/whatworks/">WhatWorks&trade;</a></li>
+<li><a href="/newsletters/">Newsletters</a></li>
+</ul>
+</div>
+
+ <div id="forensicsSite">
+  <a href="http://computer-forensics.sans.org"><img src="http://computer-forensics.sans.org/images/design-site/logo.png" width="140" /></a>
+  <h5>Fight Crime.<br />Unravel Incidents.... One Byte at a Time.</h5>
+  <p><a href="http://computer-forensics.sans.org">Visit the <em>NEW</em> Forensics & E-Discovery Site &gt;&gt;</a></p>
+ </div>
+<div class="altbackground" style="margin-bottom:10px;padding-left:10px;padding-right:10px">   <p><q>It was, overall, the most in-depth training on securing Windows I&#039;ve attended!</q><br /> -Matt Hurst, Madison City Schools</p>
+</div>
+<a href="/info/94004/0a8456ec6124198c56ffef68f1c653ab00hgs19149" target="_top">
+<img src="/images/banners/11179.jpg" alt="SANS Brisbane 2012" title="SANS Brisbane 2012" height="600" width="160" border="0" />
+</a> </div>
+</div>
+
+</div>
+<div class="clear"></div><!-- / .clear -->
+</div><!-- /container -->
+
+<!-- Bottom Content -->
+<div class="bottom-content">
+<div class="container">
+
+<div class="footer-column whitepapers">
+<h3>Latest Whitepapers</h3>
+                <p><a href="/reading_room/whitepapers/hackers
+/user-agent-field-analyzing-detecting-abnormal-malicious-organization_33874">The User Agent Field: Analyzing and Detecting the Abnormal or Malicious in your Organization</a><br />By Darren Manners</p>
+                            <p><a href="/reading_room/whitepapers/application
+/auditing-aspnet-applications-pci-dss-compliance_33869">Auditing ASP.NET applications for PCI DSS compliance</a><br />By Christian Moldes</p>
+                            <p><a href="/reading_room/whitepapers/hackers
+/profiling-hackers_33864">Profiling Hackers</a><br />By Larisa Long</p>
+            
+</div><!-- / .footer-column -->
+
+<div class="footer-column tweets">
+<h3>Latest Tweets</h3>
+                <p><a href="http://twitter.com/SANSInstitute/statuses/168079814631239681">@SANSInstitute: RT @hackmanj: #Infosec Daily Edition is out!  [...]</a><br />
+                Fri, 10 Feb 2012 21:12:05 +0000
+</p>
+                            <p><a href="http://twitter.com/SANSInstitute/statuses/168079475748249600">@SANSInstitute: Congratulations! RT @viceroyx1 Passed #GSEC y [...]</a><br />
+                Fri, 10 Feb 2012 21:10:44 +0000
+</p>
+                            <p><a href="http://twitter.com/SANSInstitute/statuses/168079093173190659">@SANSInstitute: #FF @robtlee @sansforensics #ComputerForensic [...]</a><br />
+                Fri, 10 Feb 2012 21:09:13 +0000
+</p>
+            
+
+</div><!-- / .footer-column -->
+
+<div class="footer-column contact">
+<h3>Contact Us</h3>
+<p>(301) 654-SANS (7267)<br />
+Mon-Fri 9am - 8pm EST/EDT<br />
+<a href="mailto:info@sans.org">info@sans.org</a></p>
+</div><!-- / .footer-column contact -->
+
+<div class="footer-quote-box">
+            <p>"This has been a great way to get working knowledge that would have taken years of experience to learn."<br />- Josh Carlson, Nelnet</p>
+                    <p>"Because of the use of real-world examples it's easier to apply what you learn."<br />- Danny Hill, Friedkin Companies, Inc.</p>
+                    <p>"The perfect balance of theory and hands-on experience."<br />- James D. Perry II, University of Tennessee</p>
+        </div>
+
+</div><!-- / .bottom-content -->
+</div><!-- / .container -->
+
+<!-- Footer -->
+<div id="footer">
+<div class="container">
+<img src="/images/design-site/logo-footer.png" alt="SANS: Computer Security Training, Network Security Research, InfoSec Resources" class="logo-footer" />
+
+<ul class="site-selector">
+ <li class="site-switcher"><a href="#"><span class="hidden">SANS Site Network</span></a>
+  <ul class="sites">
+   <li class="current-site">Current Site</li>
+   <li class="sans"><a href=""><img src="/images/design/custom/site-selector/site-icons/sans.png" alt="sans" />Training</a></li>
+   <li class="selector-help">Choose a different site <a href="/help/site-network"><span class="hidden">Help</span></a></li>
+   <li class="giac"><a href="http://www.giac.org"><img src="/images/design/custom/site-selector/site-icons/giac.png" alt="giac" />Certification</a></li>
+   <li class="sti"><a href="http://www.sans.edu"><img src="/images/design/custom/site-selector/site-icons/sti.png" alt="sti" />College</a></li>
+   <li class="isc"><a href="http://isc.sans.edu"><img src="/images/design/custom/site-selector/site-icons/isc.png" alt="isc" />Internet Storm Center</a></li>
+   <li class="awareness"><a href="http://www.securingthehuman.org"><img src="/images/design/custom/site-selector/site-icons/awareness.png" alt="awareness" />Security Awareness</a></li>
+   <li class="forensics"><a href="http://computer-forensics.sans.org"><img src="/images/design/custom/site-selector/site-icons/forensics.png" alt="forensics" />Computer Forensics</a></li>
+   <li class="audit"><a href="http://it-audit.sans.org"><img src="/images/design/custom/site-selector/site-icons/audit.png" alt="audit" />IT Audit</a></li>
+   <li class="ssi"><a href="http://software-security.sans.org"><img src="/images/design/custom/site-selector/site-icons/software-security.png" alt="ssi" />Software Security</a></li>
+   <li class="blogs last"><a href="http://blogs.sans.org"><img src="/images/design/custom/site-selector/site-icons/blogs.png" alt="blogs" />Latest News</a></li>
+  </ul>
+ </li>
+</ul>
+
+<div class="latest-icons">
+<a href="http://twitter.com/SANSInstitute"><img src="/images/design/custom/icons/twitter-icon.png" alt="Twitter" /></a>
+<a href="https://www.facebook.com/pages/SANS-Institute/173623382673767"><img src="/images/design/custom/icons/facebook-icon.png" alt="Facebook" /></a>
+<a href="/rss.php"><img src="/images/design/custom/icons/rss-icon.png" alt="RSS" /></a>
+</div><!-- end .latest-icons -->
+
+<div class="bottom-nav align-right">
+<ul>
+ <li><a href="/security-training/courses.php">Courses</a></li>
+ <li><a href="/security-training/">Live Training</a></li>
+ <li><a href="/online-security-training/">Online Training</a></li>
+ <li><a href="/security-resources.php">Resources</a></li>
+ <li><a href="/vendor/">Vendor</a></li>
+ <li><a href="privacy.php">Privacy Policy</a></li>
+ <li class="last"><a href="/about/">About</a></li>
+
+</ul>
+
+<p class="copyright align-right"><a href="http://www.sans.org/trademarkuse.pdf">Trademark Usage Policy</a> | &copy; 2000-2012 The SANS&#8482; Institute</p>
+</div><!-- end .bottom-nav align-right-->
+</div><!-- end .container-->
+</div><!-- end .footer-->
+</div>
+</div><!-- end .body -->
+
+
+</body>
+
+</html>
+
+

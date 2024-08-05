@@ -1,0 +1,497 @@
+{
+   "browser": {
+      "check_default_browser": false,
+      "window_placement": {
+         "bottom": 750,
+         "left": 10,
+         "maximized": true,
+         "right": 1060,
+         "top": 10,
+         "work_area_bottom": 760,
+         "work_area_left": 0,
+         "work_area_right": 1280,
+         "work_area_top": 0
+      }
+   },
+   "countryid_at_install": 21843,
+   "default_apps_install_state": 1,
+   "default_search_provider": {
+      "enabled": true,
+      "encodings": "UTF-8",
+      "icon_url": "http://www.google.com/favicon.ico",
+      "id": "2",
+      "instant_url": "{google:baseURL}webhp?{google:RLZ}sourceid=chrome-instant&{google:instantFieldTrialGroupParameter}ie={inputEncoding}&ion=1{searchTerms}",
+      "keyword": "google.co.kr",
+      "name": "Google",
+      "prepopulate_id": "1",
+      "search_url": "{google:baseURL}search?{google:RLZ}{google:acceptedSuggestion}{google:originalQueryForSuggestion}{google:searchFieldtrialParameter}{google:instantFieldTrialGroupParameter}sourceid=chrome&ie={inputEncoding}&q={searchTerms}",
+      "suggest_url": "{google:baseSuggestURL}search?{google:searchFieldtrialParameter}{google:instantFieldTrialGroupParameter}client=chrome&hl={language}&q={searchTerms}"
+   },
+   "distribution": {
+      "make_chrome_default_for_user": true
+   },
+   "dns_prefetching": {
+      "host_referral_list": [ 2, [ "http://ad.naver.com/", [ "http://adcreative.naver.com/", 1.4707950466852084 ] ], [ "http://c.amazon-adsystem.com/", [ "http://bid.openx.net/", 0.42336122328318365, "http://cm.g.doubleclick.net/", 0.42336122328318365, "http://s.amazon-adsystem.com/", 2.396937274834959, "http://tag.admeld.com/", 0.42336122328318365 ] ], [ "http://c.www.endless.com/", [ "http://s.amazon-adsystem.com/", 1.8572295440774185 ] ], [ "http://cafe.naver.com/", [ "http://ad.naver.com/", 2.319614810014193, "http://cafe.naver.com/", 8.078664445414352, "http://cafefiles.naver.net/", 0.8822360650398162, "http://cafeimgs.naver.com/", 1.0104242112421828, "http://cafeimgs.naver.net/", 3.175144145733935, "http://static.naver.com/", 0.8822360650398162 ] ], [ "http://castbox.shopping.naver.com/", [ "http://imgshopping.naver.net/", 5.262409718241153, "http://static.naver.net/", 2.025335319191497, "http://static.shopping.naver.net/", 2.319614810014193 ] ], [ "http://d3l3lkinz3f56t.cloudfront.net/", [ "http://r.turn.com/", 1.0788630547788933, "http://s.amazon-adsystem.com/", 1.4662652639166562 ] ], [ "http://docbe.com/", [ "http://api.facebook.com/", 2.2086570657060003, "http://docbe.com/", 3.4923210013299997, "http://docs.google.com/", 2.529573049612, "http://pagead2.googlesyndication.com/", 2.2086570657060003, "http://platform.twitter.com/", 2.2086570657060003, "http://s10.histats.com/", 2.2086570657060003, "http://ssl.gstatic.com/", 2.2086570657060003, "http://static.ak.fbcdn.net/", 3.1714050174239996, "http://www.facebook.com/", 2.529573049612, "https://apis.google.com/", 2.529573049612 ] ], [ "http://facebook.com/", [ "http://www.facebook.com/", 2.127083409456189 ] ], [ "http://finding.about.co.kr/", [ "http://finding.about.co.kr/", 3.202453282482282, "http://i.iabout.kr/", 8.205204626468115, "http://i01.iabout.kr/", 5.556689209063849, "http://i02.iabout.kr/", 5.556689209063849, "http://is.iabout.kr/", 2.025335319191497, "http://member.about.co.kr/", 2.319614810014193, "http://pics.about.co.kr/", 22.03634069513483, "http://plug.about.co.kr/", 2.025335319191497, "http://script.about.co.kr/", 12.619396988808553 ] ], [ "http://hardware.slashdot.org/", [ "http://a.fsdn.com/", 2.396937274834959, "http://static.ak.fbcdn.net/", 1.8572295440774185 ] ], [ "http://nate.com/", [ "http://www.nate.com/", 2.127083409456189 ] ], [ "http://news.nate.com/", [ "http://c1img.cyworld.co.kr/", 2.127083409456189, "http://common.nate.com/", 3.206498870971269, "http://cyad1.nate.com/", 2.396937274834959, "http://image.nate.com/", 1.8572295440774185, "http://nac.nate.com/", 2.127083409456189, "http://news.nate.com/", 6.44474525551651, "http://newscomm.nate.com/", 2.6667911402137294, "http://nimg.nate.com/", 19.397730793697473, "http://stat.nate.com/", 1.8572295440774185 ] ], [ "http://nv1.ad.naver.com/", [ "http://adcreative.naver.com/", 2.9081737916595856, "http://static.naver.com/", 2.025335319191497 ] ], [ "http://nv2.ad.naver.com/", [ "http://adcreative.naver.com/", 2.319614810014193 ] ], [ "http://platform.twitter.com/", [ "http://cdn.api.twitter.com/", 0.487591351649251, "http://platform.twitter.com/", 0.8728794039355053 ] ], [ "http://s.amazon-adsystem.com/", [ "http://c.amazon-adsystem.com/", 3.015874100467705, "http://sis.amazon.com/", 0.4036084614441109 ] ], [ "http://s7.addthis.com/", [ "http://cf.addthis.com/", 1.8572295440774185, "http://m.addthisedge.com/", 1.8572295440774185 ] ], [ "http://search.naver.com/", [ "http://img3.map.naver.net/", 2.319614810014193, "http://imgnews.naver.net/", 2.319614810014193, "http://lcs.naver.com/", 2.025335319191497, "http://n.search.naver.com/", 2.025335319191497, "http://sstatic.naver.com/", 2.9081737916595856, "http://sstatic.naver.net/", 38.515992181205924, "http://static.naver.net/", 4.379571245773065, "http://thumbvideo.naver.net/", 2.319614810014193, "http://tv03.search.naver.net/", 2.319614810014193, "http://wstatic.naver.com/", 2.319614810014193 ] ], [ "http://sis.amazon.com/", [ "http://c.www.endless.com/", 2.127083409456189 ] ], [ "http://sstatic.naver.com/", [ "http://sstatic.naver.net/", 0.22324072072384424 ] ], [ "http://static.nid.naver.com/", [ "http://static.naver.net/", 5.262409718241153, "http://static.nid.naver.com/", 3.496732773304977 ] ], [ "http://tools.google.com/", [ "http://fonts.googleapis.com/", 2.066525344788971, "http://themes.googleusercontent.com/", 2.066525344788971, "http://tools.google.com/", 3.1152098481147172, "http://www.google-analytics.com/", 2.066525344788971, "http://www.google.com/", 2.5908675964518446 ] ], [ "http://web.search.naver.com/", [ "http://sstatic.naver.com/", 2.025335319191497, "http://sstatic.naver.net/", 6.733807172354633 ] ], [ "http://www.about.co.kr/", [ "http://mctech.mac20.com/", 2.025335319191497, "http://script.about.co.kr/", 2.025335319191497 ] ], [ "http://www.amazon.com/", [ "http://g-ecx.images-amazon.com/", 2.6667911402137294, "http://z-ecx.images-amazon.com/", 2.6667911402137294 ] ], [ "http://www.digital-forensics.co.kr/", [ "http://digital-forensics.co.kr/", 1.0104242112421828, "http://www.digital-forensics.co.kr/", 1.523176796051648 ] ], [ "http://www.facebook.com/", [ "http://static.ak.fbcdn.net/", 2.850489033518 ] ], [ "http://www.gomtv.com/", [ "http://app.gomtv.com/", 1.967674022654115, "http://img.gomtv.com/", 2.5394767300920633 ] ], [ "http://www.google.co.kr/", [ "http://google.co.kr/", 2.1457765990453503, "http://news.google.co.kr/", 0.32137973237197764, "http://ssl.gstatic.com/", 0.331417350682899, "http://t0.gstatic.com/", 0.32137032456435466, "http://www.google.co.kr/", 1.054353181191219 ] ], [ "http://www.google.com/", [ "http://googleads.g.doubleclick.net/", 2.2535753763730892, "http://ssl.google-analytics.com/", 1.967674022654115, "http://tools.google.com/", 1.967674022654115, "http://www.google-analytics.com/", 2.2535753763730892, "http://www.google.com/", 6.827997035876671, "http://www.googleadservices.com/", 2.5394767300920633, "https://ssl.google-analytics.com/", 1.967674022654115 ] ], [ "http://www.kmplayer.com/", [ "http://www.kmplayer.com/", 11.355553577301372 ] ], [ "http://www.nate.com/", [ "http://ctc.news.nate.com/", 1.8572295440774185, "http://i.sp.011st.com/", 5.90503752475897, "http://main.nateimg.co.kr/", 7.524160717031592, "http://main2.nateimg.co.kr/", 9.413137774682982, "http://news.nateimg.co.kr/", 3.206498870971269, "http://stat.nate.com/", 1.8572295440774185, "http://statclick.nate.com/", 1.8572295440774185, "http://statetc.cyworld.com/", 1.8572295440774185, "http://statetc.nate.com/", 1.8572295440774185, "http://www.nate.com/", 9.413137774682982 ] ], [ "http://www.naver.com/", [ "http://castbox.shopping.naver.com/", 2.319614810014193, "http://lcs.naver.com/", 2.025335319191497, "http://nv1.ad.naver.com/", 2.319614810014193, "http://nv2.ad.naver.com/", 2.319614810014193, "http://sstatic.naver.net/", 2.319614810014193, "http://static.naver.net/", 8.793763608113506, "http://static.nid.naver.com/", 2.319614810014193, "http://static1.naver.net/", 4.08529175495037, "http://thumb.opencast.naver.net/", 2.025335319191497, "http://www.naver.com/", 4.968130227418458 ] ], [ "http://www.slideshare.net/", [ "http://cdn.slidesharecdn.com/", 4.285914332486349, "http://partner.googleadservices.com/", 2.127083409456189, "http://platform.linkedin.com/", 1.8572295440774185, "http://platform.twitter.com/", 1.8572295440774185, "http://pubads.g.doubleclick.net/", 1.8572295440774185, "http://public.slidesharecdn.com/", 4.01606046710758, "https://apis.google.com/", 1.8572295440774185 ] ], [ "https://docs.google.com/", [ "https://docs.google.com/", 2.529573049612 ] ], [ "https://plusone.google.com/", [ "https://apis.google.com/", 2.2086570657060003, "https://plusone.google.com/", 2.529573049612, "https://ssl.gstatic.com/", 2.2086570657060003 ] ] ],
+      "startup_list": [ 1 ]
+   },
+   "download": {
+      "directory_upgrade": true,
+      "extensions_to_open": ""
+   },
+   "extensions": {
+      "autoupdate": {
+         "last_check": "12973457584045195",
+         "next_check": "12973487834618343"
+      },
+      "blacklistupdate": {
+         "lastpingday": "12973420801165554",
+         "version": "0.0.0.89"
+      },
+      "chrome_url_overrides": {
+         "bookmarks": [ "chrome-extension://eemcgdkfndhakfknompkggombfjjjeno/main.html" ]
+      },
+      "settings": {
+         "aemcjbfajnnmhblifaejadoecfoaebld": {
+            "blacklist": true
+         },
+         "agmhonoepgcnakccfpidhjehlocaeaaj": {
+            "blacklist": true
+         },
+         "ahfgeienlihckogmohjhadlkjgocpleb": {
+            "active_permissions": {
+               "api": [ "appNotifications", "management", "webstorePrivate" ]
+            },
+            "app_launcher_index": -2,
+            "page_index": 0
+         },
+         "ahjfgnikolodijnpakeknpilnemojlhc": {
+            "blacklist": true
+         },
+         "alcbnnpmipohgdllkkglhkbncijplago": {
+            "blacklist": true
+         },
+         "apdmgffkfhjfeejmbjidennfjdkmmmbl": {
+            "blacklist": true
+         },
+         "blpcfgokakmgnkcojhhkbfbldkacnbeo": {
+            "app_launcher_index": 3,
+            "from_bookmark": true,
+            "from_webstore": false,
+            "install_time": "12973433620067554",
+            "lastpingday": "12973420801339554",
+            "location": 2,
+            "manifest": {
+               "app": {
+                  "launch": {
+                     "container": "tab",
+                     "web_url": "http://www.youtube.com/"
+                  },
+                  "web_content": {
+                     "enabled": true,
+                     "origin": "http://www.youtube.com"
+                  }
+               },
+               "current_locale": "en_GB",
+               "default_locale": "en",
+               "description": "The world's most popular online video community.",
+               "icons": {
+                  "128": "128.png"
+               },
+               "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDC/HotmFlyuz5FaHaIbVBhhL4BwbcUtsfWwzgUMpZt5ZsLB2nW/Y5xwNkkPANYGdVsJkT2GPpRRIKBO5QiJ7jPMa3EZtcZHpkygBlQLSjMhdrAKevpKgIl6YTkwzNvExY6rzVDzeE9zqnIs33eppY4S5QcoALMxuSWlMKqgFQjHQIDAQAB",
+               "name": "YouTube",
+               "update_url": "http://clients2.google.com/service/update2/crx",
+               "version": "4.2.3"
+            },
+            "page_index": 0,
+            "path": "blpcfgokakmgnkcojhhkbfbldkacnbeo\\4.2.3_0",
+            "state": 1
+         },
+         "cbbjhegipokkofhhicbckicchjpcpeni": {
+            "blacklist": true
+         },
+         "cihlkpohodpdkdnfalhdkhhlhmhffmbe": {
+            "blacklist": true
+         },
+         "coajchbkdbfhmhbgcjepiofllfjjcpfp": {
+            "blacklist": true
+         },
+         "coobgpohoikkiipiblmjeljniedjpjpf": {
+            "app_launcher_index": 5,
+            "from_bookmark": true,
+            "from_webstore": false,
+            "install_time": "12973433621016554",
+            "lastpingday": "12973420801339554",
+            "location": 2,
+            "manifest": {
+               "app": {
+                  "launch": {
+                     "web_url": "http://www.google.com/"
+                  },
+                  "urls": [ "*://www.google.com/search", "*://www.google.com/webhp", "*://www.google.com/imgres" ]
+               },
+               "current_locale": "en_GB",
+               "default_locale": "en",
+               "description": "The fastest way to search the web.",
+               "icons": {
+                  "128": "128.png",
+                  "16": "16.png",
+                  "32": "32.png",
+                  "48": "48.png"
+               },
+               "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDIiso3Loy5VJHL40shGhUl6it5ZG55XB9q/2EX6aa88jAxwPutbCgy5d9bm1YmBzLfSgpX4xcpgTU08ydWbd7b50fbkLsqWl1mRhxoqnN01kuNfv9Hbz9dWWYd+O4ZfD3L2XZs0wQqo0y6k64n+qeLkUMd1MIhf6MR8Xz1SOA8pwIDAQAB",
+               "name": "Google Search",
+               "update_url": "http://clients2.google.com/service/update2/crx",
+               "version": "0.0.0.17"
+            },
+            "page_index": 0,
+            "path": "coobgpohoikkiipiblmjeljniedjpjpf\\0.0.0.17_0",
+            "state": 1
+         },
+         "danapgfidmepmcfbjjacceiaiiioieio": {
+            "blacklist": true
+         },
+         "dbmdicehacbaohlockjgdglcobimmjkh": {
+            "blacklist": true
+         },
+         "dgcfmgdfbfbgcpbendbhbkfjppboebed": {
+            "blacklist": true
+         },
+         "doneghboglgnflpdicnkaojmmljgejkj": {
+            "blacklist": true
+         },
+         "dpgenihgggagjjggfocjceeobjkadcbc": {
+            "blacklist": true
+         },
+         "ebdcdchjcndpjhehacedepnggfdbfkpn": {
+            "blacklist": true
+         },
+         "efhjelcghjkfigiagdfbfilndaffpmdj": {
+            "blacklist": true
+         },
+         "efnaljpgehfilpmkhobibbjceeeondmn": {
+            "blacklist": true
+         },
+         "fmonlemffgbabjifjfaoamdflijecdbk": {
+            "blacklist": true
+         },
+         "fpbippbofbmgmbojjmgfcifpmdaelcmd": {
+            "blacklist": true
+         },
+         "gjkbghdignnlcknknflbigpammebiolo": {
+            "blacklist": true
+         },
+         "gkjeccpmibljcfpfapfljciimedljpnm": {
+            "blacklist": true
+         },
+         "hcapokajkngndbglnfglpfdpoeidmpha": {
+            "blacklist": true
+         },
+         "hcpndbchnlgojmnijaldkicigmihmdca": {
+            "blacklist": true
+         },
+         "hgjgaeknhmidehalnmokomhpfhbfmpcm": {
+            "blacklist": true
+         },
+         "hhfiljkpjapjjphcocclhhaldpfkkjbi": {
+            "blacklist": true
+         },
+         "hhjmkijkgojfifipdgmiemghfikbohcm": {
+            "blacklist": true
+         },
+         "hpibmhghjndideebpackbdlpncgkcppp": {
+            "blacklist": true
+         },
+         "ifbkndkaolfbjjhnnhfmkbkoclpdkpli": {
+            "blacklist": true
+         },
+         "ijenlpgidnapbndonoinbkhekgjonojg": {
+            "blacklist": true
+         },
+         "imfbomjbodpfgfhfahlgkkcllmhbelhk": {
+            "blacklist": true
+         },
+         "iomejadoamfilglofmeaffghddcgapmf": {
+            "blacklist": true
+         },
+         "jjnkfllhcgkgnfbekpnmoikpfihpjfli": {
+            "blacklist": true
+         },
+         "kbipembkfhbdmkkkfbigmohilmknjnof": {
+            "blacklist": true
+         },
+         "kcanfkmhccbaheheaackijegkclkaeic": {
+            "blacklist": true
+         },
+         "kinhljbhjmcmoddhdoodekeklmjapjff": {
+            "blacklist": true
+         },
+         "lbficnmfealeidppcbgdcbemgfjodbkg": {
+            "blacklist": true
+         },
+         "lceaiepehinnomgijphkmjccbigkljkj": {
+            "blacklist": true
+         },
+         "likifpgnijjfbdegfepoalpamlgnfofi": {
+            "blacklist": true
+         },
+         "lncjcfkpannmofmpgdfoonkniofdnaba": {
+            "blacklist": true
+         },
+         "mbmdaiddhfoljplpdhohimgieioblfif": {
+            "blacklist": true
+         },
+         "mfhfkclojmdocagbmecgcnlofppebebd": {
+            "blacklist": true
+         },
+         "mjgobkikdipfikmaoakdcdbicpioljgg": {
+            "blacklist": true
+         },
+         "mkobblpffgbncfhijabakfafmkjdmmnm": {
+            "blacklist": true
+         },
+         "mlmegahemifabfmdnndafagnncfbnahn": {
+            "blacklist": true
+         },
+         "mlmmbepkgelpbenpobinockmiehdahai": {
+            "blacklist": true
+         },
+         "mnichagcickblneeijmfnmoiakigmmhf": {
+            "blacklist": true
+         },
+         "ndiogongcmocdgjciemhagfhpjamehpe": {
+            "blacklist": true
+         },
+         "nidodbfomffkfabciljelkbdiabkeehe": {
+            "blacklist": true
+         },
+         "nmphbnbmgfccfhcmibikmhcgajjpelpf": {
+            "blacklist": true
+         },
+         "nnioepmjbjjlflmdgjanlcmbjahljeeo": {
+            "blacklist": true
+         },
+         "onpnpccdagncipgnoofbhchlbajcjnkd": {
+            "blacklist": true
+         },
+         "pbglijbamgmlcpnnpbfjkbdeheejjloj": {
+            "blacklist": true
+         },
+         "pfcelnbmkeoaeicedjomcjkcammlkdbk": {
+            "blacklist": true
+         },
+         "pjdhkkcnlbfebiokpeghfffajaabahfo": {
+            "blacklist": true
+         },
+         "pjkljhegncpnkpknbcohdijeoejaedia": {
+            "active_permissions": {
+               "api": [ "notifications" ]
+            },
+            "app_launcher_index": 4,
+            "from_bookmark": true,
+            "from_webstore": false,
+            "install_time": "12973433620607554",
+            "lastpingday": "12973420801339554",
+            "location": 2,
+            "manifest": {
+               "app": {
+                  "launch": {
+                     "container": "tab",
+                     "web_url": "https://mail.google.com/mail/ca"
+                  },
+                  "urls": [ "*://mail.google.com/mail/ca" ]
+               },
+               "current_locale": "en_GB",
+               "default_locale": "en",
+               "description": "Fast, searchable email with less spam.",
+               "icons": {
+                  "128": "128.png"
+               },
+               "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDCuGglK43iAz3J9BEYK/Mz6ZhloIMMDqQSAaf3vJt4eHbTbSDsu4WdQ9dQDRcKlg8nwQdePBt0C3PSUBtiSNSS37Z3qEGfS7LCju3h6pI1Yr9MQtxw+jUa7kXXIS09VV73pEFUT/F7c6Qe8L5ZxgAcBvXBh1Fie63qb02I9XQ/CQIDAQAB",
+               "name": "Gmail",
+               "options_page": "https://mail.google.com/mail/ca/#settings",
+               "permissions": [ "notifications" ],
+               "update_url": "http://clients2.google.com/service/update2/crx",
+               "version": "7"
+            },
+            "page_index": 0,
+            "path": "pjkljhegncpnkpknbcohdijeoejaedia\\7_0",
+            "state": 1
+         },
+         "pkbbbncikcipejaiiiioboongndhmjgl": {
+            "blacklist": true
+         },
+         "pkbkkendemaimikinaefldfljliecapm": {
+            "blacklist": true
+         },
+         "pnpgiaejfbdapllkchhgchjpdbcpiooa": {
+            "blacklist": true
+         }
+      }
+   },
+   "homepage": "http://www.google.com/",
+   "homepage_is_newtabpage": true,
+   "http_throttling": {
+      "enabled": true
+   },
+   "instant": {
+      "enabled_time": "12973426682576156"
+   },
+   "net": {
+      "http_server_properties": {
+         "apis.google.com:443": {
+            "settings": [ {
+               "id": 5,
+               "value": 40
+            }, {
+               "id": 6,
+               "value": 0
+            } ],
+            "supports_spdy": true
+         },
+         "ssl.google-analytics.com:443": {
+            "supports_spdy": true
+         },
+         "ssl.gstatic.com:443": {
+            "settings": [ {
+               "id": 5,
+               "value": 32
+            }, {
+               "id": 6,
+               "value": 0
+            } ],
+            "supports_spdy": true
+         },
+         "toolbarqueries.google.com:443": {
+            "settings": [ {
+               "id": 5,
+               "value": 32
+            }, {
+               "id": 6,
+               "value": 0
+            } ],
+            "supports_spdy": true
+         }
+      }
+   },
+   "ntp": {
+      "app_page_names": [ "Apps" ],
+      "promo_build": 0,
+      "promo_closed": false,
+      "promo_end": 1323071940.0,
+      "promo_feature_mask": 0,
+      "promo_group": 51,
+      "promo_group_max": 0,
+      "promo_group_timeslice": 0,
+      "promo_is_logged_in_to_plus": false,
+      "promo_line": "\u003Ca href=\"http://www.google.co.uk/chromebook/index.html#utm_campaign=en-uk&utm_source=en-ntp-holidays-en-uk-bkws&utm_medium=ntp-holidays\"\u003EGet a Chromebook for the holidays\u003C/a\u003E: the computer powered by Chrome.",
+      "promo_platform": 0,
+      "promo_resource_cache_update": "1328953096.913398",
+      "promo_start": 1321862280.0,
+      "promo_views": 0,
+      "promo_views_max": 0,
+      "sign_in_promo": {
+         "group_max": 100
+      }
+   },
+   "plugins": {
+      "enabled_internal_pdf3": true,
+      "enabled_nacl": true,
+      "last_internal_directory": "C:\\Users\\proneer\\AppData\\Local\\Google\\Chrome\\Application\\17.0.963.46",
+      "plugins_list": [ {
+         "enabled": false,
+         "name": "Shockwave Flash",
+         "path": "C:\\Users\\proneer\\AppData\\Local\\Google\\Chrome\\User Data\\PepperFlash\\11.1.31.203\\pepflashplayer.dll",
+         "version": "11.1.31.203"
+      }, {
+         "enabled": true,
+         "name": "Shockwave Flash",
+         "path": "C:\\Users\\proneer\\AppData\\Local\\Google\\Chrome\\Application\\17.0.963.46\\gcswf32.dll",
+         "version": "11,1,102,55"
+      }, {
+         "enabled": true,
+         "name": "Shockwave Flash",
+         "path": "C:\\Windows\\system32\\Macromed\\Flash\\NPSWF32.dll",
+         "version": "9,0,45,0"
+      }, {
+         "enabled": true,
+         "name": "Flash"
+      }, {
+         "enabled": true,
+         "name": "Remoting Viewer",
+         "path": "internal-remoting-viewer",
+         "version": ""
+      }, {
+         "enabled": true,
+         "name": "Remoting Viewer"
+      }, {
+         "enabled": true,
+         "name": "Native Client",
+         "path": "C:\\Users\\proneer\\AppData\\Local\\Google\\Chrome\\Application\\17.0.963.46\\ppGoogleNaClPluginChrome.dll",
+         "version": ""
+      }, {
+         "enabled": true,
+         "name": "Native Client"
+      }, {
+         "enabled": true,
+         "name": "Chrome PDF Viewer",
+         "path": "C:\\Users\\proneer\\AppData\\Local\\Google\\Chrome\\Application\\17.0.963.46\\pdf.dll",
+         "version": ""
+      }, {
+         "enabled": true,
+         "name": "Chrome PDF Viewer"
+      }, {
+         "enabled": true,
+         "name": "Adobe Acrobat",
+         "path": "C:\\Program Files\\Adobe\\Acrobat 8.0\\Acrobat\\Browser\\nppdf32.dll",
+         "version": "8.0.0.2006102200"
+      }, {
+         "enabled": false,
+         "name": "Adobe Acrobat"
+      }, {
+         "enabled": true,
+         "name": "Microsoft Office 2010",
+         "path": "C:\\PROGRA~1\\MICROS~1\\Office14\\NPAUTHZ.DLL",
+         "version": "14.0.4730.1010"
+      }, {
+         "enabled": true,
+         "name": "Microsoft Office 2010",
+         "path": "C:\\PROGRA~1\\MICROS~1\\Office14\\NPSPWRAP.DLL",
+         "version": "14.0.4761.1000"
+      }, {
+         "enabled": true,
+         "name": "Microsoft Office"
+      }, {
+         "enabled": true,
+         "name": "Google Update",
+         "path": "C:\\Users\\proneer\\AppData\\Local\\Google\\Update\\1.3.21.99\\npGoogleUpdate3.dll",
+         "version": "1.3.21.99"
+      }, {
+         "enabled": true,
+         "name": "Google Update"
+      }, {
+         "enabled": true,
+         "name": "Default Plug-in",
+         "path": "default_plugin",
+         "version": "1"
+      }, {
+         "enabled": true,
+         "name": "Default Plug-in"
+      } ]
+   },
+   "profile": {
+      "content_settings": {
+         "pref_version": 1
+      },
+      "exited_cleanly": true
+   },
+   "sync_promo": {
+      "startup_count": 6,
+      "view_count": 6
+   },
+   "translate_accepted_count": {
+      "ko": 0
+   },
+   "translate_denied_count": {
+      "ko": 1
+   }
+}

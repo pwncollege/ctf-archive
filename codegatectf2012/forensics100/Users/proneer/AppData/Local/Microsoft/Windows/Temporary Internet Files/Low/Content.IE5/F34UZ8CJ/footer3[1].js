@@ -1,0 +1,2 @@
+document.write("<img width=1 height=1 src='http://hits.informer.com/log.php?id=" + jsparams + "&urlid=" + urlid + "&r=" + Math.round(100000 * Math.random()) + "'/>");
+document.write(unescape("%3Cscript src='http://hits.informer.com/js.php?id=1&v="+ Math.round(100000 * Math.random())+"' type='text/javascript'%3E%3C/script%3E"));

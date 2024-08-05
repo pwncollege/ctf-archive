@@ -1,0 +1,140 @@
+window {
+	background-color: transparent;
+	padding: 0px;
+	margin: 0px;
+}
+
+body {
+	padding: 0px;
+	margin: 0px;
+}
+
+.mainVBox {
+	margin-bottom: 0px;
+	margin-left: 0px;
+	margin-right: 0px;
+	opacity: 0;
+}
+
+.headerBox {
+	height: 36px;
+}
+
+.topLeftBox {
+	background-image: url('chrome://asktoolbar/skin/tl.png');
+	width: 6px;
+	height: 6px;
+}
+
+.topRightBox {
+	background-image: url('chrome://asktoolbar/skin/tr.png');
+	width: 6px;
+	height: 6px;
+}
+
+.topBox {
+	background-image: url('chrome://asktoolbar/skin/t.png');
+	background-repeat: repeat-x;
+	height: 6px;
+}
+
+.topLeftBox_pointer_tl {
+	background-image: url('chrome://asktoolbar/skin/tl-ptl.png');
+	width: 48px;
+	height: 36px;
+}
+
+.topRightBox_pointer_tl {
+	background-image: url('chrome://asktoolbar/skin/tr-ptl.png');
+	width: 6px;
+	height: 36px;
+}
+
+.topLeftBox_pointer_tr {
+	background-image: url('chrome://asktoolbar/skin/tl-ptr.png');
+	width: 6px;
+	height: 36px;
+}
+
+.topRightBox_pointer_tr {
+	background-image: url('chrome://asktoolbar/skin/tr-ptr.png');
+	width: 48px;
+	height: 36px;
+}
+
+.topBox_pointer {
+	background-image: url('chrome://asktoolbar/skin/t-p.png');
+	background-repeat: repeat-x;
+	height: 36px;
+}
+
+.bottomLeftBox {
+	background-image: url('chrome://asktoolbar/skin/bl.png');
+	width: 6px;
+	height: 6px;
+}
+
+.bottomRightBox {
+	background-image: url('chrome://asktoolbar/skin/br.png');
+	width: 6px;
+	height: 6px;
+}
+
+.bottomBox {
+	background-image: url('chrome://asktoolbar/skin/b.png');
+	background-repeat: repeat-x;
+	height: 6px;
+}
+
+.bottomLeftBox_pointer_bl {
+	background-image: url('chrome://asktoolbar/skin/bl-pbl.png');
+	width: 48px;
+	height: 36px;
+}
+
+.bottomRightBox_pointer_bl {
+	background-image: url('chrome://asktoolbar/skin/br-pbl.png');
+	width: 6px;
+	height: 36px;
+}
+
+.bottomLeftBox_pointer_br {
+	background-image: url('chrome://asktoolbar/skin/bl-pbr.png');
+	width: 6px;
+	height: 36px;
+}
+
+.bottomRightBox_pointer_br {
+	background-image: url('chrome://asktoolbar/skin/br-pbr.png');
+	width: 48px;
+	height: 36px;
+}
+
+.bottomBox_pointer {
+	background-image: url('chrome://asktoolbar/skin/b-p.png');
+	background-repeat: repeat-x;
+	height: 36px;
+}
+
+.bodyRightBox {
+	width: 6px;
+	background-image: url('chrome://asktoolbar/skin/r.png');
+	background-repeat: repeat-y;
+}
+
+.bodyLeftBox {
+	width: 6px;
+	background-image: url('chrome://asktoolbar/skin/l.png');
+	background-repeat: repeat-y;
+}
+
+browser {
+	-moz-appearance: none;
+	border-left: 1px solid #d9ebfa;
+	padding: 0px;
+	margin: 0px;
+}
+
+.bodyMiddleBox {
+	background : white;
+}

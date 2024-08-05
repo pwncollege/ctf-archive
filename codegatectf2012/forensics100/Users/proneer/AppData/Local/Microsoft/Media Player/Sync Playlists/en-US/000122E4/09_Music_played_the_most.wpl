@@ -1,0 +1,25 @@
+<?wpl version="1.0"?>
+<smil>
+    <head>
+        <meta name="Generator" content="Microsoft Windows Media Player -- 9.0.0.3075"/>
+        <title>Music played the most</title>
+    </head>
+    <body>
+        <seq>
+            <smartPlaylist version="1.0.0.0">
+                <querySet>
+                    <sourceFilter id="{4202947A-A563-4B05-A754-A1B4B5989849}" name="Music in my library">
+                        <fragment name="Sort by">
+                            <argument name="value">Playcount: Total</argument>
+                            <argument name="condition">Descending</argument>
+                        </fragment>
+                        <fragment name="Playcount: Total">
+                            <argument name="condition">Is Greater Than</argument>
+                            <argument name="value">5</argument>
+                        </fragment>
+                    </sourceFilter>
+                </querySet>
+            </smartPlaylist>
+        </seq>
+    </body>
+</smil>

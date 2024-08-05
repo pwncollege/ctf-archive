@@ -1,0 +1,569 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+	<title> 곰TV </title>
+	<meta http-equiv="Content-type" content="text/html; charset=euc-kr">
+<meta http-equiv="Content-Type" content="text/html; charset=euc-kr">
+<meta name="keywords" content="곰TV,곰티비,GOM,GOMTV,채널,오픈채널,PCC,UCC,멀티미디어,곰플레이어,그래텍,영상,동영상,영화,뉴스,생중계,라이브,엔터테인먼트,뮤직,스포츠,게임,정보,다큐,다큐멘터리,교육,강좌,라이프,여행,맛집,오피니언">
+	<link rel="stylesheet" href="http://img.gomtv.com/css/products.css?20101020_1148" type="text/css">
+	<script type="text/javascript" src="http://img.gomtv.com/js/common.js"></script>
+	<script type="text/javascript" src="http://img.gomtv.com/js/products.js"></script>
+</head>
+
+<body>
+<script language='javascript' src='/common/script.js'></script>
+<!--
+<script type="text/javascript" src="/autosearch/ajaXml.js"></script>
+<script type="text/javascript" src="/autosearch/autoComplete.js"></script>
+-->
+<script language=javascript>
+var searchImg;
+var searchImgJson = Array('');
+
+document.domain='gomtv.com';
+window.name='GOMTV';
+
+function chk_empty(str)
+{
+	if ( str.match(/\S/) == null || str.match(/\S/) == "" ) { return(true); }
+	else { return(false);}
+}
+
+function goWord( word ) {
+	document.location.href = 'http://search.gomtv.com/search.gom?key=' + word;
+}
+function blank_keyword()
+{
+	var tf = document.topSearchForm;
+	if( tf.key.value == '검색어/채널번호를 입력하세요!' )
+	{
+		tf.key.value = '';
+		tf.key.focus();
+	}
+}
+function toggleOptions(){
+	if (document.getElementById('select_web').style.display=='none'){
+		document.getElementById('select_web').style.display='block';
+	}
+	else{
+		document.getElementById('select_web').style.display='none';
+	}
+}
+function selectSearchOption(value, option){
+	document.getElementById('systype').value=value;
+	document.getElementById('curOption').innerHTML=option;
+	document.getElementById('select_web').style.display='none';
+}
+</script>
+<style>
+.selectArea {background:url(http://img.gomtv.com/images/form/select_bg2.gif) repeat-x left top;}
+.selectArea .right {background:url(http://img.gomtv.com/images/form/select_right2.gif) no-repeat left top;}
+
+.selectArea {margin-top:0;width:77px;height:24px;}
+*html .selectArea {margin-top:1px;}
+.selectArea .left {width:0;height:24px;float:left;}
+.selectArea .right {width:15px;height:24px;float:right;}
+.selectArea .right span {display:block;width:100px;height:24px;margin-left:-185px;position:absolute;margin-left: -62px; width: 77px; cursor:pointer;}
+.selectArea .center {display:block;color:#898989;font:normal 12px dotum,'돋움';padding:6px 0 0 9px;white-space:nowrap;font: 12px dotum; width: 50px; cursor:pointer;}
+
+#select_web {position:absolute;background-color:#ffffff;width:77px;border-top:0px solid #FFFFFF;border-left:1px solid #FF7E00;border-right:1px solid #ff7e00;border-bottom:1px solid #ff7e00;padding:3px;}
+#select_web li {cursor:pointer;}
+#select_web a {color:#898989; font:normal 12px dotum,'돋음'; padding-left:5px; text-decoration:none; width:69px;}
+#select_web a:hover {color:#ff7e00; font:normal 12px dotum,'돋음'; padding-left:5px; text-decoration:none; width:69px;}
+
+#help{ position: absolute; z-index: 40; }
+#content{ position: absolute; z-index: 50; }
+</style>
+<div id="sub_top_gnb">
+
+	<div id="products_top">
+
+		<div id="products_top_bar">
+			<div class="logo">
+
+				<span style="display:none;">
+				<img src="http://img.gomtv.com/images/products/img_top_logo_on_new.gif" width="97" height="16" />
+				</span>
+
+				<a href="javascript:;" onclick="javascript:if (document.getElementById('pw_top_link_layer').style.display=='none'){setDisplay('pw_top_link_layer','block');document.getElementById('logoImgSrc').src='http://img.gomtv.com/images/products/img_top_logo_on_new.gif';}else{setDisplay('pw_top_link_layer','none');document.getElementById('logoImgSrc').src='http://img.gomtv.com/images/products/img_top_logo_off_new.gif';}" onfocus="this.blur()"><img id="logoImgSrc" src="http://img.gomtv.com/images/products/img_top_logo_off_new.gif" width="97" height="16" alt=""></a>
+
+				<div id="pw_top_link_layer" class="layer2" style="display:none;">
+					<table width="105" border="0" cellspacing="0" cellpadding="0">
+						<tr>
+							<td height="5" background="http://img.gomtv.com/images/openChannel/ocha_gnb_bg01.gif"></td>
+						</tr>
+						<tr>
+							<td valign="top" background="http://img.gomtv.com/images/openChannel/ocha_gnb_bg02.gif" style="padding-bottom:5px">
+								<ul style="list-style-type:none">
+									<li><a href="http://www.gomtv.com/">홈</a></li>
+									<li><a href="http://dstore.gomtv.com/">다운로드</a></li>
+									<li><a href="http://www.gomtv.com/music/">뮤직</a></li>
+									<li><a href="http://movie.gomtv.com/">영화</a></li>
+									<li><a href="http://drama.gomtv.com/">드라마</a></li>
+									<li><a href="http://www.gomtv.com/game/">게임</a></li>
+									<li><a href="http://www.gomtv.com/enter/">연예오락</a></li>
+									<li><a href="http://www.gomtv.com/newsinfo/">뉴스정보</a></li>
+									<li><a href="http://live.gomtv.com/">생중계</a></li>
+								</ul>
+							</td>
+						</tr>
+						<tr>
+							<td height="5" background="http://img.gomtv.com/images/openChannel/ocha_gnb_bg03.gif"></td>
+						</tr>
+					</table>
+				</div>
+
+				<!-- <ul id="pw_top_link_layer" class="layer" style="display:none;">
+					<li><a href="http://movie.gomtv.com/">영화</a></li>
+					<li><a href="http://www.gomtv.com/game/">게임</a></li>
+					<li><a href="http://www.gomtv.com/sports/">스포츠</a></li>
+					<li><a href="http://news.gomtv.com/">뉴스</a></li>
+					<li><a href="http://drama.gomtv.com/">드라마</a></li>
+					<li><a href="http://www.gomtv.com/music/">뮤직</a></li>
+					<li><a href="http://live.gomtv.com/">생중계</a></li>
+				</ul> -->
+			</div>
+			<div class="btn_set">
+				<!--a href="#"><img class="btn1" src="http://img.gomtv.com/images/products/btn_top_mytv_off.gif" width="46" height="12" alt="마이TV"></a>
+				<img class="bar" src="http://img.gomtv.com/images/products/img_top_bar.gif" width="1" height="12" alt="" /-->
+				<a href="javascript:Login()"><img src="http://img.gomtv.com/images/products/btn_top_login.gif" width="48" height="18" alt="로그인"></a>
+				<a href="http://private.gomtv.com/user/join.gom"><img src="http://img.gomtv.com/images/products/btn_top_member_join.gif" width="57" height="18" alt="회원가입"></a>
+			</div>
+
+		</div>
+
+
+
+		<div class="products_search">
+			<div class="logo_img"><a href="http://gom.gomtv.com" onClick='blur()'><img src="http://img.gomtv.com/images/products/logo_im_new.gif" width="202" height="23" alt="" /></a></div>
+
+			<div id="search_form2">
+				<form class="searchForm" name="topSearchForm" method="get" action="javascript:goTopSearch();">
+				<input type="hidden" name="systype" id="systype" value="">
+				<ul class="set">
+					<li class="sel">
+						<div class="selectarea">
+						<div class="left"></div>
+						<div class="right"><span onclick="javascript:toggleOptions();" onfocus="this.blur()"></span></div>
+						<div class="center" id="curOption" onclick="javascript:toggleOptions();">전체</div>
+						</div>
+						<ul id="select_web" style="display:none;">
+							<li onclick="javascript:selectSearchOption('all', '전체');"><a href="javascript:;" onfocus="this.blur()">전체</a></li>
+							<li onclick="javascript:selectSearchOption('channel', '채널');"><a href="javascript:;" onfocus="this.blur()">채널</a></li>
+							<li onclick="javascript:selectSearchOption('people', '인물');"><a href="javascript:;" onfocus="this.blur()">인물</a></li>
+							<li onclick="javascript:selectSearchOption('music', '뮤직');"><a href="javascript:;" onfocus="this.blur()">뮤직</a></li>
+							<li onclick="javascript:selectSearchOption('program', '프로그램');"><a href="javascript:;" onfocus="this.blur()">프로그램</a></li>
+							<li onclick="javascript:selectSearchOption('drama', '드라마');"><a href="javascript:;" onfocus="this.blur()">드라마</a></li>
+							<li onclick="javascript:selectSearchOption('movie', '영화');"><a href="javascript:;" onfocus="this.blur()">영화</a></li>
+							<li onclick="javascript:selectSearchOption('video', '영상');"><a href="javascript:;" onfocus="this.blur()">영상</a></li>
+							<li onclick="javascript:selectSearchOption('board', '게시판');"><a href="javascript:;" onfocus="this.blur()">게시판</a></li>
+							<li onclick="javascript:selectSearchOption('review', '리뷰');"><a href="javascript:;" onfocus="this.blur()">리뷰</a></li>
+							<li onclick="javascript:selectSearchOption('jamak', '자막');"><a href="javascript:;" onfocus="this.blur()">자막</a></li>
+						</ul>
+					</li>
+					<li class="inp">
+						<!--자동완성 START-->
+						<input id="searchbgimg" class="search_input" xonChange="setListBox();" xonClick="blank_keyword();" type="text" name="key" value="" autocomplete="off" xonkeyup="setListBox();" xonkeydown="ArrowListBox();" xonkeypress="setListBox();"  xonMousedown="this.style.backgroundImage='';searchbg_state=0;" >
+						<!--
+						<div style='position:absolute;top:5px;left:235px'><a href=javascript:helpMessage(1) onfocus='blur();'><img id=helpimg src='http://img.gomtv.com/images/common/icon/search_layer_open.gif' style='cursor:pointer;' border=0></a></div>
+
+						<div id=tmplyr style='top:30px'>
+							<div id=help style='position:relative;left:1px;top:0px'>
+							<iframe id=help_zone name=help_zone src=/autosearch/autosearch_help.html width=255 height=0 frameborder=0 scrolling=no style="position:absolute; display:none"></iframe>
+							</div>
+							<div id=content style='position:relative;left:1px;top:0px'>
+							<iframe id=list name=list src=/autosearch/autosearch_list.html width=255 height=0 frameborder=0 scrolling=no style="position:absolute;"></iframe>
+							</div>
+						</div>
+						-->
+						<!--자동완성 END-->
+					</li>
+					<li class="btn"><input type="image" src="http://img.gomtv.com/images/common/btn/btn_sub_search_off.gif" onmouseover="onImg(this)" onmouseout="offImg(this)" width="60" height="26" alt="검색" /></a></li>
+				</ul>
+				</form>
+			</div>
+
+
+			<ul id="products_header_tab">
+				<li><a href="/index.html" onfocus='blur()'><img src="http://img.gomtv.com/images/products/tab_1_on.gif" width="83" height="35" alt="" /></a></li>
+				<li><a href="/gomMain.html" onfocus='blur()'><img src="http://img.gomtv.com/images/products/tab_2_off.gif" width="97" height="35" alt="" /></a></li>
+				<li><a href="/audioMain.html" onfocus='blur()'><img src="http://img.gomtv.com/images/products/tab_3_off.gif" width="87" height="35" alt="" /></a></li>
+				<li><a href="/withGom.html" onfocus='blur()'><img src="http://img.gomtv.com/images/products/tab_4n_off.gif" width="91" height="35" alt="" /></a></li>
+
+				<li class="right"><a href="http://ch.gomtv.com/114" onfocus='blur()'><img src="http://img.gomtv.com/images/products/tab_5.gif" width="130" height="35" alt="" /></a></li>
+				<li class="right"><a href="http://encoder.gomtv.com"  onfocus='blur()'><img src="http://img.gomtv.com/images/products/tab_6.gif" width="91" height="35" alt="" /></a></li>
+			</ul>
+
+
+
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript" src="http://adw.gomtv.com/ads.gom?dispid=ban@gomtv_web_sch"></script>
+<script type="text/javascript">
+searchbg_state = 1;
+if (searchImg != null)
+	searchImgJson = eval('(' + searchImg + ')');
+
+if (searchImgJson[0].imgurl){
+	document.getElementById('searchbgimg').style.background = "url('" + searchImgJson[0].imgurl + "')  no-repeat center";
+}
+
+function goTopSearch()
+{
+	var tf = document.topSearchForm;
+
+	if (searchImgJson[0].targeturl && searchbg_state) {
+		var str="<iframe name='runframe' id='runframe' src='"+searchImgJson[0].targeturl+"' width='0' height='0'></iframe>";
+		document.getElementById('hiddenlyr').innerHTML=str;
+	} else {
+		if( tf.key.value.length > 100 ) {
+			alert('검색어를 정확하게 입력하세요.');
+			tf.key.value = '';
+			tf.key.focus();
+			return;
+		}
+
+		if( tf.key.value == '검색어/채널번호를 입력하세요!' ) {
+			alert('검색어를 입력하세요.');
+			return;
+		}
+
+		if( chk_empty(tf.key.value) == true ) {
+			alert('검색어를 입력하세요.');
+			return;
+		}
+
+		tf.action = 'http://search.gomtv.com/search.gom';
+		tf.submit();
+	}
+}
+</script>
+
+<div id="sub_wrap">
+
+	
+	<div id="sub_left">
+	<!-- '프로덕트' 좌측 영역 :: Start -->	
+
+		<!-- 최신버전 다운로드 -->
+				<div id="wp_download">
+			<h5>최신버전 다운로드</h5>
+			<ul>
+
+				<li class="first"><span class="gom_pack"><a href="http://gom2.gomtv.com/release/gom_pack.htm" onClick='blur()'>곰팩(GOM Pack)</a></span></li>
+				<li><span class="gom_player"><a href="http://gom2.gomtv.com/release/gom_player.htm"  onClick='blur()'>곰플레이어 v2.1</a></span></li>
+				<li><span class="gom_player"><a href="http://gom2.gomtv.com/release/gom_player_mac.htm"  onClick='blur()'>곰플레이어 Mac</a></span></li>
+				<li><span class="gom_audio"><a href="http://gom2.gomtv.com/release/gom_audio.htm"  onClick='blur()'>곰오디오 v1.9</a></span></li>
+				<li><span class="gom_search"><a href="http://gom2.gomtv.com/release/gom_helper.htm"  onClick='blur()'>곰TV도우미</a></span></li>
+				<li><span class="gom_rec"><a href="http://gom2.gomtv.com/release/gom_recorder.htm"  onClick='blur()'>곰녹음기 v1.2</a></span></li>
+				<li><span class="gom_dj"><a href="http://gom2.gomtv.com/release/gom_dj.htm"  onClick='blur()'>곰DJ v1.2</a></span></li>
+				<li class="last"><span class="gom_remote"><a href="http://gom2.gomtv.com/release/gom_remote.htm"  onClick='blur()'>곰리모트 v1.0</a></span></li>
+			</ul>
+		</div>
+
+		<div id="wp_lnb">
+			<ol>
+				<li><span>자료실</span>
+					<ul>
+						<li><a href="/gomPds/index.html" onClick='blur()'>필수 자료실</a></li>
+						<li><a href="/jmdb/chart.html" onClick='blur()'>인기 자막 자료실</a></li>
+						<li><a href="/jmdb/index.html" onClick='blur()'>전체 자막 자료실</a></li>
+						<li><a href="/bestMusic/index.html" onClick='blur()'>곰오디오 인기가사</a></li>
+						<li><a href="/broadcast/" onClick='blur()'>곰오디오 음악방송</a></li>
+						<li><a href="/skin/index.html" onClick='blur()'>스킨자료실(곰플레이어)</a></li>
+						<li class="last"><a href="/audioSkin/index.html" onClick='blur()'>스킨자료실(곰오디오)<!--  <img src="http://img.gomtv.com/images/common/icon/icon_small_hot.gif" width="12" height="9" alt="" /> --></a></li>
+					</ul>
+				</li>
+			</ol>
+		</div>
+
+		<div id="wp_list_wrap">
+			<h5 class="top">프로그램 소개</h5>
+			<ul>
+				<li><a href="http://gom.gomtv.com/gomIntro.html?type=0">곰플레이어 소개</a></li>
+				<li><a href="http://gom.gomtv.com/audioIntro.html?type=0">곰오디오 소개</a></li>
+				<li><a href="http://go.gomtv.com/rd?link_id=10022">곰TV도우미</a></li>
+				<!--li><a href="#">곰TV도우미 검색 FAQ</a></li-->
+				<li><a href="http://gom.gomtv.com/recIntro.html?type=0">곰녹음기 소개</a></li>
+				<li><a href="http://gom.gomtv.com/djIntro.html?type=0 ">곰DJ 소개</a></li>
+			</ul>
+			<h5>공지사항</h5>
+			<ul>
+	<li><a href="javascript:;" onclick="window.open('http://www.gomtv.com/noticeView.gom?intSeq=324','notice','width=425,height=575,scrollbars=no,menubars=no');" onFocus='blur()'>[2월 7일] CJ E&M MP..</a></li>
+	<li><a href="javascript:;" onclick="window.open('http://www.gomtv.com/noticeView.gom?intSeq=320','notice','width=425,height=575,scrollbars=no,menubars=no');" onFocus='blur()'>[공지] 방송3사 패키..</a></li>
+	<li><a href="javascript:;" onclick="window.open('http://www.gomtv.com/noticeView.gom?intSeq=318','notice','width=425,height=575,scrollbars=no,menubars=no');" onFocus='blur()'>[CJ E&M] TEN 이용금..</a></li>
+	<li><a href="javascript:;" onclick="window.open('http://www.gomtv.com/noticeView.gom?intSeq=251','notice','width=425,height=575,scrollbars=no,menubars=no');" onFocus='blur()'>[공지] 미국영화협회..</a></li>
+	<li><a href="javascript:;" onclick="window.open('http://www.gomtv.com/noticeView.gom?intSeq=230','notice','width=425,height=575,scrollbars=no,menubars=no');" onFocus='blur()'>곰TV스트리머 업데이..</a></li>
+</ul>
+			<!--ul>
+				<li><a href="#">공지사항 어쩌구 저쩌구..</a></li>
+				<li><a href="#">공지사항 어쩌구 저쩌구..</a></li>
+				<li><a href="#">공지사항 어쩌구 저쩌구..</a></li>
+				<li><a href="#">공지사항 어쩌구 저쩌구..</a></li>
+				<li><a href="#">공지사항 어쩌구 저쩌구..</a></li>
+			</ul-->
+		</div>
+	<!-- '프로덕트' 좌측 영역 :: End -->
+	</div>
+	
+
+	<div id="sub_center">
+
+	<div id="promotion_area">
+			<ul style="display:block;">
+				<li class="prev"><a href="javascript:productPromotion(2)" onfocus="blur();"><img src="http://img.gomtv.com/images/products/btn_prom_prev_off.gif" onmouseover="onImg(this)" onmouseout="offImg(this)" width="25" height="32" alt="" /></a></li>
+				<li class="link"><a href="http://gom2.gomtv.com/release/gom_pack.htm" onfocus="blur();"><img src="http://img.gomtv.com/images/products/promotion_pack_new.jpg" width="432" height="180" alt="" /></a></li>
+				<li class="next"><a href="javascript:productPromotion(1)" onfocus="blur();"><img src="http://img.gomtv.com/images/products/btn_prom_next_off.gif" onmouseover="onImg(this)" onmouseout="offImg(this)" width="25" height="32" alt="" /></a></li>
+			</ul>
+
+			<ul style="display:none;">
+				<li class="prev"><a href="javascript:productPromotion(0)" onfocus="blur();"><img src="http://img.gomtv.com/images/products/btn_prom_prev_off.gif" onmouseover="onImg(this)" onmouseout="offImg(this)" width="25" height="32" alt="" /></a></li>
+				<li class="link"><a href="http://gom2.gomtv.com/release/gom_player.htm" onfocus="blur();"><img src="http://img.gomtv.com/images/products/promotion_player_new.jpg" width="432" height="180" alt="" /></a></li>
+				<li class="next"><a href="javascript:productPromotion(2)" onfocus="blur();"><img src="http://img.gomtv.com/images/products/btn_prom_next_off.gif" onmouseover="onImg(this)" onmouseout="offImg(this)" width="25" height="32" alt="" /></a></li>
+			</ul>
+
+			<ul style="display:none;">
+				<li class="prev"><a href="javascript:productPromotion(1)" onfocus="blur();"><img src="http://img.gomtv.com/images/products/btn_prom_prev_off.gif" onmouseover="onImg(this)" onmouseout="offImg(this)" width="25" height="32" alt="" /></a></li>
+				<li class="link"><a href="http://gom2.gomtv.com/release/gom_audio.htm" onfocus="blur();"><img src="http://img.gomtv.com/images/products/promotion_audio_new.jpg" width="432" height="180" alt="" /></a></li>
+				<li class="next"><a href="javascript:productPromotion(3)" onfocus="blur();"><img src="http://img.gomtv.com/images/products/btn_prom_next_off.gif" onmouseover="onImg(this)" onmouseout="offImg(this)" width="25" height="32" alt="" /></a></li>
+			</ul>
+
+
+			<ul style="display:none;">
+				<li class="prev"><a href="javascript:productPromotion(2)" onfocus="blur();"><img src="http://img.gomtv.com/images/products/btn_prom_prev_off.gif" onmouseover="onImg(this)" onmouseout="offImg(this)" width="25" height="32" alt="" /></a></li>
+				<li class="link"><a href="http://gom2.gomtv.com/release/gom_player_mac.htm" onfocus="blur();"><img src="http://img.gomtv.com/images/products/promotion_mac_new.jpg" width="432" height="180" alt="" /></a></li>
+				<li class="next"><a href="javascript:productPromotion(0)" onfocus="blur();"><img src="http://img.gomtv.com/images/products/btn_prom_next_off.gif" onmouseover="onImg(this)" onmouseout="offImg(this)" width="25" height="32" alt="" /></a></li>
+			</ul>
+
+		</div>
+
+
+
+		<iframe width="500" height="88" frameborder="0" scrolling="no" topmargin="0" leftmargin="0" marginwidth="0" marginheight="0" src="http://gom.gomtv.com/overture_cm_498x88.html"></iframe>
+		
+		<br />
+
+		<div id="subMain_list">
+			<h5><img src="http://img.gomtv.com/images/products/t_gomplayer_text.gif" width="125" height="13" alt="" /><a href="/jmdb/chart.html"><img class="more" src="http://img.gomtv.com/images/common/icon/icon_more.gif" width="36" height="10" alt="" /></a></h5>
+
+			<ol id="subMain_li10">
+				<li class="tit" style='padding-left:0;'><img src="http://img.gomtv.com/images/common/icon/icon_notice2.gif" style="margin:0 5px;" width="24" height="12" alt="" />
+				<a href="/jmdb/view.html?intSeq=691537&preface=3&page=">[공지] 미국영화협회(MPA) 저작권 보호 요청</a></li><li class="date ">2010-07-15</li>
+				<li class="tit" style='padding-left:0;'><img src="http://img.gomtv.com/images/common/icon/icon_notice2.gif" style="margin:0 5px;" width="24" height="12" alt="" />
+				<a href="/jmdb/view.html?intSeq=532573&preface=3&page=">[공지] 저작권 보호 리스트 안내</a></li><li class="date ">2009-03-03</li>
+				<li class="l1 tit "><strong>[한글]</strong>
+				<a href="/jmdb/view.html?intSeq=806494&preface=1">The.Mentalist.S04E13.HDTV.XviD-LOL</a></li><li class="date ">2012-02-04</li>
+				<li class="l2 tit bg"><strong>[통합]</strong>
+				<a href="/jmdb/view.html?intSeq=806698&preface=3">Spartacus.Vengeance.S02E02.720p.WEBRip.x..</a></li><li class="date bg">2012-02-05</li>
+				<li class="l3 tit "><strong>[한글]</strong>
+				<a href="/jmdb/view.html?intSeq=806858&preface=1">[완벽한글]Legendary.Amazons.2011.720p.HD..</a></li><li class="date ">2012-02-05</li>
+				<li class="l4 tit bg"><strong>[한글]</strong>
+				<a href="/jmdb/view.html?intSeq=806813&preface=1">Spartacus.S02E02.720p.HDTV.X264-DIMENSIO..</a></li><li class="date bg">2012-02-05</li>
+				<li class="l5 tit "><strong>[통합]</strong>
+				<a href="/jmdb/view.html?intSeq=806682&preface=3">Spartacus.S02E02.HDTV.XviD-SYS</a></li><li class="date ">2012-02-05</li>
+				<li class="l6 tit bg"><strong>[한글]</strong>
+				<a href="/jmdb/view.html?intSeq=806850&preface=1">The Three Musketeers 2011 720p BluRay x2..</a></li><li class="date bg">2012-02-05</li>
+				<li class="l7 tit "><strong>[한글]</strong>
+				<a href="/jmdb/view.html?intSeq=806898&preface=1">Supernatural.S07E13.HDTV.XviD-LOL</a></li><li class="date ">2012-02-06</li>
+				<li class="l8 tit bg"><strong>[한글]</strong>
+				<a href="/jmdb/view.html?intSeq=807287&preface=1">NCIS.S09E14.HDTV.XviD-LOL.[VTV]</a></li><li class="date bg">2012-02-08</li>
+				<li class="l9 tit "><strong>[영문]</strong>
+				<a href="/jmdb/view.html?intSeq=806492&preface=2">CSI.Miami.S10E13.Terminal Velocity.HDTV...</a></li><li class="date ">2012-02-04</li>
+				<li class="l10 tit bg"><strong>[한글]</strong>
+				<a href="/jmdb/view.html?intSeq=806960&preface=1">The Wonder Girls 2012 720p x264-Aiden0</a></li><li class="date bg">2012-02-06</li>
+			</ol>
+
+		</div>
+
+		<div id="subMain_tab">
+			<h5><img src="http://img.gomtv.com/images/products/t_many_q.gif" width="90" height="13" alt="" /><a href="http://ch.gomtv.com/list.gom?ch=114&type=7&faqType=tv"><img class="more" src="http://img.gomtv.com/images/common/icon/icon_more.gif" width="36" height="10" alt="" /></a></h5>
+			
+			<ul id="tab_menu" class="tab_1">
+				<li class="on"><a href="javascript:productMainFaq(0)" onClick='blur()'>곰TV</a></li>
+				<li><a href="javascript:productMainFaq(1)" onClick='blur()'>곰플레이어</a></li>
+				<li><a href="javascript:productMainFaq(2)" onClick='blur()'>곰오디오</a></li>
+				<!--li><a href="#">곰TV도우미</a></li>
+				<li><a href="#">곰녹음기</a></li>
+				<li><a href="#">곰DJ</a></li-->
+			</ul>
+
+			<ol id="subMain_li10">
+				<li class="l1 tit "><strong>[오류(문제발생)]</strong>
+				<a href="http://ch.gomtv.com/list.gom?ch=114&type=7&faqType=tv&intSeq=49">곰TV 에서 DirectX 초기화 오류가 나요.</a></li><li class="date ">2009/07/22</li>
+				
+				<li class="l2 tit bg"><strong>[곰 TV 가이드]</strong>
+				<a href="http://ch.gomtv.com/list.gom?ch=114&type=7&faqType=tv&intSeq=41">개인정보를 변경하고 싶어요.</a></li><li class="date bg">2009/04/23</li>
+				
+				<li class="l3 tit "><strong>[곰 TV 가이드]</strong>
+				<a href="http://ch.gomtv.com/list.gom?ch=114&type=7&faqType=tv&intSeq=40">회원탈퇴를 하고 싶어요.</a></li><li class="date ">2009/04/23</li>
+				
+				<li class="l4 tit bg"><strong>[곰 TV 가이드]</strong>
+				<a href="http://ch.gomtv.com/list.gom?ch=114&type=7&faqType=tv&intSeq=39">아이디 탈퇴 후 재가입 할 수 있나요.</a></li><li class="date bg">2009/04/23</li>
+				
+				<li class="l5 tit "><strong>[곰 TV 가이드]</strong>
+				<a href="http://ch.gomtv.com/list.gom?ch=114&type=7&faqType=tv&intSeq=38">임시 비밀번호가 메일로 오지 않아요.</a></li><li class="date ">2009/04/23</li>
+				
+				<li class="l6 tit bg"><strong>[곰 TV 가이드]</strong>
+				<a href="http://ch.gomtv.com/list.gom?ch=114&type=7&faqType=tv&intSeq=37">비밀번호를 잊어버렸어요.</a></li><li class="date bg">2009/04/23</li>
+				
+				<li class="l7 tit "><strong>[곰 TV 가이드]</strong>
+				<a href="http://ch.gomtv.com/list.gom?ch=114&type=7&faqType=tv&intSeq=36">아이디를 잊어버렸어요.</a></li><li class="date ">2009/04/23</li>
+				
+				<li class="l8 tit bg"><strong>[결제(상품권,포인트)]</strong>
+				<a href="http://ch.gomtv.com/list.gom?ch=114&type=7&faqType=tv&intSeq=35">환전은 어떻게 할 수 있나요?</a></li><li class="date bg">2009/04/23</li>
+				
+				<li class="l9 tit "><strong>[결제(상품권,포인트)]</strong>
+				<a href="http://ch.gomtv.com/list.gom?ch=114&type=7&faqType=tv&intSeq=34">환불 받고 싶어요.</a></li><li class="date ">2009/04/23</li>
+				
+				<li class="l10 tit bg"><strong>[결제(상품권,포인트)]</strong>
+				<a href="http://ch.gomtv.com/list.gom?ch=114&type=7&faqType=tv&intSeq=33">결제한 내역을 취소하고 싶어요.</a></li><li class="date bg">2009/04/23</li>
+				
+			</ol>
+			<ol id="subMain_li10" style='display:none'>
+				<li class="l1 tit "><strong>[곰TV/곰플레이어 일반]</strong>
+				<a href="http://ch.gomtv.com/list.gom?ch=114&type=7&faqType=gom&intSeq=183">GOMMac 세부 기능</a></li><li class="date ">2011/02/23</li>
+				
+				<li class="l2 tit bg"><strong>[곰TV/곰플레이어 일반]</strong>
+				<a href="http://ch.gomtv.com/list.gom?ch=114&type=7&faqType=gom&intSeq=182">GOMMac 설치 방법</a></li><li class="date bg">2011/02/23</li>
+				
+				<li class="l3 tit "><strong>[곰TV/곰플레이어 일반]</strong>
+				<a href="http://ch.gomtv.com/list.gom?ch=114&type=7&faqType=gom&intSeq=180">TP,TS,HD급 영상 권장사양</a></li><li class="date ">2009/12/23</li>
+				
+				<li class="l4 tit bg"><strong>[곰TV/곰플레이어 일반]</strong>
+				<a href="http://ch.gomtv.com/list.gom?ch=114&type=7&faqType=gom&intSeq=179">저사양 pc에서 동영상 끊김 없이 보는 방법</a></li><li class="date bg">2009/12/23</li>
+				
+				<li class="l5 tit "><strong>[오류(문제발생)]</strong>
+				<a href="http://ch.gomtv.com/list.gom?ch=114&type=7&faqType=gom&intSeq=178">책갈피(bookmark) 가 사라져요.</a></li><li class="date ">2009/07/22</li>
+				
+				<li class="l6 tit bg"><strong>[오류(문제발생)]</strong>
+				<a href="http://ch.gomtv.com/list.gom?ch=114&type=7&faqType=gom&intSeq=177">최신 디지털카메라 및 캠코더 동영상 재생이 안..</a></li><li class="date bg">2009/07/22</li>
+				
+				<li class="l7 tit "><strong>[오류(문제발생)]</strong>
+				<a href="http://ch.gomtv.com/list.gom?ch=114&type=7&faqType=gom&intSeq=176">곰플레이어 DMB 버튼 클릭시 강제 종료 현상</a></li><li class="date ">2009/04/30</li>
+				
+				<li class="l8 tit bg"><strong>[기타]</strong>
+				<a href="http://ch.gomtv.com/list.gom?ch=114&type=7&faqType=gom&intSeq=172">VISTA 사용자 영화/드라마 다운로드가 안되는 ..</a></li><li class="date bg">2009/04/10</li>
+				
+				<li class="l9 tit "><strong>[곰TV/곰플레이어 일반]</strong>
+				<a href="http://ch.gomtv.com/list.gom?ch=114&type=7&faqType=gom&intSeq=171">곰플레이어 - 스킨 &gt; DMB</a></li><li class="date ">2008/11/27</li>
+				
+				<li class="l10 tit bg"><strong>[TV출력/DVD]</strong>
+				<a href="http://ch.gomtv.com/list.gom?ch=114&type=7&faqType=gom&intSeq=170">곰TV '0x00000071에러' 해결 방법</a></li><li class="date bg">2008/03/26</li>
+				
+			</ol>
+			<ol id="subMain_li10" style='display:none'>
+				<li class="l1 tit "><strong>[곰DJ 가이드]</strong>
+				<a href="http://ch.gomtv.com/list.gom?ch=114&type=7&faqType=audio&intSeq=88">[곰DJ] 곰DJ로 세이클럽, 인라이브로 방송하기</a></li><li class="date ">2010/08/19</li>
+				
+				<li class="l2 tit bg"><strong>[곰녹음기 가이드]</strong>
+				<a href="http://ch.gomtv.com/list.gom?ch=114&type=7&faqType=audio&intSeq=87">[곰녹음기] 비스타에서 &quot;녹음장치를 찾을..</a></li><li class="date bg">2009/10/13</li>
+				
+				<li class="l3 tit "><strong>[곰오디오 가이드]</strong>
+				<a href="http://ch.gomtv.com/list.gom?ch=114&type=7&faqType=audio&intSeq=86">[곰오디오] Mp3구매 관련 종합.</a></li><li class="date ">2009/03/25</li>
+				
+				<li class="l4 tit bg"><strong>[곰DJ 가이드]</strong>
+				<a href="http://ch.gomtv.com/list.gom?ch=114&type=7&faqType=audio&intSeq=85">[곰DJ] 비스타에서 곰DJ 사용하기</a></li><li class="date bg">2008/11/21</li>
+				
+				<li class="l5 tit "><strong>[곰오디오 가이드]</strong>
+				<a href="http://ch.gomtv.com/list.gom?ch=114&type=7&faqType=audio&intSeq=84">[곰오디오] 곰오디오 - 버전히스토리 안내</a></li><li class="date ">2008/01/31</li>
+				
+				<li class="l6 tit bg"><strong>[곰오디오 가이드]</strong>
+				<a href="http://ch.gomtv.com/list.gom?ch=114&type=7&faqType=audio&intSeq=83">[곰오디오] 환경설정 &gt; 플러그인 탭</a></li><li class="date bg">2008/01/23</li>
+				
+				<li class="l7 tit "><strong>[곰오디오 가이드]</strong>
+				<a href="http://ch.gomtv.com/list.gom?ch=114&type=7&faqType=audio&intSeq=82">[곰오디오] 환경설정 &gt; 스킨 탭</a></li><li class="date ">2008/01/23</li>
+				
+				<li class="l8 tit bg"><strong>[곰오디오 가이드]</strong>
+				<a href="http://ch.gomtv.com/list.gom?ch=114&type=7&faqType=audio&intSeq=81">[곰오디오] 환경설정 &gt; 기타 탭</a></li><li class="date bg">2008/01/23</li>
+				
+				<li class="l9 tit "><strong>[곰오디오 가이드]</strong>
+				<a href="http://ch.gomtv.com/list.gom?ch=114&type=7&faqType=audio&intSeq=80">[곰오디오] 환경설정 &gt; 싱크가사 탭</a></li><li class="date ">2008/01/23</li>
+				
+				<li class="l10 tit bg"><strong>[곰오디오 가이드]</strong>
+				<a href="http://ch.gomtv.com/list.gom?ch=114&type=7&faqType=audio&intSeq=79">[곰오디오] 환경설정 &gt; 간편열기 탭</a></li><li class="date bg">2008/01/23</li>
+				
+			</ol>
+			<ol id="subMain_li10">
+
+		</div>
+
+	</div>
+
+
+	<div id="sub_right">
+	<!-- '프로덕트' 우측 영역 :: Start -->
+
+		<iframe name="hot" width="200" height="180" src="http://www.gomtv.com/navigation/iframeNavigation.gom" scrolling="no" frameborder="0" style="border:0;" allowTransparency="true"></iframe>
+
+		<DIV id="with_gom_new">
+		<H5><IMG src="http://img.gomtv.com/images/products/tit_with_gom_right_man.jpg" width=84 height=15></H5>
+		<UL>
+			<LI><A href="http://www.trigem.co.kr/tgshop/specialshop/acc/productDetail.asp?p_seq=24144&amp;market_seq=0" target=_blank><IMG src="http://img.gomtv.com/images/products/img_produ_04.jpg" width=180 height=54></A>
+		</LI>
+		</UL>
+		</DIV>&nbsp;
+
+		<DIV style="padding-top:10px;">
+		<UL>
+			<LI><A href="http://go.gomtv.com/rd?link_id=10479" target=_blank><IMG src="http://img.gomtv.com/images/products/banner_sub_nis_n.gif" width=200 height=200></A>
+		</LI>
+		</UL>
+		</DIV>
+
+	<!-- '프로덕트' 우측 영역 :: End -->
+	</div>
+
+
+</div>
+
+<script type="text/javascript" src="/js/gclick.js"></script> <script type="text/javascript"> clickDatabase='gom_product_home'; initClickHeat(); </script>
+
+<!-- 하단 풋터 영역 :: Start -->
+<div id="footer">
+	<div class="footer_bar">
+		<a href="http://www.gretech.com"><img src="http://img.gomtv.com/images/common/footer_01.gif" width="36" height="10" alt="회사소개" /></a>
+		<img class="bar" src="http://img.gomtv.com/images/common/bar.gif" width="1" height="10" alt="" />
+		<a href="http://www.gomtv.com/customer/advertise.gom"><img src="http://img.gomtv.com/images/common/footer_02.gif" width="57" height="10" alt="광고/제휴문의" /></a>
+		<img class="bar" src="http://img.gomtv.com/images/common/bar.gif" width="1" height="10" alt="" />
+		<a href="http://www.gomtv.com/customer/agreement.gom"><img src="http://img.gomtv.com/images/common/footer_03.gif" width="36" height="10" alt="이용약관" /></a>
+		<img class="bar" src="http://img.gomtv.com/images/common/bar.gif" width="1" height="10" alt="" />
+		<a href="http://www.gomtv.com/customer/emailCollect.gom"><img src="http://img.gomtv.com/images/common/footer_04.gif" width="84" height="10" alt="이메일 무단수집거부" /></a>
+		<img class="bar" src="http://img.gomtv.com/images/common/bar.gif" width="1" height="10" alt="" />
+		<a href="http://www.gomtv.com/customer/legalNote.gom"><img src="http://img.gomtv.com/images/common/footer_05.gif" width="35" height="10" alt="법적고지" /></a>
+		<img class="bar" src="http://img.gomtv.com/images/common/bar.gif" width="1" height="10" alt="" />
+		<a href="http://www.gomtv.com/customer/memberPrivacy.gom"><img src="http://img.gomtv.com/images/common/footer_06.gif" width="72" height="10" alt="개인정보취급방침" /></a>
+		<img class="bar" src="http://img.gomtv.com/images/common/bar.gif" width="1" height="10" alt="" />
+		<a href="http://www.gomtv.com/customer/memberYoung.gom"><img src="http://img.gomtv.com/images/common/footer_07.gif" width="63" height="10" alt="청소년보호정책" /></a>
+		<img class="bar" src="http://img.gomtv.com/images/common/bar.gif" width="1" height="10" alt="" />
+		<a href="http://www.gretech.com/recruit/info.gom" target="_blank"><img src="http://img.gomtv.com/images/common/footer_08.gif" width="36" height="10" alt="채용안내" /></a>
+		<img class="bar" src="http://img.gomtv.com/images/common/bar.gif" width="1" height="10" alt="" />
+		<a href="http://ch.gomtv.com/114"><img src="http://img.gomtv.com/images/common/footer_09.gif" width="28" height="10" alt="도움말" /></a>
+		<img class="bar" src="http://img.gomtv.com/images/common/bar.gif" width="1" height="10" alt="" />
+		<a href="http://www.gomtv.com/customer/index.gom"><img class="last" src="http://img.gomtv.com/images/common/footer_10.gif" width="55" height="10" alt="고객지원센터" /></a>
+	</div>
+	<img src="http://img.gomtv.com/images/common/copyright_new.gif" width="313" height="11" alt="Copyright(c) GRETECH CORP. All rights reserved." />
+</div>
+<!-- 하단 풋터 영역 :: End -->
+<table><tr><td><img src=http://pageview.gomtv.com/cgi-bin/pageview.cgi width=0 height=0></td></tr></table>
+<!-- <iframe src="http://adc.ipop.co.kr/html.kti/gretech/gom@icover" topmargin="0" leftmargin="0" marginwidth="0" marginheight="0" frameborder="0" scrolling="no" width="0" height="0"></iframe> -->
+<table width=0 height=0 cellspacing=0 border=0 cellpadding=0>
+<tr height=0><td height=0><div id=idxautohiddenlyr name=idxautohiddenlyr style='width:0;height:0'><iframe height=0 width=0></iframe></div></td></tr>
+</table>
+<div id=hiddenlyr name=hiddenlyr style='display:block;width:0;height:0'></div>
+<script type='text/javascript'>document.getElementById('hiddenlyr').innerHTML='';</script>
+<!--google analytics-->
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-15945100-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+<!--google analytics-->
+</body>
+
+</html>

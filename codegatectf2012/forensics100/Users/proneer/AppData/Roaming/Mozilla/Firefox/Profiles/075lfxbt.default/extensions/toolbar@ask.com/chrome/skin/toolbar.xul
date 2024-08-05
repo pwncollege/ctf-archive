@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Uncomment the following line to enable new tabs. -->
+<!-- <?xul-overlay href="chrome://asktoolbar/content/newtab-overlay.xul"?> -->
+
+<?xml-stylesheet href="chrome://global/skin/global.css" type="text/css"?>
+<?xml-stylesheet href="chrome://asktoolbar/skin/toolbar.css" type="text/css"?>
+    <!--
+        Ask.com Toolbar
+        Copyright (C) 2008-2010 APN, LLC. All rights reserved
+    -->
+<overlay id="asktb-overlay" xmlns:html="http://www.w3.org/1999/xhtml" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+    <script type="application/x-javascript" src="chrome://asktoolbar/content/core.js" />
+    <script type="application/x-javascript" src="chrome://asktoolbar/content/logger.js" />
+    <script type="application/x-javascript" src="chrome://asktoolbar/content/constants.js" />
+    <script type="application/x-javascript" src="chrome://asktoolbar/content/preferences.js" />
+    <script type="application/x-javascript" src="chrome://asktoolbar/content/utilities.js" />
+    <script type="application/x-javascript" src="chrome://asktoolbar/content/cache.js" />
+    <script type="application/x-javascript" src="chrome://asktoolbar/content/feeds.js" />
+    <script type="application/x-javascript" src="chrome://asktoolbar/content/network.js" />
+    <script type="application/x-javascript" src="chrome://asktoolbar/content/http-headers.js" />
+    <script type="application/x-javascript" src="chrome://asktoolbar/content/suggestions.js" />
+    <script type="application/x-javascript" src="chrome://asktoolbar/content/lifecycle.js" />
+    <script type="application/x-javascript" src="chrome://asktoolbar/content/listeners.js" />
+    <script type="application/x-javascript" src="chrome://asktoolbar/content/events.js" />
+    <script type="application/x-javascript" src="chrome://asktoolbar/content/observer.js" />
+    <script type="application/x-javascript" src="chrome://asktoolbar/content/widgets.js" />
+    <script type="application/x-javascript" src="chrome://asktoolbar/content/locale.js" />
+    <script type="application/x-javascript" src="chrome://asktoolbar/content/update.js" />
+    <script type="application/x-javascript" src="chrome://asktoolbar/content/prefetch.js" />
+    <script type="application/x-javascript" src="chrome://asktoolbar/content/json.js" />
+    <script type="application/x-javascript" src="chrome://asktoolbar/content/custom-command-listener.js" />
+    <script type="application/x-javascript" src="chrome://asktoolbar/content/dynamic-button.js" />
+    <script type="application/x-javascript" src="chrome://asktoolbar/content/dynamic-button-manager.js" />
+    <script type="application/x-javascript" src="chrome://asktoolbar/content/notification.js" />
+    <script type="application/x-javascript">
+        <![CDATA[
+        window.addEventListener("load", ATB_load, false);
+        window.addEventListener("unload", ATB_unload, false);
+	]]>
+    </script>
+    
+    <!--Search Suggestions /History Popups-->
+    <popupset>
+	<panel id="asktb-suggestions-popup" class="asktb-ssPopup"
+            maxheight="100" ssMaxCount="10" ssTriggerLength="1" ssTriggerDelay="300"
+            shMaxCount="3" noautofocus="true" position="after_start" flex="2">
+            <vbox id="asktb-suggestions-popup-mainlistbox">
+                <vbox id="asktb-suggestions-popup-sh-listbox" flex="2" />
+                <menuseparator id="asktb-suggestions-popup-separator1" />
+                <vbox id="asktb-suggestions-popup-ss-listbox" flex="2" />
+                <hbox id="asktb-suggestions-popup-ch" flex="1">
+                    <spacer flex="1" />
+                    <label id="asktb-suggestions-popup-chlink" flex="0" align="end"
+                        class="asktb-suggestions-popup-link" value="Clear History"
+                        value-localekey="ClearHistory" onclick="ATB.Core.clearSearchHistoryFromMenu();" />
+                </hbox>
+            </vbox>
+        </panel>
+        <panel id="asktb-searchhistory-popup" class="asktb-ssPopup"
+            maxheight="200" maxEntries="20" noautofocus="true" position="after_start"
+            flex="2">
+            <vbox class="asktb-sh-listbox" maxheight="200"
+                id="asktb-searchhistory-popup-mainlistbox">
+                <vbox class="asktb-sh-listbox" maxheight="200"
+                    id="asktb-searchhistory-popup-sh-listbox" flex="2" />
+                <hbox id="asktb-searchhistory-popup-ch" flex="1">
+                    <spacer flex="1" />
+                    <label id="asktb-searchhistory-popup-chlink" flex="0" align="end"
+                        class="asktb-suggestions-popup-link" value="Clear History"
+                        value-localekey="ClearHistory" onclick="ATB.Core.clearSearchHistoryFromMenu();" />
+                </hbox>
+            </vbox>
+        </panel>
+    </popupset>
+    <!-- Ask.com Toolbar -->
+    <toolbox id="navigator-toolbox">
+        <!-- Note: Supported langs/locales attribute of toolbar are valid JSON (See json.org for more info.) -->
+        <toolbar id="asktb" toolbarname="Ask.com Toolbar" toolbarname-localekey="ToolbarName" class="chromeclass-toolbar" context="toolbar-context-menu"
+            hidden="false" persist="collapsed,hidden" mode="full" orient="horizontal"
+	    supported-langs='{"en": "English"}'
+            supported-locales='{"US": "US: United States of America"}'>
+	    <stringbundleset id="strbundles">
+                <stringbundle id="asktb-localized-labels" src="chrome://asktoolbar/skin/labels-en.properties" />
+                <stringbundle id="asktb-localized-links" src="chrome://asktoolbar/skin/links-US.properties" />
+            </stringbundleset>
+
+            <toolbaritem id="asktb-searchbox-container"  align="center" minwidth="344">
+                <!-- Service Provider Menu Button -->
+                <image id="asktb-btn-service-provider" style="padding : 0 12px 0 12px;"
+                    src="chrome://asktoolbar/skin/globe_18x.png" />
+
+                <!-- Search Box -->
+                <hbox id="asktb-searchbox-border-container" flex="2">
+                    <textbox id="asktb-searchbox" flex="2"
+                        empty="true" emptytext="Search the Web"
+                        emptytext-localekey="SearchTheWeb" label="Search the Web"
+                        label-localekey="SearchTheWeb" type="autocomplete"                        
+                        newlines="replacewithspaces" spellcheck="true"
+                        ssEnabled="true" orient="horizontal" align="center"
+                        crop="end" 
+                        oninput=" ATB.Events.onSearchBoxInput(event, this);"
+                        onkeydown="ATB.Events.onSearchBoxKeyDown(event);">
+                        <toolbarbutton id="asktb-default-channel" channel="asktb-default-channel" class="menuitem-iconic asktb-menuitem"
+                            type="menu" orient="horizontal" label="" image="chrome://asktoolbar/skin/web.png">
+                            <menupopup id="asktb-verticals-menu">
+                                <menuitem id="web-channel" channel="web-channel" class="menuitem-iconic asktb-menuitem"
+                                    label="Web" label-localekey="Web" image="chrome://asktoolbar/skin/magnify_search.png"
+                                    oncommand="ATB.Core.searchAction(event, this, '$AskSearchResults$', false, true);"/>
+                                <menuseparator />
+                                <menuitem id="image-channel" channel="image-channel" class="menuitem-iconic asktb-menuitem"
+                                    label="Images" label-localekey="Images" image="chrome://asktoolbar/skin/images.png"
+                                    oncommand="ATB.Core.searchAction(event, this, '$AskImageResults$', false, true);" />
+                                <menuitem id="news-channel" channel="news-channel" class="menuitem-iconic asktb-menuitem"
+                                    label="News" label-localekey="News" image="chrome://asktoolbar/skin/news.png"
+                                    oncommand="ATB.Core.searchAction(event, this, '$AskNewsResults$', false, true);" />
+                                <menuitem id="maps-channel" channel="maps-channel" class="menuitem-iconic asktb-menuitem"
+                                    label="Maps" label-localekey="MapsSearch" image="chrome://asktoolbar/skin/maps.png"
+                                    oncommand="ATB.Core.searchAction(event, this, '$AskMapSearch$', false, true);" />
+                                <menuitem id="dictionary-channel" channel="dictionary-channel" class="menuitem-iconic asktb-menuitem"
+                                    label="Dictionary" label-localekey="Dictionary" image="chrome://asktoolbar/skin/dictionary.png"
+                                    oncommand="ATB.Core.searchAction(event, this, '$AskDictionarySearch$', false, true);" />
+                                <menuitem id="weather-channel" channel="weather-channel" class="menuitem-iconic asktb-menuitem"
+                                    label="Weather" label-localekey="Weather" image="chrome://asktoolbar/skin/weather.png"
+                                    oncommand="ATB.Core.searchAction(event, this, '$AskWeatherSearch$', false, true);" />
+                                <menuitem id="blogs-channel" channel="blogs-channel" class="menuitem-iconic asktb-menuitem"
+                                    label="Blogs" label-localekey="Blogs" image="chrome://asktoolbar/skin/blogs.png"
+                                    oncommand="ATB.Core.searchAction(event, this, '$AskBlogSearch$', false, true);" />
+                                <menuitem id="shopping-channel" channel="shopping-channel" class="menuitem-iconic asktb-menuitem" unsupportedForLocales="[a-z]{2,3}_UK|[a-z]{2,3}_EU"
+                                    label="Shopping" label-localekey="Shopping" image="chrome://asktoolbar/skin/shopping.png"
+                                    oncommand="ATB.Core.searchAction(event, this, '$AskShoppingSearch$', false, true);" />
+                                <menuitem id="stocks-channel" channel="stocks-channel" class="menuitem-iconic asktb-menuitem"
+                                    label="Stocks" label-localekey="Stocks" image="chrome://asktoolbar/skin/stocks.png"
+                                    oncommand="ATB.Core.searchAction(event, this, '$AskStockSearch$', false, true);" />
+                                <menuseparator />
+                                <menuitem id="site-channel" channel="site-channel" class="menuitem-iconic asktb-menuitem"
+                                    label="Current Site" label-localekey="CurrentSite" image="chrome://asktoolbar/skin/search_current_site.png"
+                                    oncommand="ATB.Core.searchAction(event, this, '$AskCurrentSiteSearch$', false, true);" />
+                            </menupopup>
+                        </toolbarbutton>
+			<!--Search History Dropmarker -->
+			<hbox onclick="ATB.Events.onSearchHistoryButtonClick(event);"
+                            style="padding : 0 1px 0 0;">
+                            <dropmarker />
+                        </hbox>
+                    </textbox>
+                </hbox>
+                <toolbarbutton id="asktb-searchbtn" orient="horizontal" image="chrome://asktoolbar/skin/search_grey_73x24.png" image-localekey="SearchBtnChromeUrl"
+                    oncommand="ATB.Core.defaultSearchAction(event);" />
+            </toolbaritem>
+
+            <!-- Search Box Resizer -->
+            <splitter id="asktb-splitter" state="open" collapse="none" resizebefore="closest" resizeafter="farthest" 
+                tooltiptext="Resize" tooltiptext-localekey="ResizeSearchBox" style="display:none;"/>
+
+            <!-- Toolbar Apps -->
+            <toolbaritem id="asktb-app-buttons" pack="start" flex="2" style="display:none;">
+                <toolbarbutton id="asktb-btn-images" channel="image-channel" label="Images" label-localekey="Images"
+                    tooltiptext="Search images using Ask.com" tooltiptext-localekey="ImagesTooltip" style="list-style-image: url('chrome://asktoolbar/skin/images.png');"
+                    oncommand="ATB.Core.searchAction(event, this, '$AskImageResults$', true, false);" />
+		<toolbarbutton id="asktb-btn-weather" channel="weather-channel" label="Weather" label-localekey="Weather"
+                    tooltiptext="Check the current weather worldwide" tooltiptext-localekey="WeatherTooltip" style="list-style-image: url('chrome://asktoolbar/skin/weather.png');"
+                    oncommand="ATB.Core.searchAction(event, this, '$AskWeatherSearch$', true, false);" />
+                <toolbarbutton id="asktb-btn-news" channel="news-channel" type="menu-button" orient="horizontal"
+                    label="News" label-localekey="News" tooltiptext="News" tooltiptext-localekey="NewsTooltip"
+                    style="list-style-image: url('chrome://asktoolbar/skin/news.png');"
+                    oncommand="ATB.Core.searchAction(event, this, '$AskNewsResults$', true, false);">
+                    <!-- feed="$NewsFeed$" feedType="list-images" maxEntries="7" onpopupshown="ATB.Feeds.showFeedItems(event, this);"-->
+                    <menupopup id="asktb-btn-news-menu">
+                        <!--menuseparator id="asktb-btn-news-menu-sep" /-->
+                        <menuitem class="asktb-news-category" label="Top Stories" label-localekey="NewsTopStories" tooltiptext="Top Stories" tooltiptext-localekey="NewsTopStories"
+                            oncommand="ATB.Core.navigateToUrl(event, '$NewsTopStories$');" />
+                        <menuitem class="asktb-news-category" label="National" label-localekey="NewsNational" tooltiptext="National" tooltiptext-localekey="NewsNational"
+                            oncommand="ATB.Core.navigateToUrl(event, '$NewsNational$');" />
+                        <menuitem class="asktb-news-category" label="Politics" label-localekey="NewsPolitics" tooltiptext="Politics" tooltiptext-localekey="NewsPolitics"
+                            oncommand="ATB.Core.navigateToUrl(event, '$NewsPolitics$');" unsupportedForLocales="[a-z]{2,3}_ES|[a-z]{2,3}_EU" />
+                        <menuitem class="asktb-news-category" label="World" label-localekey="NewsWorld" tooltiptext="World" tooltiptext-localekey="NewsWorld"
+                            oncommand="ATB.Core.navigateToUrl(event, '$NewsWorld$');" />
+                        <menuitem class="asktb-news-category" label="Business" label-localekey="NewsBusiness" tooltiptext="Business" tooltiptext-localekey="NewsBusiness"
+                            oncommand="ATB.Core.navigateToUrl(event, '$NewsBusiness$');" />
+                        <menuitem class="asktb-news-category" label="Entertainment" label-localekey="NewsEntertainment" tooltiptext="Entertainment" tooltiptext-localekey="NewsEntertainment"
+                            oncommand="ATB.Core.navigateToUrl(event, '$NewsEntertainment$');" />
+                        <menuitem class="asktb-news-category" label="Sports" label-localekey="NewsSports" tooltiptext="Sports" tooltiptext-localekey="NewsSports"
+                            oncommand="ATB.Core.navigateToUrl(event, '$NewsSports$');" />
+                        <menuitem class="asktb-news-category" label="Science &amp; Tech" label-localekey="NewsScienceAndTech" tooltiptext="Science &amp; Tech" tooltiptext-localekey="NewsScienceAndTech"
+                            oncommand="ATB.Core.navigateToUrl(event, '$NewsScienceAndTech$');" />
+                        <menuitem class="asktb-news-category" label="Health" label-localekey="NewsHealth" tooltiptext="Health" tooltiptext-localekey="NewsHealth"
+                            oncommand="ATB.Core.navigateToUrl(event, '$NewsHealth$');" />
+                    </menupopup>
+                </toolbarbutton>
+                <toolbarbutton id="asktb-btn-maps" channel="maps-channel" type="menu-button" orient="horizontal"
+                    label="Maps" label-localekey="Maps" tooltiptext="Maps" tooltiptext-localekey="MapsTooltip"
+                    style="list-style-image: url('chrome://asktoolbar/skin/maps.png');"
+                    oncommand="ATB.Core.searchAction(event, this, '$AskMapSearch$', true, false)"
+                    maxEntries="10">
+                    <menupopup id="asktb-maps-menu">
+                        <menuseparator />
+                        <menuitem label="Clear Maps History" label-localekey="ClearMapsHistory" tooltiptext="Clear Maps History" tooltiptext-localekey="ClearMapsHistory"
+                            oncommand="ATB.Core.clearMapsHistory(); event.stopPropagation();" />
+                    </menupopup>
+                </toolbarbutton>
+                <toolbarbutton id="asktb-btn-resize" type="menu" 
+                label="Resize" label-localekey="ResizeText" tooltiptext="Resize" tooltiptext-localekey="ResizeTextTooltip"
+                    style="list-style-image: url('chrome://asktoolbar/skin/zoomall.png');">
+                    <menupopup id="asktb-resize-menu">
+                        <menuitem id="zoom125" label="125%" label-localekey="ResizeTo125" type="radio" name="askzoom"
+                            tooltiptext="125%" tooltiptext-localekey="ResizeTo125" oncommand="ATB.Core.zoom(event, 125)" />
+                        <menuitem id="zoom150" label="150%" label-localekey="ResizeTo150" type="radio" name="askzoom"
+                            tooltiptext="150%" tooltiptext-localekey="ResizeTo150" oncommand="ATB.Core.zoom(event, 150)" />
+                        <menuitem id="zoom175" label="175%" label-localekey="ResizeTo175" type="radio" name="askzoom"
+                            tooltiptext="175%" tooltiptext-localekey="ResizeTo175" oncommand="ATB.Core.zoom(event, 175)" />
+                        <menuitem id="zoom200" label="200%" label-localekey="ResizeTo200" type="radio" name="askzoom"
+                            tooltiptext="200%" tooltiptext-localekey="ResizeTo200" oncommand="ATB.Core.zoom(event, 200)" />
+                        <menuseparator />
+                        <menuitem id="zoom100" label="100%" label-localekey="ResizeTo100" type="radio" name="askzoom"
+                            tooltiptext="100%" tooltiptext-localekey="ResizeTo100" oncommand="ATB.Core.zoom(event, 100)" />
+                        <menuseparator />
+                        <menuitem id="zoom50" label="50%" label-localekey="ResizeTo50" type="radio" name="askzoom"
+                            tooltiptext="50%" tooltiptext-localekey="ResizeTo50" oncommand="ATB.Core.zoom(event, 50)" />
+                        <menuitem id="zoom75" label="75%" label-localekey="ResizeTo75" type="radio" name="askzoom"
+                            tooltiptext="75%" tooltiptext-localekey="ResizeTo75" oncommand="ATB.Core.zoom(event, 75)" />
+                    </menupopup>
+                </toolbarbutton>
+                <toolbaritem id="asktb-highlighter-container">
+                    <toolbarbutton id="asktb-btn-highlighter" 
+                        label="Highlight" label-localekey="Highlight" tooltiptext="Highlight search terms on the current page" tooltiptext-localekey="HighlightTooltip"
+                        image="chrome://asktoolbar/skin/highlighter_off.png" oncommand="ATB.Core.highlight(event)" />
+                </toolbaritem>
+            </toolbaritem>
+
+            <toolbarspring id="asktb-spring-before-overflow-container" flex="2" />
+
+            <toolbaritem id="asktb-options-overflow-container" orient="horizontal" flex="1">
+                <toolbarspring id="asktb-spring-overflow-container" flex="1" />
+                <toolbarbutton id="asktb-item-options" orient="horizontal" label="Options" label-localekey="Options"
+                    tooltiptext="Toolbar Options" tooltiptext-localekey="OptionsTooltip" 
+                    type="menu-button" image="chrome://asktoolbar/skin/preferences.png"
+                    oncommand="ATB.Core.showOptionsWindow(event)" style="padding-right: 2px;">
+                    <menupopup id="asktb-options-menu">
+                        <menuitem id="asktb-options-menu-tboptions" label="Toolbar Options" label-localekey="OptionsMenuItem" tooltiptext="Toolbar Options" tooltiptext-localekey="OptionsTooltip" 
+                        oncommand="ATB.Core.showOptionsWindow(event);" />
+                        <menuitem id="asktb-options-menu-ch" label="Clear History" label-localekey="ClearSearchHistory" tooltiptext=""
+                            oncommand="ATB.Core.clearHistory(); event.stopPropagation();" />
+                        <menuseparator />
+                        <menuitem id="asktb-help-item" label="Help" label-localekey="Help" tooltiptext=""
+                            oncommand="ATB.Core.navigateToHelpUrl(event);" />
+                        <menuitem id="asktb-uninstall-item" label="Uninstall" label-localekey="Uninstall" tooltiptext="Uninstall" tooltiptext-localekey="UninstallTooltip" 
+                            oncommand="ATB.Core.launchApp(event, this,'%windir%\\system32\\msiexec.exe','/x,{86D4B82A-ABED-442A-BE86-96357B70F4FE}','');" />
+                        <menuitem id="asktb-options-menu-about" label="About" label-localekey="About" tooltiptext=""
+                            oncommand="ATB.Core.showAboutWindow(event)" />
+                    </menupopup>
+                </toolbarbutton>
+
+                <toolbarbutton id="asktb-overflowbtn" collapsed="true" mousethrough="never" type="menu" tooltiptext="" 
+                    image="chrome://asktoolbar/skin/chevron.png">
+                    <menupopup id="asktb-overflowmenu" onpopupshowing="ATB.Events.overflowPopupActivated()" />
+                </toolbarbutton>
+
+            </toolbaritem>
+        </toolbar>
+    </toolbox>
+</overlay>

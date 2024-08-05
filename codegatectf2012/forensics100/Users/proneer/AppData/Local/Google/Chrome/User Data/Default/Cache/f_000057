@@ -1,0 +1,601 @@
+var blogEditMode;
+var myNoriterWindow;
+var herNoriterWindow;
+function getWindowName() {
+	if(top.myNoriterWindow==undefined && top.herNoriterWindow==undefined) {
+		wName = "myNoriter";
+	} else if(top.myNoriterWindow.closed==true && top.herNoriterWindow==undefined) {
+		wName = "myNoriter";
+	} else if(top.myNoriterWindow.closed==false && top.herNoriterWindow==undefined) {
+		wName = "herNoriter";
+	} else if(top.myNoriterWindow==undefined && top.herNoriterWindow.closed==true) {
+		wName = "myNoriter";
+	} else if(top.myNoriterWindow==undefined && top.herNoriterWindow.closed==false) {
+		wName = "myNoriter";
+	} else if(top.myNoriterWindow.closed==true && top.herNoriterWindow.closed==true) {
+		wName = "myNoriter";
+	} else if(top.myNoriterWindow.closed==false && top.herNoriterWindow.closed==true) {
+		wName = "herNoriter";
+	} else if(top.myNoriterWindow.closed==true && top.herNoriterWindow.closed==false) {
+		wName = "myNoriter";
+	} else if(top.myNoriterWindow.closed==false && top.herNoriterWindow.closed==false) {
+		wName = "herNoriter";
+	} else {
+		wName = "myNoriter";
+	}
+	return wName;
+}
+
+function setPageReady() {
+	if (self.parent.RTELoaded) self.parent.RTELoaded(self)
+}
+
+function initBlogEditor() {
+	var nowfm = document.fm;
+
+	blogeditor.document.designMode="On";
+	blogeditor.document.open("text/html","replace");
+	blogeditor.document.write("<style>P {margin-top:2px;margin-bottom:2px;}</style>");
+	blogeditor.document.write("<body monospace style='font-size:8pt; font-family:verdana' ONCONTEXTMENU=\"return false\">" + document.fm.strContent.value+"</body>");
+	blogeditor.document.close();
+	
+	if (nowfm.bgcolor.value!="") paintEditor("bgcolor", nowfm.bgcolor.value);
+	if (nowfm.bordercolor.value!="") paintEditor("bordercolor", nowfm.bordercolor.value);
+	if (nowfm.backgroundimage.value!="") paintEditor("backgroundimage", nowfm.backgroundimage.value);
+
+	blogEditMode="HTML";
+	setTimeout("setPageReady()",0);
+
+	setDrag();
+}
+
+
+function blogConfirm(savetype) {
+	var nowfm = document.fm;
+
+	if (blogEditMode!="TEXT") {
+		nowfm.strContent.value = document.frames("blogeditor").document.body.innerHTML;
+	} else {
+		nowfm.strContent.value = document.frames("blogeditor").document.body.innerText;
+	}
+
+	nowfm.editmode.value=blogEditMode;
+	blogeditor.focus();
+	blogeditor.document.execCommand("SelectAll");
+	blogeditor.document.execCommand("Copy");
+	blogeditor.document.execCommand("Unselect");
+
+	if (nowfm.strSubject.value=="") {
+		window.alert("제목은 반드시 입력하여야 합니다. 글의 제목을 입력하세요.");
+		nowfm.strSubject.focus();
+	} else if (nowfm.strContent.value=="") {
+		window.alert("작성된 본문이 없습니다.  본문을 작성해 주세요.");
+	} else {
+		nowfm.target = "_self";
+		nowfm.submit();
+	}
+}
+
+function blogDelete() {
+	var nowfm = document.fm;
+	if (nowfm.comment_count.value>0) {
+		if (confirm("삭제하시는 경우 이미 등록되어 있는 답글 및 트랙백글 모두 삭제되어집니다.\n\n글을 삭제하시겠습니까?")) {
+			nowfm.mode.value="D";
+			nowfm.submit();
+		}
+	} else {
+		if (confirm("선택하신 글을 삭제하시겠습니까?")) {
+			nowfm.mode.value="D";
+			nowfm.submit();
+		}
+	}
+}
+
+function controlMenu() {
+	var sName = new Array(
+		"undo", "redo", "cut", "copy", "paste", "Insert HR", "InsertParagraph", "Insert BR",
+		"bold", "italic", "underline", "justifyleft", "justifycenter", "justifyright", "insertorderedlist",
+		"insertunorderedlist", "indent", "outdent", "fontcolor", "highlight color", "bgcolor color", "border color", "add link", "add image");
+
+	var sCmd = new Array(
+		"format('undo')", "format('redo')", "format('cut')", "format('copy')", "format('paste')", "insertHTML('<HR>')", "format('InsertParagraph')", "insertHTML('<BR>')",
+		"format('bold')", "format('italic')", "format('underline')", "format('justifyleft')", "format('justifycenter')", "format('justifyright')", "format('insertorderedlist')",
+		"format('insertunorderedlist')", "format('indent')", "format('outdent')", "editColor('forecolor')", "editColor('backcolor')", "editColor('bgcolor')", "editColor('bordercolor')" ,
+		"createLink()", "createImg()");
+
+	for (i=0; i<sCmd.length; i++) {
+		if (i==8) document.write("<br>");
+		if (i==16) document.write("<br>");
+		document.write("<a href='#' onClick=\""+sCmd[i]+";\">"+sName[i]+"</a>&nbsp;|&nbsp;");
+	}
+}
+
+function insertHTML(sHTML) {
+	
+	blogeditor.focus();
+	
+	var sel = getselection();
+	var seltype = sel.type;
+	
+	if (blogEditMode=="HTML") {
+		if (seltype=="Control") sel.item(0).outerHTML = sHTML;
+		else sel.pasteHTML(sHTML);
+	} else {
+		sel.text = sHTML;
+	}
+	sel.select();
+}
+
+function getselection() {
+
+	var oSel = this.selection;
+	if (!oSel) {
+		oSel = blogeditor.document.selection.createRange();
+		oSel.type = blogeditor.document.selection.type;
+	}
+	return oSel;
+}
+
+function format(sComm,sOpt) {
+
+	blogeditor.focus();
+	if (sOpt == "removeFormat") {
+		sComm = sOpt;
+		sOpt = null;
+	}
+
+	if (sOpt==null) blogeditor.document.execCommand(sComm);
+	else blogeditor.document.execCommand(sComm,false,sOpt);
+	blogeditor.focus();
+}
+
+function switchEditMode(mode) {
+	var nowfm = document.fm;
+	if (mode=="TEXT") {
+		if(nowfm.curEditMode.value=="text") {
+			nowfm.curEditMode.value="html";
+			blogEditMode = "TEXT";
+			setEditMode(blogEditMode);
+		}
+	} else {
+		if(nowfm.curEditMode.value=="html") {
+			nowfm.curEditMode.value="text";
+			blogEditMode = "HTML";
+			setEditMode(blogEditMode);
+		}
+	}
+}
+
+function setEditMode(mode) {
+	var cont;
+
+	if (blogEditMode=="HTML") {
+		if (document.all.toolbar) {
+			document.all.toolbar.style.display = 'inline';
+			blogeditor.document.body.style.backgroundColor = document.all.fm.bgcolor.value;
+		}
+		cont=blogeditor.document.body.innerText;
+		blogeditor.document.body.innerHTML=cont;
+
+	} else {
+		cleanHtml();
+		if (document.all.toolbar) {
+			document.all.toolbar.style.display = 'none';
+			blogeditor.document.body.style.backgroundColor = '#FFFFFF';
+		}
+		cont=blogeditor.document.body.innerHTML;
+		blogeditor.document.body.innerText=cont;	
+	}
+
+	blogeditor.focus();
+}
+
+function cleanHtml() {
+	var coll = blogeditor.document.body.all.tags("FONT");
+	for (i=coll.length-1;i>=0;i--) {
+		var col = coll[i];
+		if (col.style.backgroundColor == "#FFFFFF") col.outerHTML = col.innerHTML;
+	}
+}
+
+function getEl(sTag,start) {
+
+  while ((start!=null) && (start.tagName!=sTag)) start = start.parentElement;
+  return start;
+}
+
+function createLink() {
+
+	blogeditor.focus();
+
+	var isA = getEl("A",blogeditor.document.selection.createRange().parentElement());
+	var str=prompt("링크할 URL을 입력하세요. (예: http://noriter.popdesk.co.kr):", isA ? isA.href : "http:\/\/");							  
+	
+	if ((str!=null) && (str!="http://")) {
+
+		var cover=prompt("링크로 화면에 보여질 문구를 입력하세요. (기본으로는 링크 URL로 표시됩니다)", str);
+		if ((cover!=null)) {
+
+			//if (blogeditor.document.selection.type == "HTML") insertHTML("<A HREF=\"" + str + "\">" + str + "</A> ")
+			if (blogEditMode=="HTML") insertHTML("<A HREF=\"" + str + "\">" + cover + "</A> ")
+			else format("CreateLink",str);
+
+		} else {
+			blogeditor.focus();
+		}
+	} else {
+		blogeditor.focus();
+	}
+}
+	
+function createImg(strTable) {
+	window.open("/insImgLocal.html?strTable=" + strTable, "insertImage","width=700,height=530,left=554,top=0scrollbars=no,resizable=no,status=no");
+}
+
+// 배경 선택
+function popBackgroundImage() {
+	var nowfm = document.fm;
+	var imgfile = nowfm.backgroundimage.value;
+
+	var popurl = "/blog/edit_patternimage.php?backgroundimage="+imgfile;
+	window.open(popurl, "patternpop", "width=500,height=365,left=50,top=50,scrollbars=no,resizable=no,status=yes");
+}
+
+// 배경이미지 선택
+function setBackgroundImage(imgfile) {
+	var nowfm = document.fm;
+	nowfm.backgroundimage.value = imgfile;
+	blogeditor.document.body.style.backgroundImage = "url('"+imgfile+"')";
+}
+
+function paintEditor(sl, scolor) {
+	if (scolor != null) {
+		if (scolor == "removeFormat") {
+			scolor = ""
+		}
+
+		if (sl == "bgcolor") {
+			blogeditor.document.body.style.backgroundColor = scolor;
+			document.all.fm.bgcolor.value = scolor;
+		} else if (sl == "bordercolor") {
+			blogeditor.document.body.style.borderWidth = "3px";
+			blogeditor.document.body.style.borderColor = scolor;
+			document.all.fm.bordercolor.value = scolor;
+		} else if (sl == "backgroundimage") {
+			blogeditor.document.body.style.backgroundImage = "url('"+scolor+"')";
+			document.all.fm.backgroundimage.value = scolor;
+		} else if (sl=="forecolor" || sl=="backcolor") {
+			format(sl, scolor)
+		}
+	}
+}
+
+
+function setLogstatusType(var1) {
+	if (var1==0) {
+		document.fm.ringgrpid.disabled = false;
+		document.fm.encomment.disabled = false;
+		document.fm.encomment.checked = true;
+		document.fm.entrackback.disabled = false;
+		document.fm.entrackback.checked = true;
+
+	} else if (var1==1)	{
+		document.fm.ringgrpid.disabled = true;
+		document.fm.ringgrpid.options[0].selected = true;
+		document.fm.encomment.checked = false;
+		document.fm.encomment.disabled = true;
+		document.fm.entrackback.checked = false;
+		document.fm.entrackback.disabled = true;
+	}
+}
+
+// blogcategory 추가시
+function newBlogCategory() {
+	var nowfm = document.fm;
+	var logcateid = nowfm.logcateid[nowfm.logcateid.selectedIndex].value;
+	if (logcateid=="999") {
+		window.open("/blog/edit_blogcategorypop.php", "blogcoupleblog", "scrollbars=yes,resizable=no,status=yes,width=400,height=400,left=0,top=100");
+	}
+}
+
+
+// draw image
+function drawImage() {
+	window.open("/blog/edit_drawimage.php", "drawimg","top=50,left=100,width=600,height=600,scrollbars=no,resizable=no,status=yes")
+}
+
+// color table
+function editColor(sl) {
+	window.open("./edit_color.php?type="+sl, "색상표", "width=400,height=440,scrollbars=no,resizable=no");
+}
+
+// blog section check..
+function checkSection(){
+	var nowfm = document.fm;
+	var istrue=false;
+	
+	if(nowfm.is_adver.value=="yes"){
+		istrue = true;
+	} else {
+		for(i=0;i<nowfm.section.length;i++){
+			if(nowfm.section[i].checked==true){
+				istrue=true;
+			}
+		}
+	}
+
+	return istrue;
+}
+
+
+// blog subsection check..
+function checkSubSection(){
+	var nowfm = document.fm;
+	var istrue=false;
+	
+	if(nowfm.is_adver.value=="yes"){
+		istrue = true;
+	} else {
+		for(i=0;i<nowfm.subsection.length;i++){
+			if(nowfm.subsection[i].checked==true){
+				istrue=true;
+			}
+		}
+	}
+
+	return istrue;
+}
+
+
+//////////////////////////////////////////////////////
+// 이모티콘 레이어 관련 function
+//////////////////////////////////////////////////////
+function showImoticon() {
+	document.all.emot_layer.style.pixelTop = '211';
+	document.all.emot_layer.style.pixelLeft = '411';
+	document.all.emot_layer.style.visibility = 'visible';
+}
+
+function hideImoticon() {
+	document.all.emot_layer.style.visibility = 'hidden';
+}
+
+
+//////////////////////////////////////////////////////
+// 색상표 레이어 관련 function
+//////////////////////////////////////////////////////
+
+var colorKey = "";
+function showColorTable(modekey) {
+	colorKey = modekey;
+	document.all.colortable_layer.style.pixelTop = '325';
+	document.all.colortable_layer.style.pixelLeft = '425';
+	document.all.colortable_layer.style.visibility = 'visible';
+}
+
+function colorTableView(color) {                  // preview color
+	document.all.ColorPreview.style.backgroundColor = '#' + color;
+	document.all.ColorHex.value = '#' + color;
+}
+
+function colorTableSet(string) {  
+	if (string=='null') {
+		paintEditor(colorKey, '');
+		hideColorTable();
+	} else {
+		color = colorTableValidate(string);
+		if (color == null) {
+			alert("색상코드가 올바르지 않습니다. : " + string); 
+		} else {
+			colorTableView(color);
+			paintEditor(colorKey, color);
+			hideColorTable();
+		}
+	}
+}
+
+function colorTableValidate(string) {
+	string = string || '';
+	string = string + "";
+	string = string.toUpperCase();
+	chars = '0123456789ABCDEF';
+	out   = '';
+
+	for (i=0; i<string.length; i++) {
+		schar = string.charAt(i);
+			if (chars.indexOf(schar) != -1) { out += schar; }
+	}
+	
+	if (out.length != 6) { return null; }
+	return out;
+} 
+
+function hideColorTable() {
+	document.all.colortable_layer.style.visibility='hidden';
+}
+
+function beginDrag() {
+
+	dragThis = event.srcElement; // (1)
+
+	while (dragThis.id.indexOf("colortable_layer") == -1 && dragThis.id.indexOf("emot_layer") == -1 ) { // (2)
+		dragThis = dragThis.parentElement;
+		if (dragThis == null) { return }
+	}
+	oldX = (event.clientX + document.body.scrollLeft); // (3)
+	oldY = (event.clientY + document.body.scrollTop); 
+}
+
+function dragIt() {
+
+	if (dragThis == null) { return };
+
+	newX = (event.clientX + document.body.scrollLeft);
+	newY = (event.clientY + document.body.scrollTop);
+
+	var distanceX = (newX - oldX);
+	var distanceY = (newY - oldY);
+
+	oldX = newX;
+	oldY = newY;
+
+	dragThis.style.pixelLeft += distanceX; // (1)
+	dragThis.style.pixelTop += distanceY;
+
+	event.returnValue = false;
+}
+
+function endDrag() {
+	dragThis = null;
+}
+
+function setDrag() {
+	document.onmousemove = dragIt;
+	document.onmousedown = beginDrag;
+	document.onmouseup = endDrag;
+
+	oldX=oldY=newX=newY=0, dragThis=null;
+}
+
+function openBloggingToolHelp(idx){
+	if (idx!="")	{
+		window.open("/home/about_bloggingtool.php#"+idx,"toolhelp","left=500, top=0, width=616, height=600, scrollbars=yes,resizable=no,status=yes");
+	} else {
+		window.open("/home/about_bloggingtool.php","toolhelp","left=500, top=0, width=616, height=600, scrollbars=yes,resizable=no,status=yes");
+	}
+}
+
+// 이미지 크기를 계산하기 좋게 하기 위해 메모리에 로드시켜놓으려고 
+// image객체 생성하고, 이름을 주었다. 안 그러면, 이미지 로드되기 전 계산치가 나온다.
+
+var popupWn;
+
+function BigImage_View(obj) {
+	var nWnWidth, nWnHeight;
+	var strSrc, strUrl;
+
+	strSrc = escape(obj.src);
+	strUrl = "http://gom.gomtv.com/openImage.html?imgPath=" + strSrc; 
+
+	nWnWidth = (window.screen.width / 2) - (122 * 10);
+	nWnHeight = (window.screen.height / 2) - (27 + 50);
+
+	popupWn = window.open(strUrl, 
+				"이미지보기", 
+				"width=100, height=100, left=" + nWnWidth + ", top=" + nWnHeight + ", screenX=" + nWnWidth + ", screenY=" + nWnHeight + ", scrollbars=yes");
+	popupWn.focus();
+}
+
+function GetTextCount(nFlag) 	{
+	var frm = document.frmR;
+	var nCnt;
+	if (nFlag == 1) {
+		nCnt = frm.intro1.value.length;
+		document.all.textlimit1.innerText = nCnt;
+		if (nCnt > 70) {
+			frm.intro1.value = frm.intro1.value.substring(0, 69);
+		}
+	}else if (nFlag == 2) {
+		nCnt = frm.intro2.value.length;
+		document.all.textlimit2.innerText = nCnt;
+		if (nCnt > 200) {
+			frm.intro2.value = frm.intro2.value.substring(0, 199);
+		}
+	}
+}
+
+function textCounter(field, maxlimit, flag)	{
+	if (field.value.length > maxlimit){
+		alert('제한된 글자수를 초과하였습니다.');
+		field.value = field.value.substring(0, maxlimit);
+	} else{
+		if (flag == 1){
+			document.all.textlimit1.innerText = field.value.length;
+		}else if (flag == 2){
+			document.all.textlimit2.innerText = field.value.length;
+		}else if (flag == 3){
+			document.all.textlimit3.innerText = field.value.length;
+		}else if (flag == 4){
+			document.all.textlimit4.innerText = field.value.length;
+		}else if (flag == 5){
+			document.all.textlimit5.innerText = field.value.length;
+		}
+	}
+}
+
+function input_check(input_name)	{
+    var input_name_str;
+	        
+	input_name_str = new String(input_name.value);
+	input_name_length = input_name_str.length;
+		
+	for (i = 0; i < input_name_length; i++) {
+		one_str = input_name_str.charAt(i);
+		// ;, tab, =, | 입력막기
+		if (one_str == ";" || one_str == "\t" || one_str == "=" || one_str == "|"){
+			input_name.value = input_name.value.substr(0, input_name_length - 1);
+			return;
+		}
+	}
+}
+
+function getCookie( name ) {
+	var nameOfCookie = name + "=";
+	var x = 0;
+	while ( x <= document.cookie.length )
+	{
+		var y = (x+nameOfCookie.length);
+		if ( document.cookie.substring( x, y ) == nameOfCookie )
+		{
+			if ( (endOfCookie=document.cookie.indexOf( ";", y )) == -1 )
+				endOfCookie = document.cookie.length;
+			return unescape( document.cookie.substring( y, endOfCookie ) );
+		}
+		x = document.cookie.indexOf( " ", x ) + 1;
+		if ( x == 0 )
+		break;
+	}
+	return "";
+}
+
+function Login(){
+	var returl = document.URL;
+	returl = escape(returl);
+	document.location.href = 'http://private.gomtv.com/cgi-bin/login.cgi?returl=' + returl;
+}
+
+function delCookie()
+{
+	var req = newXMLHttpRequest();
+    req.onreadystatechange = function()
+	{
+		if(req.readyState == "4")
+		{
+			if (req.status == 200) 
+			{
+				
+			}
+			else
+			{
+				alert("HTTP error: "+req.status);
+			}
+		}
+	}
+	req.open("POST", "/manage/updateTplSession2H.html", true);
+    req.setRequestHeader("Content-Type",
+                      "application/x-www-form-urlencoded");
+	req.send("mode=resetAll");
+//	document.getElementById("resultArea").style.display="none";
+}
+
+function LogOut(){
+//	delCookie();
+	RealLogOut();
+}
+
+function RealLogOut(){
+	var returl=document.URL;
+	returl=escape( returl );
+	var url='http://private.gomtv.com/cgi-bin/logout.cgi?returl='+returl;
+	document.location.replace( url );
+}

@@ -1,0 +1,21 @@
+<?wpl version="1.0"?>
+<smil>
+    <head>
+        <meta name="Generator" content="Microsoft Windows Media Player -- 9.0.0.3442"/>
+        <title>Pictures rated 4 or 5 stars</title>
+    </head>
+    <body>
+        <seq>
+            <smartPlaylist version="1.0.0.0">
+                <querySet>
+                    <sourceFilter id="{CC823400-A8E4-4081-B073-D3B6D952FE69}" name="Pictures in my library">
+                        <fragment name="User Rating">
+                            <argument name="condition">Is At Least</argument>
+                            <argument name="value">4 stars</argument>
+                        </fragment>
+                    </sourceFilter>
+                </querySet>
+            </smartPlaylist>
+        </seq>
+    </body>
+</smil>

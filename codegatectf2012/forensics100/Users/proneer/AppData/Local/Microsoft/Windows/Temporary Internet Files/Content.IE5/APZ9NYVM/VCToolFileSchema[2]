@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="VisualStudioToolFile" type="VisualStudioToolFile" />
+	<xs:complexType name="VisualStudioToolFile">
+		<xs:choice minOccurs="0" maxOccurs="1">
+			<xs:element name="Rules" maxOccurs="1" minOccurs="0">
+				<xs:complexType>
+					<xs:sequence maxOccurs="unbounded" minOccurs="0">
+						<xs:element name="CustomBuildRule" type="CustomBuildRule" />
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:choice>
+		<xs:attribute name="Name" type="xs:string" use="required" />
+		<xs:attribute name="Version" type="xs:string" use="optional" default="8.00" />
+	</xs:complexType>
+	<xs:complexType name="CustomBuildRule">
+		<xs:sequence>
+			<xs:element name="Properties" maxOccurs="1" minOccurs="0">
+				<xs:complexType>
+					<xs:choice minOccurs="0" maxOccurs="unbounded">
+						<xs:element name="StringProperty" type="StringProperty" />
+						<xs:element name="EnumProperty" type="EnumProperty" />
+						<xs:element name="BooleanProperty" type="BooleanProperty" />
+						<xs:element name="IntegerProperty" type="IntegerProperty" />
+					</xs:choice>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute name="Name" type="xs:string" use="required" />
+		<xs:attribute name="DisplayName" type="xs:string" use="optional" />
+		<xs:attribute name="CommandLine" type="xs:string" use="required" />
+		<xs:attribute name="Outputs" type="xs:string" use="required" />
+		<xs:attribute name="AdditionalDependencies" type="xs:string" use="optional" />
+		<xs:attribute name="FileExtensions" type="xs:string" use="required" />
+		<xs:attribute name="ExecutionDescription" type="xs:string" use="optional" />
+		<xs:attribute name="SupportsFileBatching" type="xs:boolean" use="optional" />
+		<xs:attribute name="BatchingSeparator" type="xs:string" use="optional" default=" " />
+		<xs:attribute name="ShowOnlyRuleProperties" type="xs:boolean" use="optional" default="true" />
+	</xs:complexType>
+	<xs:complexType name="StringProperty">
+		<xs:complexContent>
+			<xs:extension base="Property">
+				<xs:sequence />
+				<xs:attribute name="Switch" type="xs:string" use="optional" />
+				<xs:attribute name="DefaultValue" type="xs:string" use="optional" />
+				<xs:attribute name="Delimited" type="xs:boolean" use="optional" default="false" />
+				<xs:attribute name="Delimiters" type="xs:string" use="optional" default=";," />
+				<xs:attribute name="Inheritable" type="xs:boolean" use="optional" default="false" />
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="EnumProperty">
+		<xs:complexContent>
+			<xs:extension base="Property">
+				<xs:sequence>
+					<xs:element name="Values" minOccurs="1" maxOccurs="1">
+						<xs:complexType>
+							<xs:sequence maxOccurs="unbounded" minOccurs="0">
+								<xs:element name="EnumValue" type="EnumValue" />
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+				<xs:attribute name="DefaultValue" type="xs:integer" use="optional" default="0" />
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="EnumValue">
+		<xs:sequence />
+		<xs:attribute name="Switch" type="xs:string" use="optional" />
+		<xs:attribute name="Value" type="xs:integer" use="required" />
+		<xs:attribute name="DisplayName" type="xs:string" use="optional" />
+	</xs:complexType>
+	<xs:complexType name="BooleanProperty">
+		<xs:complexContent>
+			<xs:extension base="Property">
+				<xs:sequence />
+				<xs:attribute name="Switch" type="xs:string" use="optional" />
+				<xs:attribute name="DefaultValue" type="xs:boolean" use="optional" default="false" />
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="IntegerProperty">
+		<xs:complexContent>
+			<xs:extension base="Property">
+				<xs:sequence />
+				<xs:attribute name="Switch" type="xs:string" use="optional" />
+				<xs:attribute name="DefaultValue" type="xs:integer" use="optional" default="0" />
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="Property">
+		<xs:sequence></xs:sequence>
+		<xs:attribute name="Name" type="xs:string" use="required" />
+		<xs:attribute name="IsReadOnly" type="xs:boolean" use="optional" default="false" />
+		<xs:attribute name="DisplayName" type="xs:string" use="optional" />
+		<xs:attribute name="Description" type="xs:string" use="optional" />
+		<xs:attribute name="PropertyPageName" type="xs:string" use="optional" default="General" />
+		<xs:attribute name="Category" type="xs:string" use="optional" />
+		<xs:attribute name="HelpContext" type="xs:integer" use="optional" />
+		<xs:attribute name="HelpFile" type="xs:string" use="optional" />
+		<xs:attribute name="HelpURL" type="xs:string" use="optional" />
+	</xs:complexType>
+</xs:schema>

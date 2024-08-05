@@ -1,0 +1,1354 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
+<head profile="http://gmpg.org/xfn/11"><link href="../App_Themes/Ozkan/Standart.css" type="text/css" rel="stylesheet" /><meta http-equiv="Content-Type" content="text/html; charset=UTF-8;charset=utf-8" /><title>
+	euroforensics | Euroforensics
+</title><meta http-equiv="Content-Type" content="text/html; charset=UTF-8;charset=utf-8" /><link rel="stylesheet" href="../index_files/style000.css" type="text/css" media="screen" /><link rel="pingback" href="../#/xmlrpc.php" /><link rel="stylesheet" href="../index_files/nivo-sli.css" type="text/css" media="screen" /><link rel="stylesheet" href="../index_files/kwick-sl.css" type="text/css" media="screen" /><link rel="stylesheet" href="../index_files/custom-n.css" type="text/css" media="screen" /><link rel="stylesheet" href="../index_files/prettyPh.css" type="text/css" media="screen" /><link rel="stylesheet" href="../index_files/superfis.css" type="text/css" media="screen" /><link rel="stylesheet" href="../index_files/tipsy000.css" type="text/css" media="screen" /><link rel="stylesheet" href="../index_files/jquery-u.css" type="text/css" media="screen" /><link rel="stylesheet" type="text/css" href="../index_files/css00000.css" /><link rel="stylesheet" type="text/css" href="../index_files/css00000.css" /><link rel="stylesheet" type="text/css" href="../index_files/css00000.css" /><link rel="stylesheet" type="text/css" href="../index_files/css00000.css" /><link rel="stylesheet" href="../index_files/styleshe.css" type="text/css" media="screen" /><link rel="stylesheet" type="text/css" href="../index_files/css00001.css" />
+    <style type="text/css">
+
+	
+		.body-2{
+			background-color: #fff;
+							background: url('../bgs.png');
+					}
+		a{
+			color: #CC3030;
+		}
+		a:hover{
+			color: #d15858;
+		}
+		.portfolio-link a{
+			color: #CC3030;
+		}
+		.last-port-item-link a{
+			color: #c94a4a;
+		}
+		.last-port-item-link a:hover{
+			color: #c95b5e;
+		}
+		.last-blog-item-link a{
+			color: #CC3030;
+		}
+		.last-blog-item-link a:hover{
+			color: #d15858;
+		}
+		.nav-space{
+			height: 66px		}
+
+
+
+		.tagcloud a{
+			color: #CC3030 !important;
+		}
+		.tagcloud a:hover{
+			color: #c74c4c !important;
+		}
+		#footer .tagcloud a{
+			color: #f2f2f2 !important;
+		}
+		#footer .tagcloud a:hover{
+			color: #d4d4d4 !important;
+		}
+		#wp-calendar td a{
+			font-weight: bold;
+			color: #CC3030;
+		}
+		#wp-calendar td a:hover{
+			color: #d15858;
+		}
+		#header .logo{
+			margin-top: -20px;
+			margin-left: 0px;
+		}
+
+
+
+
+				li.current-menu-item a,li.current-menu-parent a{
+			color: #CC3030 !important;
+			border-bottom: 0px #CC3030 solid  !important;
+		}
+		li.current-menu-item ul li a,li.current-menu-parent ul li a{
+			color: #666 !important;
+			border-top: 0px !important;
+		}
+		li ul li.current-menu-item a,li ul li.current-menu-parent a{
+			border-bottom: 0px !important;
+		}
+		.menu-wrapper ul li a:hover p, .menu-wrapper ul li:hover > a p{
+			color: #CC3030 !important;
+			border-bottom: 0px #CC3030 solid  !important;
+		}
+		.menu-wrapper ul li ul li a{
+			border-bottom: 0px !important;
+		}
+		.menu-wrapper ul li ul li:hover > a p{
+			color: #CC3030 !important;
+			border-bottom: 0px !important;
+		}
+		.menu-wrapper ul li ul li a:hover p{
+			color: #CC3030 !important;
+		}
+		a.nivo-nextNav, a.nivo-prevNav {
+			background-color: #CC3030 !important;
+		}
+		.ui-slider-handle {
+			border-top: 8px #CC3030 solid !important;
+		}
+		.last-port-top-right{
+			background-color: #CC3030 !important;
+		}
+		.last-blog-first-date{
+			background-color: #CC3030 !important;
+		}
+		.cPrev, .cNext{
+			background-color: #CC3030 !important;
+		}
+
+
+		h1, h2, h3, h4, h5, h6{
+			font-family: 'Cabin' !important;
+		}
+
+		.last-port-title  h3, .last-blog-title  h3, .heading-up .header, .heading .header, .heading .caption{
+			font-family: 'Cabin' !important;
+		}
+
+		.bar-title h2{
+			font-family: 'Cabin' !important;
+		}
+		.bar-title h5{
+			font-family: 'Cabin' !important;
+		}
+
+
+				.header-bar-wrapper{
+			border-bottom: 1px #aaaaaa solid;
+		}
+		.header-bar{
+			border-bottom: 1px #eeeeee solid;
+		}
+				#sidebar .sidebar-inner h3{
+			color: #424242;
+		}
+		#sidebar .sidebar-inner a{
+			color: #CC3030;
+		}
+		#sidebar .sidebar-inner a:hover{
+
+			color: #c74c4c;
+		}
+
+
+
+
+
+				#footer a{
+				color: #f2f2f2;
+				text-decoration: none;
+			}
+		#footer a:hover{
+				color: #d4d4d4;
+			}
+		#footer .footer-inner h1,#footer .footer-inner h2{
+			margin: 10px 0px;
+			color: #ffffff ;
+			font-size: 17px;
+		}
+
+				#slider-wrapper .slider-content{
+			width: 975px;
+			height: 350px;
+		}
+
+
+
+		.last-port-wrapper-content{
+			width: 1912px;
+		}
+		.lp-top{
+			top: 110px;
+		}
+
+		 h1, h2, h3, h4, h5, h6{
+			color: #CC3030;
+			font-weight: normal;
+		}
+
+
+		.bar-title h2{
+		color: #eee;
+		background: #434343;
+		font-size: 22px;
+		margin-top: 36px;
+		margin-bottom: 15px;
+		padding-left: 30px;
+		padding-right: 20px;
+		font-weight: normal;
+		display: inline;
+		float: left;
+	}
+			stunning-text-inner h2{
+			margin-top: 20px;
+		}
+				h1,h2,h3,h4,h5,h6{
+			margin-top: 15px;
+			margin-bottom: 10px;
+		}
+		.post-date-lfb{
+			margin-top: -8px;
+		}
+		.last-port-title  h3, .last-blog-title  h3{
+			padding-bottom: 3px;
+		}
+		.last-port-item-link h4{
+			margin-bottom: 8px;
+		}
+		.last-blog-item-link h4{
+			margin-bottom: 9px;
+		}
+		.last-blog-first-title h4{
+			margin-bottom: 2px;
+		}
+		#page .title-wrapper h2{
+			margin-top: 10px;
+			margin-bottom: 9px;
+		}
+				.bar-title h2{
+			margin-top: 33px;
+		}
+
+
+
+			#footer .footer-bg-top2{
+			background: none;
+	}
+		.stunning-icon{
+		float: right;
+		margin-top: px;
+		margin-right: px;
+	}
+	#stunning-text-inner h2{
+		font-family: 'Cabin' !important;
+		color: #ffffff;
+	}
+	#stunning-text-inner h3{
+		font-family: 'Cabin' !important;
+		color: #adadad;
+	}
+	#front-manager  h1,#front-manager  h2,#front-manager  h3,#front-manager  h4,#front-manager  h5,#front-manager  h6{
+			color: #CC3030;
+		}
+	#front-manager .dropcap h1{
+		color: #333;
+	}
+
+	.dropcap, .dropcap_circle{
+			color: #CC3030;
+	}
+				.nivo-caption h2{
+					color: #242424;
+			}
+			.nivo-caption p{
+			;
+					color: #333333;
+								text-align: left;
+			}
+			.nivo-caption {
+									background: #ffffff							}
+
+
+						.kwicks li {
+								width: 243.75px;
+				height: 300px;
+			}
+			#sliderkwick .headline h4{
+					font-family: 'SansationRegular' !important;
+					color: #a5a5a5;
+			}
+			#sliderkwick .headline p{
+					color: #eeeeee;
+			}
+
+
+
+			/*#header-whole #slider-wrapper .slider-bullet{
+				height: 99px;
+			}
+			#header-whole #slider .nivo-controlNav {
+				position:absolute;
+				width: 100%;
+				left:0%;
+				bottom: -70px;
+				text-align:center;
+			}
+			#header-whole #slider .nivo-controlNav img {
+				display: inline;
+				position:relative;
+				margin-left:11px;
+				margin-right:11px;
+				border: 2px #292929 solid;
+				-webkit-box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 2px;
+				-moz-box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 2px;
+				box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 2px;
+
+			}
+			#header-whole #slider .nivo-controlNav a.active img {
+				-webkit-box-shadow: rgba(0, 0, 0, 1) 0px 0px 1px 1px;
+				-moz-box-shadow: rgba(0, 0, 0, 1) 0px 0px 1px 1px;
+				box-shadow: rgba(0, 0, 0, 1) 0px 0px 1px 1px;
+			}
+
+			#header-whole #slider-wrapper .slider-shadow-bottom{
+				bottom: 56px;
+			}*/
+				#header-whole #slider-wrapper .carousel-slider{
+				padding-top: 9px;
+				padding-bottom: 9px;
+				float: left;
+			}
+			#header-whole #slider-wrapper .bg-bullet-left{
+				width: 16px;
+				height: 30px;
+				display: block;
+				float: left;
+			}
+			#header-whole #slider-wrapper .bg-bullet-right{
+				width: 16px;
+				height: 30px;
+				display: block;
+				float: left;
+			}
+
+			#header-whole #slider-wrapper .nivo-controlNav {
+				position: absolute;
+				right: 0px;
+									bottom:-38px;
+							}
+						#slider2 .nivo-controlNav a {
+				display:block;
+				width:16px;
+				height:16px;
+				background: url('#/wp-content/themes/stufe/css/bullets3.png') no-repeat;
+				text-indent:-9999px;
+				border:0;
+				margin-right:8px;
+				float:left;
+			}
+			#slider2 .nivo-controlNav a.active {
+				background-position:-16px 0;
+			}
+			#slider-wrapper .nivo-controlNav a {
+				display:block;
+				width:6px;
+				height:6px;
+				background: url('../index_files/bullets0.png') no-repeat;
+				text-indent:-9999px;
+				border:0;
+				margin-right:10px;
+				float:left;
+			}
+			#slider-wrapper .nivo-controlNav  ul li:last-child a{
+				margin-right:0px;
+			}
+
+			#header-whole #slider-wrapper .nivo-controlNav a.active {
+				background-position:-6px 0;
+			}
+
+
+			#slider-wrapper .slider-content{
+				margin: 0px auto 0px;
+			}
+
+
+
+		.button,.button:hover, .button_big,.button_big:hover, .button-cancel-comment a, .button-cancel-comment a:hover, .button-reply a, .button-reply a:hover{
+			color: #fff;
+			background-color: #424242;
+			border: 4px #eee solid;
+		}</style>
+    <!--[if IE]>
+	<link rel="stylesheet" href="../#/wp-content/themes/stufe/css/ie-table.css" type="text/css" media="screen" />
+<![endif]-->
+    <!--[if lte IE 7]>
+	<link rel="stylesheet" href="../#/wp-content/themes/stufe/css/ie-style.css" type="text/css" media="screen" />
+<![endif]-->
+    <script type='text/javascript' src='../index_files/l10n0000.js'></script>
+    <script type='text/javascript' src='../index_files/jquery-1.js'></script>
+    <script type='text/javascript' src='../index_files/cufon000.js'></script>
+    <link rel="EditURI" type="application/rsd+xml" title="RSD" href="../?rsd#/xmlrpc.php" /><link rel="wlwmanifest" type="application/wlwmanifest+xml" href="../#/wp-includes/wlwmanifest.xml" /><link rel="index" title="Stufe&#39; – creative inspiration" href="../#" /><meta name="generator" content="WordPress 3.2.1" />
+    <style type="text/css">
+        .recentcomments a
+        {
+            display: inline !important;
+            padding: 0 !important;
+            margin: 0 !important;
+        }
+    </style>
+    <script type="text/javascript">
+        jQuery(window).ready(function () {
+
+            jQuery("#superfish-wrapper li:contains(\'HOME\')").addClass("current-menu-item");
+            jQuery("#superfish-wrapper li:contains(\'home\')").addClass("current-menu-item");
+            jQuery("#superfish-wrapper li:contains(\'Home\')").addClass("current-menu-item");
+        });
+    </script>
+<meta name="description" content="euroforensics Euroforensics First International Crime Scene Investigation Conference First International Cyber Warfare, Terrorism and Crime Conference EuroForensics 2011 EuroForensics 2010" /><meta name="keywords" content="euroforensics,Euroforensics,First International Crime Scene Investigation Conference,First International Cyber Warfare, Terrorism and Crime Conference,EuroForensics 2011,EuroForensics 2010" /></head>
+<body class="home blog">
+    <form name="aspnetForm" method="post" action="Default.aspx?c=5" id="aspnetForm">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUENTM4MWQYAQUeX19Db250cm9sc1JlcXVpcmVQb3N0QmFja0tleV9fFgIFFmN0bDAwJERpbFNlY2ltaTEkY3RsMDAFFmN0bDAwJERpbFNlY2ltaTEkY3RsMDGZZFQc/9Aj8Jz/+tm612RDpe0osYjo3IkFz+8VqGI3HA==" />
+</div>
+
+<div>
+
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEWAwLblovZAgLm5usdAubm5x1uJdru4lfC615YIcfM62e38/0dbIuLFnntDTbf7lbTZA==" />
+</div>
+    <div class="body-2">
+        <!-- Header -->
+        <div style="width: 1000px; margin: 0px auto; background: #fff; padding-right: 15px;">
+            <div class="header-bar-wrapper">
+                <div class="header-bar">
+                    <div class="header-bar-content">
+                        <div class="header-bar-left alignleft">
+                            <div class="menu-header">
+                                <ul id="menu-header-menu" class="">
+                                    <li id="menu-item-549" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-549">
+                                        <a href="default.aspx?c=1">
+                                            <span id="ctl00_Label1">Home</span></a></li>
+                                    <li id="menu-item-556" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-556">
+                                        <a href="default.aspx?c=16">
+                                            <span id="ctl00_Label2">Site Map</span></a></li>
+                                    <li id="menu-item-557" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-557">
+                                        <a href="default.aspx?c=2">
+                                            <span id="ctl00_Label3">Online Registration</span></a></li>
+                                    <li id="menu-item-558" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-558">
+                                        <a href="default.aspx?c=6">
+                                            <span id="ctl00_Label4">Contact</span></a></li>
+                                    <li id="menu-item-559" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-558">
+                                        <a href="default.aspx?c=7">
+                                            <span id="ctl00_Label5">Blog</span></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="header-bar-right alignright">
+                            
+<div style="padding: 5px; text-align:right; width:100px; float:right">
+    <div id="ctl00_DilSecimi1_PanelButonlar">
+	
+    <input type="image" name="ctl00$DilSecimi1$ctl00" class="languageButtons" src="../SystemFiles/Images/Sistem/Language/yuvarlak/en-US.png" alt="en-US" style="border-width:0px;" /><input type="image" name="ctl00$DilSecimi1$ctl01" class="languageButtons" src="../SystemFiles/Images/Sistem/Language/yuvarlak/tr-TR.png" alt="tr-TR" style="border-width:0px;" />
+</div>
+</div>
+
+                            <span id="ctl00_Label6">email us : info@euroforensics.com</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="header-whole">
+                <div class="header-wrapper">
+                    <div id="header">
+                        <!-- Logo -->
+                        <div class="logo">
+                            <p><img alt="" width="960" height="129" src="/SystemFiles/UserFiles/image/logoing(5).png" />&nbsp;</p>
+                        </div>
+                        <!-- Menu -->
+                        <div class="nav-space">
+                        </div>
+                    </div>
+                    <div class="header-right">
+                    </div>
+                </div>
+                <div style="width: 990px; margin: 0px auto;">
+                    <div class="nav-wrapper">
+                        <div id="superfish-wrapper" class="menu-wrapper">
+                            
+<ul id="menu-main-menu" class="sf-menu">
+    
+            <li><a href='/en-US/Default.aspx?c=1'>
+                 <p class="span-before">   
+                 Home
+                
+            
+        
+            </p>
+        <span>front page</span></a>
+                
+                
+                
+                
+                
+            </li>
+        
+            <li><a href='/en-US/Default.aspx?c=5'>
+                 <p class="span-before">   
+                 Euroforensics
+                
+            
+        
+            </p>
+        <span>about</span></a>
+                
+                
+                
+                
+                <ul id="ctl00_ListStyleMenu21_Repeater1_ctl01_Ul1" class="sub-menu">
+                    
+                            <li ><a href='/en-US/Default.aspx?c=24' 
+                             >
+                             <p class="span-before">
+                    First International Crime Scene Investigation Conference</p>
+                <span></span>   </a>
+                      
+                            </li>
+                        
+                            <li ><a href='/en-US/Default.aspx?c=25' 
+                             >
+                             <p class="span-before">
+                    First International Cyber Warfare, Terrorism and Crime Conference</p>
+                <span></span>   </a>
+                      
+                            </li>
+                        
+                            <li ><a href='/en-US/Default.aspx?c=13' 
+                             target="_blank" >
+                             <p class="span-before">
+                    EuroForensics 2011</p>
+                <span></span>   </a>
+                      
+                            </li>
+                        
+                            <li ><a href='/en-US/Default.aspx?c=14' 
+                             target="_blank" >
+                             <p class="span-before">
+                    EuroForensics 2010</p>
+                <span></span>   </a>
+                      
+                            </li>
+                        
+                </ul>
+            </li>
+        
+            <li><a href='/en-US/Default.aspx?c=3'>
+                 <p class="span-before">   
+                 Conference
+                
+            
+        
+            </p>
+        <span>all about conference</span></a>
+                
+                
+                
+                
+                <ul id="ctl00_ListStyleMenu21_Repeater1_ctl02_Ul1" class="sub-menu">
+                    
+                            <li ><a href='/en-US/Default.aspx?c=8' 
+                             >
+                             <p class="span-before">
+                    Venue</p>
+                <span></span>   </a>
+                      
+                            </li>
+                        
+                            <li ><a href='/en-US/Default.aspx?c=9' 
+                             >
+                             <p class="span-before">
+                    Sponsorship / Exhibition</p>
+                <span></span>   </a>
+                      
+                            </li>
+                        
+                            <li ><a href='/en-US/Default.aspx?c=23' 
+                             >
+                             <p class="span-before">
+                    Supporting Institutions</p>
+                <span></span>   </a>
+                      
+                            </li>
+                        
+                            <li ><a href='/en-US/Default.aspx?c=21' 
+                             >
+                             <p class="span-before">
+                    Exhibitors</p>
+                <span></span>   </a>
+                      
+                            </li>
+                        
+                            <li ><a href='/en-US/Default.aspx?c=10' 
+                             >
+                             <p class="span-before">
+                    Keynote Speakers</p>
+                <span></span>   </a>
+                      
+                            </li>
+                        
+                            <li ><a href='/en-US/Default.aspx?c=11' 
+                             >
+                             <p class="span-before">
+                    Conference Topics</p>
+                <span></span>   </a>
+                      
+                            </li>
+                        
+                            <li ><a href='/en-US/Default.aspx?c=12' 
+                             >
+                             <p class="span-before">
+                    Conference Program</p>
+                <span></span>   </a>
+                      
+                            </li>
+                        
+                </ul>
+            </li>
+        
+            <li><a href='/en-US/Default.aspx?c=4'>
+                 <p class="span-before">   
+                 Workshop
+                
+            
+        
+            </p>
+        <span>workshop</span></a>
+                
+                
+                
+                
+                
+            </li>
+        
+            <li><a href='/en-US/Default.aspx?c=2'>
+                 <p class="span-before">   
+                 Online Registration
+                
+            
+        
+            </p>
+        <span>online registration</span></a>
+                
+                
+                
+                
+                
+            </li>
+        
+            <li><a href='/en-US/Default.aspx?c=6'>
+                 <p class="span-before">   
+                 Contact
+                
+            
+        
+            </p>
+        <span>Call us</span></a>
+                
+                
+                
+                
+                
+            </li>
+        
+            <li><a href='/en-US/Default.aspx?c=27'>
+                 <p class="span-before">   
+                 Visitor&Exhibitor
+                
+            
+        
+            </p>
+        <span>Information</span></a>
+                
+                
+                
+                
+                <ul id="ctl00_ListStyleMenu21_Repeater1_ctl06_Ul1" class="sub-menu">
+                    
+                            <li ><a href='/en-US/Default.aspx?c=29' 
+                             >
+                             <p class="span-before">
+                    Destination Istanbul / Accomodation</p>
+                <span></span>   </a>
+                      
+                            </li>
+                        
+                            <li ><a href='/en-US/Default.aspx?c=30' 
+                             >
+                             <p class="span-before">
+                    Exhibitor's Manual</p>
+                <span></span>   </a>
+                      
+                            </li>
+                        
+                </ul>
+            </li>
+        
+            <li><a href='/en-US/Default.aspx?c=7'>
+                 <p class="span-before">   
+                 Blog
+                
+            
+        
+            </p>
+        <span>blog</span></a>
+                
+                
+                
+                
+                
+            </li>
+        
+</ul>
+
+
+
+
+                        </div>
+                    </div>
+                    <!--<div style="width:165px; height:75px; float:left;"><img src="sp.png"></div>-->
+                </div>
+                <div style="clear: both;">
+                </div>
+                
+            </div>
+            <!-- End Header -->
+            <!-- Check wheter slider is enabled -->
+            
+            <div class="slider-bottom-wrapper">
+                <div class="slider-bar">
+                </div>
+                <div class="slider-blank-space">
+                </div>
+                <div class="slider-shadow-bottom">
+                </div>
+            </div>
+            <div style="width: 955px; margin: 0px auto; margin-top: 15px; margin-bottom: 15px;
+                padding: 10px 10px 0 10px;">
+                <span id="ctl00_SiteMapPath1"><span><a>euroforensics</a></span><span> &gt; </span><span>Euroforensics</span></span>
+                <p p="">&nbsp;</p>
+<p><span lang="EN-US">Euroforensics 2012, 3<sup>rd</sup> International Forensic<span style="mso-spacerun: yes">&nbsp; </span>Sciences Exhibition and Conference (29-31 March- 2012), </span><span lang="EN-US">where industry leaders, visionaries, scholars and corporations with cutting edge technology gather to share their vision, ideas, products and future development plans with the participants. Euroforensics </span><span lang="EN-US">is an exclusive forensic sciences event dedicated specifically to the needs of government bodies, law enforcement agencies, cyber crime investigators, anti-fraud professionals, risk &amp; compliance officers, crime scene investigators and medical forensic experts. </span></p>
+<p>The security operating systems and functions of governmental agencies and corporations have dramatically changed in the recent years. In light of these developments globally renowned names will be addressing a diverse range of trends and challenges being faced in the dynamic world of digital forensics, medical forensics and forensic accounting.<b> </b></p>
+<p>In the last three years, Euroforensics has evolved into the premium forensic event in the region.<span style="mso-spacerun: yes">&nbsp; </span>Therefore, it attracts various high profile decision makers and speakers from all over the world giving the participants exceptional networking opportunities.</p>
+<p>More than eighty percent of the visitors are from local and foreign law enforcement agencies.<span style="mso-spacerun: yes">&nbsp; </span>The visitors can be sub categorized into forensic experts, cyber crime investigators, crime scene investigators, medical forensic experts, laboratory experts, lawful interception experts, anti fraud experts, anti money laundry experts, members of various divisions of military and armed forces, members of investigation teams in banks and large organizations, forensic accountants, white collar crime investigators, anti fraud specialists, students and researchers interested in the fields of various forensic sciences.</p>
+<p>In March 2011 Euroforensic Exhibition has attracted 52 exhibitor companies and over 2,500 visitors from 35 countries. Ministry of Justice National Council of Forensic Medicine , Turkish International Cooperation and Development Agency (TIKA), British Chamber of Commerce of Turkey (BCCT), Interbank Card Center and the Medical IT Managers Association of Turkey (SABIYAP) were the sponsors of Euroforensics 2011.</p>
+<p><span lang="EN-US">Euroforensics 2012 is expected to host over 3,500 participants from over 50 countries and Turkish International Cooperation and Development Agency (TIKA), T&uuml;rkish Police Forensics Laboratories,</span><span lang="EN-US"> Information and Communications Authority (ICTA) of Turkey, The Bankers Association of Turkey, Turkish Ethics and Reputation Society, ISACA Istanbul Chapter and the Interbank Card Center are amongst the supporting institutions. The exhibition now attracts a strong contingency from Europe, Middle East, Russia, Asia and USA. <br style="mso-special-character: line-break" />
+<br style="mso-special-character: line-break" />
+</span></p>
+<p><span style="color: #000080"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong><span lang="EN-US" style="mso-themecolor: background2; mso-themeshade: 26">&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span style="color: #000080"><span lang="EN-US" style="mso-themecolor: background2; mso-themeshade: 128">Dates &nbsp; &nbsp;:</span></span><span lang="EN-US" style="color: #948a54; mso-themecolor: background2; mso-themeshade: 128"> </span><span style="color: rgb(128, 128, 128);"><span lang="EN-US">29-31 March 2012 </span></span></p>
+<p class="MsoNormal" style="text-indent: 36pt; margin-left: 72pt"><span style="color: #000080"><span lang="EN-US" style="mso-themecolor: background2; mso-themeshade: 128">Venue &nbsp; :</span></span><span style="color: rgb(128, 128, 128);"><span lang="EN-US"> </span><span lang="EN-US">Harbiye Military Museum Istanbul &ndash; Turkey</span></span><span lang="EN-US" style="color: #948a54; mso-themecolor: background2; mso-themeshade: 128"> </span></p>
+<p class="MsoNormal" style="margin-left: 108pt"><span style="color: #000080"><span lang="EN-US" style="mso-themecolor: background2; mso-themeshade: 128">Supporting Institutions:</span></span><span lang="EN-US" style="color: #948a54; mso-themecolor: background2; mso-themeshade: 128"><span style="mso-spacerun: yes">&nbsp;</span></span><span style="font-size: larger"><span lang="EN-US" style="color: #948a54; mso-themecolor: background2; mso-themeshade: 128"><span style="mso-spacerun: yes"><span style="font-family: Arial"> </span></span></span></span><!--[if gte mso 9]><xml>
+<o:OfficeDocumentSettings>
+<o:AllowPNG />
+</o:OfficeDocumentSettings>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+<w:WordDocument>
+<w:View>Normal</w:View>
+<w:Zoom>0</w:Zoom>
+<w:TrackMoves />
+<w:TrackFormatting />
+<w:HyphenationZone>21</w:HyphenationZone>
+<w:PunctuationKerning />
+<w:ValidateAgainstSchemas />
+<w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+<w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+<w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+<w:DoNotPromoteQF />
+<w:LidThemeOther>TR</w:LidThemeOther>
+<w:LidThemeAsian>X-NONE</w:LidThemeAsian>
+<w:LidThemeComplexScript>X-NONE</w:LidThemeComplexScript>
+<w:Compatibility>
+<w:BreakWrappedTables />
+<w:SnapToGridInCell />
+<w:WrapTextWithPunct />
+<w:UseAsianBreakRules />
+<w:DontGrowAutofit />
+<w:SplitPgBreakAndParaMark />
+<w:EnableOpenTypeKerning />
+<w:DontFlipMirrorIndents />
+<w:OverrideTableStyleHps />
+</w:Compatibility>
+<m:mathPr>
+<m:mathFont m:val="Cambria Math" />
+<m:brkBin m:val="before" />
+<m:brkBinSub m:val="&#45;-" />
+<m:smallFrac m:val="off" />
+<m:dispDef />
+<m:lMargin m:val="0" />
+<m:rMargin m:val="0" />
+<m:defJc m:val="centerGroup" />
+<m:wrapIndent m:val="1440" />
+<m:intLim m:val="subSup" />
+<m:naryLim m:val="undOvr" />
+</m:mathPr></w:WordDocument>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+<w:LatentStyles DefLockedState="false" DefUnhideWhenUsed="true"
+DefSemiHidden="true" DefQFormat="false" DefPriority="99"
+LatentStyleCount="267">
+<w:LsdException Locked="false" Priority="0" SemiHidden="false"
+UnhideWhenUsed="false" QFormat="true" Name="Normal" />
+<w:LsdException Locked="false" Priority="9" SemiHidden="false"
+UnhideWhenUsed="false" QFormat="true" Name="heading 1" />
+<w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 2" />
+<w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 3" />
+<w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 4" />
+<w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 5" />
+<w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 6" />
+<w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 7" />
+<w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 8" />
+<w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 9" />
+<w:LsdException Locked="false" Priority="39" Name="toc 1" />
+<w:LsdException Locked="false" Priority="39" Name="toc 2" />
+<w:LsdException Locked="false" Priority="39" Name="toc 3" />
+<w:LsdException Locked="false" Priority="39" Name="toc 4" />
+<w:LsdException Locked="false" Priority="39" Name="toc 5" />
+<w:LsdException Locked="false" Priority="39" Name="toc 6" />
+<w:LsdException Locked="false" Priority="39" Name="toc 7" />
+<w:LsdException Locked="false" Priority="39" Name="toc 8" />
+<w:LsdException Locked="false" Priority="39" Name="toc 9" />
+<w:LsdException Locked="false" Priority="35" QFormat="true" Name="caption" />
+<w:LsdException Locked="false" Priority="10" SemiHidden="false"
+UnhideWhenUsed="false" QFormat="true" Name="Title" />
+<w:LsdException Locked="false" Priority="1" Name="Default Paragraph Font" />
+<w:LsdException Locked="false" Priority="0" Name="Body Text" />
+<w:LsdException Locked="false" Priority="11" SemiHidden="false"
+UnhideWhenUsed="false" QFormat="true" Name="Subtitle" />
+<w:LsdException Locked="false" Priority="22" SemiHidden="false"
+UnhideWhenUsed="false" QFormat="true" Name="Strong" />
+<w:LsdException Locked="false" Priority="20" SemiHidden="false"
+UnhideWhenUsed="false" QFormat="true" Name="Emphasis" />
+<w:LsdException Locked="false" Priority="59" SemiHidden="false"
+UnhideWhenUsed="false" Name="Table Grid" />
+<w:LsdException Locked="false" UnhideWhenUsed="false" Name="Placeholder Text" />
+<w:LsdException Locked="false" Priority="1" SemiHidden="false"
+UnhideWhenUsed="false" QFormat="true" Name="No Spacing" />
+<w:LsdException Locked="false" Priority="60" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light Shading" />
+<w:LsdException Locked="false" Priority="61" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light List" />
+<w:LsdException Locked="false" Priority="62" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light Grid" />
+<w:LsdException Locked="false" Priority="63" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Shading 1" />
+<w:LsdException Locked="false" Priority="64" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Shading 2" />
+<w:LsdException Locked="false" Priority="65" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium List 1" />
+<w:LsdException Locked="false" Priority="66" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium List 2" />
+<w:LsdException Locked="false" Priority="67" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 1" />
+<w:LsdException Locked="false" Priority="68" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 2" />
+<w:LsdException Locked="false" Priority="69" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 3" />
+<w:LsdException Locked="false" Priority="70" SemiHidden="false"
+UnhideWhenUsed="false" Name="Dark List" />
+<w:LsdException Locked="false" Priority="71" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful Shading" />
+<w:LsdException Locked="false" Priority="72" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful List" />
+<w:LsdException Locked="false" Priority="73" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful Grid" />
+<w:LsdException Locked="false" Priority="60" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light Shading Accent 1" />
+<w:LsdException Locked="false" Priority="61" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light List Accent 1" />
+<w:LsdException Locked="false" Priority="62" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light Grid Accent 1" />
+<w:LsdException Locked="false" Priority="63" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Shading 1 Accent 1" />
+<w:LsdException Locked="false" Priority="64" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Shading 2 Accent 1" />
+<w:LsdException Locked="false" Priority="65" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium List 1 Accent 1" />
+<w:LsdException Locked="false" UnhideWhenUsed="false" Name="Revision" />
+<w:LsdException Locked="false" Priority="34" SemiHidden="false"
+UnhideWhenUsed="false" QFormat="true" Name="List Paragraph" />
+<w:LsdException Locked="false" Priority="29" SemiHidden="false"
+UnhideWhenUsed="false" QFormat="true" Name="Quote" />
+<w:LsdException Locked="false" Priority="30" SemiHidden="false"
+UnhideWhenUsed="false" QFormat="true" Name="Intense Quote" />
+<w:LsdException Locked="false" Priority="66" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium List 2 Accent 1" />
+<w:LsdException Locked="false" Priority="67" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 1 Accent 1" />
+<w:LsdException Locked="false" Priority="68" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 2 Accent 1" />
+<w:LsdException Locked="false" Priority="69" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 3 Accent 1" />
+<w:LsdException Locked="false" Priority="70" SemiHidden="false"
+UnhideWhenUsed="false" Name="Dark List Accent 1" />
+<w:LsdException Locked="false" Priority="71" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful Shading Accent 1" />
+<w:LsdException Locked="false" Priority="72" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful List Accent 1" />
+<w:LsdException Locked="false" Priority="73" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful Grid Accent 1" />
+<w:LsdException Locked="false" Priority="60" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light Shading Accent 2" />
+<w:LsdException Locked="false" Priority="61" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light List Accent 2" />
+<w:LsdException Locked="false" Priority="62" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light Grid Accent 2" />
+<w:LsdException Locked="false" Priority="63" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Shading 1 Accent 2" />
+<w:LsdException Locked="false" Priority="64" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Shading 2 Accent 2" />
+<w:LsdException Locked="false" Priority="65" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium List 1 Accent 2" />
+<w:LsdException Locked="false" Priority="66" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium List 2 Accent 2" />
+<w:LsdException Locked="false" Priority="67" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 1 Accent 2" />
+<w:LsdException Locked="false" Priority="68" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 2 Accent 2" />
+<w:LsdException Locked="false" Priority="69" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 3 Accent 2" />
+<w:LsdException Locked="false" Priority="70" SemiHidden="false"
+UnhideWhenUsed="false" Name="Dark List Accent 2" />
+<w:LsdException Locked="false" Priority="71" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful Shading Accent 2" />
+<w:LsdException Locked="false" Priority="72" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful List Accent 2" />
+<w:LsdException Locked="false" Priority="73" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful Grid Accent 2" />
+<w:LsdException Locked="false" Priority="60" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light Shading Accent 3" />
+<w:LsdException Locked="false" Priority="61" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light List Accent 3" />
+<w:LsdException Locked="false" Priority="62" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light Grid Accent 3" />
+<w:LsdException Locked="false" Priority="63" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Shading 1 Accent 3" />
+<w:LsdException Locked="false" Priority="64" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Shading 2 Accent 3" />
+<w:LsdException Locked="false" Priority="65" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium List 1 Accent 3" />
+<w:LsdException Locked="false" Priority="66" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium List 2 Accent 3" />
+<w:LsdException Locked="false" Priority="67" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 1 Accent 3" />
+<w:LsdException Locked="false" Priority="68" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 2 Accent 3" />
+<w:LsdException Locked="false" Priority="69" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 3 Accent 3" />
+<w:LsdException Locked="false" Priority="70" SemiHidden="false"
+UnhideWhenUsed="false" Name="Dark List Accent 3" />
+<w:LsdException Locked="false" Priority="71" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful Shading Accent 3" />
+<w:LsdException Locked="false" Priority="72" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful List Accent 3" />
+<w:LsdException Locked="false" Priority="73" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful Grid Accent 3" />
+<w:LsdException Locked="false" Priority="60" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light Shading Accent 4" />
+<w:LsdException Locked="false" Priority="61" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light List Accent 4" />
+<w:LsdException Locked="false" Priority="62" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light Grid Accent 4" />
+<w:LsdException Locked="false" Priority="63" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Shading 1 Accent 4" />
+<w:LsdException Locked="false" Priority="64" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Shading 2 Accent 4" />
+<w:LsdException Locked="false" Priority="65" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium List 1 Accent 4" />
+<w:LsdException Locked="false" Priority="66" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium List 2 Accent 4" />
+<w:LsdException Locked="false" Priority="67" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 1 Accent 4" />
+<w:LsdException Locked="false" Priority="68" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 2 Accent 4" />
+<w:LsdException Locked="false" Priority="69" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 3 Accent 4" />
+<w:LsdException Locked="false" Priority="70" SemiHidden="false"
+UnhideWhenUsed="false" Name="Dark List Accent 4" />
+<w:LsdException Locked="false" Priority="71" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful Shading Accent 4" />
+<w:LsdException Locked="false" Priority="72" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful List Accent 4" />
+<w:LsdException Locked="false" Priority="73" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful Grid Accent 4" />
+<w:LsdException Locked="false" Priority="60" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light Shading Accent 5" />
+<w:LsdException Locked="false" Priority="61" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light List Accent 5" />
+<w:LsdException Locked="false" Priority="62" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light Grid Accent 5" />
+<w:LsdException Locked="false" Priority="63" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Shading 1 Accent 5" />
+<w:LsdException Locked="false" Priority="64" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Shading 2 Accent 5" />
+<w:LsdException Locked="false" Priority="65" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium List 1 Accent 5" />
+<w:LsdException Locked="false" Priority="66" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium List 2 Accent 5" />
+<w:LsdException Locked="false" Priority="67" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 1 Accent 5" />
+<w:LsdException Locked="false" Priority="68" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 2 Accent 5" />
+<w:LsdException Locked="false" Priority="69" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 3 Accent 5" />
+<w:LsdException Locked="false" Priority="70" SemiHidden="false"
+UnhideWhenUsed="false" Name="Dark List Accent 5" />
+<w:LsdException Locked="false" Priority="71" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful Shading Accent 5" />
+<w:LsdException Locked="false" Priority="72" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful List Accent 5" />
+<w:LsdException Locked="false" Priority="73" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful Grid Accent 5" />
+<w:LsdException Locked="false" Priority="60" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light Shading Accent 6" />
+<w:LsdException Locked="false" Priority="61" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light List Accent 6" />
+<w:LsdException Locked="false" Priority="62" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light Grid Accent 6" />
+<w:LsdException Locked="false" Priority="63" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Shading 1 Accent 6" />
+<w:LsdException Locked="false" Priority="64" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Shading 2 Accent 6" />
+<w:LsdException Locked="false" Priority="65" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium List 1 Accent 6" />
+<w:LsdException Locked="false" Priority="66" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium List 2 Accent 6" />
+<w:LsdException Locked="false" Priority="67" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 1 Accent 6" />
+<w:LsdException Locked="false" Priority="68" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 2 Accent 6" />
+<w:LsdException Locked="false" Priority="69" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 3 Accent 6" />
+<w:LsdException Locked="false" Priority="70" SemiHidden="false"
+UnhideWhenUsed="false" Name="Dark List Accent 6" />
+<w:LsdException Locked="false" Priority="71" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful Shading Accent 6" />
+<w:LsdException Locked="false" Priority="72" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful List Accent 6" />
+<w:LsdException Locked="false" Priority="73" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful Grid Accent 6" />
+<w:LsdException Locked="false" Priority="19" SemiHidden="false"
+UnhideWhenUsed="false" QFormat="true" Name="Subtle Emphasis" />
+<w:LsdException Locked="false" Priority="21" SemiHidden="false"
+UnhideWhenUsed="false" QFormat="true" Name="Intense Emphasis" />
+<w:LsdException Locked="false" Priority="31" SemiHidden="false"
+UnhideWhenUsed="false" QFormat="true" Name="Subtle Reference" />
+<w:LsdException Locked="false" Priority="32" SemiHidden="false"
+UnhideWhenUsed="false" QFormat="true" Name="Intense Reference" />
+<w:LsdException Locked="false" Priority="33" SemiHidden="false"
+UnhideWhenUsed="false" QFormat="true" Name="Book Title" />
+<w:LsdException Locked="false" Priority="37" Name="Bibliography" />
+<w:LsdException Locked="false" Priority="39" QFormat="true" Name="TOC Heading" />
+</w:LatentStyles>
+</xml><![endif]--><!--[if gte mso 10]>
+<style>
+/* Style Definitions */
+table.MsoNormalTable
+{mso-style-name:"Normal Tablo";
+mso-tstyle-rowband-size:0;
+mso-tstyle-colband-size:0;
+mso-style-noshow:yes;
+mso-style-priority:99;
+mso-style-parent:"";
+mso-padding-alt:0cm 5.4pt 0cm 5.4pt;
+mso-para-margin-top:0cm;
+mso-para-margin-right:0cm;
+mso-para-margin-bottom:10.0pt;
+mso-para-margin-left:0cm;
+line-height:115%;
+mso-pagination:widow-orphan;
+font-size:11.0pt;
+font-family:"Calibri","sans-serif";
+mso-ascii-font-family:Calibri;
+mso-ascii-theme-font:minor-latin;
+mso-hansi-font-family:Calibri;
+mso-hansi-theme-font:minor-latin;
+mso-bidi-font-family:"Times New Roman";
+mso-bidi-theme-font:minor-bidi;
+mso-fareast-language:EN-US;}
+</style>
+<![endif]--><span lang="EN-US" style="mso-ansi-language: EN-US">The National Council of Forensic Medicine, Turkish Prime Ministry TIKA (Turkish International Cooperation and Development Agency), Information and Communications Authority (ICTA)of Turkey, Turkish Bankers Association, Interbank Cards Center,&nbsp;ISACA Istanbul Chapter and Turkish Ethics and Reputation Society.</span></p>
+<p class="MsoNormal" style="margin-left: 108pt"><span style="color: #000080"><span lang="EN-US" style="mso-themecolor: background2; mso-themeshade: 128">Tel&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;:</span></span><span lang="EN-US" style="color: #948a54; mso-themecolor: background2; mso-themeshade: 128"> </span><span style="color: rgb(128, 128, 128);"><span lang="EN-US">+90 212 262 3116</span></span><span lang="EN-US" style="color: #948a54; mso-themecolor: background2; mso-themeshade: 128"> </span></p>
+<p class="MsoNormal" style="text-indent: 36pt; margin-left: 72pt"><span style="color: #000080"><span lang="EN-US" style="mso-themecolor: background2; mso-themeshade: 128">Fax &nbsp; &nbsp; &nbsp; :</span></span><span lang="EN-US" style="line-height: 115%; font-family: 'Tahoma','sans-serif'; color: #444444; font-size: 8pt"> </span><span style="color: rgb(128, 128, 128);"><span lang="EN-US">+90 212 262 8932</span></span></p>
+<p class="MsoNormal" style="text-indent: 36pt; margin-left: 72pt"><span style="color: #000080"><span lang="EN-US" style="mso-themecolor: background2; mso-themeshade: 128">e-mail &nbsp;:</span></span><span style="color: rgb(128, 128, 128);"><span lang="EN-US"> </span><span lang="EN-US">info (at) euroforensics.com</span></span><span lang="EN-US" style="color: #948a54; mso-themecolor: background2; mso-themeshade: 128"> </span></p>
+<p class="MsoNormal" style="text-indent: 36pt; margin-left: 72pt"><span lang="EN-US" style="color: #948a54; mso-themecolor: background2; mso-themeshade: 128"><o:p>&nbsp;</o:p></span></p>
+<p class="MsoNormal"><span style="color: #000080"><strong><u><span lang="EN-US" style="mso-themecolor: background2; mso-themeshade: 128">Euroforensics Visitor Profile:</span></u></strong><span lang="EN-US" style="mso-themecolor: background2; mso-themeshade: 128"> </span></span></p>
+<p class="MsoNormal" style="tab-stops: list 108.0pt"><span style="color: #000080"><span lang="EN-US" style="line-height: 115%; font-family: 'Verdana','sans-serif'; font-size: 8pt; mso-bidi-font-family: Tahoma"><o:p>&nbsp;</o:p></span></span><span lang="EN-US" style="line-height: 115%; font-family: 'Verdana','sans-serif'; color: #444444; font-size: 8pt; mso-bidi-font-family: Tahoma"><o:p></o:p></span></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: -18pt; margin-left: 72pt; tab-stops: list 72.0pt 108.0pt; mso-list: l0 level2 lfo1"><span lang="EN-US" style="font-family: 'Arial','sans-serif'; mso-fareast-font-family: Arial"><span style="mso-list: Ignore">&bull;<span style="font: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><span lang="EN-US">Representatives of Law Enforcement Agencies </span></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: -18pt; margin-left: 72pt; tab-stops: list 72.0pt 108.0pt; mso-list: l0 level2 lfo1"><span lang="EN-US" style="font-family: 'Arial','sans-serif'; mso-fareast-font-family: Arial"><span style="mso-list: Ignore">&bull;<span style="font: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><span lang="EN-US">Desicion makers from various Government Departments </span></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: -18pt; margin-left: 72pt; tab-stops: list 72.0pt 108.0pt; mso-list: l0 level2 lfo1"><span lang="EN-US" style="font-family: 'Arial','sans-serif'; mso-fareast-font-family: Arial"><span style="mso-list: Ignore">&bull;<span style="font: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><span lang="EN-US">Forensic Experts </span></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: -18pt; margin-left: 72pt; tab-stops: list 72.0pt 108.0pt; mso-list: l0 level2 lfo1"><span lang="EN-US" style="font-family: 'Arial','sans-serif'; mso-fareast-font-family: Arial"><span style="mso-list: Ignore">&bull;<span style="font: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><span lang="EN-US">Risk &amp; Compliance officers of Banks &amp; Corporations </span></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: -18pt; margin-left: 72pt; tab-stops: list 72.0pt 108.0pt; mso-list: l0 level2 lfo1"><span lang="EN-US" style="font-family: 'Arial','sans-serif'; mso-fareast-font-family: Arial"><span style="mso-list: Ignore">&bull;<span style="font: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><span lang="EN-US">Cyber Crime Investigators </span></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: -18pt; margin-left: 72pt; tab-stops: list 72.0pt 108.0pt; mso-list: l0 level2 lfo1"><span lang="EN-US" style="font-family: 'Arial','sans-serif'; mso-fareast-font-family: Arial"><span style="mso-list: Ignore">&bull;<span style="font: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><span lang="EN-US">Crime Scene Investigators </span></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: -18pt; margin-left: 72pt; tab-stops: list 72.0pt 108.0pt; mso-list: l0 level2 lfo1"><span lang="EN-US" style="font-family: 'Arial','sans-serif'; mso-fareast-font-family: Arial"><span style="mso-list: Ignore">&bull;<span style="font: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><span lang="EN-US">Medical Forensic Experts </span></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: -18pt; margin-left: 72pt; tab-stops: list 72.0pt 108.0pt; mso-list: l0 level2 lfo1"><span lang="EN-US" style="font-family: 'Arial','sans-serif'; mso-fareast-font-family: Arial"><span style="mso-list: Ignore">&bull;<span style="font: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><span lang="EN-US">Laboratory Experts </span></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: -18pt; margin-left: 72pt; tab-stops: list 72.0pt 108.0pt; mso-list: l0 level2 lfo1"><span lang="EN-US" style="font-family: 'Arial','sans-serif'; mso-fareast-font-family: Arial"><span style="mso-list: Ignore">&bull;<span style="font: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><span lang="EN-US">Anti Fraud Experts </span></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: -18pt; margin-left: 72pt; tab-stops: list 72.0pt 108.0pt; mso-list: l0 level2 lfo1"><span lang="EN-US" style="font-family: 'Arial','sans-serif'; mso-fareast-font-family: Arial"><span style="mso-list: Ignore">&bull;<span style="font: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><span lang="EN-US">Members of the Military &amp; Armed Forces </span></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: -18pt; margin-left: 72pt; tab-stops: list 72.0pt 108.0pt; mso-list: l0 level2 lfo1"><span lang="EN-US" style="font-family: 'Arial','sans-serif'; mso-fareast-font-family: Arial"><span style="mso-list: Ignore">&bull;<span style="font: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><span lang="EN-US">Bank &amp; Corporation Investigation Teams </span></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: -18pt; margin-left: 72pt; tab-stops: list 72.0pt 108.0pt; mso-list: l0 level2 lfo1"><span lang="EN-US" style="font-family: 'Arial','sans-serif'; mso-fareast-font-family: Arial"><span style="mso-list: Ignore">&bull;<span style="font: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><span lang="EN-US">Forensic Acountants </span></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: -18pt; margin-left: 72pt; tab-stops: list 72.0pt 108.0pt; mso-list: l0 level2 lfo1"><span lang="EN-US" style="font-family: 'Arial','sans-serif'; mso-fareast-font-family: Arial"><span style="mso-list: Ignore">&bull;<span style="font: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><span lang="EN-US">Anti Money Laundry Experts </span></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: -18pt; margin-left: 72pt; tab-stops: list 72.0pt 108.0pt; mso-list: l0 level2 lfo1"><span lang="EN-US" style="font-family: 'Arial','sans-serif'; mso-fareast-font-family: Arial"><span style="mso-list: Ignore">&bull;<span style="font: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><span lang="EN-US">White Collar Crime Investigators </span></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: -18pt; margin-left: 72pt; tab-stops: list 72.0pt 108.0pt; mso-list: l0 level2 lfo1"><span lang="EN-US" style="font-family: 'Arial','sans-serif'; mso-fareast-font-family: Arial"><span style="mso-list: Ignore">&bull;<span style="font: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><span lang="EN-US">Forensic Science Researchers &amp; Students </span></p>
+<p><span lang="EN-US" style="line-height: 115%; color: black; font-size: 12pt; mso-bidi-font-family: Calibri; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri; mso-bidi-font-weight: bold">&nbsp;</span></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+            </div>
+            <div class="body-3">
+                
+                <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=10,0,0,0"
+                    width="950" height="100" id="deneme" align="middle">
+                    <param name="allowScriptAccess" value="sameDomain" />
+                    <param name="allowFullScreen" value="false" />
+                    <param name="wmode" value="transparent">
+                    <param name="movie" value="markaslide2.swf" />
+                    <param name="quality" value="high" />
+                    <param name="bgcolor" value="#ffffff" />
+                    <embed src="markaslide2.swf" wmode="transparent" quality="high" bgcolor="#ffffff"
+                        width="950" height="100" name="markaslide" align="middle" allowscriptaccess="sameDomain"
+                        allowfullscreen="false" type="application/x-shockwave-flash" pluginspage="http://www.adobe.com/go/getflashplayer" />
+                </object>
+            </div>
+        </div>
+        <!-- Copyright Footer -->
+        <div id="copyright" class="copyright-wrapper">
+            <div class="copyright">
+<div class="copyright-bar">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+<div class="copyright-left">Copyright 2011 Euroforensics ||</div>
+<div class="copyright-right">Call Us : +&nbsp;90 212 262 3116</div>
+<div style="margin-top: 12px; float: right; margin-right: 30px"><a href="http://www.linkedin.com/groups?home=&amp;gid=3314519&amp;trk=anet_ug_hm"><img alt="" width="60" height="17" src="/SystemFiles/UserFiles/image/linkedinK.png" /></a></div>
+</div>
+        </div>
+    </div>
+    <script type='text/javascript' src='../index_files/Cabin_40.js'></script>
+    <script type='text/javascript' src='../index_files/comment-.js'></script>
+    <script type='text/javascript' src='../index_files/jquery00.js'></script>
+    <script type='text/javascript' src='../index_files/jquery-u.js'></script>
+    <script type='text/javascript' src='../index_files/jquery01.js'></script>
+    <script type='text/javascript' src='../index_files/hoverInt.js'></script>
+    <script type='text/javascript' src='../index_files/superfis.js'></script>
+    <script type='text/javascript' src='../index_files/supersub.js'></script>
+    <script type='text/javascript' src='../index_files/jquery02.js'></script>
+    <script type='text/javascript' src='../index_files/jquery03.js'></script>
+    <script type='text/javascript' src='../index_files/filterab.js'></script>
+    <script type='text/javascript' src='../index_files/contact-.js'></script>
+    <script type='text/javascript' src='../index_files/jquery04.js'></script>
+    <script type='text/javascript' src='../index_files/starter-.js'></script>
+    <script type='text/javascript' src='../index_files/browser-.js'></script>
+    <script type="text/javascript">
+								 jQuery(document).ready(function(){
+				jQuery("ul.sf-menu").supersubs({
+					minWidth:    14.5,   // minimum width of sub-menus in em units
+					maxWidth:    27,   // maximum width of sub-menus in em units
+					extraWidth:  1     // extra width can ensure lines don't sometimes turn over
+									   // due to slight rounding differences and font-family
+				}).superfish({
+					delay: 100,
+					speed: 'fast',
+					animation:   {opacity:'show',height:'show'}
+				});  // call supersubs first, then superfish, so that subs are
+							 // not display:none when measuring. Call before initialising
+							 // containing tabs for same reason.
+			});
+						jQuery(window).load(function() {
+			setTimeout(function(){
+				jQuery('#slider').nivoSlider({
+						effect: 'random',
+						pauseTime: 7000,
+						animSpeed: 600,
+						captionOpacity: 0.8,
+						pauseOnHover:false,
+						directionNav:true,
+						directionNavHide:false,
+						controlNavThumbs:true,
+						controlNavThumbsSearch: '&amp;h=350&amp;w=975',
+						controlNavThumbsReplace: '&amp;h=43&amp;w=68',
+					});
+				}, 2000),
+
+				setTimeout(function(){
+				/* For slider shortcode */
+				jQuery('#slider2').nivoSlider({
+						pauseTime:4000,
+						animSpeed: 600,
+						captionOpacity: 0.8,
+						pauseOnHover:true,
+						directionNavHide:true,
+						afterLoad: function(){
+							$('.cNext-slider').css('display','none');
+							$('.cPrev-slider').css('display','none');
+						}
+					});
+				}, 1000);
+
+
+			});
+
+			//JKwick
+			// Slider Headlines
+				// Slider Headlines
+				jQuery(document).ready(function(){
+					if(jQuery.browser.msie) {
+														jQuery(".kwicks li#kwick1").hover(function(){
+								jQuery("li#kwick1 div.title_active").fadeTo(350, 0.8);
+								jQuery("li#kwick1 div.title").fadeTo(350, 0.0);
+								},function(){
+								jQuery("li#kwick1 div.title_active").fadeTo(350, 0.0);
+								jQuery("li#kwick1 div.title").fadeTo(350, 0.8);
+								});
+														jQuery(".kwicks li#kwick0").hover(function(){
+								jQuery("li#kwick0 div.title_active").fadeTo(350, 0.8);
+								jQuery("li#kwick0 div.title").fadeTo(350, 0.0);
+								},function(){
+								jQuery("li#kwick0 div.title_active").fadeTo(350, 0.0);
+								jQuery("li#kwick0 div.title").fadeTo(350, 0.8);
+								});
+														jQuery(".kwicks li#kwick3").hover(function(){
+								jQuery("li#kwick3 div.title_active").fadeTo(350, 0.8);
+								jQuery("li#kwick3 div.title").fadeTo(350, 0.0);
+								},function(){
+								jQuery("li#kwick3 div.title_active").fadeTo(350, 0.0);
+								jQuery("li#kwick3 div.title").fadeTo(350, 0.8);
+								});
+														jQuery(".kwicks li#kwick2").hover(function(){
+								jQuery("li#kwick2 div.title_active").fadeTo(350, 0.8);
+								jQuery("li#kwick2 div.title").fadeTo(350, 0.0);
+								},function(){
+								jQuery("li#kwick2 div.title_active").fadeTo(350, 0.0);
+								jQuery("li#kwick2 div.title").fadeTo(350, 0.8);
+								});
+												}
+						else {
+
+								jQuery(".kwicks li#kwick1").hover(function(){
+								jQuery("li#kwick1 div.title_active").fadeTo(350, 1.0);
+								jQuery("li#kwick1 div.title").fadeTo(350, 0.0);
+								},function(){
+								jQuery("li#kwick1 div.title_active").fadeTo(350, 0.0);
+								jQuery("li#kwick1 div.title").fadeTo(350, 1.0);
+								});
+
+								jQuery(".kwicks li#kwick0").hover(function(){
+								jQuery("li#kwick0 div.title_active").fadeTo(350, 1.0);
+								jQuery("li#kwick0 div.title").fadeTo(350, 0.0);
+								},function(){
+								jQuery("li#kwick0 div.title_active").fadeTo(350, 0.0);
+								jQuery("li#kwick0 div.title").fadeTo(350, 1.0);
+								});
+
+								jQuery(".kwicks li#kwick3").hover(function(){
+								jQuery("li#kwick3 div.title_active").fadeTo(350, 1.0);
+								jQuery("li#kwick3 div.title").fadeTo(350, 0.0);
+								},function(){
+								jQuery("li#kwick3 div.title_active").fadeTo(350, 0.0);
+								jQuery("li#kwick3 div.title").fadeTo(350, 1.0);
+								});
+
+								jQuery(".kwicks li#kwick2").hover(function(){
+								jQuery("li#kwick2 div.title_active").fadeTo(350, 1.0);
+								jQuery("li#kwick2 div.title").fadeTo(350, 0.0);
+								},function(){
+								jQuery("li#kwick2 div.title_active").fadeTo(350, 0.0);
+								jQuery("li#kwick2 div.title").fadeTo(350, 1.0);
+								});
+
+					}
+
+				//Kqick slider
+					jQuery('.kwicks').kwicks({
+					max : 700,
+					sticky : true,
+					defaultKwick: 0,
+					event: 'mouseover',
+					duration: 200,
+					spacing: 0
+					});
+
+
+				//Pretty photo setting
+
+					jQuery("a[rel^='prettyPhoto']").prettyPhoto({
+					animation_speed: 'fast', /* fast/slow/normal */
+					slideshow: 5000, /* false OR interval time in ms */
+					autoplay_slideshow: false, /* true/false */
+					opacity: 0.8, /* Value between 0 and 1 */
+					show_title: true, /* true/false */
+					allow_resize: true, /* Resize the photos bigger than viewport. true/false */
+					default_width: 500,
+					default_height: 344,
+					counter_separator_label: '/', /* The separator for the gallery counter 1 "of" 2 */
+					theme: 'pp_default', /* light_rounded / dark_rounded / light_square / dark_square / facebook */
+					horizontal_padding: 20, /* The padding on each side of the picture */
+					overlay_gallery: true, /* If set to true, a gallery will overlay the fullscreen image on mouse over */
+					keyboard_shortcuts: true, /* Set to false if you open forms inside prettyPhoto */
+
+					});
+
+				//last portfolio slider
+				  jQuery("#content-slider").slider({
+					animate: true,
+					change: handleSliderChange,
+					slide: handleSliderSlide
+				  });
+
+
+			  //Tab and Accordion
+			  // Accordion
+				jQuery("#accordion").accordion({ header: "h2" });
+
+			  //hover states on the static widgets
+				jQuery('#dialog_link, ul#icons li').hover(
+					function() { $(this).addClass('ui-state-hover'); },
+					function() { $(this).removeClass('ui-state-hover'); }
+				);
+
+			  //jCarousel
+				jQuery('.carousel').jCarouselLite({
+					btnNext: ".cNext",
+					btnPrev: ".cPrev",
+					visible: 7,
+					scroll: 1				});
+
+				//tipsy
+				$('.tipsy-hover').tipsy({gravity: 'n', fade: true});
+
+			});
+
+				function handleSliderChange(e, ui)
+				{
+				  var maxScroll = jQuery("#content-scroll").attr("scrollWidth") - jQuery("#content-scroll").width();
+				  jQuery("#content-scroll").animate({scrollLeft: ui.value * (maxScroll / 100) }, 1000);
+				}
+
+				function handleSliderSlide(e, ui)
+				{
+				  var maxScroll = jQuery("#content-scroll").attr("scrollWidth") - jQuery("#content-scroll").width();
+				  jQuery("#content-scroll").attr({scrollLeft: ui.value * (maxScroll / 100) });
+				}
+
+						//Cufon Replacement
+			Cufon.replace('#header h1,#header h2,#header h3,#header h4,#header h5,#header h6',{hover: true,fontFamily: 'Cabin'});
+			Cufon.replace('#page h1,#page h2,#page h3,#page h4,#page h5,#page h6',{hover: true,fontFamily: 'Cabin'});
+			Cufon.replace('#footer h1,#footer h2,#footer h3,#footer h4,#footer h5,#footer h6',{hover: true,fontFamily: 'Cabin'});
+
+			//Title with caption Replacement
+			Cufon.replace('.cufon',{hover: true,fontFamily: 'Cabin'});
+
+			//Stunning font Replacement
+			Cufon.replace('#stunning-text-inner h1,#stunning-text-inner h2,#stunning-text-inner h3,#stunning-text-inner h4,#stunning-text-inner h5,#stunning-text-inner h6',{hover: true,fontFamily: 'Cabin'});
+			Cufon.replace('#stunning-text-below-wrapper .stunning-title',{hover: true,fontFamily: 'Cabin'});
+			//Caption (Bartitle) font Replacement
+			Cufon.replace('#caption .bar-title h1,#caption .bar-title h2,#caption .bar-title h3,#caption .bar-title h4,#caption .bar-title h5,#caption .bar-title h6',{hover: true,fontFamily: 'Cabin'});
+
+			//Cufon.replace('#smoothmenu1 .menu-item a',{ hover: true, fontFamily: 'Cantarell'});
+
+
+			if(  BrowserDetect.browser != 'Explorer' || (BrowserDetect.browser == 'Explorer' && BrowserDetect.version > 7)){
+				Cufon.replace('.last-portfolio-link h4');
+			}
+
+
+			jQuery(window).load(function() {
+			});
+			 Cufon.now();
+    </script>
+    
+    
+    
+    </form>
+</body>
+</html>

@@ -1,0 +1,46 @@
+#TITLE=C/C++
+; EditPlus Auto-completion file v1.0 written by ES-Computing.
+; This file is provided as a default auto-completion file for C/C++.
+
+#CASE=y
+
+#T=if
+if (^!)
+{
+}
+#T=while
+while (^!)
+{
+}
+#T=for
+for (^!; ; )
+{
+}
+#T=switch
+switch (^!)
+{
+case :
+
+}
+#T=do
+do
+{
+}
+while (^!);
+#T=class
+class ^!
+{
+};
+#T=struct
+struct ^!
+{
+};
+#T=try
+try
+{
+	^!
+}
+catch ()
+{
+}
+#

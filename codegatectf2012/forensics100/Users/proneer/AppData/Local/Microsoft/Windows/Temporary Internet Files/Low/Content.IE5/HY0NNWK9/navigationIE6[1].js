@@ -1,0 +1,1 @@
+﻿function attachListHover(listName){var sfEls=document.getElementById(listName).getElementsByTagName("LI");for(var i=0;i<sfEls.length;i++)if(sfEls[i].className=="Categrization")continue;else{sfEls[i].onmouseover=function(){this.className+=" hover"};sfEls[i].onmouseout=function(){this.className=this.className.replace(new RegExp(" hover\\b"),"")}}}

@@ -1,0 +1,144 @@
+#TITLE=HTML
+; EditPlus Auto-completion File v1.0 written by ES-Computing.
+; This file is intended to be used by HTML Toolbar of EditPlus.
+; <WARNING>
+; This file is required for EditPlus to run correctly.
+; You can modify only the content of each entry.
+; Do not add/remove any entry.
+; Do not modify title of each entry.
+
+#CASE=y
+
+#T=B
+<B>^!</B>
+#T=I
+<I>^!</I>
+#T=U
+<U>^!</U>
+#T=H1
+<H1>^!</H1>
+#T=H2
+<H2>^!</H2>
+#T=H3
+<H3>^!</H3>
+#T=H4
+<H4>^!</H4>
+#T=H5
+<H5>^!</H5>
+#T=H6
+<H6>^!</H6>
+#T=BR
+<BR>
+#T=P
+<P>
+#T=nb
+&nbsp;
+#T=A
+<A HREF="">^!</A>
+#T=HR
+<HR>
+#T=IMG
+<IMG SRC="" WIDTH="" HEIGHT="" BORDER="0" ALT="^!">
+#T=CENTER
+<CENTER>^!</CENTER>
+#T=BLOCKQUOTE
+<BLOCKQUOTE>^!</BLOCKQUOTE>
+#T=PRE
+<PRE>^!</PRE>
+#T=<!
+<!-- ^! -->
+#T=UL
+<UL>
+	<LI>^!
+	<LI>
+</UL>
+#T=OL
+<OL>
+	<LI>^!
+	<LI>
+</OL>
+#T=DL
+<DL>
+	<DT>^!
+	<DD>
+</DL>
+#T=FORM
+<FORM METHOD=POST ACTION="">
+	^!
+</FORM>
+#T=FRAME
+<FRAMESET ROWS="^!," COLS=",">
+	<FRAME SRC="" NAME="">
+	<FRAME SRC="" NAME="">
+</FRAMESET>
+#T=MAP
+<MAP NAME="^!">
+	<AREA SHAPE="" HREF="" COORDS="" ALT="">
+</MAP>
+#T=SCRIPT
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+	^!
+//-->
+</SCRIPT>
+#T=APPLET
+<APPLET CODE="^!" WIDTH="" HEIGHT="">
+</APPLET>
+#T=TEXT
+<INPUT TYPE="text" NAME="^!">
+#T=SELECT
+<SELECT NAME="">
+	<OPTION VALUE="" SELECTED>^!
+	<OPTION VALUE="">
+</SELECT>
+#T=RADIO
+<INPUT TYPE="radio" NAME="^!">
+#T=CHECKBOX
+<INPUT TYPE="checkbox" NAME="^!">
+#T=TEXTAREA
+<TEXTAREA NAME="" ROWS="" COLS="">^!</TEXTAREA>
+#T=RESET
+<INPUT TYPE="reset">
+#T=SUBMIT
+<INPUT TYPE="submit">
+#T=PASSWORD
+<INPUT TYPE="password" NAME="^!">
+#T=HIDDEN
+<INPUT TYPE="hidden" NAME="^!">
+#T=FORMIMAGE
+<INPUT TYPE="image" SRC="^!">
+#T=BUTTON
+<INPUT TYPE="button" VALUE="^!" ONCLICK="">
+#T=FONT
+<FONT SIZE="" COLOR="">^!</FONT>
+#T=TABLE
+<TABLE>
+
+#T=TABLE2
+</TABLE>
+#T=TR
+<TR>
+
+#T=TR2
+</TR>
+
+#T=TD
+	<TD>^!</TD>
+
+#T=TD2
+	<TD></TD>
+
+#T=OBJECT
+<OBJECT ID="%s" WIDTH="^!" HEIGHT="" CLASSID="CLSID:%s">
+</OBJECT>
+#T=STYLE
+<STYLE TYPE="text/css">
+	^!
+</STYLE>
+#T=DIV
+<DIV ID="" CLASS="">
+	^!
+</DIV>
+#T=SPAN
+<SPAN CLASS="">^!</SPAN>
+#

@@ -1,0 +1,25 @@
+<?wpl version="1.0"?>
+<smil>
+    <head>
+        <meta name="Generator" content="Microsoft Windows Media Player -- 11.0.5428.4943"/>
+        <title>TV recorded in the last week</title>
+    </head>
+    <body>
+        <seq>
+            <smartPlaylist version="1.0.0.0">
+                <querySet>
+                    <sourceFilter id="{E5415A66-7763-4BDE-B97F-5557CA73C303}" name="TV shows in my library">
+                        <fragment name="Recording Date">
+                            <argument name="condition">Is Later Than</argument>
+                            <argument name="value">Last week</argument>
+                        </fragment>
+                        <fragment name="Sort by">
+                            <argument name="value">Recording Date</argument>
+                            <argument name="condition">Ascending</argument>
+                        </fragment>
+                    </sourceFilter>
+                </querySet>
+            </smartPlaylist>
+        </seq>
+    </body>
+</smil>

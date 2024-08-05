@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+<?xml-stylesheet href="chrome://asktoolbar/skin/notification.css" type="text/css"?>
+<?xml-stylesheet href="chrome://asktoolbar/skin/toolbar.css" type="text/css"?>
+
+<window id="atb-notification-popup"
+	xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+	xmlns:html="http://www.w3.org/1999/xhtml" hidechrome="true"
+	onload="ATB_NotificationController.init(this);" onunload="ATB_NotificationController.destroy()">
+
+	<script type="application/x-javascript"
+		src="chrome://asktoolbar/content/notification-popup-controller.js" />
+
+	<vbox id="mainVBox" class="mainVBox" flex="1">
+
+		<!-- Header Top -->
+		<hbox>
+			<box id="topLeftBox" flex="0" class="topLeftBox"></box>
+			<box id="topBox" flex="1" class="topBox"></box>
+			<box id="topRightBox" flex="0" class="topRightBox"></box>
+		</hbox>
+		<!-- Header Top end -->
+
+
+		<!-- Body -->
+		<hbox flex="1">
+			<box id="bodyLeftBox" class="bodyLeftBox" flex="0" />
+			<vbox flex="1" id="bodyMiddleBox" class="bodyMiddleBox">
+				<browser flex="1" id="asktb-popup-browser" src="about:blank"
+					type="content" style="overflow:auto;" />
+			</vbox>
+			<box id="bodyRightBox" class="bodyRightBox" flex="0" />
+		</hbox>
+		<!-- Body end-->
+
+
+		<!-- Footer -->
+		<hbox>
+			<box id="bottomLeftBox" flex="0" class="bottomLeftBox"></box>
+			<box id="bottomBox" flex="1" class="bottomBox"></box>
+			<box id="bottomRightBox" flex="0" class="bottomRightBox"></box>
+		</hbox>
+		<!-- Footer end -->
+	</vbox>
+</window>
+

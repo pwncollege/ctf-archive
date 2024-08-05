@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="VisualStudioUserFile" type="VisualStudioUserFileType" />
+	<xs:complexType name="ConfigurationType">
+		<xs:sequence>
+			<xs:element name="DebugSettings" minOccurs="0" maxOccurs="1">
+				<xs:complexType>
+					<!-- NOTE: all other attributes are properties of that particular debugger settings object. -->
+					<!--       any unrecognized attribute will be ignored. -->
+					<xs:anyAttribute processContents="skip" />
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="Tool" minOccurs="0" maxOccurs="unbounded">
+				<xs:complexType>
+					<xs:attribute name="Name" type="xs:string" use="required" />
+					<!-- NOTE: all other attributes are properties of that particular tool object. -->
+					<!--       any unrecognized attribute will be ignored. -->
+					<xs:anyAttribute processContents="skip" />
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="DeploymentTool" minOccurs="0" maxOccurs="unbounded">
+				<xs:complexType>
+					<!-- NOTE: all other attributes are properties of that particular tool object. -->
+					<!--       any unrecognized attribute will be ignored. -->
+					<xs:anyAttribute processContents="skip" />
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="DebuggerTool" minOccurs="0" maxOccurs="unbounded">
+				<xs:complexType>
+					<!-- NOTE: all other attributes are properties of that particular tool object. -->
+					<!--       any unrecognized attribute will be ignored. -->
+					<xs:anyAttribute processContents="skip" />
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute name="Name" type="xs:string" use="required" />
+		<!-- NOTE: all other attributes are properties of that particular configuration object. -->
+		<!--       any unrecognized attribute will be ignored. -->
+		<xs:anyAttribute processContents="skip" />
+	</xs:complexType>
+	<xs:complexType name="VisualStudioUserFileType">
+		<xs:sequence>
+			<xs:element name="PublishingData" minOccurs="0" maxOccurs="1">
+				<xs:complexType>
+					<!-- NOTE: all child elements are items of the publishing data -->
+					<!--       any unrecognized attribute will be ignored. -->
+					<xs:choice minOccurs="0" maxOccurs="unbounded">
+						<xs:element name="Item" minOccurs="0" maxOccurs="unbounded">
+							<xs:complexType>
+								<xs:anyAttribute processContents="skip" />
+							</xs:complexType>
+						</xs:element>
+					</xs:choice>
+					<!-- NOTE: all other attributes are properties of the publishing project object. -->
+					<!--       any unrecognized attribute will be ignored. -->
+					<xs:anyAttribute processContents="skip" />
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="SQLCLR" minOccurs="0" maxOccurs="1">
+				<xs:complexType>
+					<!-- NOTE: all other attributes are properties of that particular debugger settings object. -->
+					<!--       any unrecognized attribute will be ignored. -->
+					<xs:anyAttribute processContents="skip" />
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="Configurations" minOccurs="0" maxOccurs="1">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Configuration" minOccurs="0" maxOccurs="unbounded" type="ConfigurationType" />
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+		<!-- NOTE: the ProjectType attribute is only for readability. -->
+		<xs:attribute name="ProjectType" type="xs:string" fixed="Visual C++" use="optional" />
+		<xs:attribute name="Version" use="optional" default="9.00">
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="8.00" />
+					<xs:enumeration value="8,00" />
+					<xs:enumeration value="9.00" />
+					<xs:enumeration value="9,00" />
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:anyAttribute processContents="skip" />
+	</xs:complexType>
+</xs:schema>

@@ -1,0 +1,137 @@
+﻿body
+{
+	font-family: "Segoe UI", "verdana", "arial";
+	background-image: url(background_gradient.jpg);
+	background-repeat: repeat-x;
+	background-color: #E8EAEF;
+	margin-top: 20px;
+	margin-left: 20px;
+	color: #575757;
+}
+
+body.securityError
+{
+	font-family: "Segoe UI", "verdana" , "Arial";
+	background-image: url(background_gradient_red.jpg);
+	background-repeat: repeat-x;
+	background-color: #E8EAEF;
+	margin-top: 20px;
+	margin-left: 20px;
+}
+
+body.tabInfo
+{
+	background-image: none;
+	background-color: #F4F4F4;
+}
+       
+a
+{
+	color: rgb(19,112,171);	font-size: 1em;
+	font-weight: normal;
+	text-decoration: none;
+	margin-left: 0px;
+	vertical-align: top;
+}
+
+a:link, a:visited
+{
+	color: rgb(19,112,171);
+	text-decoration: none;
+	vertical-align: top;
+}
+
+a:hover
+{
+	color: rgb(7,74,229);
+	text-decoration: underline;
+}
+
+p
+{
+	font-size: 0.9em;
+}
+	
+h1 /* used for Title */
+{
+	color: #4465A2;
+	font-size: 1.1em;
+	font-weight: normal;
+	vertical-align:bottom;
+	margin-top: 7px;
+	margin-bottom: 4px;
+}
+
+h2 /* used for Heading in Main Body */
+{
+	font-size: 0.9em;
+	font-weight: normal;
+	margin-top: 20px;	
+	margin-bottom: 1px;
+}
+
+h3 /* used for text in main body */
+{
+	font-size: 0.9em;
+	font-weight: normal;
+	margin-top: 10px;	
+	margin-bottom: 1px;
+}
+
+h4 /* used for task links*/
+{
+	font-size: 0.9em;
+	font-weight: normal;
+	margin-top: 12px;
+	margin-bottom: 1px;
+}
+
+h5 /* used for Heading in InfoBlock */
+{
+	font-size: 1em;
+	font-weight: normal;
+	margin-bottom: 0px;
+	margin-top: 1px;	
+	font-size: 0.9em;
+	color: #575757;
+}
+
+
+.actionIcon /* used for task link icons */
+{
+	vertical-align: middle;
+	margin-top: 0px;
+	margin-right: 6px;
+}
+
+.infoBlock
+{
+	padding-left: 25px;
+	font-size: 0.9em;
+	display: block;
+	line-height: 1.1 em;
+	color: #575757;
+}
+
+.errorCodeAndDivider
+{
+	font-size: 0.7em;
+	font-weight: normal;
+	color: #787878;
+}
+
+ul, ol
+{
+	font-size: 0.9em;
+	list-style-position: outside;
+	margin-top: 1px;
+	margin-bottom: 1px;
+	padding-top: 1px;
+	padding-bottom: 1px;
+	line-height: 1.3em;
+}
+
+.divider
+{
+	border-bottom: #B6BCC6 1px solid;
+}
