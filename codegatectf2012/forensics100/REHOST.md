@@ -1,6 +1,6 @@
 # REHOSTING
 
-Files can be found here: [Codegate CTF 2012](https://shell-storm.org/repo/CTF/CodeGate-2012/Bin500/)
+Files can be found here: [Codegate CTF 2012](https://shell-storm.org/repo/CTF/CodeGate-2012/Forensic100/)
 
 ## Challenge Setup
-This challenge has only one file which which is `15EE231AC9BC9598E5881236E30F1EEA` which does not have any dependencies.
+This challenge has only one file which which is `525321B9CEDAF3C8D35FC9071D5DD237` which does not have any dependencies.
