@@ -4,4 +4,5 @@ name: Codegate CTF 2012
 challenges:
   - id: bin100
     name: BINARY - 100
-  
+  - id: bin200
+    name: BINARY - 200
