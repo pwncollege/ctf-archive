@@ -8,3 +8,5 @@ challenges:
     name: BINARY - 200
   - id: bin300
     name: BINARY - 300
+  - id: bin400
+    name: BINARY - 400
