@@ -16,3 +16,5 @@ challenges:
     name: FORENSICS - 100
   - id: forensics200
     name: FORENSICS - 200
+  - id: forensics300
+    name: FORENSICS - 300
