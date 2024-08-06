@@ -6,3 +6,5 @@ challenges:
     name: CRYPTO - 50 - Baby-Arx
   - id: oracle
     name: CRYPTO - oracle-for-block-cipher-enthusiasts
+  - id: rsaoracle1
+    name: CRYPTO - RSA Interval Oracle 1
