@@ -4,3 +4,5 @@ name: DownUnderCTF 2022
 challenges:
   - id: babyarx
     name: CRYPTO - 50 - Baby-Arx
+  - id: oracle
+    name: CRYPTO - oracle-for-block-cipher-enthusiasts
