@@ -10,3 +10,5 @@ challenges:
     name: CRYPTO - RSA Interval Oracle 1
   - id: rsaoracle2
     name: CRYPTO - RSA Interval Oracle 2
+  - id: rsaoracle3
+    name: CRYPTO - RSA Interval Oracle 3
