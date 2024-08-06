@@ -2,6 +2,8 @@ id: downunderctf2022
 name: DownUnderCTF 2022
 
 challenges:
+  - id: babypywn
+    name: PWN - Babypywn
   - id: babyarx
     name: CRYPTO - 50 - Baby-Arx
   - id: oracle
