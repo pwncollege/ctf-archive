@@ -1,0 +1,6 @@
+id: downunderctf2022
+name: DownUnderCTF 2022
+
+challenges:
+  - id: babyarx
+    name: CRYPTO - 50 - Baby-Arx
