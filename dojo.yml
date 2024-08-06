@@ -20,6 +20,7 @@ modules:
   - id: imaginaryctf2022
   - id: downunderctf2020
   - id: downunderctf2021
+  - id: downunderctf2022
   - id: downunderctf2024
   - id: angstromctf2018
   - id: angstromctf2022
