@@ -18,3 +18,5 @@ challenges:
     name: FORENSICS - 200
   - id: forensics300
     name: FORENSICS - 300
+  - id: vuln500
+    name: VULNERABILITY - 500
