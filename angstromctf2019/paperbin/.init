@@ -1,0 +1,4 @@
+#!/bin/bash
+
+sudo apt-get install poppler-utils -y
+sudo apt install foremost
