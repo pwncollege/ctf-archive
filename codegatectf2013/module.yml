@@ -1,0 +1,6 @@
+id: codegatectf2013
+name: Codegate CTF 2013
+
+challenges:
+  - id: vuln100
+    name: VULNERABILITY - 100
