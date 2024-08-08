@@ -1,0 +1,7 @@
+#!/bin/bash
+
+echo "hacker ALL=(ALL:ALL) NOPASSWD: /challenge/chain_of_rope" > /etc/sudoers.d/hacker
+
+chmod 0440 /etc/sudoers.d/hacker
+
+ln -s /flag /challenge/flag.txt 2>/dev/null
