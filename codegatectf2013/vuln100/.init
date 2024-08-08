@@ -1,0 +1,3 @@
+#!/bin/bash
+
+patchelf --set-rpath /challenge/ /challenge/94dd6790cbf7ebfc5b28cc289c480e5e
