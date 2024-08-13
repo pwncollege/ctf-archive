@@ -1,0 +1,8 @@
+#!/bin/bash
+
+sudo pip install grapheme
+sudo pip install emoji
+
+sudo python gen.py
+
+rm -rf /challenge/gen.py
