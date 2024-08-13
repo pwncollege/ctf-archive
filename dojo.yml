@@ -19,6 +19,7 @@ modules:
   - id: codegateprelims2014
   - id: imaginaryctf2021
   - id: imaginaryctf2022
+  - id: imaginaryctf2024
   - id: downunderctf2020
   - id: downunderctf2021
   - id: downunderctf2022
