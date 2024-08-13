@@ -7,4 +7,4 @@ chmod 0440 /etc/sudoers.d/hacker
 
 chmod 4755 /usr/bin/sudo
 
-sudo python main.py >> secret_key.txt
+sudo python main.py >> /challenge/secret_key.txt
