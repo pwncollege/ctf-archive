@@ -3,6 +3,6 @@
 sudo pip install grapheme
 sudo pip install emoji
 
-sudo python gen.py
+sudo python /challenge/gen.py
 
 rm -rf /challenge/gen.py
