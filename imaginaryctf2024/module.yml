@@ -8,3 +8,5 @@ challenges:
     name: CRYPTO - 200 - Integrity
   - id: bf
     name: REV - 400 - bf
+  - id: vokram
+    name: REV - 500 - Vokram
