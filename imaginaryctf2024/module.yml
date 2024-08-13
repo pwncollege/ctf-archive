@@ -4,3 +4,5 @@ name: ImaginaryCTF 2024
 challenges:
   - id: base64
     name: CRYPTO - 100 - base64
+  - id: integrity
+    name: CRYPTO - 200 - Integrity
