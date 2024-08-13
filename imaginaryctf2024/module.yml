@@ -1,0 +1,6 @@
+id: imaginaryctf2024
+name: ImaginaryCTF 2024
+
+challenges:
+  - id: base64
+    name: CRYPTO - 100 - base64
