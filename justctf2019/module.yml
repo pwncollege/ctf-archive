@@ -14,6 +14,8 @@ challenges:
     name: CRYPTO - 453 -  p&q Service
   - id: fsmir
     name: REV - 152 - FSMIR
+  - id: fsmir2
+    name: REV - 197 - FSMIR2
   - id: changevm
     name: REV - 347 - Change_VM
   - id: exponent
