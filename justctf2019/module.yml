@@ -8,6 +8,8 @@ challenges:
     name: PWN - 283 - Phonebook
   - id: safenotes
     name: PWN - 500 - Safe Notes
+  - id: shellcode
+    name: PWN - 283 - Shellcode Executor PRO
   - id: pandq
     name: CRYPTO - 453 -  p&q Service
   - id: exponent
