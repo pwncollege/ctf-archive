@@ -12,6 +12,8 @@ challenges:
     name: PWN - 283 - Shellcode Executor PRO
   - id: pandq
     name: CRYPTO - 453 -  p&q Service
+  - id: fsmir
+    name: REV - 152 - FSMIR
   - id: changevm
     name: REV - 347 - Change_VM
   - id: exponent
