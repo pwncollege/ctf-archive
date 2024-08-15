@@ -6,11 +6,5 @@ challenges:
     name: PWN - 394 - ATM
   - id: pandq
     name: CRYPTO - 453 -  p&q Service
-  - id: rsaExponent
+  - id: exponent
     name: MISC - 326 - RSA Exponent
-  # - id: atm
-  #   name: PWN - 394 - ATM
-  # - id: cryptoPandqService
-  #   name: CRYPTO - 453 - p&q service
-  # - id: rsaExponent
-  #   name: MISC - 326 - RSA Exponent
