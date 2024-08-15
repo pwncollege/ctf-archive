@@ -2,6 +2,12 @@ id: justCTF2019
 name: justCTF2019
 
 challenges:
+  - id: atm
+    name: PWN - 394 - ATM
+  - id: pandq
+    name: CRYPTO - 453 -  p&q Service
+  - id: rsaExponent
+    name: MISC - 326 - RSA Exponent
   # - id: atm
   #   name: PWN - 394 - ATM
   # - id: cryptoPandqService
