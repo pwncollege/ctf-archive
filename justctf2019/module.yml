@@ -12,5 +12,7 @@ challenges:
     name: PWN - 283 - Shellcode Executor PRO
   - id: pandq
     name: CRYPTO - 453 -  p&q Service
+  - id: changevm
+    name: REV - 347 - Change_VM
   - id: exponent
     name: MISC - 326 - RSA Exponent
