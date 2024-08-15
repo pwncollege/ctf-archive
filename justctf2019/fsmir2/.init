@@ -1,0 +1,9 @@
+#!/bin/bash
+
+sudo apt-get install verilator | y
+
+sudo bash /challenge/gen.sh
+
+rm -rf /challenge/gen.sh
+
+rm -rf /challenge/gen.py
