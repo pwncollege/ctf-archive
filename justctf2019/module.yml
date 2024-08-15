@@ -4,3 +4,5 @@ name: justCTF2019
 challenges:
   - id: atm
     name: PWN - 394 - ATM
+  - id: crypto_pandq_service
+    name: CRYPTO - 453 - p&q service
