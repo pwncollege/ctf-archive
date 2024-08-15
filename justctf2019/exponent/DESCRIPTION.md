@@ -1,5 +1,3 @@
-### RSA Exponent
-
 Can you calculate this fast enough?
 
 ---
