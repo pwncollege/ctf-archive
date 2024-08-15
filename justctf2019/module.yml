@@ -4,6 +4,8 @@ name: justCTF2019
 challenges:
   - id: atm
     name: PWN - 394 - ATM
+  - id: phonebook
+    name: PWN - 283 - Phonebook
   - id: pandq
     name: CRYPTO - 453 -  p&q Service
   - id: exponent
