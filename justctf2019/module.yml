@@ -6,6 +6,8 @@ challenges:
     name: PWN - 394 - ATM
   - id: phonebook
     name: PWN - 283 - Phonebook
+  - id: safenotes
+    name: PWN - 500 - Safe Notes
   - id: pandq
     name: CRYPTO - 453 -  p&q Service
   - id: exponent
