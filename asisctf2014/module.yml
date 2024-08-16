@@ -1,0 +1,8 @@
+id: asisctf2014 
+name: asisctf2014
+
+challenges:
+  - id: randomimage
+    name: CRYPTO - 150 - Random Image
+  - id: blocks
+    name: STEGO - 100 - Blocks
