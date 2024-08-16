@@ -1,0 +1,5 @@
+#!/bin/bash
+
+sudo git clone https://github.com/durkinza/KeyZ.git /challenge/KeyZ
+cd /challenge/KeyZ
+sudo make
