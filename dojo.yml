@@ -29,10 +29,11 @@ modules:
   - id: angstromctf2019
   - id: angstromctf2022
   - id: angstromctf2024
+  - id: asisctf2013
+  - id: asisctf2014
   - id: grehack2012
   - id: 29c3ctf2012
   - id: gitsctf2012
-  - id: asisctf2013
   - id: ectf2014
   - id: hackluctf2011
   - id: hitcon2017quals
