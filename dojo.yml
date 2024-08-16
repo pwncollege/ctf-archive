@@ -41,6 +41,7 @@ modules:
   - id: justctf2019
   - id: hsctf2019
   - id: picoctf2019
+  - id: neverlan2019
   - id: 0x41414141ctf2021
   - id: corctf2021
   - id: wtfctf2021
@@ -51,8 +52,8 @@ modules:
   - id: patriotctf2022
   - id: patriotctf2023
   - id: noobzctf2023
+  - id: byuctf2023
   - id: tamuctf2024
   - id: uiuctf2024
   - id: r3ctf2024
-  - id: byuctf2023
   - id: greycattheflag2022
