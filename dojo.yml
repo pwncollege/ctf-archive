@@ -31,8 +31,8 @@ modules:
   - id: angstromctf2024
   - id: asisctf2013
   - id: asisctf2014
-  - id: cryptoctf2021
   - id: cryptoctf2020
+  - id: cryptoctf2021
   - id: hsctf2019
   - id: grehack2012
   - id: 29c3ctf2012
