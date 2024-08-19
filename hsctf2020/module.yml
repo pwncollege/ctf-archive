@@ -1,0 +1,22 @@
+id: hsctf2020 
+name: HSCTF2020
+
+challenges:
+  - id: xored
+    name: CRYPTO - 100 - XORed
+  - id: unexpected
+    name: CRYPTO - 100 - Unexpected
+  - id: comments
+    name: FORENSICS - 100 - Comments
+  - id: mountains
+    name: FORENSICS - Meta Mountains
+  - id: binaryword
+    name: MISC - 223 - Binary Word Search
+  - id: pie
+    name: MISC - 319 - Apple Pie
+  - id: primes
+    name: MISC - 100 - Primes
+  - id: apcs
+    name: REV - 100 - AP LAB Computer Science Principles
+  - id: apenglish
+    name: REV - 100 - AP LAB Engish Language
