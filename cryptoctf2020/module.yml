@@ -4,6 +4,8 @@ name: Crypto CTF 2020
 challenges:
   - id: trailingbits
     name: CRYPTO - 29 - Trailing Bits
+  - id: amsterdam
+    name: CRYPTO - 55 - Amsterdam
   - id: threeravens
     name: CRYPTO - 90 - Three Ravens
   - id: onelinecrypto
