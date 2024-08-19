@@ -1,0 +1,6 @@
+id: cryptoctf2020
+name: Crypto CTF 2020
+
+challenges:
+  - id: three_ravens
+    name: CRYPTO - 90 - Three Ravens
