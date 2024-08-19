@@ -4,3 +4,5 @@ name: Crypto CTF 2020
 challenges:
   - id: threeravens
     name: CRYPTO - 90 - Three Ravens
+  - id: fatima
+    name: CRYPTO - 316 - Fatima
