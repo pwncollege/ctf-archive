@@ -8,5 +8,7 @@ challenges:
     name: CRYPTO - 90 - Three Ravens
   - id: onelinecrypto
     name: CRYPTO - 142 - One Line Crypto
+  - id: complextohell
+    name: CRYPTO - 285 - Complex To Hell
   - id: fatima
     name: CRYPTO - 316 - Fatima
