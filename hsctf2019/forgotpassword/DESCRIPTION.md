@@ -4,7 +4,7 @@ Help! I got this new lock for Christmas, but I've forgotten the first two values
 
 Note: submit the first two combo values separated by a space in hex format.
 
-`Run flagCheck and input the flag you get from the challenge for pwn.college flag`
+`Use flagCheck to input the flag you get from the challenge to get the actual flag`
 
 ---
 **Author:** HSN CS Club
