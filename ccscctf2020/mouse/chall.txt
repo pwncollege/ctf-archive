@@ -1,0 +1,13 @@
+
+E: Elliptic Curve defined by y^2 = x^3 + 7  (mod 241089471078013)
+
+Let be points on E:
+P = (57718729795076 : 22478316955113 : 1)
+Q = (37503023403318 : 141576497851358 : 1)
+
+such that:
+Q = n*P
+
+Find n
+
+Note: Flag is CCSC{md5(n)}
