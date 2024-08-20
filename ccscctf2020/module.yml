@@ -4,6 +4,8 @@ name: Cyprus Cyber Security Challenge (CCSC) CTF 2020
 challenges:
   - id: basilisk64
     name: CRYPTO - 29 - Basilisk64
+  - id: mouse
+    name: CRYPTO - 150 - Mousesack's Spell
   - id: guy
     name: PWN - 200 - Guy de Bois 
   - id: spell
