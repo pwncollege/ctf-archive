@@ -1,6 +1,6 @@
 MKXU IDKMI DM BDASKMI NLU XCPJNDICFQ! K VDMGUC KW PDT GKG NLKB HP LFMG DC TBUG PDTC CUBDTCXUB. K'Q BTCU MDV PDT VFMN F WAFI BD LUCU KN KB WAFI GDKMINLKBHPLFMGKBQDCUWTMNLFMFMDMAKMUNDDA
 
-```Run flagCheck and input the flag you get from the challenge for pwn.college flag```
+`Use flagCheck to input the flag you get from the challenge to get the actual flag`
 
 ---
 **Author:** NeverLAN

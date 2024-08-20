@@ -2,7 +2,7 @@ A user accidentally installed malware on their computer and now the user databas
 
 Flag is All Caps
 
-```Run flagCheck and input the flag you get from the challenge for pwn.college flag```
+`Use flagCheck to input the flag you get from the challenge to get the actual flag`
 
 ---
 **Author:** NeverLAN
