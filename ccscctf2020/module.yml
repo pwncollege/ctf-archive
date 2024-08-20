@@ -6,3 +6,5 @@ challenges:
     name: CRYPTO - 29 - Basilisk64
   - id: guy
     name: PWN - 200 - Guy de Bois 
+  - id: spell
+    name: PWN - 300 - Spell Caster
