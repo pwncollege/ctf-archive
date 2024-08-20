@@ -24,6 +24,8 @@ challenges:
     name: CRYPTO - 300 - 10
   - id: networking101
     name: WEB - 100 - Networking 101
+  - id: net200
+    name: WEB - 200
   - id: hardware
     name: WEB - 200 - Hardware
     visibility: 
