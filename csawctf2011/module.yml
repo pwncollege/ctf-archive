@@ -28,8 +28,6 @@ challenges:
     name: WEB - 200
   - id: hardware
     name: WEB - 200 - Hardware
-    visibility: 
-      start: "2029-08-21T10:30:00-07:00"
   - id: evilburritos2
     name: WEB - 300 - Evil Burritos 2
   - id: loveletter
