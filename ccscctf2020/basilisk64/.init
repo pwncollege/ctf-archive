@@ -1,0 +1,14 @@
+#!/bin/bash
+
+echo "hacker ALL=(ALL:ALL) NOPASSWD: /challenge/encoded_flag_modded.py" > /etc/sudoers.d/hacker
+echo "hacker ALL=(ALL:ALL) NOPASSWD: /usr/bin/python encoded_flag_modded.py" > /etc/sudoers.d/hacker
+
+chmod 0440 /etc/sudoers.d/hacker
+
+chmod 4755 /usr/bin/sudo
+
+sudo python /challenge/encoded_flag_modded.py
+
+sudo rm /challenge/encoded_flag_modded.py
+
+sudo rm /challenge/encode_flag.py
