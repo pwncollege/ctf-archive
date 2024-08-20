@@ -1,0 +1,6 @@
+id: ccscctf2020
+name: Cyprus Cyber Security Challenge (CCSC) CTF 2020
+
+challenges:
+  - id: basilisk64
+    name: CRYPTO - 29 - Basilisk64
