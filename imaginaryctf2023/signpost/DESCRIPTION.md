@@ -4,5 +4,7 @@ Submit your flag as ictf{latitude,longitude}, with the coordinates of where the 
 
 **Note:** To view the .png, go to desktop mode and open the file with firefox
 
+`Use flagCheck to input the flag you get from the challenge to get the actual flag`
+
 ---
 **Author:** Eth007

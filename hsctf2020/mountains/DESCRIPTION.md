@@ -1,6 +1,6 @@
 It seems that mountains are a great place for hiding secrets. Maybe you could find this one!
 
-```Run flagCheck and input the flag you get from the challenge for pwn.college flag```
+`Use flagCheck to input the flag you get from the challenge to get the actual flag`
 
 ``Note:`` To view the image, open desktop mode and open the image via firefox
 

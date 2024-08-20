@@ -4,7 +4,7 @@ Note: 0 is black, 1 is white. The entire flag is hidden inside the word search, 
 
 ```Note:``` To view the image, open deskptop mode and open the file through firefox
 
-```Run flagCheck and input the flag you get from the challenge for pwn.college flag```
+`Use flagCheck to input the flag you get from the challenge to get the actual flag`
 
 ---
 **Author:** AC
