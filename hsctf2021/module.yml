@@ -1,0 +1,16 @@
+id: hsctf2021
+name: HSCTF2021
+
+challenges:
+  - id: warmup
+    name: REV - 371 - warmup-rev
+  - id: multidimensional
+    name: REV - 442 - Multidimensional
+  - id: aptenodytes
+    name: CRYPTO - 183 - aptenodytes-forsteri
+  - id: queen
+    name: CRYPTO - 221 - queen-of-the-hill
+  - id: opisthocomus
+    name: CRYPTO - 300 - opisthocomus-hoazin
+  - id: canis
+    name: CRYPTO - 456 - canis-lupus-familiaris-bernardus
