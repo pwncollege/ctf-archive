@@ -35,6 +35,7 @@ modules:
   - id: cryptoctf2021
   - id: hsctf2019
   - id: hsctf2020
+  - id: hsctf2021
   - id: grehack2012
   - id: 29c3ctf2012
   - id: gitsctf2012
