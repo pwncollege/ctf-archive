@@ -4,3 +4,5 @@ name: corCTF 2022
 challenges:
   - id: exhanged
     name: CRYPTO - 131 - Exchanged
+  - id: bogus
+    name: REV - 396 - Bogus
