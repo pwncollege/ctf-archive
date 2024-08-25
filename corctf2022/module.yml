@@ -4,6 +4,8 @@ name: corCTF 2022
 challenges:
   - id: exchanged
     name: CRYPTO - 131 - Exchanged
+  - id: turbocrab
+    name: REV - 154 - turbocrab
   - id: msfrob
     name: REV - 170 - Msfrob
   - id: bogus
