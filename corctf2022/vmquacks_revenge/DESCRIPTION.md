@@ -8,4 +8,4 @@ A duck at your local pond snitched on your quacking abilities with the formidabl
 `Use flagCheck to input the flag you get from the challenge to get the actual flag`
 
 ---
-**Author:** clubby789
+**Author:** FizzBuzz101
