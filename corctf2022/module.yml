@@ -6,3 +6,5 @@ challenges:
     name: CRYPTO - 131 - Exchanged
   - id: bogus
     name: REV - 396 - Bogus
+  - id: edgelord
+    name: REV - 458 - Edgelord
