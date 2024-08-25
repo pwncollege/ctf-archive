@@ -36,6 +36,8 @@ modules:
   - id: hsctf2019
   - id: hsctf2020
   - id: hsctf2021
+  - id: corctf2021
+  - id: corctf2022
   - id: grehack2012
   - id: 29c3ctf2012
   - id: gitsctf2012
@@ -47,7 +49,6 @@ modules:
   - id: picoctf2019
   - id: neverlan2019
   - id: 0x41414141ctf2021
-  - id: corctf2021
   - id: wtfctf2021
   - id: vsctf2022
   - id: accessdeniedctf2022
