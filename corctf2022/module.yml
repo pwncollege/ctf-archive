@@ -1,0 +1,6 @@
+id: corctf2022
+name: corCTF 2022
+
+challenges:
+  - id: exhanged
+    name: CRYPTO - 131 - Exchanged
