@@ -1,0 +1,4 @@
+#!/bin/bash
+
+sudo bash -c "python /challenge/source_patched.py >> /challenge/output.txt"
+sudo cat /challenge/output.txt
