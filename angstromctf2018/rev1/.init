@@ -1,3 +1,9 @@
 #!/bin/bash
 
+echo "hacker ALL=(ALL:ALL) NOPASSWD: /challenge/rev1_32" > /etc/sudoers.d/hacker
+
+chmod 0440 /etc/sudoers.d/hacker
+
+chmod 4755 /usr/bin/sudo
+
 ln -s /flag /challenge/flag 2>/dev/null
