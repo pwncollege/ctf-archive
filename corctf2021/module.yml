@@ -8,6 +8,8 @@ challenges:
     name: PWN - 459 - CShell
   - id: fourninesix
     name: CRYPTO - 360 - 4096
+  - id: lcg
+    name: CRYPTO - 489 - LCG-k
   - id: babyrev
     name: REV - 372 - BabyRev
   - id: vmquack
