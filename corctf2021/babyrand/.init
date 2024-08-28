@@ -1,0 +1,12 @@
+#!/bin/bash
+
+echo "hacker ALL=(ALL:ALL) NOPASSWD: /challenge/script.py" > /etc/sudoers.d/hacker
+echo "hacker ALL=(ALL:ALL) NOPASSWD: /usr/bin/python script.py" > /etc/sudoers.d/hacker
+
+chmod 0440 /etc/sudoers.d/hacker
+chmod 4755 /usr/bin/sudo
+
+touch /challenge/output.txt
+sudo python /challenge/script.py >> /challenge/output.txt
+
+rm /challenge/script.py
