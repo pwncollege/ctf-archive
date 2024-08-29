@@ -12,6 +12,8 @@ challenges:
     name: CRYPTO - 487 - Babyrand
   - id: lcg
     name: CRYPTO - 489 - LCG-k
+  - id: bank
+    name: CRYPTO - 489 - Bank
   - id: babyrev
     name: REV - 372 - BabyRev
   - id: vmquack
