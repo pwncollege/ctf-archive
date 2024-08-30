@@ -6,6 +6,8 @@ challenges:
     name: PWN - 394 - ChainBlock
   - id: cshell
     name: PWN - 459 - CShell
+  - id: fibinary
+    name: CRYPTO - 205 - Fibinary
   - id: fourninesix
     name: CRYPTO - 360 - 4096
   - id: babyrand
