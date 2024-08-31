@@ -1,0 +1,7 @@
+#!/bin/bash
+
+echo "hacker ALL=(ALL:ALL) NOPASSWD: /usr/bin/sage /challenge/source_patched.sage" > /etc/sudoers.d/hacker
+echo "hacker ALL=(ALL:ALL) NOPASSWD: /usr/bin/sage source_patched.sage" > /etc/sudoers.d/hacker
+
+chmod 0440 /etc/sudoers.d/hacker
+chmod 4755 /usr/bin/sudo
