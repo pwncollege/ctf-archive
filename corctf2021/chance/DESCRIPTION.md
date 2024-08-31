@@ -1,4 +1,4 @@
-I heard 4096 bit RSA is secure, so I encrypted the flag with it.
+Do you believe in the heart of the cards?
 
 ---
 **Author:** qopruzjf
