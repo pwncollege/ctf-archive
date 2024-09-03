@@ -1,3 +1,14 @@
 #!/bin/bash
 
+echo "hacker ALL=(ALL:ALL) NOPASSWD: /challenge/main.py" > /etc/sudoers.d/hacker
+echo "hacker ALL=(ALL:ALL) NOPASSWD: /usr/bin/python main.py" > /etc/sudoers.d/hacker
+
+chmod 0440 /etc/sudoers.d/hacker
+
+chmod 4755 /usr/bin/sudo
+
+sudo -u root /challenge/main.py
+
+sudo chmod +x main.py
+
 ln -s /flag /challenge/flag.txt 2>/dev/null

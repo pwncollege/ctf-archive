@@ -1,4 +1,14 @@
 #!/bin/bash
 
-# Attempt to create a symboliclink
-ln -s /flag /challenge/flag.txt 2>/dev/null 
+echo "hacker ALL=(ALL:ALL) NOPASSWD: /challenge/encode.py" > /etc/sudoers.d/hacker
+echo "hacker ALL=(ALL:ALL) NOPASSWD: /usr/bin/python encode.py" > /etc/sudoers.d/hacker
+
+chmod 0440 /etc/sudoers.d/hacker
+
+chmod 4755 /usr/bin/sudo
+
+sudo -u root /challenge/encode.py
+
+sudo chmod +x encode.py
+
+sudo python /challenge/encode.py > out.txt

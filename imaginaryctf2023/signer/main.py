@@ -36,7 +36,7 @@ while True:
     print("Enter the signature for the password:")
     s = int(input())
     if pow(s, e, n) == crc32(PASSWORD):
-      print("You win! The flag is", open("flag.txt").read())
+      print("You win! The flag is", open("/challenge/flag.txt").read())
       exit()
     else:
       print("Wrong.")

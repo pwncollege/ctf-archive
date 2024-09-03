@@ -9,7 +9,7 @@ shuffle(shuffled)
 
 d = {charset[i]:v for(i,v)in enumerate(shuffled)}
 
-pt = open("flag.txt").read()
+pt = open("/flag").read()
 while "\n\n\n" in pt:
     pt = pt.replace("\n\n\n", '\n\n')
 while '  ' in pt:

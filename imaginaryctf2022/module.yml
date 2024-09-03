@@ -9,7 +9,7 @@ challenges:
   - id: stream
     name: CRYPTO - 50 - Stream
   - id: emoji
-    name: CRYPTO - 50 - Emoji
+    name: CRYPTO - 100 - Emoji
   - id: smoll
     name: CRYPTO - 100 - Smoll
   - id: secureencodinghex
