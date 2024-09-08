@@ -3,4 +3,6 @@ name: Cryptoverse CTF 2022
 
 challenges:
   - id: ataleoftwosystems
-    name: CRYTPO - 246 - A Tale Of Two Systems
+    name: CRYTPO - A Tale Of Two Systems
+  - id: bigrabin
+    name: CRYTPO - Big Rabin
