@@ -6,3 +6,5 @@ challenges:
     name: PWN - 246 - Children Cache
   - id: babytcache
     name: PWN - 305 - Baby Tcache
+  - id: groot
+    name: PWN - 305 - Groot
