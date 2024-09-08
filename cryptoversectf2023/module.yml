@@ -12,3 +12,5 @@ challenges:
     name: CRYTPO - LFSR Explorer
   - id: picochip1
     name: CRYTPO - PicoChip 1
+  - id: picochip2
+    name: CRYTPO - PicoChip 2
