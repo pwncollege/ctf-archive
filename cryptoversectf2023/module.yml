@@ -16,3 +16,5 @@ challenges:
     name: CRYTPO - PicoChip 2
   - id: acceptance
     name: PWN - Acceptance
+  - id: retschool
+    name: PWN - Ret2School
