@@ -6,3 +6,5 @@ challenges:
     name: CRYTPO - A Tale Of Two Systems
   - id: bigrabin
     name: CRYTPO - Big Rabin
+  - id: rsa2
+    name: CRYTPO - RSA 2
