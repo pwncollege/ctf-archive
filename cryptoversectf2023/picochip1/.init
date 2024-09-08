@@ -1,0 +1,3 @@
+#!/bin/bash
+
+python /challenge/fractional_flag.py >> /challenge/output.txt
