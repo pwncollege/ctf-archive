@@ -1,0 +1,3 @@
+#!/bin/bash
+
+patchelf --set-rpath /challenge /challenge/ret2school
