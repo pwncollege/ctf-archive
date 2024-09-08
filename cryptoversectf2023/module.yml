@@ -4,3 +4,5 @@ name: Cryptoverse CTF 2023
 challenges:
   - id: babyaes
     name: CRYTPO - Baby AES
+  - id: fractionalflag
+    name: CRYTPO - Fractional Flag
