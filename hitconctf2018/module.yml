@@ -8,3 +8,5 @@ challenges:
     name: PWN - 305 - Baby Tcache
   - id: groot
     name: PWN - 305 - Groot
+  - id: hitcon
+    name: PWN - 327 - HITCON
