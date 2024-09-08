@@ -8,3 +8,5 @@ challenges:
     name: CRYTPO - Fractional Flag
   - id: backpack
     name: CRYTPO - Knapsack vs Backpack
+  - id: lsfr
+    name: CRYTPO - LFSR Explorer
