@@ -8,3 +8,5 @@ challenges:
     name: CRYTPO - Big Rabin
   - id: rsa2
     name: CRYTPO - RSA 2
+  - id: rsa3
+    name: CRYTPO - RSA 3
