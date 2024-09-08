@@ -10,3 +10,5 @@ challenges:
     name: CRYTPO - RSA 2
   - id: rsa3
     name: CRYTPO - RSA 3
+  - id: dlog
+    name: CRYTPO - Weird Dlog
