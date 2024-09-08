@@ -1,3 +1,4 @@
 #!/bin/bash
 
+pip install plotly
 python /challenge/fractional_flag.py >> /challenge/output.txt
