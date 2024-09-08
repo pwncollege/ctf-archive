@@ -14,3 +14,5 @@ challenges:
     name: CRYTPO - PicoChip 1
   - id: picochip2
     name: CRYTPO - PicoChip 2
+  - id: acceptance
+    name: PWN - Acceptance
