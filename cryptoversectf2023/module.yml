@@ -10,3 +10,5 @@ challenges:
     name: CRYTPO - Knapsack vs Backpack
   - id: lsfr
     name: CRYTPO - LFSR Explorer
+  - id: picochip1
+    name: CRYTPO - PicoChip 1
