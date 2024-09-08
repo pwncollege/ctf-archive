@@ -21,4 +21,6 @@ challenges:
   - id: microassembly
     name: REV - Micro Assembly
   - id: simplecheckin
-    name: REV - Simple Checkin
+    name: REV - Simple Checking
+  - id: standardvm
+    name: REV - Standard VM
