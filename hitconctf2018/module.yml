@@ -1,0 +1,6 @@
+id: hitconctf2018
+name: HITCON 2018
+
+challenges:
+  - id: childrencache
+    name: PWN - 246 - Children Cache
