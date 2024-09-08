@@ -1,0 +1,6 @@
+id: cryptoversectf2022
+name: Cryptoverse CTF 2022
+
+challenges:
+  - id: ataleoftwosystems
+    name: CRYTPO - 246 - A Tale Of Two Systems
