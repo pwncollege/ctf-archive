@@ -6,3 +6,5 @@ challenges:
     name: CRYTPO - Baby AES
   - id: fractionalflag
     name: CRYTPO - Fractional Flag
+  - id: backpack
+    name: CRYTPO - Knapsack vs Backpack
