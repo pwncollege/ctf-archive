@@ -18,3 +18,5 @@ challenges:
     name: PWN - Acceptance
   - id: retschool
     name: PWN - Ret2School
+  - id: microassembly
+    name: REV - Micro Assembly
