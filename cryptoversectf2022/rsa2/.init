@@ -1,0 +1,3 @@
+#!bin/bash
+
+python /challenge/chall.py > /challenge/out.txt
