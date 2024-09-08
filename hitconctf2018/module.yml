@@ -10,3 +10,5 @@ challenges:
     name: PWN - 305 - Groot
   - id: hitcon
     name: PWN - 327 - HITCON
+  - id: tftp
+    name: PWN - 400 - tftp
