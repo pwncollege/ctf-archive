@@ -1,3 +1,3 @@
 
 ---
-**Author:** Cryptoverse 2022
+**Author:** Cryptoverse Team
