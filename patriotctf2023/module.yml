@@ -24,5 +24,7 @@ challenges:
     name: PWN - 494 - Soft Shell
   - id: breakfastclub
     name: CRYPTO - 166 - Breakfast Club
+    visibility: 
+      start: "2029-08-21T10:30:00-07:00"
   - id: flagfinder
     name: MISC - 130 - Flag Finder
