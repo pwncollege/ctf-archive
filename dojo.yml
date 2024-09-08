@@ -38,12 +38,13 @@ modules:
   - id: hsctf2021
   - id: corctf2021
   - id: corctf2022
+  - id: hitconctf2018
+  - id: hitcon2017quals
   - id: grehack2012
   - id: 29c3ctf2012
   - id: gitsctf2012
   - id: ectf2014
   - id: hackluctf2011
-  - id: hitcon2017quals
   - id: backdoorctf2019
   - id: justctf2019
   - id: picoctf2019
