@@ -12,3 +12,5 @@ challenges:
     name: CRYTPO - RSA 3
   - id: dlog
     name: CRYTPO - Weird Dlog
+  - id: worldcup
+    name: REV - World Cup
