@@ -1,0 +1,3 @@
+#!bin/bash
+
+python /challenge/challenge_patched.py > /challenge/output.txt
