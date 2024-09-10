@@ -1,3 +1,5 @@
 #!/opt/pwn.college/bin/bash
 
-python /challenge/challenge_patched.py > /challenge/output.txt
+sudo mkdir /home/me
+sudo touch /home/me/flag.txt
+sudo cat /flag > /home/me/flag.txt
