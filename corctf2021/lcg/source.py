@@ -1,3 +1,5 @@
+#!/opt/pwn.college/python
+
 from Crypto.Util.number import bytes_to_long, inverse
 from hashlib import sha256
 from secrets import randbelow

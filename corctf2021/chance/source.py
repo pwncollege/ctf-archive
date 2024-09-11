@@ -1,3 +1,5 @@
+#!/opt/pwn.college/python
+
 from Crypto.Util.number import getPrime
 from random import randrange, shuffle
 # from private import flag
