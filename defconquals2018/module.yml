@@ -7,6 +7,7 @@ visibility:
 challenges:
   - id: www
     name: www
+    image: adamdoupe/chall-www
     description: |
       From such humble beginnings does this web spring forth to entangle us all: can you take the next step?
 
@@ -24,4 +25,5 @@ challenges:
       /opt/www/previous
       ```
 
+      ---
       Author: adamd
