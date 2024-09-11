@@ -1,0 +1,7 @@
+python-xlib==0.22
+python-libxdo==0.1.2.a1
+pyscreenshot==0.4.2
+Pillow==5.1.0
+PyVirtualDisplay==0.2.1
+easyprocess==0.2.3
+psutil==5.4.5

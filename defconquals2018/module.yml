@@ -1,0 +1,27 @@
+id: defconquals2018 
+name: DEF CON CTF Quals 2018
+
+visibility:
+  start: "2024-09-11T20:00:00-07:00"
+
+challenges:
+  - id: www
+    name: www
+    description: |
+      From such humble beginnings does this web spring forth to entangle us all: can you take the next step?
+
+      Note that you can run the emulator yourself with some work:
+
+      ```bash
+      tar -xzvf /opt/www/NS33_2GB.dd.tar.gz -C /tmp
+      mkdir ~/.previous
+      cp /opt/www/previous-hacker.cfg ~/.previous/previous.cfg
+      ```
+
+      Then, you can run the emulator (but only if you are using the Desktop mode):
+
+      ```bash
+      /opt/www/previous
+      ```
+
+      Author: adamd

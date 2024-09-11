@@ -1,0 +1,3 @@
+#!/usr/bin/env bash-suid
+env -i -- chown www:www /flag
+env -i -- /bin/su www -c /opt/www/frontend.py
