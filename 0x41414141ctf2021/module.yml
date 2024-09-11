@@ -30,8 +30,12 @@ challenges:
     name: CRYPTO - 445 - Eazy RSA
   - id: wallet
     name: CRYPTO - 465 - Delegate Wallet
+    visibility: 
+      start: "2029-08-21T10:30:00-07:00"
   - id: soul
     name: CRYPTO - 500 - Soul's Permutation Network
+    visibility: 
+      start: "2029-08-21T10:30:00-07:00"
   - id: pyjail
     name: MISC - 437 - Pyjail
   - id: filereader
