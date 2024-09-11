@@ -1,4 +1,4 @@
 #!/bin/bash
 
 # Attempt to create a symboliclink
-ln -s /flag /challenge/flag.txt 2>/dev/null 
+#ln -s /flag /challenge/flag.txt 2>/dev/null 

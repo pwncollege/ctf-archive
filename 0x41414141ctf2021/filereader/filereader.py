@@ -1,3 +1,5 @@
+#!/opt/pwn.college/python
+
 import glob
 
 blocked = ["/etc/passwd", "/flag.txt", "/proc/"]
