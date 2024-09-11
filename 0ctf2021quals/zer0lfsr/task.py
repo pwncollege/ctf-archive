@@ -1,4 +1,4 @@
-#/opt/pwn.college/python
+#!/opt/pwn.college/python
 
 import random
 import signal
