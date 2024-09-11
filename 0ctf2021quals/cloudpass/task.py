@@ -1,3 +1,4 @@
+#/opt/pwn.college/python
 #!/usr/bin/python3
 import os
 import socketserver
