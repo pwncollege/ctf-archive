@@ -1,3 +1,5 @@
+#!/opt/pwn.college/python
+
 from random import randrange
 from Crypto.Util.number import getPrime, long_to_bytes
 from Crypto.Cipher import AES
