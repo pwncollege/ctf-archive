@@ -11,19 +11,9 @@ challenges:
     description: |
       From such humble beginnings does this web spring forth to entangle us all: can you take the next step?
 
-      Note that you can run the emulator yourself with some work:
+      Note that you can run the emulator yourself by copying down (with `rsync`) /opt/www/*.
 
-      ```bash
-      tar -xzvf /opt/www/NS33_2GB.dd.tar.gz -C /tmp
-      mkdir ~/.previous
-      cp /opt/www/previous-hacker.cfg ~/.previous/previous.cfg
-      ```
-
-      Then, you can run the emulator (but only if you are using the Desktop mode):
-
-      ```bash
-      /opt/www/previous
-      ```
+      You'll need to setup and configure `~/.previous/previous.cfg` locally to your setup. 
 
       ---
       Author: adamd

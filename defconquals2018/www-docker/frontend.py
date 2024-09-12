@@ -29,7 +29,7 @@ HOME_DIR = "/opt/www/"
 
 PREVIOUS_BINARY = "/opt/www/previous"
 
-TIMEOUT_SECONDS = 300
+TIMEOUT_SECONDS = 600
 
 image_info = {'login_screen':
               {
@@ -68,13 +68,21 @@ def test_images():
         crop = img.crop((value['start'][0], value['start'][1], value['start'][0]+value['size'][0], value['start'][1]+value['size'][1]))
         crop.show()
 
+screenshot_num = 0
 def send_screen_shot(img):
     img = img.crop((0, 0, 1120, 830))
     #img = img.convert('RGB')
     output = StringIO.StringIO()
     img.save(output, format="PNG")
     contents = output.getvalue()
-    print "DEBUG", base64.b64encode(contents)
+    screenshot_file = "/tmp/screenshot-"+str(screenshot_num)+".png"
+    global screenshot_num
+    with open(screenshot_file, "w") as f:
+        f.write(contents)
+    print "DEBUG stored in ", screenshot_file
+    
+    
+    screenshot_num += 1
     
 def get_flag():
     try:
@@ -417,7 +425,7 @@ def send_start_www_command(xdo, window):
 def send_url_to_ns(url):
     s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
-    s.connect(('localhost', 42424))
+    s.connect(('127.0.0.1', 42424))
 
     to_send = struct.pack('>I', len(url)) + url
 
