@@ -75,8 +75,8 @@ def send_screen_shot(img):
     output = StringIO.StringIO()
     img.save(output, format="PNG")
     contents = output.getvalue()
-    screenshot_file = "/tmp/screenshot-"+str(screenshot_num)+".png"
     global screenshot_num
+    screenshot_file = "/tmp/screenshot-"+str(screenshot_num)+".png"
     with open(screenshot_file, "w") as f:
         f.write(contents)
     print "DEBUG stored in ", screenshot_file
