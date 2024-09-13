@@ -1,5 +1,4 @@
-#!/opt/pwn.college/bin/bash
+#!/bin/bash
 
-sudo mkdir /home/me
-sudo touch /home/me/flag.txt
-sudo cat /flag > /home/me/flag.txt
+
+ln -s /flag /challenge/.flagg
