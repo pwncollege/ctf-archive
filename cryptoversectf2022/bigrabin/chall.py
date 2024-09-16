@@ -1,3 +1,4 @@
+#!/opt/pwn.college/python
 from Crypto.Util.number import *
 # from secret import flag
 with open('/flag', 'r') as file:
