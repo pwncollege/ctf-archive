@@ -1,9 +1,10 @@
 #!/opt/pwn.college/python
+
 from hashlib import sha256
 from Crypto.Util.Padding import unpad
 from Crypto.Cipher import AES
 
-
+flag = open("/flag").read.().strip().tohex()
 ct = bytes.fromhex('85534f055c72f11369903af5a8ac64e2f4cbf27759803041083d0417b5f0aaeac0490f018b117dd4376edd6b1c15ba02')
 
 
