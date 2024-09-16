@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/opt/pwn.college/python
 
 from Crypto.Util.number import long_to_bytes, bytes_to_long
 import random
