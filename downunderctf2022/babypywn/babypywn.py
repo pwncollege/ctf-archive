@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/opt/pwn.college/python
 
 from ctypes import CDLL, c_buffer
 libc = CDLL('/lib/x86_64-linux-gnu/libc.so.6')

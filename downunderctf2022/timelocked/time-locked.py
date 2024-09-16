@@ -1,3 +1,4 @@
+#!/opt/pwn.college/python
 from hashlib import sha256
 from Crypto.Util.Padding import unpad
 from Crypto.Cipher import AES
