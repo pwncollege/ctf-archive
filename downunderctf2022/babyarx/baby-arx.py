@@ -1,3 +1,4 @@
+#!/opt/pwn.college/python
 class baby_arx():
     def __init__(self, key):
         assert len(key) == length
