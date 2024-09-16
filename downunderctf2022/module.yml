@@ -16,3 +16,7 @@ challenges:
     name: CRYPTO - RSA Interval Oracle 3
   - id: rsaoracle4
     name: CRYPTO - RSA Interval Oracle 4
+  - id: timelocked
+    name: CRYPTO - Time Locked
+    visibility:
+      start: "2029-08-21T10:30:00-07:00"
