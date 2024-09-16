@@ -1,0 +1,3 @@
+#!/bin/bash
+
+mv /challenge/aes.py /challenge/aes
