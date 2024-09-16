@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/opt/pwn.college/python
 import random
 from Crypto.Util.number import *
 flag = open('/flag').read()
