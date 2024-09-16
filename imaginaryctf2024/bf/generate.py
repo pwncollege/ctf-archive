@@ -1,3 +1,4 @@
+#!/opt/pwn.college/python
 import random
 import sympy
 

@@ -1,3 +1,4 @@
+#!/opt/pwn.college/python
 from Crypto.Util.number import bytes_to_long
 
 q = 64

@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/opt/pwn.college/python
 def vokram(text, program):
     while True:
         for pat, repl, stop in program:
