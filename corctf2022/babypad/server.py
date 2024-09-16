@@ -1,3 +1,5 @@
+#!/opt/pwn.college/python
+
 from Crypto.Cipher import AES
 from Crypto.Util import Counter
 from Crypto.Util.Padding import pad, unpad
