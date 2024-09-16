@@ -14,7 +14,7 @@ from Crypto.Util.Padding import pad
 
 iv = b''
 key = b''
-flag = open("/flag", "rb").read().strip()
+flag = open("/flag", "r").read().strip()
 
 class Service(socketserver.BaseRequestHandler):
 
