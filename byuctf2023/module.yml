@@ -26,4 +26,6 @@ challenges:
     name: MISC - 006-2
   - id: xkcd2637
     name: MISC - xkcd 2637
-  
+    visibility: 
+      start: "2029-08-21T10:30:00-07:00"
+    
