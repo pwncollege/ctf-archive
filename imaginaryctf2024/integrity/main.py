@@ -1,3 +1,4 @@
+#!/opt/pwn.college/python
 from Crypto.Util.number import *
 from binascii import crc_hqx
 
