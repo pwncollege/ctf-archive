@@ -1,3 +1,5 @@
+#!/opt/pwn.college/python
+
 import textwrap
 from binascii import crc32
 from Crypto.Util.number import getPrime
@@ -36,7 +38,7 @@ while True:
     print("Enter the signature for the password:")
     s = int(input())
     if pow(s, e, n) == crc32(PASSWORD):
-      print("You win! The flag is", open("flag.txt").read())
+      print("You win! The flag is", open("/flag").read())
       exit()
     else:
       print("Wrong.")
