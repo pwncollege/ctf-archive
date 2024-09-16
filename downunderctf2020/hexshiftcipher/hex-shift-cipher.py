@@ -1,3 +1,4 @@
+#!/opt/pwn.college/python
 from random import shuffle
 from secret import secret_msg
 
