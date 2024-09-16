@@ -1,11 +1,13 @@
 #!/bin/bash
 
-sudo pip install pykeepass
+# sudo pip install pykeepass
 
-echo "hacker ALL=(ALL:ALL) NOPASSWD: /challenge/task.py" > /etc/sudoers.d/hacker
-echo "hacker ALL=(ALL:ALL) NOPASSWD: /usr/bin/python task.py" > /etc/sudoers.d/hacker
+# echo "hacker ALL=(ALL:ALL) NOPASSWD: /challenge/task.py" > /etc/sudoers.d/hacker
+# echo "hacker ALL=(ALL:ALL) NOPASSWD: /usr/bin/python task.py" > /etc/sudoers.d/hacker
 
-chmod 0440 /etc/sudoers.d/hacker
-chmod 4755 /usr/bin/sudo
+# chmod 0440 /etc/sudoers.d/hacker
+# chmod 4755 /usr/bin/sudo
+
+mv /challenge/pykeepass /usr/local/lib/python3.8/dist-packages/
 
 mv /challenge/task.py /challenge/task
