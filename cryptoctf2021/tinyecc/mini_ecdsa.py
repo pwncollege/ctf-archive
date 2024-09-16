@@ -1,3 +1,4 @@
+#!/opt/pwn.college/python
 #Elliptic curve basics, tools for finding rational points, and ECDSA implementation.
 #Brendan Cordy, 2015
 
