@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/opt/pwn.college/python
 
 import random
 import time

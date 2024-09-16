@@ -1,3 +1,4 @@
+#!/opt/pwn.college/python
 class ComplexVector():
     def __init__(self, vec):
         for i in vec:
