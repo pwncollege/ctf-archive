@@ -1,4 +1,4 @@
-#!/usr/local/bin/python
+#!/opt/pwn.college/python
 
 from hashlib import sha256
 import fastecdsa.curve
@@ -80,6 +80,6 @@ if __name__ == '__main__':
 	print(f'gimme me the aggregate signature for "{TARGET}"')
 	sig = input_sig()
 	if verify(apk, TARGET, sig):
-		with open('flag.txt') as f:
+		with open('/flag') as f:
 			flag = f.read().strip()
 			print(flag)
