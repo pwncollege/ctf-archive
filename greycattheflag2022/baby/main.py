@@ -1,3 +1,4 @@
+#!/opt/pwn.college/python
 from Crypto.Util.number import getPrime, bytes_to_long
 
 with open('/flag', 'r') as file:

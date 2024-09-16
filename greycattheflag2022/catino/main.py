@@ -1,3 +1,4 @@
+#!/opt/pwn.college/python
 from secrets import randbits
 from decimal import Decimal, getcontext
 
