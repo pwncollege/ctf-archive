@@ -1,3 +1,5 @@
+#!/opt/pwn.college/python
+
 import binascii
 import random
 from Crypto.Util.number import isPrime

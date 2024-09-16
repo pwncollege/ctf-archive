@@ -1,10 +1,3 @@
 #!/bin/bash
 
-echo "hacker ALL=(ALL:ALL) NOPASSWD: /challenge/three_ravens.py" > /etc/sudoers.d/hacker
-echo "hacker ALL=(ALL:ALL) NOPASSWD: /usr/bin/python three_ravens.py" > /etc/sudoers.d/hacker
-
-chmod 0440 /etc/sudoers.d/hacker
-
-chmod 4755 /usr/bin/sudo
-
 sudo python /challenge/three_ravens.py >> /challenge/output.txt

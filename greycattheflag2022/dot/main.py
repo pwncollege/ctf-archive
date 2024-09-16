@@ -1,3 +1,4 @@
+#!/opt/pwn.college/python
 from complex import ComplexVector, ComplexNumber
 from secrets import randbits
 

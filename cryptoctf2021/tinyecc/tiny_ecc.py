@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/opt/pwn.college/python
 # In the name of Allah
 
 from mini_ecdsa import *

@@ -1,3 +1,5 @@
+#!/opt/pwn.college/python
+
 import tinyec.ec as ec
 import tinyec.registry as reg
 from hashlib import sha256

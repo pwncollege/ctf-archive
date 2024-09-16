@@ -1,4 +1,4 @@
-#!/usr/bin/env python3.8
+#!/opt/pwn.college/python
 
 import ecdsa
 import random

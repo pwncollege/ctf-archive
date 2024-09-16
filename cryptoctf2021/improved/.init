@@ -1,8 +1,0 @@
-#!/bin/bash
-
-echo "hacker ALL=(ALL:ALL) NOPASSWD: /challenge/improved.py" > /etc/sudoers.d/hacker
-echo "hacker ALL=(ALL:ALL) NOPASSWD: /usr/bin/python improved.py" > /etc/sudoers.d/hacker
-
-chmod 0440 /etc/sudoers.d/hacker
-
-chmod 4755 /usr/bin/sudo

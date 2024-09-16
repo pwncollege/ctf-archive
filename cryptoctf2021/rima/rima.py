@@ -1,5 +1,5 @@
+#!/opt/pwn.college/python
 # pylint: skip-file
-#!/usr/bin/env python
 
 from Crypto.Util.number import *
 # from flag import FLAG

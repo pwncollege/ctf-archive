@@ -1,3 +1,4 @@
+#!/opt/pwn.college/python
 from string import ascii_lowercase, ascii_uppercase
 
 flag = open('/flag', 'r').read().strip()

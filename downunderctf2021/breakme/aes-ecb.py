@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/opt/pwn.college/python
 import sys
 import os
 from Crypto.Cipher import AES

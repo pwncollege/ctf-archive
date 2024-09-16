@@ -1,5 +1,6 @@
-#!/usr/bin/env python3
-with open("flag.txt") as flag: # open flag file
+#!/opt/pwn.college/python
+
+with open("/flag") as flag: # open flag file
     flag = flag.read() # read contents of flag file
 try: # make sure we don't run out of memory
     while 1: # do this forever

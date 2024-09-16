@@ -1,3 +1,5 @@
+#!/opt/pwn.college/python
+
 from Crypto.Util.number import getPrime, bytes_to_long
 
 # from private import flag

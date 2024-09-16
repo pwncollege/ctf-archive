@@ -1,3 +1,4 @@
+#!/opt/pwn.college/python
 import sys
 import socketserver
 from Crypto.Cipher import AES

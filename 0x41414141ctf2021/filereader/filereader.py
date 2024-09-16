@@ -1,6 +1,8 @@
+#!/opt/pwn.college/python
+
 import glob
 
-blocked = ["/etc/passwd", "/flag.txt", "/proc/"]
+blocked = ["/etc/passwd", "/flag", "/proc/"]
 
 def read_file(file_path):
     for i in blocked:

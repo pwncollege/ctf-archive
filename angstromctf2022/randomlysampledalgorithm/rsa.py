@@ -1,3 +1,5 @@
+#!/opt/pwn.college/python
+
 from Crypto.Util.number import getStrongPrime
 
 with open('/flag','r') as file:

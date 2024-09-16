@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/opt/pwn.college/python
 
 from Crypto.Util.number import *
 # from flag import flag
