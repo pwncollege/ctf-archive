@@ -1,6 +1,6 @@
 id: ctf-archive
-name: copy of ctf Archive
-type: private
+name: CTF Archive
+type: public
 award:
   emoji: 🏁
 
@@ -65,3 +65,4 @@ modules:
   - id: r3ctf2024
   - id: greycattheflag2022
   - id: ccscctf2020
+  - id: defconquals2018
