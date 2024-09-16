@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/opt/pwn.college/python
 from os import urandom
 from random import randint
 

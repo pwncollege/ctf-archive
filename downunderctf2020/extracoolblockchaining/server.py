@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/opt/pwn.college/python
 from Crypto.Cipher import AES
 from Crypto.Util.Padding import pad, unpad
 from Crypto.Util.strxor import strxor
