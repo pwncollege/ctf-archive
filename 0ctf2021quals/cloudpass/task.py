@@ -1,4 +1,5 @@
-#!/usr/bin/python3
+#!/opt/pwn.college/python
+
 import os
 import socketserver
 import random
