@@ -2,9 +2,3 @@
 
 mv /challenge/Cryptodome /usr/local/lib/python3.8/dist-packages/
 
-echo "hacker ALL=(ALL:ALL) NOPASSWD: /challenge/Wolf.py" > /etc/sudoers.d/hacker
-echo "hacker ALL=(ALL:ALL) NOPASSWD: /usr/bin/python Wolf.py" > /etc/sudoers.d/hacker
-
-chmod 0440 /etc/sudoers.d/hacker
-
-chmod 4755 /usr/bin/sudo

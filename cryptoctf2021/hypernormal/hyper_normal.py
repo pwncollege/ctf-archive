@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/opt/pwn.college/python
 
 import random
 # from flag import FLAG

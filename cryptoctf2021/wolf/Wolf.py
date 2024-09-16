@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/opt/pwn.college/python
 
 from Cryptodome.Cipher import AES
 import os, time, sys, random
