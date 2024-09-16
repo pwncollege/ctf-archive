@@ -1,14 +1,3 @@
 #!/bin/bash
 
-echo "hacker ALL=(ALL:ALL) NOPASSWD: /challenge/opisthocomus-hoazin.py" > /etc/sudoers.d/hacker
-echo "hacker ALL=(ALL:ALL) NOPASSWD: /usr/bin/python opisthocomus-hoazin.py" > /etc/sudoers.d/hacker
-
-chmod 0440 /etc/sudoers.d/hacker
-
-chmod 4755 /usr/bin/sudo
-
-sudo -u root /challenge/opisthocomus-hoazin.py
-
-sudo chmod +x opisthocomus-hoazin.py
-
 sudo python /challenge/opisthocomus-hoazin.py > /challenge/output.txt

@@ -1,3 +1,4 @@
+#!/opt/pwn.college/python
 import time
 from Crypto.Util.number import *
 flag = open('/flag','r').read()

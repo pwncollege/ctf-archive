@@ -1,3 +1,4 @@
+#!/opt/pwn.college/python
 from Crypto.Cipher import AES
 from Crypto.Random import *
 from Crypto.Util.Padding import *
