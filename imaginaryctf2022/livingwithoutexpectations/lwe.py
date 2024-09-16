@@ -1,3 +1,5 @@
+#!/opt/pwn.college/python
+
 import numpy as np
 import secrets
 
@@ -14,7 +16,7 @@ q = 2**142 + 217
 n = 69
 nseeds = 142
 rng = rand(secrets.randbits(3 * nseeds))
-with open("flag.txt", "rb") as f:
+with open("/flag", "rb") as f:
     flag = f.read().strip()
 bits = f'{int.from_bytes(flag, "big"):0{len(flag) * 8}b}'
 s = np.array([secrets.randbits(1) for _ in range(n)])
