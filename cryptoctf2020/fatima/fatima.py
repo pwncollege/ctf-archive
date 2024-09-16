@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/opt/pwn.college/python
 # -*- coding: utf-8 -*-
 
 from fastecdsa.curve import Curve
