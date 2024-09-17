@@ -1,6 +1,7 @@
 id: ctf-archive
 name: CTF Archive
 type: public
+image: prathamgupta36/ctf-archive
 award:
   emoji: 🏁
 
