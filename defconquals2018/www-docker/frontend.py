@@ -158,6 +158,7 @@ def start_ns(url):
             current_image = v_display.waitgrab()
             send_screen_shot(current_image)
 
+            print "Loading in flag"
             load_in_flag(xdo, window, flag)
 
             # Send the data
@@ -388,17 +389,14 @@ def send_copy_command(xdo, window):
     xdo.send_keysequence_window(window, "Return")
 
 def load_in_flag(xdo, window, flag):
-    xdo.enter_text_window(window, "echo ", 100000)
+    send_url_to_ns(flag)
     time.sleep(.50)
-    xdo.enter_text_window(window, flag, 100000)
-    time.sleep(.50)
-    xdo.send_keysequence_window(window, "Shift+bar")
-    time.sleep(.50)
-    xdo.enter_text_window(window, "tee /me/flag", 100000)
+    
+    xdo.enter_text_window(window, "cp /input /me/flag", 100000)
     time.sleep(.50)
     xdo.send_keysequence_window(window, "Return")
-
     time.sleep(.50)
+    
     xdo.enter_text_window(window, "clear", 100000)
     time.sleep(.50)
     xdo.send_keysequence_window(window, "Return")
