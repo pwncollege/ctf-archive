@@ -1,4 +1,2 @@
 #!/bin/bash
-echo "127.0.0.1 cernvax.cern.ch" | tee /etc/hosts
-echo "nameserver 127.0.0.1" > /etc/resolv.conf
-service dnsmasq start
+nohup python2 /opt/www/simple_dns_server.py > /var/log/simple-dns-server.log &
