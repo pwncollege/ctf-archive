@@ -16,8 +16,6 @@ challenges:
     name: EXPLOIT - 200
   - id: exploit400
     name: EXPLOIT - 400
-    visibility: 
-      start: "2029-08-21T10:30:00-07:00"
   - id: exploit500
     name: EXPLOIT - 500
     visibility: 
