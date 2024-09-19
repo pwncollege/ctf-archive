@@ -10,8 +10,6 @@ challenges:
     name: WEB - 200
   - id: networking300
     name: WEB - 300
-    visibility: 
-      start: "2029-08-21T10:30:00-07:00"
   - id: networking400
     name: WEB - 400
     visibility: 
