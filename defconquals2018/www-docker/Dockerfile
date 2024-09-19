@@ -14,7 +14,7 @@ run useradd -ms /bin/bash hacker
 run useradd -ms /bin/bash www
 
 run mkdir /home/www/.previous && chown www:www /home/www/.previous
-run mkdir /home/www/hd && chown www:www /home/www/hd
+run mkdir /home/www/hd && chown www:www /home/www/hd && chmod 700 /home/www/hd
 
 run cp /opt/www/previous.cfg /home/www/.previous
 
