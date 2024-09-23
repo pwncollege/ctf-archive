@@ -22,5 +22,3 @@ challenges:
     name: WEB - 100 - Big Data
   - id: obscurity
     name: FORENSICS - 200 - Obscurity
-    visibility:
-      start: "2029-08-21T10:30:00-07:00"
