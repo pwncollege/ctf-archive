@@ -6,3 +6,5 @@ challenges:
     name: PWN - 500 - Syscalls
     visibility: 
       start: "2029-08-21T10:30:00-07:00"
+  - id: determined
+    name: CRYPTO - Determined
