@@ -2,5 +2,7 @@ id: r3ctf2024
 name: R3CTF/YUANHENGCTF 2024
 
 challenges:
+  - id: scp
+    name: CRYPTO - 898 - S𝑪𝑷-0εε
   - id: sparrow
     name: CRYPTO - 930 - Sparrow
