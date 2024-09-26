@@ -6,6 +6,8 @@ challenges:
     name: PWN - 1000 - pwn0win - Forbidden Content
   - id: simplestkernel
     name: PWN - 1000 - pwn0win - The simplest kernel
+  - id: hackcam
+    name: PWN - 1000 - Hackcam
   - id: scp
     name: CRYPTO - 898 - S𝑪𝑷-0εε
   - id: sparrow
