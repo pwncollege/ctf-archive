@@ -1,0 +1,12 @@
+subsystem fileviewer_listener 123456;
+
+#include <mach/mach_types.defs> 
+#include <mach/std_types.defs>
+
+import "../common.h";
+
+type string = c_string[*:1024];
+
+routine fileviewer_listener_callback(
+    port        : mach_port_t;
+    filecontent : string);
