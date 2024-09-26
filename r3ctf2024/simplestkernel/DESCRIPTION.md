@@ -37,7 +37,7 @@ Vulnerabilities:
 
 Since the challenge is not downloaded on pwn.college so this challenge doesn't have anything.
 
-Although I did include the `pzb` source files just in case you can't find them
+Although I did include the `pzb` source files zipped just in case you can't find them
 
 `Note: This challenge was not solved during the CTF and we would appreciate any writeups`
 
