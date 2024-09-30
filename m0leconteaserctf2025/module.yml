@@ -4,6 +4,8 @@ name: m0leCon CTF Teaser 2025
 challenges:
   - id: quadratic
     name: CRYPTO - 50 - Quadratic Leak
+  - id: ot
+    name: CRYPTO - 127 - Yet Another OT
   - id: ecsign
     name: CRYPTO - 154 - ECSign
   - id: talor
