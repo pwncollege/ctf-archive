@@ -6,3 +6,5 @@ challenges:
     name: CRYPTO - 50 - Quadratic Leak
   - id: ecsign
     name: CRYPTO - 154 - ECSign
+  - id: talor
+    name: CRYPTO - 244 - Talor
