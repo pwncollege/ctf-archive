@@ -1,0 +1,74 @@
+<html>
+    <head>
+        <title>Chat</title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/3.1.6/purify.min.js" integrity="sha512-jB0TkTBeQC9ZSkBqDhdmfTv1qdfbWpGE72yJ/01Srq6hEzZIz2xkz1e57p9ai7IeHMwEG7HpzG6NdptChif5Pg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <link rel="stylesheet" href="{{theme}}">
+    </head>
+    <body>
+     <div>
+        <span id="chat_id" style="display: none;">{{chat_id}}</span>
+
+        <h1>Messages</h1>
+        <ul>
+
+        </ul>
+     </div>
+
+     <script>
+
+        function getMessages() {
+            fetch('/telegram/getUpdates', {
+                method: 'POST',
+                body: new URLSearchParams({ 
+                    chat_id: document.querySelector('#chat_id').textContent,
+                    allowed_updates: '["message"]',
+                    limit: 5,
+                    offset: -5
+                })
+            })
+            .then(response => response.json())
+            .then(data => {
+
+                // get message and handle link 
+                const ul = document.querySelector('ul');
+                ul.innerHTML = '';
+                
+
+                data.result.forEach(object => {
+                    const li = document.createElement('li');
+                    
+                    let text = object.message.text;
+                    let entities = object.message.entities;
+                    if (entities) {
+                        entities.forEach(entity => {
+                            if (entity.type === 'text_link') {
+                                link_text = text.substring(entity.offset, entity.offset + entity.length);
+
+                                a = document.createElement('a');
+                                a.href = entity.url;
+                                a.textContent = link_text;
+
+                                text = text.substring(0, entity.offset) + a.outerHTML + text.substring(entity.offset + entity.length);
+                            }
+                        });
+                    }
+
+                    li.innerHTML = DOMPurify.sanitize(text,{
+                        ALLOWED_TAGS: ['a'],
+                        ALLOWED_ATTR: ['href']
+                    } ); // enable only link
+
+
+                    ul.appendChild(li);
+
+                });
+
+
+            });
+        }
+
+        setInterval(getMessages, 3000);
+
+        </script>
+    </body>
+</html>

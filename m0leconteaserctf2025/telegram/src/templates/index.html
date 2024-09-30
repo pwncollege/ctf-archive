@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <title>Index</title>
+        <link rel="stylesheet" href="{{theme}}">
+    </head>
+    <body>
+        <h1>History</h1>
+        <ul>
+        {% for entry in chats %}
+            <li id="{{entry}}">{{ entry }}</li>
+        {% endfor %}
+        </ul>
+
+        <form action="/chat" method="POST">
+            <label for="chat_id">Chat ID:</label>
+            <input type="text" id="chat_id" name="chat_id" required>
+            <button type="submit">Send</button>
+        </form>
+    </body>
+</html>

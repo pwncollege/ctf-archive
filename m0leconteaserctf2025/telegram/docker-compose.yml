@@ -1,0 +1,19 @@
+services:
+  challenge:
+    build: src
+    ports:
+      - 1235:5000
+    restart: always
+    environment:
+      FLAG_CHAT_ID: "REDACTED"
+      BOT_TOKEN: "REDACTED"
+      ADMIN_PASSWORD: 'REDACTED'
+
+  bot:
+    build: bot
+    ports:
+      - 1236:3000
+    restart: always
+    environment:
+      ADMIN_PASSWORD: 'REDACTED'
+      CHALLENGE_HOST: 'http://challenge:5000'
