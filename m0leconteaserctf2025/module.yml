@@ -14,3 +14,6 @@ challenges:
     name: REV - 232 - Boot Me
   - id: bootme2
     name: PWN - 424 - Boot Me 2
+  - id: ptmcasino
+    name: WEB - 322 - ptmCasino
+    image: prathamgupta36/moleconctfteaser2025ptmcasino
