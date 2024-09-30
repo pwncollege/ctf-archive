@@ -1,0 +1,353 @@
+{{template "base.html" .}}
+
+<h1 class="my-3">Roulette Game</h1>
+
+<!-- code from https://codepen.io/karaichev/pen/bWObXK thank you :) -->
+
+<style>
+    h1 {
+        color: white;
+    }
+
+    h2 {
+        color: white;
+    }
+
+    .roulette-table {
+        width: 750px;
+        height: 100%;
+        background-color: green;
+    }
+
+    .container-first {
+        display: flex;
+        flex-flow: column-reverse wrap;
+        align-content: flex-start;
+        width: auto;
+        height: 300px;
+        padding: 0px 0px 0px 20px;
+        background-color: green;
+        border-top: 2px sold white;
+    }
+
+    .red-item,
+    .black-item,
+    .zero-item {
+        box-sizing: border-box;
+        border: none;
+        border-left: 3px solid white;
+        border-top: 3px solid white;
+        padding-top: 25px;
+        padding-bottom: 25px;
+        text-align: center;
+        width: 50px;
+        font-size: 25px;
+        color: white;
+    }
+
+    .zero-item {
+        background-color: green;
+        border-bottom: 3px solid white;
+        padding-top: 116px;
+        padding-bottom: 111px;
+    }
+
+    .red-item {
+        background-color: red;
+    }
+
+    .black-item {
+        background-color: black;
+    }
+
+    .column-item {
+        border: solid white;
+        background-color: green;
+        padding-top: 23.5px;
+        padding-bottom: 24px;
+        text-align: center;
+        width: 50px;
+        font-size: 25px;
+        color: white;
+    }
+
+    .container-second {
+        display: flex;
+        background-color: green;
+        width: auto;
+        height: 70px;
+        flex-flow: row wrap;
+        align-content: flex-start;
+        padding: 0px 0px 0px 72px;
+
+    }
+
+    .doz-item {
+        flex-basis: 200px;
+        border: solid white;
+        background-color: green;
+        padding-top: 15px;
+        padding-bottom: 44px;
+        text-align: center;
+        height: 20px;
+        font-size: 25px;
+        color: white;
+    }
+
+    .container-third {
+        display: flex;
+        background-color: green;
+        width: auto;
+        height: 120px;
+        flex-flow: row wrap;
+        align-content: flex-start;
+        padding: 20px 0px 0px 50px;
+    }
+
+    .outside-section {
+        flex-basis: 107px;
+        border: solid white;
+        background-color: green;
+        padding-top: 15px;
+        padding-bottom: 50px;
+        text-align: center;
+        height: 20px;
+        font-size: 25px;
+        color: white;
+    }
+
+    .rhomb-red {
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        background-color: red;
+        border: solid white;
+        transform: rotate(45deg);
+    }
+
+    .rhomb-black {
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        background-color: black;
+        border: solid white;
+        transform: rotate(45deg);
+    }
+
+    .value {
+        transform: rotate(-90deg);
+    }
+
+    .centered-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100px;
+    }
+
+    .centered-container label {
+        font-size: 25px;
+        color: white;
+        margin-right: 10px;
+    }
+
+    .centered-container input {
+        width: 100px;
+        height: 50px;
+        font-size: 25px;
+        text-align: center;
+    }
+    
+    body {
+        background: green;
+    }
+
+</style>
+
+<form class="roulette-table mx-auto" method="post">
+
+    <div class="centered-container">
+        <label for="ammount">Bet</label>
+        <input type="number" id="amount" name="amount" value="10">
+    </div>
+
+    <div class="container-first">
+        <button class="zero-item" value="0" name="bet">
+            <div class="value">0</div>
+        </button>
+        <button class="red-item" value="1" name="bet">
+            <div class="value">1</div>
+        </button>
+        <button class="black-item" value="2" name="bet">
+            <div class="value">2</div>
+        </button>
+        <button class="red-item" value="3" name="bet">
+            <div class="value">3</div>
+        </button>
+        <button class="black-item" value="4" name="bet">
+            <div class="value">4</div>
+        </button>
+        <button class="red-item" value="5" name="bet">
+            <div class="value">5</div>
+        </button>
+        <button class="black-item" value="6" name="bet">
+            <div class="value">6</div>
+        </button>
+        <button class="red-item" value="7" name="bet">
+            <div class="value">7</div>
+        </button>
+        <button class="black-item" value="8" name="bet">
+            <div class="value">8</div>
+        </button>
+        <button class="red-item" value="9" name="bet">
+            <div class="value">9</div>
+        </button>
+        <button class="black-item" value="10" name="bet">
+            <div class="value">10</div>
+        </button>
+        <button class="black-item" value="11" name="bet">
+            <div class="value">11</div>
+        </button>
+        <button class="red-item" value="12" name="bet">
+            <div class="value">12</div>
+        </button>
+        <button class="black-item" value="13" name="bet">
+            <div class="value">13</div>
+        </button>
+        <button class="red-item" value="14" name="bet">
+            <div class="value">14</div>
+        </button>
+        <button class="black-item" value="15" name="bet">
+            <div class="value">15</div>
+        </button>
+        <button class="red-item" value="16" name="bet">
+            <div class="value">16</div>
+        </button>
+        <button class="black-item" value="17" name="bet">
+            <div class="value">17</div>
+        </button>
+        <button class="red-item" value="18" name="bet">
+            <div class="value">18</div>
+        </button>
+        <button class="red-item" value="19" name="bet">
+            <div class="value">19</div>
+        </button>
+        <button class="black-item" value="20" name="bet">
+            <div class="value">20</div>
+        </button>
+        <button class="red-item" value="21" name="bet">
+            <div class="value">21</div>
+        </button>
+        <button class="black-item" value="22" name="bet">
+            <div class="value">22</div>
+        </button>
+        <button class="red-item" value="23" name="bet">
+            <div class="value">23</div>
+        </button>
+        <button class="black-item" value="24" name="bet">
+            <div class="value">24</div>
+        </button>
+        <button class="red-item" value="25" name="bet">
+            <div class="value">25</div>
+        </button>
+        <button class="black-item" value="26" name="bet">
+            <div class="value">26</div>
+        </button>
+        <button class="red-item" value="27" name="bet">
+            <div class="value">27</div>
+        </button>
+        <button class="black-item" value="28" name="bet">
+            <div class="value">28</div>
+        </button>
+        <button class="black-item" value="29" name="bet">
+            <div class="value">29</div>
+        </button>
+        <button class="red-item" value="30" name="bet">
+            <div class="value">30</div>
+        </button>
+        <button class="black-item" value="31" name="bet">
+            <div class="value">31</div>
+        </button>
+        <button class="red-item" value="32" name="bet">
+            <div class="value">32</div>
+        </button>
+        <button class="black-item" value="33" name="bet">
+            <div class="value">33</div>
+        </button>
+        <button class="red-item" value="34" name="bet">
+            <div class="value">34</div>
+        </button>
+        <button class="black-item" value="35" name="bet">
+            <div class="value">35</div>
+        </button>
+        <button class="red-item" value="36" name="bet">
+            <div class="value">36</div>
+        </button>
+        <div class="column-item">
+            <div class="value">2-1</div>
+        </div>
+        <div class="column-item">
+            <div class="value">2-1</div>
+        </div>
+        <div class="column-item">
+            <div class="value">2-1</div>
+        </div>
+    </div>
+    <div class="container-second">
+        <button class="doz-item" value="1st 12" name="bet">
+            <div>1st 12</div>
+        </button>
+        <button class="doz-item" value="2nd 12" name="bet">
+            <div>2nd 12</div>
+        </button>
+        <button class="doz-item" value="3rd 12" name="bet">
+            <div>3rd 12</div>
+        </button>
+    </div>
+    <div class="container-third">
+        <button class="outside-section" value="1-18" name="bet">
+            <div>1-18</div>
+        </button>
+        <button class="outside-section" value="EVEN" name="bet">
+            <div>EVEN</div>
+        </button>
+        <button class="outside-section" value="RED" name="bet">
+            <div>
+                <div class="rhomb-red"></div>
+            </div>
+        </button>
+        <button class="outside-section" value="BLACK" name="bet">
+            <div>
+                <div class="rhomb-black"></div>
+            </div>
+        </button>
+        <button class="outside-section" value="ODD" name="bet">
+            <div>ODD</div>
+        </button>
+        <button class="outside-section" value="19-36" name="bet">
+            <div>19-36</div>
+        </button>
+    </div>
+
+</form>
+
+
+
+{{ if .Result }}
+<h2>Result: {{ .Result }}</h2>
+{{ end }}
+
+{{ if eq .Win true }}
+<h2> Congratulations! You won {{ .Amount }}$! </h2>
+{{ end }}
+
+{{ if eq .Win false }}
+
+<h2> Sorry, you lost! </h2>
+
+{{ end }}
+
+
+</body>
+
+</html>

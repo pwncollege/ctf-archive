@@ -1,0 +1,8 @@
+{{template "base.html" .}}
+
+{{ if .Flag }}
+    <h2 class="my-3">Congratulations, you won the flag!</h2>
+    <code>{{ .Flag }}</code>
+{{ else }}
+    <h2 class="my-3">I'm sorry, you need more money to win the flag.</h2>
+{{ end }}

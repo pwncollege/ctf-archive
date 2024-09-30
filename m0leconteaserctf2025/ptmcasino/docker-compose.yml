@@ -1,0 +1,9 @@
+services:
+  web:
+    build: .
+    restart: unless-stopped
+    environment:
+      FLAG: ptm{fake_flag}
+      SECRET_KEY: supersecret
+    ports:
+      - 3000:3000
