@@ -1,0 +1,4 @@
+#!/bin/bash
+
+
+python /challenge/QuadraticLeak.py >> /challenge/output.txt
