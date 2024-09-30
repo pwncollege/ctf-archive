@@ -12,3 +12,5 @@ challenges:
     name: CRYPTO - 244 - Talor
   - id: bootme
     name: REV - 232 - Boot Me
+  - id: bootme2
+    name: PWN - 424 - Boot Me 2
