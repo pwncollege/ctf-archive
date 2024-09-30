@@ -1,0 +1,6 @@
+id: m0leconctfteaser2025
+name: m0leCon CTF Teaser 2025
+
+challenges:
+  - id: ecsign
+    name: CRYPTO - 154 - ECSign
