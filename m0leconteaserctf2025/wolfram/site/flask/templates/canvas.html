@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block head %}
+{{ super() }}
+<!-- Math.js -->
+<script src="https://cdn.jsdelivr.net/npm/mathjs@13.1.1/lib/browser/math.min.js" integrity="sha384-UWjhsAl/n4q2VhTM6G6+wv79C5wgyWpCoJN4sBNZC7vrCLJjJNJaHZGfPTQv9gw6" crossorigin="anonymous" nonce="{{ csp_nonce() }}"></script>
+<!-- Pixi.js -->
+<script src="https://cdn.jsdelivr.net/npm/pixi.js@8.3.4/dist/pixi.min.js" integrity="sha384-7P4a8ELH2R6eDW9B6q6/BxjCO1xZi70jRqJL7wrdwhEYJ07idPng4H/wafdTBgMq" crossorigin="anonymous" nonce="{{ csp_nonce() }}"></script>
+<!-- Custom -->
+<link rel="stylesheet" href="{{ url_for('static', filename='css/canvas.css') }}" nonce="{{ csp_nonce() }}" />
+<!-- <script defer type="module" src="{{ url_for('static', filename='js/code.js') }}" nonce="{{ csp_nonce() }}"></script> -->
+{% endblock %}
+
+{% block header %}{{ super() }}{% endblock %}
+
+{% block content %}
+<div class="h-100 d-flex flex-column align-items-center justify-content-center">
+    <div class="input-group m-1">
+        {% if not form.expression.errors %}
+        {{ form.expression(class="form-control vw-75", required="", **{"placeholder": "Expression", "aria-label": "The expression to evaluate", "aria-describedby": form.draw.id}) }}
+        {% else %}
+        {{ form.expression(class="form-control is-invalid", required="", **{"placeholder": "Expression", "aria-label": "The expression to evaluate", "aria-describedby": form.draw.id}) }}
+        {% endif %}
+        {% if not form.form_errors %}
+        {{ form.draw(class="btn btn-primary") }}
+        {% else %}
+        {{ form.draw(class="btn btn-primary is-invalid") }}
+        {% endif %}
+    </div>
+    {% if form.expression.errors or form.form_errors %}
+    <div>
+        {% for error in form.form_errors + form.expression.errors %}
+        <div class="invalid-feedback">{{ error }}</div>
+        {% endfor %}
+    </div>
+    {% endif %}
+    <canvas id="canvas" class="m-1"></canvas>
+    <script defer type="module" src="{{ url_for('static', filename='js/code.js') }}" nonce="{{ csp_nonce() }}"></script>
+</div>
+
+{% endblock %}
+
+{% block footer %}{{ super() }}{% endblock %}

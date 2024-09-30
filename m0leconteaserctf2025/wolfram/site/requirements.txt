@@ -1,0 +1,6 @@
+argon2-cffi
+flask
+flask-login
+flask-sqlalchemy
+flask-wtf
+gunicorn

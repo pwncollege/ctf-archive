@@ -1,0 +1,29 @@
+services:
+  site:
+    build: ./site
+    environment:
+      ADMIN_USER: "${ADMIN_USER}"
+      ADMIN_PASSWORD: "${ADMIN_PASSWORD}"
+    ports:
+      - 8080:8080
+    hostname: walframsigma.local
+    secrets:
+      - site_key
+      - site_cert
+      - flag
+  admin:
+    build: ./admin
+    shm_size: "2gb"
+    environment:
+      ADMIN_USER: "${ADMIN_USER}"
+      ADMIN_PASSWORD: "${ADMIN_PASSWORD}"
+    ports:
+      - 8000:8000
+
+secrets:
+  site_key:
+    file: ./site/key.pem
+  site_cert:
+    file: ./site/cert.pem
+  flag:
+    file: ./flag.txt
