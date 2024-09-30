@@ -1,0 +1,153 @@
+#!/opt/pwn.college/python
+
+import tenseal.sealapi as sealapi
+from random import randint
+from signal import alarm
+import time
+import base64
+import os
+
+poly_modulus_degree = 4096
+plain_modulus = 163841
+
+# flag = os.getenv('FLAG')
+flag = open("/flag", "r").read().strip()
+
+
+def gen_keys():
+	parms = sealapi.EncryptionParameters(sealapi.SCHEME_TYPE.BFV)
+	parms.set_poly_modulus_degree(poly_modulus_degree)
+	parms.set_plain_modulus(plain_modulus)
+	coeff = sealapi.CoeffModulus.BFVDefault(poly_modulus_degree, sealapi.SEC_LEVEL_TYPE.TC128)
+	parms.set_coeff_modulus(coeff)
+	
+	ctx = sealapi.SEALContext(parms, True, sealapi.SEC_LEVEL_TYPE.TC128)
+	
+	keygen = sealapi.KeyGenerator(ctx)
+	public_key = sealapi.PublicKey()
+	keygen.create_public_key(public_key)
+	secret_key = keygen.secret_key()
+	
+	parms.save("/app/parms")
+	public_key.save("/app/public_key")
+	secret_key.save("/app/secret_key")
+
+
+def load():
+	parms = sealapi.EncryptionParameters(sealapi.SCHEME_TYPE.BFV)
+	parms.load("/app/parms")
+
+	ctx = sealapi.SEALContext(parms, True, sealapi.SEC_LEVEL_TYPE.TC128)
+
+	public_key = sealapi.PublicKey()
+	public_key.load(ctx, "/app/public_key")
+
+	secret_key = sealapi.SecretKey()
+	secret_key.load(ctx, "/app/secret_key")
+	return ctx, public_key, secret_key
+
+
+def gen_galois_keys(ctx, secret_key, elt):
+	keygen = sealapi.KeyGenerator(ctx, secret_key)
+	galois_keys = sealapi.GaloisKeys()
+	keygen.create_galois_keys(elt, galois_keys)
+	galois_keys.save("/app/galois_key")
+	return galois_keys
+
+
+def gen_polynomial(a):
+	poly = hex(a[0])[2:]
+	for i in range(1, len(a)):
+		poly = hex(a[i])[2:] + 'x^' + str(i) + ' + ' + poly
+	return poly
+
+def check_result(ctx, decryptor, target):
+	plaintext = sealapi.Plaintext()
+	ciphertext = sealapi.Ciphertext(ctx)
+	ciphertext.load(ctx, "/app/computation")
+	decryptor.decrypt(ciphertext, plaintext)
+	assert plaintext.to_string() == target.to_string()
+
+def send(filepath):
+	f = open(filepath, "rb")
+	data = base64.b64encode(f.read()).decode()
+	f.close()
+	print(data)
+
+def recv(filepath):
+	try:
+	    data = base64.b64decode(input())
+	except:
+		print("Invalid Base64!")
+		exit(0)
+
+	f = open(filepath, "wb")
+	f.write(data)
+	f.close()
+
+
+def main():
+	alarm(300)
+	welcome = "Welcome to R3CTF 2024! Hope you can enjoy this challenge!"
+	begin = "In 1997, I learned to drive a car..."
+	description = "Today, DengFeng wants to do some calculations... Can you help him?"
+
+	print(welcome)
+	print(begin)
+	print(description)
+
+	ctx, public_key, secret_key = load()
+	encryptor = sealapi.Encryptor(ctx, public_key)
+	decryptor = sealapi.Decryptor(ctx, secret_key)
+	
+	a = [randint(1, plain_modulus - 1) for _ in range(poly_modulus_degree)]
+	poly = gen_polynomial(a)
+	target = sealapi.Plaintext(gen_polynomial(a[:1] + [0 for _ in range(poly_modulus_degree-1)]))
+	
+	plaintext = sealapi.Plaintext(poly)
+	ciphertext = sealapi.Ciphertext()
+	encryptor.encrypt(plaintext, ciphertext)
+	ciphertext.save("/app/ciphertext")
+
+	print("Here Is Ciphertext:")
+	send("/app/ciphertext")
+
+	try:
+		elt = [int(_) for _ in input("Please give me your choice:").split()]
+	except:
+		print("Invalid array!")
+		exit(0)
+		
+	if len(elt) > 12 or len(elt) == 0:
+		print("No more!")
+		exit(0)
+
+	try:
+		galois_key = gen_galois_keys(ctx, secret_key, elt)
+	except:
+		print("Invalid galois!")
+		exit(0)
+
+	print("Here is your galois key:")
+	send("/app/galois_key")
+
+	print("Give Me Your Computation")
+	recv("/app/computation")
+	
+	try:
+		check_result(ctx, decryptor, target)
+	except:
+		print("Incorret Answer!")
+		exit(0)
+	
+	
+	print(flag)
+
+#gen_keys()
+main()
+
+
+
+
+
+
