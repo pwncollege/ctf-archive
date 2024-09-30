@@ -19,3 +19,5 @@ challenges:
     image: prathamgupta36/moleconctfteaser2025ptmcasino
   - id: wolfram
     name: WEB - 367 - WalframSigma
+    visibility:
+      start: "2029-08-21T10:30:00-07:00"
