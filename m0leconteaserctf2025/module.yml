@@ -10,3 +10,5 @@ challenges:
     name: CRYPTO - 154 - ECSign
   - id: talor
     name: CRYPTO - 244 - Talor
+  - id: bootme
+    name: REV - 232 - Boot Me
