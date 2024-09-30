@@ -25,3 +25,7 @@ challenges:
     name: REV - 367 - Whispers of Yesterday
     visibility:
       start: "2029-08-21T10:30:00-07:00"
+  - id: telegram
+    name: WEB - 343 - Free Telegram App
+    visibility:
+      start: "2029-08-21T10:30:00-07:00"
