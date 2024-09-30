@@ -17,3 +17,5 @@ challenges:
   - id: ptmcasino
     name: WEB - 322 - ptmCasino
     image: prathamgupta36/moleconctfteaser2025ptmcasino
+  - id: wolfram
+    name: WEB - 367 - WalframSigma
