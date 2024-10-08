@@ -1,4 +1,4 @@
 #!/bin/bash
 
 python /challenge/chal.py >> /challenge/chal.txt
-chmod u+s /challenge/chal.py
+mv /challenge/chal.py /challenge/chal
