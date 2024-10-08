@@ -3,7 +3,7 @@
 from Crypto.Util.number import getRandomNBitInteger
 
 #flag = int.from_bytes(b"uiuctf{******************}", "big")
-flag_bytes = open('/flag', 'r').read().strip() 
+flag_bytes = open('/flag', 'rb').read().strip() 
 flag = int.from_bytes(flag_bytes, "big")
 
 a = getRandomNBitInteger(256)
