@@ -1,3 +1,5 @@
+#!/opt/pwn.college/python
+
 from Crypto.Util.number import getRandomNBitInteger
 
 #flag = int.from_bytes(b"uiuctf{******************}", "big")
