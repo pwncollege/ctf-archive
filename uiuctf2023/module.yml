@@ -1,0 +1,6 @@
+id: uiuctf2023
+name: UIUCTF 2023
+
+challenges:
+  - id: athome
+    name: CRYPTO - At Home
