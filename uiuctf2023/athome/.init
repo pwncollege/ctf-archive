@@ -1,0 +1,3 @@
+#!/bin/bash
+
+python /challenge/chal.py >> /challenge/chal.txt
