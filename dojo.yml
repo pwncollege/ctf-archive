@@ -42,6 +42,8 @@ modules:
   - id: hitcon2017quals
   - id: cryptoversectf2022
   - id: cryptoversectf2023
+  - id: uiuctf2023
+  - id: uiuctf2024
   - id: grehack2012
   - id: 29c3ctf2012
   - id: gitsctf2012
@@ -61,7 +63,6 @@ modules:
   - id: noobzctf2023
   - id: byuctf2023
   - id: tamuctf2024
-  - id: uiuctf2024
   - id: r3ctf2024
   - id: greycattheflag2022
   - id: ccscctf2020
