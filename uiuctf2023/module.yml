@@ -12,3 +12,6 @@ challenges:
     name: CRYPTO - 100 - Morphing Time
   - id: threetime
     name: CRYPTO - 500 - Three-Time Pad
+  - id: chainmail
+    name: PWN - 500 - Chainmail
+    image: prathamgupta36/uiuctf2023chainmail
