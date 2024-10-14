@@ -10,3 +10,5 @@ challenges:
     name: CRYPTO - 100 - Group Projection
   - id: morphing
     name: CRYPTO - 100 - Morphing Time
+  - id: threetime
+    name: CRYPTO - 500 - Three-Time Pad
