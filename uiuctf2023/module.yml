@@ -15,3 +15,5 @@ challenges:
   - id: chainmail
     name: PWN - 500 - Chainmail
     image: prathamgupta36/uiuctf2023chainmail
+  - id: fastcalc
+    name: REV - 500 - Fast Calculator
