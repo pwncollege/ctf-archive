@@ -19,7 +19,3 @@ challenges:
     name: REV - 500 - Fast Calculator
   - id: explorer1
     name: OSINT - 500 - Explorer-1
-    hints:
-    - The first two characters of the statue begin with "ma"
-    - It is very prevalent in southern Asia
-    state: visible
