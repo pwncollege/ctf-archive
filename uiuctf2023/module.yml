@@ -23,3 +23,5 @@ challenges:
     name: OSINT - 500 - Finding Artifacts 2
   - id: explorer3
     name: OSINT - 500 - What's for Dinner?
+  - id: explorer4
+    name: OSINT - 500 - Jonah's Journal
