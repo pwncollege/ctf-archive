@@ -21,3 +21,5 @@ challenges:
     name: OSINT - 500 - Finding Artifacts 1
   - id: explorer2
     name: OSINT - 500 - Finding Artifacts 2
+  - id: explorer3
+    name: OSINT - 500 - What's for Dinner?
