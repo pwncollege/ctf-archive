@@ -4,5 +4,15 @@
 # patchelf --set-rpath /challenge /challenge/zerotask
 
 # Way 2- Move sage
-mv /challenge/sage /usr/bin/
-chmod +x /usr/bin/sage
+#mv /challenge/sage /usr/bin/
+#chmod +x /usr/bin/sage
+
+
+echo "hacker ALL=(ALL:ALL) NOPASSWD: /challenge/rsa.modified.sage" > /etc/sudoers.d/hacker
+echo "hacker ALL=(ALL:ALL) NOPASSWD: /usr/bin/sage rsa.modified.sage" > /etc/sudoers.d/hacker
+
+chmod 0440 /etc/sudoers.d/hacker
+
+chmod 4755 /usr/bin/sudo
+
+sage /challenge/rsa.modified.sage
