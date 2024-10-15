@@ -27,3 +27,5 @@ challenges:
     name: OSINT - 500 - Jonah's Journal
   - id: explorer5
     name: OSINT - 500 - First class mail
+  - id: explorer5
+    name: OSINT - 500 - Finding Jonah?
