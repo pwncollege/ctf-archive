@@ -18,6 +18,6 @@ challenges:
   - id: fastcalc
     name: REV - 500 - Fast Calculator
   - id: explorer1
-    name: OSINT - 500 - Explorer-1
+    name: OSINT - 500 - Finding Artifacts 1
   - id: explorer2
     name: OSINT - 500 - Finding Artifacts 2
