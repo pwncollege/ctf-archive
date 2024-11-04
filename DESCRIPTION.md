@@ -16,6 +16,6 @@ Happy learning and hacking!
 ----
 **Other CTF preservation efforts!**
 - The [CryptoHack CTF Archive](https://cryptohack.org/challenges/ctf-archive/) maintains runnable cryptography challenges from past CTFs!
-- [Sajjadium's CTF Archives](https://github.com/sajjadium/ctf-archives) preserve challenge files from prior CTFs.
+- [Sajjadium's CTF Archives](https://github.com/sajjadium/ctf-archives) and [r3kapig's Notion](https://r3kapig-not1on.notion.site/Index-docs-format-09007cb92ef649838d8057a64f0d99dc) preserve challenge files from prior CTFs.
 - You can play a lot of OOO's DEF CON CTF challenges at [archive.ooo](https://archive.ooo/).
 - [CTFtime](https://ctftime.org) saves the metadata of the world's CTFs!
