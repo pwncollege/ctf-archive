@@ -1,0 +1,6 @@
+id: isitdtuctf2024
+name: ISITDTU CTF 2024
+
+challenges:
+  - id: random
+    name: CRYPTO - 463 - thats so random
