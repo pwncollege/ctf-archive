@@ -1,3 +1,4 @@
 #!/bin/bash
 
-/challenge/chall >> /challenge/output,txt
+mv /challenge/chall.py /challenge/chall
+/challenge/chall >> /challenge/output.txt
