@@ -1,3 +1,5 @@
+#!/opt/pwncollege/python
+
 from secret import p, q
 from sage.all import factor
 
