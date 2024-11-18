@@ -12,6 +12,8 @@ challenges:
     name: CRYPTO - 50 - Emoji
   - id: smoll
     name: CRYPTO - 100 - Smoll
+    visibility: 
+      start: "2029-08-21T10:30:00-07:00"
   - id: secureencodinghex
     name: CRYPTO - 150 - Secure Encoding Hex
   - id: otp

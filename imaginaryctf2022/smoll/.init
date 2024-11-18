@@ -2,6 +2,3 @@
 
 # Attempt to create a symboliclink
 ln -s /flag /challenge/flag.txt 2>/dev/null
-
-chmod 644 /flag
-chmod 644 /challenge/flag.txt
