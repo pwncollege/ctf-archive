@@ -3,7 +3,7 @@ One of the commmon categories in CTFs is Reverse Engineering, which involves usi
 
 `Note: Use sudo to run the binary as:`
 ```
-sudo /challenge/binary_name
+/bin/sudo /challenge/binary_name
 ```
 
 ---
