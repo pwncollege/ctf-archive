@@ -25,5 +25,5 @@ def genPrimes(size):
 p, q = genPrimes(1024)
 n = p * q
 e = 0x10001
-
+print("n: ", n)
 print("c:", pow(m, e, n))
