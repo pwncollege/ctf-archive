@@ -4,6 +4,8 @@ name: ImaginaryCTF 2022
 challenges:
   - id: fmtfun
     name: PWN - 200 - Format String Fun
+    visibility: 
+      start: "2029-08-21T10:30:00-07:00"
   - id: desrever
     name: REV - 100 - Desrever
   - id: stream
