@@ -1,0 +1,6 @@
+id: zh3r0ctf2021
+name: Zh3r0 CTF V2
+
+challenges:
+  - id: injection
+    name: CRYPTO - 304 - 1n_jection
