@@ -4,3 +4,5 @@ name: TAMUctf 2024
 challenges:
   - id: confinement
     name: PWN - Confinement
+  - id: criminal
+    name: CRYPTO - Criminal
