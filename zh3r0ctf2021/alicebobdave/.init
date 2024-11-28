@@ -1,0 +1,5 @@
+#!/bin/bash
+
+/challenge/chall >> /challenge/out.txt
+
+rm /challenge/secret.py
