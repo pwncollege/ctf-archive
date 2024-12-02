@@ -6,3 +6,5 @@ challenges:
     name: CRYPTO - 100 - alice_bob_dave
   - id: injection
     name: CRYPTO - 304 - 1n_jection
+  - id: bootleg
+    name: CRYPTO - 775 - b00tleg
