@@ -1,0 +1,154 @@
+#!/opt/pwn.college/python
+
+from Crypto.Util.number import getPrime
+from itertools import cycle
+import random
+from math import gcd
+
+CONSTANTS = {}
+
+def bytes_to_int(string:bytes) -> str:
+    return str(int.from_bytes(string,'big'))
+
+def inc_by_one(string:bytes) -> str:
+    return bytes((i+1)%256 for i in string).hex()
+
+def mono_sub(string:bytes) -> str:
+    try:
+        trans = CONSTANTS['mono_trans']
+    except KeyError:
+        trans = bytearray(range(256))
+        random.shuffle(trans)
+        CONSTANTS['mono_trans'] = trans
+    return string.translate(trans).hex()
+
+def poly_sub(string:bytes) -> str:
+    try:
+        trans = CONSTANTS['poly_trans']
+    except KeyError:
+        trans = []
+        for i in range(15):
+            t = bytearray(range(256))
+            random.shuffle(t)
+            trans.append(t)
+        CONSTANTS['poly_trans'] = trans
+    return bytes([ trans[i%15][v] for i,v in enumerate(string)]).hex()
+
+def rand_subt(string:bytes) -> str:
+    res = bytearray(len(string)*2)
+    for i,v in enumerate(string):
+        t = random.randint(0,255)
+        res[2*i]=t
+        res[2*i+1]= (v-t)%256
+    return res.hex()
+
+def xor(a,b):
+    return bytes(i^j for i,j,_ in 
+                 zip(cycle(a),cycle(b),range(max(len(a),len(b)))))
+
+def random_pad(m,length):
+    if len(m)%length==0:
+        return m
+    padsize = length-len(m)%length
+    return m+bytes(random.randint(0,255) for _ in range(padsize))
+
+def xor_key_appended(string:bytes) -> str:
+    key = bytes(random.randint(0,255) for i in range(5))
+    retval = xor(random_pad(string,5),key)+key
+    return retval.hex()
+
+def pow_mod_prime(string:bytes) -> str:
+    try:
+        p= CONSTANTS['pow_mod_prime_p']
+    except KeyError:
+        p = getPrime(1024)
+        while gcd(p-1,3)!=1:
+            p = getPrime(1024)
+        CONSTANTS['pow_mod_prime_p'] = p
+    m = int.from_bytes(string,'big')
+    return str(pow(m,3,p))
+
+def rand_pow_mod_prime(string:bytes) -> str:
+    try:
+        p,e = CONSTANTS['RPMP_p'],CONSTANTS['RPMP_e']
+    except KeyError:
+        p = getPrime(1024)
+        e = getPrime(7)
+        while gcd(p-1,e)!=1:
+            p = getPrime(1024)
+        CONSTANTS['RPMP_p'] = p
+        CONSTANTS['RPMP_e'] = e
+    m = int.from_bytes(string,'big')
+    return str(pow(m,e,p))
+
+def final_flag(string:bytes)->str:
+    print('Shh, you got the flag already')
+    exit(0)
+
+
+LEVEL = 0
+flag_pwncollege= open("/flag", "r").read().strip().encode()
+SECRETS = [
+    b"hello world! Lets get going",
+    b"Nothing fancy, just standard bytes_to_int",
+    b"mono substitutions arent that creative",
+    b"creating different substitutions for each char",
+    b"Glad that you figured out the invariant",
+    b"Here we append the key with your shit, please dont tell anyone",
+    b"Cube modulo prime, any guesses what might be coming next?",
+    #b"zh3r0{17_a1n7_much_bu7_1_4m_s0m37h1ng_0f_4_cryp74n4ly57_my53lf}",
+    flag_pwncollege,
+    b''
+]
+
+FUNCTIONS = [
+    inc_by_one,
+    bytes_to_int,
+    mono_sub,
+    poly_sub,
+    rand_subt,
+    xor_key_appended,
+    pow_mod_prime,
+    rand_pow_mod_prime,
+    final_flag
+]
+
+def encrypt(hex_string):
+    return FUNCTIONS[LEVEL](bytes.fromhex(hex_string))
+
+def get_flag():
+    return FUNCTIONS[LEVEL](SECRETS[LEVEL])
+
+menu = """
+[1] Encrypt
+[2] Submit level flag"""
+
+print("""Welcome to your basic cryptanalysis tutorial
+There would be 8 levels, each level bringing something new on 
+the plate. I would be generous enough to let you encrypt any 
+string of your choice. Once you figure out the encryption, 
+submit the flag to proceed to the next level.\n""")
+print(f"Level: {LEVEL+1}, encrypted flag: {get_flag()}")
+while True:
+    print(menu)
+    try:
+        option = int(input('>>> '))
+        if option == 1:
+            message = input("message in hex:")
+            print(encrypt(message))
+        elif option == 2:
+            message = input("flag in hex:")
+            if bytes.fromhex(message)==SECRETS[LEVEL]:
+                print("Correct")
+                LEVEL+=1
+                print(f"Level: {LEVEL}, encrypted flag: {get_flag()}")
+            else:
+                print("Incorrect, exiting")
+                exit(1)
+        else:
+            print("Unexpected option, exiting")
+            exit(1)
+    except Exception as e:
+        print("Error, Exiting")
+        exit(1)
+    
