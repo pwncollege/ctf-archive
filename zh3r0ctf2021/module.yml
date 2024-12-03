@@ -8,6 +8,8 @@ challenges:
     name: REV - 365 - Eat Sleep Trace Repeat
   - id: optimiseme
     name: REV - 983 - OptimiseMe
+  - id: pyaz
+    name: REV - 991 - Pyaz
   - id: alicebobdave
     name: CRYPTO - 100 - alice_bob_dave
   - id: injection
