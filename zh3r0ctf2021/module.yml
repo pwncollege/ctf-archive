@@ -6,6 +6,8 @@ challenges:
     name: REV - 100 - BabyRE
   - id: estr
     name: REV - 365 - Eat Sleep Trace Repeat
+  - id: optimiseme
+    name: REV - 983 - OptimiseMe
   - id: alicebobdave
     name: CRYPTO - 100 - alice_bob_dave
   - id: injection
