@@ -6,6 +6,8 @@ challenges:
     name: CRYPTO - 100 - alice_bob_dave
   - id: injection
     name: CRYPTO - 304 - 1n_jection
+  - id: twist
+    name: CRYPTO - 718 - Twist and Shout
   - id: bootleg
     name: CRYPTO - 775 - b00tleg
   - id: numpymt
