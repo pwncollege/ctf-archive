@@ -8,5 +8,5 @@ challenges:
     name: CRYPTO - 304 - 1n_jection
   - id: bootleg
     name: CRYPTO - 775 - b00tleg
-  - id: import_numpy_as_MT
+  - id: numpymt
     name: CRYPTO - 930 - import numpy as MT
