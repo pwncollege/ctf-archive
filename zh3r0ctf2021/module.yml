@@ -4,6 +4,8 @@ name: Zh3r0 CTF V2
 challenges:
   - id: babyre
     name: REV - 100 - BabyRE
+  - id: estr
+    name: REV - 365 - Eat Sleep Trace Repeat
   - id: alicebobdave
     name: CRYPTO - 100 - alice_bob_dave
   - id: injection
