@@ -2,6 +2,8 @@ id: zh3r0ctf2021
 name: Zh3r0 CTF V2
 
 challenges:
+  - id: babyre
+    name: REV - 100 - BabyRE
   - id: alicebobdave
     name: CRYPTO - 100 - alice_bob_dave
   - id: injection
