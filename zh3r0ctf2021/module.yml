@@ -8,7 +8,7 @@ challenges:
     name: CRYPTO - 304 - 1n_jection
   - id: bootleg
     name: CRYPTO - 775 - b00tleg
-  - id: numpymt mersenne
+  - id: numpymt
     name: CRYPTO - 930 - import numpy as MT
   - id: mersenne
     name: CRYPTO - 949 - Real Mersenne
