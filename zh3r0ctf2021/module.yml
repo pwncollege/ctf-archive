@@ -14,6 +14,3 @@ challenges:
     name: CRYPTO - 930 - import numpy as MT
   - id: mersenne
     name: CRYPTO - 949 - Real Mersenne
-  - id: empty
-    image: prathamgupta36/ctf-archive-ubuntu-24
-    name: empty
