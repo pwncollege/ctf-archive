@@ -24,3 +24,5 @@ challenges:
     name: CRYPTO - 930 - import numpy as MT
   - id: mersenne
     name: CRYPTO - 949 - Real Mersenne
+  - id: cheater
+    name: MISC - 997 - Cheater Mind
