@@ -1,4 +1,3 @@
 #!/bin/bash
 
-
-python /challenge/QuadraticLeak.py >> /challenge/output.txt
+sed -i 's/\r//' /challenge/QuadraticLeak
