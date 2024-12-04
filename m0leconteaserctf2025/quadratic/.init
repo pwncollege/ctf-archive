@@ -1,3 +1,4 @@
 #!/bin/bash
 
 sed -i 's/\r//' /challenge/QuadraticLeak
+/challenge/QuadraticLeak >> /challenge/output.txt
