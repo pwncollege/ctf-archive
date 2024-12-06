@@ -1,14 +1,8 @@
 # REHOSTING
 
-Files can be found here: [angstromctf](https://github.com/blairsec/challenges/tree/master/angstromctf/2024/pwn/bap)
+Files can be found here: [angstromctf](https://2024.angstromctf.com/challenges#:~:text=25025-,presidential,-pwn100200)
 
 ## Challenge Setup
-this challenge has a binary execuatble with two libc dependencies which are `ld-linux-x86-64.so.2` and `libc.so.6`. To check if the dependencies are met we can run this command:
-```
-ldd bap
-```
-
-## Flag Symlink
 This challenge just has a python file and the things that needed to change was getting the flag using this:
 ```
 flag = open("/flag", "r").read().open()
