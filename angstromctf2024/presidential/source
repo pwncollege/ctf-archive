@@ -1,0 +1,40 @@
+#!/opt/pwn.college/python
+
+import ctypes
+import mmap
+import sys
+
+## For privileges
+import os
+
+
+#flag = "redacted"
+
+# Getting pwn.college flag
+flag = open("/flag", "r").read().strip()
+
+print("White House declared Python to be memory safe :tm:")
+
+buf = mmap.mmap(-1, mmap.PAGESIZE, prot=mmap.PROT_READ | mmap.PROT_WRITE | mmap.PROT_EXEC)
+ftype = ctypes.CFUNCTYPE(ctypes.c_void_p)
+fpointer = ctypes.c_void_p.from_buffer(buf)
+f = ftype(ctypes.addressof(fpointer))
+
+u_can_do_it = bytes.fromhex(input("So enter whatever you want 👍 (in hex): "))
+
+buf.write(u_can_do_it)
+
+# Giving right privileges for pwn.college
+try:
+    os.setgid(0)
+    os.setuid(0)
+except PermissionError as e:
+    sys.exit(1)
+
+
+f()
+
+del fpointer
+buf.close()
+
+print("byebye")
