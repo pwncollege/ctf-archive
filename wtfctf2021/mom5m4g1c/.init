@@ -1,3 +1,8 @@
 #!/bin/bash
 
 ln -s /flag /challenge/.flag.txt 2>/dev/null
+
+echo "hacker ALL=(ALL:ALL) NOPASSWD: /challenge/mom5m4g1c" > /etc/sudoers.d/hacker
+
+chmod 0440 /etc/sudoers.d/hacker
+chmod 4755 /usr/bin/sudo
