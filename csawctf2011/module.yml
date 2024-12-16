@@ -32,6 +32,8 @@ challenges:
     name: WEB - 300 - Evil Burritos 2
   - id: loveletter
     name: WEB - 500 - Love Letter
+    visibility: 
+      start: "2029-08-21T10:30:00-07:00"
   - id: net1
     name: REV - 200 - NET1
   - id: linux
