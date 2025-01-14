@@ -1,0 +1,3 @@
+#!/bin/bash
+runuser -u hacker windows start
+/opt/pwn.college/docker-entrypoint.d/38_start_windows_gui.sh
