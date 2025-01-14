@@ -8,6 +8,7 @@ challenges:
     name: REV - 365 - Eat Sleep Trace Repeat
   - id: sabloom
     name: REV - 949 - Sabloom Text 6
+    image: pwncollege/windows  
   - id: optimiseme
     name: REV - 983 - OptimiseMe
   - id: pyaz
