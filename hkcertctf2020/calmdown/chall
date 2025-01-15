@@ -12,7 +12,7 @@ from Crypto.Util.number import bytes_to_long, long_to_bytes
 
 #from secret import message
 #message = b"Hey, congratulations on solving the challenge. But please hkcert20{c4lm_d0wn_4nd_s0lv3_th3_ch4llen9e}."
-message = b"Hey, congratulations on solving the challenge. But please "+ open("/flag", "r").read().encode()
+message = b"Hey, congratulations on solving the challenge. But please "+ open("/flag", "r").read().encode()+b"."
 
 class RSAKey:
     def __init__(self, e, d, n):

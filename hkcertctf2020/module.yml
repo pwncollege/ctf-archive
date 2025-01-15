@@ -4,5 +4,3 @@ name: HK Cyber Security New Generation CTF Challenge 2020
 challenges:
   - id: calmdown
     name: CRYPTO - 500 - Calm Down
-    visibility: 
-      start: "2029-08-21T10:30:00-07:00"
