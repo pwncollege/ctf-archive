@@ -4,3 +4,5 @@ name: HK Cyber Security New Generation CTF Challenge 2020
 challenges:
   - id: calmdown
     name: CRYPTO - 500 - Calm Down
+  - id: signin
+    name: CRYPTO - 500 - Sign in please
