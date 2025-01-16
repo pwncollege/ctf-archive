@@ -2,6 +2,8 @@ id: hkcertctf2021
 name: HK Cyber Security New Generation CTF Challenge 2021
 
 challenges:
+  - id: heap
+    name: PWN - 150 - easyheap
   - id: freedom
     name: CRYPTO - 100 - Freedom / Cipher Mode Picker
   - id: longstoryshort
