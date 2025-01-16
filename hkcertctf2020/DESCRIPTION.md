@@ -5,6 +5,7 @@ Hong Kong Computer Emergency Response Team Coordination Centre (HKCERT) and Hong
 
 Organiser: HKCERT, HKPC
 Co-organiser: AiTLE, BlackB6a, eLC, ISOCHK, PISA, VXRL
+
 Gold Sponsor: AWS Educate, HKT, UDomain
 
 ---
