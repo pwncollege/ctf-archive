@@ -1,0 +1,6 @@
+id: hkcertctf2021
+name: HK Cyber Security New Generation CTF Challenge 2021
+
+challenges:
+  - id: magicalpotion
+    name: CRYPTO - 450 - Potion of Ciphermath
