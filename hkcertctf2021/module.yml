@@ -2,7 +2,7 @@ id: hkcertctf2021
 name: HK Cyber Security New Generation CTF Challenge 2021
 
 challenges:
-  - id: heap
+  - id: easyheap
     name: PWN - 150 - easyheap
   - id: simplesignin
     name: CRYPTO - Simple Sign On
