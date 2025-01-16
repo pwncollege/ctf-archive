@@ -2,5 +2,7 @@ id: hkcertctf2021
 name: HK Cyber Security New Generation CTF Challenge 2021
 
 challenges:
+  - id: freedom
+    name: CRYPTO - 100 - Freedom / Cipher Mode Picker
   - id: magicalpotion
     name: CRYPTO - 450 - Potion of Ciphermath
