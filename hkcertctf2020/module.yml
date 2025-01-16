@@ -2,6 +2,8 @@ id: hkcertctf2020
 name: HK Cyber Security New Generation CTF Challenge 2020
 
 challenges:
+  - id: angr
+    name: REV - 500 - Angr Men
   - id: calmdown
     name: CRYPTO - 500 - Calm Down
   - id: signin
