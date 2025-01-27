@@ -1,0 +1,6 @@
+id: byuctf2024
+name: BYUCTF 2024
+
+challenges:
+  - id: aresa
+    name: CRYPTO - Are S A?
