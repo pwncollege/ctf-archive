@@ -1,0 +1,15 @@
+#!/opt/pwn.college/python
+
+from Crypto.Util.number import bytes_to_long, getPrime
+
+#flag = b"byuctf{d1d_s0m3_rs4_stuff...m1ght_d3l3t3_l4t3r}"
+flag =open("/flag","r").read().split()
+
+n = getPrime(1024)
+e = 0x10001
+
+c = pow(bytes_to_long(flag), e, n)
+
+print("n = ", str(n))
+print("e = ", str(e))
+print("c = ", str(c))
