@@ -4,3 +4,5 @@ name: BYUCTF 2024
 challenges:
   - id: aresa
     name: CRYPTO - Are S A?
+  - id: domath
+    name: CRYPTO - Do Math!
