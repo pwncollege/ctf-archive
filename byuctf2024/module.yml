@@ -6,3 +6,5 @@ challenges:
     name: CRYPTO - Are S A?
   - id: domath
     name: CRYPTO - Do Math!
+  - id: giveup
+    name: CRYPTO - Give Up
