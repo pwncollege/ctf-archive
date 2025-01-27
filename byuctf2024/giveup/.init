@@ -1,0 +1,5 @@
+#!/bin/bash
+
+/challenge/nevergonna > /challenge/you.txt
+
+rm /challenge/nevergonna
