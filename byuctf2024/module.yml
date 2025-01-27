@@ -8,3 +8,5 @@ challenges:
     name: CRYPTO - Do Math!
   - id: giveup
     name: CRYPTO - Give Up
+  - id: multiplied
+    name: CRYPTO - Times
