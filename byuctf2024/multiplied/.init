@@ -1,0 +1,5 @@
+#!/bin/bash
+
+/challenge/mul > /challenge/times.txt
+
+rm /challenge/mul /challenge/ellipticcurve.py
