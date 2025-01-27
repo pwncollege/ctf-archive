@@ -49,6 +49,8 @@ modules:
   - id: uiuctf2024
   - id: hkcertctf2020
   - id: hkcertctf2021
+  - id: byuctf2023
+  - id: byuctf2024
   - id: grehack2012
   - id: 29c3ctf2012
   - id: gitsctf2012
@@ -65,7 +67,6 @@ modules:
   - id: accessdeniedctf2022
   - id: plaidctf
   - id: noobzctf2023
-  - id: byuctf2023
   - id: tamuctf2024
   - id: r3ctf2024
   - id: greycattheflag2022
