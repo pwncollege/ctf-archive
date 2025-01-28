@@ -10,6 +10,8 @@ challenges:
     name: OSINT - Petrol Head
   - id: typosquatting
     name: OSINT - TypoSquatting
+  - id: vacationboats
+    name: OSINT - Vacation Boats
   - id: aresa
     name: CRYPTO - Are S A?
   - id: domath
