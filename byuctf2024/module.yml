@@ -4,6 +4,8 @@ name: BYUCTF 2024
 challenges:
   - id: worstchallenge
     name: FORENSICS - The Worst Challenge Ever
+  - id: gotmail
+    name: OSINT - Mail Time
   - id: aresa
     name: CRYPTO - Are S A?
   - id: domath
