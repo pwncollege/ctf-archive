@@ -6,6 +6,8 @@ challenges:
     name: FORENSICS - The Worst Challenge Ever
   - id: gotmail
     name: OSINT - Mail Time
+  - id: petrolhead
+    name: OSINT - Petrol Head
   - id: aresa
     name: CRYPTO - Are S A?
   - id: domath
