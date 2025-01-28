@@ -8,6 +8,8 @@ challenges:
     name: OSINT - Mail Time
   - id: petrolhead
     name: OSINT - Petrol Head
+  - id: typosquatting
+    name: OSINT - TypoSquatting
   - id: aresa
     name: CRYPTO - Are S A?
   - id: domath
