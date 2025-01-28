@@ -2,6 +2,8 @@ id: byuctf2024
 name: BYUCTF 2024
 
 challenges:
+  - id: worstchallenge
+    name: FORENSICS - The Worst Challenge Ever
   - id: aresa
     name: CRYPTO - Are S A?
   - id: domath
