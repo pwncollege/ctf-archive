@@ -22,3 +22,5 @@ challenges:
     name: CRYPTO - Give Up
   - id: multiplied
     name: CRYPTO - Times
+  - id: meetgreg
+    name: SOCIAL ENGINEERING - Meet Greg
