@@ -4,3 +4,5 @@ name: ångstromCTF 2016
 challenges:
   - id: endian
     name: BINARY - 40 - Endian of the World
+  - id: format1
+    name: BINARY - 100 - Format 1
