@@ -8,3 +8,5 @@ challenges:
     name: BINARY - 100 - Format 1
   - id: casino
     name: CRYPTO - 120 - &aring;CTF CasinO
+  - id: helpcenter
+    name: CRYPTO - 170 - Help Center
