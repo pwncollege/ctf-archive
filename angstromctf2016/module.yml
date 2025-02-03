@@ -18,3 +18,5 @@ challenges:
     name: WEB - 140 - Flag Locker
     visibility: 
       start: "2029-08-21T10:30:00-07:00"
+  - id: asmtracing
+    name: REV - 45 - ASM Tracing
