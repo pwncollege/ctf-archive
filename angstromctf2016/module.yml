@@ -12,3 +12,5 @@ challenges:
     name: CRYPTO - 170 - Help Center
   - id: amoebananas
     name: WEB - 20 - Amoebananas!
+  - id: client
+    name: WEB - 30 - SuperSecure&trade;
