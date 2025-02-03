@@ -16,3 +16,5 @@ challenges:
     name: WEB - 30 - SuperSecure&trade;
   - id: flaglock
     name: WEB - 140 - Flag Locker
+    visibility: 
+      start: "2029-08-21T10:30:00-07:00"
