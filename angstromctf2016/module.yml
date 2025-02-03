@@ -26,3 +26,5 @@ challenges:
     name: REV - 70 - Smartest Encryption
   - id: cipher
     name: REV - 100 - Sea Cipher
+  - id: ciphertwo
+    name: REV - 100 - Sea Cipher 2
