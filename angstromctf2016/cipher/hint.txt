@@ -1,0 +1,1 @@
+"hint": "Reverse engineer the encryption method, then find the vulnerability."
