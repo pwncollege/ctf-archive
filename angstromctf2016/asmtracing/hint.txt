@@ -1,0 +1,1 @@
+"hint": "Assembly is lower-level than C, but the same ideas are still there. Try thinking of the operations in terms of their C equivalents."
