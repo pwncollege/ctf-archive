@@ -14,3 +14,5 @@ challenges:
     name: WEB - 20 - Amoebananas!
   - id: client
     name: WEB - 30 - SuperSecure&trade;
+  - id: flaglock
+    name: WEB - 140 - Flag Locker
