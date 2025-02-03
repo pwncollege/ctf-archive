@@ -24,3 +24,5 @@ challenges:
     name: REV - 50 - Java is the Best
   - id: imageencryptor
     name: REV - 70 - Smartest Encryption
+  - id: cipher
+    name: REV - 100 - Sea Cipher
