@@ -1,0 +1,1 @@
+"hint": "Who do some claim wrote the plays normally attributed to Shakespeare? The flag will be a lower-case string with no spaces."
