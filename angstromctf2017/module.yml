@@ -2,6 +2,8 @@ id: angstromCTF2017
 name: ångstromCTF 2017
 
 challenges:
+  - id: begin
+    name: CRYTPO - 10 - The Beginning
   - id: knockknock
     name: CRYTPO - 30 - Knock Knock
   - id: substitutioncipher
@@ -9,4 +11,4 @@ challenges:
   - id: royalcasino
     name: CRYTPO - 120 - The Royal Casino
   - id: casino
-    name: CRYTPO - 130 - The Casino, Revisited
+    name: CRYTPO - 130 - The Casino, Revisite
