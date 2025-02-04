@@ -8,6 +8,8 @@ challenges:
     name: BINARY - 100 - Format 1
   - id: spqr
     name: CRYPTO - 10 - SPQR
+  - id: hex
+    name: CRYPTO - 15 - What the Hex
   - id: hamlet
     name: CRYPTO - 60 - Shakespeare
   - id: casino
