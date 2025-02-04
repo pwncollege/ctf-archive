@@ -6,6 +6,8 @@ challenges:
     name: BINARY - 40 - Endian of the World
   - id: formatone
     name: BINARY - 100 - Format 1
+  - id: hamlet
+    name: CRYPTO - 60 - Shakespeare
   - id: casino
     name: CRYPTO - 120 - &aring;CTF CasinO
   - id: helpcenter
