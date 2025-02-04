@@ -10,6 +10,8 @@ challenges:
     name: CRYPTO - 120 - &aring;CTF CasinO
   - id: helpcenter
     name: CRYPTO - 170 - Help Center
+  - id: rsa
+    name: CRYPTO - 240 - RSA Fun
   - id: amoebananas
     name: WEB - 20 - Amoebananas!
   - id: client
