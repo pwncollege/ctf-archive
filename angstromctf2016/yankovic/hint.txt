@@ -1,0 +1,1 @@
+"hint":  "Try finding this same image on Google and comparing it to this. <i>Updated hint:</i> Which bytes are the same and which are different?"
