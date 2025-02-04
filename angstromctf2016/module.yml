@@ -28,5 +28,7 @@ challenges:
     name: REV - 100 - Sea Cipher
   - id: ciphertwo
     name: REV - 100 - Sea Cipher 2
+  - id: headsup
+    name: FORENSICS - 30 - Headsup
   - id: fender
     name: FORENSICS - 70 - Fender Blender
