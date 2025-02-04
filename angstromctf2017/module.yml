@@ -4,6 +4,8 @@ name: ångstromCTF 2017
 challenges:
   - id: knockknock
     name: CRYTPO - 30 - Knock Knock
+  - id: substitutioncipher
+    name: CRYTPO - 60 - Substitution Cipher
   - id: royalcasino
     name: CRYTPO - 120 - The Royal Casino
   - id: casino
