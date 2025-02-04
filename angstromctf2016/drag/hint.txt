@@ -1,0 +1,1 @@
+"hint": "The first step is to determine the key length.  The flag is a string, ASCII-encoded.
