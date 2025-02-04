@@ -34,6 +34,8 @@ challenges:
     name: FORENSICS - 30 - Oops!
   - id: headsup
     name: FORENSICS - 30 - Headsup
+  - id: yankovic
+    name: FORENSICS - 60 - Yankovic
   - id: fender
     name: FORENSICS - 70 - Fender Blender
   - id: metasploit
