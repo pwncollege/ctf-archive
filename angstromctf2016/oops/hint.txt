@@ -1,0 +1,1 @@
+"hint": "What happens when you delete a file?"
