@@ -32,3 +32,5 @@ challenges:
     name: FORENSICS - 30 - Headsup
   - id: fender
     name: FORENSICS - 70 - Fender Blender
+  - id: metasploit
+    name: FORENSICS - 120 - metasploitable
