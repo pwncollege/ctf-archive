@@ -28,6 +28,8 @@ challenges:
     name: REV - 100 - Sea Cipher
   - id: ciphertwo
     name: REV - 100 - Sea Cipher 2
+  - id: recovery
+    name: FORENSICS - 10 - Recovery
   - id: oops
     name: FORENSICS - 30 - Oops!
   - id: headsup
