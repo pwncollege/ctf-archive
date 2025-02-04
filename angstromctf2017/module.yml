@@ -2,5 +2,7 @@ id: angstromCTF2017
 name: ångstromCTF 2017
 
 challenges:
+  - id: knockknock
+    name: CRYTPO - 30 - Knock Knock
   - id: casino
     name: CRYTPO - 130 - The Casino, Revisited
