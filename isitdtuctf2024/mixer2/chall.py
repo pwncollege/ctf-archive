@@ -5,7 +5,9 @@ from Crypto.Util.number import getPrime, bytes_to_long
 
 flag = bytes_to_long(open("/flag", "rb").read())
 p = getPrime(256)
-assert flag < p
+
+# CTF Flag length is static so removed assert to integrate with pwn.college.
+#assert flag < p
 l = 32
 
 def share_mixer(xs):
