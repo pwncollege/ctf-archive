@@ -1,0 +1,6 @@
+id: angstromCTF2017
+name: ångstromCTF 2017
+
+challenges:
+  - id: casino
+    name: CRYTPO - 130 - The Casino, Revisited
