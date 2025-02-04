@@ -1,0 +1,1 @@
+hint: The admin information is stored on a SQL database.
