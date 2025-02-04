@@ -1,0 +1,1 @@
+"hint": "Perhaps it would be a good idea to find how often a specific letter is used."
