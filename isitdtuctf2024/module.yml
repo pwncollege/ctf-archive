@@ -2,6 +2,8 @@ id: isitdtuctf2024
 name: ISITDTU CTF 2024
 
 challenges:
+  - id: sign
+    name: CRYPTO - Sign
   - id: mixer1
     name: CRYPTO - Share Mixer 1
   - id: mixer2
