@@ -1,0 +1,1 @@
+"hint": "Each half-second of music corresponds to a character of the flag. <i>Updated hint:</i> The concerto is in A major."
