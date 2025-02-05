@@ -34,7 +34,7 @@ challenges:
     name: REV - 50 - Java is the Best
   - id: imageencryptor
     name: REV - 70 - Smartest Encryption
-    image: prathamgupta36/ctf-archive-experimantal
+    image: prathamgupta36/ctf-archive-experimental
   - id: cipher
     name: REV - 100 - Sea Cipher
   - id: ciphertwo
