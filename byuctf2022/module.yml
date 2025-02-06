@@ -1,0 +1,26 @@
+id: byuctf2022
+name: byuctf2022
+
+challenges:
+  - id: ballgame
+    name: CRYPTO - 498 - Take Me Out to the Ball Game
+  - id: truth
+    name: CRYPTO - 432 - Truth and Falsehood 
+  - id: xqr
+    name: CRYPTO - 490 - XQR
+  - id: shift
+    name: CRYPTO - 50 - Shifting Mindset 
+  - id: qool
+    name: FORENSICS - 94 - Qool Raster
+  - id: stickykey
+    name: FORENSICS - 304 - Sticky Key
+  - id: blue
+    name: FORENSICS - 482 - Blue 3
+  - id: basicrev
+    name: REV - 50 - Basic Rev
+  - id: funfact
+    name: REV - 50 - Fun Fact
+  - id: chicken
+    name: REV - 439 - Chicken
+  - id: murdermystery
+    name: OSINT - 499 - Murder Mystery

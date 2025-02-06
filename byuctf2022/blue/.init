@@ -1,0 +1,3 @@
+#!/usr/bin/bash
+
+/run/workspace/bin/python /challenge/create.py
