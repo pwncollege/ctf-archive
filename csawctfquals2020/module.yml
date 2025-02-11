@@ -2,5 +2,5 @@ id: csawctfquals2020
 name: CSAW Quals CTF 2020
 
 challenges:
-  - id: appicative
+  - id: applicative
     name: PWN - 100 - Applicative
