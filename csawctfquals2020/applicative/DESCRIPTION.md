@@ -1,4 +1,4 @@
-SCV is too hungry to mine the minerals. Can you give him some food?
+Learning to code, here's my calculator. I'm not sure how to use it.
 
 ---
 **Author:** CSAW CTF Organizers

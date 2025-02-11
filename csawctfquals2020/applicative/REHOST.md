@@ -1,13 +1,6 @@
 # REHOSTING
 
-Link to files: [CSAW 2017](https://github.com/ShellCollectingClub/csaw2017/tree/master/scv)
+Link to files: [CSAW Quals 2020](https://github.com/osirislab/CSAW-CTF-2020-Finals/tree/master/pwn/applicative)
 
 ## Challenge Setup
-After downloading the files, please check if the libc file is linked to the binary file provided for the challenge.
-
-Use this:
-```
-ldd scv
-```
-
-If this gives the file name then the libc file is recognized and the challenge should work.
+This challenge just contains the `applicative` file which does not have any dependencies.
