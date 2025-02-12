@@ -8,3 +8,5 @@ challenges:
     name: CRYPTO - 275 - Diffusion Pop Quiz
   - id: trapdoor
     name: CRYPTO - Trapdoor
+  - id: covert
+    name: FORENSICS - Covert
