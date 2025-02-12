@@ -11,6 +11,7 @@ modules:
   - id: csawctf2014
   - id: csaw2017
   - id: csawctfquals2020
+  - id: csawctfquals2024
   - id: 0ctf2017
   - id: 0ctf2018
   - id: 0ctf2019
