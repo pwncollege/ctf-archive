@@ -2,6 +2,8 @@ id: csawctfquals2024
 name: CSAW Quals CTF 2024
 
 challenges:
+  - id: golf
+    name: PWN - Mini Golfing
   - id: aes
     name: CRYPTO - 275 - AES Diffusion Pop Quiz
   - id: diffusion
