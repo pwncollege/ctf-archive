@@ -6,3 +6,5 @@ challenges:
     name: CRYPTO - 275 - AES Diffusion Pop Quiz
   - id: diffusion
     name: CRYPTO - 275 - Diffusion Pop Quiz
+  - id: trapdoor
+    name: CRYPTO - Trapdoor
