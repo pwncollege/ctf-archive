@@ -3,6 +3,6 @@ name: CSAW Quals CTF 2024
 
 challenges:
   - id: aes
-    name: Crypto - 275 - AES Diffusion Pop Quiz
+    name: CRYPTO - 275 - AES Diffusion Pop Quiz
   - id: diffusion
-    name: Crypto - 275 - Diffusion Pop Quiz
+    name: CRYPTO - 275 - Diffusion Pop Quiz
