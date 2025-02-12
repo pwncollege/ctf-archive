@@ -14,3 +14,5 @@ challenges:
     name: CRYPTO - Trapdoor
   - id: covert
     name: FORENSICS - Covert
+  - id: chinesefood
+    name: OSINT - Authentic Chinese Food
