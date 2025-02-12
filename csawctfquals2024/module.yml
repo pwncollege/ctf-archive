@@ -16,3 +16,5 @@ challenges:
     name: FORENSICS - Covert
   - id: chinesefood
     name: OSINT - Authentic Chinese Food
+  - id: rickshaw
+    name: OSINT - Rickshaw
