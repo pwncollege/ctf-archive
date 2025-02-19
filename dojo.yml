@@ -60,6 +60,8 @@ modules:
   - id: gitsctf2012
   - id: ectf2014
   - id: hackluctf2011
+  - id: ritsec2019
+  - id: byuctf2022
   - id: backdoorctf2019
   - id: justctf2019
   - id: picoctf2019
