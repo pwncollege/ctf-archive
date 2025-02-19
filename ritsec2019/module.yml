@@ -2,8 +2,6 @@ id: ritsec2019
 name: ritsec2019
 
 challenges:
-  - id: test
-    name: test
   - id: onion
     name: MISC - 100 - Onion Layer Encoding
   - id: shiny
