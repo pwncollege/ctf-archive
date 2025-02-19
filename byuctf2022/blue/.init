@@ -1,0 +1,3 @@
+#!/usr/bin/bash
+
+/opt/pwn.college/python /challenge/create.py
