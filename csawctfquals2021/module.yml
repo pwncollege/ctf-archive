@@ -6,3 +6,5 @@ challenges:
     name: CRYPTO - 405 - Forgery
   - id: lazyleaks
     name: FORENSICS - 100 - Lazy Leaks
+  - id: sonicgraphy
+    name: FORENSICS - 200 - Sonicgraphy Fallout
