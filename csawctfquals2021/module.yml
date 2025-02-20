@@ -4,3 +4,5 @@ name: CSAW Quals CTF 2021
 challenges:
   - id: forgery
     name: CRYPTO - 405 - Forgery
+  - id: lazyleaks
+    name: FORENSICS - 100 - Lazy Leaks
