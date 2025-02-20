@@ -5,6 +5,8 @@ image: prathamgupta36/ctf-archive-experimental
 challenges:
   - id: passwordchecker
     name: PWN - Password Checker
+  - id: alienmath
+    name: PWN - Alien Math
   - id: forgery
     name: CRYPTO - 405 - Forgery
   - id: lazyleaks
