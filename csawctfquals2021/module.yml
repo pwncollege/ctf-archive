@@ -1,5 +1,6 @@
 id: csawctfquals2021
 name: CSAW Quals CTF 2021
+image: prathamgupta36/ctf-archive-experimental
 
 challenges:
   - id: forgery
