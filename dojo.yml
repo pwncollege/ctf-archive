@@ -50,6 +50,7 @@ modules:
   - id: cryptoversectf2023
   - id: patriotctf2022
   - id: patriotctf2023
+  - id: uiuctf2022
   - id: uiuctf2023
   - id: uiuctf2024
   - id: hkcertctf2020
