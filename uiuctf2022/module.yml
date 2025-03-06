@@ -4,3 +4,5 @@ name: UIUCTF 2022
 challenges:
   - id: asr
     name: CRYPTO - 500 - asr
+  - id: ecc
+    name: CRYPTO - 500 - Elliptic Clock Crypto
