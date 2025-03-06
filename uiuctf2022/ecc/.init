@@ -1,0 +1,4 @@
+#!/bin/bash
+
+/challenge/ecc.py >> /challenge/output.txt
+mv /challenge/ecc.py /challenge/ecc
