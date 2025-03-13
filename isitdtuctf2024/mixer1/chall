@@ -5,9 +5,9 @@ from Crypto.Util.number import getPrime, bytes_to_long
 
 
 #flag = bytes_to_long(b'ISITDTU{test_flag_dkosakdisaj}')
-flag = bytes_to_long(open("/flag", "rb").read())
-p = getPrime(256)
-#assert flag < p
+flag = bytes_to_long(open("/flag", "rb").read().strip())
+p = getPrime(flag.bit_length()+1)
+assert flag < p
 l = 32
 
 
