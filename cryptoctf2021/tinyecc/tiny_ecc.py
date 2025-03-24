@@ -1,4 +1,4 @@
-#!/opt/pwn.college/python
+#!/usr/bin/exec-suid -- /usr/bin/python3 
 # In the name of Allah
 
 from mini_ecdsa import *
