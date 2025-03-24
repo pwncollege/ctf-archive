@@ -1,5 +1,5 @@
 #!/bin/bash
 
-/challenge/gen.py
+python /challenge/gen.py
 
 rm /challenge/text.txt
