@@ -1,10 +1,10 @@
 id: cactuscon2025
-name: cactuscon2025
+name: CactusCon13 CTF(2025)
 
 challenges:
   - id: clueless
     name: clueless
-    image: prathamgupta36/ctf-archive-experimental
+    image: tedanvosin/ctf-archive-cactuscon2025-frng
  
   - id: frng
     name: frng
