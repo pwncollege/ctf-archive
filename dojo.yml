@@ -55,6 +55,7 @@ modules:
   - id: uiuctf2024
   - id: hkcertctf2020
   - id: hkcertctf2021
+  - id: hkcertctf2022
   - id: byuctf2023
   - id: byuctf2024
   - id: grehack2012
