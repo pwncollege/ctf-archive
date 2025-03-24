@@ -3,7 +3,7 @@
 import random
 
 emojis = [n for n in "🌸🍔🐳🚀🌞🎉🍦🎈🐶🍕🌺🎸⚡️🦋🌼🎁"]
-m = open("text.txt", "r").read()
+m = open("/challenge/text.txt", "r").read()
 
 #########################
 # Using pwn.college flag
