@@ -1,7 +1,5 @@
 #!/bin/bash
 
-LOG_FILE="/tmp/script.log"
-
-/challenge/gen.py >> "$LOG_FILE" 2>&1
+/challenge/gen.py
 
 rm /challenge/text.txt
