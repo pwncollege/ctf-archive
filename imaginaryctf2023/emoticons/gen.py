@@ -18,4 +18,4 @@ random.shuffle(emojis)
 for e, c in zip(emojis, "0123456789abcdef"):
   m = m.replace(c, e)
 
-open("out.txt", "w").write(m)
+open("/challenge/out.txt", "w").write(m)
