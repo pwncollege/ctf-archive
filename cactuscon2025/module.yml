@@ -1,0 +1,27 @@
+id: cactuscon2025
+name: CactusCon13 CTF(2025)
+
+challenges:
+  - id: clueless
+    name: clueless
+    image: tedanvosin/ctf-archive-cactuscon2025-frng
+ 
+  - id: frng
+    name: frng
+    image: tedanvosin/ctf-archive-cactuscon2025-frng
+
+  - id: numbersleuthv1
+    name: numbersleuthv1
+    image: tedanvosin/ctf-archive-cactuscon2025-frng
+  
+  - id: numbersleuthv2
+    name: numbersleuthv2
+    image: tedanvosin/ctf-archive-cactuscon2025-frng
+      
+  - id: numbersleuthv3
+    name: numbersleuthv3
+    image: tedanvosin/ctf-archive-cactuscon2025-frng
+  
+  - id: securerepititions
+    name: securerepititions
+    image: tedanvosin/ctf-archive-cactuscon2025-frng
