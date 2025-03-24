@@ -1,0 +1,6 @@
+id: hkcertctf2022
+name: HK Cyber Security New Generation CTF Challenge 2022
+
+challenges:
+  - id: rogue
+    name: CRYPTO - 250 - Rogue Secret Assistant
