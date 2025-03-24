@@ -1,6 +1,5 @@
 id: cactuscon2025
 name: CactusCon13 CTF(2025)
-image: tedanvosin/ctf-archive-cactuscon2025-frng
 
 challenges:
   - id: clueless
