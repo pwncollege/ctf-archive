@@ -2,6 +2,8 @@ id: hkcertctf2022
 name: HK Cyber Security New Generation CTF Challenge 2022
 
 challenges:
+  - id: base64
+    name: CRYPTO - 200 - Base64 Encryption
   - id: rogue
     name: CRYPTO - 250 - Rogue Secret Assistant King of Rock, Paper, Scissors
   - id: kingrps
