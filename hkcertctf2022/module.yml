@@ -5,6 +5,8 @@ challenges:
   - id: base64
     name: CRYPTO - 200 - Base64 Encryption
   - id: rogue
-    name: CRYPTO - 250 - Rogue Secret Assistant King of Rock, Paper, Scissors
+    name: CRYPTO - 250 - Rogue Secret Assistant
   - id: kingrps
     name: CRYPTO - 500 - King of Rock, Paper, Scissors
+  - id: locate
+    name: MISC - 150 - Locate Me
