@@ -14,3 +14,5 @@ challenges:
     name: MISC - 55 - Zoonn Recording
   - id: locate
     name: MISC - 150 - Locate Me
+  - id: keyboard
+    name: MISC - 314 - Tuning Keyboard v3
