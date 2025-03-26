@@ -8,5 +8,7 @@ challenges:
     name: CRYPTO - 250 - Rogue Secret Assistant
   - id: kingrps
     name: CRYPTO - 500 - King of Rock, Paper, Scissors
+  - id: zonn
+    name: MISC - 55 - Zoonn Recording
   - id: locate
     name: MISC - 150 - Locate Me
