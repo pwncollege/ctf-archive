@@ -1,4 +1,6 @@
-Let's play rock paper scissors securely. Since we are using a commitment scheme, none of us can cheat!
+What drawing? No one seems to know you!
+
+`Note: Use flagCheck to get pwn.college flag.`
 
 ---
-**Author:** Mystiz
+**Author:** GonJK
