@@ -2,6 +2,8 @@ id: uiuctf2022
 name: UIUCTF 2022
 
 challenges:
+  - id: militarygradenc
+    name: CRYPTO - 75 - Military Grade Encryption
   - id: asr
     name: CRYPTO - 500 - asr
   - id: ecc
