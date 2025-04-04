@@ -4,6 +4,9 @@ name: UIUCTF 2022
 challenges:
   - id: oddshell
     name: PWN - 500 - Odd Shell
+  - id: art
+    name: REV - 75 - Pierated Art
+    image: prathamgupta36/ctf-archive-uiuctf2022-pierated-art
   - id: militarygradenc
     name: CRYPTO - 75 - Military Grade Encryption
   - id: asr
