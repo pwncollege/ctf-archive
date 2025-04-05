@@ -30,3 +30,6 @@ challenges:
     name: CRYPTO - 492 - Secure Encoding Base64
   - id: poker
     name: CRYPTO - 495 - Poker
+    image: prathamgupta36/ctf-archive-imaginaryctf2022-poker
+    visibility: 
+      start: "2029-08-21T10:30:00-07:00"
