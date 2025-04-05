@@ -1,10 +1,10 @@
 Can you solve my factorisation problem if I give you a hint?
 
 ---
-Use the following command to execute the Sage file:
+Please run the sage.py file instead of the sage file:
 
 ```bash
-sudo sage 1337crypt.sage
+./1337crypt.sage.py
 ```
 
 ---
