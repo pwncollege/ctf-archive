@@ -9,7 +9,16 @@ shuffle(shuffled)
 
 d = {charset[i]:v for(i,v)in enumerate(shuffled)}
 
-pt = open("/flag").read()
+pt = open("/challenge/flag.txt").read()
+
+###############
+# pwn.college
+
+flag = open("/flag", "r").read()
+
+pt = pt.replace("{}", flag)
+###############
+
 while "\n\n\n" in pt:
     pt = pt.replace("\n\n\n", '\n\n')
 while '  ' in pt:
@@ -18,5 +27,5 @@ while '  ' in pt:
 assert all(ord(i)<128 for i in pt)
 
 ct = bytes(d[i] for i in b64encode(pt.encode()))
-f = open('out.txt', 'wb')
+f = open('/challenge/out.txt', 'wb')
 f.write(ct)
