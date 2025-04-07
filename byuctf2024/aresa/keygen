@@ -3,7 +3,7 @@
 from Crypto.Util.number import bytes_to_long, getPrime
 
 #flag = b"byuctf{d1d_s0m3_rs4_stuff...m1ght_d3l3t3_l4t3r}"
-flag =open("/flag","r").read().split()
+flag = open("/flag", "rb").read().strip()
 
 n = getPrime(1024)
 e = 0x10001
