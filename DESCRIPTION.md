@@ -1,8 +1,10 @@
+<!-- Popup Script -->
 <script>
   window.onload = function() {
-    alert("hi");
+    alert("Welcome to CTF ARCHIVE");
   };
 </script>
+<!-- Popup Script -->
 Welcome to the CTF Archive! This is a comprehensive collection of challenges from past Capture The Flag competitions. 
 
 This is an open source archive and we welcome contributions.
