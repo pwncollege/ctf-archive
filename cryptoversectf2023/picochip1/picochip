@@ -6,7 +6,7 @@ from enum import Enum
 from base64 import b64encode
 # from secret import flag
 
-with open('/flag', 'r') as file:
+with open('/flag', 'rb') as file:
     flag = file.read().strip()
 
 import plotly.express as px
@@ -125,8 +125,8 @@ if __name__ == "__main__":
     q = pico.gen_secure_prime()
     assert p != q and isPrime(p) and isPrime(q)
 
-    assert flag.startswith(b"cvctf{") and flag.endswith(b"}")
-    flag = flag[6:-1]
+    #assert flag.startswith(b"cvctf{") and flag.endswith(b"}")
+    flag = flag[12:-1]
     
     N = p * q
     e = 0x10001
