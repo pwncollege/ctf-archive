@@ -1,3 +1,8 @@
+<script>
+  window.onload = function() {
+    alert("hi");
+  };
+</script>
 Welcome to the CTF Archive! This is a comprehensive collection of challenges from past Capture The Flag competitions. 
 
 This is an open source archive and we welcome contributions.
