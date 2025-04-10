@@ -20,11 +20,3 @@ Happy learning and hacking!
 - You can play a lot of OOO's DEF CON CTF challenges at [archive.ooo](https://archive.ooo/).
 - [CTFtime](https://ctftime.org) saves the metadata of the world's CTFs!
 
-
-<!-- Popup Scripts -->
-<script>
-  window.onload = function() {
-    alert("Welcome to CTF ARCHIVE");
-  };
-</script>
-<!-- Popup Scripts -->
