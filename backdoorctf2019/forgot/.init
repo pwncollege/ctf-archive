@@ -1,5 +1,5 @@
 #!/bin/bash
 
 # Attempt to create a symboliclink
-ln -s /flag ./flag 2>/dev/null
+ln -s /flag /challenge/flag 2>/dev/null
  
