@@ -1,4 +1,5 @@
-#!/opt/pwn.college/python
+#!/usr/bin/exec-suid -- /usr/bin/python3
+
 import sys
 import signal
 from gmpy2 import isqrt, next_prime, gcd, lcm, invert, is_prime

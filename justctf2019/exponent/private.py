@@ -1,4 +1,5 @@
-#!/opt/pwn.college/python
+#!/usr/bin/exec-suid -- /usr/bin/python3
+
 from gmpy2 import next_prime, gcd, lcm, invert, is_prime
 from random import randint
 
