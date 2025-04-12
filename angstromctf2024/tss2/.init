@@ -1,7 +1,0 @@
-#!/bin/bash
-
-# Attemp at konsole
-pip install konsole
-
-# Install fastecdsa
-pip install fastecdsa
