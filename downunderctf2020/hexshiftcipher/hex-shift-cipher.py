@@ -1,4 +1,5 @@
-#!/opt/pwn.college/python
+#!/usr/bin/exec-suid -- /usr/bin/python3
+
 from random import shuffle
 from secret import secret_msg
 

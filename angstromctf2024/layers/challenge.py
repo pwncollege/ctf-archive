@@ -1,3 +1,5 @@
+#!/usr/bin/exec-suid -- /usr/bin/python3
+
 import hashlib
 import itertools
 import os
@@ -17,6 +19,11 @@ print('Surely encrypting multiple times will make it more secure.')
 print('1. Encrypt message.')
 print('2. Encrypt (hex) message.')
 print('3. See encrypted flag!')
+
+with open('/flag', 'r') as f:
+    flag = f.read().strip()
+
+os.environ['FLAG'] = flag
 
 phrase = os.environ.get('FLAG', 'missing')
 

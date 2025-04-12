@@ -1,4 +1,4 @@
-#!/opt/pwn.college/python
+#!/usr/bin/exec-suid -- /usr/bin/python3
 
 from SECRET import FLAG, p, q, r
 from Crypto.Util.number import bytes_to_long
