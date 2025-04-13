@@ -1,6 +1,8 @@
+#!/usr/bin/exec-suid -- /usr/bin/python3
+
 import random
 
-flag = open("../flag.txt", "rt").read()
+flag = open("/flag", "rt").read()
 
 max_id = 512-1
 rand_start = len(flag)+1
