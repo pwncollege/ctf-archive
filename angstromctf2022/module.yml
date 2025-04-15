@@ -2,12 +2,12 @@ id: angstromctf2022
 name: ångstromctf 2022
 
 challenges:
+  - id: whatsmyname
+    name: PWN - 50 - whatsmyname
   - id: wah
     name: PWN - 100 - Wah
   - id: reallyobnoxiousproblem
     name: PWN - 140 - really obnoxious problem
-  - id: whatsmyname
-    name: PWN - 50 - whatsmyname
   - id: numbergame
     name: REV - 70 - Number Game
   - id: dyn

@@ -10,12 +10,12 @@ challenges:
     name: PWN - 367 - Combo Chain
   - id: caesars-revenge
     name: PWN - 424 - Caesar's Revenge
-  - id: aria-writer
-    name: PWN - 542 - Aria Writer
   - id: caesars-revenge-wrapper
     name: PWN - 424 - Caesar's Revenge
     visibility: 
       start: "2029-08-21T10:30:00-07:00"
+  - id: aria-writer
+    name: PWN - 542 - Aria Writer
   - id: license
     name: REV - 252 - License
   - id: daheck

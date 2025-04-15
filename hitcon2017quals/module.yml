@@ -4,10 +4,10 @@ name: HITCON 2017 Quals
 challenges:
   - id: start
     name: PWN - 132 - Start
-  - id: artifact
-    name: PWN - 192 - 完美無瑕~Impeccable Artifact~
   - id: easytosay
     name: PWN - 144 - Easy To Say
+  - id: artifact
+    name: PWN - 192 - 完美無瑕~Impeccable Artifact~
   - id: reeasy
     name: PWN/MISC - 255 - RE easy to say
   - id: babyfs

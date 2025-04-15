@@ -4,12 +4,12 @@ name: ImaginaryCTF 2023
 challenges:
   - id: chaos
     name: REV - 100 - Chaos
+  - id: snailchecker
+    name: REV - 100 - Snailchecker
   - id: scrambled
     name: REV - 359 - Scrambled
   - id: sheepish
     name: REV - 433 - Sheepish
-  - id: snailchecker
-    name: REV - 100 - Snailchecker
   - id: rsa
     name: CRYPTO - 100 - RSA
   - id: signer

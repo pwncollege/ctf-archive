@@ -8,14 +8,14 @@ challenges:
     name: REV - 50 - Fun Fact
   - id: chicken
     name: REV - 439 - Chicken
-  - id: ballgame
-    name: CRYPTO - 498 - Take Me Out to the Ball Game
-  - id: truth
-    name: CRYPTO - 432 - Truth and Falsehood 
-  - id: xqr
-    name: CRYPTO - 490 - XQR
   - id: shift
     name: CRYPTO - 50 - Shifting Mindset 
+  - id: truth
+    name: CRYPTO - 432 - Truth and Falsehood 
+  - id: ballgame
+    name: CRYPTO - 498 - Take Me Out to the Ball Game
+  - id: xqr
+    name: CRYPTO - 490 - XQR
   - id: murdermystery
     name: OSINT - 499 - Murder Mystery
   - id: qool
