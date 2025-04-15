@@ -8,14 +8,14 @@ challenges:
     name: REV - 155 - License Key
   - id: dice
     name: REV - Rock Paper Scissors
+  - id: encoding
+    name: CRYTPO - Encoding
   - id: simpleofficer
     name: CRYTPO - 52 - Simple Officer
   - id: rsang
     name: CRYTPO - 330 - RSANG
   - id: pcaps
     name: CRYTPO - 450 - PCAPS
-  - id: encoding
-    name: CRYTPO - Encoding
   - id: memdump
     name: FORENSICS - 220 - memdump
   - id: inaccessible

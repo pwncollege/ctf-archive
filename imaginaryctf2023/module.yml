@@ -16,7 +16,7 @@ challenges:
     name: CRYPTO - 100 - Signer
   - id: emoticons
     name: CRYPTO - 100 - Emoticons
-  - id: signpost
-    name: MISC - 100 - Signpost 
   - id: crypto 
     name: FORENSICS - 458 - Crypto
+  - id: signpost
+    name: MISC - 100 - Signpost 

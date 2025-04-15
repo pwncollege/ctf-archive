@@ -2,8 +2,6 @@ id: corctf2022
 name: corCTF 2022
 
 challenges:
-  - id: exchanged
-    name: CRYPTO - 131 - Exchanged
   - id: turbocrab
     name: REV - 154 - turbocrab
   - id: msfrob
@@ -14,3 +12,5 @@ challenges:
     name: REV - 458 - Edgelord
   - id: vmquacksrevenge
     name: REV - 500 - vmquack's revenge
+  - id: exchanged
+    name: CRYPTO - 131 - Exchanged

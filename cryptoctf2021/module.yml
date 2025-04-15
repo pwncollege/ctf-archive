@@ -2,6 +2,8 @@ id: cryptoctf2021
 name: Crypto CTF 2021
 
 challenges:
+  - id: lower
+    name: CRYPTO - Lower
   - id: farm
     name: CRYPTO - 43 - Farm
   - id: rima
@@ -28,5 +30,3 @@ challenges:
     name: CRYPTO - 334 - TRUNC
   - id: dorsa
     name: CRYPTO - 450 - DoRSA
-  - id: lower
-    name: CRYPTO - Lower

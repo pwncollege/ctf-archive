@@ -4,6 +4,12 @@ name: Access-Denied 2022
 challenges:
   - id: ret2system
     name: PWN - 722 - ret2system
+  - id: enormous
+    name: REV - 566 - Enormous
+  - id: binary
+    name: REV - 797 - Binary
+  - id: llvm
+    name: REV - 947 - LLVM
   - id: rsa1
     name: CRYTPO - RSA-1
   - id: rsa2
@@ -18,9 +24,3 @@ challenges:
     name: CRYTPO - Small Key
   - id: merklegoodman
     name: CRYTPO - Merkle is a good man
-  - id: enormous
-    name: REV - 566 - Enormous
-  - id: binary
-    name: REV - 797 - Binary
-  - id: llvm
-    name: REV - 947 - LLVM

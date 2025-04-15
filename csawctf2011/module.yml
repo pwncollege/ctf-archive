@@ -2,6 +2,22 @@ id: csawctf2011
 name: CSAW CTF 2011
 
 challenges:
+  - id: net1
+    name: REV - 200 - NET1
+  - id: linux
+    name: REV - 400 - Linux
+    visibility: 
+      start: "2029-08-21T10:30:00-07:00"
+  - id: networking101
+    name: WEB - 100 - Networking 101
+  - id: net200
+    name: WEB - 200
+  - id: hardware
+    name: WEB - 200 - Hardware
+  - id: evilburritos2
+    name: WEB - 300 - Evil Burritos 2
+  - id: loveletter
+    name: WEB - 500 - Love Letter
   - id: crypto1
     name: CRYPTO - 100 - 1
   - id: crypto2
@@ -22,19 +38,4 @@ challenges:
     name: CRYPTO - 300 - 9
   - id: crypto10
     name: CRYPTO - 300 - 10
-  - id: networking101
-    name: WEB - 100 - Networking 101
-  - id: net200
-    name: WEB - 200
-  - id: hardware
-    name: WEB - 200 - Hardware
-  - id: evilburritos2
-    name: WEB - 300 - Evil Burritos 2
-  - id: loveletter
-    name: WEB - 500 - Love Letter
-  - id: net1
-    name: REV - 200 - NET1
-  - id: linux
-    name: REV - 400 - Linux
-    visibility: 
-      start: "2029-08-21T10:30:00-07:00"
+  

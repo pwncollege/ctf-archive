@@ -2,13 +2,13 @@ id: ccscctf2020
 name: Cyprus Cyber Security Challenge (CCSC) CTF 2020
 
 challenges:
+  - id: guy
+    name: PWN - 200 - Guy de Bois 
+  - id: spell
+    name: PWN - 300 - Spell Caster
   - id: basilisk64
     name: CRYPTO - 29 - Basilisk64
   - id: mouse
     name: CRYPTO - 150 - Mousesack's Spell
   - id: routes
     name: CRYPTO - 450 - Routes from Sodden to Amell
-  - id: guy
-    name: PWN - 200 - Guy de Bois 
-  - id: spell
-    name: PWN - 300 - Spell Caster

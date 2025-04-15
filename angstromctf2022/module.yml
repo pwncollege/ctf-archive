@@ -2,14 +2,6 @@ id: angstromctf2022
 name: ångstromctf 2022
 
 challenges:
-  - id: caesaranddesister
-    name: CRYPTO - 40 - Caesar and Desister
-  - id: randomlysampledalgorithm
-    name: CRYPTO - 70 - Randomly Sampled Algorithm
-  - id: amongus
-    name: MISC - 40 - amongus
-  - id: shark1
-    name: MISC - 70 - Shark 1
   - id: wah
     name: PWN - 100 - Wah
   - id: reallyobnoxiousproblem
@@ -22,3 +14,11 @@ challenges:
     name: REV - 100 - dyn
   - id: uninspired
     name: REV - 100 - uninspired
+  - id: caesaranddesister
+    name: CRYPTO - 40 - Caesar and Desister
+  - id: randomlysampledalgorithm
+    name: CRYPTO - 70 - Randomly Sampled Algorithm
+  - id: amongus
+    name: MISC - 40 - amongus
+  - id: shark1
+    name: MISC - 70 - Shark 1

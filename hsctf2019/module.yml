@@ -12,6 +12,10 @@ challenges:
     name: PWN - 424 - Caesar's Revenge
   - id: aria-writer
     name: PWN - 542 - Aria Writer
+  - id: caesars-revenge-wrapper
+    name: PWN - 424 - Caesar's Revenge
+    visibility: 
+      start: "2029-08-21T10:30:00-07:00"
   - id: license
     name: REV - 252 - License
   - id: daheck
@@ -22,14 +26,14 @@ challenges:
     name: REV - 465 - Forgot Your Password?
     visibility: 
       start: "2029-08-21T10:30:00-07:00"
-  - id: a-lost-cause
-    name: CRYPTO - 196 - A Lost Cause
-  - id: welcome-to-crypto-land
-    name: CRYPTO - 340 - Welcome To Crypto Land
   - id: the-quest
     name: WEB - 102 - The Quest
   - id: keith-logger
     name: WEB - 216 - Keith Logger
+  - id: a-lost-cause
+    name: CRYPTO - 196 - A Lost Cause
+  - id: welcome-to-crypto-land
+    name: CRYPTO - 340 - Welcome To Crypto Land
   - id: slap
     name: FORENSICS - 108 - Slap
   - id: fish
@@ -42,7 +46,3 @@ challenges:
     name: MISC - 290 - Hidden Flag
   - id: broken-repl
     name: MISC - 411 - Broken REPL
-  - id: caesars-revenge-wrapper
-    name: PWN - 424 - Caesar's Revenge
-    visibility: 
-      start: "2029-08-21T10:30:00-07:00"

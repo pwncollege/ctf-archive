@@ -2,26 +2,6 @@ id: patriotctf2022
 name: PatriotCTF 2022
 
 challenges:
-  - id: barry
-    name: CRYPTO - 500 - Barry
-  - id: base64times10
-    name: CRYPTO - Base 64 Times 10
-  - id: cowsay
-    name: CRYPTO - 53 - Cowsay
-  - id: cryptogod
-    name: CRYPTO - 498 - Cryptogod
-  - id: twofifty
-    name: CRYPTO - 10 - TwoFifty
-  - id: extremlycoolbook 
-    name: CRYPTO - 500 - Extremely Cool Book
-  - id: bezier
-    name: FORENSICS - 399 - Bézier
-  - id: exfil
-    name: FORENSICS - 485 - Exfil
-  - id: greek
-    name: MISC - It's All Greek to Me
-  - id: hike
-    name: RECON - Hike
   - id: stringcheese
     name: REVERSE - StringCheese
   - id: crackme
@@ -30,3 +10,23 @@ challenges:
     name: REVERSE - Flowing
   - id: goobf
     name: REVERSE - GoObf
+  - id: base64times10
+    name: CRYPTO - Base 64 Times 10
+  - id: twofifty
+    name: CRYPTO - 10 - TwoFifty
+  - id: cowsay
+    name: CRYPTO - 53 - Cowsay
+  - id: cryptogod
+    name: CRYPTO - 498 - Cryptogod
+  - id: barry
+    name: CRYPTO - 500 - Barry
+  - id: extremlycoolbook 
+    name: CRYPTO - 500 - Extremely Cool Book
+  - id: hike
+    name: RECON - Hike
+  - id: bezier
+    name: FORENSICS - 399 - Bézier
+  - id: exfil
+    name: FORENSICS - 485 - Exfil
+  - id: greek
+    name: MISC - It's All Greek to Me

@@ -2,6 +2,8 @@ id: byuctf2023
 name: BYUCTF 2023
 
 challenges:
+  - id: pwn2038
+    name: PWN - 2038
   - id: poem
     name: CRYPTO - 452 - Poem
   - id: rsa1
@@ -16,8 +18,6 @@ challenges:
     name: CRYPTO - RSA5
   - id: crcconfusion
     name: FORENSICS - CRConfusion
-  - id: pwn2038
-    name: PWN - 2038
   - id: hexadecalingo
     name: MISC - Hexadecalingo
   - id: misc006-1
