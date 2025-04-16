@@ -1,4 +1,4 @@
-#!/opt/pwn.college/python
+#!/usr/bin/exec-suid -- /usr/bin/python3
 from hashlib import sha256
 
 with open("/flag","rb") as f:

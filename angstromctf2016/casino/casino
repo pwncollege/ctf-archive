@@ -1,4 +1,4 @@
-#!/opt/pwn.college/python
+#!/usr/bin/exec-suid -- /usr/bin/python3
 
 #seed = 9519
 #flag = "actf{Men_Are_maSTers_of_thEiR_fateS}"

@@ -1,4 +1,4 @@
-#!/opt/pwn.college/python
+#!/usr/bin/exec-suid -- /usr/bin/python3
 # Code inspired by https://ecchacks.cr.yp.to/clockcrypto.py
 
 from random import seed, randrange

@@ -1,4 +1,4 @@
-#!/opt/pwn.college/python
+#!/usr/bin/exec-suid -- /usr/bin/python3
 
 from Crypto.PublicKey.ECC import EccPoint
 from Crypto.Random import random

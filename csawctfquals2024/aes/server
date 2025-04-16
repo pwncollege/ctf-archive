@@ -1,4 +1,4 @@
-#!/opt/pwn.college/python
+#!/usr/bin/exec-suid -- /usr/bin/python3
 
 bold_start = '\033[1m'
 bold_end = '\033[0m'

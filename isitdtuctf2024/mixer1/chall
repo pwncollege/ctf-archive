@@ -1,4 +1,4 @@
-#!/opt/pwn.college/python
+#!/usr/bin/exec-suid -- /usr/bin/python3
 
 import random   # TODO: heard that this is unsafe but nvm
 from Crypto.Util.number import getPrime, bytes_to_long
