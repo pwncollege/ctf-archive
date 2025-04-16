@@ -8,13 +8,13 @@ challenges:
     name: EXPLOIT - 250 - Knotty
   - id: seddit
     name: EXPLOIT - 400 - Seddit
-  - id: hackermessage
-    name: FORENSICS - 100 - H4cker Message
-  - id: ectfhacked
-    name: FORENSICS - 500 - ECTF Hacked?
   - id: friendsofcrime
     name: REV - 200 - Friends Of Crime
   - id: python
     name: REV - 300 - Python
   - id: lowkey
-    name: CRYPTO - 150 - Low Key
+    name: CRYPTO - 150 - Low Key 
+  - id: hackermessage
+    name: FORENSICS - 100 - H4cker Message
+  - id: ectfhacked
+    name: FORENSICS - 500 - ECTF Hacked?

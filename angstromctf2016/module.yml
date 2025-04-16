@@ -6,6 +6,25 @@ challenges:
     name: BINARY - 40 - Endian of the World
   - id: formatone
     name: BINARY - 100 - Format 1
+  - id: asmtracing
+    name: REV - 45 - ASM Tracing
+  - id: javabest
+    name: REV - 50 - Java is the Best
+  - id: imageencryptor
+    name: REV - 70 - Smartest Encryption
+    image: prathamgupta36/ctf-archive-experimental
+  - id: cipher
+    name: REV - 100 - Sea Cipher
+  - id: ciphertwo
+    name: REV - 100 - Sea Cipher 2
+  - id: amoebananas
+    name: WEB - 20 - Amoebananas!
+  - id: client
+    name: WEB - 30 - SuperSecure&trade;
+  - id: flaglock
+    name: WEB - 140 - Flag Locker
+    visibility: 
+      start: "2029-08-21T10:30:00-07:00"
   - id: spqr
     name: CRYPTO - 10 - SPQR
   - id: hex
@@ -20,25 +39,6 @@ challenges:
     name: CRYPTO - 170 - Help Center
   - id: rsa
     name: CRYPTO - 240 - RSA Fun
-  - id: amoebananas
-    name: WEB - 20 - Amoebananas!
-  - id: client
-    name: WEB - 30 - SuperSecure&trade;
-  - id: flaglock
-    name: WEB - 140 - Flag Locker
-    visibility: 
-      start: "2029-08-21T10:30:00-07:00"
-  - id: asmtracing
-    name: REV - 45 - ASM Tracing
-  - id: javabest
-    name: REV - 50 - Java is the Best
-  - id: imageencryptor
-    name: REV - 70 - Smartest Encryption
-    image: prathamgupta36/ctf-archive-experimental
-  - id: cipher
-    name: REV - 100 - Sea Cipher
-  - id: ciphertwo
-    name: REV - 100 - Sea Cipher 2
   - id: recovery
     name: FORENSICS - 10 - Recovery
   - id: oops

@@ -2,10 +2,10 @@ id: hackluctf2011
 name: Hack.lu CTF 2011
 
 challenges:
-  - id: simplexor
-    name: CRYPTO - 200 - Simplexor
   - id: pycrackme
     name: REV - 100 - Python Crackme
+  - id: simplexor
+    name: CRYPTO - 200 - Simplexor
   - id: challengetorrent
     name: FORENSICS - 100 - Challenge Torrent
   - id: mario

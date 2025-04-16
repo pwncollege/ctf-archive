@@ -2,6 +2,10 @@ id: downunderctf24
 name: DownUnderCTF 2024
 
 challenges:
+  - id: ternarybrained
+    name: REV - 335 - Ternary Brained
+  - id: adorableencryptedanimal
+    name: REV - 449 - Adorable Encrypted Animal
   - id: shufflebox
     name: CRYPTO - 100 - Shufflebox
   - id: myarraygenerator                        
@@ -12,8 +16,4 @@ challenges:
     name: MISC - 100 - Intercepted Transmissions   
   - id: wackyreciepe
     name: MISC - 141 - Wacky Recipe
-  - id: adorableencryptedanimal
-    name: REV - 449 - Adorable Encrypted Animal
-  - id: ternarybrained
-    name: REV - 335 - Ternary Brained
-  
+ 

@@ -2,6 +2,8 @@ id: angstromCTF2017
 name: ångstromCTF 2017
 
 challenges:
+  - id: obligatory
+    name: WEB - 40 - Hard Choices
   - id: begin
     name: CRYTPO - 10 - The Beginning
   - id: knockknock
@@ -12,5 +14,3 @@ challenges:
     name: CRYTPO - 120 - The Royal Casino
   - id: casino
     name: CRYTPO - 130 - The Casino, Revisite
-  - id: obligatory
-    name: WEB - 40 - Hard Choices

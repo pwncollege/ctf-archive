@@ -6,6 +6,10 @@ challenges:
     name: PWN - 394 - ChainBlock
   - id: cshell
     name: PWN - 459 - CShell
+  - id: babyrev
+    name: REV - 372 - BabyRev
+  - id: vmquack
+    name: REV - 499 - vmquack
   - id: fibinary
     name: CRYPTO - 205 - Fibinary
   - id: fourninesix
@@ -20,7 +24,3 @@ challenges:
     name: CRYPTO - 497 - Fried Rice
   - id: chance
     name: CRYPTO - 498 - Leave it to chance
-  - id: babyrev
-    name: REV - 372 - BabyRev
-  - id: vmquack
-    name: REV - 499 - vmquack

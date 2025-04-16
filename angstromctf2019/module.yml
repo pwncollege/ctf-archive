@@ -2,10 +2,6 @@ id: angstromctf2019
 name: ångstromctf 2019
 
 challenges:
-  - id: reallysecurealgorithm
-    name: CRYPTO - 30 - Really Secure Algorithm
-  - id: runes
-    name: CRYPTO - 70 - Runes
   - id: chainofrope
     name: BINARY - 80 - Chain of Rope 
   - id: overmybrain
@@ -18,6 +14,10 @@ challenges:
     name: REV - 110 - High Quality Checks
   - id: icthyo
     name: REV - 130 - Icthyo
+  - id: reallysecurealgorithm
+    name: CRYPTO - 30 - Really Secure Algorithm
+  - id: runes
+    name: CRYPTO - 70 - Runes
   - id: lithp
     name: MISC - 60 - Lithp
   - id: blankpaper

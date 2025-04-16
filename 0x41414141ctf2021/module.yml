@@ -14,10 +14,10 @@ challenges:
     name: REV - 392 - X AND OR
   - id: ware
     name: REV - 462 - Ware  
-  - id: hash
-    name: REV - 479 - Hash
   - id: wrongdownload
     name: REV - 475 - Wrong Download
+  - id: hash
+    name: REV - 479 - Hash
   - id: client
     name: REV - 500 - cliBrowser  
   - id: factorize

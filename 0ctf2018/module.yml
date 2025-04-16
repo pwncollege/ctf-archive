@@ -8,9 +8,9 @@ challenges:
     name: PWN - 183 - Baby Heap
   - id: blackhole
     name: PWN - 250 - Blackhole
-  - id: subtraction
-    name: MISC - 343 - Math Game
   - id: zerofs
     name: PWN - 478 - Zer0 FS
   - id: heapstorm
     name: PWN - 785 - Heap Storm II
+  - id: subtraction
+    name: MISC - 343 - Math Game

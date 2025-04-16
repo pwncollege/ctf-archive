@@ -2,6 +2,8 @@ id: cryptoversectf2022
 name: Cryptoverse CTF 2022
 
 challenges:
+  - id: worldcup
+    name: REV - World Cup
   - id: tale
     name: CRYTPO - A Tale Of Two Systems
   - id: bigrabin
@@ -12,5 +14,3 @@ challenges:
     name: CRYTPO - RSA 3
   - id: dlog
     name: CRYTPO - Weird Dlog
-  - id: worldcup
-    name: REV - World Cup

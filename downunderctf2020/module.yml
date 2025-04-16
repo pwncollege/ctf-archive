@@ -12,6 +12,8 @@ challenges:
     name: PWN - 499 - VECC
   - id: zombie
     name: PWN - 499 - Zombie
+  - id: formatting
+    name: REV - 100 - Formatting
   - id: roti
     name: CRYPTO - 100 - ROT-I
   - id: babyrsa
@@ -30,5 +32,4 @@ challenges:
     name: CRYPTO - 500 - impECCable
   - id: calcgame
     name: CRYPTO - 500 - LSB||MSB Calculation Game
-  - id: formatting
-    name: REV - 100 - Formatting
+ 

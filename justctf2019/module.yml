@@ -2,21 +2,21 @@ id: justctf2019
 name: justCTF2019
 
 challenges:
-  - id: atm
-    name: PWN - 394 - ATM
   - id: phonebook
     name: PWN - 283 - Phonebook
-  - id: safenotes
-    name: PWN - 500 - Safe Notes
   - id: shellcode
     name: PWN - 283 - Shellcode Executor PRO
-  - id: pandq
-    name: CRYPTO - 453 -  p&q Service
+  - id: atm
+    name: PWN - 394 - ATM
+  - id: safenotes
+    name: PWN - 500 - Safe Notes
   - id: fsmir
     name: REV - 152 - FSMIR
   - id: fsmir2
     name: REV - 197 - FSMIR2
   - id: changevm
     name: REV - 347 - Change_VM
+  - id: pandq
+    name: CRYPTO - 453 -  p&q Service
   - id: exponent
     name: MISC - 326 - RSA Exponent
