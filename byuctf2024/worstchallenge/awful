@@ -1,4 +1,4 @@
-#!/opt/pwn.college/python
+#!/usr/bin/exec-suid -- /usr/bin/python3
 
 #flag = "byuctf{wh4ts_4_nu11_byt3_4nyw4ys}"
 flag= open("/flag", "r").read()

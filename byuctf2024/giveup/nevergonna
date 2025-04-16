@@ -1,4 +1,4 @@
-#!/opt/pwn.college/python
+#!/usr/bin/exec-suid -- /usr/bin/python3
 
 def repeat_key_xor(plain, key): # take in bytes
     output = b''

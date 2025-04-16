@@ -1,4 +1,4 @@
-#!/opt/pwn.college/python
+#!/usr/bin/exec-suid -- /usr/bin/python3
 
 # Challenge written by Mystiz.
 # Signature: PHNjcmlwdD5jb25zb2xlLmxvZygnVEhJUyBDSEFMTEVOR0UgSVMgV1JJVFRFTiBGT1IgSEtDRVJUIENURiBBTkQgSVMgTk9UIEZPUiBGUkFOS0lFIExFVU5HIFRPIFBMQUdBUklaRS4nKTwvc2NyaXB0Pg==

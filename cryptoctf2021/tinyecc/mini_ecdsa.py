@@ -1,4 +1,4 @@
-#!/opt/pwn.college/python
+#!/usr/bin/exec-suid -- /usr/bin/python3
 #Elliptic curve basics, tools for finding rational points, and ECDSA implementation.
 #Brendan Cordy, 2015
 
