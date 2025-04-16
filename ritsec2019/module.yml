@@ -2,12 +2,11 @@ id: ritsec2019
 name: ritsec2019
 
 challenges:
-  - id: onion
-    name: MISC - 100 - Onion Layer Encoding
-  - id: shiny
-    name: CRYPTO - 100 - Shiny
   - id: bottles
     name: PWN - 110 - 999 Bottles
+  - id: shiny
+    name: CRYPTO - 100 - Shiny
   - id: cleaners
     name: FORENSICS - 100 - Take it to the cleaners
-
+  - id: onion
+    name: MISC - 100 - Onion Layer Encoding

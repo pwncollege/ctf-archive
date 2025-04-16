@@ -2,6 +2,10 @@ id: hsctf2020
 name: HSCTF 2020
 
 challenges:
+  - id: apcs
+    name: REV - 100 - AP LAB Computer Science Principles
+  - id: apenglish
+    name: REV - 100 - AP LAB English Language
   - id: xored
     name: CRYPTO - 100 - XORed
   - id: unexpected
@@ -10,13 +14,10 @@ challenges:
     name: FORENSICS - 100 - Comments
   - id: mountains
     name: FORENSICS - Meta Mountains
+  - id: primes
+    name: MISC - 100 - Primes
   - id: binaryword
     name: MISC - 223 - Binary Word Search
   - id: pie
     name: MISC - 319 - Apple Pie
-  - id: primes
-    name: MISC - 100 - Primes
-  - id: apcs
-    name: REV - 100 - AP LAB Computer Science Principles
-  - id: apenglish
-    name: REV - 100 - AP LAB English Language
+ 

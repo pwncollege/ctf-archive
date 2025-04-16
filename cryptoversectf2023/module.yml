@@ -2,6 +2,16 @@ id: cryptoversectf2023
 name: Cryptoverse CTF 2023
 
 challenges:
+  - id: acceptance
+    name: PWN - Acceptance
+  - id: retschool
+    name: PWN - Ret2School
+  - id: microassembly
+    name: REV - Micro Assembly
+  - id: simplecheckin
+    name: REV - Simple Checking
+  - id: standardvm
+    name: REV - Standard V
   - id: babyaes
     name: CRYTPO - Baby AES
   - id: fractionalflag
@@ -14,13 +24,3 @@ challenges:
     name: CRYTPO - PicoChip 1
   - id: picochip2
     name: CRYTPO - PicoChip 2
-  - id: acceptance
-    name: PWN - Acceptance
-  - id: retschool
-    name: PWN - Ret2School
-  - id: microassembly
-    name: REV - Micro Assembly
-  - id: simplecheckin
-    name: REV - Simple Checking
-  - id: standardvm
-    name: REV - Standard VM

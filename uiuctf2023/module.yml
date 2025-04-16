@@ -2,6 +2,14 @@ id: uiuctf2023
 name: UIUCTF 2023
 
 challenges:
+  - id: chainmail
+    name: PWN - 500 - Chainmail
+    image: prathamgupta36/uiuctf2023chainmail
+  - id: rattler
+    name: PWN - 500 - Rattler Read
+    image: prathamgupta36/uiuctf2023rattleread
+  - id: fastcalc
+    name: REV - 500 - Fast Calculator
   - id: athome
     name: CRYPTO - 100 - At Home
   - id: groupproject
@@ -11,15 +19,7 @@ challenges:
   - id: morphing
     name: CRYPTO - 100 - Morphing Time
   - id: threetime
-    name: CRYPTO - 500 - Three-Time Pad
-  - id: chainmail
-    name: PWN - 500 - Chainmail
-    image: prathamgupta36/uiuctf2023chainmail
-  - id: rattler
-    name: PWN - 500 - Rattler Read
-    image: prathamgupta36/uiuctf2023rattleread
-  - id: fastcalc
-    name: REV - 500 - Fast Calculator
+    name: CRYPTO - 500 - Three-Time Pad  
   - id: explorer1
     name: OSINT - 500 - Finding Artifacts 1
   - id: explorer2

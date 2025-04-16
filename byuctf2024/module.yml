@@ -2,8 +2,14 @@ id: byuctf2024
 name: BYUCTF 2024
 
 challenges:
-  - id: worstchallenge
-    name: FORENSICS - The Worst Challenge Ever
+  - id: aresa
+    name: CRYPTO - Are S A?
+  - id: domath
+    name: CRYPTO - Do Math!
+  - id: giveup
+    name: CRYPTO - Give Up
+  - id: multiplied
+    name: CRYPTO - Times
   - id: gotmail
     name: OSINT - Mail Time
   - id: petrolhead
@@ -14,13 +20,7 @@ challenges:
     name: OSINT - Vacation Boats
   - id: wateryoudoing
     name: OSINT - Water You Doing, Step-Eclipse?
-  - id: aresa
-    name: CRYPTO - Are S A?
-  - id: domath
-    name: CRYPTO - Do Math!
-  - id: giveup
-    name: CRYPTO - Give Up
-  - id: multiplied
-    name: CRYPTO - Times
+  - id: worstchallenge
+    name: FORENSICS - The Worst Challenge Ever
   - id: meetgreg
     name: SOCIAL ENGINEERING - Meet Greg

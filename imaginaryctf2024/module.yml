@@ -2,11 +2,12 @@ id: imaginaryctf2024
 name: ImaginaryCTF 2024
 
 challenges:
-  - id: base64
-    name: CRYPTO - 100 - base64
-  - id: integrity
-    name: CRYPTO - 200 - Integrity
   - id: bf
     name: REV - 400 - bf
   - id: vokram
     name: REV - 500 - Vokram
+  - id: base64
+    name: CRYPTO - 100 - base64
+  - id: integrity
+    name: CRYPTO - 200 - Integrity
+ 

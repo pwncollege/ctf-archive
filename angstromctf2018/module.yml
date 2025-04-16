@@ -4,6 +4,10 @@ name: ångstromCTF 2018
 challenges:
   - id: warmup
     name: Warmup
+  - id: accumulator
+    name: BINARY - 50 - Accumulator
+  - id: bankroppery
+    name: BINARY - 250 - Bank Roppery
   - id: rev1
     name: REV - 60 - REV1
   - id: rev2
@@ -20,10 +24,6 @@ challenges:
     name: CRYPTO - 40 - XOR
   - id: introtorsa
     name: CRYPTO - 50 - Intro to RSA
-  - id: accumulator
-    name: BINARY - 50 - Accumulator
-  - id: bankroppery
-    name: BINARY - 250 - Bank Roppery
   - id: waldo2
     name: MISC - 30 - Waldo 2
   - id: weirdmessage
