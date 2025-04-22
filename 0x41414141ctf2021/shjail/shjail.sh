@@ -1,4 +1,5 @@
-#!/bin/bash
+#!/opt/pwn.college/bash
+
 RED='\e[0;31m'
 END='\e[0m'
 GREE='\e[0;32m'
