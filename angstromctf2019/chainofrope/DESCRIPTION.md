@@ -3,7 +3,7 @@ defund found out about this cool new dark web browser! While he was browsing the
 Use the following command to execute the Binary file:
 
 ```bash
-sudo ./chain_of_rope
+sudo /challenge/chain_of_rope
 ```
 
 ---
