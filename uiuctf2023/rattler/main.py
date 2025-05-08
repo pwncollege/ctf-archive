@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 from RestrictedPython import compile_restricted
 from RestrictedPython import Eval
 from RestrictedPython import Guards
