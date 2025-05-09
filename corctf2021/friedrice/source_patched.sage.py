@@ -69,7 +69,7 @@ print("now, let's cook some fried rice!")
 for _ in range(LIMIT):
     sys.stdout.flush()
     m = int(input('add something in(in hex)> '), _sage_const_16 )
-    dp **= m
+    dp ^= m
     print('flip!', pow(g, dp, r))
 print("it's done. enjoy your fried rice!")
 
