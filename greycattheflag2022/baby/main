@@ -1,4 +1,4 @@
-#!/opt/pwn.college/python
+#!/usr/bin/exec-suid -- /usr/bin/python3
 from Crypto.Util.number import getPrime, bytes_to_long
 
 with open('/flag', 'r') as file:
