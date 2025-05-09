@@ -2,5 +2,7 @@ PicoChip is a lightweight, open-sourced, portable and fast™ device for Royal s
 
 Before bringing it to production, I would like to get some feedback from the community. If you can break it I promise to ship you a PicoChip for free when it's launched.
 
+`Provide whatever you get from the challenge to flagCheck to get the whole pwn.college flag`
+
 ---
 **Author:** Cryptoverse Team
