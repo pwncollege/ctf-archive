@@ -1,4 +1,4 @@
-#!/opt/pwn.college/python
+#!/usr/bin/exec-suid -- /usr/bin/python3
 class ComplexVector():
     def __init__(self, vec):
         for i in vec:
