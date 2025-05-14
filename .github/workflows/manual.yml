@@ -1,0 +1,27 @@
+name: Validate Dojo Repo Structure
+
+on:
+  push:
+    paths:
+      - 'dojo.yml'
+      - '**/module.yml'
+      - '**/README.md'
+      - '**/DESCRIPTION.md'
+  pull_request:
+
+jobs:
+  validate-structure:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+
+      - name: Install PyYAML
+        run: pip install pyyaml
+
+      - name: Run Structure Validation
+        run: python .github/scripts/validate_structure.py
