@@ -1,4 +1,4 @@
-name: Validate Dojo Repo Structure
+name: Validate Structure
 
 on:
   schedule:
@@ -14,6 +14,7 @@ on:
 
 jobs:
   validate-structure:
+    name: Validate Structure
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
