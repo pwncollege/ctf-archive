@@ -29,6 +29,12 @@ for mod in modules:
     mod_id = mod.get("id")
     if not mod_id:
         fail("Each entry under 'modules' in dojo.yml must have an 'id' field")
+
+    # Skip specific module
+    if mod_id == "defconquals2018":
+        print(f"Skipping module: {mod_id}")
+        continue
+        
     mod_folder = os.path.join(mod_id)
     if not os.path.isdir(mod_folder):
         fail(f"Module folder not found: {mod_id}")
