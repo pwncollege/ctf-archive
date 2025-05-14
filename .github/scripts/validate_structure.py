@@ -49,7 +49,7 @@ for mod in modules:
         chal_folder = os.path.join(mod_id, chal_id)
         if not os.path.isdir(chal_folder):
             fail(f"Challenge folder missing: {chal_id} in module {mod_id}")
-        for required in ("README.md", "DESCRIPTION.md"):
+        for required in ("REHOST.md", "DESCRIPTION.md"):
             path = os.path.join(chal_folder, required)
             if not os.path.isfile(path):
                 fail(f"Missing {required} in {chal_folder}")
