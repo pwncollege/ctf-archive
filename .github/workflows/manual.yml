@@ -1,6 +1,7 @@
 name: Validate Dojo Repo Structure
 
 on:
+  workflow_dispatch:
   push:
     paths:
       - 'dojo.yml'
