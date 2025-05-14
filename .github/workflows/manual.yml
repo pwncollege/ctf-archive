@@ -6,7 +6,7 @@ on:
     paths:
       - 'dojo.yml'
       - '**/module.yml'
-      - '**/README.md'
+      - '**/REHOST.md'
       - '**/DESCRIPTION.md'
   pull_request:
 
