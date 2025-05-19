@@ -1,0 +1,6 @@
+id: irisctf2025
+name: IrisCTF 2025
+
+challenges:
+  - id: ayes
+    name: CRYPTO - 448 - AYES
