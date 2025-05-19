@@ -4,3 +4,5 @@ name: IrisCTF 2025
 challenges:
   - id: ayes
     name: CRYPTO - 448 - AYES
+  - id: winter
+    name: OSINT - 50 - Checking Out of Winter
