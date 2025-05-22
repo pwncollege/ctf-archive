@@ -1,4 +1,4 @@
-#!/opt/pwn.college/python
+#!/usr/bin/exec-suid -- /usr/bin/python3
 
 import random
 from Crypto.Util.number import long_to_bytes as l2b, bytes_to_long as b2l
