@@ -1,4 +1,4 @@
-#!/opt/pwn.college/python
+#!/usr/bin/exec-suid -- /usr/bin/python3
 class baby_arx():
     def __init__(self, key):
         assert len(key) == length

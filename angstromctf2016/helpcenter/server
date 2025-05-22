@@ -1,4 +1,4 @@
-#!/opt/pwn.college/python
+#!/usr/bin/exec-suid -- /usr/bin/python3
 
 key = 'c342cb3177881464'
 IV = 'ca302100528f5ef9'

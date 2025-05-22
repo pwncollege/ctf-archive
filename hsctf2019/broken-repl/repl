@@ -1,4 +1,4 @@
-#!/opt/pwn.college/python
+#!/usr/bin/exec-suid -- /usr/bin/python3
 
 with open("/flag") as flag: # open flag file
     flag = flag.read() # read contents of flag file
