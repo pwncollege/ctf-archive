@@ -8,3 +8,5 @@ challenges:
     name: CRYPTO - 448 - AYES
   - id: winter
     name: OSINT - 50 - Checking Out of Winter
+  - id: dot
+    name: Radio Frequency - 50 - dotdotdot
