@@ -2,6 +2,8 @@ id: irisctf2025
 name: IrisCTF 2025
 
 challenges:
+  - id: sqlate
+    name: PWN - 50 - sqlate
   - id: ayes
     name: CRYPTO - 448 - AYES
   - id: winter
