@@ -2,7 +2,7 @@
 
 import random
 from Crypto.Util.number import long_to_bytes as l2b, bytes_to_long as b2l
-
+from typing import List
 
 class Sparrow:
     ROUNDS = 7
@@ -29,10 +29,10 @@ class Sparrow:
     def xor(self, a: bytes, b: bytes) -> bytes:
         return bytes([a[i] ^ b[i] for i in range(self.BLOCK_SIZE)])
 
-    def split(self, b: bytes) -> list[int]:
+    def split(self, b: bytes) -> List[int]: 
         return list(map(int, bin(b2l(b))[2:].zfill(self.BLOCK_SIZE*8)))
 
-    def unite(self, l: list[int]) -> bytes:
+    def unite(self, l: List[int]) -> bytes: 
         return l2b(int(''.join(map(str, l)), 2), self.BLOCK_SIZE)
     
     def sub(self, b: bytes) -> bytes:
