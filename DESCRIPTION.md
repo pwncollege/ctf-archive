@@ -10,7 +10,7 @@
     }
 </style>
 
-<h1 class="brand-dot"> Welcome to the CTF Archive! This is a comprehensive collection of challenges from past Capture The Flag competitions. </h1>
+<h1 class="fancy-header"> Welcome to the CTF Archive! This is a comprehensive collection of challenges from past Capture The Flag competitions. </h1>
 
 <p> This is an open source archive and we welcome contributions.
 
