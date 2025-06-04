@@ -4,7 +4,7 @@
         color: #ffffff;
     }
     .fancy-header {
-        font-size: 2rem;
+        font-size: 12pt;
         color: #00ffe7;
         text-shadow: 0 0 10px #00ffe7;
     }
