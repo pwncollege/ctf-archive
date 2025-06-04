@@ -1,12 +1,28 @@
 <style>
     body {
-        background: #000000;
-        color: #ffffff;
+      background: #000000;
+      color: #ffffff;
     }
     .fancy-header {
-        font-size: 1.5rem;
-        color: rgb(248, 199, 68);
-        text-shadow: 0 0 10px rgb(248, 199, 68);
+      font-size: 1.5rem;
+      color: rgb(248, 199, 68);
+      text-shadow: 0 0 10px rgb(248, 199, 68);
+    }
+    .card {
+      background-color: #28a745 !important;
+      color: #ffffff !important;
+      border: none !important;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .card:hover {
+      transform: scale(1.03);
+      box-shadow: 0 4px 20px rgba(40, 167, 69, 0.5) !important;
+    }
+    .card a {
+      color: #ffffff !important;
+    }
+    .card-title {
+      color: #ffffff !important;
     }
 </style>
 
