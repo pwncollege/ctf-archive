@@ -1,6 +1,18 @@
-Welcome to the CTF Archive! This is a comprehensive collection of challenges from past Capture The Flag competitions. 
+<style>
+    body {
+        background: #000000;
+        color: #ffffff;
+    }
+    .fancy-header {
+        font-size: 2rem;
+        color: #00ffe7;
+        text-shadow: 0 0 10px #00ffe7;
+    }
+</style>
 
-This is an open source archive and we welcome contributions.
+<h1 class="fancy-header"> Welcome to the CTF Archive! This is a comprehensive collection of challenges from past Capture The Flag competitions. </h1>
+
+<p> This is an open source archive and we welcome contributions.
 
 The link to the github repo: https://github.com/pwncollege/ctf-archive
 
@@ -20,3 +32,4 @@ Happy learning and hacking!
 - You can play a lot of OOO's DEF CON CTF challenges at [archive.ooo](https://archive.ooo/).
 - [CTFtime](https://ctftime.org) saves the metadata of the world's CTFs!
 
+</p>
