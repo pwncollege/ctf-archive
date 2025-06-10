@@ -33,7 +33,7 @@ jobs:
         run: python .github/scripts/validate_structure.py
 
   validate-names:
-    name: Validate Folder Naming Convention
+    name: Validate Regex
     runs-on: ubuntu-latest
     needs: validate-structure
 
