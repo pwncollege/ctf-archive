@@ -13,6 +13,8 @@ challenges:
   - id: ptmcasino
     name: WEB - 322 - ptmCasino
     image: prathamgupta36/moleconctf2025teaserptmcasino
+    visibility:
+      start: "2029-08-21T10:30:00-07:00"
   - id: telegram
     name: WEB - 343 - Free Telegram App
     visibility:
