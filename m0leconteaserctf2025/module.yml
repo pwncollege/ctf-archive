@@ -4,8 +4,12 @@ name: m0leCon CTF Teaser 2025
 challenges:
   - id: bootme2
     name: PWN - 424 - Boot Me 2
+    visibility:
+      start: "2029-08-21T10:30:00-07:00"
   - id: bootme
     name: REV - 232 - Boot Me
+    visibility:
+      start: "2029-08-21T10:30:00-07:00"
   - id: whispers
     name: REV - 367 - Whispers of Yesterday
     visibility:
