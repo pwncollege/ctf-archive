@@ -1,0 +1,6 @@
+id: googlectf2020
+name: Google Capture The Flag 2020
+
+challenges:
+  - id: beginner
+    name: REV - 50 - beginner
