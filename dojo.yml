@@ -69,6 +69,7 @@ modules:
   - id: justctf2019
   - id: picoctf2019
   - id: neverlan2019
+  - id: googlectf2020
   - id: 0x41414141ctf2021
   - id: wtfctf2021
   - id: zh3r0ctf2021
