@@ -8,3 +8,5 @@ challenges:
     description: Can you become an admin and get the flag?
   - id: qr
     name: MISC - 484 - QR
+  - id: game
+    name: Web - Game
