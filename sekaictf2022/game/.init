@@ -1,3 +1,5 @@
 #!/bin/bash
 
+(cd /challenge && nohup php -S 0.0.0.0:8000 > server.log 2>&1 &) 
+
 rm /challenge/REHOST.md
