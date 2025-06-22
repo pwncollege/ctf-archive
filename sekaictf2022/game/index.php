@@ -1,5 +1,5 @@
 <?php
-include('/challenge/flag_patched.php');
+include('/challenge/flag.php');
 class Sekai_Game{
     public $start = True;
     public function __destruct(){
