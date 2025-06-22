@@ -3,6 +3,6 @@
 # Attempt to create a symboliclink
 ln -s /flag /challenge/flag.txt 2>/dev/null 
 
-cp /challenge/stacksort /challenge/stacksorted-patched && patchelf --set-rpath /challenge /challenge/stacksorted-patched
+cp /challenge/stacksort /challenge/stacksort-patched && patchelf --set-interpreter /challenge/ld-linux-x86-64.so.2 --set-rpath /challenge /challenge/stacksort-patched && chmod +s /challenge/stacksort-patched
 
 rm /challenge/REHOST.md
