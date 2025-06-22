@@ -4,3 +4,9 @@ name: Google Capture The Flag 2020
 challenges:
   - id: beginner
     name: REV - 50 - beginner
+  - id: login
+    name: WEB - 50 - login
+    images: prathamgupta36/ctf-academy-ctf-web-log-in
+    description: log me in
+    visibility: 
+      start: "2029-08-21T10:30:00-07:00"
