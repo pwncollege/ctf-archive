@@ -1,0 +1,8 @@
+id: sekaictf2022
+name: SekaiCTF 2022
+
+challenges:
+  - id: issues
+    name: issues
+    image: prathamgupta36/sekaictf2022-issues
+    description: Can you become an admin and get the flag?
