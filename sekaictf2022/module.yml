@@ -10,3 +10,5 @@ challenges:
     name: MISC - 484 - QR
   - id: game
     name: Web - Game
+    visibility: 
+      start: "2029-08-21T10:30:00-07:00"
