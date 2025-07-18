@@ -9,6 +9,8 @@ challenges:
   - id: dumber
     name: CRYTPO - 50 - Dumber
     image: prathamgupta36/ctf-archive:2.1
+  - id: magicoracle
+    name: CRYTPO - 436 - Magical Oracle
   - id: mildly
     name: Hashing - 50 - Mildly Disastrous 5ecurity
   - id: strangetransmission
