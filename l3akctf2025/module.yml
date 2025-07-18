@@ -2,6 +2,8 @@ id: l3akctf2025
 name: L3akCTF 2025
 
 challenges:
+  - id: shirohero
+    name: CRYTPO - 50 - Shiro Hero
   - id: basiclll
     name: CRYTPO - 50 - Basic LLL
   - id: dumber
