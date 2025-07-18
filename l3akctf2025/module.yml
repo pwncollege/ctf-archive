@@ -4,6 +4,7 @@ name: L3akCTF 2025
 challenges:
   - id: basiclll
     name: CRYTPO - 50 - Basic LLL
+    image: prathamgupta36/ctf-archive:2.1
   - id: mildly
     name: Hashing - 50 - Mildly Disastrous 5ecurity
   - id: strangetransmission
