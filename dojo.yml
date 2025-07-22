@@ -29,6 +29,7 @@ modules:
   - id: downunderctf2021
   - id: downunderctf2022
   - id: downunderctf2024
+  - id: downunderctf2025
   - id: angstromctf2016
   - id: angstromctf2017
   - id: angstromctf2018
