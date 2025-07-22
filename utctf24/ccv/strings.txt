@@ -1,0 +1,35 @@
+Someone told me that having plaintext in my code was insecure so I put it all in this file!
+CVKA: dae55498c4325458
+CVKB: 26fb153885bcb06b
+I don't think that one's valid...
+Sorry, but that card appears to be invalid.
+Regrettably, that card is invalid.
+That doesn't look like a valid card.
+Are you trying to get us caught?
+Better luck next time!
+Are you just guessing?
+What's the problem? It can't be that hard.
+Wrong!
+Uh-oh try again.
+Hey wait a minute, that one was valid!
+You gotta do better. We can't be skipping good cards.
+What do you mean? This one's definitely valid.
+Check your calculations, cause this is valid.
+Come back when you can tell this is valid.
+Yep, that one worked for me.
+And another one.
+Great! Another valid card.
+Add that to the list.
+Always good to have more.
+You're a big help.
+I knew we could count on you!
+Nice work!
+Good job.
+I don't know what we'd do without you.
+Good catch! Almost used it...
+Damn another invalid card...
+Sucks, but good to know.
+Really, huh? I would have thought it was valid.
+Ugh, so many invalid cards.
+Valid? 
+Thanks for all the help! That's all the cards I have for now. Hope you kept the input so we don't have to check these again!
