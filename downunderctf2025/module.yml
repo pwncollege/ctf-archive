@@ -1,0 +1,6 @@
+id: downunderctf2025
+name: DownUnderCTF 2025
+
+challenges:
+  - id: fakeobj
+    name: PWN - 100 - fakeobj.py
