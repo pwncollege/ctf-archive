@@ -1,0 +1,5 @@
+#!/bin/bash
+
+/challenge/chall > /challenge/output.txt
+
+rm /challenge/chall

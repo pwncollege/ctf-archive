@@ -1,0 +1,6 @@
+#!/bin/bash
+
+cp /challenge/groot /challenge/groot_patched && patchelf --set-rpath /challenge /challenge/groot_patched && chmod +s /challenge/groot_patched
+
+## Temporary
+rm /challenge/REHOST.md

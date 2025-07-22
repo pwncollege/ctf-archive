@@ -40,7 +40,7 @@ def verify(msg, sig):
 C = reg.get_curve("secp256r1")
 G = C.g
 n = C.field.n
-d =  int(open("/flag", "rb").read().hex(), 16)
+d = int(open("/flag", "rb").read()[:32].hex(), 16)
 Q = d * G
 
 rand = RNG(randint(2, n-1))

@@ -29,6 +29,7 @@ modules:
   - id: downunderctf2021
   - id: downunderctf2022
   - id: downunderctf2024
+  - id: downunderctf2025
   - id: angstromctf2016
   - id: angstromctf2017
   - id: angstromctf2018
@@ -59,6 +60,8 @@ modules:
   - id: byuctf2022
   - id: byuctf2023
   - id: byuctf2024
+  - id: sekaictf2022
+  - id: sekaictf2023
   - id: grehack2012
   - id: 29c3ctf2012
   - id: gitsctf2012
@@ -69,11 +72,13 @@ modules:
   - id: justctf2019
   - id: picoctf2019
   - id: neverlan2019
+  - id: googlectf2020
   - id: 0x41414141ctf2021
   - id: wtfctf2021
   - id: zh3r0ctf2021
   - id: vsctf2022
   - id: accessdeniedctf2022
+  - id: techcompfest2022
   - id: plaidctf
   - id: noobzctf2023
   - id: tamuctf2024
@@ -85,3 +90,4 @@ modules:
   - id: m0leconteaserctf2025
   - id: cactusconctf2025
   - id: irisctf2025
+  - id: l3akctf2025
