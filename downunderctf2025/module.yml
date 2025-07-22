@@ -4,3 +4,5 @@ name: DownUnderCTF 2025
 challenges:
   - id: fakeobj
     name: PWN - 100 - fakeobj.py
+  - id: rw
+    name: PWN - 300 - rw.py
