@@ -45,7 +45,7 @@ def main():
     message = article_with_flag.encode('utf-8')
 
     encrypted = base64_encryption(message, key)
-    with open('message.enc.txt', 'w') as f: f.write(encrypted)
+    with open('/challenge/message.enc.txt', 'w') as f: f.write(encrypted)
 
 if __name__ == '__main__':
     main()
