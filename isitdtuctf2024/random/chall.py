@@ -1,4 +1,5 @@
-#!/run/workspace/bin/python
+#!/opt/pwn.college/python
+
 import random
 from secret import FLAG
 flag  = random.randbytes(random.randint(13, 1337))
