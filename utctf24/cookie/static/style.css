@@ -1,0 +1,66 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 20px; /* Add padding to the top of the container */
+}
+
+
+h1 {
+    color: #333;
+}
+
+p {
+    color: #666;
+}
+
+button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 0 auto; /* Center the button horizontally */
+    display: block; /* Ensure the button takes up the full width */
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.comment-box {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 10px;
+    width: 50%;
+}
+
+.comment-box strong {
+    font-weight: bold;
+}
+
+.comment-box hr {
+    margin: 5px 0;
+}
+
+.button-container {
+    margin-bottom: 10px; /* Add some spacing between buttons and other elements */
+}
+
+.button-container button {
+    margin-right: 10px; /* Add spacing between buttons */
+    display: inline-block; /* Display buttons inline */
+}
