@@ -30,7 +30,8 @@ def main():
     random.shuffle(key)
     key = ''.join(key)
 
-    with open('/flag', 'rb') as f: message = f.read()
+    # Read the article that contains the flag embedded within it
+    with open('article.txt', 'rb') as f: message = f.read()
 
     encrypted = base64_encryption(message, key)
     with open('message.enc.txt', 'w') as f: f.write(encrypted)

@@ -1,0 +1,11 @@
+The field of cryptography has evolved significantly over the past few decades. Modern encryption techniques are based on complex mathematical principles that make them extremely difficult to break without the proper key. However, classical cryptographic methods, such as substitution ciphers, can often be analyzed using statistical techniques.
+
+One of the most powerful tools in cryptanalysis is frequency analysis. This technique relies on the fact that letters in any given language appear with characteristic frequencies. In English, for example, the letter 'e' appears most frequently, followed by 't', 'a', 'o', 'i', 'n', 's', 'h', and 'r'. By analyzing the frequency distribution of characters in an encrypted message, cryptanalysts can make educated guesses about which encrypted characters correspond to which plaintext letters.
+
+The effectiveness of frequency analysis increases dramatically with the length of the encrypted text. Short messages, such as a simple flag like hkcert22{statistical_cryptanalysis_works_on_longer_texts}, provide insufficient data for reliable statistical analysis. This is why proper cryptographic challenges often embed their secrets within longer passages of text.
+
+Base64 encoding is commonly misunderstood as a form of encryption, but it is merely an encoding scheme designed to represent binary data in an ASCII string format. When combined with character substitution, however, it can create an interesting cryptographic puzzle. The standard base64 alphabet uses 64 characters: uppercase letters A-Z, lowercase letters a-z, digits 0-9, and the symbols '+' and '/'.
+
+To solve such puzzles, one must first recognize that the text has been base64 encoded and then subjected to a substitution cipher. The next step involves performing frequency analysis on the encrypted text to determine the most likely mapping between the substituted characters and the original base64 alphabet. With sufficient text, this analysis can reveal patterns that allow for the reconstruction of the original message.
+
+The process requires patience and methodical analysis, but with enough ciphertext, the statistical properties of the underlying language will eventually emerge, revealing the hidden message within.
