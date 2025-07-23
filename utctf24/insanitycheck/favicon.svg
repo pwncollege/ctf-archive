@@ -1,0 +1,253 @@
+<svg width="384" height="576" viewBox="0 0 384 576" xmlns="http://www.w3.org/2000/svg" id="root">
+<style>
+@keyframes blink {
+0.000% { fill: #FFFF; }
+0.314% { fill: #FFF6; }
+0.629% { fill: #FFFF; }
+0.943% { fill: #FFF6; }
+1.258% { fill: #FFFF; }
+2.201% { fill: #FFF6; }
+2.516% { fill: #FFF6; }
+3.145% { fill: #FFFF; }
+4.088% { fill: #FFF6; }
+4.403% { fill: #FFF6; }
+5.031% { fill: #FFFF; }
+5.346% { fill: #FFF6; }
+5.660% { fill: #FFFF; }
+5.975% { fill: #FFF6; }
+6.289% { fill: #FFFF; }
+7.233% { fill: #FFF6; }
+7.547% { fill: #FFFF; }
+7.862% { fill: #FFF6; }
+8.176% { fill: #FFF6; }
+8.805% { fill: #FFFF; }
+9.119% { fill: #FFF6; }
+9.434% { fill: #FFFF; }
+10.377% { fill: #FFF6; }
+10.692% { fill: #FFFF; }
+11.006% { fill: #FFF6; }
+11.321% { fill: #FFFF; }
+11.635% { fill: #FFF6; }
+11.950% { fill: #FFF6; }
+12.579% { fill: #FFFF; }
+12.893% { fill: #FFF6; }
+13.208% { fill: #FFFF; }
+14.151% { fill: #FFF6; }
+14.465% { fill: #FFF6; }
+15.094% { fill: #FFFF; }
+16.038% { fill: #FFF6; }
+16.352% { fill: #FFFF; }
+17.296% { fill: #FFF6; }
+17.610% { fill: #FFFF; }
+17.925% { fill: #FFF6; }
+18.239% { fill: #FFF6; }
+18.868% { fill: #FFF6; }
+20.126% { fill: #FFF6; }
+20.755% { fill: #FFFF; }
+21.069% { fill: #FFF6; }
+21.384% { fill: #FFFF; }
+21.698% { fill: #FFF6; }
+22.013% { fill: #FFFF; }
+22.956% { fill: #FFF6; }
+23.270% { fill: #FFF6; }
+23.899% { fill: #FFFF; }
+24.843% { fill: #FFF6; }
+25.157% { fill: #FFF6; }
+25.786% { fill: #FFFF; }
+26.730% { fill: #FFF6; }
+27.044% { fill: #FFFF; }
+27.358% { fill: #FFF6; }
+27.673% { fill: #FFFF; }
+28.616% { fill: #FFF6; }
+28.931% { fill: #FFFF; }
+29.245% { fill: #FFF6; }
+29.560% { fill: #FFF6; }
+30.189% { fill: #FFFF; }
+31.132% { fill: #FFF6; }
+31.447% { fill: #FFF6; }
+32.075% { fill: #FFFF; }
+32.390% { fill: #FFF6; }
+32.704% { fill: #FFFF; }
+33.019% { fill: #FFF6; }
+33.333% { fill: #FFFF; }
+34.277% { fill: #FFF6; }
+34.591% { fill: #FFFF; }
+34.906% { fill: #FFF6; }
+35.220% { fill: #FFF6; }
+35.849% { fill: #FFF6; }
+37.107% { fill: #FFF6; }
+37.736% { fill: #FFFF; }
+38.050% { fill: #FFF6; }
+38.365% { fill: #FFFF; }
+38.679% { fill: #FFF6; }
+38.994% { fill: #FFFF; }
+39.937% { fill: #FFF6; }
+40.252% { fill: #FFF6; }
+40.881% { fill: #FFFF; }
+41.195% { fill: #FFF6; }
+41.509% { fill: #FFFF; }
+41.824% { fill: #FFF6; }
+42.138% { fill: #FFFF; }
+42.453% { fill: #FFF6; }
+42.767% { fill: #FFF6; }
+43.396% { fill: #FFFF; }
+43.711% { fill: #FFF6; }
+44.025% { fill: #FFF6; }
+44.654% { fill: #FFFF; }
+44.969% { fill: #FFF6; }
+45.283% { fill: #FFFF; }
+45.597% { fill: #FFF6; }
+45.912% { fill: #FFFF; }
+46.226% { fill: #FFF6; }
+46.541% { fill: #FFF6; }
+47.170% { fill: #FFF6; }
+48.428% { fill: #FFF6; }
+49.057% { fill: #FFFF; }
+49.371% { fill: #FFF6; }
+49.686% { fill: #FFFF; }
+50.000% { fill: #FFF6; }
+50.314% { fill: #FFFF; }
+50.629% { fill: #FFF6; }
+50.943% { fill: #FFF6; }
+51.572% { fill: #FFFF; }
+51.887% { fill: #FFF6; }
+52.201% { fill: #FFFF; }
+52.516% { fill: #FFF6; }
+52.830% { fill: #FFFF; }
+53.145% { fill: #FFF6; }
+53.459% { fill: #FFFF; }
+54.403% { fill: #FFF6; }
+54.717% { fill: #FFF6; }
+55.346% { fill: #FFFF; }
+56.289% { fill: #FFF6; }
+56.604% { fill: #FFFF; }
+57.547% { fill: #FFF6; }
+57.862% { fill: #FFFF; }
+58.176% { fill: #FFF6; }
+58.491% { fill: #FFF6; }
+59.119% { fill: #FFF6; }
+60.377% { fill: #FFF6; }
+61.006% { fill: #FFFF; }
+61.950% { fill: #FFF6; }
+62.264% { fill: #FFF6; }
+62.893% { fill: #FFFF; }
+63.836% { fill: #FFF6; }
+64.151% { fill: #FFFF; }
+65.094% { fill: #FFF6; }
+65.409% { fill: #FFFF; }
+66.352% { fill: #FFF6; }
+66.667% { fill: #FFF6; }
+67.296% { fill: #FFF6; }
+68.553% { fill: #FFF6; }
+69.182% { fill: #FFFF; }
+69.497% { fill: #FFF6; }
+69.811% { fill: #FFFF; }
+70.126% { fill: #FFF6; }
+70.440% { fill: #FFF6; }
+71.069% { fill: #FFFF; }
+72.013% { fill: #FFF6; }
+72.327% { fill: #FFF6; }
+72.956% { fill: #FFFF; }
+73.270% { fill: #FFF6; }
+73.585% { fill: #FFFF; }
+73.899% { fill: #FFF6; }
+74.214% { fill: #FFFF; }
+74.528% { fill: #FFF6; }
+74.843% { fill: #FFF6; }
+75.472% { fill: #FFF6; }
+76.730% { fill: #FFF6; }
+77.358% { fill: #FFFF; }
+77.673% { fill: #FFF6; }
+77.987% { fill: #FFFF; }
+78.302% { fill: #FFF6; }
+78.616% { fill: #FFFF; }
+79.560% { fill: #FFF6; }
+79.874% { fill: #FFFF; }
+80.189% { fill: #FFF6; }
+80.503% { fill: #FFF6; }
+81.132% { fill: #FFFF; }
+81.447% { fill: #FFF6; }
+81.761% { fill: #FFFF; }
+82.075% { fill: #FFF6; }
+82.390% { fill: #FFFF; }
+83.333% { fill: #FFF6; }
+83.648% { fill: #FFF6; }
+84.277% { fill: #FFFF; }
+84.591% { fill: #FFF6; }
+84.906% { fill: #FFFF; }
+85.849% { fill: #FFF6; }
+86.164% { fill: #FFFF; }
+86.478% { fill: #FFF6; }
+86.792% { fill: #FFFF; }
+87.107% { fill: #FFF6; }
+87.421% { fill: #FFF6; }
+88.050% { fill: #FFFF; }
+88.365% { fill: #FFF6; }
+88.679% { fill: #FFFF; }
+89.623% { fill: #FFF6; }
+89.937% { fill: #FFFF; }
+90.252% { fill: #FFF6; }
+90.566% { fill: #FFFF; }
+90.881% { fill: #FFF6; }
+91.195% { fill: #FFF6; }
+91.824% { fill: #FFFF; }
+92.138% { fill: #FFF6; }
+92.453% { fill: #FFF6; }
+93.082% { fill: #FFFF; }
+93.396% { fill: #FFF6; }
+93.711% { fill: #FFFF; }
+94.025% { fill: #FFF6; }
+94.340% { fill: #FFFF; }
+94.654% { fill: #FFF6; }
+94.969% { fill: #FFF6; }
+95.597% { fill: #FFFF; }
+96.541% { fill: #FFF6; }
+96.855% { fill: #FFF6; }
+97.484% { fill: #FFF6; }
+98.742% { fill: #FFF6; }
+100% { fill: #FFF6; }
+}
+@keyframes rainbow1 {
+  0% { stop-color: hsl(27.3, 100%, 37.5%); }
+  25% { stop-color: hsl(13.6, 100%, 37.5%); }
+  50% { stop-color: hsl(0, 100%, 37.5%); }
+  75% { stop-color: hsl(13.6, 100%, 37.5%); }
+  100% { stop-color: hsl(27.3, 100%, 37.5%); }
+}
+@keyframes rainbow2 {
+  0% { stop-color: hsl(47, 80.9%, 61%); }
+  25% { stop-color: hsl(38.5, 80.9%, 61%); }
+  50% { stop-color: hsl(30, 80.9%, 61%); }
+  75% { stop-color: hsl(38.5, 80.9%, 61%); }
+  100% { stop-color: hsl(47, 80.9%, 61%); }
+}
+#gradient > stop:first-child {
+  animation: rainbow1 30s infinite linear;
+}
+#gradient > stop:last-child {
+  animation: rainbow2 30s infinite linear;
+}
+.center {
+  animation: blink 1200s infinite;
+  animation-delay: 10s;
+}
+.sharp {
+  animation-timing-function: steps(1, end);
+}
+#center:not(.center) {
+  transform: translate(0, -192px);
+}
+</style>
+<defs>
+<linearGradient id="gradient" gradientTransform="rotate(-30 0.5 0.5)">
+  <stop offset="0%" stop-color="#bf5700"/>
+  <stop offset="100%" stop-color="#ecc94b"/>
+</linearGradient>
+</defs>
+<rect width="384" height="576" fill="url(#gradient)" stroke="none" />
+<path id="lock" d="m64 256h256v256h-256zm192 64h-128v128h128zm-192-256h256v160h-64v-96h-128v96h-64z" fill="#fff" stroke="none"/>
+<path id="center" class="center" d="m160 352h64v64h-64z" fill="#fff" stroke="none"/>
+<script>
+document.getElementById("center").classList.remove("center");
+</script>
+</svg>

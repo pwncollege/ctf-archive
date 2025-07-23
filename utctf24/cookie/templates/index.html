@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Click Counter</title>
+    <style>
+        /* Style for the cookie image */
+        #cookieImage {
+            cursor: pointer; /* Change cursor to pointer when hovering over the image */
+            width: 150px; /* Set the width of the image */
+            height: auto; /* Auto-adjust the height to maintain aspect ratio */
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var count = parseInt(localStorage.getItem('count')) || 0;
+            var cookieImage = document.getElementById('cookieImage');
+            var display = document.getElementById('clickCount');
+
+            display.textContent = count;
+
+            cookieImage.addEventListener('click', function() {
+                count++;
+                display.textContent = count;
+                localStorage.setItem('count', count);
+
+                if (count >= 10000000) {
+                    fetch('/click', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/x-www-form-urlencoded'
+                        },
+                        body: 'count=' + count
+                    })
+                    .then(response => response.json())
+                    .then(data => {
+                        alert(data.flag);
+                    });
+                }
+            });
+        });
+    </script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Off-Brand Cookie Clicker</h1>
+        <h3>My record is 10,000,000. Can you beat it?</h3>
+        <p>Number of Clicks: <span id="clickCount">0</span></p>
+        <img id="cookieImage" src="https://i.imgur.com/hpU2K5q.png" alt="Cookie Image">
+    </div>
+</body>
+</html>
