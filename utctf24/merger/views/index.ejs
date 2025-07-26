@@ -1,0 +1,160 @@
+<html lang="en">
+
+<head>
+  <title>Easy Mergers</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Raleway:400,500,500i,700,800i" rel="stylesheet">
+  <style>
+    body {
+      background-color: black;
+    }
+
+    .container {
+      background-color: white;
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-sm   navbar-light bg-light">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03"
+      aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" href="#">Easy Mergers v0.1<span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item dropdown dmenu">
+    </div>
+  </nav>
+  <div class="container">
+    <h1>Welcome! You are visitor # <%= userID %>!</h1>
+
+    <p>We use state-of-the-art legal technology to allow you to bypass the FTC and merge your companies easily!</p>
+
+    <form id="attributeForm" onsubmit="submitForm(event)">
+      <div id="attributeInputs">
+        <!-- Initial input fields for attribute and value -->
+        <div class="attribute-input">
+          <input type="text" name="attribute[]" placeholder="Name">
+          <input type="text" name="value[]" placeholder="Value">
+        </div>
+      </div>
+      <button type="button" onclick="addAttribute()">Add Attribute</button>
+      <br />
+      <input type="checkbox" id="absorbCheckbox" name="absorbCheckbox" onchange="toggleField()">
+      <label for="absorbCheckbox">Absorb it into Company # instead</label>
+      <input type="text" name="num" id="num" disabled>
+      <br><br>
+      <input type="submit" value="Create Company">
+    </form>
+
+    <h2>List of your Companies</h2>
+    <div id="companyData"></div>
+    <script>
+      function toggleField() {
+        var additionalField = document.getElementById('num');
+        var absorbCheckbox = document.getElementById('absorbCheckbox');
+        additionalField.disabled = !absorbCheckbox.checked;
+      }
+      function displayCompanies() {
+        fetch('/api/getAll')
+          .then(response => response.json())
+          .then(data => {
+            // Clear previous data
+            document.getElementById('companyData').innerHTML = '';
+
+            // Display fetched data
+            if (data && data.length > 0) {
+              var container = document.getElementById('companyData');
+              var list = document.createElement('ul');
+              data.forEach(obj => {
+                var listItem = document.createElement('li');
+                listItem.textContent = JSON.stringify(obj);
+                list.appendChild(listItem);
+              });
+              container.appendChild(list);
+            } else {
+              document.getElementById('companyData').textContent = 'No data available.';
+            }
+          })
+          .catch(error => {
+            console.error('Error:', error);
+            document.getElementById('companyData').textContent = 'Error fetching data.';
+          });
+      }
+      function addAttribute() {
+        var attributeInputs = document.getElementById('attributeInputs');
+        var newAttributeInput = document.createElement('div');
+        newAttributeInput.innerHTML = `
+                    <div class="attribute-input">
+                        <input type="text" name="attribute[]" placeholder="Attribute">
+                        <input type="text" name="value[]" placeholder="Value">
+                    </div>`;
+        attributeInputs.appendChild(newAttributeInput);
+      }
+      function submitForm(event) {
+        event.preventDefault(); // Prevent default form submission
+
+        // Collect attributes and values
+        var attributes = [];
+        var values = [];
+        var attributeInputs = document.getElementsByName('attribute[]');
+        var valueInputs = document.getElementsByName('value[]');
+        for (var i = 0; i < attributeInputs.length; i++) {
+          attributes.push(attributeInputs[i].value);
+          values.push(valueInputs[i].value);
+        }
+
+        // Create JSON object
+        var formData = {
+          "attributes": attributes,
+          "values": values
+        };
+
+        var endpoint = '/api/makeCompany';
+        if (document.getElementById('absorbCheckbox').checked) {
+          endpoint = '/api/absorbCompany/' + document.getElementById('num').value;
+        }
+
+
+        // Send JSON object to the server
+        fetch(endpoint, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(formData)
+        })
+          .then(response => {
+            console.log(response);
+            if (response.ok) {
+              alert('Form submitted! It will display at the bottom if it was successful');
+              // Optionally, redirect the user or do something else
+              displayCompanies();
+            } else {
+              alert('Failed to submit form.');
+            }
+          })
+          .catch(error => {
+            console.error('Error:', error);
+            alert('An error occurred while submitting the form.');
+          });
+      }
+
+      displayCompanies();
+    </script>
+
+
+  </div>
+
+</body>
+
+</html>
