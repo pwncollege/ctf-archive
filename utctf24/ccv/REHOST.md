@@ -1,6 +1,6 @@
 # REHOSTING
 
-Files can be found here: [UTCTF 2024](https://github.com/utisss/UTCTF-24/tree/main/web-mergers)
+Files can be found here: [UTCTF 2024](https://github.com/utisss/UTCTF-24/tree/main/misc-ccv)
 
 ## Challenge Setup
 This challenge uses `flag.txt` in the current working directory to get the flag, besides that it should work without any other dependencies.
