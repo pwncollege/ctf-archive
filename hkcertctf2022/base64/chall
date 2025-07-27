@@ -30,10 +30,22 @@ def main():
     random.shuffle(key)
     key = ''.join(key)
 
-    with open('/flag', 'rb') as f: message = f.read()
+    # Read the flag from /flag
+    with open('/flag', 'r') as f:
+        flag = f.read().strip()
+    
+    # Read the article template and insert the flag
+    with open('article.txt', 'r') as f:
+        article_template = f.read()
+    
+    # Replace the placeholder with the actual flag
+    article_with_flag = article_template.replace('{FLAG_PLACEHOLDER}', flag)
+    
+    # Convert to bytes for encryption
+    message = article_with_flag.encode('utf-8')
 
     encrypted = base64_encryption(message, key)
-    with open('message.enc.txt', 'w') as f: f.write(encrypted)
+    with open('/challenge/message.enc.txt', 'w') as f: f.write(encrypted)
 
 if __name__ == '__main__':
     main()

@@ -1,0 +1,6 @@
+id: sekaictf2023
+name: SekaiCTF 2023
+
+challenges:
+  - id: cosmic
+    name: PWN - 100 - Cosmic

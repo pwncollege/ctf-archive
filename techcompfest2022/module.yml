@@ -1,0 +1,6 @@
+id: techcomfest2022
+name: TECHCOMFEST 2022
+
+challenges:
+  - id: python
+    name: WEB - 310 - Yet Another Python SSTI Challenge

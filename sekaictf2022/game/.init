@@ -1,0 +1,9 @@
+#!/bin/bash
+
+(cd /challenge && nohup php -S 0.0.0.0:8000 > server.log 2>&1 &) 
+
+chown root:root /challenge/flag.php
+
+chmod 600 /challenge/flag.php
+
+rm /challenge/REHOST.md

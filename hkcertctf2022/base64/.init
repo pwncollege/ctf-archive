@@ -1,0 +1,5 @@
+#!/bin/bash
+
+/challenge/chall
+
+rm /challenge/article.txt
