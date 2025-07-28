@@ -32,9 +32,6 @@ challenges:
     name: FORENSICS - wizardry
   - id: ccv
     name: MISC - cvv
-  # - id: webserver
-  #   name: MISC - webserver
-  #   image: shreycrey/webserver-image
   - id: pes128
     name: REV - PES 128
   - id: revbegin
@@ -43,11 +40,4 @@ challenges:
     name: WEB - cookie clicker
   - id: merger
     name: WEB - mergers
-    image: shreycrey/merger-image
-  # - id: range
-  #   name: WEB - range
-  #   image: shreycrey/range-image
-  # - id: shrod
-  #   name: WEB - schrodinger
-  #   image: prathamgupta36/ctf-archive:2.0
-    
+    image: shreycrey/merger-image   
