@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it using the metadata below."
+title: "CTF Archive"
+version: "v1.0.0"
+#doi: "10.5281/zenodo.1234567"
+date-released: "2024-05-17"
+authors:
+  - family-names: "Gupta"
+    given-names:  "Pratham"
+    orcid:        "https://orcid.org/0009-0007-3840-4675" 
+#  - family-names: "Smith"
+#    given-names:  "Alice"
+#    orcid:        "https://orcid.org/0000-0001-2345-6789"
+#  - family-names: ""
+#    given-names:  ""
+    affiliation:  "Arizona State University"
+repository-code: "https://github.com/pwncollege/ctf-archive"
