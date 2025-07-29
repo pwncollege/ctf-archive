@@ -1,0 +1,43 @@
+id: utctf2024
+name: UTCTF 2024
+
+challenges:
+  - id: babyrsa
+    name: CRYPTO - baby rsa
+  - id: bitspieces
+    name: CRYPTO - bits and pieces
+  - id: blsforgery
+    name: CRYPTO - blsforgery
+  - id: cryptordle
+    name: CRYPTO - cryptordle  
+  - id: longcaesar
+    name: CRYPTO - long caesar
+  - id: numbrrrs
+    name: CRYPTO - numbers go brrr  
+  - id: numbrrrs2
+    name: CRYPTO - numbers go brrr 2 
+  - id: morse
+    name: CRYPTO - simple morse
+  - id: simplesig
+    name: CRYPTO - simple signature
+  - id: git
+    name: FORENSICS - git
+  - id: insanitycheck
+    name: FORENSICS - insanity check reimagined
+  - id: keyboard
+    name: FORENSICS - keyboard
+  - id: osint2
+    name: FORENSICS - OSINT
+  - id: wizardry
+    name: FORENSICS - wizardry
+  - id: ccv
+    name: MISC - cvv
+  - id: pes128
+    name: REV - PES 128
+  - id: revbegin
+    name: REV - beginner
+  - id: cookie
+    name: WEB - cookie clicker
+  - id: merger
+    name: WEB - mergers
+    image: shreycrey/merger-image   
