@@ -1,0 +1,6 @@
+id: sekaictf2025
+name: SekaiCTF 2025
+
+challenges:
+  - id: myflask
+    name: WEB - 100 - My Flask App
