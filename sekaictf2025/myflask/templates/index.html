@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Flask App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="background-gradient"></div>
+    <div class="stars"></div>
+    
+    <div class="container">
+        <div class="miku-container">
+            <img src="{{ url_for('static', filename='images/miku.webp') }}" alt="Hatsune Miku" class="miku-character">
+            <div class="chat-area">
+                <div class="chat-bubble" id="chatBubble">
+                    <div class="bubble-content">
+                        <p id="mikuText" class="miku-text"></p>
+                        <div class="typing-indicator" id="typingIndicator">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+                    <div class="bubble-tail"></div>
+                </div>
+                
+                <div class="response-buttons" id="responseButtons" style="display: none;">
+                    <button class="response-btn" id="yesBtn">Yes</button>
+                    <button class="response-btn" id="noBtn">No</button>
+                </div>
+                
+                <div class="user-input" id="userInput" style="display: none;">
+                    <input type="text" id="userResponse" placeholder="Type your response...">
+                    <button id="sendBtn">Send</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="{{ url_for('static', filename='js/miku.js') }}"></script>
+</body>
+</html> 
