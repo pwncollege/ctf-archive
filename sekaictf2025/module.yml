@@ -4,3 +4,5 @@ name: SekaiCTF 2025
 challenges:
   - id: myflask
     name: WEB - 100 - My Flask App
+  - id: alterego
+    name: CRYPTO - 394 - Alter Ego
