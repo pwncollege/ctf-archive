@@ -4,5 +4,6 @@ name: SekaiCTF 2025
 challenges:
   - id: myflask
     name: WEB - 100 - My Flask App
+    image: prathamgupta36/ctf-archive-sekaictf2025-myflaskapp
   - id: alterego
     name: CRYPTO - 394 - Alter Ego
