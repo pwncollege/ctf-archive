@@ -5,17 +5,17 @@ SekaiCTF returns for its fourth edition! While the overall difficulty has been d
 SekaiCTF 2025 will serve as dual prequalifier for MaltaCTF 2025 Finals and the 10th XCTF Finals.
 
 [+] Sponsors
-・OtterSec (https://osec.io/)
-・Zellic (https://www.zellic.io/)
-・Trail of Bits (https://www.trailofbits.com/)
-・Sec3 (https://www.sec3.dev/)
-・Vector 35 / Binary Ninja (https://binary.ninja/)
-・Hack The Box (https://www.hackthebox.com/)
+- OtterSec (https://osec.io/)
+- Zellic (https://www.zellic.io/)
+- Trail of Bits (https://www.trailofbits.com/)
+- Sec3 (https://www.sec3.dev/)
+- Vector 35 / Binary Ninja (https://binary.ninja/)
+- Hack The Box (https://www.hackthebox.com/)
 
 [+] Partners
-・Google Cloud (https://cloud.google.com/)
-・XCTF League
-・Friendly Maltese Citizens
+- Google Cloud (https://cloud.google.com/)
+- XCTF League
+- Friendly Maltese Citizens
 
 ---
 **Original Date:** Sat, 16 Aug. 2025, 01:00 UTC — Mon, 18 Aug. 2025, 01:00 UTC<br>
