@@ -2,5 +2,7 @@ id: dicectfquals2025
 name: DiceCTF 2025 Quals
 
 challenges:
+  - id: vorpal
+    name: CRYPTO - 70 - vorpal-sword
   - id: satisfied
     name: CRYPTO - 80 - satisfied
