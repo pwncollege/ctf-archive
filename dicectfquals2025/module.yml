@@ -2,6 +2,8 @@ id: dicectfquals2025
 name: DiceCTF 2025 Quals
 
 challenges:
+  - id: winxy
+    name: CRYPTO - 70 - winxy-pistol
   - id: vorpal
     name: CRYPTO - 70 - vorpal-sword
   - id: satisfied
