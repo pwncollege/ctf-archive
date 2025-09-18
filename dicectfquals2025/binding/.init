@@ -1,0 +1,4 @@
+#!/bin/bash
+
+cd /challlenge && pdflatex cpu_documentation.tex 
+rm /challenge/cpu_documentation.tex
