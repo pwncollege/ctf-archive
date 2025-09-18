@@ -1,0 +1,6 @@
+id: dicectfquals2025
+name: DiceCTF 2025 Quals
+
+challenges:
+  - id: satisfied
+    name: CRYPTO - 80 - satisfied
