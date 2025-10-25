@@ -40,4 +40,5 @@ challenges:
     name: WEB - cookie clicker
   - id: merger
     name: WEB - mergers
-    image: shreycrey/merger-image   
+    image: prathamgupta36/ctf-archive:2.0   
+
