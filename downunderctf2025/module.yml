@@ -12,3 +12,5 @@ challenges:
     name: CRYPTO - 300 - hungry-hungry-caterpillar
   - id: spawn
     name: CRYPTO - 400 - good game spawn point
+  - id: shrsa
+    name: CRYPTO - 500 - SH-RSA
