@@ -12,3 +12,5 @@ challenges:
     name: REV - 491 - Flag Checker
   - id: breakme
     name: CRYPTO - 100 - Break Me!
+  - id: 1337crypt
+    name: CRYPTO - 500 - 1337crypt v2
