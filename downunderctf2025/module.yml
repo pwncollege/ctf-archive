@@ -6,3 +6,5 @@ challenges:
     name: PWN - 100 - fakeobj.py
   - id: rw
     name: PWN - 300 - rw.py
+  - id: email
+    name: PWN - 300 - corporate-cliche
