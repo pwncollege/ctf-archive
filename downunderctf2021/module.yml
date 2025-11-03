@@ -12,7 +12,7 @@ challenges:
     name: REV - 491 - Flag Checker
   - id: breakme
     name: CRYPTO - 100 - Break Me!
-  - id: substition
+  - id: substitution
     name: CRYPTO - 100 - Substitution Cipher I
   - id: treaure
     name: CRYPTO - 100 - treaure
