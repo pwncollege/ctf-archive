@@ -14,3 +14,5 @@ challenges:
     name: CRYPTO - 400 - good game spawn point
   - id: shrsa
     name: CRYPTO - 500 - SH-RSA
+  - id: friend
+    name: CRYPTO - 300 - Speak Friend, and Enter
