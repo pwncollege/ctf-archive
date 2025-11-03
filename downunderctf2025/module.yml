@@ -8,3 +8,5 @@ challenges:
     name: PWN - 300 - rw.py
   - id: email
     name: PWN - 300 - corporate-cliche
+  - id: hungry
+    name: CRYPTO - 300 - hungry-hungry-caterpillar
