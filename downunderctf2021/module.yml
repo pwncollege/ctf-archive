@@ -16,3 +16,5 @@ challenges:
     name: CRYPTO - 500 - 1337crypt v2
   - id: power
     name: CRYPTO - 500 - power sign
+  - id: substition
+    name: CRYPTO - 100 - Substitution Cipher I
