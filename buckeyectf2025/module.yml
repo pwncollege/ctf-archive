@@ -4,3 +4,5 @@ name: BuckeyeCTF 2025
 challenges:
   - id: character
     name: PWN - 100 - Character assassination
+  - id: squarecipher
+    name: REV - 100 - Square Cipher
