@@ -1,0 +1,6 @@
+id: buckeyectf2025
+name: BuckeyeCTF 2025
+
+challenges:
+  - id: character
+    name: PWN - 100 - Character assassination
