@@ -12,4 +12,4 @@ challenges:
     name: MISC - 80 - dicecap
   - id: binding
     name: MISC - 100 - bcu-binding
-    image: prathamgupta36/ctf-archive:2.2
+    image: prathamgupta36/ctf-archive:2.4
