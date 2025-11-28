@@ -168,7 +168,7 @@ class UOV:
         p = 0
         for i in range(d):
             for j in range(i, d):
-                m[i][j] = int.from_bytes( b[ p : p + self.m_sz ] )
+                m[i][j] = int.from_bytes( b[ p : p + self.m_sz ], byteorder='big', signed=False )
                 p += self.m_sz
         return m
 
@@ -178,7 +178,7 @@ class UOV:
         for i in range(d):
             for j in range(i, d):
                 t = m[i][j]
-                b += t.to_bytes(self.m_sz)
+                b += t.to_bytes(self.m_sz, byteorder='big', signed=False)
         return b
 
     def unpack_mrect(self, b, h, w):
@@ -187,7 +187,7 @@ class UOV:
         p = 0
         for i in range(h):
             for j in range(w):
-                m[i][j] = int.from_bytes( b[ p : p + self.m_sz ] )
+                m[i][j] = int.from_bytes( b[ p : p + self.m_sz ], byteorder='big', signed=False )
                 p += self.m_sz
         return m
 
@@ -196,7 +196,7 @@ class UOV:
         b = b''
         for i in range(h):
             for j in range(w):
-                b += m[i][j].to_bytes(self.m_sz)
+                b += m[i][j].to_bytes(self.m_sz, byteorder='big', signed=False)
         return b
 
     def unpack_rect(self, b, h, w):
@@ -257,7 +257,7 @@ class UOV:
         #   transpose and add constant on right hand side
         h   =   self.m
         w   =   self.m + 1
-        l   =   [ self.gf_unpack( x.to_bytes(self.m_sz) ) for x in l ]
+        l   =   [ self.gf_unpack( x.to_bytes(self.m_sz, byteorder='big', signed=False) ) for x in l ]
         m   =   [ [l[i][j] for i in range(h)] + [c[j]]
                             for j in range(h) ]
 
@@ -311,7 +311,7 @@ class UOV:
             for j in range(i, m):
                 y ^= self.gf_mulm(m3[i][j], self.gf_mul(x[v + i], x[v + j]))
 
-        return y.to_bytes(self.m_sz)
+        return y.to_bytes(self.m_sz, byteorder='big', signed=False)
 
     def expand_p(self, seed_pk):
         """ UOV.ExpandP(). """
@@ -415,13 +415,13 @@ class UOV:
             #   10:     Solve Lx = t - y for x
 
             #   "evaluate P1 with the vinegars"
-            r = int.from_bytes(t)
+            r = int.from_bytes(t, byteorder='big', signed=False)
             for i in range(self.v):
                 u = 0
                 for j in range(i, self.v):
                     u ^= self.gf_mulm( m1[i][j], v[j] )
                 r ^= self.gf_mulm( u, v[i] )
-            r = self.gf_unpack(r.to_bytes(self.m_sz))
+            r = self.gf_unpack(r.to_bytes(self.m_sz, byteorder='big', signed=False))
 
             x = self.gauss_solve(ll, r)
 
