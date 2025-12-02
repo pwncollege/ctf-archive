@@ -1,5 +1,7 @@
 Tired of getting your corporate mergers blocked by the FTC? Good news! Just give us your corporate information and let our unpaid interns do the work!
 
+`Install modules by running "sudo npm install"`
+
 `Start the app by running "node app.js"`
 
 ---
