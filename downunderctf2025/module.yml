@@ -6,3 +6,15 @@ challenges:
     name: PWN - 100 - fakeobj.py
   - id: rw
     name: PWN - 300 - rw.py
+  - id: email
+    name: PWN - 300 - corporate-cliche
+  - id: yetanotherlogin
+    name: CRYPTO - 100 - yet another login
+  - id: friend
+    name: CRYPTO - 300 - Speak Friend, and Enter
+  - id: hungry
+    name: CRYPTO - 300 - hungry-hungry-caterpillar
+  - id: spawn
+    name: CRYPTO - 400 - good game spawn point
+  - id: shrsa
+    name: CRYPTO - 500 - SH-RSA
