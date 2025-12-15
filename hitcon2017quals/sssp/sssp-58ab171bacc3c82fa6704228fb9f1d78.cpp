@@ -12,6 +12,29 @@ string green(const string &s) {
     return "\e[1;32m"s + s + "\e[0m";
 }
 
+void print_flag() {
+    char flag[512];
+    setgid(0);
+    setuid(0);
+    FILE *f = fopen("/flag", "r");
+    if (f == NULL) {
+        std::cout << red("Error opening flag file") << std::endl;
+        return;
+    }
+
+    if (fgets(flag, sizeof(flag), f) == NULL) {
+        fclose(f);
+        std::cout << red("Error reading flag file") << std::endl;
+        return;
+    }
+    fclose(f);
+
+    size_t len = strlen(flag);
+    if (len > 0 && flag[len - 1] == '\n') flag[len - 1] = '\0';
+
+    std::cout << green(std::string("Access granted! Flag: ") + flag) << std::endl;
+}
+
 istream& operator>>(istream &is, Num &x) {
     string s;
     is >> s;
@@ -128,9 +151,11 @@ bool run() {
 int main() {
     signal(SIGALRM, TLE);
     if (run()) {
-        cout << green(getenv("FLAG")) << endl;
-    } else {
-        cout << red("Wrong Answer") << endl;
+    print_flag();
+    } 
+    else {
+    cout << red("Wrong Answer") << endl;
     }
+
     return 0;
 }

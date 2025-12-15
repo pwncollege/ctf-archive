@@ -55,6 +55,9 @@ If you want to solve the challenge without hosting it on your own, you can run t
 For any questions or further assistance, please contact us:
 - GitHub Issues: [https://github.com/pwncollege/ctf-archive/issues](https://github.com/pwncollege/ctf-archive/issues)
 
+## References & Citations
+For any citations, refer to [CTF Archive Paper](https://arxiv.org/abs/2512.01233).
+
 We hope you find the CTF Archive helpful and educational. 
 
 Happy hacking!
