@@ -61,7 +61,7 @@ Future Work:
 
 # Sage imports
 from sage.all import prod, ZZ, PolynomialRing
-from sage.rings.generic import ProductTree
+#from sage.rings.generic import ProductTree
 
 # Local imports
 from montgomery_isogenies.kummer_line import KummerLine, KummerPoint
