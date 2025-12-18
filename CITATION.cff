@@ -1,17 +1,20 @@
-cff-version: 1.2.0
+cff-version: 1.2.2
 message: "If you use this software, please cite it using the metadata below."
 title: "CTF Archive"
 version: "v1.0.0"
-#doi: "10.5281/zenodo.1234567"
+doi: "10.48550/arXiv.2512.01233"
 date-released: "2024-05-17"
 authors:
   - family-names: "Gupta"
     given-names:  "Pratham"
-    orcid:        "https://orcid.org/0009-0007-3840-4675" 
+    orcid:        "https://orcid.org/0009-0007-3840-4675"
+    affiliation:  "Arizona State University"
   - family-names: "Gabani"
     given-names:  "Aditya"
+    affiliation:  "Arizona State University"
   - family-names: "Nelson"
     given-names:  "Connor"
+    affiliation:  "Arizona State University"
   - family-names: "Shoshitaishvili"
     given-names:  "Yan"
     affiliation:  "Arizona State University"
