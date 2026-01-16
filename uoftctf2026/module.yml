@@ -1,0 +1,6 @@
+id: uoftctf2026
+name: UofTCTF 2026
+
+challenges:
+  - id: orca
+    name: CRYPTO - 477 - Orca
