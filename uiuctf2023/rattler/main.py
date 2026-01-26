@@ -1,4 +1,7 @@
-#!/usr/bin/python3
+#!/run/dojo/bin/exec-suid -- /usr/bin/python3
+
+import sys
+sys.path.append('/chroot/usr/local/lib/python3.8/site-packages')
 
 from RestrictedPython import compile_restricted
 from RestrictedPython import Eval
