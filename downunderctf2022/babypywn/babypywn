@@ -2,6 +2,7 @@
 
 from ctypes import CDLL, c_buffer
 libc = CDLL('/usr/lib/x86_64-linux-gnu/libc.so.6')
+prime = [c_buffer(512) for _ in range(10)]
 buf1 = c_buffer(512)
 buf2 = c_buffer(512)
 libc.gets(buf1)
