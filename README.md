@@ -61,3 +61,10 @@ For any citations, refer to [CTF Archive Paper](https://arxiv.org/abs/2512.01233
 We hope you find the CTF Archive helpful and educational. 
 
 Happy hacking!
+
+---
+<small>
+
+*Disclaimer:*  This module is an archive of amazing work done by heroes of the CTF community, not an active competitive event! Credit for the challenges goes to their individual authors, which we will strive to properly attribute wherever possible.
+
+<small>
