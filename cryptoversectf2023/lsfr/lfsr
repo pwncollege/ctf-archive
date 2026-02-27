@@ -2,15 +2,16 @@
 
 from Crypto.Util.number import *
 # from secret import flag
+prefix = "pwn.college{"
 
 with open('/flag', 'r') as file:
     flag = file.read().strip()
 
-# assert flag.startswith("cvctf{")
-# assert flag.endswith("}")
+assert flag.startswith(prefix)
+assert flag.endswith("}")
 
-flag = flag[6:-1].encode()
-# assert len(flag) == 8
+flag = flag[len(prefix):len(prefix)+8].encode()
+assert len(flag) == 8
 
 def explore(state, mask):
     curr = (state << 1) & 0xffffffff
