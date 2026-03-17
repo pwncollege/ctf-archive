@@ -1,0 +1,10 @@
+id: cactuscon2026
+name: CactusCon14 CTF 2026
+
+challenges:
+  - id: moveit
+    name: CRYPTO - 150 - MOVeit
+  - id: schwisfty
+    name: CRYPTO - 35 - Schwifty RSA
+  - id: dumpdrop
+    name: WEB - 65 - DumbDrop
