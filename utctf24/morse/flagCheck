@@ -1,0 +1,19 @@
+#!/usr/bin/exec-suid -- /run/dojo/bin/python3
+
+import hashlib
+from pathlib import Path
+
+
+def main():
+    expected = Path(__file__).with_name(".flag.sha256").read_text().strip()
+    candidate = input("Enter the flag: ")
+    digest = hashlib.sha256(candidate.encode()).hexdigest()
+
+    if digest == expected:
+        print(Path("/flag").read_text().strip())
+    else:
+        print("Incorrect flag.")
+
+
+if __name__ == "__main__":
+    main()
