@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block content %}
+<h2 class="text-xl mb-4">[SYSTEM MESSAGE] DISPLAYING PRODUCT DATA.</h2>
+
+
+<table class="w-full text-sm">
+    <thead>
+        <tr>
+            <th class="py-2">PRODUCT NAME</th>
+            <th class="py-2">DESCRIPTION</th>
+            <th class="py-2">CREATOR ID/NAME</th>
+            <th class="py-2">AVG. RATING (1-5)</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for product in products %}
+        <tr>
+            <td class="py-2">{{ product.name }}</td>
+            <td class="py-2">{{ product.description }}</td>
+            <td class="py-2">{{ product.creator|safe }}</td>
+            <td class="py-2">{{ product.rating }}</td>
+        </tr>
+        {% else %}
+        <tr>
+            <td colspan="4" class="text-center py-4">-- NO PRODUCTS FOUND FOR THIS QUERY --</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+{% endblock %}

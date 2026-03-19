@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOCAL SYSTEM: {{ title|default('File Search Utility') }}</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+
+        
+        body {
+            font-family: 'Monofett', monospace;
+            background-color: #222222;
+            color: #ffcc00; 
+            text-shadow: 0 0 5px rgba(255, 204, 0, 0.5);
+            line-height: 1.2;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            border: 3px double #ffcc00;
+            box-shadow: 0 0 15px rgba(255, 204, 0, 0.8);
+            background-color: #111111;
+            padding: 30px;
+        }
+        .title {
+            font-size: 3rem;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .flash {
+            background-color: #ff0000;
+            color: #ffffff;
+            padding: 10px;
+            margin-bottom: 15px;
+            font-weight: bold;
+            text-shadow: none;
+        }
+        input[type="text"] {
+            background-color: #333333;
+            border: 1px solid #ffcc00;
+            color: #ffcc00;
+            padding: 10px;
+            width: 100%;
+            outline: none;
+        }
+        button {
+            background-color: #cc6600;
+            color: #111111;
+            border: 1px solid #ffcc00;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background-color 0.1s;
+        }
+        button:hover {
+            background-color: #ffcc00;
+            color: #000000;
+        }
+        pre {
+            background-color: #000000;
+            padding: 15px;
+            border: 1px solid #ffcc00;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            min-height: 150px;
+            overflow-y: auto;
+        }
+        .file-list {
+            max-height: 200px;
+            overflow-y: auto;
+            border: 1px dashed #666;
+            padding: 10px;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">LOCAL ACCESS: FILE FINDER</h1>
+        <p class="text-xs mb-4 text-center text-red-400">!! WARNING: SYSTEM IS ONLY ACCESSIBLE FROM 127.0.0.1 !!</p>
+
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                {% for message in messages %}
+                    <div class="flash mb-4 text-sm">{{ message }}</div>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+
+        <form method="POST" action="/search" class="flex space-x-2 mb-6">
+            <input type="text" name="search" placeholder="Enter file pattern or command..." class="flex-grow" maxlength="18" />
+            <button type="submit">SEARCH (MAX 18 CHARS)</button>
+        </form>
+
+        <h2 class="text-xl mb-2">SYSTEM OUTPUT:</h2>
+        <pre class="text-sm">{% if search_result %}{{ search_result }}{% else %}Ready for command input...{% endif %}</pre>
+
+    
+        <p class="mt-8 text-xs text-center border-t border-dashed border-[#ffcc00] pt-4 text-[#ffcc00]">
+            LOCAL SYSTEM ONLINE // Status: Restricted Access //
+        </p>
+
+    </div>
+</body>
+</html>

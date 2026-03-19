@@ -10,12 +10,8 @@ challenges:
     name: FORENSICS - 847 - Cold Workspace
   - id: halfawake
     name: FORENSICS - 793 - Half Awake
-  - id: landfall
-    name: FORENSICS - 950 - Landfall
   - id: lastbytestanding
     name: FORENSICS - 856 - Last Byte Standing
-  - id: sherlockk
-    name: FORENSICS - 973 - Sherlockk
   - id: silentarchive
     name: FORENSICS - 886 - Silent Archive
   - id: jailbreak

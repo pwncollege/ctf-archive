@@ -1,0 +1,16 @@
+We're using a Linear Congruential Generator (LCG) defined as:
+
+  x_(n+1) = (a * x_n + c) % m
+
+where m = 4294967296 (2^32), and a and c are secret.
+
+We intercepted the first 4 outputs of the generator:
+
+  output_1 = 4176616824
+  output_2 = 2681459949
+  output_3 = 1541137174
+  output_4 = 3272915523
+
+The flag was encrypted by XORing it with output_5 (used as a 4-byte repeating key).
+
+  ciphertext (hex) = 3cff226828ec3f743bb820352aff1b7021b81b623cff31767ad428672ef6

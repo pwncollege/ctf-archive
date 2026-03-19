@@ -1,0 +1,335 @@
+:root {
+    --bg-color: #f5f5f5;
+    --text-color: #333;
+    --container-bg: white;
+    --border-color: #ccc;
+    --highlight-color: #2196F3;
+    --highlight-hover: #1976D2;
+    --progress-bg: #f0f0f0;
+    --primary-color: #2196F3;
+    --secondary-color: #ccc;
+    --textarea-bg: rgba(255, 255, 255, 0.1);
+    --danger-color: #f44336;
+}
+
+[data-theme="dark"] {
+    --bg-color: #1a1a1a;
+    --text-color: #fff;
+    --container-bg: #2d2d2d;
+    --border-color: #404040;
+    --highlight-color: #2196F3;
+    --highlight-hover: #1976D2;
+    --progress-bg: #404040;
+    --primary-color: #2196F3;
+    --secondary-color: #404040;
+    --textarea-bg: rgba(255, 255, 255, 0.05);
+    --danger-color: #f44336;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: var(--bg-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--text-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.container {
+    width: 100%;
+    max-width: 600px;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+}
+
+.theme-toggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-color);
+    transition: background-color 0.3s ease;
+}
+
+.theme-toggle:hover {
+    background-color: rgba(128, 128, 128, 0.2);
+}
+
+.theme-toggle svg {
+    width: 24px;
+    height: 24px;
+}
+
+h1 {
+    color: var(--text-color);
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.upload-container {
+    background: var(--container-bg);
+    border-radius: 10px;
+    padding: 40px 20px;
+    border: 2px dashed var(--border-color);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-bottom: 20px;
+}
+
+.upload-container.highlight {
+    border-color: var(--highlight-color);
+    background: var(--container-bg);
+}
+
+.upload-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.upload-content svg {
+    color: var(--text-color);
+    margin-bottom: 10px;
+}
+
+.upload-content p {
+    color: var(--text-color);
+    font-size: 1.1rem;
+    line-height: 1.5;
+}
+
+button {
+    background: var(--highlight-color);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: var(--highlight-hover);
+}
+
+button:disabled {
+    background: var(--border-color);
+    cursor: not-allowed;
+}
+
+.file-list {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.file-item {
+    background: var(--container-bg);
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-align: left;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.upload-button {
+    margin-top: 20px;
+    width: 100%;
+    max-width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Progress Bar Styles */
+#uploadProgress {
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.progress-container {
+    background: var(--container-bg);
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.progress-label {
+    text-align: left;
+    margin-bottom: 8px;
+    color: var(--text-color);
+    font-size: 0.9rem;
+}
+
+.progress {
+    background: var(--progress-bg);
+    border-radius: 10px;
+    height: 8px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    height: 100%;
+    background: var(--highlight-color);
+    transition: width 0.3s ease;
+}
+
+/* Modal Styles */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--bg-color);
+    z-index: 1000;
+    display: none;
+}
+
+.modal.visible {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#pin-modal .modal-content {
+    text-align: center;
+    padding: 3rem 2rem;
+    width: 100%;
+    max-width: 400px;
+    background-color: var(--container-bg);
+    border-radius: 16px;
+    box-shadow: 0 0 0 1px rgba(128, 128, 128, 0.1),
+                0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.pin-header {
+    margin-bottom: 2rem;
+}
+
+.pin-header h1 {
+    color: var(--text-color);
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.pin-header h2 {
+    color: var(--text-color);
+    opacity: 0.9;
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+
+.pin-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: center;
+    margin: 2rem 0;
+    max-width: 100%;
+    padding: 0 1rem;
+}
+
+.pin-digit {
+    width: 2.5rem;
+    height: 3rem;
+    padding: 0;
+    border: 2px solid var(--secondary-color);
+    border-radius: 8px;
+    background-color: var(--textarea-bg);
+    color: var(--text-color);
+    font-size: 1.25rem;
+    text-align: center;
+    transition: all 0.2s ease;
+    caret-color: var(--primary-color);
+}
+
+.pin-digit:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 2px var(--primary-color);
+    outline: none;
+}
+
+.pin-digit.filled {
+    border-color: var(--primary-color);
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.error-message {
+    color: var(--danger-color);
+    margin-top: 1rem;
+    font-size: 0.875rem;
+}
+
+#pin-modal .modal-buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+#pin-modal .modal-buttons button.primary {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 0.75rem 2rem;
+    font-size: 1rem;
+    min-width: 120px;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+}
+
+#pin-modal .modal-buttons button.primary:hover {
+    background-color: var(--primary-color);
+    opacity: 0.9;
+    transform: translateY(-1px);
+}
+
+#pin-modal .modal-buttons button.primary:active {
+    transform: translateY(0);
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 10px;
+    }
+    
+    h1 {
+        font-size: 2rem;
+    }
+    
+    .upload-container {
+        padding: 20px 10px;
+    }
+
+    .pin-container {
+        gap: 0.4rem;
+    }
+
+    .pin-digit {
+        width: 2.25rem;
+        height: 2.75rem;
+        font-size: 1.125rem;
+    }
+}

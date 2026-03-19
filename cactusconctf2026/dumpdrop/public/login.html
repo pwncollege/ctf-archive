@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DumbDrop - Login</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .login-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 1rem;
+        }
+
+        .pin-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .pin-header h1 {
+            margin-bottom: 0.5rem;
+        }
+
+        .pin-header h2 {
+            font-weight: 500;
+            opacity: 0.9;
+        }
+
+        #pin-form {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            justify-content: center;
+            max-width: 100%;
+            padding: 2rem 1rem;
+        }
+
+        .error-message {
+            text-align: center;
+            margin-top: 1rem;
+            color: var(--danger-color);
+            max-width: 300px;
+            line-height: 1.4;
+        }
+
+        .pin-digit.locked {
+            opacity: 0.5;
+            cursor: not-allowed;
+            border-color: var(--danger-color);
+            background-color: var(--textarea-bg);
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <div class="pin-header">
+            <h1>DumbDrop</h1>
+            <h2>Enter PIN</h2>
+        </div>
+        <form id="pin-form">
+            <!-- PIN inputs will be dynamically added here -->
+        </form>
+        <p id="pin-error" class="error-message"></p>
+    </div>
+
+    <script>
+        // Initialize theme
+        const savedTheme = localStorage.getItem('theme') || 
+            (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        document.documentElement.setAttribute('data-theme', savedTheme);
+
+        let pinLength = 4;  // Default length, will be updated from server
+
+        // Create PIN input boxes
+        const createPinInputs = (length) => {
+            const form = document.getElementById('pin-form');
+            form.innerHTML = '';  // Clear existing inputs
+            
+            for (let i = 0; i < length; i++) {
+                const input = document.createElement('input');
+                input.type = 'text';
+                input.className = 'pin-digit';
+                input.maxLength = 1;
+                input.pattern = '[0-9]';
+                input.inputMode = 'numeric';
+                input.autocomplete = 'off';
+                input.required = true;
+                form.appendChild(input);
+            }
+        };
+
+        // Handle PIN input
+        const handlePinInput = (e, index) => {
+            const input = e.target;
+            const form = document.getElementById('pin-form');
+            const inputs = [...form.querySelectorAll('.pin-digit')];
+            const value = input.value;
+
+            // Only allow numbers
+            if (!/^\d*$/.test(value)) {
+                input.value = '';
+                return;
+            }
+
+            if (value) {
+                input.classList.add('filled');
+                // Move to next input if available or submit if last
+                if (index < inputs.length - 1) {
+                    inputs[index + 1].focus();
+                } else {
+                    // Auto-submit when last digit is entered
+                    const pin = inputs.map(input => input.value).join('');
+                    if (pin.length === inputs.length) {
+                        verifyPin(pin);
+                    }
+                }
+            } else {
+                input.classList.remove('filled');
+            }
+        };
+
+        // Handle form submission
+        const verifyPin = async (pin) => {
+            try {
+                const response = await fetch('/api/verify-pin', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ pin })
+                });
+
+                const data = await response.json();
+                if (data.success) {
+                    window.location.href = '/';
+                } else {
+                    // Show error message
+                    document.getElementById('pin-error').textContent = data.error;
+                    
+                    // Only clear inputs and focus if not locked out
+                    if (!data.error.includes('try again in')) {
+                        const inputs = [...document.querySelectorAll('.pin-digit')];
+                        inputs.forEach(input => {
+                            input.value = '';
+                            input.classList.remove('filled');
+                        });
+                        inputs[0].focus();
+                    } else {
+                        // If locked out, disable all inputs
+                        const inputs = [...document.querySelectorAll('.pin-digit')];
+                        inputs.forEach(input => {
+                            input.disabled = true;
+                            input.classList.add('locked');
+                        });
+                    }
+                }
+            } catch (err) {
+                console.error('Error verifying PIN:', err);
+                document.getElementById('pin-error').textContent = 'Error verifying PIN';
+            }
+        };
+
+        // Setup PIN handling
+        const setupPinHandling = () => {
+            const form = document.getElementById('pin-form');
+            const inputs = [...form.querySelectorAll('.pin-digit')];
+
+            inputs.forEach((input, index) => {
+                input.addEventListener('input', (e) => handlePinInput(e, index));
+                input.addEventListener('keydown', (e) => {
+                    if (e.key === 'Backspace' && !input.value && index > 0) {
+                        inputs[index - 1].focus();
+                        inputs[index - 1].value = '';
+                        inputs[index - 1].classList.remove('filled');
+                    }
+                });
+                // Handle paste event
+                input.addEventListener('paste', (e) => {
+                    e.preventDefault();
+                    const pastedData = e.clipboardData.getData('text').replace(/\D/g, '').slice(0, inputs.length);
+                    if (pastedData.length > 0) {
+                        pastedData.split('').forEach((digit, i) => {
+                            if (i < inputs.length) {
+                                inputs[i].value = digit;
+                                inputs[i].classList.add('filled');
+                            }
+                        });
+                        if (pastedData.length === inputs.length) {
+                            verifyPin(pastedData);
+                        } else if (pastedData.length < inputs.length) {
+                            inputs[pastedData.length].focus();
+                        }
+                    }
+                });
+            });
+
+            form.addEventListener('submit', (e) => {
+                e.preventDefault();
+                const pin = inputs.map(input => input.value).join('');
+                if (pin.length === inputs.length) {
+                    verifyPin(pin);
+                }
+            });
+
+            // Focus first input
+            inputs[0].focus();
+        };
+
+        // Check PIN length and initialize
+        fetch('/api/pin-required')
+            .then(response => response.json())
+            .then(data => {
+                if (data.required) {
+                    pinLength = data.length;
+                    createPinInputs(pinLength);
+                    setupPinHandling();
+                } else {
+                    window.location.href = '/';
+                }
+            })
+            .catch(err => {
+                console.error('Error checking PIN requirement:', err);
+                document.getElementById('pin-error').textContent = 'Error checking PIN requirement';
+            });
+    </script>
+</body>
+</html> 
