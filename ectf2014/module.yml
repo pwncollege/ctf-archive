@@ -13,7 +13,7 @@ challenges:
   - id: python
     name: REV - 300 - Python
   - id: lowkey
-    name: CRYPTO - 150 - Low Key 
+    name: CRYPTO - 150 - Low Key
   - id: hackermessage
     name: FORENSICS - 100 - H4cker Message
   - id: ectfhacked

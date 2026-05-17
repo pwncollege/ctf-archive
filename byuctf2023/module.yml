@@ -1,4 +1,4 @@
-id: byuctf2023 
+id: byuctf2023
 name: BYUCTF 2023
 
 challenges:
@@ -26,6 +26,4 @@ challenges:
     name: MISC - 006-2
   - id: xkcd2637
     name: MISC - xkcd 2637
-    visibility: 
-      start: "2029-08-21T10:30:00-07:00"
-    
+    required: false

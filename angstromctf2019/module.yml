@@ -3,7 +3,7 @@ name: ångstromctf 2019
 
 challenges:
   - id: chainofrope
-    name: BINARY - 80 - Chain of Rope 
+    name: BINARY - 80 - Chain of Rope
   - id: overmybrain
     name: BINARY - 150 - Over My Brain
   - id: like
@@ -24,4 +24,3 @@ challenges:
     name: MISC - 30 - Blank Paper
   - id: paperbin
     name: MISC - 40 - Paper Bin
-  

@@ -4,7 +4,7 @@ name: Grey Cat The Flag 2022
 challenges:
   - id: baby
     name: CRYPTO - baby
-  - id : block
+  - id: block
     name: CRYPTO - Block
   - id: catino
     name: CRYPTO - Catino

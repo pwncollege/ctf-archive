@@ -4,17 +4,14 @@ name: 0CTF/TCTF 2021 Quals
 challenges:
   - id: listbook
     name: PWN - 154 - Listbook
-    visibility:
-      start: "2029-08-21T10:30:00-07:00"
+    required: false
   - id: future
     name: REV - Future
   - id: vp
     name: REV - VP
   - id: cloudpass
     name: CRYPTO - Cloudpass - pykeepass
-    visibility: 
-      start: "2029-08-21T10:30:00-07:00"
+    required: false
   - id: zer0lfsr
     name: CRYPTO - zer0lfsr - pykeepass
-    visibility: 
-      start: "2029-08-21T10:30:00-07:00"
+    required: false

@@ -1,4 +1,4 @@
-id: hsctf2020 
+id: hsctf2020
 name: HSCTF 2020
 
 challenges:
@@ -20,4 +20,3 @@ challenges:
     name: MISC - 223 - Binary Word Search
   - id: pie
     name: MISC - 319 - Apple Pie
- 

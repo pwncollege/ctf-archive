@@ -4,29 +4,23 @@ name: m0leCon CTF Teaser 2025
 challenges:
   - id: bootme2
     name: PWN - 424 - Boot Me 2
-    visibility:
-      start: "2029-08-21T10:30:00-07:00"
+    required: false
   - id: bootme
     name: REV - 232 - Boot Me
-    visibility:
-      start: "2029-08-21T10:30:00-07:00"
+    required: false
   - id: whispers
     name: REV - 367 - Whispers of Yesterday
-    visibility:
-      start: "2029-08-21T10:30:00-07:00"
+    required: false
   - id: ptmcasino
     name: WEB - 322 - ptmCasino
     image: prathamgupta36/moleconctf2025teaserptmcasino
-    visibility:
-      start: "2029-08-21T10:30:00-07:00"
+    required: false
   - id: telegram
     name: WEB - 343 - Free Telegram App
-    visibility:
-      start: "2029-08-21T10:30:00-07:00"
+    required: false
   - id: wolfram
     name: WEB - 367 - WalframSigma
-    visibility:
-      start: "2029-08-21T10:30:00-07:00"
+    required: false
   - id: quadratic
     name: CRYPTO - 50 - Quadratic Leak
   - id: ot
@@ -35,4 +29,3 @@ challenges:
     name: CRYPTO - 154 - ECSign
   - id: talor
     name: CRYPTO - 244 - Talor
-  
