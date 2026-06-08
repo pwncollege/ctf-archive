@@ -1,0 +1,21 @@
+{
+  "challenge_id": 3,
+  "challenge_slug": "ninja-nerds",
+  "submitted_flag": "UMASS{perfectly-hidden-ready-to-strike}",
+  "submission_response": {
+    "success": true,
+    "status": "correct",
+    "message": "Correct"
+  },
+  "challenge_api_after_submit": {
+    "solved_by_me": true,
+    "attempts": 1,
+    "solve_count": 110
+  },
+  "user_solve_record": {
+    "team": "Shellphish",
+    "user": "alchemy1729",
+    "date": "2026-04-11T05:51:20.316376+00:00",
+    "type": "correct"
+  }
+}

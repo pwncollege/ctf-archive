@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="256" height="256" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <!-- Background -->
+    <rect width="256" height="256" rx="32" fill="#4CAF50"/>
+    
+    <!-- File outline -->
+    <path d="M76 56C76 47.1634 83.1634 40 92 40H140L180 80V200C180 208.837 172.837 216 164 216H92C83.1634 216 76 208.837 76 200V56Z" fill="white"/>
+    
+    <!-- Folded corner -->
+    <path d="M140 40L180 80H148C143.582 80 140 76.4183 140 72V40Z" fill="#E8E8E8"/>
+    
+    <!-- Arrow -->
+    <path d="M128 96L96 128H116V168H140V128H160L128 96Z" fill="#4CAF50"/>
+</svg> 

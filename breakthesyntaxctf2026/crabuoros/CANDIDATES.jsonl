@@ -1,0 +1,2 @@
+{"flag":"BtSCTF{fb1b0d1eebd15943}","confidence":0.72,"source":"valid serial chain via drm.op_39..op_15; final validated sink _x228a118 in hex","notes":"Primary candidate. Local artifact validates the serial but does not reveal a literal BtSCTF flag."}
+{"flag":"BtSCTF{18094070354347645251}","confidence":0.48,"source":"same validated sink, decimal form","notes":"Fallback candidate if challenge expects decimal serialization of the final validated 64-bit value."}

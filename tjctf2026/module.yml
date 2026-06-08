@@ -1,0 +1,28 @@
+id: tjctf2026
+name: TJCTF 2026
+
+challenges:
+  - id: bit-leak
+    name: CRYPTO - bit-leak
+  - id: check-the-fine-print
+    name: FORENSICS - check-the-fine-print
+  - id: crashout
+    name: CRYPTO - crashout
+  - id: delta-doodle
+    name: MISC - delta-doodle
+  - id: mind-blowers
+    name: MISC - mind-blowers
+  - id: minervas-stopwatch
+    name: CRYPTO - minervas-stopwatch
+  - id: multiplication-as-a-service
+    name: CRYPTO - multiplication-as-a-service
+  - id: obscure-crusher-1
+    name: FORENSICS - obscure-crusher-1
+  - id: polaroid
+    name: REV - polaroid
+  - id: remoose
+    name: REV - remoose
+  - id: voice-in-the-packet
+    name: FORENSICS - voice-in-the-packet
+  - id: wavy
+    name: CRYPTO - wavy

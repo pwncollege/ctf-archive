@@ -1,6 +1,14 @@
 # REHOSTING
 
-Files can be found here: [BuckeyeCTF 2025](https://bctf-25-uploads.s3-us-east-2.amazonaws.com/6f20f4354a49505d7f7961b81643ce96ba28bda836b9ac2888cb35dec9f56011/character_assassination.c)
-
 ## Challenge Setup
-This challenge has its source file in `c` which can be compiled with `gcc`, there should not be any dependencies.
+
+The challenge artifacts for this entry are stored outside the git repo at `../ctf-archive-external/buckeyectf2025/character/` relative to the `ctf-archive` repo root.
+Copy that bundle into the target deployment directory before launching the challenge. A typical pwn.college layout is `/challenge/character/`, but keep the copied file tree identical to the archived bundle.
+
+Artifacts in the external bundle:
+- `character_assassination`
+- `character_assassination.c`
+
+## Runtime Notes
+
+- After copying the bundle, mark any shipped launchers, scripts, or binaries executable if the original challenge expects direct execution.

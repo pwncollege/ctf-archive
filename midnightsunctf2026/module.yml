@@ -1,0 +1,8 @@
+id: midnightsunctf2026
+name: Midnight Sun CTF 2026 Quals
+
+challenges:
+  - id: riscal
+    name: REV - riscal
+  - id: terminator
+    name: MISC - terminator

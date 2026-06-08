@@ -1,0 +1,8 @@
+id: uoftctf
+name: UofTCTF 2024
+
+challenges:
+  - id: gamblersfallacy
+    name: CRYPTO - 451 - Gambler's Fallacy
+  - id: orca
+    name: CRYPTO - 477 - Orca

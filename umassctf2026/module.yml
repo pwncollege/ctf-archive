@@ -1,0 +1,16 @@
+id: umassctf2026
+name: UMassCTF 2026
+
+challenges:
+  - id: deep-down
+    name: MISC - deep-down
+  - id: lego-clicker
+    name: REV - lego-clicker
+  - id: lost-and-found
+    name: FORENSICS - lost-and-found
+  - id: ninja-nerds
+    name: FORENSICS - ninja-nerds
+  - id: take-a-slice
+    name: MISC - take-a-slice
+  - id: the-accursed-lego-bin
+    name: CRYPTO - the-accursed-lego-bin

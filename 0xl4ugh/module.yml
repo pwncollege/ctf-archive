@@ -1,0 +1,12 @@
+id: 0xl4ugh
+name: 0xL4ugh CTF v5
+
+challenges:
+  - id: dorya
+    name: CRYPTO - 120 - DORYA
+  - id: spiralfloats
+    name: CRYPTO - 460 - SpiralFloats
+  - id: 4llD4y
+    name: WEB - 50 - 4llD4y
+  - id: smolweb
+    name: WEB - 428 - Smol Web

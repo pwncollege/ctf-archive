@@ -1,0 +1,20 @@
+id: cybergame2026
+name: CyberGame 2026
+
+challenges:
+  - id: ch12-xy
+    name: CRYPTO - ch12-xy
+  - id: ch23-plaintext
+    name: MALWARE - ch23-plaintext
+  - id: ch24-span
+    name: FORENSICS - ch24-span
+  - id: ch25-totrue
+    name: MALWARE - ch25-totrue
+  - id: ch32-ecc
+    name: CRYPTO - ch32-ecc
+  - id: ch35-portable
+    name: FORENSICS - ch35-portable
+  - id: ch36-tables
+    name: FORENSICS - ch36-tables
+  - id: ch46-keypad
+    name: MALWARE - ch46-keypad

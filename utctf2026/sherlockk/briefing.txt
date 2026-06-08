@@ -1,0 +1,13 @@
+Welcome back agent. Please get us the following:
+Checkpoint A: The threat actor downloaded a file from a online text storage 
+site. Can you identify the complete URL the threat actor downloaded from?
+
+Checkpoint B: The threat actor wrote a note for himself on the machine. 
+It's been deleted now, but can you retrieve the contents of the note?
+
+Checkpoint C: The threat actor downloaded a file enumeration script. 
+Can you submit the MD5 Hash of that file?
+
+Hints:
+- Checkpoint B's password consist of the listed items separated by a hyphens 
+(e.g. Dead-Beef-Code)

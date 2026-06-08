@@ -1,0 +1,6 @@
+id: ritsecctf2026
+name: RITSEC CTF 2026
+
+challenges:
+  - id: blackledger
+    name: REV - blackledger

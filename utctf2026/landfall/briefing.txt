@@ -1,0 +1,9 @@
+Hello operator, in the .zip file is a triage of the desktop breached by the 
+threat actors. It seems like they were able to physically login, so we think 
+there's an insider threat amongst the employees.
+
+Checkpoint A: What command did the threat actor attempt to execute to 
+obtain credentials for privilege escalation? 
+
+Hint: The password to Checkpoint A is ONLY the encoded portion. The password
+is MD5 hash of this portion.

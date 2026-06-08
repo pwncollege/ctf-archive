@@ -1,0 +1,8 @@
+id: thcon2026
+name: THCon 2K26 CTF
+
+challenges:
+  - id: m4term4xima-s-hint-part-1-2
+    name: REV - m4term4xima-s-hint-part-1-2
+  - id: silent-signer
+    name: REV - silent-signer

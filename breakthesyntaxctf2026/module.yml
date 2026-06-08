@@ -1,0 +1,18 @@
+id: breakthesyntaxctf2026
+name: Break The Syntax CTF 2026
+
+challenges:
+  - id: crabuoros
+    name: REV - crabuoros
+  - id: cursed
+    name: MISC - cursed
+  - id: fcp
+    name: REV - fcp
+  - id: flagchecker
+    name: REV - flagchecker
+  - id: minfs
+    name: MISC - minfs
+  - id: my_first_game
+    name: REV - my_first_game
+  - id: stepping_stones
+    name: REV - stepping_stones

@@ -1,0 +1,41 @@
+You are an Orcal codex exec worker solving a CTF challenge.
+Workdir: /home/alchemy/Downloads/CTF/breakthesyntaxctf2026/challenges/misc/2_minfs
+
+Read:
+- README.md — challenge description and connection info
+- challenge.json — metadata
+
+Challenge: "minfs" (misc, 102 pts, 81 solves)
+Description: "We are targeting a flag stored on a host with no utilities. Can you manage to get it?"
+TCP instance: tcp-minfs-d8dc4e19ef65c18e.chall.bts.wh.edu.pl
+Connection method: use sc.py tunnel — run: python3 /home/alchemy/Downloads/CTF/breakthesyntaxctf2026/tools/sc.py bind <local_port> tcp-minfs-d8dc4e19ef65c18e.chall.bts.wh.edu.pl then nc localhost <local_port>
+
+This is a minimal Linux shell (no busybox, no standard utilities). The flag is in /flag or similar path.
+
+Do:
+1. Connect via sc.py. Try a free local port like 13337.
+   Run sc.py in background: python3 /home/alchemy/Downloads/CTF/breakthesyntaxctf2026/tools/sc.py bind 13337 tcp-minfs-d8dc4e19ef65c18e.chall.bts.wh.edu.pl &
+   Then connect: nc localhost 13337 (or use python to send/receive)
+2. Explore what shell/environment is available (type ls, echo $0, etc.)
+3. Since there are no utilities, use shell builtins to read /flag:
+   - Try: while IFS= read -r line; do echo "$line"; done < /flag
+   - Or: read line < /flag; echo "$line"
+   - Or: echo $(<flag) if bash is available
+   - Or check /proc/1/environ, /proc/self/maps, etc.
+   - Or use python/perl if available: python3 -c "print(open('/flag').read())"
+   - Or use /bin/cat if it exists despite "no utilities" claim
+   - Or check /proc/*/fd/* for open file descriptors
+   - Or look at /proc/1/cmdline, /proc/self/status
+4. Try multiple approaches systematically. The challenge has 81 solves so it is solvable.
+5. The flag format is BtSCTF{...}
+
+Alternative connection approach if sc.py is tricky:
+- Use Python's socket library directly to connect to tcp-minfs-d8dc4e19ef65c18e.chall.bts.wh.edu.pl:PORT
+- Try common ports: 1337, 4444, 5000, 9999, 31337
+
+Write:
+- FLAG.txt containing the flag (BtSCTF{...}) in the workdir
+- WRITEUP.md with brief explanation of what you did
+
+Stop: when FLAG.txt exists with a valid flag or you cannot make further progress.
+Print last_message: the relative path to FLAG.txt, or BLOCKED: <reason>
