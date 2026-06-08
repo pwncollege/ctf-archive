@@ -1,0 +1,15 @@
+{% extends "board/base.html" %}
+{% block content %}
+<article>
+    <h1>{{ post.title }}</h1>
+    <div class="meta">
+        {{ post.author.username }}
+        {% if post.author.profile %}
+            <span class="flair">{{ post.author.profile.get_flair_display }}</span>
+        {% endif %}
+        &middot; {{ post.created_at|timesince }} ago
+    </div>
+    <div class="rendered-content">{{ rendered }}</div>
+</article>
+<a href="{% url 'home' %}" class="back-link">&larr; Back to feed</a>
+{% endblock %}

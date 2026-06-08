@@ -1,0 +1,452 @@
+{
+	"classic": {
+		"name": "Classic",
+		"settings": {
+			"fieldSize": "medium",
+			"fieldBorderRadius": "0px",
+			"fieldBorderStyle": "solid",
+			"fieldBorderSize": "1px",
+			"fieldBackgroundColor": "#ffffff",
+			"fieldBorderColor": "#cccccc",
+			"fieldTextColor": "#444444",
+			"fieldMenuColor": "#ffffff",
+			"labelSize": "small",
+			"labelColor": "#262626",
+			"labelSublabelColor": "#7f7f7f",
+			"labelErrorColor": "#ff0000",
+			"buttonSize": "medium",
+			"buttonBorderStyle": "solid",
+			"buttonBorderSize": "1px",
+			"buttonBorderRadius": "0px",
+			"buttonBorderColor": "#cccccc",
+			"buttonBackgroundColor": "#dddddd",
+			"buttonTextColor": "#666666",
+			"pageBreakColor": "#dddddd"
+		}
+	},
+	"default": {
+		"name": "Default",
+		"settings": {
+			"fieldSize": "medium",
+			"fieldBorderRadius": "3px",
+			"fieldBorderStyle": "solid",
+			"fieldBorderSize": "1px",
+			"fieldBackgroundColor": "#ffffff",
+			"fieldBorderColor": "rgba( 0, 0, 0, 0.25 )",
+			"fieldTextColor": "rgba( 0, 0, 0, 0.7 )",
+			"fieldMenuColor": "#ffffff",
+			"labelSize": "medium",
+			"labelColor": "rgba( 0, 0, 0, 0.85 )",
+			"labelSublabelColor": "rgba( 0, 0, 0, 0.55 )",
+			"labelErrorColor": "#d63637",
+			"buttonSize": "medium",
+			"buttonBorderStyle": "none",
+			"buttonBorderSize": "1px",
+			"buttonBorderRadius": "3px",
+			"buttonBorderColor": "#066aab",
+			"buttonBackgroundColor": "#066aab",
+			"buttonTextColor": "#ffffff",
+			"pageBreakColor": "#066aab"
+		}
+	},
+	"cerulean": {
+		"name": "Cerulean",
+		"settings": {
+			"buttonBackgroundColor": "#0090bf",
+			"buttonTextColor": "#e5f4f9",
+			"labelColor": "#262c2e",
+			"labelSublabelColor": "#4c585d",
+			"fieldBorderColor": "#afb6b9"
+		}
+	},
+	"ocean": {
+		"name": "Ocean",
+		"settings": {
+			"buttonBackgroundColor": "#348180",
+			"buttonTextColor": "#ebf2f2",
+			"labelColor": "#181c1c",
+			"labelSublabelColor": "#636c6c",
+			"fieldBorderColor": "#9ea3a3"
+		}
+	},
+	"fern": {
+		"name": "Fern",
+		"settings": {
+			"buttonBackgroundColor": "#58bb5d",
+			"buttonTextColor": "#eef8ef",
+			"labelColor": "#383c39",
+			"labelSublabelColor": "#707971",
+			"fieldBorderColor": "#c6cbc6"
+		}
+	},
+	"lilac": {
+		"name": "Lilac",
+		"settings": {
+			"buttonBackgroundColor": "#9864c0",
+			"buttonTextColor": "#f5eff9",
+			"labelColor": "#333135",
+			"labelSublabelColor": "#807b84",
+			"fieldBorderColor": "#bfbdc1"
+		}
+	},
+	"taffy": {
+		"name": "Taffy",
+		"settings": {
+			"buttonBackgroundColor": "#f785c0",
+			"buttonTextColor": "#fef3f9",
+			"labelColor": "#484446",
+			"labelSublabelColor": "#b5aab0",
+			"fieldBorderColor": "#dad4d7"
+		}
+	},
+	"tangerine": {
+		"name": "Tangerine",
+		"settings": {
+			"buttonBackgroundColor": "#e27730",
+			"buttonTextColor": "#fcf1ea",
+			"labelColor": "#3d3835",
+			"labelSublabelColor": "#79716b",
+			"fieldBorderColor": "#cbc6c2"
+		}
+	},
+	"slate": {
+		"name": "Slate",
+		"settings": {
+			"buttonBackgroundColor": "#67687d",
+			"buttonTextColor": "#f0f0f2",
+			"labelColor": "#3a3a41",
+			"labelSublabelColor": "#686974",
+			"fieldBorderColor": "#c3c3c7"
+		}
+	},
+	"iron": {
+		"name": "Iron",
+		"settings": {
+			"buttonBackgroundColor": "#2e2c2f",
+			"buttonTextColor": "#eaeaea",
+			"labelColor": "#2e2c2e",
+			"labelSublabelColor": "#969596",
+			"fieldBorderColor": "#cbcacb"
+		}
+	},
+	"aero": {
+		"name": "Aero",
+		"settings": {
+			"buttonBackgroundColor": "#3961FF",
+			"buttonTextColor": "#FFFFFF",
+			"labelColor": "#000000",
+			"labelSublabelColor": "#6A6A6A",
+			"fieldBorderColor": "#D2D2D2"
+		}
+	},
+	"blossom": {
+		"name": "Blossom",
+		"settings": {
+			"buttonBackgroundColor": "#d75e42",
+			"buttonTextColor": "#ffffff",
+			"labelColor": "#32261b",
+			"labelSublabelColor": "#634d36",
+			"fieldBorderColor": "rgba( 51, 26, 0, 0.15 )"
+		}
+	},
+	"bokeh": {
+		"name": "Bokeh",
+		"settings": {
+			"buttonBackgroundColor": "#272633",
+			"buttonTextColor": "#FFFFFF",
+			"labelColor": "#272633",
+			"labelSublabelColor": "#625E53",
+			"fieldBorderColor": "#FCF5F3"
+		}
+	},
+	"concrete": {
+		"name": "Concrete",
+		"settings": {
+			"buttonBackgroundColor": "#f04970",
+			"buttonTextColor": "#ffffff",
+			"labelColor": "#ffffff",
+			"labelSublabelColor": "rgba(255, 255, 255, 0.50)",
+			"fieldBorderColor": "rgba(255, 255, 255, 0.25)"
+		}
+	},
+	"cottoncandy": {
+		"name": "Cotton Candy",
+		"settings": {
+			"buttonBackgroundColor": "#952653",
+			"buttonTextColor": "#ffffff",
+			"labelColor": "#ffffff",
+			"labelSublabelColor": "rgba(255, 255, 255, 0.75)",
+			"fieldBorderColor": "rgba(255, 255, 255, 0.5)"
+		}
+	},
+	"craft": {
+		"name": "Craft",
+		"settings": {
+			"buttonBackgroundColor": "rgba(0 ,0 ,0 ,0)",
+			"buttonTextColor": "#ffffff",
+			"labelColor": "#ffffff",
+			"labelSublabelColor": "#e0c5c5",
+			"fieldBorderColor": "rgba(255, 255, 255, 0.50)"
+		}
+	},
+	"elegance": {
+		"name": "Elegance",
+		"settings": {
+			"buttonBackgroundColor": "#7d7d7d",
+			"buttonTextColor": "#ffffff",
+			"labelColor": "#7d7d7d",
+			"labelSublabelColor": "#7d7d7d",
+			"fieldBorderColor": "#e6e6e4"
+		}
+	},
+	"feathered": {
+		"name": "Feathered",
+		"settings": {
+			"buttonBackgroundColor": "#46443a",
+			"buttonTextColor": "#ffffff",
+			"labelColor": "#46443a",
+			"labelSublabelColor": "#625e53",
+			"fieldBorderColor": "rgba(0, 0, 0, 0.15)"
+		}
+	},
+	"flynn": {
+		"name": "Flynn",
+		"settings": {
+			"buttonBackgroundColor": "f0f0ff",
+			"buttonTextColor": "#4b49e0",
+			"labelColor": "#4b49e0",
+			"labelSublabelColor": "#4b49e0",
+			"fieldBorderColor": "#4b49e0"
+		}
+	},
+	"fresh": {
+		"name": "Fresh",
+		"settings": {
+			"buttonBackgroundColor": "#2da314",
+			"buttonTextColor": "#ffffff",
+			"labelColor": "#000000",
+			"labelSublabelColor": "#404040",
+			"fieldBorderColor": "rgba(0, 0, 0, 0.30)"
+		}
+	},
+	"frost": {
+		"name": "Frost",
+		"settings": {
+			"buttonBackgroundColor": "#e03f79",
+			"buttonTextColor": "#ffffff",
+			"labelColor": "#09598d",
+			"labelSublabelColor": "#578bad",
+			"fieldBorderColor": "#6e9fbe"
+		}
+	},
+	"gloom": {
+		"name": "Gloom",
+		"settings": {
+			"buttonBackgroundColor": "#258c60",
+			"buttonTextColor": "#ffffff",
+			"labelColor": "#a9abad",
+			"labelSublabelColor": "rgba(255, 255, 255, .7)",
+			"fieldBorderColor": "#4a4b4f"
+		}
+	},
+	"greenery": {
+		"name": "Greenery",
+		"settings": {
+			"buttonBackgroundColor": "#1e1f19",
+			"buttonTextColor": "#ffffff",
+			"labelColor": "#262c1e",
+			"labelSublabelColor": "rgba(38, 44, 30, 0.5)",
+			"fieldBorderColor": "rgba(0, 0, 0, 0.10)"
+		}
+	},
+	"hallway": {
+		"name": "Hallway",
+		"settings": {
+			"buttonBackgroundColor": "#000000",
+			"buttonTextColor": "#ffffff",
+			"labelColor": "#000000",
+			"labelSublabelColor": "#000000",
+			"fieldBorderColor": "#cbcbcb"
+		}
+	},
+	"harvest": {
+		"name": "Harvest",
+		"settings": {
+			"buttonBackgroundColor": "#984628",
+			"buttonTextColor": "#ffffff",
+			"labelColor": "#481f10",
+			"labelSublabelColor": "#984628",
+			"fieldBorderColor": "rgba( 0, 0, 0, 0.25 )"
+		}
+	},
+	"jungle": {
+		"name": "Jungle",
+		"settings": {
+			"buttonBackgroundColor": "rgba(14, 143, 28, 0.5)",
+			"buttonTextColor": "#ffffff",
+			"labelColor": "rgba(255, 255, 255, 0.7)",
+			"labelSublabelColor": "rgba(255, 255, 255, 0.6)",
+			"fieldBorderColor": "rgba( 0, 0, 0, 0.25 )"
+		}
+	},
+	"lush": {
+		"name": "Lush",
+		"settings": {
+			"buttonBackgroundColor": "#962d3c",
+			"buttonTextColor": "#ffffff",
+			"labelColor": "#312425",
+			"labelSublabelColor": "rgba(49, 36, 37, 0.5)",
+			"fieldBorderColor": "rgba(0, 0, 0, 0.10)"
+		}
+	},
+	"manhattan": {
+		"name": "Manhattan",
+		"settings": {
+			"buttonBackgroundColor": "rgba(0, 0, 0, 0.32)",
+			"buttonTextColor": "#ffffff",
+			"labelColor": "#ffffff",
+			"labelSublabelColor": "rgba(255, 255, 255, 0.75)",
+			"fieldBorderColor": "rgba(255, 255, 255, 0.15)"
+		}
+	},
+	"matrix": {
+		"name": "Matrix",
+		"settings": {
+			"buttonBackgroundColor": "#8ee8d6",
+			"buttonTextColor": "#111a12",
+			"labelColor": "#d8fff7",
+			"labelSublabelColor": "#d8fff7",
+			"fieldBorderColor": "#8ee8d6"
+		}
+	},
+	"monstera": {
+		"name": "Monstera",
+		"settings": {
+			"buttonBackgroundColor": "#2f590f",
+			"buttonTextColor": "#ffffff",
+			"labelColor": "#000000",
+			"labelSublabelColor": "#6a6a6a",
+			"fieldBorderColor": "#a3a9c2"
+		}
+	},
+	"negative": {
+		"name": "Negative",
+		"settings": {
+			"buttonBackgroundColor": "#ff4d24",
+			"buttonTextColor": "#ffffff",
+			"labelColor": "#ffffff",
+			"labelSublabelColor": "#999999",
+			"fieldBorderColor": "#616265"
+		}
+	},
+	"palm": {
+		"name": "Palm",
+		"settings": {
+			"buttonBackgroundColor": "#000000",
+			"buttonTextColor": "#ffffff",
+			"labelColor": "#000000",
+			"labelSublabelColor": "#6a6a6a",
+			"fieldBorderColor": "#636363"
+		}
+	},
+	"plaster": {
+		"name": "Plaster",
+		"settings": {
+			"buttonBackgroundColor": "#494848",
+			"buttonTextColor": "#ffffff",
+			"labelColor": "#494848",
+			"labelSublabelColor": "#afafaf",
+			"fieldBorderColor": "#afafaf"
+		}
+	},
+	"range": {
+		"name": "Range",
+		"settings": {
+			"buttonBackgroundColor": "#ae0120",
+			"buttonTextColor": "#ffffff",
+			"labelColor": "#000000",
+			"labelSublabelColor": "#6a6a6a",
+			"fieldBorderColor": "rgba(61, 0, 0, 0.15)"
+		}
+	},
+	"rustic": {
+		"name": "Rustic",
+		"settings": {
+			"buttonBackgroundColor": "rgba(0, 0, 0, 0.5)",
+			"buttonTextColor": "#ffffff",
+			"labelColor": "#ffffff",
+			"labelSublabelColor": "rgba(255, 255, 255, 0.75)",
+			"fieldBorderColor": "rgba( 0, 0, 0, 0.25 )"
+		}
+	},
+	"scrap": {
+		"name": "Scrap",
+		"settings": {
+			"buttonBackgroundColor": "#2f3133",
+			"buttonTextColor": "#ffffff",
+			"labelColor": "#2f3133",
+			"labelSublabelColor": "#2f3133",
+			"fieldBorderColor": "rgba( 0, 0, 0, 0.25 )"
+		}
+	},
+	"solitude": {
+		"name": "Solitude",
+		"settings": {
+			"buttonBackgroundColor": "#0e0f32",
+			"buttonTextColor": "#ffffff",
+			"labelColor": "#0e0f32",
+			"labelSublabelColor": "#64647f",
+			"fieldBorderColor": "rgba( 0, 0, 0, 0.25 )"
+		}
+	},
+	"sonic": {
+		"name": "Sonic",
+		"settings": {
+			"buttonBackgroundColor": "#073eff",
+			"buttonTextColor": "#ffffff",
+			"labelColor": "#666666",
+			"labelSublabelColor": "#666666",
+			"fieldBorderColor": "#073eff"
+		}
+	},
+	"tidal": {
+		"name": "Tidal",
+		"settings": {
+			"buttonBackgroundColor": "#474e54",
+			"buttonTextColor": "#ffffff",
+			"labelColor": "#ffffff",
+			"labelSublabelColor": "#a7b3be",
+			"fieldBorderColor": "#474e54"
+		}
+	},
+	"tranquil": {
+		"name": "Tranquil",
+		"settings": {
+			"buttonBackgroundColor": "#366ce3",
+			"buttonTextColor": "#ffffff",
+			"labelColor": "#373d4a",
+			"labelSublabelColor": "#606775",
+			"fieldBorderColor": "rgba( 0, 0, 0, 0.25 )"
+		}
+	},
+	"vintage": {
+		"name": "Vintage",
+		"settings": {
+			"buttonBackgroundColor": "#f2cd52",
+			"buttonTextColor": "#1a1a1a",
+			"labelColor": "#1a1a1a",
+			"labelSublabelColor": "#4d4d4d",
+			"fieldBorderColor": "#bababa"
+		}
+	},
+	"western": {
+		"name": "Western",
+		"settings": {
+			"buttonBackgroundColor": "rgba(255, 255, 255, 0.05)",
+			"buttonTextColor": "#e0b495",
+			"labelColor": "#ffffff",
+			"labelSublabelColor": "#e0b495",
+			"fieldBorderColor": "#e0b495"
+		}
+	}
+}

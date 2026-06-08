@@ -1,0 +1,146 @@
+/* Modal Core Styles */
+.wpcu-modal {
+  position: fixed;
+  width: 100% !important;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  left: 0;
+  top: 0;
+  z-index: -1;
+  overflow: hidden;
+  outline: 0;
+  max-width: 100% !important;
+}
+
+.wpcu-modal__dialog {
+  position: relative;
+  width: 500px;
+  margin: 30px auto;
+  transition: 0.3s ease;
+  opacity: 0;
+  visibility: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.wpcu-modal__dialog-lg {
+  width: 900px;
+}
+
+.wpcu-modal__content {
+  width: 100%;
+  background: #fff;
+  pointer-events: auto;
+  border-radius: 3px;
+  position: relative;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.wpcu-modal__content .wpcu-modal__header {
+  position: relative;
+  padding: 15px;
+  border-bottom: 1px solid #eee;
+}
+
+.wpcu-modal__content .wpcu-modal__header .wpcu-modal__header--title {
+  font-size: 16px;
+  margin: 0;
+}
+
+.wpcu-modal__content .wpcu-modal-close {
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  text-decoration: none;
+}
+
+.wpcu-modal__content .wpcu-modal__body {
+  padding: 20px 25px;
+}
+
+.wpcu-modal__content .wpcu-modal__footer {
+  border-top: 1px solid #eee;
+  padding: 18px;
+}
+
+.wpcu-modal__content .wpcu-modal__footer .wpcu-modal__action {
+  display: flex;
+  justify-content: flex-end;
+  margin: -7.5px;
+}
+
+.wpcu-modal__content .wpcu-modal__footer .wpcu-modal__action button {
+  margin: 7.5px;
+}
+
+.wpcu-modal__dialog{
+  height: 550px;
+}
+
+.wpcu-modal__dialog.wpcu-modal--lg {
+  width: 800px;
+}
+
+.wpcu-modal__dialog.wpcu-modal--xl {
+  width: 1140px;
+}
+
+.wpcu-modal__dialog.wpcu-modal--sm {
+  width: 300px;
+}
+
+.wpcu-modal.wpcu-fade {
+  transition: 0.3s ease;
+  opacity: 1;
+  visibility: visible;
+  z-index: 9999;
+}
+
+.wpcu-modal.wpcu-fade:not(.wpcu-show) {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.wpcu-modal.wpcu-show .wpcu-modal__dialog {
+  opacity: 1;
+  visibility: visible;
+  transition: 0.3s ease;
+  pointer-events: all;
+}
+
+/* Responsive CSS */
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .wpcu-modal__dialog {
+    width: calc(100% - 60px);
+    height: 500px;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .wpcu-modal__dialog {
+    width: calc(100% - 60px);
+    height: 400px;
+  }
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .wpcu-modal__dialog {
+    width: calc(100% - 60px);
+    height: 400px;
+  }
+}
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+  .wpcu-modal__dialog {
+    width: calc(100% - 30px);
+    height: 250px;
+  }
+}

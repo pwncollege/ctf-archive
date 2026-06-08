@@ -1,0 +1,9 @@
+export default function(r){let t={init(){r.sessionId&&(WPFormsAIFormGenerator.state.chatStart=!0,WPFormsAIFormGenerator.main.el.$templateCard.next(".selected").removeClass("selected")),document.addEventListener("wpformsAIChatBeforeSendMessage",t.detectQuizBeforeSendMessage.bind(t))},resetInput(){r.resizeInput()},getAnswer(e){var t;return e?(t=Math.floor(Math.random()*r.modeStrings.footer.length),t=r.modeStrings.footer[t],`
+				<h4>${e.explanation||(e.form_title??"")}</h4> 
+				${e.notice?`<p>${e.notice}</p>`:""}
+				<span>${t}</span>
+			`):""},getAnswerButtonsPre(){return`
+				<button type="button" class="wpforms-ai-chat-use-form wpforms-ai-chat-answer-action wpforms-btn-sm wpforms-btn-orange" >
+					<span>${r.modeStrings.useForm}</span>
+				</button>
+			`},addedAnswer(e){t.updateInactiveAnswers()},setActiveAnswer(e){t.updateInactiveAnswers(),e.querySelector(".wpforms-chat-item-content").setAttribute("title","")},updateInactiveAnswers(){r.messageList.querySelectorAll(".wpforms-chat-item-answer:not(.active) .wpforms-chat-item-content").forEach(e=>{e.setAttribute("title",r.modeStrings.inactiveAnswerTitle)})},isWelcomeScreen(){return!0},sanitizeResponse(e){return e.explanation&&(e.explanation=wpf.sanitizeHTML(e.explanation,wpforms_builder.allowed_label_html_tags)),e},detectQuizBeforeSendMessage(e){let t=e.detail.message.toLowerCase();var r=wpforms_ai_form_generator.isPro,n=["quiz","test","exam","survey","evaluation"].some(e=>t.includes(e)),s=!Boolean(wpforms_ai_form_generator.addonsData?.quiz),a=WPFormsAIFormGenerator.modals?.isQuizInstallModalCanceled;r&&n&&!s&&!a&&(e.sendPrevented=!0,WPFormsAIFormGenerator.modals.openQuizInstallModal())}};return t}

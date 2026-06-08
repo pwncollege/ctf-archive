@@ -1,6 +1,0 @@
-crab/__init__.py,sha256=hPo8ry-b2_8677-d-VaXnyUyzClryBJaTDPBssnUfms,99
-crab/crab.cpython-314-x86_64-linux-gnu.so,sha256=E22_JXIxuGvO3icXlILrQWH3O7QlXfdzhwAAKX9UgeI,535312
-crab-0.1.0.dist-info/METADATA,sha256=IzImEG_q10roXm8QytyM6OPahBH8m_jE1qwf0Z1FdBU,253
-crab-0.1.0.dist-info/WHEEL,sha256=b2ZVzr8GnqWPFJiTgfAIEVAYMSWXOk1N3-EJhQT9Vm4,109
-crab-0.1.0.dist-info/sboms/crab.cyclonedx.json,sha256=66fkLhzLPRnY07EeftLHcsBJHpQk-ws-SNDyJBRcowQ,33751
-crab-0.1.0.dist-info/RECORD,,

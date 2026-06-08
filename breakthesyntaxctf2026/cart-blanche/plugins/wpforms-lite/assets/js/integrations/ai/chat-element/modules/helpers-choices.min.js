@@ -1,0 +1,19 @@
+export default function(c){return{getAnswer(e){if(e.choices?.length<1)return"";var t,i=[];for(t in e.choices)i.push(`
+					<li class="wpforms-ai-chat-choices-item">
+						${c.htmlSpecialChars(e.choices[t])}
+					</li>
+				`);let r=`
+				<h4>${c.htmlSpecialChars(e.heading??"")}</h4>
+				<ol>
+					${i.join("")}
+				</ol>
+			`;return c.sessionId||(r+=`<span>${c.modeStrings.footer}</span>`),r},getAnswerButtonsPre(){return`
+				<button type="button" class="wpforms-ai-chat-choices-insert wpforms-ai-chat-answer-action wpforms-btn-sm wpforms-btn-orange" >
+					<span>${c.modeStrings.insert}</span>
+				</button>
+			`},getWarningMessage(){return c.triggerEvent("wpformsAIModalBeforeWarningMessageInsert",{fieldId:c.fieldId}),`<div class="wpforms-ai-chat-divider"></div>
+					<div class="wpforms-chat-item-notice">
+						<div class="wpforms-chat-item-notice-content">
+							<span>${c.modeStrings.warning}</span>
+						</div>
+					</div>`},isWelcomeScreen(){var t=document.getElementById(`wpforms-field-option-row-${c.fieldId}-choices`).querySelectorAll("li input.label");if(1!==t.length||t[0].value.trim()){if(3<t.length)return!1;var i=Object.values(c.modeStrings.defaults);for(let e=0;e<t.length;e++)if(!i.includes(t[e].value))return!1}return!0},addedAnswer(e){e.querySelector(".wpforms-ai-chat-choices-insert")?.addEventListener("click",this.insertButtonClick.bind(this))},sanitizeResponse(t){if(Array.isArray(t?.choices)){let e=t.choices;e=e.map(e=>wpf.sanitizeHTML(e,wpforms_builder.allowed_label_html_tags)),t.choices=e.filter(e=>""!==e.trim())}return t},hasProhibitedCode(e,t){return t?.choices?.length!==e?.choices?.length},insertButtonClick(e){var t,e=e.target.closest(".wpforms-chat-item.wpforms-chat-item-choices"),i=e?.getAttribute("data-response-id"),r=(e?.querySelector("ol")).querySelectorAll(".wpforms-ai-chat-choices-item"),o=[];for(t in r)r.hasOwnProperty(t)&&r[t].textContent&&o.push(r[t].textContent.trim());c.wpformsAiApi.rate(!0,i),this.replaceChoices(o),jQuery("#wpforms-field-"+c.fieldId).click().promise().done(function(){jQuery(`#wpforms-field-option-basic-${c.fieldId} a.wpforms-field-option-group-toggle`).click()})},replaceChoices(e){var t,i=document.getElementById(`wpforms-field-option-row-${c.fieldId}-choices`).querySelector("ul.choices-list");let r=i.querySelector("li:first-child");for(t in WPFormsBuilder.triggerBuilderEvent("wpformsFieldChoiceBeforeCloning",[c.fieldId,jQuery(r)]),(r=r.cloneNode(!0)).innerHTML=r.innerHTML.replace(/\[choices]\[\d+]/g,"[choices][{{key}}]"),i.innerHTML="",e){var o=(Number(t)+1).toString(),l=e[t],s=r.cloneNode(!0),s=this.getUpdatedSingleChoiceItem(s,o,l);i.appendChild(s)}i.setAttribute("data-next-id",e.length+1);var n=document.getElementById("wpforms-field-option-"+c.fieldId).querySelector("input.wpforms-field-option-hidden-type")?.value;WPFormsBuilder.fieldChoiceUpdate(n,c.fieldId,e.length),WPFormsBuilder.triggerBuilderEvent("wpformsFieldChoiceAdd",[c.fieldId,jQuery(i),"ai-choices"]),c.triggerEvent("wpformsAIModalAfterChoicesInsert",{fieldId:c.fieldId})},getUpdatedSingleChoiceItem(e,t,i){e.setAttribute("data-key",t.toString()),e.innerHTML=e.innerHTML.replaceAll("{{key}}",t),i=wpf.sanitizeHTML(i);e.querySelector("input.default").removeAttribute("checked");t=e.querySelector("input.label"),t.value=i,t.setAttribute("value",i),t=e.querySelector("input.value"),t.value=i,t.setAttribute("value",i),t=e.querySelector(".wpforms-image-upload"),i=t.querySelector("input.source"),i.value="",i.setAttribute("value",""),t.querySelector(".preview").innerHTML="",t.querySelector(".wpforms-image-upload-add").style.display="block",i=e.querySelector(".wpforms-icon-select");return i.querySelector(".ic-fa-preview").setAttribute("class","ic-fa-preview ic-fa-regular ic-fa-face-smile"),i.querySelector("input.source-icon").value="face-smile",i.querySelector("input.source-icon-style").value="regular",e}}}

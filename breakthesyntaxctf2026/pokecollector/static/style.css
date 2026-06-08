@@ -1,0 +1,335 @@
+:root {
+    --poke-red: #ff1f1f;
+    --poke-dark: #2a2a2a;
+    --poke-gold: #ffd700;
+    --white: #ffffff;
+    --bg-gray: #1a1a1a;
+}
+
+/* --- Global Styles --- */
+body {
+    margin: 0;
+    padding-top: 80px;
+    font-family: 'Arial Black', sans-serif;
+    background-color: var(--bg-gray);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    min-height: 90vh;
+}
+
+/* --- Layout Components --- */
+#app-canvas, main {
+    flex: 1;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    min-height: 500px;
+}
+
+/* --- Header & Navigation --- */
+.main-header {
+    background-color: var(--poke-red);
+    height: 70px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+}
+
+.nav-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    cursor: pointer;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    transition: 0.2s;
+}
+
+.nav-links li:hover { 
+    color: var(--poke-gold); 
+}
+
+/* --- Buttons --- */
+.btn-login, .btn-register, .btn-auth, .btn-logout {
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    border: none;
+    transition: 0.3s;
+}
+
+.btn-login { 
+    background: transparent; 
+    border: 2px solid white; 
+    color: white; 
+}
+
+.btn-register { 
+    background: var(--poke-dark); 
+    color: white; 
+    margin-left: 10px; 
+}
+
+.btn-auth { 
+    background: var(--poke-red); 
+    color: white; 
+    width: 100%; 
+    padding: 12px; 
+    margin-top: 10px; 
+}
+
+.btn-auth:hover { 
+    background: #cc0000; 
+}
+
+.btn-logout { 
+    background: #444; 
+    color: white; 
+    padding: 5px 10px; 
+    font-size: 0.8rem; 
+}
+
+/* --- Game Container & Cards --- */
+.game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.card-slot {
+    width: 320px;
+    height: 480px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.pokemon-card {
+    width: 280px;
+    height: 400px;
+    background: white;
+    border-radius: 20px;
+    border: 8px solid var(--poke-gold);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+    color: #333;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+    transition: transform 0.3s ease;
+}
+
+.pokemon-card.active { 
+    visibility: visible; 
+}
+
+.pokemon-card:hover { 
+    transform: translateY(-10px) rotate(1deg); 
+}
+
+.pokemon-img { 
+    width: 220px; 
+    filter: brightness(0); 
+    opacity: 0; 
+    transition: 0.6s; 
+}
+
+.pokemon-img.loaded { 
+    opacity: 1; 
+}
+
+.revealed .pokemon-img { 
+    filter: brightness(1); 
+}
+
+#pokeName {
+    margin-top: 20px;
+    color: #333;
+    text-transform: uppercase;
+    font-size: 1.8rem;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    user-select: none;
+}
+
+.pokemon-card.revealed #pokeName { 
+    opacity: 1; 
+}
+
+/* --- Authentication Forms --- */
+.auth-container {
+    background: white;
+    padding: 3rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    color: #333;
+}
+
+.auth-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.auth-form input {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+.auth-switch {
+    font-size: 0.8rem;
+    color: #666;
+    cursor: pointer;
+    text-decoration: underline;
+    margin-top: 15px;
+    display: block;
+}
+
+/* --- Pokedex Grid --- */
+.poke-grid {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    gap: 10px;
+    padding: 20px;
+    width: 95%;
+    margin: 0 auto;
+}
+
+.mini-card {
+    background: rgba(255, 255, 255, 0.02);
+    padding: 8px;
+    border-radius: 8px;
+    border: 1px dashed rgba(255, 255, 255, 0.1);
+    text-align: center;
+    transition: all 0.2s ease;
+}
+
+.mini-card img { 
+    width: 100%; 
+    height: auto; 
+}
+
+.mini-card.collected {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.mini-card:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.2);
+    border-color: var(--poke-red);
+}
+
+.poke-number { 
+    font-size: 0.7rem; 
+    color: #aaa; 
+    display: block; 
+}
+
+.poke-name {
+    font-size: 0.7rem;
+    color: white;
+    margin-top: 5px;
+    font-weight: bold;
+    word-wrap: break-word;
+    min-height: 1.2em;
+}
+
+/* --- UI State Modifiers --- */
+.locked-pokemon { 
+    filter: brightness(0); 
+    opacity: 0.6; 
+}
+
+.mewtwo-special {
+    border: 1px solid #ffcc00 !important;
+    background: rgba(255, 204, 0, 0.15) !important;
+}
+
+/* --- Footer --- */
+.main-footer {
+    width: 100%;
+    padding: 30px 0;
+    background-color: var(--bg-gray);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin-top: auto;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    color: #888;
+    font-size: 0.75rem;
+    font-family: 'Arial', sans-serif;
+    letter-spacing: 1.5px;
+    font-weight: bold;
+}
+
+.footer-top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    color: #888;
+    font-size: 0.75rem;
+    font-family: 'Arial', sans-serif;
+    letter-spacing: 1.5px;
+    font-weight: bold;
+}
+
+.footer-logo {
+    height: 20px;
+    width: auto;
+    opacity: 0.6;
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 1000px) { 
+    .poke-grid { grid-template-columns: repeat(5, 1fr); } 
+}
+
+@media (max-width: 600px) { 
+    .poke-grid { grid-template-columns: repeat(3, 1fr); } 
+}

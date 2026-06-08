@@ -4,14 +4,20 @@ name: TJCTF 2026
 challenges:
   - id: bit-leak
     name: CRYPTO - bit-leak
+  - id: chained
+    name: WEB - chained
   - id: check-the-fine-print
     name: FORENSICS - check-the-fine-print
   - id: crashout
     name: CRYPTO - crashout
   - id: delta-doodle
     name: MISC - delta-doodle
+  - id: greetings
+    name: PWN - greetings
   - id: mind-blowers
     name: MISC - mind-blowers
+  - id: ox78
+    name: PWN - ox78
   - id: minervas-stopwatch
     name: CRYPTO - minervas-stopwatch
   - id: multiplication-as-a-service

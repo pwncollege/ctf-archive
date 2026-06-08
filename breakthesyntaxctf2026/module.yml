@@ -2,17 +2,37 @@ id: breakthesyntaxctf2026
 name: Break The Syntax CTF 2026
 
 challenges:
+  - id: bugxxor
+    name: WEB - bugxxor
+  - id: captcha
+    name: WEB - captcha
+  - id: cart-blanche
+    name: WEB - cart-blanche
   - id: crabuoros
     name: REV - crabuoros
   - id: cursed
     name: MISC - cursed
+  - id: far
+    name: WEB - far
   - id: fcp
     name: REV - fcp
   - id: flagchecker
     name: REV - flagchecker
-  - id: minfs
-    name: MISC - minfs
   - id: my_first_game
     name: REV - my_first_game
+  - id: pokecollector
+    name: WEB - pokecollector
+  - id: poni_barn
+    name: PWN - poni_barn
+  - id: seaShells
+    name: WEB - seaShells
+  - id: shellcode_1_11
+    name: PWN - shellcode_1_11
+  - id: shellcode_2_22
+    name: PWN - shellcode_2_22
   - id: stepping_stones
     name: REV - stepping_stones
+  - id: w
+    name: WEB - w
+  - id: zabbix
+    name: WEB - zabbix

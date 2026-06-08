@@ -1,0 +1,37 @@
+/* Badges */
+.wpcu-badge {
+    height: 26px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    padding: 0 12px;
+
+    @include m(primary) {
+        color: #fff;
+        background: var(--wpcu-ribbonBgColor) !important;
+    }
+
+    @include m(sm) {
+        height: 20px;
+        padding: 0 7px;
+    }
+
+    @include m(outlined) {
+        border: 1px solid $primary;
+        color: $primary;
+    }
+
+    @include m(rounded) {
+        border-radius: 2px;
+    }
+
+    @include m(rounded-circle) {
+        border-radius: 25px;
+    }
+
+    @include m(text-lg) {
+        text-transform: uppercase;
+        font-weight: 500;
+    }
+}

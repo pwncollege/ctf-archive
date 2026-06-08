@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PokeCollector | Gen I</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <nav class="nav-container">
+            <div class="nav-logo" onclick="navigateTo('home')">
+                <div class="pokeball-icon"></div>
+                <span>PokeCollector</span>
+            </div>
+
+            <ul class="nav-links">
+                <li onclick="navigateTo('home')">Home</li>
+                <li onclick="navigateTo('game')">Open Packs</li>
+                <li onclick="navigateTo('collection')">My Collection</li>
+            </ul>
+
+            <div class="nav-auth" id="auth-ui">
+                <button class="btn-login" onclick="navigateTo('login')">Login</button>
+                <button class="btn-register" onclick="navigateTo('register')">Register</button>
+            </div>
+        </nav>
+    </header>
+
+    <main id="app-canvas">
+        <div class="initial-loader">
+            <p>Loading PokeWorld...</p>
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-top">
+                2026 POKECOLLECTOR - GENERATION I PROJECT
+        </div>
+        <div class="footer-content">
+            <span>Powered by</span>
+            <img src="/images/logo.png" alt="EY" class="footer-logo">
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>

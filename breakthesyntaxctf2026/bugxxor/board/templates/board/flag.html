@@ -1,0 +1,9 @@
+{% extends "board/base.html" %}
+{% block content %}
+{% if flag %}
+<h1>// Captured</h1>
+<div class="flag-box">{{ flag }}</div>
+{% else %}
+<h1>// Access Denied</h1>
+{% endif %}
+{% endblock %}

@@ -1,0 +1,28 @@
+<div class="auth-container">
+    <div class="auth-header">
+        <div class="pokeball-small"></div>
+        <h2>New Trainer Registration</h2>
+    </div>
+    
+    <p class="auth-subtitle">Join the world of Gen I Pokemon collecting!</p>
+
+    <div class="auth-form" id="register-form">
+        <div class="input-group">
+            <label for="reg-user">Trainer Name</label>
+            <input type="text" id="reg-user" placeholder="Enter username..." required>
+        </div>
+
+        <div class="input-group">
+            <label for="reg-pass">Password</label>
+            <input type="password" id="reg-pass" placeholder="Enter password..." required>
+        </div>
+
+        <button onclick="handleRegister()" class="btn-auth">
+            CREATE ACCOUNT
+        </button>
+    </div>
+
+    <div class="auth-footer">
+        <p>Already a Trainer? <span class="link" onclick="navigateTo('login')">Login here</span></p>
+    </div>
+</div>

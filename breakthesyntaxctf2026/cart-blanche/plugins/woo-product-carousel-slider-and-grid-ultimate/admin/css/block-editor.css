@@ -1,0 +1,26 @@
+/* Guterberg Style */
+.wp-block-wcpcsup-block .wpcu-products .product.woocommerce.add_to_cart_inline {
+    border: none !important;
+    max-width: 100%;
+}
+.wp-block-wcpcsup-block .wpcu-products .product.woocommerce.add_to_cart_inline .button {
+    white-space: normal;
+}
+.wp-block-wcpcsup-block .wpcu-products .wpcu-product__title {
+    font-size: var(--wpcu-productTitleSize) !important;
+}
+.wp-block-wcpcsup-block .wpcu-products .wpcu-product__action-icons {
+    max-width: 100%;
+}
+.wp-block-wcpcsup-block .wpcu-products .wpcu-product__cover-content--middle {
+    max-width: calc(100% - 30px);
+    max-height: calc(100% - 30px);
+}
+.wp-block-wcpcsup-block .wpcu-theme_15 .wpcu-product__content {
+    padding-bottom: 110px;
+}
+
+.wp-block-wcpcsup-block .wpcu-products .product.woocommerce.add_to_cart_inline .button {
+    display: flex;
+}
+  

@@ -1,0 +1,66 @@
+//Mixin
+//BEM Element and Modifier
+@mixin e($element) {
+    &__#{$element} {
+        @content;
+    }
+}
+
+@mixin m($modifier) {
+    &--#{$modifier} {
+        @content;
+    }
+}
+
+//variables
+$primary: #ff5500;
+$rating: #feb507;
+$borderColor: #e4e4ed;
+$textLight: #9192a3;
+$textDark: #000000;
+
+:root {
+    /* Grid/Carousel Header */
+    --wpcu-headerFontSize: 24px;
+    --wpcu-headerFontColor: #000;
+    /* Product Title */
+    --wpcu-productTitleSize: 16px;
+    --wpcu-productTitleColor: #363940;
+    --wpcu-productTitleColorHover: #000;
+    /* Product Price */
+    --wpcu-productPriceSize: 16px;
+    --wpcu-productPriceColor: #ff5500;
+    /* Product Ratings */
+    --wpcu-productRatingSize: 16px;
+    --wpcu-productRatingColor: #feb507;
+    /* "Add to Cart" Button */
+    --wpcu-buttonColor: #fff;
+    --wpcu-buttonColorHover: #fff;
+    --wpcu-buttonBgColor: #ff5500;
+    --wpcu-buttonBgColorHover: #d54500;
+    /* Ribbon */
+    --wpcu-ribbonBgColor: #ff5500;
+    /* Quick view icon */
+    --wpcu-qvIconColor: #fff;
+    --wpcu-qvBgColor: #ff5500;
+    /* Navigaiton */
+    --wpcu-navArrowColor: #333;
+    --wpcu-navArrowColorHover: #fff;
+    --wpcu-navBgColor: #fff;
+    --wpcu-navBgColorHover: #ff5500;
+    --wpcu-navBorderColor: #e4e4ed;
+    --wpcu-navBorderColorHover: #ff5500;
+    /* Pagination */
+    --wpcu-pagColor: #333;
+    --wpcu-pagColorHover: #fff;
+    --wpcu-pagBorderColor: #e4e4e4;
+    --wpcu-pagBorderColorHover: #ff5500;
+    --wpcu-pagBgColor: #fff;
+    --wpcu-pagBgColorHover: #ff5500;
+    --wpcu-pagActiveColor: #fff;
+    --wpcu-pagActiveBorderColor: #ff5500;
+    --wpcu-pagActiveBgColor: #ff5500;
+    /* Carousel Dots color */
+    --wpcu-dotsColor: #b0b0b0;
+    --wpcu-dotsActiveColor: #ff5500;
+}

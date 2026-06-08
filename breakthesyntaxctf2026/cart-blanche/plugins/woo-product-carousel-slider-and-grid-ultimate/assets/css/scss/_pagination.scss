@@ -1,0 +1,91 @@
+/*===========================
+ Pagination styles
+===========================*/
+.wpcu-pagination .pagination {
+    margin: 0;
+    padding: 0;
+    border: 0 none;
+    width: 100%;
+    max-width: 100%;
+}
+
+.wpcu-pagination .pagination .nav-links {
+    margin: 25px -5px -5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.wpcu-pagination.wpcu-pagination--left .pagination .nav-links {
+    justify-content: flex-start;
+}
+
+.wpcu-pagination.wpcu-pagination--right .pagination .nav-links {
+    justify-content: flex-end;
+}
+
+.wpcu-pagination .pagination .nav-links .page-numbers {
+    color: var(--wpcu-pagColor) !important;
+    margin: 5px;
+    font-size: 14px;
+    text-decoration: none !important;
+    border: 1px solid var(--wpcu-pagBorderColor) !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    background: var(--wpcu-pagBgColor) !important;
+    width: 34px;
+    min-width: 34px;
+    height: 34px;
+    min-height: 34px;
+    border-radius: 3px;
+    transition: 0.3s ease;
+    &:before,
+    &:after{
+        content: none;
+    }
+    &.prev,
+    &.next{
+        position: static;
+    }
+}
+
+.wpcu-pagination .pagination .nav-links .page-numbers svg {
+    fill: var(--wpcu-pagColor) !important;
+}
+
+.wpcu-pagination .pagination .nav-links .page-numbers:hover svg {
+    fill: var(--wpcu-pagColorHover) !important;
+}
+
+.wpcu-pagination .pagination .nav-links .page-numbers:hover {
+    background: var(--wpcu-pagBgColorHover) !important;
+    border-color: var(--wpcu-pagBorderColorHover) !important;
+    color: var(--wpcu-pagColorHover) !important;
+}
+
+.wpcu-pagination .pagination .nav-links .page-numbers.current {
+    background: var(--wpcu-pagActiveBgColor) !important;
+    border-color: var(--wpcu-pagActiveBorderColor) !important;
+    color: var(--wpcu-pagActiveColor) !important;
+}
+
+/* Carousel bullets pagination */
+.wpcu-carousel-pagination {
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.wpcu-carousel-pagination{
+    .swiper-pagination-bullet{
+        background: var(--wpcu-dotsColor) !important;
+        opacity: 1;
+    }
+    .swiper-pagination-bullet-active {
+        background: var(--wpcu-dotsActiveColor) !important;
+    }
+}

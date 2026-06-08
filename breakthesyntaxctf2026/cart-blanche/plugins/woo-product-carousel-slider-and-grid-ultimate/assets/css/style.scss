@@ -1,0 +1,24 @@
+/*
+    Plugin: WooCommerce Product Carousel, Slider & Grid Ultimate
+    Plugin URI: https://wordpress.org/plugins/woo-product-carousel-slider-and-grid-ultimate/
+    Author: wpWax
+    Version: 1.0
+*/
+
+/* Import font */
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600&display=swap');
+//Configurable scss files
+@import "./scss/config";
+@import "./scss/general";
+@import "./scss/grid";
+@import "./scss/keyframes";
+@import "./scss/buttons";
+@import "./scss/badges";
+@import "./scss/components";
+@import "./scss/utilities";
+@import "./scss/modal";
+@import "./scss/pagination";
+//Grid styles
+@import "./scss/themes/theme-one";
+@import "./scss/themes/theme-two";
+@import "./scss/themes/theme-three";

@@ -1,0 +1,37 @@
+name: chained
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      - CHAINED_HOST=0.0.0.0
+      - CHAINED_PORT=5000
+    ports:
+      - "5000:5000"   # the challenge web app
+      - "8080:8080"   # the admin-bot submission endpoint (served by the bot)
+
+  # Admin bot. This is the "submit a URL for the admin to visit" service:
+  #   POST /visit {"url": "<origin>/admin/..."}
+  # It enforces the original <APP_ORIGIN>/admin/ whitelist, reads the flag from
+  # /flag, and loads <url>+<flag> in a headless Chromium.
+  #
+  # The bot shares the app's network namespace so the admin browser reaches the
+  # app over loopback (http://127.0.0.1:5000). This is required for the original
+  # chain: the /admin JS reflector only answers remote_addr 127.0.0.1, so the
+  # admin's same-origin <script src="/admin?q=..."> load must come from loopback.
+  bot:
+    build:
+      context: .
+      dockerfile: Dockerfile.bot
+    environment:
+      - APP_ORIGIN=http://127.0.0.1:5000
+      - BOT_PORT=8080
+      - FLAG_FILE=/flag
+    network_mode: "service:app"
+    depends_on:
+      - app
+    # The flag is read from /flag inside the bot container. Dockerfile.bot writes
+    # a self-contained build-time default; replace it on deploy, e.g.:
+    #   volumes:
+    #     - ./flag:/flag:ro

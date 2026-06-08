@@ -1,0 +1,44 @@
+<html>
+
+<head>
+  <title>IntegralCaptcha</title>
+  <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+    </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+</head>
+
+<body style="display: flex; align-items:center; justify-content: center; flex-direction: column; text-align: center;">
+  <h2>IntegralCaptcha</h2>
+  <span>To verify that you are human, please approximate the following integral.</span>
+  <span>Four correct answers to get the flag!</span>
+  <img src="data:image/png;base64,{{ equation }}" />
+  <p id="countdown">You have <span id="time">8</span> seconds</p>
+  <div id="form">
+  <form method="post" action="/">
+    <input name="answer" type="text" placeholder="Enter the answer"/>
+    <button style="margin-top: 10px;" type="submit">Submit</button>
+  </form>
+  </div>
+  <div id="restart" hidden>
+    <button onclick="window.location.reload()">Try Again</button>
+  </div>
+</body>
+
+  <script>
+  (function(){
+    var timeEl = document.getElementById('time');
+    var seconds = 8;
+    var interval = setInterval(function(){
+      seconds--;
+      if (seconds >= 0) timeEl.textContent = seconds;
+      if (seconds <= 0) {
+        clearInterval(interval);
+        document.getElementById('form').hidden = true;
+        document.getElementById('restart').hidden = false;
+      }
+    }, 1000);
+  })();
+  </script>
+
+</html>

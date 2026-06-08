@@ -1,0 +1,299 @@
+/* General styles. */
+
+#outlook a {
+	padding: 0;
+}
+
+.ExternalClass {
+	width: 100%;
+}
+
+.ExternalClass, .ExternalClass p, .ExternalClass span, .ExternalClass font, .ExternalClass td, .ExternalClass div {
+	line-height: 100%;
+}
+
+#backgroundTable {
+	margin: 0;
+	padding: 0;
+	width: 100% !important;
+	line-height: 100% !important;
+}
+
+/* Prevent blue links in subject. */
+.stats-subject-heading a {
+	color: inherit !important;
+	text-decoration: none !important;
+}
+
+/* Mobile styles. */
+
+@media only screen and (max-width: 599px) {
+	table.body .container {
+		width: 94% !important;
+		max-width: 600px !important;
+	}
+
+	.header img {
+		width: 240px !important;
+		height: auto !important;
+	}
+
+	.content {
+		padding: 30px !important;
+	}
+
+	.main-heading {
+		font-size: 16px !important;
+		line-height: 20px !important;
+	}
+
+	.main-description {
+		margin-bottom: 20px !important;
+	}
+
+	.stats-totals-wrapper.two .stats-totals-item-wrapper {
+		width: 50% !important;
+	}
+
+	.stats-totals-wrapper.three .stats-totals-item-wrapper {
+		width: 33.3% !important;
+	}
+
+	.stats-totals-wrapper.four .stats-totals-item-wrapper {
+		width: 25% !important;
+	}
+
+	.stats-totals-wrapper {
+		border-collapse: separate !important;
+		border: 1px solid #DDDDDD !important;
+		border-radius: 4px !important;
+	}
+
+	.stats-total-item {
+		width: 100% !important;
+		min-width: 100% !important;
+	}
+
+	.stats-total-item-inner {
+		border: none !important;
+	}
+
+	.stats-total-item-icon-wrapper {
+		height: 24px !important;
+	}
+
+	.stats-total-item-icon {
+		width: 24px !important;
+		height: 24px !important;
+	}
+
+	.stats-totals-wrapper.three .stats-total-item-title,
+	.stats-totals-wrapper.four .stats-total-item-title {
+		display: none !important;
+	}
+
+	.stats-total-item-value {
+		font-size: 18px !important;
+		line-height: 22px !important;
+	}
+
+	.stats-total-item-percent {
+		font-size: 12px !important;
+		line-height: 14px !important;
+	}
+
+	.stats-total-item-percent img {
+		width: 9px !important;
+		height: 9px !important;
+	}
+
+	.stats-heading th {
+		display: block !important;
+		width: 100% !important;
+		min-width: 100% !important;
+		padding-right: 0 !important;
+		padding-left: 0 !important;
+		text-align: center !important;
+	}
+
+	.stats-heading .first-col {
+		padding-top: 20px !important;
+		padding-bottom: 5px !important;
+	}
+
+	.stats-heading .second-col {
+		padding-top: 0 !important;
+		padding-bottom: 20px !important;
+	}
+
+	.stats-heading h2 {
+		text-align: center !important;
+		font-size: 15px !important;
+		line-height: 18px !important;
+	}
+
+	.stats-heading a {
+		font-size: 13px !important;
+		line-height: 16px !important;
+	}
+
+	.stats-subject-heading {
+		text-align: center !important;
+	}
+
+	.stats-subject-row {
+		text-align: center !important;
+	}
+
+	.stats-subject-column.total,
+	.stats-subject-column.sent,
+	.stats-subject-column.confirmed,
+	.stats-subject-column.unconfirmed,
+	.stats-subject-column.unsent {
+		max-width: 64px !important;
+	}
+
+	.stats-subject-column.opened,
+	.stats-subject-column.clicked {
+		max-width: 111px !important;
+	}
+
+	.spacer-40 {
+		line-height: 20px !important;
+		height: 20px !important;
+	}
+
+	.upgrade-heading {
+		font-size: 18px !important;
+		line-height: 22px !important;
+	}
+
+	.upgrade-text {
+		font-size: 14px !important;
+		line-height: 20px !important;
+	}
+}
+
+@media only screen and (max-width: 360px) {
+	.content {
+		padding: 20px !important;
+	}
+
+	.stats-subject-column.total,
+	.stats-subject-column.sent,
+	.stats-subject-column.confirmed,
+	.stats-subject-column.unconfirmed,
+	.stats-subject-column.unsent {
+		max-width: 61px !important;
+	}
+}
+
+/* Dark Mode. */
+
+@media (prefers-color-scheme: dark) {
+	.dark-body-bg {
+		background: #1C1E20 !important;
+	}
+
+	.dark-content-bg {
+		background: #23282C !important;
+	}
+
+	.dark-bg {
+		background: #202326 !important;
+	}
+
+	.dark-white-color {
+		color: #ffffff !important;
+	}
+
+	.dark-img {
+		display: block !important;
+		width: auto !important;
+		overflow: visible !important;
+		float: none !important;
+		max-height: inherit !important;
+		max-width: inherit !important;
+		line-height: auto !important;
+		margin-top: 0px !important;
+		visibility: inherit !important;
+	}
+
+	.light-img {
+		display: none;
+		display: none !important;
+	}
+
+	.stats-total-item-inner,
+	.stats-heading {
+		border-color: #395360 !important;
+	}
+
+	.stats-subject-column-value,
+	.stats-total-item-percent,
+	.footer {
+		color: #8C8F94 !important;
+	}
+
+	.stats-subject-column-value span {
+		color: #4A5057 !important;
+	}
+
+	.upgrade-text {
+		color: #8C8F94 !important;
+	}
+}
+
+/* Dark Mode Outlook. */
+
+[data-ogsc] .dark-body-bg {
+	background: #1C1E20 !important;
+}
+
+[data-ogsc] .dark-content-bg {
+	background: #23282C !important;
+}
+
+[data-ogsc] .dark-bg {
+	background: #202326 !important;
+}
+
+[data-ogsc] .dark-white-color {
+	color: #ffffff !important;
+}
+
+[data-ogsc] .dark-img {
+	display: block !important;
+	width: auto !important;
+	overflow: visible !important;
+	float: none !important;
+	max-height: inherit !important;
+	max-width: inherit !important;
+	line-height: auto !important;
+	margin-top: 0px !important;
+	visibility: inherit !important;
+}
+
+[data-ogsc] .light-img {
+	display: none;
+	display: none !important;
+}
+
+[data-ogsc] .stats-total-item-inner,
+[data-ogsc] .stats-heading {
+	border-color: #395360 !important;
+}
+
+[data-ogsc] .stats-subject-column-value,
+[data-ogsc] .stats-total-item-percent,
+[data-ogsc] .footer {
+	color: #8C8F94 !important;
+}
+
+[data-ogsc] .stats-subject-column-value span {
+	color: #4A5057 !important;
+}
+
+[data-ogsc] .upgrade-text {
+	color: #8C8F94 !important;
+}

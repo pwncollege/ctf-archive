@@ -1,0 +1,47 @@
+/*===========================
+ Style: Theme Three
+===========================*/
+.wpcu-theme_3{
+    .wpcu-product{
+        @include e(content){
+            border: 1px solid $borderColor;
+            border-radius: 6px;
+            padding: 10px;
+            background: #fff;
+        }
+        @include e(img){
+            margin-bottom: 20px;
+            img{
+                border-radius: 6px;
+            }
+            .wpcu-product__cover-content--middle{
+                transition: 0.3s ease;
+                opacity: 0;
+                visibility: hidden;
+                pointer-events: none;
+            }
+        }
+        @include e(details){
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            margin: -6px 0 6px;
+
+            .wpcu-product__title,
+            .wpcu-product__price,
+            .wpcu-product__rating {
+                padding: 6px 0;
+            }
+        }
+        @include e(content){
+            &:hover{
+                .wpcu-product__cover-content--middle{
+                    opacity: 1;
+                    visibility: visible;
+                    pointer-events: all;
+                }
+            }
+        }
+    }
+}

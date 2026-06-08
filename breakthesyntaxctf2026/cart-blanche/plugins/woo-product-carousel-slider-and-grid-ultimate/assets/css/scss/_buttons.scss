@@ -1,0 +1,118 @@
+/*
+    * Buttons
+    ? Modifiers: --sm, --rounded, --rounded-circle, --icon-circle, --outlined, --light
+*/
+.wpcu-button {
+    display: inline-block;
+
+    p {
+        margin: 0;
+        display: inline-block;
+    }
+
+    .button,
+    .added_to_cart,
+    .button.added {
+        min-height: 40px;
+        background: var(--wpcu-buttonBgColor) !important;
+        color: var(--wpcu-buttonColor) !important;
+        border-radius: 0;
+        text-transform: uppercase;
+        font-size: 12px;
+        padding: 0 15px !important;
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        transition: 0.3s ease;
+        border: 1px solid transparent !important;
+        line-height: unset;
+        text-align: center;
+
+        &:hover {
+            text-decoration: none;
+            background: var(--wpcu-buttonBgColorHover) !important;
+            color: var(--wpcu-buttonColorHover) !important;
+            border-color: var(--wpcu-buttonBgColorHover) !important;
+        }
+    }
+
+    @include m(outlined) {
+        .button,
+        .added_to_cart {
+            border: 1px solid $borderColor;
+            background: var(--wpcu-buttonBgColor) !important;
+            color: var(--wpcu-buttonColor) !important;
+            &:hover{
+                color: var(--wpcu-buttonColorHover) !important;
+                background: var(--wpcu-buttonBgColorHover) !important;
+                border-color: var(--wpcu-buttonBgColorHover) !important;
+            }
+        }
+    }
+
+    @include m(sm) {
+        .button,
+        .added_to_cart {
+            min-height: 35px;
+            padding: 0 12px;
+        }
+    }
+
+    @include m(rounded) {
+        .button,
+        .added_to_cart {
+            border-radius: 3px;
+        }
+    }
+
+    @include m(rounded-circle) {
+        .button,
+        .added_to_cart {
+            border-radius: 20px !important;
+        }
+    }
+
+    @include m(icon-circle) {
+        a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: var(--wpcu-qvBgColor);
+
+            svg {
+                width: 14px;
+                height: 14px;
+                fill: var(--wpcu-qvIconColor);
+            }
+        }
+    }
+    @include m(light){
+        .button{
+            background: var(--wpcu-buttonBgColor) !important;
+            border-color: #fff;
+            color: var(--wpcu-buttonColor) !important;
+            &:hover{
+                color: var(--wpcu-buttonColorHover) !important;
+                border-color: var(--wpcu-buttonBgColorHover) !important;
+                background: var(--wpcu-buttonBgColorHover) !important;
+            }
+        }
+    }
+}
+/* Button tweaks */
+.wpcu-button .button.added{
+    display: none !important;
+}
+
+/* Button text decoration none */
+.wpcu-product .wpcu-button{
+    .button,
+    .added_to_cart,
+    .button.added{
+        text-decoration: none !important;
+    }
+}

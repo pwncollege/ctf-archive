@@ -1,0 +1,49 @@
+{
+  "name": "wpforms/divi-form-selector",
+  "d4Shortcode": "wpforms_selector",
+  "title": "WPForms",
+  "titles": "Forms",
+  "moduleIcon": "wpforms/divi-form-selector",
+  "category": "module",
+  "attributes": {
+    "module": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "default": {},
+      "defaultPrintedStyle": {},
+      "settings": {
+        "advanced": {
+          "htmlAttributes": {}
+        },
+        "decoration": {
+          "animation": {},
+          "sizing": {},
+          "spacing": {},
+          "transform": {},
+          "conditions": {},
+          "disabledOn": {},
+          "position": {},
+          "scroll": {},
+          "transition": {}
+        }
+      }
+    },
+    "formId": {
+      "type": "string",
+      "default": "0"
+    },
+    "showTitle": {
+      "type": "string",
+      "default": "off"
+    },
+    "showDescription": {
+      "type": "string",
+      "default": "off"
+    }
+  },
+  "customCssFields": {},
+  "settings": {
+    "design": "auto",
+    "advanced": "auto"
+  }
+}

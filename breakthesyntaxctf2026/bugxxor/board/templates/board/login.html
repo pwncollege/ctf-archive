@@ -1,0 +1,16 @@
+{% extends "board/base.html" %}
+{% block content %}
+<h1>// Login</h1>
+<p class="subtitle">rejoin the swarm</p>
+<form method="post">
+    {% for field in form %}
+    <div class="field">
+        <label for="{{ field.id_for_label }}">{{ field.label }}</label>
+        {{ field }}
+        {% for error in field.errors %}<p class="error">{{ error }}</p>{% endfor %}
+    </div>
+    {% endfor %}
+    <button type="submit">Login</button>
+</form>
+<p class="alt-link">No account? <a href="{% url 'register' %}">Register</a></p>
+{% endblock %}

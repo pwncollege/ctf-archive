@@ -1,0 +1,31 @@
+{
+  "advanced": {
+    "animation": "animation",
+    "disabled_on": "disabledOn",
+    "module": "module",
+    "overflow": "overflow",
+    "position_fields": "position",
+    "scroll": "scroll",
+    "sticky": "sticky",
+    "text_shadow": {
+      "default": "text.textShadow"
+    },
+    "transform": "transform",
+    "transition": "transition",
+    "z_index": "zIndex",
+    "max_width": "sizing",
+    "height": "sizing",
+    "margin_padding": "spacing"
+  },
+  "css": {
+    "before": "css.*.before",
+    "main_element": "css.*.mainElement",
+    "after": "css.*.after",
+    "free_form": "css.*.freeForm"
+  },
+  "module": {
+    "form_id": "formId.*",
+    "show_title": "showTitle.*",
+    "show_desc": "showDescription.*"
+  }
+}

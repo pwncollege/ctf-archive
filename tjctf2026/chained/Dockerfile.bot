@@ -1,0 +1,21 @@
+FROM mcr.microsoft.com/playwright/python:v1.58.0-noble
+
+WORKDIR /app
+
+# The base image ships the matching browsers under /ms-playwright; install the
+# matching playwright python package + Flask.
+ENV PLAYWRIGHT_BROWSERS_PATH=/ms-playwright
+RUN pip install --no-cache-dir --break-system-packages \
+        Flask==3.0.3 playwright==1.58.0
+
+COPY app/ /app/
+
+# Build-time default flag so the rehost is self-contained; replace /flag on deploy.
+RUN echo "tjctf{rehost_test_4e5b5b930063}" > /flag && chmod 444 /flag
+
+ENV APP_ORIGIN=http://app:5000 \
+    BOT_PORT=8080 \
+    FLAG_FILE=/flag
+
+EXPOSE 8080
+CMD ["python", "bot_server.py"]

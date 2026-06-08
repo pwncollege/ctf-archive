@@ -1,0 +1,9 @@
+services:
+  web:
+    build: .
+    container_name: captcha
+    restart: always
+    ports:
+      - "5000:5000"
+    environment:
+      - FLASK_ENV=production

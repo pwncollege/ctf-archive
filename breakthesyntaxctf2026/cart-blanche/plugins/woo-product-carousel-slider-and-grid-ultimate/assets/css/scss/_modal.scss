@@ -1,0 +1,135 @@
+/*===========================
+ Modal Styles
+===========================*/
+/* Modal Style */
+.wpcu-modal.wpcu-modal--loading .wpcu-modal__content {
+    position: relative;
+    overflow: hidden;
+}
+
+.wpcu-modal.wpcu-modal--loading .wpcu-modal__content::after {
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.wpcu-modal.wpcu-modal--loading .wpcu-modal__content::before {
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border: 2px solid #ff5500;
+    border-right-color: transparent;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    z-index: 2;
+    animation: wpcu-rotate 2s linear infinite;
+}
+
+.wpcu-modal .wpcu-modal__content .wpcu-modal__body{
+    .add_to_cart_inline{
+        border: 0 none !important;
+        padding: 0 !important;
+    }
+}
+
+.wpcu-modal .wpcu-modal-close {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #f3f3f3;
+    text-decoration: none !important;
+}
+
+.wpcu-modal .wpcu-modal-close span {
+    position: relative;
+    top: -2px;
+}
+
+.wpcu-modal .wpcu-modal__product-title {
+    font-size: 25px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    margin-top: 0;
+    &::before{
+        content: none;
+    }
+}
+
+.wpcu-modal .wpcu-modal__product-image {
+    margin-bottom: 20px;
+}
+
+.wpcu-modal .wpcu-modal__product-image img {
+    max-width: 300px;
+}
+
+.wpcu-modal .wpcu-modal__product-price {
+    margin-bottom: 10px;
+}
+
+.wpcu-modal .wpcu-modal__product-price .amount {
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--wpcu-productPriceColor);
+}
+
+.wpcu-modal .wpcu-modal__product-price ins {
+    text-decoration: none;
+}
+
+.wpcu-modal .wpcu-modal__product-price del bdi{
+    font-weight: 300;
+    color: #9192a3;
+}
+
+.wpcu-modal .wpcu-modal__product-description {
+    margin-bottom: 20px;
+}
+
+.wpcu-modal .wpcu-modal__product-description p {
+    color: #505050;
+    font-size: 16px;
+}
+
+.wpcu-modal .wpcu-modal__product-action p {
+    border: 0 none !important;
+    padding: 0 !important;
+}
+
+.wpcu-modal .wpcu-modal__product-action p a,
+.wpcu-modal .wpcu-modal__product-action p a.added_to_cart {
+    border-radius: 5px;
+    line-height: 46px;
+    padding: 0 30px;
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--wpcu-buttonColor);
+    background: var(--wpcu-buttonBgColor) !important;
+    border: 0 none;
+    text-decoration: none !important;
+    display: inline-block;
+}
+
+.wpcu-modal .wpcu-modal__product-action p a:hover,
+.wpcu-modal .wpcu-modal__product-action p a:focus,
+.wpcu-modal .wpcu-modal__product-action p a:active {
+    text-decoration: none !important;
+    background: var(--wpcu-buttonBgColorHover) !important;
+    color: var(--wpcu-buttonColorHover);
+    border-radius: 5px;
+}
+
+.wpcu-modal .wpcu-modal__product-action p a.added {
+    display: none !important;
+}

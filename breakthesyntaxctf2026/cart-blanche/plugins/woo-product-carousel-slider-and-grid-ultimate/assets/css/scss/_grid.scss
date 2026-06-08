@@ -1,0 +1,78 @@
+/* wpcu grid */
+.wpcu-row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+    margin-top: -25px;
+    min-width: 100%;
+}
+
+.wpcu-row>* {
+    box-sizing: border-box;
+    flex-shrink: 0;
+    width: 100%;
+    max-width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-top: 25px;
+}
+
+/* wpcu columns */
+.wpcu-column-1 .wpcu-product {
+    flex: 0 0 100%;
+}
+
+.wpcu-column-2 .wpcu-product {
+    flex: 0 0 50%;
+}
+
+.wpcu-column-3 .wpcu-product {
+    flex: 0 0 33.33%;
+}
+
+.wpcu-column-4 .wpcu-product {
+    flex: 0 0 25%;
+}
+
+.wpcu-column-5 .wpcu-product {
+    flex: 0 0 20%;
+}
+
+
+/* columns in mobile and tablet */
+@media only screen and (max-width: 991px) {
+    .wpcu-column-md-1 .wpcu-product {
+        flex: 0 0 100% !important;
+    }
+
+    .wpcu-column-md-2 .wpcu-product {
+        flex: 0 0 50%;
+    }
+
+    .wpcu-column-md-3 .wpcu-product {
+        flex: 0 0 33.33%;
+    }
+
+    .wpcu-column-md-4 .wpcu-product {
+        flex: 0 0 25%;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .wpcu-column-sm-1 .wpcu-product {
+        flex: 0 0 100% !important;
+    }
+
+    .wpcu-column-sm-2 .wpcu-product {
+        flex: 0 0 50%;
+    }
+
+    .wpcu-column-sm-3 .wpcu-product {
+        flex: 0 0 33.33%;
+    }
+
+    .wpcu-column-sm-4 .wpcu-product {
+        flex: 0 0 25%;
+    }
+}

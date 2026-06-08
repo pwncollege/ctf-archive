@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>W — formerly Witter</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <nav>
+    <div style="display:flex;align-items:center;gap:0.75rem">
+      <div class="brand" id="nav-brand">
+        <span class="brand-w">W</span>
+        <span class="brand-formerly">formerly Witter</span>
+      </div>
+      <a href="/faq.html" class="btn outline sm" style="text-decoration:none">FAQ</a>
+    </div>
+    <div class="nav-right" id="nav-right"></div>
+  </nav>
+
+  <div id="bio-editor" class="hidden"></div>
+
+  <!-- ── AUTH VIEW ── -->
+  <div id="auth-view" class="auth-wrap hidden">
+    <div class="auth-brand">
+      <div class="big-w">W</div>
+    </div>
+    <div class="card">
+      <div class="tab-bar">
+        <div class="tab active" id="tab-login" onclick="switchTab('login')">Log in</div>
+        <div class="tab" id="tab-register" onclick="switchTab('register')">Sign up</div>
+      </div>
+      <div id="login-form">
+        <div class="form-row"><label>Username</label><input type="text" id="l-user" placeholder="username"></div>
+        <div class="form-row"><label>Password</label><input type="password" id="l-pass" placeholder="••••••••"></div>
+        <button class="btn blue" style="width:100%" onclick="doLogin()">Log in</button>
+        <div class="msg" id="login-msg"></div>
+      </div>
+      <div id="register-form" class="hidden">
+        <div class="form-row">
+          <label>Username <span style="color:#2f3336">(a–z, 0–9, underscore, 3–20 chars)</span></label>
+          <input type="text" id="r-user" placeholder="username">
+        </div>
+        <div class="form-row"><label>Password</label><input type="password" id="r-pass" placeholder="••••••••"></div>
+        <button class="btn blue" style="width:100%" onclick="doRegister()">Create account</button>
+        <div class="msg" id="register-msg"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── FEED VIEW ── -->
+  <div id="feed-view" class="page hidden">
+
+    <!-- Compose / new post -->
+    <div class="card">
+      <div class="sec-header" style="padding:0 0 0.75rem">
+        <div class="sec-title">Posts</div>
+        <button class="btn blue sm" onclick="openPostEditor()">+ Post</button>
+      </div>
+      <!-- Post editor -->
+      <div class="hidden" id="post-editor">
+        <hr style="margin-bottom:0.9rem">
+        <div class="form-row"><label>Name</label><input type="text" id="sn-name" placeholder="My post"></div>
+        <div class="form-row">
+          <label>Image painter <span style="color:#536471">(.wasm — must export <code
+                style="color:#1d9bf0">fill(ptr, w, h, r, g, b)</code> and <code
+                style="color:#1d9bf0">memory</code>)</span></label>
+          <label class="file-drop" id="file-drop" ondragover="onDragOver(event)" ondragleave="onDragLeave()"
+            ondrop="onDrop(event)">
+            <input type="file" id="sn-wasm" accept=".wasm" onchange="onFileChange()">
+            <span id="file-label">Drop .wasm painter here or click to browse</span>
+          </label>
+        </div>
+        <div class="btn-row">
+          <button class="btn blue sm" onclick="savePost()">Upload &amp; Post</button>
+          <button class="btn outline sm" onclick="closePostEditor()">Cancel</button>
+        </div>
+        <div class="msg" id="sn-msg"></div>
+        <div class="share-link hidden" id="sn-link"></div>
+      </div>
+    </div>
+
+    <!-- Feed -->
+    <div id="feed-list"></div>
+
+  </div>
+
+  <!-- ── VIEWER VIEW ── -->
+  <div id="viewer-view" class="page hidden">
+    <div class="card" style="margin-top:1rem">
+      <div class="viewer-header">
+        <div class="post-avatar" id="v-avatar"></div>
+        <div>
+          <div style="font-weight:700;font-size:1rem" id="v-name"></div>
+          <div style="font-size:0.82rem;color:#536471">by <a href="#" id="v-author"
+              style="color:#1d9bf0;text-decoration:none"></a></div>
+        </div>
+      </div>
+      <div class="card-label">Canvas Output</div>
+      <canvas id="canvas" style="display:block;max-width:100%;border-radius:6px;image-rendering:pixelated"></canvas>
+      <div class="msg err hidden" id="wasm-error"></div>
+      <div id="v-publish" style="margin-top:0.75rem"></div>
+    </div>
+  </div>
+
+  <!-- ── PROFILE VIEW ── -->
+  <div id="profile-view" class="page hidden">
+    <div class="card" style="margin-top:1rem">
+      <div class="profile-head">
+        <div class="p-avatar" id="p-avatar"></div>
+        <div class="p-name" id="p-username"></div>
+        <div class="p-handle" id="p-handle"></div>
+      </div>
+      <hr>
+      <div style="padding:0.9rem 0 0.25rem">
+        <div class="card-label">Notes</div>
+        <div class="status-body" id="p-status-body"></div>
+        <div class="lock-badge hidden" id="p-lock-badge">🔒 Private notes</div>
+      </div>
+    </div>
+    <div class="sec-header">
+      <div class="sec-title">Posts</div>
+    </div>
+    <div id="p-posts"></div>
+  </div>
+
+  <script src="main.js" type="module"></script>
+</body>
+
+</html>

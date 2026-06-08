@@ -1,3 +1,0 @@
-# Failed Rehosts
-
-- None.

@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="415" height="228" viewBox="0 0 415 228">
+  <defs>
+    <radialGradient id="radial-gradient" cx="0.5" cy="0.5" r="0.5" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#ddd"/>
+      <stop offset="1" stop-color="#fff"/>
+    </radialGradient>
+  </defs>
+  <g id="process" transform="translate(-492 -434)">
+    <g id="circles">
+      <g id="Ellipse_9" data-name="Ellipse 9" transform="translate(574 527)" fill="#fff" stroke="#777" stroke-width="3" opacity="0.15">
+        <circle cx="8" cy="8" r="8" stroke="none"/>
+        <circle cx="8" cy="8" r="6.5" fill="none"/>
+        <animate attributeName="opacity" values="0;0.25;0" dur="1s" repeatCount="indefinite"/>
+      </g>
+      <g id="Ellipse_13" data-name="Ellipse 13" transform="translate(895 567)" fill="#fff" stroke="#777" stroke-width="2" opacity="0.3">
+        <circle cx="6" cy="6" r="6" stroke="none"/>
+        <circle cx="6" cy="6" r="5" fill="none"/>
+        <animate attributeName="opacity" values="0;0.6;0" dur="1.3s" repeatCount="indefinite"/>
+      </g>
+      <g id="Ellipse_14" data-name="Ellipse 14" transform="translate(592 440)" fill="#fff" stroke="#777" stroke-width="2" opacity="0.15">
+        <circle cx="6" cy="6" r="6" stroke="none"/>
+        <circle cx="6" cy="6" r="5" fill="none"/>
+        <animate attributeName="opacity" values="0;0.25;0" dur="1.6s" repeatCount="indefinite"/>
+      </g>
+      <g id="Ellipse_10" data-name="Ellipse 10" transform="translate(845 460)" fill="#fff" stroke="#777" stroke-width="3" opacity="0.3">
+        <circle cx="8" cy="8" r="8" stroke="none"/>
+        <circle cx="8" cy="8" r="6.5" fill="none"/>
+        <animate attributeName="opacity" values="0;0.6;0" dur="1.9s" repeatCount="indefinite"/>
+      </g>
+      <g id="Ellipse_11" data-name="Ellipse 11" transform="translate(824 618)" fill="#fff" stroke="#777" stroke-width="1" opacity="0.15">
+        <circle cx="4" cy="4" r="4" stroke="none"/>
+        <circle cx="4" cy="4" r="3.5" fill="none"/>
+        <animate attributeName="opacity" values="0;0.25;0" dur="2.2s" repeatCount="indefinite"/>
+      </g>
+      <g id="Ellipse_16" data-name="Ellipse 16" transform="translate(492 517)" fill="#fff" stroke="#777" stroke-width="1" opacity="0.3">
+        <circle cx="4" cy="4" r="4" stroke="none"/>
+        <circle cx="4" cy="4" r="3.5" fill="none"/>
+        <animate attributeName="opacity" values="0;0.6;0" dur="2.5s" repeatCount="indefinite"/>
+      </g>
+      <g id="Ellipse_15" data-name="Ellipse 15" transform="translate(719 434)" fill="#fff" stroke="#777" stroke-width="1" opacity="0.15">
+        <circle cx="4" cy="4" r="4" stroke="none"/>
+        <circle cx="4" cy="4" r="3.5" fill="none"/>
+        <animate attributeName="opacity" values="0;0.25;0" dur="2.8s" repeatCount="indefinite"/>
+      </g>
+      <g id="Ellipse_12" data-name="Ellipse 12" transform="translate(521 452)" fill="#fff" stroke="#777" stroke-width="1" opacity="0.3">
+        <circle cx="4" cy="4" r="4" stroke="none"/>
+        <circle cx="4" cy="4" r="3.5" fill="none"/>
+        <animate attributeName="opacity" values="0;0.6;0" dur="3.1s" repeatCount="indefinite"/>
+      </g>
+    </g>
+    <g id="stars">
+      <path id="Path_510" data-name="Path 510" d="M7.5-8.641,2.937-9.306.9-13.444a1,1,0,0,0-1.794,0L-2.938-9.306-7.5-8.641a1,1,0,0,0-.553,1.706l3.3,3.219L-5.534.831a1,1,0,0,0,1.45,1.053L0-.263,4.084,1.884A1,1,0,0,0,5.534.831L4.753-3.716l3.3-3.219A1,1,0,0,0,7.5-8.641Zm-4.359,4.4L3.884.084,0-1.956-3.884.084l.741-4.325L-6.288-7.3l4.344-.631L0-11.872,1.944-7.934,6.287-7.3Z" transform="matrix(0.966, 0.259, -0.259, 0.966, 826.447, 540.796)" fill="#777" opacity="0.3"><animate attributeName="opacity" values="0;0.6;0" dur="1.5s" repeatCount="indefinite"/></path>
+      <path id="Path_509" data-name="Path 509" d="M7.5-8.641,2.937-9.306.9-13.444a1,1,0,0,0-1.794,0L-2.938-9.306-7.5-8.641a1,1,0,0,0-.553,1.706l3.3,3.219L-5.534.831a1,1,0,0,0,1.45,1.053L0-.263,4.084,1.884A1,1,0,0,0,5.534.831L4.753-3.716l3.3-3.219A1,1,0,0,0,7.5-8.641Zm-4.359,4.4L3.884.084,0-1.956-3.884.084l.741-4.325L-6.288-7.3l4.344-.631L0-11.872,1.944-7.934,6.287-7.3Z" transform="matrix(0.966, -0.259, 0.259, 0.966, 672.553, 471.795)" fill="#777" opacity="0.5"><animate attributeName="opacity" values="0;0.4;0" dur="1.7s" repeatCount="indefinite"/></path>
+      <path id="Path_508" data-name="Path 508" d="M7.5-8.641,2.937-9.306.9-13.444a1,1,0,0,0-1.794,0L-2.938-9.306-7.5-8.641a1,1,0,0,0-.553,1.706l3.3,3.219L-5.534.831a1,1,0,0,0,1.45,1.053L0-.263,4.084,1.884A1,1,0,0,0,5.534.831L4.753-3.716l3.3-3.219A1,1,0,0,0,7.5-8.641Zm-4.359,4.4L3.884.084,0-1.956-3.884.084l.741-4.325L-6.288-7.3l4.344-.631L0-11.872,1.944-7.934,6.287-7.3Z" transform="matrix(0.966, -0.259, 0.259, 0.966, 557.553, 495.795)" fill="#777" opacity="0.1"><animate attributeName="opacity" values="0;0.25;0" dur="1.9s" repeatCount="indefinite"/></path>
+      <path id="Path_507" data-name="Path 507" d="M4.689-5.4,1.836-5.816.561-8.4a.626.626,0,0,0-1.121,0L-1.836-5.816-4.689-5.4a.625.625,0,0,0-.346,1.066l2.064,2.012L-3.459.52a.625.625,0,0,0,.906.658L0-.164,2.553,1.178A.625.625,0,0,0,3.459.52L2.971-2.322,5.035-4.334A.625.625,0,0,0,4.689-5.4ZM1.965-2.65l.463,2.7L0-1.223-2.428.053l.463-2.7L-3.93-4.564l2.715-.395L0-7.42,1.215-4.959l2.715.395Z" transform="matrix(0.966, -0.259, 0.259, 0.966, 519.553, 584.795)" fill="#777" opacity="0.5"><animate attributeName="opacity" values="0;0.4;0" dur="2.1s" repeatCount="indefinite"/></path>
+      <path id="Path_506" data-name="Path 506" d="M4.689-5.4,1.836-5.816.561-8.4a.626.626,0,0,0-1.121,0L-1.836-5.816-4.689-5.4a.625.625,0,0,0-.346,1.066l2.064,2.012L-3.459.52a.625.625,0,0,0,.906.658L0-.164,2.553,1.178A.625.625,0,0,0,3.459.52L2.971-2.322,5.035-4.334A.625.625,0,0,0,4.689-5.4ZM1.965-2.65l.463,2.7L0-1.223-2.428.053l.463-2.7L-3.93-4.564l2.715-.395L0-7.42,1.215-4.959l2.715.395Z" transform="matrix(0.966, 0.259, -0.259, 0.966, 778.482, 455.795)" fill="#777" opacity="0.3"><animate attributeName="opacity" values="0;0.6;0" dur="2.3s" repeatCount="indefinite"/></path>
+    </g>
+    <g id="shadow">
+      <ellipse id="shadow-2" data-name="shadow" cx="80" cy="6" rx="80" ry="6" transform="translate(620 650)" fill="url(#radial-gradient)"/>
+      <animate attributeName="opacity" values="0.7;1;0.7" dur="1.5" repeatCount="indefinite"/>
+    </g>
+    <g id="envelope">
+      <path id="envelope-light" d="M145,64H15A15,15,0,0,0,0,79v90a15,15,0,0,0,15,15H145a15,15,0,0,0,15-15V79A15,15,0,0,0,145,64ZM15,74H145a5.015,5.015,0,0,1,5,5V91.938c-6.844,5.781-16.625,13.75-47.062,37.906C97.656,134.031,87.25,144.125,80,144c-7.25.125-17.688-9.969-22.937-14.156C26.625,105.688,16.844,97.719,10,91.938V79A5.015,5.015,0,0,1,15,74ZM145,174H15a5.015,5.015,0,0,1-5-5V104.938c7.125,5.844,18.375,14.875,40.844,32.719C57.25,142.781,68.563,154.063,80,154c11.375.094,22.594-11.094,29.156-16.344,22.469-17.844,33.719-26.875,40.844-32.719V169A5.015,5.015,0,0,1,145,174Z" transform="translate(620 435.703)" fill="#e27730"/>
+      <animateMotion path="M 0 0 V 10 Z" dur="1.5" repeatCount="indefinite"/>
+    </g>
+  </g>
+</svg>

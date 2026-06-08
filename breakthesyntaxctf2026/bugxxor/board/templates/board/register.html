@@ -1,0 +1,17 @@
+{% extends "board/base.html" %}
+{% block content %}
+<h1>// Register</h1>
+<p class="subtitle">pick your side: CVEs or critters</p>
+<form method="post">
+    {% for field in form %}
+    <div class="field">
+        <label for="{{ field.id_for_label }}">{{ field.label }}</label>
+        {{ field }}
+        {% if field.help_text %}<p class="help">{{ field.help_text }}</p>{% endif %}
+        {% for error in field.errors %}<p class="error">{{ error }}</p>{% endfor %}
+    </div>
+    {% endfor %}
+    <button type="submit">Create Account</button>
+</form>
+<p class="alt-link">Already have an account? <a href="{% url 'login' %}">Login</a></p>
+{% endblock %}

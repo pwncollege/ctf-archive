@@ -2,6 +2,10 @@ id: midnightsunctf2026
 name: Midnight Sun CTF 2026 Quals
 
 challenges:
+  - id: chain
+    name: PWN - chain
+  - id: drop
+    name: PWN - drop
   - id: riscal
     name: REV - riscal
   - id: terminator
