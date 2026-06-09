@@ -1,0 +1,505 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>{{ page_title }}</title>
+        <style>
+            :root {
+                --bg: #f6efe5;
+                --panel: rgba(255, 251, 245, 0.82);
+                --panel-strong: #fffaf2;
+                --text: #1f1d1a;
+                --muted: #6e6558;
+                --accent: #0c7c59;
+                --accent-soft: #d8f2e5;
+                --invalid: #a63d40;
+                --invalid-soft: #f7d7d8;
+                --border: rgba(58, 44, 26, 0.12);
+                --shadow: 0 20px 50px rgba(58, 44, 26, 0.12);
+            }
+
+            * {
+                box-sizing: border-box;
+            }
+
+            body {
+                margin: 0;
+                min-height: 100vh;
+                color: var(--text);
+                background:
+                    radial-gradient(
+                        circle at top left,
+                        rgba(242, 183, 5, 0.22),
+                        transparent 28%
+                    ),
+                    radial-gradient(
+                        circle at right 20%,
+                        rgba(12, 124, 89, 0.18),
+                        transparent 24%
+                    ),
+                    linear-gradient(135deg, #f8f2e8, #efe3cf 52%, #ead8c0);
+                font-family:
+                    "Iowan Old Style", "Palatino Linotype", "Book Antiqua",
+                    Georgia, serif;
+            }
+
+            .shell {
+                width: min(980px, calc(100vw - 32px));
+                margin: 32px auto;
+                padding: 28px;
+                border: 1px solid var(--border);
+                border-radius: 28px;
+                background: var(--panel);
+                backdrop-filter: blur(18px);
+                box-shadow: var(--shadow);
+            }
+
+            .eyebrow {
+                margin: 0 0 8px;
+                letter-spacing: 0.12em;
+                text-transform: uppercase;
+                font-size: 0.78rem;
+                color: var(--muted);
+            }
+
+            h1 {
+                margin: 0;
+                font-size: clamp(2.3rem, 4vw, 4.2rem);
+                line-height: 0.95;
+            }
+
+            .lead {
+                max-width: 48rem;
+                margin: 16px 0 0;
+                font-size: 1.05rem;
+                line-height: 1.6;
+                color: var(--muted);
+            }
+
+            .grid {
+                display: grid;
+                grid-template-columns: minmax(0, 1.6fr) minmax(280px, 0.9fr);
+                gap: 20px;
+                margin-top: 28px;
+            }
+
+            .card {
+                padding: 20px;
+                border: 1px solid var(--border);
+                border-radius: 22px;
+                background: var(--panel-strong);
+            }
+
+            label {
+                display: block;
+                margin-bottom: 10px;
+                font-size: 0.92rem;
+                letter-spacing: 0.06em;
+                text-transform: uppercase;
+                color: var(--muted);
+            }
+
+            textarea {
+                width: 100%;
+                min-height: 420px;
+                padding: 18px;
+                border: 1px solid rgba(58, 44, 26, 0.16);
+                border-radius: 18px;
+                resize: vertical;
+                background: #fffdf8;
+                color: #1b201c;
+                font:
+                    0.98rem/1.55 "SFMono-Regular",
+                    Menlo,
+                    Monaco,
+                    Consolas,
+                    "Liberation Mono",
+                    monospace;
+                box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.75);
+            }
+
+            textarea:focus,
+            button:focus {
+                outline: 2px solid rgba(12, 124, 89, 0.24);
+                outline-offset: 2px;
+            }
+
+            .actions {
+                display: flex;
+                gap: 12px;
+                align-items: center;
+                margin-top: 14px;
+            }
+
+            button {
+                border: 0;
+                border-radius: 999px;
+                padding: 12px 18px;
+                background: linear-gradient(135deg, #155e49, #0c7c59);
+                color: #f8fff9;
+                cursor: pointer;
+                font:
+                    600 0.95rem/1 "Avenir Next",
+                    "Segoe UI",
+                    sans-serif;
+                transition:
+                    transform 150ms ease,
+                    opacity 150ms ease;
+            }
+
+            button:hover {
+                transform: translateY(-1px);
+            }
+
+            button:disabled {
+                opacity: 0.7;
+                cursor: wait;
+                transform: none;
+            }
+
+            .status-line {
+                min-height: 1.4rem;
+                margin: 10px 0 0;
+                color: var(--muted);
+            }
+
+            .progress-wrap {
+                display: none;
+                margin-top: 16px;
+            }
+
+            .progress-wrap.active {
+                display: block;
+            }
+
+            .progress-label {
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 8px;
+                font-size: 0.9rem;
+                color: var(--muted);
+            }
+
+            .progress-track {
+                overflow: hidden;
+                height: 10px;
+                border-radius: 999px;
+                background: #eadfce;
+            }
+
+            .progress-bar {
+                width: 45%;
+                height: 100%;
+                border-radius: 999px;
+                background: linear-gradient(90deg, #0c7c59, #e7b62c);
+                animation: slide 1.1s ease-in-out infinite;
+            }
+
+            .meta {
+                display: grid;
+                gap: 14px;
+            }
+
+            .meta h2,
+            .tips h2 {
+                margin: 0 0 10px;
+                font-size: 1.1rem;
+            }
+
+            .result-box {
+                min-height: 220px;
+                padding: 16px;
+                border-radius: 18px;
+                background: #fffdf8;
+                border: 1px solid rgba(58, 44, 26, 0.12);
+            }
+
+            .result-badge {
+                display: inline-flex;
+                align-items: center;
+                gap: 8px;
+                padding: 7px 11px;
+                border-radius: 999px;
+                font:
+                    600 0.84rem/1 "Avenir Next",
+                    "Segoe UI",
+                    sans-serif;
+            }
+
+            .result-badge.valid {
+                color: var(--accent);
+                background: var(--accent-soft);
+            }
+
+            .result-badge.invalid {
+                color: var(--invalid);
+                background: var(--invalid-soft);
+            }
+
+            .result-copy,
+            pre {
+                margin: 14px 0 0;
+                white-space: pre-wrap;
+                word-break: break-word;
+            }
+
+            pre {
+                padding: 14px;
+                border-radius: 16px;
+                background: #f7f0e6;
+                font:
+                    0.88rem/1.55 "SFMono-Regular",
+                    Menlo,
+                    Monaco,
+                    Consolas,
+                    "Liberation Mono",
+                    monospace;
+            }
+
+            .tips ul {
+                margin: 0;
+                padding-left: 18px;
+                color: var(--muted);
+                line-height: 1.7;
+            }
+
+            @keyframes slide {
+                0% {
+                    transform: translateX(-110%);
+                }
+                100% {
+                    transform: translateX(260%);
+                }
+            }
+
+            @media (max-width: 800px) {
+                .shell {
+                    margin: 16px auto;
+                    padding: 18px;
+                    border-radius: 24px;
+                }
+
+                .grid {
+                    grid-template-columns: 1fr;
+                }
+
+                textarea {
+                    min-height: 320px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <main class="shell">
+            <p class="eyebrow">Jinja + Starlette</p>
+            <h1>YAML Validator</h1>
+            <p class="lead">
+                Paste YAML, send it through your existing upload and validate
+                endpoints, and get a clean result panel back without exposing
+                template injection risks.
+            </p>
+
+            <section class="grid">
+                <form class="card" id="yaml-form">
+                    <label for="yaml-input">YAML Input</label>
+                    <textarea id="yaml-input" spellcheck="false">
+name: geogrid
+difficulty: practice
+tags:
+  - yaml
+  - validator</textarea
+                    >
+
+                    <div class="actions">
+                        <button id="validate-button" type="submit">
+                            Validate YAML
+                        </button>
+                    </div>
+
+                    <p class="status-line" id="status-line">Ready.</p>
+
+                    <div
+                        class="progress-wrap"
+                        id="progress-wrap"
+                        aria-hidden="true"
+                    >
+                        <div class="progress-label">
+                            <span>Validating</span>
+                            <span id="progress-step">Uploading</span>
+                        </div>
+                        <div
+                            class="progress-track"
+                            role="progressbar"
+                            aria-valuemin="0"
+                            aria-valuemax="100"
+                            aria-label="Validation progress"
+                        >
+                            <div class="progress-bar"></div>
+                        </div>
+                    </div>
+                </form>
+
+                <aside class="meta">
+                    <section class="card">
+                        <h2>Result</h2>
+                        <div class="result-box" id="result-box">
+                            <p class="result-copy">
+                                Submit YAML to see whether it parses
+                                successfully.
+                            </p>
+                        </div>
+                    </section>
+
+                    <section class="card tips">
+                        <h2>Notes</h2>
+                        <ul>
+                            <li>
+                                The page uploads your textarea contents as a
+                                temporary `.yaml` file.
+                            </li>
+                            <li>
+                                Template variables are autoescaped by Jinja for
+                                this HTML template.
+                            </li>
+                            <li>
+                                Client-side rendering uses `textContent`, not
+                                raw HTML insertion.
+                            </li>
+                        </ul>
+                    </section>
+                </aside>
+            </section>
+        </main>
+
+        <script>
+            const form = document.getElementById("yaml-form");
+            const input = document.getElementById("yaml-input");
+            const button = document.getElementById("validate-button");
+            const statusLine = document.getElementById("status-line");
+            const progressWrap = document.getElementById("progress-wrap");
+            const progressStep = document.getElementById("progress-step");
+            const resultBox = document.getElementById("result-box");
+
+            function setLoadingState(loading, stepText = "Uploading") {
+                button.disabled = loading;
+                progressWrap.classList.toggle("active", loading);
+                progressWrap.setAttribute("aria-hidden", String(!loading));
+                progressStep.textContent = stepText;
+                statusLine.textContent = loading
+                    ? "Processing request..."
+                    : "Ready.";
+            }
+
+            function renderResult(data, ok) {
+                resultBox.replaceChildren();
+
+                const badge = document.createElement("div");
+                badge.className = `result-badge ${ok ? "valid" : "invalid"}`;
+                badge.textContent = ok ? "Valid YAML" : "Invalid YAML";
+                resultBox.appendChild(badge);
+
+                if (data.filename) {
+                    const filename = document.createElement("p");
+                    filename.className = "result-copy";
+                    filename.textContent = `File: ${data.filename}`;
+                    resultBox.appendChild(filename);
+                }
+
+                if (data.error) {
+                    const pre = document.createElement("pre");
+                    pre.textContent = data.error;
+                    resultBox.appendChild(pre);
+                } else {
+                    const message = document.createElement("p");
+                    message.className = "result-copy";
+                    message.textContent = "PyYAML accepted the document.";
+                    resultBox.appendChild(message);
+                }
+            }
+
+            form.addEventListener("submit", async (event) => {
+                event.preventDefault();
+
+                const yamlText = input.value;
+                if (!yamlText.trim()) {
+                    statusLine.textContent = "Enter some YAML first.";
+                    renderResult({ error: "No YAML content provided." }, false);
+                    return;
+                }
+
+                const filename = `draft-${Date.now()}.yml`;
+                const file = new File([yamlText], filename, {
+                    type: "application/x-yaml",
+                });
+                const formData = new FormData();
+                formData.append("file", file);
+
+                setLoadingState(true, "Uploading");
+
+                try {
+                    const uploadResponse = await fetch("/upload", {
+                        method: "POST",
+                        body: formData,
+                    });
+                    const uploadData = await uploadResponse.json();
+
+                    if (!uploadResponse.ok || !uploadData.success) {
+                        throw new Error(uploadData.error || "Upload failed.");
+                    }
+
+                    progressStep.textContent = "Parsing";
+
+                    const validateResponse = await fetch("/validate", {
+                        method: "POST",
+                        headers: {
+                            "Content-Type": "application/json",
+                        },
+                        body: JSON.stringify({ filename: uploadData.filename }),
+                    });
+                    const validateData = await validateResponse.json();
+
+                    if (!validateResponse.ok) {
+                        renderResult(
+                            {
+                                filename: uploadData.filename,
+                                error:
+                                    validateData.error || "Validation failed.",
+                            },
+                            false,
+                        );
+                        statusLine.textContent =
+                            "Validation finished with an error.";
+                        return;
+                    }
+
+                    renderResult(
+                        {
+                            filename: uploadData.filename,
+                            error: validateData.valid
+                                ? ""
+                                : "YAML did not pass validation.",
+                        },
+                        Boolean(validateData.valid),
+                    );
+                    statusLine.textContent = validateData.valid
+                        ? "Validation finished successfully."
+                        : "Validation finished with an error.";
+                } catch (error) {
+                    renderResult(
+                        {
+                            error:
+                                error instanceof Error
+                                    ? error.message
+                                    : "Request failed.",
+                        },
+                        false,
+                    );
+                    statusLine.textContent = "Request failed.";
+                } finally {
+                    setLoadingState(false);
+                }
+            });
+        </script>
+    </body>
+</html>
