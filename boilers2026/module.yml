@@ -10,10 +10,6 @@ challenges:
     name: MISC - build-a-builtin
   - id: ecb-lasagna
     name: CRYPTO - ecb-lasagna
-  - id: priority-queue
-    name: PWN - priority-queue
-  - id: spelling-bee
-    name: PWN - spelling-bee
   - id: transmutation
     name: PWN - transmutation
   - id: yaml-practice
