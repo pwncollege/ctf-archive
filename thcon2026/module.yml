@@ -2,7 +2,13 @@ id: thcon2026
 name: THCon 2K26 CTF
 
 challenges:
-  - id: m4term4xima-s-hint-part-1-2
-    name: REV - m4term4xima-s-hint-part-1-2
-  - id: silent-signer
-    name: REV - silent-signer
+  - id: 019-silent-signer
+    name: REV - 019-silent-signer
+  - id: 028-png-is-a-lie-part-1-2
+    name: STEGO - 028-png-is-a-lie-part-1-2
+  - id: 045-m4term4xima-s-hint-part-1-2
+    name: REV - 045-m4term4xima-s-hint-part-1-2
+  - id: 047-rhaaah-sh-t-again
+    name: CRYPTO - 047-rhaaah-sh-t-again
+  - id: 049-exponope
+    name: CRYPTO - 049-exponope

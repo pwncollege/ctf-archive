@@ -6,3 +6,5 @@ challenges:
     name: WEB - customainer
   - id: git-hoarder
     name: WEB - git-hoarder
+  - id: rbg-plus
+    name: CRYPTO - rbg-plus

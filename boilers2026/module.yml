@@ -1,0 +1,10 @@
+id: boilers2026
+name: b01lers CTF 2026
+
+challenges:
+  - id: badyuri
+    name: MISC - badyuri
+  - id: bike
+    name: REV - bike
+  - id: ecb-lasagna
+    name: CRYPTO - ecb-lasagna
