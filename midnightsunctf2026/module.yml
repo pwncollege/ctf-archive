@@ -8,5 +8,11 @@ challenges:
     name: PWN - drop
   - id: riscal
     name: REV - riscal
+  - id: speed-3
+    name: PWN - speed-3
+  - id: speed-4
+    name: PWN - speed-4
+  - id: speed-5
+    name: PWN - speed-5
   - id: terminator
     name: MISC - terminator
