@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+                xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head th:replace="~{fragments/layout :: head(${article.headline + ' — The Block City Times'})}"></head>
+<body>
+<div class="page">
+
+  <header th:replace="~{fragments/layout :: masthead('Block City\'s Finest News Source')}"></header>
+  <div th:replace="~{fragments/layout :: ticker('Breaking', ${ticker})}"></div>
+  <nav th:replace="~{fragments/layout :: nav}"></nav>
+
+  <main class="content">
+    <div class="article-wrap">
+      <a class="back-link" href="/">&larr; Back to Front Page</a>
+
+      <span class="section-label"
+            th:style="'background:' + ${article.sectionColor}"
+            th:text="${article.section}">SECTION</span>
+
+      <h1 class="article-headline" th:text="${article.headline}">Headline</h1>
+      <p class="article-sub"  th:text="${article.subheadline}">Subheadline</p>
+      <p class="byline"       th:text="${article.byline + '  ·  ' + article.date}">Byline</p>
+
+      <div class="article-tags">
+        <span class="tag" th:each="tag : ${article.tags}" th:text="${tag}">tag</span>
+      </div>
+
+      <div class="article-body">
+        <p th:each="para : ${article.paragraphs}" th:text="${para}"></p>
+      </div>
+    </div>
+  </main>
+
+  <footer th:replace="~{fragments/layout :: footer(null)}"></footer>
+
+</div>
+</body>
+</html>

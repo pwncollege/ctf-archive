@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+
+{% block title %}Request Approval - Building Blocks Market{% endblock %}
+
+{% block content %}
+<div class="sell-container" style="max-width: 700px;">
+    <h1>📋 Request Approval</h1>
+    <p class="subtitle">Submit your listing for admin review</p>
+    
+    {% if error %}
+    <div class="error">{{ error }}</div>
+    {% endif %}
+    
+    <div style="background: #f0f0f0; padding: 1.5rem; border-radius: 8px; margin-bottom: 2rem;">
+        <h3 style="margin-bottom: 1rem; color: #333;">Your Building Block Set</h3>
+        <div style="background: white; padding: 1rem; border-radius: 5px; margin-bottom: 1rem;">
+            <p><strong>Name:</strong> {{ product.name }}</p>
+            {% if product.description %}
+            <p><strong>Description:</strong> {{ product.description }}</p>
+            {% endif %}
+            <p><strong>Price:</strong> ${{ "%.2f"|format(product.price) }}</p>
+            {% if product.image_url %}
+            <p><strong>Image URL:</strong> <a href="{{ product.image_url }}" target="_blank" rel="noopener noreferrer">{{ product.image_url[:50] }}...</a></p>
+            {% endif %}
+        </div>
+    </div>
+    
+    <form method="post" class="submission-form">
+        <div class="form-group">
+            <label for="submission_url"><strong>Listing URL *</strong></label>
+            <input type="url" id="submission_url" name="submission_url" required 
+                   placeholder="https://example.com/your-listing-page" 
+                   pattern="https?://.+" 
+                   maxlength="500">
+            <small style="display: block; margin-top: 0.5rem; color: #666;">
+                This URL will be visited by our admin bot to verify your listing. 
+                It should display your set information and be accessible to all users.
+            </small>
+        </div>
+        
+        <div style="background: #fff3cd; padding: 1rem; border-radius: 5px; margin: 1.5rem 0; border-left: 4px solid #ffc107;">
+            <h4 style="margin: 0 0 0.5rem 0; color: #856404;">⚠️ Important</h4>
+            <ul style="margin: 0; padding-left: 1.5rem; color: #856404; font-size: 0.9rem;">
+                <li>The URL must be publicly accessible</li>
+                <li>The page will be visited by an automated bot</li>
+                <li>Admin approval may take 24-48 hours</li>
+                <li>You'll receive a notification when approved or rejected</li>
+            </ul>
+        </div>
+        
+        <div class="button-group">
+            <button type="submit" class="btn-submit">✅ Submit for Approval</button>
+            <a href="{{ url_for('marketplace.marketplace') }}" class="btn-cancel">Cancel</a>
+        </div>
+    </form>
+</div>
+
+{% endblock %}

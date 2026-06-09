@@ -2,6 +2,8 @@ id: umassctf2026
 name: UMassCTF 2026
 
 challenges:
+  - id: building-blocks-market
+    name: WEB - building-blocks-market
   - id: click-here-for-free-bricks
     name: FORENSICS - click-here-for-free-bricks
   - id: deep-down
@@ -20,5 +22,9 @@ challenges:
     name: MISC - take-a-slice
   - id: the-accursed-lego-bin
     name: CRYPTO - the-accursed-lego-bin
+  - id: the-block-city-times
+    name: WEB - the-block-city-times
+  - id: the-block-city-times-v2
+    name: WEB - the-block-city-times-v2
   - id: we-have-at-home
     name: OSINT - we-have-at-home

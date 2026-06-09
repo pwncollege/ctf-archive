@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block title %}Error - Building Blocks Market{% endblock %}
+
+{% block content %}
+<div class="error-container">
+    <div class="error-box">
+        <div class="error-icon">⚠️</div>
+        <h1 class="error-title">Something Went Wrong</h1>
+        <p class="error-message">{{ error }}</p>
+        <div class="error-actions">
+            <button class="btn-back" onclick="window.history.back()">← Go Back</button>
+            <a href="{{ url_for('marketplace.marketplace') }}" class="btn-home">🏠 Go to Marketplace</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

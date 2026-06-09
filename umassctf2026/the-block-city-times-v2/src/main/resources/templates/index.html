@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+                xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head th:replace="~{fragments/layout :: head('The Block City Times')}"></head>
+<body>
+<div class="page">
+
+  <header th:replace="~{fragments/layout :: masthead('Block City\'s Finest News Source')}"></header>
+  <div th:replace="~{fragments/layout :: ticker('Breaking', ${ticker})}"></div>
+  <nav th:replace="~{fragments/layout :: nav}"></nav>
+
+  <main class="content">
+    <div class="front-grid">
+
+      <article>
+        <span class="section-label"
+              th:style="'background:' + ${featured.sectionColor}"
+              th:text="${featured.section}">SECTION</span>
+        <h1 class="feature-headline">
+          <a th:href="@{/article/{id}(id=${featured.id})}" th:text="${featured.headline}">Headline</a>
+        </h1>
+        <p class="feature-sub" th:text="${featured.subheadline}">Subheadline</p>
+        <p class="byline" th:text="${featured.byline + '  ·  ' + featured.date}">Byline</p>
+        <div class="article-tags">
+          <span class="tag" th:each="tag : ${featured.tags}" th:text="${tag}">tag</span>
+        </div>
+        <div class="feature-body">
+          <p th:each="para : ${featured.paragraphs}" th:text="${para}"></p>
+        </div>
+      </article>
+
+      <aside class="sidebar">
+        <div class="sidebar-title">Also Today</div>
+        <div th:each="art : ${articles}" class="sidebar-item">
+          <span class="section-label"
+                th:style="'background:' + ${art.sectionColor}"
+                th:text="${art.section}">SECTION</span>
+          <div class="sidebar-headline">
+            <a th:href="@{/article/{id}(id=${art.id})}" th:text="${art.headline}">Headline</a>
+          </div>
+          <p class="byline" th:text="${art.byline}">Byline</p>
+        </div>
+      </aside>
+
+    </div>
+
+    <div class="story-grid">
+      <div th:each="art : ${articles}" class="story-card">
+        <span class="section-label"
+              th:style="'background:' + ${art.sectionColor}"
+              th:text="${art.section}">SECTION</span>
+        <h2 class="story-headline">
+          <a th:href="@{/article/{id}(id=${art.id})}" th:text="${art.headline}">Headline</a>
+        </h2>
+        <p class="byline" th:text="${art.byline + '  ·  ' + art.date}">Byline</p>
+        <p class="story-snippet" th:text="${#strings.substring(art.body, 0, 220) + '…'}">Snippet</p>
+        <div class="article-tags">
+          <span class="tag" th:each="tag : ${art.tags}" th:text="${tag}">tag</span>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer th:replace="~{fragments/layout :: footer(null)}"></footer>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block title %}Submit for Admin Approval - Building Blocks Market{% endblock %}
+
+{% block content %}
+<div class="sell-container" style="max-width: 600px;">
+    <h1>✅ Submit Listing for Admin Approval</h1>
+
+    {% if error %}
+        <div class="error">{{ error }}</div>
+    {% endif %}
+
+    <form method="post" class="submission-form">
+        <div class="form-group">
+            <label for="submission_url"><strong>Listing URL *</strong></label>
+            <input type="url"
+                   id="submission_url"
+                   name="submission_url"
+                   required
+                   placeholder="https://example.com/your-listing-page"
+                   pattern="https?://.+"
+                   maxlength="500">
+        </div>
+
+        <div class="button-group">
+            <button type="submit" class="btn-primary">Submit</button>
+            <a href="{{ url_for('marketplace.marketplace') }}" class="btn-secondary">Cancel</a>
+        </div>
+    </form>
+</div>
+{% endblock %}

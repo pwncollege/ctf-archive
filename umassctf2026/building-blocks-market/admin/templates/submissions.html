@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Admin - Submissions - Building Blocks Market</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="/static/main.css" />
+    <link rel="stylesheet" href="/static/pages.css" />
+    <link rel="stylesheet" href="/static/submissions.css" />
+    <link rel="stylesheet" href="/static/admin_submissions.css" />
+</head>
+<body>
+    <div class="admin-container">
+        <div class="admin-header">
+            <h1>🛡️ Admin Dashboard - Submissions</h1>
+            <p>Review and approve building block set listings</p>
+        </div>
+
+        {% if error %}
+            <div id="statusBanner">
+                <div class="error-banner">{{ error }}</div>
+            </div>
+        {% else %}
+            <div id="statusBanner"></div>
+        {% endif %}
+
+        <div class="tabs">
+            <button class="tab-btn active" data-tab="pending">⏳ Pending ({{ pending|length }})</button>
+            <button class="tab-btn" data-tab="approved">✅ Approved ({{ approved|length }})</button>
+            <button class="tab-btn" data-tab="rejected">❌ Rejected ({{ rejected|length }})</button>
+        </div>
+
+        <div id="tab-pending" class="tab-content">
+            {% if pending %}
+                {% for sub in pending %}
+                    {% set product = sub.product or {} %}
+                    {% set user = sub.user or {} %}
+                    <div class="submission-item status-pending">
+                        <div class="submission-header">
+                            <div class="submission-title">
+                                <h3>{{ product.name or 'Unknown product' }}</h3>
+                                <p style="margin:0;color:#999;font-size:.9rem;">By @{{ user.username or 'unknown' }}</p>
+                            </div>
+                            <div class="status-badge status-pending">⏳ Pending</div>
+                        </div>
+                        <div class="submission-meta">
+                            <p><strong>Price:</strong>
+                                ${{ (product.price | float) | round(2) if product.price is not none else 'N/A' }}</p>
+                            <p><strong>Submitted:</strong> {{ sub.created_at or 'N/A' }}</p>
+                        </div>
+                        <p style="margin-top:0;color:#666;"><strong>Description:</strong></p>
+                        <p style="color:#ccc;margin-top:.25rem;">{{ product.description or '' }}</p>
+                        <p style="margin-top:1rem;margin-bottom:.25rem;color:#666;"><strong>Submission URL:</strong></p>
+                        <div class="submission-url">{{ sub.submission_url }}</div>
+
+                        <div class="submission-actions">
+                            <form method="post" action="{{ backend_url }}/approval/approve/{{ sub.id }}">
+                                <input type="hidden" name="csrf_token" value="{{ csrf_token }}">
+                                <button type="submit" class="btn-approve">✅ Approve</button>
+                            </form>
+                            <form method="post" action="{{ backend_url }}/approval/reject/{{ sub.id }}" onsubmit="return handleReject(this);">
+                                <input type="hidden" name="csrf_token" value="{{ csrf_token }}">
+                                <input type="hidden" name="admin_notes" value="">
+                                <button type="submit" class="btn-reject">❌ Reject</button>
+                            </form>
+                        </div>
+                    </div>
+                {% endfor %}
+            {% else %}
+                <div class="empty-state">
+                    <h3>No Pending Submissions</h3>
+                    <p>All submissions have been reviewed!</p>
+                </div>
+            {% endif %}
+        </div>
+
+        <div id="tab-approved" class="tab-content" style="display:none">
+            {% if approved %}
+                {% for sub in approved %}
+                    {% set product = sub.product or {} %}
+                    {% set user = sub.user or {} %}
+                    <div class="submission-item status-approved">
+                        <div class="submission-header">
+                            <div class="submission-title">
+                                <h3>{{ product.name or 'Unknown product' }}</h3>
+                                <p style="margin:0;color:#999;font-size:.9rem;">By @{{ user.username or 'unknown' }}</p>
+                            </div>
+                            <div class="status-badge status-approved">✅ Approved</div>
+                        </div>
+                        <div class="submission-meta">
+                            <p><strong>Price:</strong>
+                                ${{ (product.price | float) | round(2) if product.price is not none else 'N/A' }}</p>
+                            <p><strong>Approved:</strong> {{ sub.reviewed_at or 'N/A' }}</p>
+                        </div>
+                        <p style="margin-top:0;color:#666;"><strong>Description:</strong></p>
+                        <p style="color:#ccc;margin-top:.25rem;">{{ product.description or '' }}</p>
+                        <p style="margin-top:1rem;margin-bottom:.25rem;color:#666;"><strong>Submission URL:</strong></p>
+                        <div class="submission-url">{{ sub.submission_url }}</div>
+                        {% if sub.reviewed_by %}
+                            <p style="margin-top:1rem;font-size:.9rem;opacity:.8;">Reviewed by {{ sub.reviewed_by }}</p>
+                        {% endif %}
+                    </div>
+                {% endfor %}
+            {% else %}
+                <div class="empty-state">
+                    <h3>No Approved Submissions</h3>
+                    <p>Nothing to show here yet.</p>
+                </div>
+            {% endif %}
+        </div>
+
+        <div id="tab-rejected" class="tab-content" style="display:none">
+            {% if rejected %}
+                {% for sub in rejected %}
+                    {% set product = sub.product or {} %}
+                    {% set user = sub.user or {} %}
+                    <div class="submission-item status-rejected">
+                        <div class="submission-header">
+                            <div class="submission-title">
+                                <h3>{{ product.name or 'Unknown product' }}</h3>
+                                <p style="margin:0;color:#999;font-size:.9rem;">By @{{ user.username or 'unknown' }}</p>
+                            </div>
+                            <div class="status-badge status-rejected">❌ Rejected</div>
+                        </div>
+                        <div class="submission-meta">
+                            <p><strong>Price:</strong>
+                                ${{ (product.price | float) | round(2) if product.price is not none else 'N/A' }}</p>
+                            <p><strong>Rejected:</strong> {{ sub.reviewed_at or 'N/A' }}</p>
+                        </div>
+                        <p style="margin-top:0;color:#666;"><strong>Description:</strong></p>
+                        <p style="color:#ccc;margin-top:.25rem;">{{ product.description or '' }}</p>
+                        <p style="margin-top:1rem;margin-bottom:.25rem;color:#666;"><strong>Submission URL:</strong></p>
+                        <div class="submission-url">{{ sub.submission_url }}</div>
+                        {% if sub.admin_notes %}
+                            <div style="margin-top:1rem;">
+                                <strong>Rejection Reason:</strong>
+                                <p>{{ sub.admin_notes }}</p>
+                            </div>
+                        {% endif %}
+                        {% if sub.reviewed_by %}
+                            <p style="margin-top:1rem;font-size:.9rem;opacity:.8;">Reviewed by {{ sub.reviewed_by }}</p>
+                        {% endif %}
+                    </div>
+                {% endfor %}
+            {% else %}
+                <div class="empty-state">
+                    <h3>No Rejected Submissions</h3>
+                    <p>Nothing to show here yet.</p>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+
+    <script>
+    document.addEventListener('click', (e) => {
+        const btn = e.target.closest('button.tab-btn');
+        if (!btn) return;
+
+        const tabName = btn.getAttribute('data-tab');
+        document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        document.querySelectorAll('.tab-content').forEach(div => div.style.display = 'none');
+        const target = document.getElementById(`tab-${tabName}`);
+        if (target) target.style.display = 'block';
+    });
+
+    function handleReject(form) {
+        const notes = window.prompt('Rejection reason:');
+        if (!notes) {
+            return false;
+        }
+        const notesInput = form.querySelector('input[name="admin_notes"]');
+        if (notesInput) {
+            notesInput.value = notes;
+        }
+        return true;
+    }
+    </script>
+</body>
+</html>

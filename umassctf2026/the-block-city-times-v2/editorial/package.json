@@ -1,0 +1,13 @@
+{
+  "name": "block-city-times-editorial",
+  "version": "1.0.0",
+  "description": "Editorial server — receives story submissions, saves files, opens them in Puppeteer",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.0",
+    "puppeteer": "^22.0.0"
+  }
+}

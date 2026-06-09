@@ -1,0 +1,51 @@
+version: '3.8'
+
+services:
+  customainer-web:
+    container_name: customainer-web
+    build:
+      context: ./services/web
+      dockerfile: Dockerfile
+    ports:
+      - "8081:8080"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - shared-data:/shared
+    environment:
+      - EXTRACTOR_URL=http://customainer-extractor:5000
+    depends_on:
+      - customainer-extractor
+      - apikey-setup
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://customainer-extractor:5000/health"]
+      interval: 10s
+      timeout: 5s
+      retries: 3
+      start_period: 5s
+
+  customainer-extractor:
+    container_name: customainer-extractor
+    build:
+      context: ./services/extractor
+      dockerfile: Dockerfile
+      args:
+        TEST_FLAG: kalmar{{rehost_test_a783ee033bea}}
+    ports:
+      - "5000:5000"
+    read_only: true
+    tmpfs:
+      - /var/tmp
+    volumes:
+      - shared-data:/shared:rw
+    depends_on:
+      - apikey-setup
+
+  apikey-setup:
+    image: alpine:latest
+    volumes:
+      - shared-data:/shared
+    command: sh -c "rm -f /shared/apikey && apk add --no-cache openssl && openssl rand -hex 32 > /shared/apikey && chmod 444 /shared/apikey && chown -R 1001:1001 /shared && chown root:root /shared && chmod 777 /shared && chmod +t /shared"
+
+volumes:
+  shared-data:
+  temp:

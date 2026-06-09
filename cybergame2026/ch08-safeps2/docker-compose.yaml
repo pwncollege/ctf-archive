@@ -1,0 +1,9 @@
+services:
+  ps-tcp-shell-chall2:
+    build:
+      context: .
+      args:
+        TEST_FLAG: ${TEST_FLAG:-SK-CERT{{rehost_test_6f3d2b19}}}
+    ports:
+      - "6666:6666"
+    restart: unless-stopped

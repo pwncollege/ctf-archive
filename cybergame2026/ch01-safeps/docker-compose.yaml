@@ -1,0 +1,13 @@
+version: "3.9"
+
+services:
+  ps-tcp-shell:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        TEST_FLAG: SK-CERT{{rehost_test_q7m4k2}}
+    container_name: ps-tcp-shell
+    ports:
+      - "6969:6969"
+    restart: unless-stopped

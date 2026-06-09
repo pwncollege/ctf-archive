@@ -1,0 +1,52 @@
+spring:
+  application:
+    name: config-demo
+  thymeleaf:
+    cache: false
+  servlet:
+    multipart:
+      max-file-size: 5MB
+      max-request-size: 6MB
+
+logging:
+  level:
+    org.springframework.web.servlet.DispatcherServlet: INFO
+    org.springframework.boot.actuate.endpoint.web: TRACE
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: refresh, health, info, env
+  endpoint:
+    health:
+      show-details: always
+    env:
+      post:
+        enabled: true
+server:
+  port: 8080
+
+app:
+  admin:
+    username: ${ADMIN_USERNAME:admin}
+    password: ${ADMIN_PASSWORD:changed_on_remote}
+
+  upload-dir: uploads
+  active-config: prod
+  enforce-production: true
+
+  outbound:
+    editorial-url: "http://localhost:9000/submissions"
+    report-url: "http://report-runner:9001/report"
+    allowed-types:
+      - text/plain
+      - application/pdf
+
+  configs:
+    dev:
+      greeting: "NOTICE: THE WEBSITE IS CURRENTLY RUNNING IN DEV MODE"
+      environment-label: "development"
+    prod:
+      greeting: "BREAKING: MAN FALLS INTO RIVER IN BLOCK CITY"
+      environment-label: "production"

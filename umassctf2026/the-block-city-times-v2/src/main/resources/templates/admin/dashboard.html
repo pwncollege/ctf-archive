@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+                xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head th:replace="~{fragments/layout :: head('Admin Dashboard — The Block City Times')}"></head>
+<body>
+<div class="page">
+
+  <header th:replace="~{fragments/layout :: masthead('Editorial Administration Dashboard')}"></header>
+  <div th:replace="~{fragments/layout :: ticker('Featured: ', ${ticker})}"></div>
+
+  <main class="admin-wrap">
+
+    <div class="admin-header">
+      <h1>Configuration Dashboard</h1>
+      <span class="env-badge" th:text="${activeConfig}">config</span>
+    </div>
+
+    <div th:if="${param.refreshed}" class="alert alert-success">Config refreshed from runtime.yml.</div>
+    <div th:if="${param.switched}"  class="alert alert-success">
+      Switched to config set: <strong th:text="${param.switched}">name</strong>
+    </div>
+    <div th:if="${param.error == 'invalid'}"       class="alert alert-error">Invalid config name.</div>
+    <div th:if="${param.error == 'switchdisabled'}" class="alert alert-error">Config switching via the UI is disabled.</div>
+    <div th:if="${param.error == 'reportdevonly'}"    class="alert alert-error">API reporting is only available in dev mode.</div>
+    <div th:if="${param.error == 'reportbadendpoint'}" class="alert alert-error">Report endpoint must start with <code>/api/</code>.</div>
+
+    <div class="refresh-section">
+      <h3>Switch Config Set</h3>
+      <div th:unless="${enforceProduction}">
+        <p>Select a config variant to apply.</p>
+        <form method="post" th:action="@{/admin/switch}" style="display:flex; gap:.75rem; flex-wrap:wrap; align-items:center;">
+          <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}"/>
+          <th:block th:each="name : ${availableConfigs}">
+            <button type="submit" name="config" th:value="${name}"
+                    th:classappend="${name == activeConfig} ? 'btn' : 'btn btn-outline'"
+                    th:style="${name == activeConfig} ? '' : 'background:#666;'"
+                    th:text="${name}">variant</button>
+          </th:block>
+        </form>
+      </div>
+      <div th:if="${enforceProduction}" class="alert" style="background:#f5f5f5; color:#555; border-left:4px solid #999;">
+        Changing config profiles is disabled for production deployment.
+      </div>
+    </div>
+
+    <table class="config-table">
+      <thead><tr><th>Property</th><th>Current Value</th></tr></thead>
+      <tbody>
+        <tr><td>active config</td>        <td th:text="${activeConfig}">config</td></tr>
+        <tr><td>app.greeting</td>         <td th:text="${ticker}">greeting</td></tr>
+        <tr><td>app.environment-label</td><td th:text="${environmentLabel}">env</td></tr>
+      </tbody>
+    </table>
+
+    <div th:if="${activeConfig == 'dev'}" class="refresh-section">
+      <h3>Dev Reporting</h3>
+      <p>Report a bug on our API to our web developer team.</p>
+      <form method="post" th:action="@{/admin/report}" style="display:flex; gap:.75rem; align-items:center; flex-wrap:wrap;">
+        <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}"/>
+        <input type="text" name="endpoint" value="/api/config"
+               pattern="/api/.*" title="Must start with /api/"
+               style="font-family:monospace; padding:.4rem .6rem; border:1px solid #aaa; width:20rem;"/>
+        <button type="submit" class="btn">Run API Report</button>
+      </form>
+    </div>
+
+    <div class="admin-nav">
+      <a href="/admin/metrics">Readership Metrics</a> &nbsp;|&nbsp;
+      <a href="/api/config">JSON API (/api/config)</a> &nbsp;|&nbsp;
+      <a href="/">Return to Front Page</a> &nbsp;|&nbsp;
+      <a href="/logout">Logout (<span sec:authentication="name">user</span>)</a>
+    </div>
+
+  </main>
+</div>
+</body>
+</html>

@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+
+{% block title %}{{ product.name }} - Building Blocks Market{% endblock %}
+
+{% block content %}
+<div class="product-detail-container">
+    <div class="product-detail-header">
+        <h1>{{ product.name }}</h1>
+        <p class="product-detail-meta">
+            Listed by <strong>{{ product.seller.username }}</strong>
+            {% if product.is_public %}
+                <span class="badge badge-success">Approved</span>
+            {% else %}
+                <span class="badge badge-warning">Pending Admin Approval</span>
+            {% endif %}
+        </p>
+    </div>
+
+    <div class="product-detail-body">
+        <div class="product-detail-image">
+            {% if product.image_url %}
+                <img src="{{ product.image_url }}" alt="{{ product.name }}">
+            {% else %}
+                <div class="placeholder-image">No image available</div>
+            {% endif %}
+        </div>
+        <div class="product-detail-info">
+            <h2>Details</h2>
+            <p class="product-detail-price">Price: ${{ "%.2f"|format(product.price) }}</p>
+            <p class="product-detail-description">
+                {{ product.description or 'No description provided for this listing.' }}
+            </p>
+
+            {% if product.user_id == current_user.id %}
+                <div class="product-owner-actions">
+                    <p class="hint">This is your listing.</p>
+                    {% if not product.is_public %}
+                        <p class="hint">To submit this listing for admin review, use the "Submit for Admin Approval" page from the marketplace home.</p>
+                        <a href="{{ url_for('submissions.choose_product_for_approval') }}" class="btn-primary">Go to Submit for Admin Approval</a>
+                    {% else %}
+                        <p class="hint">This listing has already been approved and is visible in the marketplace.</p>
+                    {% endif %}
+                </div>
+            {% endif %}
+
+            <div class="product-detail-nav">
+                <a href="{{ url_for('marketplace.marketplace') }}" class="btn-secondary">⬅ Back to Marketplace</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

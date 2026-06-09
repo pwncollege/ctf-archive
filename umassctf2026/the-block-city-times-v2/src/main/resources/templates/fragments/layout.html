@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+
+<head th:fragment="head(pageTitle)">
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title th:text="${pageTitle}">The Block City Times</title>
+  <link rel="stylesheet" th:href="@{/css/newspaper.css}"/>
+</head>
+
+<header th:fragment="masthead(subtitle)" class="masthead">
+  <div class="masthead-meta">
+    <span>Est. 1967</span>
+    <span>Vol. LXVII &nbsp;·&nbsp; No. 67</span>
+    <span th:text="${#dates.format(#dates.createNow(), 'EEEE, MMMM d, yyyy')}">Date</span>
+  </div>
+  <div class="masthead-title">
+    <a href="/" style="display:inline-flex; align-items:center; gap:.6rem;">
+      <img th:src="@{/images/Block_City_Times.png}" alt="The Block City Times" style="height:1em; vertical-align:middle;"/>
+      The Block City Times
+    </a>
+  </div>
+  <div class="masthead-sub" th:text="${subtitle}">Block City's Finest News Source</div>
+</header>
+
+<div th:fragment="ticker(label, text)" class="ticker-wrap">
+  <span class="ticker-label" th:text="${label}">Breaking</span>
+  <span class="ticker-inner" th:text="${text}">Ticker text</span>
+</div>
+
+<nav th:fragment="nav" class="section-nav">
+  <a href="/">Front Page</a>
+  <a href="/article/1">Local News</a>
+  <a href="/article/2">Economy</a>
+  <a href="/article/3">Technology</a>
+  <a href="/article/4">Public Safety</a>
+  <a href="/article/5">Construction</a>
+  <a href="/submit">Submit a Story</a>
+  <a sec:authorize="isAuthenticated()"  href="/admin" style="margin-left:auto; padding-right:2rem;">&#9881; Admin</a>
+  <a sec:authorize="!isAuthenticated()" href="/login" style="margin-left:auto; padding-right:2rem;">Admin Login</a>
+</nav>
+
+<footer th:fragment="footer(extra)" class="footer">
+  <span>&copy; 2026, The Block City Times. All studs reserved.</span>
+  <span>
+    <th:block th:if="${extra != null}" th:text="${extra}"></th:block>
+    <th:block th:if="${extra == null}">
+      <a href="/api/config">API</a> &nbsp;|&nbsp;
+      <a sec:authorize="isAuthenticated()" href="/logout">Logout</a>
+      <a sec:authorize="!isAuthenticated()" href="/login">Admin</a>
+    </th:block>
+  </span>
+</footer>
+
+</html>

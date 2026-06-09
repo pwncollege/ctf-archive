@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{fragments/layout :: head(${title + ' — The Block City Times'})}"></head>
+<body>
+<div class="page">
+
+  <header th:replace="~{fragments/layout :: masthead('Block City\'s Finest News Source')}"></header>
+  <div th:replace="~{fragments/layout :: ticker('Alert', 'An error has occurred.')}"></div>
+
+  <main class="content">
+    <div class="article-wrap" style="text-align:center; padding: 3rem 0;">
+      <span class="section-label" style="background:#c0392b;">ERROR</span>
+      <h1 class="article-headline" th:text="${title}">Error</h1>
+      <p class="article-sub"       th:text="${message}">Something went wrong.</p>
+      <a class="btn" href="/" style="margin-top:1.5rem; text-decoration:none;">Return to Front Page</a>
+    </div>
+  </main>
+
+  <footer th:replace="~{fragments/layout :: footer(null)}"></footer>
+
+</div>
+</body>
+</html>

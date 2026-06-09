@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+                xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head th:replace="~{fragments/layout :: head('API Report — The Block City Times')}"></head>
+<body>
+<div class="page">
+
+  <header th:replace="~{fragments/layout :: masthead('Editorial Administration Dashboard')}"></header>
+  <div th:replace="~{fragments/layout :: ticker('DEV REPORT: ', ${ticker})}"></div>
+
+  <main class="admin-wrap">
+
+    <div class="admin-header">
+      <h1>API Report</h1>
+      <span class="env-badge" th:text="${activeConfig}">config</span>
+    </div>
+
+    <div th:if="${reportSuccess}"  class="alert alert-success">
+      Request logged, the team will check it out soon. Send the data below to the web developer team to speed up triage.
+    </div>
+    <div th:unless="${reportSuccess}" class="alert alert-error">
+      Failed to capture report for <code th:text="${reportEndpoint}"></code>.
+    </div>
+
+    <div th:if="${reportJson != null and !#strings.isEmpty(reportJson)}" style="margin-top:1.5rem;">
+      <h3>Response Data</h3>
+      <pre style="background:#f5f5f5; padding:1rem; overflow-x:auto; font-size:.85rem; border-left:4px solid #333;"
+           th:text="${reportJson}"></pre>
+    </div>
+
+    <div th:if="${reportLog != null and !#strings.isEmpty(reportLog)}" style="margin-top:1.5rem;">
+      <h3>Diagnostic Log</h3>
+      <pre style="background:#1a1a1a; color:#ccc; padding:1rem; overflow-x:auto; font-size:.8rem;"
+           th:text="${reportLog}"></pre>
+    </div>
+
+    <div class="admin-nav" style="margin-top:2rem;">
+      <a href="/admin">&#8592; Back to Dashboard</a> &nbsp;|&nbsp;
+      <a href="/logout">Logout (<span sec:authentication="name">user</span>)</a>
+    </div>
+
+  </main>
+</div>
+</body>
+</html>

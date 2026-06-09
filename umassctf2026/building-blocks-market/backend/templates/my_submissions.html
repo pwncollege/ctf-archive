@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+
+{% block title %}My Submissions - Building Blocks Market{% endblock %}
+
+{% block content %}
+<div class="marketplace-container">
+    <div class="marketplace-header">
+        <div class="marketplace-header-content">
+            <h1>📋 My Submissions</h1>
+            <p>Track the status of your listings</p>
+        </div>
+        <a href="{{ url_for('marketplace.sell') }}" class="btn-sell">📦 List New Set</a>
+    </div>
+    
+    {% if submissions %}
+        <div class="submissions-list">
+            {% for submission in submissions %}
+            <div class="submission-card">
+                <div class="submission-card-header">
+                    <div class="submission-info">
+                        <h3>{{ submission.product.name }}</h3>
+                        <p><strong>Price:</strong> ${{ "%.2f"|format(submission.product.price) }}</p>
+                        <p><strong>Submitted:</strong> {{ submission.created_at.strftime('%Y-%m-%d %H:%M') if submission.created_at else 'N/A' }}</p>
+                    </div>
+                    <div class="status-badge 
+                        {%- if submission.status == 'approved' %} status-approved
+                        {%- elif submission.status == 'rejected' %} status-rejected
+                        {%- else %} status-pending
+                        {%- endif %}">
+                        {% if submission.status == 'approved' %}
+                            ✅ Approved
+                        {% elif submission.status == 'rejected' %}
+                            ❌ Rejected
+                        {% else %}
+                            ⏳ Pending
+                        {% endif %}
+                    </div>
+                </div>
+                
+                {% if submission.status == 'rejected' and submission.admin_notes %}
+                <div class="admin-notes">
+                    <strong>Admin Notes:</strong>
+                    <p>{{ submission.admin_notes }}</p>
+                </div>
+                {% endif %}
+                
+                {% if submission.status == 'approved' %}
+                <p class="approval-message">
+                    ✅ Your set is now live in the marketplace!
+                </p>
+                {% endif %}
+            </div>
+            {% endfor %}
+        </div>
+    {% else %}
+        <div class="empty-state">
+            <h2>No Submissions Yet</h2>
+            <p>You haven't submitted any listings for approval yet.</p>
+            <a href="{{ url_for('marketplace.sell') }}" class="empty-state-link">
+                📦 List Your First Set
+            </a>
+        </div>
+    {% endif %}
+</div>
+{% endblock %}

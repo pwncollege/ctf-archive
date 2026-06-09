@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+{% block title %}Marketplace - Building Blocks Market{% endblock %}
+
+{% block content %}
+<div class="marketplace-container">
+    <div class="marketplace-header">
+        <div class="marketplace-header-content">
+            <h1>🧱 Building Blocks Marketplace</h1>
+            <p>Welcome, <strong>{{ user.username }}</strong>! Browse available building block sets.</p>
+        </div>
+           <div class="marketplace-actions">
+               <a href="{{ url_for('marketplace.sell') }}" class="btn-sell">📦 Sell Item</a>
+               <a href="{{ url_for('submissions.choose_product_for_approval') }}" class="btn-secondary">✅ Submit for Admin Approval</a>
+           </div>
+    </div>
+    
+    {% if products %}
+    <div class="products-grid">
+        {% for product in products %}
+        <div class="product-card">
+            <div class="product-image">
+                {% if product.image_url %}
+                    <img src="{{ product.image_url }}" alt="{{ product.name }}">
+                {% else %}
+                    🖼️
+                {% endif %}
+            </div>
+            <div class="product-content">
+                <div class="product-name">{{ product.name }}</div>
+                <div class="product-description">{{ product.description or 'No description available' }}</div>
+                <div class="product-seller">By: {{ product.seller.username }}</div>
+                <div class="product-footer">
+                    <div class="product-price">${{ "%.2f"|format(product.price) }}</div>
+                       <a href="{{ url_for('marketplace.product_detail', product_id=product.id) }}" class="btn-primary">View Details</a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    {% else %}
+    <div class="empty-state">
+        <h2>📦 No Products Available</h2>
+        <p>Be the first to <a href="{{ url_for('marketplace.sell') }}" style="color: #667eea; text-decoration: none; font-weight: 600;">list a product</a>!</p>
+    </div>
+    {% endif %}
+</div>
+{% endblock %}

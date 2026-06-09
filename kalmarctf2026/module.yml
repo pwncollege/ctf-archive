@@ -1,0 +1,8 @@
+id: kalmarctf2026
+name: KalmarCTF 2026
+
+challenges:
+  - id: customainer
+    name: WEB - customainer
+  - id: git-hoarder
+    name: WEB - git-hoarder

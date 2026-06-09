@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+                xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head th:replace="~{fragments/layout :: head('Submit a Story — The Block City Times')}"></head>
+<body>
+<div class="page">
+
+  <header th:replace="~{fragments/layout :: masthead('Block City\'s Finest News Source')}"></header>
+  <div th:replace="~{fragments/layout :: ticker('Breaking', ${ticker})}"></div>
+  <nav th:replace="~{fragments/layout :: nav}"></nav>
+
+  <main class="content">
+    <div class="article-wrap">
+
+      <span class="section-label" style="background:#2980b9;">SUBMIT A STORY</span>
+      <h1 class="article-headline">Got a Tip?</h1>
+      <p class="article-sub">Send your story to the Block City Times editorial desk.</p>
+
+      <div th:if="${error}"   class="alert alert-error"   th:text="${error}"></div>
+      <div th:if="${success}" class="alert alert-success">
+        Your story <strong th:text="'&quot;' + ${submittedTitle} + '&quot;'">"title"</strong>
+        has been submitted to our editorial desk. We will be in touch.
+      </div>
+
+      <form th:unless="${success}" method="post" th:action="@{/submit}"
+            enctype="multipart/form-data" style="margin-top:1.5rem;">
+        <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}"/>
+
+        <div class="form-group">
+          <label for="title">Story Headline</label>
+          <input type="text" id="title" name="title" required
+                 style="width:100%; padding:.45rem .6rem; border:1px solid #999;
+                        font-family:Georgia,serif; font-size:.95rem;"/>
+        </div>
+
+        <div class="form-group">
+          <label for="author">Your Name</label>
+          <input type="text" id="author" name="author" required
+                 style="width:100%; padding:.45rem .6rem; border:1px solid #999;
+                        font-family:Georgia,serif; font-size:.95rem;"/>
+        </div>
+
+        <div class="form-group">
+          <label for="description">Summary</label>
+          <textarea id="description" name="description" rows="4" required
+                    style="width:100%; padding:.45rem .6rem; border:1px solid #999;
+                           font-family:Georgia,serif; font-size:.95rem;"></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="file">Attach Document <small style="color:#666;">(PDF, Word, or plain text)</small></label>
+          <input type="file" id="file" name="file" required
+                 accept=".txt,.pdf,.doc,.docx"
+                 style="display:block; margin-top:.25rem;"/>
+        </div>
+
+        <button type="submit" class="btn" style="margin-top:.75rem;">Submit to Editorial Desk</button>
+      </form>
+
+    </div>
+  </main>
+
+  <footer th:replace="~{fragments/layout :: footer(null)}"></footer>
+
+</div>
+</body>
+</html>

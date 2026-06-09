@@ -1,0 +1,95 @@
+{% extends "base.html" %}
+
+{% block title %}Building Blocks Market - Home{% endblock %}
+
+{% block content %}
+<div class="landing-container">
+    <!-- Hero Section -->
+    <div class="hero-section">
+        <h1>🧱 Building Blocks Market</h1>
+        <p class="subtitle">The Community Marketplace for Building Block Sets</p>
+        <p style="font-size: 1.1rem; margin-bottom: 2.5rem; opacity: 0.9;">
+            Discover, buy, and sell unique building block collections and custom sets
+        </p>
+        <div class="cta-buttons">
+            <a href="{{ url_for('auth.login') }}" class="btn-large btn-primary-large">🔐 Login</a>
+            <a href="{{ url_for('auth.register') }}" class="btn-large btn-secondary-large">📝 Create Account</a>
+        </div>
+    </div>
+    
+    <!-- Stats Section -->
+    <div class="stats-section">
+        <div class="stat">
+            <div class="stat-number">500+</div>
+            <div class="stat-label">Sets Listed</div>
+        </div>
+        <div class="stat">
+            <div class="stat-number">2,000+</div>
+            <div class="stat-label">Collectors</div>
+        </div>
+        <div class="stat">
+            <div class="stat-number">$1M+</div>
+            <div class="stat-label">In Sales</div>
+        </div>
+    </div>
+    
+    <!-- About Section -->
+    <div class="about-section">
+        <h2>About Building Blocks Market</h2>
+        <p>
+            Building Blocks Market is the premier community for collectors and enthusiasts to buy and sell building block sets. 
+            Whether you're looking to complete your collection, find rare sets, or monetize your extras, our platform connects 
+            passionate builders and collectors worldwide in a trusted, secure marketplace.
+        </p>
+    </div>
+    
+    <!-- Features Section -->
+    <div class="features-section">
+        <h2>Why Choose Building Blocks?</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">�</div>
+                <h3>Discover Rare Sets</h3>
+                <p>Find hard-to-locate building block sets and vintage collections from builders worldwide.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">�️</div>
+                <h3>Safe Trading</h3>
+                <p>Secure transactions with verified sellers and comprehensive buyer protection policies.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">�</div>
+                <h3>Quality Verified</h3>
+                <p>All listings are reviewed for accuracy, condition, and authenticity standards.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🌍</div>
+                <h3>Global Community</h3>
+                <p>Connect with thousands of building block enthusiasts and collectors from around the world.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">�</div>
+                <h3>Fair Deals</h3>
+                <p>Competitive pricing with transparent fees and no surprise charges.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">⭐</div>
+                <h3>Seller Ratings</h3>
+                <p>Build your reputation with community ratings and reviews from trusted buyers.</p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- CTA Section -->
+    <div style="text-align: center; padding: 3rem 2rem; color: white;">
+        <h2 style="font-size: 2rem; margin-bottom: 1.5rem;">Ready to Get Started?</h2>
+        <p style="font-size: 1.1rem; margin-bottom: 2rem; opacity: 0.9;">
+            Join thousands of developers and creators today
+        </p>
+        <div class="cta-buttons">
+            <a href="{{ url_for('auth.register') }}" class="btn-large btn-primary-large">Create Free Account</a>
+            <a href="{{ url_for('auth.login') }}" class="btn-large btn-secondary-large">Already a Member?</a>
+        </div>
+    </div>
+</div>
+{% endblock %}
