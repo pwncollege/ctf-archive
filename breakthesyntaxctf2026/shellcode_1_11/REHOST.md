@@ -9,7 +9,7 @@ This rehost ships the original 32-bit binary `a.out` plus its custom runtime `li
 patchelf --set-interpreter /challenge/ld-linux.so.2 --set-rpath /challenge a.out
 ```
 
-`a.out` is the only setuid binary (`chmod u+s`); it runs as root and the exploit reads `/flag` directly (no flagCheck). NX is on and `libponi` implements syscalls via raw `int 0x80` with an anti-tamper check, so the stack is not executable. The intended solve is a 32-bit SROP using gadgets in the bundled loader; for a setuid target the sigreturn frame must `execve("/bin/cat", ["/bin/cat","/flag"])` directly (a `/bin/sh` shell would drop the setuid privilege).
+`a.out` is the only setuid binary (`chmod u+s`); it runs as root and reads the root-only `/flag` directly (no flagCheck).
 
 ## Validation
-Validated on pwn.college: the setuid binary read the real `/flag` (`pwn.college{...}`) via 32-bit SROP into `execve("/bin/cat","/flag")`.
+Validated on pwn.college: the setuid binary read the real `/flag` (`pwn.college{...}`).

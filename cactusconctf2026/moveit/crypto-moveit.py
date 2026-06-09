@@ -3,7 +3,7 @@ from sage.all import EllipticCurve, GF
 from Crypto.Cipher import AES
 from Crypto.Util.Padding import pad
 
-FLAG = b"flag{a4b03ecc-9f3e-47ff-b749-b650f713504c}"
+FLAG = b"flag{REDACTED}"
 
 p = 14537114296651069957
 a = -30

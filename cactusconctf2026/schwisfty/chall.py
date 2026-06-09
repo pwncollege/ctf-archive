@@ -26,7 +26,7 @@ Welcome to Schwifty RSA:
 ''')
     return int(input('Enter your choice: '))
 
-FLAG = b'flag{f2c963be-9856-483d-bd9c-9dcc3728ff5c}'
+FLAG = b'flag{REDACTED}'
 
 def encrypt_chunks(flag, n, e):
     chunks = [flag[i:i+16] for i in range(0, len(flag), 16)]

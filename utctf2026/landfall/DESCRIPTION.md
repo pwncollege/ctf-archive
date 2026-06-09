@@ -4,7 +4,7 @@ from a recent breach at UTCTF LLC. The higher ups have sent us a triage of the
 
 Triage Files: https://cdn.utctf.live/Modified_KAPE_Triage_Files.zip
 
-Solve the challenge to recover the original UTCTF flag, then run `/challenge/flagCheck` and enter that flag to get the pwn.college flag.
+`Use flagCheck to input the flag you get from the challenge to get the actual flag`
 
 ---
 **Author:** Jared (@jarpiano on discord)

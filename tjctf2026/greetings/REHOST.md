@@ -9,7 +9,7 @@ This rehost ships the original 64-bit PIE binary `greetings` plus the bundled `l
 patchelf --set-interpreter /challenge/ld-linux-x86-64.so.2 --set-rpath /challenge greetings
 ```
 
-`greetings` is the only setuid binary (`chmod u+s`); it runs as root and the exploit reads `/flag` directly (no flagCheck). The vulnerability is an unchecked `fgets` size into a 64-byte stack buffer with an RWE stack; the intended solve is a 1/16 blind partial-overwrite of the saved RIP into a `jmp rax` gadget that lands on stack shellcode reading `/flag`.
+`greetings` is the only setuid binary (`chmod u+s`); it runs as root and reads the root-only `/flag` directly (no flagCheck).
 
 ## Validation
-Validated on pwn.college: the setuid binary read the real `/flag` (`pwn.college{...}`) via the blind partial-overwrite + stack shellcode.
+Validated on pwn.college: the setuid binary read the real `/flag` (`pwn.college{...}`).
