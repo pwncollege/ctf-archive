@@ -2,9 +2,15 @@ id: vishwactf2026
 name: VishwaCTF'2026
 
 challenges:
+  - id: boot
+    name: FORENSICS - boot
   - id: fragmented-evidence
     name: FORENSICS - fragmented-evidence
   - id: kratos
     name: REV - kratos
   - id: procedural-labyrinth
     name: CRYPTO - procedural-labyrinth
+  - id: the-lost-client
+    name: OSINT - the-lost-client
+  - id: underworld-p1
+    name: MISC - underworld-p1

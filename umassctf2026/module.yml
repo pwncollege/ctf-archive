@@ -2,15 +2,23 @@ id: umassctf2026
 name: UMassCTF 2026
 
 challenges:
+  - id: click-here-for-free-bricks
+    name: FORENSICS - click-here-for-free-bricks
   - id: deep-down
     name: MISC - deep-down
+  - id: funny-business
+    name: OSINT - funny-business
   - id: lego-clicker
     name: REV - lego-clicker
   - id: lost-and-found
     name: FORENSICS - lost-and-found
   - id: ninja-nerds
     name: FORENSICS - ninja-nerds
+  - id: son-of-a-sith
+    name: OSINT - son-of-a-sith
   - id: take-a-slice
     name: MISC - take-a-slice
   - id: the-accursed-lego-bin
     name: CRYPTO - the-accursed-lego-bin
+  - id: we-have-at-home
+    name: OSINT - we-have-at-home
