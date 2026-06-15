@@ -1,0 +1,14 @@
+id: amateursctf2024
+name: AmateursCTF 2024
+
+challenges:
+  - id: addition
+    name: CRYPTO - Addition
+  - id: division
+    name: CRYPTO - Division
+  - id: uncrackable
+    name: CRYPTO - Uncrackable
+  - id: piano
+    name: MISC - Uwa so Piano
+  - id: normal
+    name: REV - Normal Java Code

@@ -1,0 +1,26 @@
+id: utctf2026
+name: UTCTF 2026
+
+challenges:
+  - id: fortuneteller
+    name: CRYPTO - 647 - Fortune Teller
+  - id: smoothcriminal
+    name: CRYPTO - 691 - Smooth Criminal
+  - id: coldworkspace
+    name: FORENSICS - 847 - Cold Workspace
+  - id: halfawake
+    name: FORENSICS - 793 - Half Awake
+  - id: lastbytestanding
+    name: FORENSICS - 856 - Last Byte Standing
+  - id: silentarchive
+    name: FORENSICS - 886 - Silent Archive
+  - id: jailbreak
+    name: MISC - 684 - Jail Break
+  - id: qrecreate
+    name: MISC - 879 - QRecreate
+  - id: w3w1
+    name: MISC - 993 - W3W1
+  - id: w3w2
+    name: MISC - 976 - W3W2
+  - id: w3w3
+    name: MISC - 995 - W3W3

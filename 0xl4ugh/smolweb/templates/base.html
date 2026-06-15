@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title|default('Product Rating System') }}</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Retro Terminal Style */
+        @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+        
+        body {
+            font-family: 'VT323', monospace;
+            background-color: #000000;
+            color: #00ff00;
+            text-shadow: 0 0 5px rgba(0, 255, 0, 0.5);
+            line-height: 1.5;
+        }
+        .container {
+            max-width: 900px;
+            padding: 20px;
+            border: 2px solid #00ff00;
+            box-shadow: 0 0 20px rgba(0, 255, 0, 0.7), inset 0 0 10px rgba(0, 255, 0, 0.3);
+            background-color: rgba(0, 0, 0, 0.85); /* Slightly transparent background */
+            min-height: 95vh;
+            margin: 20px auto;
+        }
+        .header-title {
+            font-size: 2.5rem;
+            color: #00ff00;
+            text-align: center;
+            border-bottom: 3px double #00ff00;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        .flash {
+            background-color: #ff0000;
+            color: #000000;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px dashed #ffffff;
+            font-weight: bold;
+        }
+        /* Style for inputs and buttons */
+        input[type="text"], textarea {
+            background-color: #001a00;
+            border: 1px solid #00ff00;
+            color: #00ff00;
+            padding: 8px;
+            outline: none;
+            box-shadow: 0 0 5px rgba(0, 255, 0, 0.5);
+        }
+        button, .button-link {
+            background-color: #006600;
+            color: #00ff00;
+            border: 1px solid #00ff00;
+            padding: 8px 15px;
+            cursor: pointer;
+            transition: background-color 0.1s;
+            text-decoration: none;
+            display: inline-block;
+            font-weight: bold;
+        }
+        button:hover, .button-link:hover {
+            background-color: #00ff00;
+            color: #000000;
+            box-shadow: 0 0 10px #00ff00;
+        }
+        
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th, td {
+            border: 1px dashed #00ff00;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #003300;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mx-auto">
+        <h1 class="header-title">{{ title|default('Product Rating System') }}</h1>
+        
+        <nav class="flex space-x-4 mb-4">
+            <a href="/" class="button-link">HOME</a>
+            <a href="/ratings?quantity=7" class="button-link">Sold Items</a>
+            <a href="/report" class="button-link">Product REPORT</a>
+        </nav>
+
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                {% for message in messages %}
+                    <div class="flash mb-4 text-sm">{{ message }}</div>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+
+        <div class="content">
+            {% block content %}{% endblock %}
+        </div>
+
+        <p class="mt-8 text-xs text-center border-t border-dashed border-[#003300] pt-4">
+            System Online // Status: Operational
+        </p>
+    </div>
+</body>
+</html>

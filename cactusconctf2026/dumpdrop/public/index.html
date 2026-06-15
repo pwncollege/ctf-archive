@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DumbDrop - Simple File Upload</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+</head>
+<body>
+    <div class="container">
+        <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark mode">
+            <svg xmlns="http://www.w3.org/2000/svg" class="theme-toggle-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <!-- Moon icon (shown in light mode) -->
+                <path class="moon" d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+                <!-- Sun icon (shown in dark mode) -->
+                <circle class="sun" cx="12" cy="12" r="5" style="display:none"/>
+                <line class="sun" x1="12" y1="1" x2="12" y2="3" style="display:none"/>
+                <line class="sun" x1="12" y1="21" x2="12" y2="23" style="display:none"/>
+                <line class="sun" x1="4.22" y1="4.22" x2="5.64" y2="5.64" style="display:none"/>
+                <line class="sun" x1="18.36" y1="18.36" x2="19.78" y2="19.78" style="display:none"/>
+                <line class="sun" x1="1" y1="12" x2="3" y2="12" style="display:none"/>
+                <line class="sun" x1="21" y1="12" x2="23" y2="12" style="display:none"/>
+                <line class="sun" x1="4.22" y1="19.78" x2="5.64" y2="18.36" style="display:none"/>
+                <line class="sun" x1="18.36" y1="5.64" x2="19.78" y2="4.22" style="display:none"/>
+            </svg>
+        </button>
+        <h1>DumbDrop</h1>
+        <div class="upload-container" id="dropZone">
+            <div class="upload-content">
+                <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                    <polyline points="17 8 12 3 7 8"/>
+                    <line x1="12" y1="3" x2="12" y2="15"/>
+                </svg>
+                <p>Drag and drop files or folders here<br>or</p>
+                <input type="file" id="fileInput" multiple hidden>
+                <input type="file" id="folderInput" webkitdirectory directory multiple hidden>
+                <div class="button-group">
+                    <button onclick="document.getElementById('fileInput').click()">Browse Files</button>
+                    <button onclick="document.getElementById('folderInput').click()">Browse Folders</button>
+                </div>
+            </div>
+        </div>
+        <div id="uploadProgress"></div>
+        <div id="fileList" class="file-list"></div>
+        <button id="uploadButton" class="upload-button" style="display: none;">Upload Files</button>
+    </div>
+
+    <style>
+        .button-group {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+        }
+    </style>
+
+    <script>
+        const CHUNK_SIZE = 1024 * 1024; // 1MB chunks
+        const MAX_RETRIES = 3;
+        const RETRY_DELAY = 1000;
+
+        class FileUploader {
+            constructor(file) {
+                this.file = file;
+                this.uploadId = null;
+                this.position = 0;
+                this.progressElement = null;
+                this.retries = 0;
+            }
+
+            async start() {
+                try {
+                    await this.initUpload();
+                    await this.uploadChunks();
+                    return true;
+                } catch (error) {
+                    console.error('Upload failed:', error);
+                    return false;
+                }
+            }
+
+            async initUpload() {
+                const uploadPath = this.file.relativePath ? 
+                    `${this.file.relativePath}${this.file.name}` : 
+                    this.file.name;
+
+                const response = await fetch('/upload/init', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        filename: uploadPath,
+                        fileSize: this.file.size
+                    })
+                });
+
+                if (!response.ok) {
+                    const error = await response.json();
+                    if (response.status === 413) {
+                        throw new Error(`File too large. Maximum size is ${error.limitInMB}MB`);
+                    }
+                    throw new Error('Failed to initialize upload');
+                }
+                const data = await response.json();
+                this.uploadId = data.uploadId;
+            }
+
+            async uploadChunks() {
+                this.createProgressElement();
+
+                while (this.position < this.file.size) {
+                    const chunk = await this.readChunk();
+                    try {
+                        await this.uploadChunk(chunk);
+                        this.retries = 0;
+                    } catch (error) {
+                        if (this.retries >= MAX_RETRIES) throw error;
+                        this.retries++;
+                        await new Promise(resolve => setTimeout(resolve, RETRY_DELAY));
+                        continue;
+                    }
+                }
+            }
+
+            async readChunk() {
+                const start = this.position;
+                const end = Math.min(this.position + CHUNK_SIZE, this.file.size);
+                const blob = this.file.slice(start, end);
+                this.position = end;
+                return await blob.arrayBuffer();
+            }
+
+            async uploadChunk(chunk) {
+                const response = await fetch(`/upload/chunk/${this.uploadId}`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/octet-stream'
+                    },
+                    body: chunk
+                });
+
+                if (!response.ok) throw new Error('Chunk upload failed');
+                const data = await response.json();
+                this.updateProgress(data.progress);
+            }
+
+            createProgressElement() {
+                const container = document.createElement('div');
+                container.className = 'progress-container';
+                
+                const label = document.createElement('div');
+                label.className = 'progress-label';
+                const displayPath = this.file.relativePath ? 
+                    `📁 ${this.file.relativePath.split('/')[0]}/` : 
+                    `📄 ${this.file.name}`;
+                label.textContent = displayPath;
+
+                const progress = document.createElement('div');
+                progress.className = 'progress';
+                
+                const bar = document.createElement('div');
+                bar.className = 'progress-bar';
+                bar.style.width = '0%';
+
+                progress.appendChild(bar);
+                container.appendChild(label);
+                container.appendChild(progress);
+                
+                document.getElementById('uploadProgress').appendChild(container);
+                this.progressElement = { container, bar };
+            }
+
+            updateProgress(percent) {
+                if (this.progressElement) {
+                    this.progressElement.bar.style.width = `${percent}%`;
+                    if (percent === 100) {
+                        setTimeout(() => {
+                            this.progressElement.container.remove();
+                        }, 1000);
+                    }
+                }
+            }
+        }
+
+        // UI Event Handlers
+        const dropZone = document.getElementById('dropZone');
+        const fileInput = document.getElementById('fileInput');
+        const folderInput = document.getElementById('folderInput');
+        const fileList = document.getElementById('fileList');
+        const uploadButton = document.getElementById('uploadButton');
+        let files = [];
+
+        // Helper function to group files by folder
+        function groupFilesByFolder(fileList) {
+            const groups = new Map();
+            
+            fileList.forEach(file => {
+                const path = file.webkitRelativePath || file.relativePath + file.name;
+                const parts = path.split('/');
+                
+                if (parts.length > 1) {
+                    // This is a file in a folder
+                    const folderName = parts[0];
+                    if (!groups.has(folderName)) {
+                        groups.set(folderName, {
+                            name: folderName,
+                            isFolder: true,
+                            totalSize: 0,
+                            files: []
+                        });
+                    }
+                    const group = groups.get(folderName);
+                    group.files.push(file);
+                    group.totalSize += file.size;
+                } else {
+                    // This is a root-level file
+                    groups.set(file.name, {
+                        name: file.name,
+                        isFolder: false,
+                        totalSize: file.size,
+                        files: [file]
+                    });
+                }
+            });
+            
+            return Array.from(groups.values());
+        }
+
+        // Helper function to process directory entries
+        async function getAllFileEntries(dataTransferItems) {
+            let fileEntries = [];
+            
+            async function traverseEntry(entry, path = '') {
+                if (entry.isFile) {
+                    const file = await new Promise((resolve) => entry.file(resolve));
+                    file.relativePath = path;
+                    fileEntries.push(file);
+                } else if (entry.isDirectory) {
+                    const reader = entry.createReader();
+                    const entries = await new Promise((resolve) => {
+                        reader.readEntries(resolve);
+                    });
+                    
+                    for (const childEntry of entries) {
+                        await traverseEntry(childEntry, path + entry.name + '/');
+                    }
+                }
+            }
+
+            const items = [...dataTransferItems];
+            for (const item of items) {
+                const entry = item.webkitGetAsEntry();
+                if (entry) {
+                    await traverseEntry(entry);
+                }
+            }
+
+            return fileEntries;
+        }
+
+        ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
+            dropZone.addEventListener(eventName, preventDefaults, false);
+            document.body.addEventListener(eventName, preventDefaults, false);
+        });
+
+        ['dragenter', 'dragover'].forEach(eventName => {
+            dropZone.addEventListener(eventName, highlight, false);
+        });
+
+        ['dragleave', 'drop'].forEach(eventName => {
+            dropZone.addEventListener(eventName, unhighlight, false);
+        });
+
+        dropZone.addEventListener('drop', handleDrop, false);
+        fileInput.addEventListener('change', handleFiles, false);
+        folderInput.addEventListener('change', handleFolders, false);
+        uploadButton.addEventListener('click', startUploads);
+
+        function preventDefaults(e) {
+            e.preventDefault();
+            e.stopPropagation();
+        }
+
+        function highlight(e) {
+            dropZone.classList.add('highlight');
+        }
+
+        function unhighlight(e) {
+            dropZone.classList.remove('highlight');
+        }
+
+        function handleDrop(e) {
+            const items = e.dataTransfer.items;
+            if (items && items[0].webkitGetAsEntry) {
+                getAllFileEntries(items).then(newFiles => {
+                    files = newFiles;
+                    updateFileList();
+                });
+            } else {
+                files = [...e.dataTransfer.files];
+                updateFileList();
+            }
+        }
+
+        function handleFiles(e) {
+            files = [...e.target.files];
+            files.forEach(file => {
+                file.relativePath = ''; // No relative path for individual files
+            });
+            updateFileList();
+        }
+
+        function handleFolders(e) {
+            files = [...e.target.files];
+            files.forEach(file => {
+                const pathParts = file.webkitRelativePath.split('/');
+                pathParts.pop(); // Remove filename
+                file.relativePath = pathParts.length > 0 ? pathParts.join('/') + '/' : '';
+            });
+            updateFileList();
+        }
+
+        function updateFileList() {
+            fileList.innerHTML = '';
+            const groupedItems = groupFilesByFolder(files);
+            
+            groupedItems.forEach(item => {
+                const fileItem = document.createElement('div');
+                fileItem.className = 'file-item';
+                
+                if (item.isFolder) {
+                    fileItem.innerHTML = `📁 ${item.name}/ (${formatFileSize(item.totalSize)} - ${item.files.length} files)`;
+                } else {
+                    fileItem.innerHTML = `📄 ${item.name} (${formatFileSize(item.totalSize)})`;
+                }
+                
+                fileList.appendChild(fileItem);
+            });
+            
+            uploadButton.style.display = files.length > 0 ? 'block' : 'none';
+        }
+
+        function formatFileSize(bytes) {
+            if (bytes === 0) return '0 Bytes';
+            const k = 1024;
+            const sizes = ['Bytes', 'KB', 'MB', 'GB'];
+            const i = Math.floor(Math.log(bytes) / Math.log(k));
+            return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
+        }
+
+        async function startUploads() {
+            uploadButton.disabled = true;
+            document.getElementById('uploadProgress').innerHTML = '';
+            
+            const groupedItems = groupFilesByFolder(files);
+            const results = await Promise.all(
+                groupedItems.map(async item => {
+                    let success = true;
+                    for (const file of item.files) {
+                        const uploader = new FileUploader(file);
+                        if (!await uploader.start()) {
+                            success = false;
+                        }
+                    }
+                    return success;
+                })
+            );
+
+            const successful = results.filter(r => r).length;
+            
+            Toastify({
+                text: `Uploaded ${successful} of ${groupedItems.length} items`,
+                duration: 3000,
+                gravity: "bottom",
+                position: "right",
+                style: {
+                    background: successful === groupedItems.length ? "#4CAF50" : "#f44336"
+                }
+            }).showToast();
+
+            files = [];
+            updateFileList();
+            uploadButton.disabled = false;
+        }
+
+        // Theme management
+        function setTheme(theme) {
+            document.documentElement.setAttribute('data-theme', theme);
+            localStorage.setItem('theme', theme);
+            
+            // Update icon
+            const moonPaths = document.querySelectorAll('.moon');
+            const sunPaths = document.querySelectorAll('.sun');
+            
+            if (theme === 'dark') {
+                moonPaths.forEach(path => path.style.display = 'none');
+                sunPaths.forEach(path => path.style.display = '');
+            } else {
+                moonPaths.forEach(path => path.style.display = '');
+                sunPaths.forEach(path => path.style.display = 'none');
+            }
+        }
+
+        function toggleTheme() {
+            const current = document.documentElement.getAttribute('data-theme');
+            const next = current === 'dark' ? 'light' : 'dark';
+            setTheme(next);
+        }
+
+        // Initialize theme
+        const savedTheme = localStorage.getItem('theme') || 
+            (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        setTheme(savedTheme);
+    </script>
+</body>
+</html>

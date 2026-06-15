@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% block content %}
+<h2 class="text-xl mb-4">Report a fake listing</h2>
+
+<div class="bg-black p-4 border border-dashed border-[#00ff00] mb-6">
+    <p class="text-sm font-bold mb-2">BOT PROTOCOL:</p>
+    <ul class="list-disc ml-6 text-sm">
+        <li>The Admin will check your report and take appropriate action.</li>
+    </ul>
+</div>
+
+<form method="POST" action="/report" class="flex flex-col space-y-4">
+    <label for="url" class="font-bold">Enter relative path of product to Report:</label>
+    <input type="text" id="url" name="url" required class="w-full text-base" placeholder="/..." />
+    <button type="submit" class="w-48 self-start">SEND REPORT</button>
+</form>
+
+<div class="mt-8 pt-6 border-t border-dashed border-[#00ff00] opacity-80">
+    <details>
+        <summary class="cursor-pointer text-sm font-bold hover:text-green-400 select-none">
+            [+] ONLY VIEW IF YOU ARE STUCK
+        </summary>
+        <div class="mt-4">
+            <iframe 
+                width="560" 
+                height="315" 
+                src="https://www.youtube.com/embed/yj72QGPYzYo" 
+                title="YouTube video player" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen
+                class="w-full max-w-lg shadow-lg border border-[#00ff00]"
+            ></iframe>
+        </div>
+    </details>
+</div>
+
+{% if message %}
+<div class="mt-6 p-4 bg-[#003300] border border-[#00ff00]">
+    <p class="font-bold">REPORT STATUS:</p>
+    <p>{{ message }}</p>
+</div>
+{% endif %}
+
+{% endblock %}
