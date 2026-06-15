@@ -1,0 +1,6966 @@
+{
+  "0ctf2017": {
+    "id": "0ctf2017",
+    "name": "0CTF 2017 Quals",
+    "path": "0ctf2017",
+    "challenges": [
+      {
+        "id": "easiestprintf",
+        "name": "Easiest Printf",
+        "raw_name": "PWN - 150 - Easiest Printf",
+        "type": "PWN",
+        "raw_type": "PWN",
+        "path": "0ctf2017/easiestprintf",
+        "exists": true
+      },
+      {
+        "id": "diethard",
+        "name": "Diet Hard",
+        "raw_name": "PWN - 183 - Diet Hard",
+        "type": "PWN",
+        "raw_type": "PWN",
+        "path": "0ctf2017/diethard",
+        "exists": true
+      },
+      {
+        "id": "babyheap",
+        "name": "Baby Heap",
+        "raw_name": "PWN - 250 - Baby Heap",
+        "type": "PWN",
+        "raw_type": "PWN",
+        "path": "0ctf2017/babyheap",
+        "exists": true
+      }
+    ]
+  },
+  "0ctf2018": {
+    "id": "0ctf2018",
+    "name": "0CTF/TCTF 2018",
+    "path": "0ctf2018",
+    "challenges": [
+      {
+        "id": "freenote2018",
+        "name": "Free Note",
+        "raw_name": "PWN - Free Note",
+        "type": "PWN",
+        "raw_type": "PWN",
+        "path": "0ctf2018/freenote2018",
+        "exists": true
+      },
+      {
+        "id": "babyheap2018",
+        "name": "Baby Heap",
+        "raw_name": "PWN - 183 - Baby Heap",
+        "type": "PWN",
+        "raw_type": "PWN",
+        "path": "0ctf2018/babyheap2018",
+        "exists": true
+      },
+      {
+        "id": "blackhole",
+        "name": "Blackhole",
+        "raw_name": "PWN - 250 - Blackhole",
+        "type": "PWN",
+        "raw_type": "PWN",
+        "path": "0ctf2018/blackhole",
+        "exists": true
+      },
+      {
+        "id": "zerofs",
+        "name": "Zer0 FS",
+        "raw_name": "PWN - 478 - Zer0 FS",
+        "type": "PWN",
+        "raw_type": "PWN",
+        "path": "0ctf2018/zerofs",
+        "exists": true
+      },
+      {
+        "id": "heapstorm",
+        "name": "Heap Storm II",
+        "raw_name": "PWN - 785 - Heap Storm II",
+        "type": "PWN",
+        "raw_type": "PWN",
+        "path": "0ctf2018/heapstorm",
+        "exists": true
+      },
+      {
+        "id": "subtraction",
+        "name": "Math Game",
+        "raw_name": "MISC - 343 - Math Game",
+        "type": "MISC",
+        "raw_type": "MISC",
+        "path": "0ctf2018/subtraction",
+        "exists": true
+      }
+    ]
+  },
+  "0ctf2019": {
+    "id": "0ctf2019",
+    "name": "0CTF/TCTF 2019 Quals",
+    "path": "0ctf2019",
+    "challenges": [
+      {
+        "id": "zerotask",
+        "name": "Zero Task",
+        "raw_name": "PWN - 132 - Zero Task",
+        "type": "PWN",
+        "raw_type": "PWN",
+        "path": "0ctf2019/zerotask",
+        "exists": true
+      },
+      {
+        "id": "babyaegis",
+        "name": "Baby Aegis",
+        "raw_name": "PWN - 323 - Baby Aegis",
+        "type": "PWN",
+        "raw_type": "PWN",
+        "path": "0ctf2019/babyaegis",
+        "exists": true
+      },
+      {
+        "id": "plang",
+        "name": "Plang",
+        "raw_name": "PWN - 354 - Plang",
+        "type": "PWN",
+        "raw_type": "PWN",
+        "path": "0ctf2019/plang",
+        "exists": true
+      },
+      {
+        "id": "scanner",
+        "name": "Scanner",
+        "raw_name": "PWN - 478 - Scanner",
+        "type": "PWN",
+        "raw_type": "PWN",
+        "path": "0ctf2019/scanner",
+        "exists": true
+      },
+      {
+        "id": "babyheap",
+        "name": "Baby Heap",
+        "raw_name": "PWN - 550 - Baby Heap",
+        "type": "PWN",
+        "raw_type": "PWN",
+        "path": "0ctf2019/babyheap",
+        "exists": true
+      },
+      {
+        "id": "babysandbox",
+        "name": "Baby Sandbox",
+        "raw_name": "PWN - 1000 - Baby Sandbox",
+        "type": "PWN",
+        "raw_type": "PWN",
+        "path": "0ctf2019/babysandbox",
+        "exists": true
+      },
+      {
+        "id": "flropyd",
+        "name": "Flropyd",
+        "raw_name": "ROP - 366 - Flropyd",
+        "type": "PWN",
+        "raw_type": "ROP",
+        "path": "0ctf2019/flropyd",
+        "exists": true
+      },
+      {
+        "id": "elements",
+        "name": "Elements",
+        "raw_name": "REV - 107 - Elements",
+        "type": "REV",
+        "raw_type": "REV",
+        "path": "0ctf2019/elements",
+        "exists": true
+      },
+      {
+        "id": "babyrsa",
+        "name": "Baby RSA",
+        "raw_name": "CRYPTO - 107 - Baby RSA",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "0ctf2019/babyrsa",
+        "exists": true
+      }
+    ]
+  },
+  "0ctf2021quals": {
+    "id": "0ctf2021quals",
+    "name": "0CTF/TCTF 2021 Quals",
+    "path": "0ctf2021quals",
+    "challenges": [
+      {
+        "id": "listbook",
+        "name": "Listbook",
+        "raw_name": "PWN - 154 - Listbook",
+        "type": "PWN",
+        "raw_type": "PWN",
+        "path": "0ctf2021quals/listbook",
+        "exists": true
+      },
+      {
+        "id": "future",
+        "name": "Future",
+        "raw_name": "REV - Future",
+        "type": "REV",
+        "raw_type": "REV",
+        "path": "0ctf2021quals/future",
+        "exists": true
+      },
+      {
+        "id": "vp",
+        "name": "VP",
+        "raw_name": "REV - VP",
+        "type": "REV",
+        "raw_type": "REV",
+        "path": "0ctf2021quals/vp",
+        "exists": true
+      },
+      {
+        "id": "cloudpass",
+        "name": "Cloudpass - pykeepass",
+        "raw_name": "CRYPTO - Cloudpass - pykeepass",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "0ctf2021quals/cloudpass",
+        "exists": true
+      },
+      {
+        "id": "zer0lfsr",
+        "name": "zer0lfsr - pykeepass",
+        "raw_name": "CRYPTO - zer0lfsr - pykeepass",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "0ctf2021quals/zer0lfsr",
+        "exists": true
+      }
+    ]
+  },
+  "0x41414141ctf2021": {
+    "id": "0x41414141ctf2021",
+    "name": "0x41414141 CTF 2021",
+    "path": "0x41414141ctf2021",
+    "challenges": [
+      {
+        "id": "moving-signals",
+        "name": "Moving signals",
+        "raw_name": "PWN - 442 - Moving signals",
+        "type": "PWN",
+        "raw_type": "PWN",
+        "path": "0x41414141ctf2021/moving-signals",
+        "exists": true
+      },
+      {
+        "id": "external",
+        "name": "External",
+        "raw_name": "PWN - 467 - External",
+        "type": "PWN",
+        "raw_type": "PWN",
+        "path": "0x41414141ctf2021/external",
+        "exists": true
+      },
+      {
+        "id": "the-pwn-inn",
+        "name": "The Pwn Inn",
+        "raw_name": "PWN - 477 - The Pwn Inn",
+        "type": "PWN",
+        "raw_type": "PWN",
+        "path": "0x41414141ctf2021/the-pwn-inn",
+        "exists": true
+      },
+      {
+        "id": "ret-of-the-rops",
+        "name": "Return Of The Rops",
+        "raw_name": "PWN - 480 - Return Of The Rops",
+        "type": "PWN",
+        "raw_type": "PWN",
+        "path": "0x41414141ctf2021/ret-of-the-rops",
+        "exists": true
+      },
+      {
+        "id": "x-and-or",
+        "name": "X AND OR",
+        "raw_name": "REV - 392 - X AND OR",
+        "type": "REV",
+        "raw_type": "REV",
+        "path": "0x41414141ctf2021/x-and-or",
+        "exists": true
+      },
+      {
+        "id": "ware",
+        "name": "Ware",
+        "raw_name": "REV - 462 - Ware",
+        "type": "REV",
+        "raw_type": "REV",
+        "path": "0x41414141ctf2021/ware",
+        "exists": true
+      },
+      {
+        "id": "wrongdownload",
+        "name": "Wrong Download",
+        "raw_name": "REV - 475 - Wrong Download",
+        "type": "REV",
+        "raw_type": "REV",
+        "path": "0x41414141ctf2021/wrongdownload",
+        "exists": true
+      },
+      {
+        "id": "hash",
+        "name": "Hash",
+        "raw_name": "REV - 479 - Hash",
+        "type": "REV",
+        "raw_type": "REV",
+        "path": "0x41414141ctf2021/hash",
+        "exists": true
+      },
+      {
+        "id": "client",
+        "name": "cliBrowser",
+        "raw_name": "REV - 500 - cliBrowser",
+        "type": "REV",
+        "raw_type": "REV",
+        "path": "0x41414141ctf2021/client",
+        "exists": true
+      },
+      {
+        "id": "factorize",
+        "name": "Factorize",
+        "raw_name": "CRYPTO - 232 - Factorize",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "0x41414141ctf2021/factorize",
+        "exists": true
+      },
+      {
+        "id": "staple-aes",
+        "name": "staple AES",
+        "raw_name": "CRYPTO - 445 - staple AES",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "0x41414141ctf2021/staple-aes",
+        "exists": true
+      },
+      {
+        "id": "eazyrsa",
+        "name": "Eazy RSA",
+        "raw_name": "CRYPTO - 445 - Eazy RSA",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "0x41414141ctf2021/eazyrsa",
+        "exists": true
+      },
+      {
+        "id": "wallet",
+        "name": "Delegate Wallet",
+        "raw_name": "CRYPTO - 465 - Delegate Wallet",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "0x41414141ctf2021/wallet",
+        "exists": true
+      },
+      {
+        "id": "soul",
+        "name": "Soul's Permutation Network",
+        "raw_name": "CRYPTO - 500 - Soul's Permutation Network",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "0x41414141ctf2021/soul",
+        "exists": true
+      },
+      {
+        "id": "pyjail",
+        "name": "Pyjail",
+        "raw_name": "MISC - 437 - Pyjail",
+        "type": "MISC",
+        "raw_type": "MISC",
+        "path": "0x41414141ctf2021/pyjail",
+        "exists": true
+      },
+      {
+        "id": "filereader",
+        "name": "File Reader",
+        "raw_name": "MISC - 459 - File Reader",
+        "type": "MISC",
+        "raw_type": "MISC",
+        "path": "0x41414141ctf2021/filereader",
+        "exists": true
+      },
+      {
+        "id": "shjail",
+        "name": "Shjail",
+        "raw_name": "MISC - 492 - Shjail",
+        "type": "MISC",
+        "raw_type": "MISC",
+        "path": "0x41414141ctf2021/shjail",
+        "exists": true
+      }
+    ]
+  },
+  "29c3ctf2012": {
+    "id": "29c3ctf2012",
+    "name": "29c3 CTF 2012",
+    "path": "29c3ctf2012",
+    "challenges": [
+      {
+        "id": "findthekey",
+        "name": "Find the key",
+        "raw_name": "REV - 300 - Find the key",
+        "type": "REV",
+        "raw_type": "REV",
+        "path": "29c3ctf2012/findthekey",
+        "exists": true
+      },
+      {
+        "id": "maya",
+        "name": "Maya",
+        "raw_name": "REV - 300 - Maya",
+        "type": "REV",
+        "raw_type": "REV",
+        "path": "29c3ctf2012/maya",
+        "exists": true
+      },
+      {
+        "id": "minesweeper",
+        "name": "minesweeper",
+        "raw_name": "EXPLOIT - 100 - minesweeper",
+        "type": "PWN",
+        "raw_type": "EXPLOIT",
+        "path": "29c3ctf2012/minesweeper",
+        "exists": true
+      },
+      {
+        "id": "ru1337",
+        "name": "ru1337",
+        "raw_name": "EXPLOIT - 200 - ru1337",
+        "type": "PWN",
+        "raw_type": "EXPLOIT",
+        "path": "29c3ctf2012/ru1337",
+        "exists": true
+      },
+      {
+        "id": "updateserver",
+        "name": "Update Server",
+        "raw_name": "EXPLOIT - 300 - Update Server",
+        "type": "PWN",
+        "raw_type": "EXPLOIT",
+        "path": "29c3ctf2012/updateserver",
+        "exists": true
+      },
+      {
+        "id": "proxy",
+        "name": "Proxy",
+        "raw_name": "EXPLOIT - 400 - Proxy",
+        "type": "PWN",
+        "raw_type": "EXPLOIT",
+        "path": "29c3ctf2012/proxy",
+        "exists": true
+      },
+      {
+        "id": "memcached",
+        "name": "memcached",
+        "raw_name": "EXPLOIT - 600 - memcached",
+        "type": "PWN",
+        "raw_type": "EXPLOIT",
+        "path": "29c3ctf2012/memcached",
+        "exists": true
+      }
+    ]
+  },
+  "accessdeniedctf2022": {
+    "id": "accessdeniedctf2022",
+    "name": "Access-Denied 2022",
+    "path": "accessdeniedctf2022",
+    "challenges": [
+      {
+        "id": "ret2system",
+        "name": "ret2system",
+        "raw_name": "PWN - 722 - ret2system",
+        "type": "PWN",
+        "raw_type": "PWN",
+        "path": "accessdeniedctf2022/ret2system",
+        "exists": true
+      },
+      {
+        "id": "enormous",
+        "name": "Enormous",
+        "raw_name": "REV - 566 - Enormous",
+        "type": "REV",
+        "raw_type": "REV",
+        "path": "accessdeniedctf2022/enormous",
+        "exists": true
+      },
+      {
+        "id": "binary",
+        "name": "REV - 797 - Binary",
+        "raw_name": "REV - 797 - Binary",
+        "type": "REV",
+        "raw_type": "REV",
+        "path": "accessdeniedctf2022/binary",
+        "exists": true
+      },
+      {
+        "id": "llvm",
+        "name": "LLVM",
+        "raw_name": "REV - 947 - LLVM",
+        "type": "REV",
+        "raw_type": "REV",
+        "path": "accessdeniedctf2022/llvm",
+        "exists": true
+      },
+      {
+        "id": "rsa1",
+        "name": "RSA-1",
+        "raw_name": "CRYTPO - RSA-1",
+        "type": "CRYPTO",
+        "raw_type": "CRYTPO",
+        "path": "accessdeniedctf2022/rsa1",
+        "exists": true
+      },
+      {
+        "id": "rsa2",
+        "name": "RSA-2",
+        "raw_name": "CRYTPO - RSA-2",
+        "type": "CRYPTO",
+        "raw_type": "CRYTPO",
+        "path": "accessdeniedctf2022/rsa2",
+        "exists": true
+      },
+      {
+        "id": "rsa3",
+        "name": "RSA-3",
+        "raw_name": "CRYTPO - RSA-3",
+        "type": "CRYPTO",
+        "raw_type": "CRYTPO",
+        "path": "accessdeniedctf2022/rsa3",
+        "exists": true
+      },
+      {
+        "id": "mitm2",
+        "name": "MITM-2",
+        "raw_name": "CRYTPO - MITM-2",
+        "type": "CRYPTO",
+        "raw_type": "CRYTPO",
+        "path": "accessdeniedctf2022/mitm2",
+        "exists": true
+      },
+      {
+        "id": "ecc",
+        "name": "ECC",
+        "raw_name": "CRYTPO - ECC",
+        "type": "CRYPTO",
+        "raw_type": "CRYTPO",
+        "path": "accessdeniedctf2022/ecc",
+        "exists": true
+      },
+      {
+        "id": "smallkey",
+        "name": "Small Key",
+        "raw_name": "CRYTPO - Small Key",
+        "type": "CRYPTO",
+        "raw_type": "CRYTPO",
+        "path": "accessdeniedctf2022/smallkey",
+        "exists": true
+      },
+      {
+        "id": "merklegoodman",
+        "name": "Merkle is a good man",
+        "raw_name": "CRYTPO - Merkle is a good man",
+        "type": "CRYPTO",
+        "raw_type": "CRYTPO",
+        "path": "accessdeniedctf2022/merklegoodman",
+        "exists": true
+      }
+    ]
+  },
+  "angstromctf2016": {
+    "id": "angstromCTF2016",
+    "name": "\u00e5ngstromCTF 2016",
+    "path": "angstromctf2016",
+    "challenges": [
+      {
+        "id": "endian",
+        "name": "Endian of the World",
+        "raw_name": "BINARY - 40 - Endian of the World",
+        "type": "PWN",
+        "raw_type": "BINARY",
+        "path": "angstromctf2016/endian",
+        "exists": true
+      },
+      {
+        "id": "formatone",
+        "name": "Format 1",
+        "raw_name": "BINARY - 100 - Format 1",
+        "type": "PWN",
+        "raw_type": "BINARY",
+        "path": "angstromctf2016/formatone",
+        "exists": true
+      },
+      {
+        "id": "asmtracing",
+        "name": "ASM Tracing",
+        "raw_name": "REV - 45 - ASM Tracing",
+        "type": "REV",
+        "raw_type": "REV",
+        "path": "angstromctf2016/asmtracing",
+        "exists": true
+      },
+      {
+        "id": "javabest",
+        "name": "Java is the Best",
+        "raw_name": "REV - 50 - Java is the Best",
+        "type": "REV",
+        "raw_type": "REV",
+        "path": "angstromctf2016/javabest",
+        "exists": true
+      },
+      {
+        "id": "imageencryptor",
+        "name": "Smartest Encryption",
+        "raw_name": "REV - 70 - Smartest Encryption",
+        "type": "REV",
+        "raw_type": "REV",
+        "path": "angstromctf2016/imageencryptor",
+        "exists": true
+      },
+      {
+        "id": "cipher",
+        "name": "Sea Cipher",
+        "raw_name": "REV - 100 - Sea Cipher",
+        "type": "REV",
+        "raw_type": "REV",
+        "path": "angstromctf2016/cipher",
+        "exists": true
+      },
+      {
+        "id": "ciphertwo",
+        "name": "Sea Cipher 2",
+        "raw_name": "REV - 100 - Sea Cipher 2",
+        "type": "REV",
+        "raw_type": "REV",
+        "path": "angstromctf2016/ciphertwo",
+        "exists": true
+      },
+      {
+        "id": "amoebananas",
+        "name": "Amoebananas!",
+        "raw_name": "WEB - 20 - Amoebananas!",
+        "type": "WEB",
+        "raw_type": "WEB",
+        "path": "angstromctf2016/amoebananas",
+        "exists": true
+      },
+      {
+        "id": "client",
+        "name": "SuperSecure&trade;",
+        "raw_name": "WEB - 30 - SuperSecure&trade;",
+        "type": "WEB",
+        "raw_type": "WEB",
+        "path": "angstromctf2016/client",
+        "exists": true
+      },
+      {
+        "id": "spqr",
+        "name": "SPQR",
+        "raw_name": "CRYPTO - 10 - SPQR",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "angstromctf2016/spqr",
+        "exists": true
+      },
+      {
+        "id": "hex",
+        "name": "What the Hex",
+        "raw_name": "CRYPTO - 15 - What the Hex",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "angstromctf2016/hex",
+        "exists": true
+      },
+      {
+        "id": "artifact",
+        "name": "Artifact",
+        "raw_name": "CRYPTO - 20 - Artifact",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "angstromctf2016/artifact",
+        "exists": true
+      },
+      {
+        "id": "hamlet",
+        "name": "Shakespeare",
+        "raw_name": "CRYPTO - 60 - Shakespeare",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "angstromctf2016/hamlet",
+        "exists": true
+      },
+      {
+        "id": "casino",
+        "name": "&aring;CTF CasinO",
+        "raw_name": "CRYPTO - 120 - &aring;CTF CasinO",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "angstromctf2016/casino",
+        "exists": true
+      },
+      {
+        "id": "helpcenter",
+        "name": "Help Center",
+        "raw_name": "CRYPTO - 170 - Help Center",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "angstromctf2016/helpcenter",
+        "exists": true
+      },
+      {
+        "id": "rsa",
+        "name": "RSA Fun",
+        "raw_name": "CRYPTO - 240 - RSA Fun",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "angstromctf2016/rsa",
+        "exists": true
+      },
+      {
+        "id": "recovery",
+        "name": "Recovery",
+        "raw_name": "FORENSICS - 10 - Recovery",
+        "type": "FORENSICS",
+        "raw_type": "FORENSICS",
+        "path": "angstromctf2016/recovery",
+        "exists": true
+      },
+      {
+        "id": "oops",
+        "name": "Oops!",
+        "raw_name": "FORENSICS - 30 - Oops!",
+        "type": "FORENSICS",
+        "raw_type": "FORENSICS",
+        "path": "angstromctf2016/oops",
+        "exists": true
+      },
+      {
+        "id": "headsup",
+        "name": "Headsup",
+        "raw_name": "FORENSICS - 30 - Headsup",
+        "type": "FORENSICS",
+        "raw_type": "FORENSICS",
+        "path": "angstromctf2016/headsup",
+        "exists": true
+      },
+      {
+        "id": "yankovic",
+        "name": "Yankovic",
+        "raw_name": "FORENSICS - 60 - Yankovic",
+        "type": "FORENSICS",
+        "raw_type": "FORENSICS",
+        "path": "angstromctf2016/yankovic",
+        "exists": true
+      },
+      {
+        "id": "fender",
+        "name": "Fender Blender",
+        "raw_name": "FORENSICS - 70 - Fender Blender",
+        "type": "FORENSICS",
+        "raw_type": "FORENSICS",
+        "path": "angstromctf2016/fender",
+        "exists": true
+      },
+      {
+        "id": "metasploit",
+        "name": "metasploitable",
+        "raw_name": "FORENSICS - 120 - metasploitable",
+        "type": "FORENSICS",
+        "raw_type": "FORENSICS",
+        "path": "angstromctf2016/metasploit",
+        "exists": true
+      },
+      {
+        "id": "music",
+        "name": "Music To My Ears",
+        "raw_name": "FORENSICS - 130 - Music To My Ears",
+        "type": "FORENSICS",
+        "raw_type": "FORENSICS",
+        "path": "angstromctf2016/music",
+        "exists": true
+      }
+    ]
+  },
+  "angstromctf2017": {
+    "id": "angstromCTF2017",
+    "name": "\u00e5ngstromCTF 2017",
+    "path": "angstromctf2017",
+    "challenges": [
+      {
+        "id": "obligatory",
+        "name": "Hard Choices",
+        "raw_name": "WEB - 40 - Hard Choices",
+        "type": "WEB",
+        "raw_type": "WEB",
+        "path": "angstromctf2017/obligatory",
+        "exists": true
+      },
+      {
+        "id": "begin",
+        "name": "The Beginning",
+        "raw_name": "CRYTPO - 10 - The Beginning",
+        "type": "CRYPTO",
+        "raw_type": "CRYTPO",
+        "path": "angstromctf2017/begin",
+        "exists": true
+      },
+      {
+        "id": "knockknock",
+        "name": "Knock Knock",
+        "raw_name": "CRYTPO - 30 - Knock Knock",
+        "type": "CRYPTO",
+        "raw_type": "CRYTPO",
+        "path": "angstromctf2017/knockknock",
+        "exists": true
+      },
+      {
+        "id": "substitutioncipher",
+        "name": "Substitution Cipher",
+        "raw_name": "CRYTPO - 60 - Substitution Cipher",
+        "type": "CRYPTO",
+        "raw_type": "CRYTPO",
+        "path": "angstromctf2017/substitutioncipher",
+        "exists": true
+      },
+      {
+        "id": "royalcasino",
+        "name": "The Royal Casino",
+        "raw_name": "CRYTPO - 120 - The Royal Casino",
+        "type": "CRYPTO",
+        "raw_type": "CRYTPO",
+        "path": "angstromctf2017/royalcasino",
+        "exists": true
+      },
+      {
+        "id": "casino",
+        "name": "The Casino, Revisite",
+        "raw_name": "CRYTPO - 130 - The Casino, Revisite",
+        "type": "CRYPTO",
+        "raw_type": "CRYTPO",
+        "path": "angstromctf2017/casino",
+        "exists": true
+      }
+    ]
+  },
+  "angstromctf2018": {
+    "id": "angstromCTF2018",
+    "name": "\u00e5ngstromCTF 2018",
+    "path": "angstromctf2018",
+    "challenges": [
+      {
+        "id": "warmup",
+        "name": "Warmup",
+        "raw_name": "Warmup",
+        "type": "MISC",
+        "raw_type": "",
+        "path": "angstromctf2018/warmup",
+        "exists": true
+      },
+      {
+        "id": "accumulator",
+        "name": "Accumulator",
+        "raw_name": "BINARY - 50 - Accumulator",
+        "type": "PWN",
+        "raw_type": "BINARY",
+        "path": "angstromctf2018/accumulator",
+        "exists": true
+      },
+      {
+        "id": "bankroppery",
+        "name": "Bank Roppery",
+        "raw_name": "BINARY - 250 - Bank Roppery",
+        "type": "PWN",
+        "raw_type": "BINARY",
+        "path": "angstromctf2018/bankroppery",
+        "exists": true
+      },
+      {
+        "id": "rev1",
+        "name": "REV1",
+        "raw_name": "REV - 60 - REV1",
+        "type": "REV",
+        "raw_type": "REV",
+        "path": "angstromctf2018/rev1",
+        "exists": true
+      },
+      {
+        "id": "rev2",
+        "name": "REV2",
+        "raw_name": "REV - 80 - REV2",
+        "type": "REV",
+        "raw_type": "REV",
+        "path": "angstromctf2018/rev2",
+        "exists": true
+      },
+      {
+        "id": "rev3",
+        "name": "REV3",
+        "raw_name": "REV - 100 - REV3",
+        "type": "REV",
+        "raw_type": "REV",
+        "path": "angstromctf2018/rev3",
+        "exists": true
+      },
+      {
+        "id": "productkey",
+        "name": "Product Key",
+        "raw_name": "REV - 200 - Product Key",
+        "type": "REV",
+        "raw_type": "REV",
+        "path": "angstromctf2018/productkey",
+        "exists": true
+      },
+      {
+        "id": "washington",
+        "name": "Washington",
+        "raw_name": "REV - 200 - Washington",
+        "type": "REV",
+        "raw_type": "REV",
+        "path": "angstromctf2018/washington",
+        "exists": true
+      },
+      {
+        "id": "backtobasics",
+        "name": "Back To Basics",
+        "raw_name": "CRYPTO - 20 - Back To Basics",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "angstromctf2018/backtobasics",
+        "exists": true
+      },
+      {
+        "id": "xor",
+        "name": "XOR",
+        "raw_name": "CRYPTO - 40 - XOR",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "angstromctf2018/xor",
+        "exists": true
+      },
+      {
+        "id": "introtorsa",
+        "name": "Intro to RSA",
+        "raw_name": "CRYPTO - 50 - Intro to RSA",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "angstromctf2018/introtorsa",
+        "exists": true
+      },
+      {
+        "id": "waldo2",
+        "name": "Waldo 2",
+        "raw_name": "MISC - 30 - Waldo 2",
+        "type": "MISC",
+        "raw_type": "MISC",
+        "path": "angstromctf2018/waldo2",
+        "exists": true
+      },
+      {
+        "id": "weirdmessage",
+        "name": "Weird Message",
+        "raw_name": "MISC - 100 - Weird Message",
+        "type": "MISC",
+        "raw_type": "MISC",
+        "path": "angstromctf2018/weirdmessage",
+        "exists": true
+      }
+    ]
+  },
+  "angstromctf2019": {
+    "id": "angstromctf2019",
+    "name": "\u00e5ngstromctf 2019",
+    "path": "angstromctf2019",
+    "challenges": [
+      {
+        "id": "chainofrope",
+        "name": "Chain of Rope",
+        "raw_name": "BINARY - 80 - Chain of Rope",
+        "type": "PWN",
+        "raw_type": "BINARY",
+        "path": "angstromctf2019/chainofrope",
+        "exists": true
+      },
+      {
+        "id": "overmybrain",
+        "name": "Over My Brain",
+        "raw_name": "BINARY - 150 - Over My Brain",
+        "type": "PWN",
+        "raw_type": "BINARY",
+        "path": "angstromctf2019/overmybrain",
+        "exists": true
+      },
+      {
+        "id": "like",
+        "name": "I Like It",
+        "raw_name": "REV - 40 - I Like It",
+        "type": "REV",
+        "raw_type": "REV",
+        "path": "angstromctf2019/like",
+        "exists": true
+      },
+      {
+        "id": "onebite",
+        "name": "One Bite",
+        "raw_name": "REV - 60 - One Bite",
+        "type": "REV",
+        "raw_type": "REV",
+        "path": "angstromctf2019/onebite",
+        "exists": true
+      },
+      {
+        "id": "highqualitychecks",
+        "name": "High Quality Checks",
+        "raw_name": "REV - 110 - High Quality Checks",
+        "type": "REV",
+        "raw_type": "REV",
+        "path": "angstromctf2019/highqualitychecks",
+        "exists": true
+      },
+      {
+        "id": "icthyo",
+        "name": "Icthyo",
+        "raw_name": "REV - 130 - Icthyo",
+        "type": "REV",
+        "raw_type": "REV",
+        "path": "angstromctf2019/icthyo",
+        "exists": true
+      },
+      {
+        "id": "reallysecurealgorithm",
+        "name": "Really Secure Algorithm",
+        "raw_name": "CRYPTO - 30 - Really Secure Algorithm",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "angstromctf2019/reallysecurealgorithm",
+        "exists": true
+      },
+      {
+        "id": "runes",
+        "name": "Runes",
+        "raw_name": "CRYPTO - 70 - Runes",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "angstromctf2019/runes",
+        "exists": true
+      },
+      {
+        "id": "lithp",
+        "name": "Lithp",
+        "raw_name": "MISC - 60 - Lithp",
+        "type": "MISC",
+        "raw_type": "MISC",
+        "path": "angstromctf2019/lithp",
+        "exists": true
+      },
+      {
+        "id": "blankpaper",
+        "name": "Blank Paper",
+        "raw_name": "MISC - 30 - Blank Paper",
+        "type": "MISC",
+        "raw_type": "MISC",
+        "path": "angstromctf2019/blankpaper",
+        "exists": true
+      },
+      {
+        "id": "paperbin",
+        "name": "Paper Bin",
+        "raw_name": "MISC - 40 - Paper Bin",
+        "type": "MISC",
+        "raw_type": "MISC",
+        "path": "angstromctf2019/paperbin",
+        "exists": true
+      }
+    ]
+  },
+  "angstromctf2022": {
+    "id": "angstromctf2022",
+    "name": "\u00e5ngstromctf 2022",
+    "path": "angstromctf2022",
+    "challenges": [
+      {
+        "id": "whatsmyname",
+        "name": "whatsmyname",
+        "raw_name": "PWN - 50 - whatsmyname",
+        "type": "PWN",
+        "raw_type": "PWN",
+        "path": "angstromctf2022/whatsmyname",
+        "exists": true
+      },
+      {
+        "id": "wah",
+        "name": "Wah",
+        "raw_name": "PWN - 100 - Wah",
+        "type": "PWN",
+        "raw_type": "PWN",
+        "path": "angstromctf2022/wah",
+        "exists": true
+      },
+      {
+        "id": "reallyobnoxiousproblem",
+        "name": "really obnoxious problem",
+        "raw_name": "PWN - 140 - really obnoxious problem",
+        "type": "PWN",
+        "raw_type": "PWN",
+        "path": "angstromctf2022/reallyobnoxiousproblem",
+        "exists": true
+      },
+      {
+        "id": "numbergame",
+        "name": "Number Game",
+        "raw_name": "REV - 70 - Number Game",
+        "type": "REV",
+        "raw_type": "REV",
+        "path": "angstromctf2022/numbergame",
+        "exists": true
+      },
+      {
+        "id": "dyn",
+        "name": "dyn",
+        "raw_name": "REV - 100 - dyn",
+        "type": "REV",
+        "raw_type": "REV",
+        "path": "angstromctf2022/dyn",
+        "exists": true
+      },
+      {
+        "id": "uninspired",
+        "name": "uninspired",
+        "raw_name": "REV - 100 - uninspired",
+        "type": "REV",
+        "raw_type": "REV",
+        "path": "angstromctf2022/uninspired",
+        "exists": true
+      },
+      {
+        "id": "caesaranddesister",
+        "name": "Caesar and Desister",
+        "raw_name": "CRYPTO - 40 - Caesar and Desister",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "angstromctf2022/caesaranddesister",
+        "exists": true
+      },
+      {
+        "id": "randomlysampledalgorithm",
+        "name": "Randomly Sampled Algorithm",
+        "raw_name": "CRYPTO - 70 - Randomly Sampled Algorithm",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "angstromctf2022/randomlysampledalgorithm",
+        "exists": true
+      },
+      {
+        "id": "amongus",
+        "name": "amongus",
+        "raw_name": "MISC - 40 - amongus",
+        "type": "MISC",
+        "raw_type": "MISC",
+        "path": "angstromctf2022/amongus",
+        "exists": true
+      },
+      {
+        "id": "shark1",
+        "name": "Shark 1",
+        "raw_name": "MISC - 70 - Shark 1",
+        "type": "MISC",
+        "raw_type": "MISC",
+        "path": "angstromctf2022/shark1",
+        "exists": true
+      }
+    ]
+  },
+  "angstromctf2024": {
+    "id": "angstromctf2024",
+    "name": "\u00e5ngstromCTF 2024",
+    "path": "angstromctf2024",
+    "challenges": [
+      {
+        "id": "exam",
+        "name": "exam",
+        "raw_name": "PWN - 50 - exam",
+        "type": "PWN",
+        "raw_type": "PWN",
+        "path": "angstromctf2024/exam",
+        "exists": true
+      },
+      {
+        "id": "presidential",
+        "name": "presidential",
+        "raw_name": "PWN - 100 - presidential",
+        "type": "PWN",
+        "raw_type": "PWN",
+        "path": "angstromctf2024/presidential",
+        "exists": true
+      },
+      {
+        "id": "bap",
+        "name": "Bap",
+        "raw_name": "PWN - 130 - Bap",
+        "type": "PWN",
+        "raw_type": "PWN",
+        "path": "angstromctf2024/bap",
+        "exists": true
+      },
+      {
+        "id": "og",
+        "name": "og",
+        "raw_name": "PWN - 130 - og",
+        "type": "PWN",
+        "raw_type": "PWN",
+        "path": "angstromctf2024/og",
+        "exists": true
+      },
+      {
+        "id": "leftright",
+        "name": "leftright",
+        "raw_name": "PWN - 130 - leftright",
+        "type": "PWN",
+        "raw_type": "PWN",
+        "path": "angstromctf2024/leftright",
+        "exists": true
+      },
+      {
+        "id": "heapify",
+        "name": "heapify",
+        "raw_name": "PWN - 220 - heapify",
+        "type": "PWN",
+        "raw_type": "PWN",
+        "path": "angstromctf2024/heapify",
+        "exists": true
+      },
+      {
+        "id": "themectl",
+        "name": "themectl",
+        "raw_name": "PWN - 230 - themectl",
+        "type": "PWN",
+        "raw_type": "PWN",
+        "path": "angstromctf2024/themectl",
+        "exists": true
+      },
+      {
+        "id": "stacksort",
+        "name": "stacksort",
+        "raw_name": "PWN - 250 - stacksort",
+        "type": "PWN",
+        "raw_type": "PWN",
+        "path": "angstromctf2024/stacksort",
+        "exists": true
+      },
+      {
+        "id": "philosophy",
+        "name": "philosophy",
+        "raw_name": "CRYTPO - 40 - philosophy",
+        "type": "CRYPTO",
+        "raw_type": "CRYTPO",
+        "path": "angstromctf2024/philosophy",
+        "exists": true
+      },
+      {
+        "id": "awman",
+        "name": "aw-man",
+        "raw_name": "CRYTPO - 50 - aw-man",
+        "type": "CRYPTO",
+        "raw_type": "CRYTPO",
+        "path": "angstromctf2024/awman",
+        "exists": true
+      },
+      {
+        "id": "simonsays",
+        "name": "Simon Says",
+        "raw_name": "CRYTPO - 100 - Simon Says",
+        "type": "CRYPTO",
+        "raw_type": "CRYTPO",
+        "path": "angstromctf2024/simonsays",
+        "exists": true
+      },
+      {
+        "id": "tss1",
+        "name": "tss1",
+        "raw_name": "CRYTPO - 100 - tss1",
+        "type": "CRYPTO",
+        "raw_type": "CRYTPO",
+        "path": "angstromctf2024/tss1",
+        "exists": true
+      },
+      {
+        "id": "tss2",
+        "name": "tss2",
+        "raw_name": "CRYTPO - 200 - tss2",
+        "type": "CRYPTO",
+        "raw_type": "CRYTPO",
+        "path": "angstromctf2024/tss2",
+        "exists": true
+      },
+      {
+        "id": "layers",
+        "name": "layers",
+        "raw_name": "MISC - 50 - layers",
+        "type": "MISC",
+        "raw_type": "MISC",
+        "path": "angstromctf2024/layers",
+        "exists": true
+      },
+      {
+        "id": "snowman",
+        "name": "do you wanna build a snowman?",
+        "raw_name": "MISC - 50 - do you wanna build a snowman?",
+        "type": "MISC",
+        "raw_type": "MISC",
+        "path": "angstromctf2024/snowman",
+        "exists": true
+      }
+    ]
+  },
+  "asisctf2013": {
+    "id": "asisctf2013",
+    "name": "ASIS CTF 2013",
+    "path": "asisctf2013",
+    "challenges": [
+      {
+        "id": "serialnumber",
+        "name": "Serial Number",
+        "raw_name": "REV - 76 - Serial Number",
+        "type": "REV",
+        "raw_type": "REV",
+        "path": "asisctf2013/serialnumber",
+        "exists": true
+      },
+      {
+        "id": "licensekey",
+        "name": "License Key",
+        "raw_name": "REV - 155 - License Key",
+        "type": "REV",
+        "raw_type": "REV",
+        "path": "asisctf2013/licensekey",
+        "exists": true
+      },
+      {
+        "id": "dice",
+        "name": "Rock Paper Scissors",
+        "raw_name": "REV - Rock Paper Scissors",
+        "type": "REV",
+        "raw_type": "REV",
+        "path": "asisctf2013/dice",
+        "exists": true
+      },
+      {
+        "id": "encoding",
+        "name": "Encoding",
+        "raw_name": "CRYTPO - Encoding",
+        "type": "CRYPTO",
+        "raw_type": "CRYTPO",
+        "path": "asisctf2013/encoding",
+        "exists": true
+      },
+      {
+        "id": "simpleofficer",
+        "name": "Simple Officer",
+        "raw_name": "CRYTPO - 52 - Simple Officer",
+        "type": "CRYPTO",
+        "raw_type": "CRYTPO",
+        "path": "asisctf2013/simpleofficer",
+        "exists": true
+      },
+      {
+        "id": "rsang",
+        "name": "RSANG",
+        "raw_name": "CRYTPO - 330 - RSANG",
+        "type": "CRYPTO",
+        "raw_type": "CRYTPO",
+        "path": "asisctf2013/rsang",
+        "exists": true
+      },
+      {
+        "id": "pcaps",
+        "name": "PCAPS",
+        "raw_name": "CRYTPO - 450 - PCAPS",
+        "type": "CRYPTO",
+        "raw_type": "CRYTPO",
+        "path": "asisctf2013/pcaps",
+        "exists": true
+      },
+      {
+        "id": "memdump",
+        "name": "memdump",
+        "raw_name": "FORENSICS - 220 - memdump",
+        "type": "FORENSICS",
+        "raw_type": "FORENSICS",
+        "path": "asisctf2013/memdump",
+        "exists": true
+      },
+      {
+        "id": "inaccessible",
+        "name": "Inaccessible",
+        "raw_name": "FORENSICS - 312 - Inaccessible",
+        "type": "FORENSICS",
+        "raw_type": "FORENSICS",
+        "path": "asisctf2013/inaccessible",
+        "exists": true
+      }
+    ]
+  },
+  "asisctf2014": {
+    "id": "asisctf2014",
+    "name": "ASIS CTF 2014",
+    "path": "asisctf2014",
+    "challenges": [
+      {
+        "id": "randomimage",
+        "name": "Random Image",
+        "raw_name": "CRYPTO - 150 - Random Image",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "asisctf2014/randomimage",
+        "exists": true
+      },
+      {
+        "id": "blocks",
+        "name": "Blocks",
+        "raw_name": "STEGO - 100 - Blocks",
+        "type": "STEGO",
+        "raw_type": "STEGO",
+        "path": "asisctf2014/blocks",
+        "exists": true
+      }
+    ]
+  },
+  "backdoorctf2019": {
+    "id": "backdoorctf2019",
+    "name": "BackdoorCTF 2019",
+    "path": "backdoorctf2019",
+    "challenges": [
+      {
+        "id": "echo",
+        "name": "Echo",
+        "raw_name": "PWN - 100 - Echo",
+        "type": "PWN",
+        "raw_type": "PWN",
+        "path": "backdoorctf2019/echo",
+        "exists": true
+      },
+      {
+        "id": "forgot",
+        "name": "Forgot",
+        "raw_name": "PWN - 200 - Forgot",
+        "type": "PWN",
+        "raw_type": "PWN",
+        "path": "backdoorctf2019/forgot",
+        "exists": true
+      },
+      {
+        "id": "babytcache",
+        "name": "Babytcache",
+        "raw_name": "PWN - 201 - Babytcache",
+        "type": "PWN",
+        "raw_type": "PWN",
+        "path": "backdoorctf2019/babytcache",
+        "exists": true
+      },
+      {
+        "id": "babyheapbackdoorctf",
+        "name": "Babyheap",
+        "raw_name": "PWN - 286 - Babyheap",
+        "type": "PWN",
+        "raw_type": "PWN",
+        "path": "backdoorctf2019/babyheapbackdoorctf",
+        "exists": true
+      },
+      {
+        "id": "matrix",
+        "name": "Enter the Matrix",
+        "raw_name": "PWN - 350 - Enter the Matrix",
+        "type": "PWN",
+        "raw_type": "PWN",
+        "path": "backdoorctf2019/matrix",
+        "exists": true
+      },
+      {
+        "id": "miscpwn",
+        "name": "MiscPwn",
+        "raw_name": "PWN - 405 - MiscPwn",
+        "type": "PWN",
+        "raw_type": "PWN",
+        "path": "backdoorctf2019/miscpwn",
+        "exists": true
+      },
+      {
+        "id": "team",
+        "name": "Team",
+        "raw_name": "PWN - 600 - Team",
+        "type": "PWN",
+        "raw_type": "PWN",
+        "path": "backdoorctf2019/team",
+        "exists": true
+      },
+      {
+        "id": "rsanne",
+        "name": "RSANNE",
+        "raw_name": "CRYTPO - 350 - RSANNE",
+        "type": "CRYPTO",
+        "raw_type": "CRYTPO",
+        "path": "backdoorctf2019/rsanne",
+        "exists": true
+      }
+    ]
+  },
+  "buckeyectf2025": {
+    "id": "buckeyectf2025",
+    "name": "BuckeyeCTF 2025",
+    "path": "buckeyectf2025",
+    "challenges": [
+      {
+        "id": "character",
+        "name": "Character assassination",
+        "raw_name": "PWN - 100 - Character assassination",
+        "type": "PWN",
+        "raw_type": "PWN",
+        "path": "buckeyectf2025/character",
+        "exists": true
+      },
+      {
+        "id": "squarecipher",
+        "name": "Square Cipher",
+        "raw_name": "REV - 100 - Square Cipher",
+        "type": "REV",
+        "raw_type": "REV",
+        "path": "buckeyectf2025/squarecipher",
+        "exists": true
+      }
+    ]
+  },
+  "byuctf2022": {
+    "id": "byuctf2022",
+    "name": "BYUCTF 2022",
+    "path": "byuctf2022",
+    "challenges": [
+      {
+        "id": "basicrev",
+        "name": "Basic Rev",
+        "raw_name": "REV - 50 - Basic Rev",
+        "type": "REV",
+        "raw_type": "REV",
+        "path": "byuctf2022/basicrev",
+        "exists": true
+      },
+      {
+        "id": "funfact",
+        "name": "Fun Fact",
+        "raw_name": "REV - 50 - Fun Fact",
+        "type": "REV",
+        "raw_type": "REV",
+        "path": "byuctf2022/funfact",
+        "exists": true
+      },
+      {
+        "id": "chicken",
+        "name": "Chicken",
+        "raw_name": "REV - 439 - Chicken",
+        "type": "REV",
+        "raw_type": "REV",
+        "path": "byuctf2022/chicken",
+        "exists": true
+      },
+      {
+        "id": "shift",
+        "name": "Shifting Mindset",
+        "raw_name": "CRYPTO - 50 - Shifting Mindset",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "byuctf2022/shift",
+        "exists": true
+      },
+      {
+        "id": "truth",
+        "name": "Truth and Falsehood",
+        "raw_name": "CRYPTO - 432 - Truth and Falsehood",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "byuctf2022/truth",
+        "exists": true
+      },
+      {
+        "id": "ballgame",
+        "name": "Take Me Out to the Ball Game",
+        "raw_name": "CRYPTO - 498 - Take Me Out to the Ball Game",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "byuctf2022/ballgame",
+        "exists": true
+      },
+      {
+        "id": "xqr",
+        "name": "XQR",
+        "raw_name": "CRYPTO - 490 - XQR",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "byuctf2022/xqr",
+        "exists": true
+      },
+      {
+        "id": "murdermystery",
+        "name": "Murder Mystery",
+        "raw_name": "OSINT - 499 - Murder Mystery",
+        "type": "OSINT",
+        "raw_type": "OSINT",
+        "path": "byuctf2022/murdermystery",
+        "exists": true
+      },
+      {
+        "id": "qool",
+        "name": "Qool Raster",
+        "raw_name": "FORENSICS - 94 - Qool Raster",
+        "type": "FORENSICS",
+        "raw_type": "FORENSICS",
+        "path": "byuctf2022/qool",
+        "exists": true
+      },
+      {
+        "id": "stickykey",
+        "name": "Sticky Key",
+        "raw_name": "FORENSICS - 304 - Sticky Key",
+        "type": "FORENSICS",
+        "raw_type": "FORENSICS",
+        "path": "byuctf2022/stickykey",
+        "exists": true
+      },
+      {
+        "id": "blue",
+        "name": "Blue 3",
+        "raw_name": "FORENSICS - 482 - Blue 3",
+        "type": "FORENSICS",
+        "raw_type": "FORENSICS",
+        "path": "byuctf2022/blue",
+        "exists": true
+      }
+    ]
+  },
+  "byuctf2023": {
+    "id": "byuctf2023",
+    "name": "BYUCTF 2023",
+    "path": "byuctf2023",
+    "challenges": [
+      {
+        "id": "pwn2038",
+        "name": "PWN - 2038",
+        "raw_name": "PWN - 2038",
+        "type": "PWN",
+        "raw_type": "PWN",
+        "path": "byuctf2023/pwn2038",
+        "exists": true
+      },
+      {
+        "id": "poem",
+        "name": "Poem",
+        "raw_name": "CRYPTO - 452 - Poem",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "byuctf2023/poem",
+        "exists": true
+      },
+      {
+        "id": "rsa1",
+        "name": "RSA1",
+        "raw_name": "CRYPTO - RSA1",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "byuctf2023/rsa1",
+        "exists": true
+      },
+      {
+        "id": "rsa2",
+        "name": "RSA2",
+        "raw_name": "CRYPTO - RSA2",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "byuctf2023/rsa2",
+        "exists": true
+      },
+      {
+        "id": "rsa3",
+        "name": "RSA3",
+        "raw_name": "CRYPTO - RSA3",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "byuctf2023/rsa3",
+        "exists": true
+      },
+      {
+        "id": "rsa4",
+        "name": "RSA4",
+        "raw_name": "CRYPTO - RSA4",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "byuctf2023/rsa4",
+        "exists": true
+      },
+      {
+        "id": "rsa5",
+        "name": "RSA5",
+        "raw_name": "CRYPTO - RSA5",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "byuctf2023/rsa5",
+        "exists": true
+      },
+      {
+        "id": "crcconfusion",
+        "name": "CRConfusion",
+        "raw_name": "FORENSICS - CRConfusion",
+        "type": "FORENSICS",
+        "raw_type": "FORENSICS",
+        "path": "byuctf2023/crcconfusion",
+        "exists": true
+      },
+      {
+        "id": "hexadecalingo",
+        "name": "Hexadecalingo",
+        "raw_name": "MISC - Hexadecalingo",
+        "type": "MISC",
+        "raw_type": "MISC",
+        "path": "byuctf2023/hexadecalingo",
+        "exists": true
+      },
+      {
+        "id": "misc006-1",
+        "name": "006-1",
+        "raw_name": "MISC - 006-1",
+        "type": "MISC",
+        "raw_type": "MISC",
+        "path": "byuctf2023/misc006-1",
+        "exists": true
+      },
+      {
+        "id": "misc006-2",
+        "name": "006-2",
+        "raw_name": "MISC - 006-2",
+        "type": "MISC",
+        "raw_type": "MISC",
+        "path": "byuctf2023/misc006-2",
+        "exists": true
+      },
+      {
+        "id": "xkcd2637",
+        "name": "xkcd 2637",
+        "raw_name": "MISC - xkcd 2637",
+        "type": "MISC",
+        "raw_type": "MISC",
+        "path": "byuctf2023/xkcd2637",
+        "exists": true
+      }
+    ]
+  },
+  "byuctf2024": {
+    "id": "byuctf2024",
+    "name": "BYUCTF 2024",
+    "path": "byuctf2024",
+    "challenges": [
+      {
+        "id": "aresa",
+        "name": "Are S A?",
+        "raw_name": "CRYPTO - Are S A?",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "byuctf2024/aresa",
+        "exists": true
+      },
+      {
+        "id": "domath",
+        "name": "Do Math!",
+        "raw_name": "CRYPTO - Do Math!",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "byuctf2024/domath",
+        "exists": true
+      },
+      {
+        "id": "giveup",
+        "name": "Give Up",
+        "raw_name": "CRYPTO - Give Up",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "byuctf2024/giveup",
+        "exists": true
+      },
+      {
+        "id": "multiplied",
+        "name": "Times",
+        "raw_name": "CRYPTO - Times",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "byuctf2024/multiplied",
+        "exists": true
+      },
+      {
+        "id": "gotmail",
+        "name": "Mail Time",
+        "raw_name": "OSINT - Mail Time",
+        "type": "OSINT",
+        "raw_type": "OSINT",
+        "path": "byuctf2024/gotmail",
+        "exists": true
+      },
+      {
+        "id": "petrolhead",
+        "name": "Petrol Head",
+        "raw_name": "OSINT - Petrol Head",
+        "type": "OSINT",
+        "raw_type": "OSINT",
+        "path": "byuctf2024/petrolhead",
+        "exists": true
+      },
+      {
+        "id": "typosquatting",
+        "name": "TypoSquatting",
+        "raw_name": "OSINT - TypoSquatting",
+        "type": "OSINT",
+        "raw_type": "OSINT",
+        "path": "byuctf2024/typosquatting",
+        "exists": true
+      },
+      {
+        "id": "vacationboats",
+        "name": "Vacation Boats",
+        "raw_name": "OSINT - Vacation Boats",
+        "type": "OSINT",
+        "raw_type": "OSINT",
+        "path": "byuctf2024/vacationboats",
+        "exists": true
+      },
+      {
+        "id": "wateryoudoing",
+        "name": "Water You Doing, Step-Eclipse?",
+        "raw_name": "OSINT - Water You Doing, Step-Eclipse?",
+        "type": "OSINT",
+        "raw_type": "OSINT",
+        "path": "byuctf2024/wateryoudoing",
+        "exists": true
+      },
+      {
+        "id": "worstchallenge",
+        "name": "The Worst Challenge Ever",
+        "raw_name": "FORENSICS - The Worst Challenge Ever",
+        "type": "FORENSICS",
+        "raw_type": "FORENSICS",
+        "path": "byuctf2024/worstchallenge",
+        "exists": true
+      },
+      {
+        "id": "meetgreg",
+        "name": "Meet Greg",
+        "raw_name": "SOCIAL ENGINEERING - Meet Greg",
+        "type": "OSINT",
+        "raw_type": "SOCIAL ENGINEERING",
+        "path": "byuctf2024/meetgreg",
+        "exists": true
+      }
+    ]
+  },
+  "cactusconctf2025": {
+    "id": "cactuscon2025",
+    "name": "CactusCon13 CTF 2025",
+    "path": "cactusconctf2025",
+    "challenges": [
+      {
+        "id": "clueless",
+        "name": "clueless",
+        "raw_name": "clueless",
+        "type": "MISC",
+        "raw_type": "",
+        "path": "cactusconctf2025/clueless",
+        "exists": true
+      },
+      {
+        "id": "frng",
+        "name": "frng",
+        "raw_name": "frng",
+        "type": "MISC",
+        "raw_type": "",
+        "path": "cactusconctf2025/frng",
+        "exists": true
+      },
+      {
+        "id": "numbersleuthv1",
+        "name": "numbersleuthv1",
+        "raw_name": "numbersleuthv1",
+        "type": "MISC",
+        "raw_type": "",
+        "path": "cactusconctf2025/numbersleuthv1",
+        "exists": true
+      },
+      {
+        "id": "numbersleuthv2",
+        "name": "numbersleuthv2",
+        "raw_name": "numbersleuthv2",
+        "type": "MISC",
+        "raw_type": "",
+        "path": "cactusconctf2025/numbersleuthv2",
+        "exists": true
+      },
+      {
+        "id": "numbersleuthv3",
+        "name": "numbersleuthv3",
+        "raw_name": "numbersleuthv3",
+        "type": "MISC",
+        "raw_type": "",
+        "path": "cactusconctf2025/numbersleuthv3",
+        "exists": true
+      },
+      {
+        "id": "securerepititions",
+        "name": "securerepititions",
+        "raw_name": "securerepititions",
+        "type": "MISC",
+        "raw_type": "",
+        "path": "cactusconctf2025/securerepititions",
+        "exists": true
+      }
+    ]
+  },
+  "ccscctf2020": {
+    "id": "ccscctf2020",
+    "name": "Cyprus Cyber Security Challenge (CCSC) CTF 2020",
+    "path": "ccscctf2020",
+    "challenges": [
+      {
+        "id": "guy",
+        "name": "Guy de Bois",
+        "raw_name": "PWN - 200 - Guy de Bois",
+        "type": "PWN",
+        "raw_type": "PWN",
+        "path": "ccscctf2020/guy",
+        "exists": true
+      },
+      {
+        "id": "spell",
+        "name": "Spell Caster",
+        "raw_name": "PWN - 300 - Spell Caster",
+        "type": "PWN",
+        "raw_type": "PWN",
+        "path": "ccscctf2020/spell",
+        "exists": true
+      },
+      {
+        "id": "basilisk64",
+        "name": "Basilisk64",
+        "raw_name": "CRYPTO - 29 - Basilisk64",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "ccscctf2020/basilisk64",
+        "exists": true
+      },
+      {
+        "id": "mouse",
+        "name": "Mousesack's Spell",
+        "raw_name": "CRYPTO - 150 - Mousesack's Spell",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "ccscctf2020/mouse",
+        "exists": true
+      },
+      {
+        "id": "routes",
+        "name": "Routes from Sodden to Amell",
+        "raw_name": "CRYPTO - 450 - Routes from Sodden to Amell",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "ccscctf2020/routes",
+        "exists": true
+      }
+    ]
+  },
+  "codegate2011": {
+    "id": "codegate2011",
+    "name": "Codegate CTF 2011",
+    "path": "codegate2011",
+    "challenges": [
+      {
+        "id": "binary100",
+        "name": "BINARY - 100",
+        "raw_name": "BINARY - 100",
+        "type": "PWN",
+        "raw_type": "BINARY",
+        "path": "codegate2011/binary100",
+        "exists": true
+      },
+      {
+        "id": "binary200",
+        "name": "BINARY - 200",
+        "raw_name": "BINARY - 200",
+        "type": "PWN",
+        "raw_type": "BINARY",
+        "path": "codegate2011/binary200",
+        "exists": true
+      },
+      {
+        "id": "binary300",
+        "name": "BINARY - 300",
+        "raw_name": "BINARY - 300",
+        "type": "PWN",
+        "raw_type": "BINARY",
+        "path": "codegate2011/binary300",
+        "exists": true
+      },
+      {
+        "id": "binary400",
+        "name": "BINARY - 400",
+        "raw_name": "BINARY - 400",
+        "type": "PWN",
+        "raw_type": "BINARY",
+        "path": "codegate2011/binary400",
+        "exists": true
+      },
+      {
+        "id": "binary500",
+        "name": "BINARY - 500",
+        "raw_name": "BINARY - 500",
+        "type": "PWN",
+        "raw_type": "BINARY",
+        "path": "codegate2011/binary500",
+        "exists": true
+      },
+      {
+        "id": "network100",
+        "name": "Network",
+        "raw_name": "WEB - 100 - Network",
+        "type": "WEB",
+        "raw_type": "WEB",
+        "path": "codegate2011/network100",
+        "exists": true
+      },
+      {
+        "id": "crypto200",
+        "name": "CRYTPO - 200",
+        "raw_name": "CRYTPO - 200",
+        "type": "CRYPTO",
+        "raw_type": "CRYTPO",
+        "path": "codegate2011/crypto200",
+        "exists": true
+      },
+      {
+        "id": "crypto300",
+        "name": "CRYTPO - 300",
+        "raw_name": "CRYTPO - 300",
+        "type": "CRYPTO",
+        "raw_type": "CRYTPO",
+        "path": "codegate2011/crypto300",
+        "exists": true
+      },
+      {
+        "id": "crypto400",
+        "name": "CRYTPO - 400",
+        "raw_name": "CRYTPO - 400",
+        "type": "CRYPTO",
+        "raw_type": "CRYTPO",
+        "path": "codegate2011/crypto400",
+        "exists": true
+      },
+      {
+        "id": "crypto500",
+        "name": "CRYTPO - 500",
+        "raw_name": "CRYTPO - 500",
+        "type": "CRYPTO",
+        "raw_type": "CRYTPO",
+        "path": "codegate2011/crypto500",
+        "exists": true
+      },
+      {
+        "id": "forensics200",
+        "name": "FORENSICS - 200",
+        "raw_name": "FORENSICS - 200",
+        "type": "FORENSICS",
+        "raw_type": "FORENSICS",
+        "path": "codegate2011/forensics200",
+        "exists": true
+      },
+      {
+        "id": "forensics300",
+        "name": "FORENSICS - 300",
+        "raw_name": "FORENSICS - 300",
+        "type": "FORENSICS",
+        "raw_type": "FORENSICS",
+        "path": "codegate2011/forensics300",
+        "exists": true
+      },
+      {
+        "id": "forensics400",
+        "name": "FORENSICS - 400",
+        "raw_name": "FORENSICS - 400",
+        "type": "FORENSICS",
+        "raw_type": "FORENSICS",
+        "path": "codegate2011/forensics400",
+        "exists": true
+      }
+    ]
+  },
+  "codegatectf2012": {
+    "id": "codegatectf2012",
+    "name": "Codegate CTF 2012",
+    "path": "codegatectf2012",
+    "challenges": [
+      {
+        "id": "bin100",
+        "name": "BINARY - 100",
+        "raw_name": "BINARY - 100",
+        "type": "PWN",
+        "raw_type": "BINARY",
+        "path": "codegatectf2012/bin100",
+        "exists": true
+      },
+      {
+        "id": "bin200",
+        "name": "BINARY - 200",
+        "raw_name": "BINARY - 200",
+        "type": "PWN",
+        "raw_type": "BINARY",
+        "path": "codegatectf2012/bin200",
+        "exists": true
+      },
+      {
+        "id": "bin300",
+        "name": "BINARY - 300",
+        "raw_name": "BINARY - 300",
+        "type": "PWN",
+        "raw_type": "BINARY",
+        "path": "codegatectf2012/bin300",
+        "exists": true
+      },
+      {
+        "id": "bin400",
+        "name": "BINARY - 400",
+        "raw_name": "BINARY - 400",
+        "type": "PWN",
+        "raw_type": "BINARY",
+        "path": "codegatectf2012/bin400",
+        "exists": true
+      },
+      {
+        "id": "bin500",
+        "name": "BINARY - 500",
+        "raw_name": "BINARY - 500",
+        "type": "PWN",
+        "raw_type": "BINARY",
+        "path": "codegatectf2012/bin500",
+        "exists": true
+      },
+      {
+        "id": "forensics100",
+        "name": "FORENSICS - 100",
+        "raw_name": "FORENSICS - 100",
+        "type": "FORENSICS",
+        "raw_type": "FORENSICS",
+        "path": "codegatectf2012/forensics100",
+        "exists": true
+      },
+      {
+        "id": "forensics200",
+        "name": "FORENSICS - 200",
+        "raw_name": "FORENSICS - 200",
+        "type": "FORENSICS",
+        "raw_type": "FORENSICS",
+        "path": "codegatectf2012/forensics200",
+        "exists": true
+      },
+      {
+        "id": "forensics300",
+        "name": "FORENSICS - 300",
+        "raw_name": "FORENSICS - 300",
+        "type": "FORENSICS",
+        "raw_type": "FORENSICS",
+        "path": "codegatectf2012/forensics300",
+        "exists": true
+      },
+      {
+        "id": "vuln500",
+        "name": "VULNERABILITY - 500",
+        "raw_name": "VULNERABILITY - 500",
+        "type": "PWN",
+        "raw_type": "VULNERABILITY",
+        "path": "codegatectf2012/vuln500",
+        "exists": true
+      }
+    ]
+  },
+  "codegatectf2013": {
+    "id": "codegatectf2013",
+    "name": "Codegate CTF 2013",
+    "path": "codegatectf2013",
+    "challenges": [
+      {
+        "id": "vuln100",
+        "name": "VULNERABILITY - 100",
+        "raw_name": "VULNERABILITY - 100",
+        "type": "PWN",
+        "raw_type": "VULNERABILITY",
+        "path": "codegatectf2013/vuln100",
+        "exists": true
+      }
+    ]
+  },
+  "codegateprelims2014": {
+    "id": "codegateprelims2014",
+    "name": "Codegate Preliminary CTF 2014",
+    "path": "codegateprelims2014",
+    "challenges": [
+      {
+        "id": "angrydoraemon",
+        "name": "Angry Doraemon",
+        "raw_name": "PWN - 250 - Angry Doraemon",
+        "type": "PWN",
+        "raw_type": "PWN",
+        "path": "codegateprelims2014/angrydoraemon",
+        "exists": true
+      },
+      {
+        "id": "4stone",
+        "name": "4stone",
+        "raw_name": "PWN - 300 - 4stone",
+        "type": "PWN",
+        "raw_type": "PWN",
+        "path": "codegateprelims2014/4stone",
+        "exists": true
+      },
+      {
+        "id": "minibomb",
+        "name": "Minibomb",
+        "raw_name": "PWN - 400 - Minibomb",
+        "type": "PWN",
+        "raw_type": "PWN",
+        "path": "codegateprelims2014/minibomb",
+        "exists": true
+      },
+      {
+        "id": "weirdsnus",
+        "name": "Weird_snus",
+        "raw_name": "PWN - 450 - Weird_snus",
+        "type": "PWN",
+        "raw_type": "PWN",
+        "path": "codegateprelims2014/weirdsnus",
+        "exists": true
+      },
+      {
+        "id": "hypercat",
+        "name": "Hypercat",
+        "raw_name": "PWN - 550 - Hypercat",
+        "type": "PWN",
+        "raw_type": "PWN",
+        "path": "codegateprelims2014/hypercat",
+        "exists": true
+      },
+      {
+        "id": "dodosandbox",
+        "name": "dodosandbox",
+        "raw_name": "PWN - 600 - dodosandbox",
+        "type": "PWN",
+        "raw_type": "PWN",
+        "path": "codegateprelims2014/dodosandbox",
+        "exists": true
+      },
+      {
+        "id": "crackme",
+        "name": "dodoCrackme",
+        "raw_name": "REV - 200 - dodoCrackme",
+        "type": "REV",
+        "raw_type": "REV",
+        "path": "codegateprelims2014/crackme",
+        "exists": true
+      },
+      {
+        "id": "automata",
+        "name": "Automata",
+        "raw_name": "REV - 400 - Automata",
+        "type": "REV",
+        "raw_type": "REV",
+        "path": "codegateprelims2014/automata",
+        "exists": true
+      },
+      {
+        "id": "chronological",
+        "name": "Chronological",
+        "raw_name": "LOGICAL - 300 - Chronological",
+        "type": "MISC",
+        "raw_type": "LOGICAL",
+        "path": "codegateprelims2014/chronological",
+        "exists": true
+      }
+    ]
+  },
+  "corctf2021": {
+    "id": "corctf2021",
+    "name": "corCTF 2021",
+    "path": "corctf2021",
+    "challenges": [
+      {
+        "id": "chainblock",
+        "name": "ChainBlock",
+        "raw_name": "PWN - 394 - ChainBlock",
+        "type": "PWN",
+        "raw_type": "PWN",
+        "path": "corctf2021/chainblock",
+        "exists": true
+      },
+      {
+        "id": "cshell",
+        "name": "CShell",
+        "raw_name": "PWN - 459 - CShell",
+        "type": "PWN",
+        "raw_type": "PWN",
+        "path": "corctf2021/cshell",
+        "exists": true
+      },
+      {
+        "id": "babyrev",
+        "name": "BabyRev",
+        "raw_name": "REV - 372 - BabyRev",
+        "type": "REV",
+        "raw_type": "REV",
+        "path": "corctf2021/babyrev",
+        "exists": true
+      },
+      {
+        "id": "vmquack",
+        "name": "vmquack",
+        "raw_name": "REV - 499 - vmquack",
+        "type": "REV",
+        "raw_type": "REV",
+        "path": "corctf2021/vmquack",
+        "exists": true
+      },
+      {
+        "id": "fibinary",
+        "name": "Fibinary",
+        "raw_name": "CRYPTO - 205 - Fibinary",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "corctf2021/fibinary",
+        "exists": true
+      },
+      {
+        "id": "fourninesix",
+        "name": "CRYPTO - 360 - 4096",
+        "raw_name": "CRYPTO - 360 - 4096",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "corctf2021/fourninesix",
+        "exists": true
+      },
+      {
+        "id": "babyrand",
+        "name": "Babyrand",
+        "raw_name": "CRYPTO - 487 - Babyrand",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "corctf2021/babyrand",
+        "exists": true
+      },
+      {
+        "id": "lcg",
+        "name": "LCG-k",
+        "raw_name": "CRYPTO - 489 - LCG-k",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "corctf2021/lcg",
+        "exists": true
+      },
+      {
+        "id": "bank",
+        "name": "Bank",
+        "raw_name": "CRYPTO - 489 - Bank",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "corctf2021/bank",
+        "exists": true
+      },
+      {
+        "id": "friedrice",
+        "name": "Fried Rice",
+        "raw_name": "CRYPTO - 497 - Fried Rice",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "corctf2021/friedrice",
+        "exists": true
+      },
+      {
+        "id": "chance",
+        "name": "Leave it to chance",
+        "raw_name": "CRYPTO - 498 - Leave it to chance",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "corctf2021/chance",
+        "exists": true
+      }
+    ]
+  },
+  "corctf2022": {
+    "id": "corctf2022",
+    "name": "corCTF 2022",
+    "path": "corctf2022",
+    "challenges": [
+      {
+        "id": "turbocrab",
+        "name": "turbocrab",
+        "raw_name": "REV - 154 - turbocrab",
+        "type": "REV",
+        "raw_type": "REV",
+        "path": "corctf2022/turbocrab",
+        "exists": true
+      },
+      {
+        "id": "msfrob",
+        "name": "Msfrob",
+        "raw_name": "REV - 170 - Msfrob",
+        "type": "REV",
+        "raw_type": "REV",
+        "path": "corctf2022/msfrob",
+        "exists": true
+      },
+      {
+        "id": "bogus",
+        "name": "Bogus",
+        "raw_name": "REV - 396 - Bogus",
+        "type": "REV",
+        "raw_type": "REV",
+        "path": "corctf2022/bogus",
+        "exists": true
+      },
+      {
+        "id": "edgelord",
+        "name": "Edgelord",
+        "raw_name": "REV - 458 - Edgelord",
+        "type": "REV",
+        "raw_type": "REV",
+        "path": "corctf2022/edgelord",
+        "exists": true
+      },
+      {
+        "id": "vmquacksrevenge",
+        "name": "vmquack's revenge",
+        "raw_name": "REV - 500 - vmquack's revenge",
+        "type": "REV",
+        "raw_type": "REV",
+        "path": "corctf2022/vmquacksrevenge",
+        "exists": true
+      },
+      {
+        "id": "exchanged",
+        "name": "Exchanged",
+        "raw_name": "CRYPTO - 131 - Exchanged",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "corctf2022/exchanged",
+        "exists": true
+      }
+    ]
+  },
+  "cryptoctf2020": {
+    "id": "cryptoctf2020",
+    "name": "Crypto CTF 2020",
+    "path": "cryptoctf2020",
+    "challenges": [
+      {
+        "id": "trailingbits",
+        "name": "Trailing Bits",
+        "raw_name": "CRYPTO - 29 - Trailing Bits",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "cryptoctf2020/trailingbits",
+        "exists": true
+      },
+      {
+        "id": "amsterdam",
+        "name": "Amsterdam",
+        "raw_name": "CRYPTO - 55 - Amsterdam",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "cryptoctf2020/amsterdam",
+        "exists": true
+      },
+      {
+        "id": "threeravens",
+        "name": "Three Ravens",
+        "raw_name": "CRYPTO - 90 - Three Ravens",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "cryptoctf2020/threeravens",
+        "exists": true
+      },
+      {
+        "id": "onelinecrypto",
+        "name": "One Line Crypto",
+        "raw_name": "CRYPTO - 142 - One Line Crypto",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "cryptoctf2020/onelinecrypto",
+        "exists": true
+      },
+      {
+        "id": "complextohell",
+        "name": "Complex To Hell",
+        "raw_name": "CRYPTO - 285 - Complex To Hell",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "cryptoctf2020/complextohell",
+        "exists": true
+      },
+      {
+        "id": "fatima",
+        "name": "Fatima",
+        "raw_name": "CRYPTO - 316 - Fatima",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "cryptoctf2020/fatima",
+        "exists": true
+      }
+    ]
+  },
+  "cryptoctf2021": {
+    "id": "cryptoctf2021",
+    "name": "Crypto CTF 2021",
+    "path": "cryptoctf2021",
+    "challenges": [
+      {
+        "id": "lower",
+        "name": "Lower",
+        "raw_name": "CRYPTO - Lower",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "cryptoctf2021/lower",
+        "exists": true
+      },
+      {
+        "id": "farm",
+        "name": "Farm",
+        "raw_name": "CRYPTO - 43 - Farm",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "cryptoctf2021/farm",
+        "exists": true
+      },
+      {
+        "id": "rima",
+        "name": "Rima",
+        "raw_name": "CRYPTO - 56 - Rima",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "cryptoctf2021/rima",
+        "exists": true
+      },
+      {
+        "id": "hypernormal",
+        "name": "Hyper Normal",
+        "raw_name": "CRYPTO - 71 - Hyper Normal",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "cryptoctf2021/hypernormal",
+        "exists": true
+      },
+      {
+        "id": "hamul",
+        "name": "Hamul",
+        "raw_name": "CRYPTO - 83 - Hamul",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "cryptoctf2021/hamul",
+        "exists": true
+      },
+      {
+        "id": "triplet",
+        "name": "Triplet",
+        "raw_name": "CRYPTO - 91 - Triplet",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "cryptoctf2021/triplet",
+        "exists": true
+      },
+      {
+        "id": "improved",
+        "name": "Improved",
+        "raw_name": "CRYPTO - 117 - Improved",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "cryptoctf2021/improved",
+        "exists": true
+      },
+      {
+        "id": "wolf",
+        "name": "Wolf",
+        "raw_name": "CRYPTO - 128 - Wolf",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "cryptoctf2021/wolf",
+        "exists": true
+      },
+      {
+        "id": "frozen",
+        "name": "Frozen",
+        "raw_name": "CRYPTO - 142 - Frozen",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "cryptoctf2021/frozen",
+        "exists": true
+      },
+      {
+        "id": "tinyecc",
+        "name": "Tiny ECC",
+        "raw_name": "CRYPTO - 217 - Tiny ECC",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "cryptoctf2021/tinyecc",
+        "exists": true
+      },
+      {
+        "id": "elegant",
+        "name": "Elegant Curve",
+        "raw_name": "CRYPTO - 217 - Elegant Curve",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "cryptoctf2021/elegant",
+        "exists": true
+      },
+      {
+        "id": "ecchimera",
+        "name": "Ecchimera",
+        "raw_name": "CRYPTO - 271 - Ecchimera",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "cryptoctf2021/ecchimera",
+        "exists": true
+      },
+      {
+        "id": "trunc",
+        "name": "TRUNC",
+        "raw_name": "CRYPTO - 334 - TRUNC",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "cryptoctf2021/trunc",
+        "exists": true
+      },
+      {
+        "id": "dorsa",
+        "name": "DoRSA",
+        "raw_name": "CRYPTO - 450 - DoRSA",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "cryptoctf2021/dorsa",
+        "exists": true
+      }
+    ]
+  },
+  "cryptoversectf2022": {
+    "id": "cryptoversectf2022",
+    "name": "Cryptoverse CTF 2022",
+    "path": "cryptoversectf2022",
+    "challenges": [
+      {
+        "id": "worldcup",
+        "name": "World Cup",
+        "raw_name": "REV - World Cup",
+        "type": "REV",
+        "raw_type": "REV",
+        "path": "cryptoversectf2022/worldcup",
+        "exists": true
+      },
+      {
+        "id": "tale",
+        "name": "A Tale Of Two Systems",
+        "raw_name": "CRYTPO - A Tale Of Two Systems",
+        "type": "CRYPTO",
+        "raw_type": "CRYTPO",
+        "path": "cryptoversectf2022/tale",
+        "exists": true
+      },
+      {
+        "id": "bigrabin",
+        "name": "Big Rabin",
+        "raw_name": "CRYTPO - Big Rabin",
+        "type": "CRYPTO",
+        "raw_type": "CRYTPO",
+        "path": "cryptoversectf2022/bigrabin",
+        "exists": true
+      },
+      {
+        "id": "rsa2",
+        "name": "RSA 2",
+        "raw_name": "CRYTPO - RSA 2",
+        "type": "CRYPTO",
+        "raw_type": "CRYTPO",
+        "path": "cryptoversectf2022/rsa2",
+        "exists": true
+      },
+      {
+        "id": "rsa3",
+        "name": "RSA 3",
+        "raw_name": "CRYTPO - RSA 3",
+        "type": "CRYPTO",
+        "raw_type": "CRYTPO",
+        "path": "cryptoversectf2022/rsa3",
+        "exists": true
+      },
+      {
+        "id": "dlog",
+        "name": "Weird Dlog",
+        "raw_name": "CRYTPO - Weird Dlog",
+        "type": "CRYPTO",
+        "raw_type": "CRYTPO",
+        "path": "cryptoversectf2022/dlog",
+        "exists": true
+      }
+    ]
+  },
+  "cryptoversectf2023": {
+    "id": "cryptoversectf2023",
+    "name": "Cryptoverse CTF 2023",
+    "path": "cryptoversectf2023",
+    "challenges": [
+      {
+        "id": "acceptance",
+        "name": "Acceptance",
+        "raw_name": "PWN - Acceptance",
+        "type": "PWN",
+        "raw_type": "PWN",
+        "path": "cryptoversectf2023/acceptance",
+        "exists": true
+      },
+      {
+        "id": "retschool",
+        "name": "Ret2School",
+        "raw_name": "PWN - Ret2School",
+        "type": "PWN",
+        "raw_type": "PWN",
+        "path": "cryptoversectf2023/retschool",
+        "exists": true
+      },
+      {
+        "id": "microassembly",
+        "name": "Micro Assembly",
+        "raw_name": "REV - Micro Assembly",
+        "type": "REV",
+        "raw_type": "REV",
+        "path": "cryptoversectf2023/microassembly",
+        "exists": true
+      },
+      {
+        "id": "simplecheckin",
+        "name": "Simple Checking",
+        "raw_name": "REV - Simple Checking",
+        "type": "REV",
+        "raw_type": "REV",
+        "path": "cryptoversectf2023/simplecheckin",
+        "exists": true
+      },
+      {
+        "id": "standardvm",
+        "name": "Standard V",
+        "raw_name": "REV - Standard V",
+        "type": "REV",
+        "raw_type": "REV",
+        "path": "cryptoversectf2023/standardvm",
+        "exists": true
+      },
+      {
+        "id": "babyaes",
+        "name": "Baby AES",
+        "raw_name": "CRYTPO - Baby AES",
+        "type": "CRYPTO",
+        "raw_type": "CRYTPO",
+        "path": "cryptoversectf2023/babyaes",
+        "exists": true
+      },
+      {
+        "id": "fractionalflag",
+        "name": "Fractional Flag",
+        "raw_name": "CRYTPO - Fractional Flag",
+        "type": "CRYPTO",
+        "raw_type": "CRYTPO",
+        "path": "cryptoversectf2023/fractionalflag",
+        "exists": true
+      },
+      {
+        "id": "backpack",
+        "name": "Knapsack vs Backpack",
+        "raw_name": "CRYTPO - Knapsack vs Backpack",
+        "type": "CRYPTO",
+        "raw_type": "CRYTPO",
+        "path": "cryptoversectf2023/backpack",
+        "exists": true
+      },
+      {
+        "id": "lsfr",
+        "name": "LFSR Explorer",
+        "raw_name": "CRYTPO - LFSR Explorer",
+        "type": "CRYPTO",
+        "raw_type": "CRYTPO",
+        "path": "cryptoversectf2023/lsfr",
+        "exists": true
+      },
+      {
+        "id": "picochip1",
+        "name": "PicoChip 1",
+        "raw_name": "CRYTPO - PicoChip 1",
+        "type": "CRYPTO",
+        "raw_type": "CRYTPO",
+        "path": "cryptoversectf2023/picochip1",
+        "exists": true
+      },
+      {
+        "id": "picochip2",
+        "name": "PicoChip 2",
+        "raw_name": "CRYTPO - PicoChip 2",
+        "type": "CRYPTO",
+        "raw_type": "CRYTPO",
+        "path": "cryptoversectf2023/picochip2",
+        "exists": true
+      }
+    ]
+  },
+  "csaw2017": {
+    "id": "csaw2017",
+    "name": "CSAW 2017 Quals",
+    "path": "csaw2017",
+    "challenges": [
+      {
+        "id": "scv",
+        "name": "SCV",
+        "raw_name": "PWN - 100 - SCV",
+        "type": "PWN",
+        "raw_type": "PWN",
+        "path": "csaw2017/scv",
+        "exists": true
+      },
+      {
+        "id": "pilot",
+        "name": "Pilot",
+        "raw_name": "PWN - 100 - Pilot",
+        "type": "PWN",
+        "raw_type": "PWN",
+        "path": "csaw2017/pilot",
+        "exists": true
+      },
+      {
+        "id": "cvv",
+        "name": "CVV",
+        "raw_name": "PWN - 100 - CVV",
+        "type": "PWN",
+        "raw_type": "PWN",
+        "path": "csaw2017/cvv",
+        "exists": true
+      },
+      {
+        "id": "auir",
+        "name": "Auir",
+        "raw_name": "PWN - 200 - Auir",
+        "type": "PWN",
+        "raw_type": "PWN",
+        "path": "csaw2017/auir",
+        "exists": true
+      },
+      {
+        "id": "zone",
+        "name": "Zone",
+        "raw_name": "PWN - 300 - Zone",
+        "type": "PWN",
+        "raw_type": "PWN",
+        "path": "csaw2017/zone",
+        "exists": true
+      },
+      {
+        "id": "minesweeper",
+        "name": "Minesweeper",
+        "raw_name": "PWN - 500 - Minesweeper",
+        "type": "PWN",
+        "raw_type": "PWN",
+        "path": "csaw2017/minesweeper",
+        "exists": true
+      },
+      {
+        "id": "tablez",
+        "name": "Tablez",
+        "raw_name": "REV - 100 - Tablez",
+        "type": "REV",
+        "raw_type": "REV",
+        "path": "csaw2017/tablez",
+        "exists": true
+      },
+      {
+        "id": "prophecy",
+        "name": "Prophecy",
+        "raw_name": "REV - 200 - Prophecy",
+        "type": "REV",
+        "raw_type": "REV",
+        "path": "csaw2017/prophecy",
+        "exists": true
+      },
+      {
+        "id": "grumpcheck",
+        "name": "Grumpcheck",
+        "raw_name": "REV - 300 - Grumpcheck",
+        "type": "REV",
+        "raw_type": "REV",
+        "path": "csaw2017/grumpcheck",
+        "exists": true
+      },
+      {
+        "id": "bananascript",
+        "name": "Banana Script",
+        "raw_name": "REV - 450 - Banana Script",
+        "type": "REV",
+        "raw_type": "REV",
+        "path": "csaw2017/bananascript",
+        "exists": true
+      },
+      {
+        "id": "almostxor",
+        "name": "Almost Xor",
+        "raw_name": "CRYPTO - 200 - Almost Xor",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "csaw2017/almostxor",
+        "exists": true
+      },
+      {
+        "id": "babycrypt",
+        "name": "Baby Crypt",
+        "raw_name": "CRYPTO - 350 - Baby Crypt",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "csaw2017/babycrypt",
+        "exists": true
+      },
+      {
+        "id": "serial",
+        "name": "Serial",
+        "raw_name": "MISC - 50 - Serial",
+        "type": "MISC",
+        "raw_type": "MISC",
+        "path": "csaw2017/serial",
+        "exists": true
+      },
+      {
+        "id": "twitchplayspwnable",
+        "name": "twitchplayspwnable",
+        "raw_name": "MISC - 100 - twitchplayspwnable",
+        "type": "MISC",
+        "raw_type": "MISC",
+        "path": "csaw2017/twitchplayspwnable",
+        "exists": true
+      }
+    ]
+  },
+  "csawctf2011": {
+    "id": "csawctf2011",
+    "name": "CSAW CTF 2011",
+    "path": "csawctf2011",
+    "challenges": [
+      {
+        "id": "net1",
+        "name": "NET1",
+        "raw_name": "REV - 200 - NET1",
+        "type": "REV",
+        "raw_type": "REV",
+        "path": "csawctf2011/net1",
+        "exists": true
+      },
+      {
+        "id": "linux",
+        "name": "Linux",
+        "raw_name": "REV - 400 - Linux",
+        "type": "REV",
+        "raw_type": "REV",
+        "path": "csawctf2011/linux",
+        "exists": true
+      },
+      {
+        "id": "networking101",
+        "name": "Networking 101",
+        "raw_name": "WEB - 100 - Networking 101",
+        "type": "WEB",
+        "raw_type": "WEB",
+        "path": "csawctf2011/networking101",
+        "exists": true
+      },
+      {
+        "id": "net200",
+        "name": "WEB - 200",
+        "raw_name": "WEB - 200",
+        "type": "WEB",
+        "raw_type": "WEB",
+        "path": "csawctf2011/net200",
+        "exists": true
+      },
+      {
+        "id": "hardware",
+        "name": "WEB - 200 - Hardware",
+        "raw_name": "WEB - 200 - Hardware",
+        "type": "WEB",
+        "raw_type": "WEB",
+        "path": "csawctf2011/hardware",
+        "exists": true
+      },
+      {
+        "id": "evilburritos2",
+        "name": "Evil Burritos 2",
+        "raw_name": "WEB - 300 - Evil Burritos 2",
+        "type": "WEB",
+        "raw_type": "WEB",
+        "path": "csawctf2011/evilburritos2",
+        "exists": true
+      },
+      {
+        "id": "loveletter",
+        "name": "Love Letter",
+        "raw_name": "WEB - 500 - Love Letter",
+        "type": "WEB",
+        "raw_type": "WEB",
+        "path": "csawctf2011/loveletter",
+        "exists": true
+      },
+      {
+        "id": "crypto1",
+        "name": "CRYPTO - 100 - 1",
+        "raw_name": "CRYPTO - 100 - 1",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "csawctf2011/crypto1",
+        "exists": true
+      },
+      {
+        "id": "crypto2",
+        "name": "CRYPTO - 100 - 2",
+        "raw_name": "CRYPTO - 100 - 2",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "csawctf2011/crypto2",
+        "exists": true
+      },
+      {
+        "id": "crypto3",
+        "name": "CRYPTO - 100 - 3",
+        "raw_name": "CRYPTO - 100 - 3",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "csawctf2011/crypto3",
+        "exists": true
+      },
+      {
+        "id": "crypto4",
+        "name": "CRYPTO - 100 - 4",
+        "raw_name": "CRYPTO - 100 - 4",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "csawctf2011/crypto4",
+        "exists": true
+      },
+      {
+        "id": "crypto5",
+        "name": "CRYPTO - 200 - 5",
+        "raw_name": "CRYPTO - 200 - 5",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "csawctf2011/crypto5",
+        "exists": true
+      },
+      {
+        "id": "crypto6",
+        "name": "CRYPTO - 200 - 6",
+        "raw_name": "CRYPTO - 200 - 6",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "csawctf2011/crypto6",
+        "exists": true
+      },
+      {
+        "id": "crypto7",
+        "name": "CRYPTO - 200 - 7",
+        "raw_name": "CRYPTO - 200 - 7",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "csawctf2011/crypto7",
+        "exists": true
+      },
+      {
+        "id": "crypto8",
+        "name": "CRYPTO - 300 - 8",
+        "raw_name": "CRYPTO - 300 - 8",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "csawctf2011/crypto8",
+        "exists": true
+      },
+      {
+        "id": "crypto9",
+        "name": "CRYPTO - 300 - 9",
+        "raw_name": "CRYPTO - 300 - 9",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "csawctf2011/crypto9",
+        "exists": true
+      },
+      {
+        "id": "crypto10",
+        "name": "CRYPTO - 300 - 10",
+        "raw_name": "CRYPTO - 300 - 10",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "csawctf2011/crypto10",
+        "exists": true
+      }
+    ]
+  },
+  "csawctf2012": {
+    "id": "csawctf2012",
+    "name": "CSAW CTF 2012",
+    "path": "csawctf2012",
+    "challenges": [
+      {
+        "id": "rev400",
+        "name": "REV - 400",
+        "raw_name": "REV - 400",
+        "type": "REV",
+        "raw_type": "REV",
+        "path": "csawctf2012/rev400",
+        "exists": true
+      },
+      {
+        "id": "networking100",
+        "name": "WEB - 100",
+        "raw_name": "WEB - 100",
+        "type": "WEB",
+        "raw_type": "WEB",
+        "path": "csawctf2012/networking100",
+        "exists": true
+      },
+      {
+        "id": "networking200",
+        "name": "WEB - 200",
+        "raw_name": "WEB - 200",
+        "type": "WEB",
+        "raw_type": "WEB",
+        "path": "csawctf2012/networking200",
+        "exists": true
+      },
+      {
+        "id": "networking300",
+        "name": "WEB - 300",
+        "raw_name": "WEB - 300",
+        "type": "WEB",
+        "raw_type": "WEB",
+        "path": "csawctf2012/networking300",
+        "exists": true
+      },
+      {
+        "id": "networking400",
+        "name": "WEB - 400",
+        "raw_name": "WEB - 400",
+        "type": "WEB",
+        "raw_type": "WEB",
+        "path": "csawctf2012/networking400",
+        "exists": true
+      },
+      {
+        "id": "exploit200",
+        "name": "EXPLOIT - 200",
+        "raw_name": "EXPLOIT - 200",
+        "type": "PWN",
+        "raw_type": "EXPLOIT",
+        "path": "csawctf2012/exploit200",
+        "exists": true
+      },
+      {
+        "id": "exploit400",
+        "name": "EXPLOIT - 400",
+        "raw_name": "EXPLOIT - 400",
+        "type": "PWN",
+        "raw_type": "EXPLOIT",
+        "path": "csawctf2012/exploit400",
+        "exists": true
+      },
+      {
+        "id": "exploit500",
+        "name": "EXPLOIT - 500",
+        "raw_name": "EXPLOIT - 500",
+        "type": "PWN",
+        "raw_type": "EXPLOIT",
+        "path": "csawctf2012/exploit500",
+        "exists": true
+      }
+    ]
+  },
+  "csawctf2014": {
+    "id": "csawctf2014",
+    "name": "CSAW CTF 2014",
+    "path": "csawctf2014",
+    "challenges": [
+      {
+        "id": "eggshells",
+        "name": "Egg Shells",
+        "raw_name": "REV - 100 - Egg Shells",
+        "type": "REV",
+        "raw_type": "REV",
+        "path": "csawctf2014/eggshells",
+        "exists": true
+      },
+      {
+        "id": "aerosol",
+        "name": "aerosol can",
+        "raw_name": "REV - 500 - aerosol can",
+        "type": "REV",
+        "raw_type": "REV",
+        "path": "csawctf2014/aerosol",
+        "exists": true
+      },
+      {
+        "id": "bo",
+        "name": "The Road Less Traveled/bo",
+        "raw_name": "EXPLOITATION - 100 - The Road Less Traveled/bo",
+        "type": "PWN",
+        "raw_type": "EXPLOITATION",
+        "path": "csawctf2014/bo",
+        "exists": true
+      },
+      {
+        "id": "ish",
+        "name": "Ish",
+        "raw_name": "EXPLOITATION - 300 - Ish",
+        "type": "PWN",
+        "raw_type": "EXPLOITATION",
+        "path": "csawctf2014/ish",
+        "exists": true
+      },
+      {
+        "id": "s3",
+        "name": "S3",
+        "raw_name": "EXPLOITATION - 300 - S3",
+        "type": "PWN",
+        "raw_type": "EXPLOITATION",
+        "path": "csawctf2014/s3",
+        "exists": true
+      },
+      {
+        "id": "saturn",
+        "name": "Saturn",
+        "raw_name": "EXPLOITATION - 400 - Saturn",
+        "type": "PWN",
+        "raw_type": "EXPLOITATION",
+        "path": "csawctf2014/saturn",
+        "exists": true
+      },
+      {
+        "id": "cfbsum",
+        "name": "cfbsum",
+        "raw_name": "CRYPTO - 300 - cfbsum",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "csawctf2014/cfbsum",
+        "exists": true
+      },
+      {
+        "id": "feal",
+        "name": "Feal",
+        "raw_name": "CRYPTO - 300 - Feal",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "csawctf2014/feal",
+        "exists": true
+      },
+      {
+        "id": "bigdata",
+        "name": "Big Data",
+        "raw_name": "WEB - 100 - Big Data",
+        "type": "WEB",
+        "raw_type": "WEB",
+        "path": "csawctf2014/bigdata",
+        "exists": true
+      },
+      {
+        "id": "obscurity",
+        "name": "Obscurity",
+        "raw_name": "FORENSICS - 200 - Obscurity",
+        "type": "FORENSICS",
+        "raw_type": "FORENSICS",
+        "path": "csawctf2014/obscurity",
+        "exists": true
+      }
+    ]
+  },
+  "csawctfquals2020": {
+    "id": "csawctfquals2020",
+    "name": "CSAW Quals CTF 2020",
+    "path": "csawctfquals2020",
+    "challenges": [
+      {
+        "id": "applicative",
+        "name": "Applicative",
+        "raw_name": "PWN - 100 - Applicative",
+        "type": "PWN",
+        "raw_type": "PWN",
+        "path": "csawctfquals2020/applicative",
+        "exists": true
+      }
+    ]
+  },
+  "csawctfquals2021": {
+    "id": "csawctfquals2021",
+    "name": "CSAW Quals CTF 2021",
+    "path": "csawctfquals2021",
+    "challenges": [
+      {
+        "id": "passwordchecker",
+        "name": "Password Checker",
+        "raw_name": "PWN - Password Checker",
+        "type": "PWN",
+        "raw_type": "PWN",
+        "path": "csawctfquals2021/passwordchecker",
+        "exists": true
+      },
+      {
+        "id": "alienmath",
+        "name": "Alien Math",
+        "raw_name": "PWN - Alien Math",
+        "type": "PWN",
+        "raw_type": "PWN",
+        "path": "csawctfquals2021/alienmath",
+        "exists": true
+      },
+      {
+        "id": "forgery",
+        "name": "Forgery",
+        "raw_name": "CRYPTO - 405 - Forgery",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "csawctfquals2021/forgery",
+        "exists": true
+      },
+      {
+        "id": "lazyleaks",
+        "name": "Lazy Leaks",
+        "raw_name": "FORENSICS - 100 - Lazy Leaks",
+        "type": "FORENSICS",
+        "raw_type": "FORENSICS",
+        "path": "csawctfquals2021/lazyleaks",
+        "exists": true
+      },
+      {
+        "id": "sonicgraphy",
+        "name": "Sonicgraphy Fallout",
+        "raw_name": "FORENSICS - 200 - Sonicgraphy Fallout",
+        "type": "FORENSICS",
+        "raw_type": "FORENSICS",
+        "path": "csawctfquals2021/sonicgraphy",
+        "exists": true
+      },
+      {
+        "id": "contactus",
+        "name": "Contact Us",
+        "raw_name": "FORENSICS - 275 - Contact Us",
+        "type": "FORENSICS",
+        "raw_type": "FORENSICS",
+        "path": "csawctfquals2021/contactus",
+        "exists": true
+      }
+    ]
+  },
+  "csawctfquals2024": {
+    "id": "csawctfquals2024",
+    "name": "CSAW Quals CTF 2024",
+    "path": "csawctfquals2024",
+    "challenges": [
+      {
+        "id": "golf",
+        "name": "mini golfing",
+        "raw_name": "PWN - mini golfing",
+        "type": "PWN",
+        "raw_type": "PWN",
+        "path": "csawctfquals2024/golf",
+        "exists": true
+      },
+      {
+        "id": "nix",
+        "name": "vip blacklist",
+        "raw_name": "PWN - vip blacklist",
+        "type": "PWN",
+        "raw_type": "PWN",
+        "path": "csawctfquals2024/nix",
+        "exists": true
+      },
+      {
+        "id": "aes",
+        "name": "AES Diffusion Pop Quiz",
+        "raw_name": "CRYPTO - 275 - AES Diffusion Pop Quiz",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "csawctfquals2024/aes",
+        "exists": true
+      },
+      {
+        "id": "diffusion",
+        "name": "Diffusion Pop Quiz",
+        "raw_name": "CRYPTO - 275 - Diffusion Pop Quiz",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "csawctfquals2024/diffusion",
+        "exists": true
+      },
+      {
+        "id": "trapdoor",
+        "name": "Trapdoor",
+        "raw_name": "CRYPTO - Trapdoor",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "csawctfquals2024/trapdoor",
+        "exists": true
+      },
+      {
+        "id": "covert",
+        "name": "Covert",
+        "raw_name": "FORENSICS - Covert",
+        "type": "FORENSICS",
+        "raw_type": "FORENSICS",
+        "path": "csawctfquals2024/covert",
+        "exists": true
+      },
+      {
+        "id": "chinesefood",
+        "name": "Authentic Chinese Food",
+        "raw_name": "OSINT - Authentic Chinese Food",
+        "type": "OSINT",
+        "raw_type": "OSINT",
+        "path": "csawctfquals2024/chinesefood",
+        "exists": true
+      },
+      {
+        "id": "rickshaw",
+        "name": "Rickshaw",
+        "raw_name": "OSINT - Rickshaw",
+        "type": "OSINT",
+        "raw_type": "OSINT",
+        "path": "csawctfquals2024/rickshaw",
+        "exists": true
+      }
+    ]
+  },
+  "defconquals2018": {
+    "id": "defconquals2018",
+    "name": "DEF CON CTF Quals 2018",
+    "path": "defconquals2018",
+    "challenges": [
+      {
+        "id": "www",
+        "name": "www",
+        "raw_name": "www",
+        "type": "MISC",
+        "raw_type": "",
+        "path": "defconquals2018/www",
+        "exists": true
+      }
+    ]
+  },
+  "dicectfquals2025": {
+    "id": "dicectfquals2025",
+    "name": "DiceCTF 2025 Quals",
+    "path": "dicectfquals2025",
+    "challenges": [
+      {
+        "id": "winxy",
+        "name": "winxy-pistol",
+        "raw_name": "CRYPTO - 70 - winxy-pistol",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "dicectfquals2025/winxy",
+        "exists": true
+      },
+      {
+        "id": "vorpal",
+        "name": "vorpal-sword",
+        "raw_name": "CRYPTO - 70 - vorpal-sword",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "dicectfquals2025/vorpal",
+        "exists": true
+      },
+      {
+        "id": "satisfied",
+        "name": "satisfied",
+        "raw_name": "CRYPTO - 80 - satisfied",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "dicectfquals2025/satisfied",
+        "exists": true
+      },
+      {
+        "id": "dicecap",
+        "name": "dicecap",
+        "raw_name": "MISC - 80 - dicecap",
+        "type": "MISC",
+        "raw_type": "MISC",
+        "path": "dicectfquals2025/dicecap",
+        "exists": true
+      },
+      {
+        "id": "binding",
+        "name": "bcu-binding",
+        "raw_name": "MISC - 100 - bcu-binding",
+        "type": "MISC",
+        "raw_type": "MISC",
+        "path": "dicectfquals2025/binding",
+        "exists": true
+      }
+    ]
+  },
+  "downunderctf2020": {
+    "id": "downunderctf2020",
+    "name": "DownUnderCTF 2020",
+    "path": "downunderctf2020",
+    "challenges": [
+      {
+        "id": "shellthis",
+        "name": "Shell This!",
+        "raw_name": "PWN - 100 - Shell This!",
+        "type": "PWN",
+        "raw_type": "PWN",
+        "path": "downunderctf2020/shellthis",
+        "exists": true
+      },
+      {
+        "id": "returnofwhat",
+        "name": "Return Of What",
+        "raw_name": "PWN - 200 - Return Of What",
+        "type": "PWN",
+        "raw_type": "PWN",
+        "path": "downunderctf2020/returnofwhat",
+        "exists": true
+      },
+      {
+        "id": "returnofwhatsrevenge",
+        "name": "Return Of Whats Revenge",
+        "raw_name": "PWN - 442 - Return Of Whats Revenge",
+        "type": "PWN",
+        "raw_type": "PWN",
+        "path": "downunderctf2020/returnofwhatsrevenge",
+        "exists": true
+      },
+      {
+        "id": "vecc",
+        "name": "VECC",
+        "raw_name": "PWN - 499 - VECC",
+        "type": "PWN",
+        "raw_type": "PWN",
+        "path": "downunderctf2020/vecc",
+        "exists": true
+      },
+      {
+        "id": "zombie",
+        "name": "Zombie",
+        "raw_name": "PWN - 499 - Zombie",
+        "type": "PWN",
+        "raw_type": "PWN",
+        "path": "downunderctf2020/zombie",
+        "exists": true
+      },
+      {
+        "id": "formatting",
+        "name": "Formatting",
+        "raw_name": "REV - 100 - Formatting",
+        "type": "REV",
+        "raw_type": "REV",
+        "path": "downunderctf2020/formatting",
+        "exists": true
+      },
+      {
+        "id": "roti",
+        "name": "ROT-I",
+        "raw_name": "CRYPTO - 100 - ROT-I",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "downunderctf2020/roti",
+        "exists": true
+      },
+      {
+        "id": "babyrsa",
+        "name": "BabyRSA",
+        "raw_name": "CRYPTO - 200 - BabyRSA",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "downunderctf2020/babyrsa",
+        "exists": true
+      },
+      {
+        "id": "echos",
+        "name": "my first echo server",
+        "raw_name": "CRYPTO - 416 - my first echo server",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "downunderctf2020/echos",
+        "exists": true
+      },
+      {
+        "id": "extracoolblockchaining",
+        "name": "Extra Cool Block Chaining",
+        "raw_name": "CRYPTO - 422 - Extra Cool Block Chaining",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "downunderctf2020/extracoolblockchaining",
+        "exists": true
+      },
+      {
+        "id": "hexshiftcipher",
+        "name": "Hex Cipher Shift",
+        "raw_name": "CRYPTO - 445 - Hex Cipher Shift",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "downunderctf2020/hexshiftcipher",
+        "exists": true
+      },
+      {
+        "id": "ceebc",
+        "name": "CEEBC",
+        "raw_name": "CRYPTO - 452 - CEEBC",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "downunderctf2020/ceebc",
+        "exists": true
+      },
+      {
+        "id": "1337crypt",
+        "name": "1337crypt",
+        "raw_name": "CRYPTO - 500 - 1337crypt",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "downunderctf2020/1337crypt",
+        "exists": true
+      },
+      {
+        "id": "impeccable",
+        "name": "impECCable",
+        "raw_name": "CRYPTO - 500 - impECCable",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "downunderctf2020/impeccable",
+        "exists": true
+      },
+      {
+        "id": "calcgame",
+        "name": "LSB||MSB Calculation Game",
+        "raw_name": "CRYPTO - 500 - LSB||MSB Calculation Game",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "downunderctf2020/calcgame",
+        "exists": true
+      }
+    ]
+  },
+  "downunderctf2021": {
+    "id": "downunderctf2021",
+    "name": "DownUnderCTF 2021",
+    "path": "downunderctf2021",
+    "challenges": [
+      {
+        "id": "babygame",
+        "name": "Babygame",
+        "raw_name": "PWN - 100 - Babygame",
+        "type": "PWN",
+        "raw_type": "PWN",
+        "path": "downunderctf2021/babygame",
+        "exists": true
+      },
+      {
+        "id": "juniperus",
+        "name": "Juniperus",
+        "raw_name": "REV - 100 - Juniperus",
+        "type": "REV",
+        "raw_type": "REV",
+        "path": "downunderctf2021/juniperus",
+        "exists": true
+      },
+      {
+        "id": "flagloader",
+        "name": "Flag Loader",
+        "raw_name": "REV - 200 - Flag Loader",
+        "type": "REV",
+        "raw_type": "REV",
+        "path": "downunderctf2021/flagloader",
+        "exists": true
+      },
+      {
+        "id": "flagchecker",
+        "name": "Flag Checker",
+        "raw_name": "REV - 491 - Flag Checker",
+        "type": "REV",
+        "raw_type": "REV",
+        "path": "downunderctf2021/flagchecker",
+        "exists": true
+      },
+      {
+        "id": "breakme",
+        "name": "Break Me!",
+        "raw_name": "CRYPTO - 100 - Break Me!",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "downunderctf2021/breakme",
+        "exists": true
+      },
+      {
+        "id": "substitution",
+        "name": "Substitution Cipher I",
+        "raw_name": "CRYPTO - 100 - Substitution Cipher I",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "downunderctf2021/substitution",
+        "exists": true
+      },
+      {
+        "id": "treasure",
+        "name": "treaure",
+        "raw_name": "CRYPTO - 100 - treaure",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "downunderctf2021/treasure",
+        "exists": true
+      },
+      {
+        "id": "1337crypt",
+        "name": "1337crypt v2",
+        "raw_name": "CRYPTO - 500 - 1337crypt v2",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "downunderctf2021/1337crypt",
+        "exists": true
+      },
+      {
+        "id": "power",
+        "name": "power sign",
+        "raw_name": "CRYPTO - 500 - power sign",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "downunderctf2021/power",
+        "exists": true
+      }
+    ]
+  },
+  "downunderctf2022": {
+    "id": "downunderctf2022",
+    "name": "DownUnderCTF 2022",
+    "path": "downunderctf2022",
+    "challenges": [
+      {
+        "id": "babypywn",
+        "name": "Babypywn",
+        "raw_name": "PWN - Babypywn",
+        "type": "PWN",
+        "raw_type": "PWN",
+        "path": "downunderctf2022/babypywn",
+        "exists": true
+      },
+      {
+        "id": "babyarx",
+        "name": "Baby-Arx",
+        "raw_name": "CRYPTO - 50 - Baby-Arx",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "downunderctf2022/babyarx",
+        "exists": true
+      },
+      {
+        "id": "oracle",
+        "name": "Oracle For Block Cipher Enthusiasts",
+        "raw_name": "CRYPTO - Oracle For Block Cipher Enthusiasts",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "downunderctf2022/oracle",
+        "exists": true
+      },
+      {
+        "id": "rsaoracle1",
+        "name": "RSA Interval Oracle 1",
+        "raw_name": "CRYPTO - RSA Interval Oracle 1",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "downunderctf2022/rsaoracle1",
+        "exists": true
+      },
+      {
+        "id": "rsaoracle2",
+        "name": "RSA Interval Oracle 2",
+        "raw_name": "CRYPTO - RSA Interval Oracle 2",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "downunderctf2022/rsaoracle2",
+        "exists": true
+      },
+      {
+        "id": "rsaoracle3",
+        "name": "RSA Interval Oracle 3",
+        "raw_name": "CRYPTO - RSA Interval Oracle 3",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "downunderctf2022/rsaoracle3",
+        "exists": true
+      },
+      {
+        "id": "rsaoracle4",
+        "name": "RSA Interval Oracle 4",
+        "raw_name": "CRYPTO - RSA Interval Oracle 4",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "downunderctf2022/rsaoracle4",
+        "exists": true
+      },
+      {
+        "id": "timelocked",
+        "name": "Time Locked",
+        "raw_name": "CRYPTO - Time Locked",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "downunderctf2022/timelocked",
+        "exists": true
+      }
+    ]
+  },
+  "downunderctf2024": {
+    "id": "downunderctf24",
+    "name": "DownUnderCTF 2024",
+    "path": "downunderctf2024",
+    "challenges": [
+      {
+        "id": "ternarybrained",
+        "name": "Ternary Brained",
+        "raw_name": "REV - 335 - Ternary Brained",
+        "type": "REV",
+        "raw_type": "REV",
+        "path": "downunderctf2024/ternarybrained",
+        "exists": true
+      },
+      {
+        "id": "adorableencryptedanimal",
+        "name": "Adorable Encrypted Animal",
+        "raw_name": "REV - 449 - Adorable Encrypted Animal",
+        "type": "REV",
+        "raw_type": "REV",
+        "path": "downunderctf2024/adorableencryptedanimal",
+        "exists": true
+      },
+      {
+        "id": "shufflebox",
+        "name": "Shufflebox",
+        "raw_name": "CRYPTO - 100 - Shufflebox",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "downunderctf2024/shufflebox",
+        "exists": true
+      },
+      {
+        "id": "myarraygenerator",
+        "name": "My Array Generator",
+        "raw_name": "CRYPTO - 200 - My Array Generator",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "downunderctf2024/myarraygenerator",
+        "exists": true
+      },
+      {
+        "id": "babysfirstforensics",
+        "name": "Baby's First Forensics",
+        "raw_name": "FORENSICS - 100 - Baby's First Forensics",
+        "type": "FORENSICS",
+        "raw_type": "FORENSICS",
+        "path": "downunderctf2024/babysfirstforensics",
+        "exists": true
+      },
+      {
+        "id": "interceptedtransmission",
+        "name": "Intercepted Transmissions",
+        "raw_name": "MISC - 100 - Intercepted Transmissions",
+        "type": "MISC",
+        "raw_type": "MISC",
+        "path": "downunderctf2024/interceptedtransmission",
+        "exists": true
+      },
+      {
+        "id": "wackyreciepe",
+        "name": "Wacky Recipe",
+        "raw_name": "MISC - 141 - Wacky Recipe",
+        "type": "MISC",
+        "raw_type": "MISC",
+        "path": "downunderctf2024/wackyreciepe",
+        "exists": true
+      }
+    ]
+  },
+  "downunderctf2025": {
+    "id": "downunderctf2025",
+    "name": "DownUnderCTF 2025",
+    "path": "downunderctf2025",
+    "challenges": [
+      {
+        "id": "fakeobj",
+        "name": "fakeobj.py",
+        "raw_name": "PWN - 100 - fakeobj.py",
+        "type": "PWN",
+        "raw_type": "PWN",
+        "path": "downunderctf2025/fakeobj",
+        "exists": true
+      },
+      {
+        "id": "rw",
+        "name": "rw.py",
+        "raw_name": "PWN - 300 - rw.py",
+        "type": "PWN",
+        "raw_type": "PWN",
+        "path": "downunderctf2025/rw",
+        "exists": true
+      },
+      {
+        "id": "email",
+        "name": "corporate-cliche",
+        "raw_name": "PWN - 300 - corporate-cliche",
+        "type": "PWN",
+        "raw_type": "PWN",
+        "path": "downunderctf2025/email",
+        "exists": true
+      },
+      {
+        "id": "yetanotherlogin",
+        "name": "yet another login",
+        "raw_name": "CRYPTO - 100 - yet another login",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "downunderctf2025/yetanotherlogin",
+        "exists": true
+      },
+      {
+        "id": "friend",
+        "name": "Speak Friend, and Enter",
+        "raw_name": "CRYPTO - 300 - Speak Friend, and Enter",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "downunderctf2025/friend",
+        "exists": true
+      },
+      {
+        "id": "hungry",
+        "name": "hungry-hungry-caterpillar",
+        "raw_name": "CRYPTO - 300 - hungry-hungry-caterpillar",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "downunderctf2025/hungry",
+        "exists": true
+      },
+      {
+        "id": "spawn",
+        "name": "good game spawn point",
+        "raw_name": "CRYPTO - 400 - good game spawn point",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "downunderctf2025/spawn",
+        "exists": true
+      },
+      {
+        "id": "shrsa",
+        "name": "SH-RSA",
+        "raw_name": "CRYPTO - 500 - SH-RSA",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "downunderctf2025/shrsa",
+        "exists": true
+      }
+    ]
+  },
+  "ectf2014": {
+    "id": "ectf2014",
+    "name": "ECTF 2014",
+    "path": "ectf2014",
+    "challenges": [
+      {
+        "id": "sleepycoder",
+        "name": "Sleepy Coder",
+        "raw_name": "EXPLOIT - 150 - Sleepy Coder",
+        "type": "PWN",
+        "raw_type": "EXPLOIT",
+        "path": "ectf2014/sleepycoder",
+        "exists": true
+      },
+      {
+        "id": "knotty",
+        "name": "Knotty",
+        "raw_name": "EXPLOIT - 250 - Knotty",
+        "type": "PWN",
+        "raw_type": "EXPLOIT",
+        "path": "ectf2014/knotty",
+        "exists": true
+      },
+      {
+        "id": "seddit",
+        "name": "Seddit",
+        "raw_name": "EXPLOIT - 400 - Seddit",
+        "type": "PWN",
+        "raw_type": "EXPLOIT",
+        "path": "ectf2014/seddit",
+        "exists": true
+      },
+      {
+        "id": "friendsofcrime",
+        "name": "Friends Of Crime",
+        "raw_name": "REV - 200 - Friends Of Crime",
+        "type": "REV",
+        "raw_type": "REV",
+        "path": "ectf2014/friendsofcrime",
+        "exists": true
+      },
+      {
+        "id": "python",
+        "name": "Python",
+        "raw_name": "REV - 300 - Python",
+        "type": "REV",
+        "raw_type": "REV",
+        "path": "ectf2014/python",
+        "exists": true
+      },
+      {
+        "id": "lowkey",
+        "name": "Low Key",
+        "raw_name": "CRYPTO - 150 - Low Key",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "ectf2014/lowkey",
+        "exists": true
+      },
+      {
+        "id": "hackermessage",
+        "name": "H4cker Message",
+        "raw_name": "FORENSICS - 100 - H4cker Message",
+        "type": "FORENSICS",
+        "raw_type": "FORENSICS",
+        "path": "ectf2014/hackermessage",
+        "exists": true
+      },
+      {
+        "id": "ectfhacked",
+        "name": "ECTF Hacked?",
+        "raw_name": "FORENSICS - 500 - ECTF Hacked?",
+        "type": "FORENSICS",
+        "raw_type": "FORENSICS",
+        "path": "ectf2014/ectfhacked",
+        "exists": true
+      }
+    ]
+  },
+  "gitsctf2012": {
+    "id": "gitsctf2012",
+    "name": "Ghost in the Shellcode 2012",
+    "path": "gitsctf2012",
+    "challenges": [
+      {
+        "id": "pwn200",
+        "name": "PWN - 200",
+        "raw_name": "PWN - 200",
+        "type": "PWN",
+        "raw_type": "PWN",
+        "path": "gitsctf2012/pwn200",
+        "exists": true
+      },
+      {
+        "id": "pwn300",
+        "name": "PWN - 300",
+        "raw_name": "PWN - 300",
+        "type": "PWN",
+        "raw_type": "PWN",
+        "path": "gitsctf2012/pwn300",
+        "exists": true
+      },
+      {
+        "id": "rev400",
+        "name": "REV - 400",
+        "raw_name": "REV - 400",
+        "type": "REV",
+        "raw_type": "REV",
+        "path": "gitsctf2012/rev400",
+        "exists": true
+      },
+      {
+        "id": "crypto250",
+        "name": "CRYPTO - 250",
+        "raw_name": "CRYPTO - 250",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "gitsctf2012/crypto250",
+        "exists": true
+      },
+      {
+        "id": "trivia25",
+        "name": "TRIVIA - 25",
+        "raw_name": "TRIVIA - 25",
+        "type": "MISC",
+        "raw_type": "TRIVIA",
+        "path": "gitsctf2012/trivia25",
+        "exists": true
+      }
+    ]
+  },
+  "googlectf2020": {
+    "id": "googlectf2020",
+    "name": "Google Capture The Flag 2020",
+    "path": "googlectf2020",
+    "challenges": [
+      {
+        "id": "beginner",
+        "name": "beginner",
+        "raw_name": "REV - 50 - beginner",
+        "type": "REV",
+        "raw_type": "REV",
+        "path": "googlectf2020/beginner",
+        "exists": true
+      }
+    ]
+  },
+  "grehack2012": {
+    "id": "grehack2012",
+    "name": "GreHack-2012",
+    "path": "grehack2012",
+    "challenges": [
+      {
+        "id": "hackingfordummy",
+        "name": "Hacking For Dummy",
+        "raw_name": "CRYPTO - 200 - Hacking For Dummy",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "grehack2012/hackingfordummy",
+        "exists": true
+      },
+      {
+        "id": "amanfromhell",
+        "name": "A Man From Hell",
+        "raw_name": "CRYPTO - 500 - A Man From Hell",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "grehack2012/amanfromhell",
+        "exists": true
+      }
+    ]
+  },
+  "greycattheflag2022": {
+    "id": "greycattheflag2022",
+    "name": "Grey Cat The Flag 2022",
+    "path": "greycattheflag2022",
+    "challenges": [
+      {
+        "id": "baby",
+        "name": "baby",
+        "raw_name": "CRYPTO - baby",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "greycattheflag2022/baby",
+        "exists": true
+      },
+      {
+        "id": "block",
+        "name": "Block",
+        "raw_name": "CRYPTO - Block",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "greycattheflag2022/block",
+        "exists": true
+      },
+      {
+        "id": "catino",
+        "name": "Catino",
+        "raw_name": "CRYPTO - Catino",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "greycattheflag2022/catino",
+        "exists": true
+      },
+      {
+        "id": "dot",
+        "name": "Dot",
+        "raw_name": "CRYPTO - Dot",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "greycattheflag2022/dot",
+        "exists": true
+      },
+      {
+        "id": "calculator",
+        "name": "Calculator",
+        "raw_name": "MISC - Calculator",
+        "type": "MISC",
+        "raw_type": "MISC",
+        "path": "greycattheflag2022/calculator",
+        "exists": true
+      }
+    ]
+  },
+  "hackluctf2011": {
+    "id": "hackluctf2011",
+    "name": "Hack.lu CTF 2011",
+    "path": "hackluctf2011",
+    "challenges": [
+      {
+        "id": "pycrackme",
+        "name": "Python Crackme",
+        "raw_name": "REV - 100 - Python Crackme",
+        "type": "REV",
+        "raw_type": "REV",
+        "path": "hackluctf2011/pycrackme",
+        "exists": true
+      },
+      {
+        "id": "simplexor",
+        "name": "Simplexor",
+        "raw_name": "CRYPTO - 200 - Simplexor",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "hackluctf2011/simplexor",
+        "exists": true
+      },
+      {
+        "id": "challengetorrent",
+        "name": "Challenge Torrent",
+        "raw_name": "FORENSICS - 100 - Challenge Torrent",
+        "type": "FORENSICS",
+        "raw_type": "FORENSICS",
+        "path": "hackluctf2011/challengetorrent",
+        "exists": true
+      },
+      {
+        "id": "mario",
+        "name": "Scotty's last signal",
+        "raw_name": "MISC - 100 - Scotty's last signal",
+        "type": "MISC",
+        "raw_type": "MISC",
+        "path": "hackluctf2011/mario",
+        "exists": true
+      },
+      {
+        "id": "unknownplanet",
+        "name": "Unknown Planet",
+        "raw_name": "MISC - 100 - Unknown Planet",
+        "type": "MISC",
+        "raw_type": "MISC",
+        "path": "hackluctf2011/unknownplanet",
+        "exists": true
+      }
+    ]
+  },
+  "hitcon2017quals": {
+    "id": "hitcon2017quals",
+    "name": "HITCON 2017 Quals",
+    "path": "hitcon2017quals",
+    "challenges": [
+      {
+        "id": "start",
+        "name": "Start",
+        "raw_name": "PWN - 132 - Start",
+        "type": "PWN",
+        "raw_type": "PWN",
+        "path": "hitcon2017quals/start",
+        "exists": true
+      },
+      {
+        "id": "easytosay",
+        "name": "Easy To Say",
+        "raw_name": "PWN - 144 - Easy To Say",
+        "type": "PWN",
+        "raw_type": "PWN",
+        "path": "hitcon2017quals/easytosay",
+        "exists": true
+      },
+      {
+        "id": "artifact",
+        "name": "\u5b8c\u7f8e\u7121\u7455~Impeccable Artifact~",
+        "raw_name": "PWN - 192 - \u5b8c\u7f8e\u7121\u7455~Impeccable Artifact~",
+        "type": "PWN",
+        "raw_type": "PWN",
+        "path": "hitcon2017quals/artifact",
+        "exists": true
+      },
+      {
+        "id": "reeasy",
+        "name": "RE easy to say",
+        "raw_name": "PWN/MISC - 255 - RE easy to say",
+        "type": "PWN",
+        "raw_type": "PWN/MISC",
+        "path": "hitcon2017quals/reeasy",
+        "exists": true
+      },
+      {
+        "id": "babyfs",
+        "name": "Baby FS",
+        "raw_name": "PWN - 315 - Baby FS",
+        "type": "PWN",
+        "raw_type": "PWN",
+        "path": "hitcon2017quals/babyfs",
+        "exists": true
+      },
+      {
+        "id": "sakura",
+        "name": "Sakura",
+        "raw_name": "REV - 218 - Sakura",
+        "type": "REV",
+        "raw_type": "REV",
+        "path": "hitcon2017quals/sakura",
+        "exists": true
+      },
+      {
+        "id": "void",
+        "name": "\u5bb6\u5f92\u56db\u58c1~Everlasting Imaginative Void~",
+        "raw_name": "REV - 252 - \u5bb6\u5f92\u56db\u58c1~Everlasting Imaginative Void~",
+        "type": "REV",
+        "raw_type": "REV",
+        "path": "hitcon2017quals/void",
+        "exists": true
+      },
+      {
+        "id": "seccomp",
+        "name": "Seccomp",
+        "raw_name": "REV - 271 - Seccomp",
+        "type": "REV",
+        "raw_type": "REV",
+        "path": "hitcon2017quals/seccomp",
+        "exists": true
+      },
+      {
+        "id": "luaky",
+        "name": "Luaky",
+        "raw_name": "CRYPTO - 257 - Luaky",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "hitcon2017quals/luaky",
+        "exists": true
+      },
+      {
+        "id": "veryluaky",
+        "name": "Very Luaky",
+        "raw_name": "CRYPTO - 342 - Very Luaky",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "hitcon2017quals/veryluaky",
+        "exists": true
+      },
+      {
+        "id": "sssp",
+        "name": "SSSP",
+        "raw_name": "CRYPTO - 400 - SSSP",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "hitcon2017quals/sssp",
+        "exists": true
+      }
+    ]
+  },
+  "hitconctf2018": {
+    "id": "hitconctf2018",
+    "name": "HITCON 2018",
+    "path": "hitconctf2018",
+    "challenges": [
+      {
+        "id": "childrencache",
+        "name": "Children Cache",
+        "raw_name": "PWN - 246 - Children Cache",
+        "type": "PWN",
+        "raw_type": "PWN",
+        "path": "hitconctf2018/childrencache",
+        "exists": true
+      },
+      {
+        "id": "babytcache",
+        "name": "Baby Tcache",
+        "raw_name": "PWN - 305 - Baby Tcache",
+        "type": "PWN",
+        "raw_type": "PWN",
+        "path": "hitconctf2018/babytcache",
+        "exists": true
+      },
+      {
+        "id": "groot",
+        "name": "Groot",
+        "raw_name": "PWN - 305 - Groot",
+        "type": "PWN",
+        "raw_type": "PWN",
+        "path": "hitconctf2018/groot",
+        "exists": true
+      },
+      {
+        "id": "hitcon",
+        "name": "HITCON",
+        "raw_name": "PWN - 327 - HITCON",
+        "type": "PWN",
+        "raw_type": "PWN",
+        "path": "hitconctf2018/hitcon",
+        "exists": true
+      },
+      {
+        "id": "tftp",
+        "name": "tftp",
+        "raw_name": "PWN - 400 - tftp",
+        "type": "PWN",
+        "raw_type": "PWN",
+        "path": "hitconctf2018/tftp",
+        "exists": true
+      }
+    ]
+  },
+  "hkcertctf2020": {
+    "id": "hkcertctf2020",
+    "name": "HK Cyber Security New Generation CTF Challenge 2020",
+    "path": "hkcertctf2020",
+    "challenges": [
+      {
+        "id": "rop",
+        "name": "BINARY EXPLOITATION - 500 - ROP",
+        "raw_name": "BINARY EXPLOITATION - 500 - ROP",
+        "type": "PWN",
+        "raw_type": "BINARY EXPLOITATION",
+        "path": "hkcertctf2020/rop",
+        "exists": true
+      },
+      {
+        "id": "angr",
+        "name": "Angr Men",
+        "raw_name": "REV - 500 - Angr Men",
+        "type": "REV",
+        "raw_type": "REV",
+        "path": "hkcertctf2020/angr",
+        "exists": true
+      },
+      {
+        "id": "calmdown",
+        "name": "Calm Down",
+        "raw_name": "CRYPTO - 500 - Calm Down",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "hkcertctf2020/calmdown",
+        "exists": true
+      },
+      {
+        "id": "signin",
+        "name": "Sign in please",
+        "raw_name": "CRYPTO - 500 - Sign in please",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "hkcertctf2020/signin",
+        "exists": true
+      }
+    ]
+  },
+  "hkcertctf2021": {
+    "id": "hkcertctf2021",
+    "name": "HK Cyber Security New Generation CTF Challenge 2021",
+    "path": "hkcertctf2021",
+    "challenges": [
+      {
+        "id": "easyheap",
+        "name": "easyheap",
+        "raw_name": "PWN - 150 - easyheap",
+        "type": "PWN",
+        "raw_type": "PWN",
+        "path": "hkcertctf2021/easyheap",
+        "exists": true
+      },
+      {
+        "id": "simplesignin",
+        "name": "Simple Sign On",
+        "raw_name": "CRYPTO - Simple Sign On",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "hkcertctf2021/simplesignin",
+        "exists": true
+      },
+      {
+        "id": "freedom",
+        "name": "Freedom / Cipher Mode Picker",
+        "raw_name": "CRYPTO - 100 - Freedom / Cipher Mode Picker",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "hkcertctf2021/freedom",
+        "exists": true
+      },
+      {
+        "id": "longstoryshort",
+        "name": "Key Backup Service 1",
+        "raw_name": "CRYPTO - 150 - Key Backup Service 1",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "hkcertctf2021/longstoryshort",
+        "exists": true
+      },
+      {
+        "id": "magicalpotion",
+        "name": "Potion of Ciphermath",
+        "raw_name": "CRYPTO - 450 - Potion of Ciphermath",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "hkcertctf2021/magicalpotion",
+        "exists": true
+      }
+    ]
+  },
+  "hkcertctf2022": {
+    "id": "hkcertctf2022",
+    "name": "HK Cyber Security New Generation CTF Challenge 2022",
+    "path": "hkcertctf2022",
+    "challenges": [
+      {
+        "id": "base64",
+        "name": "Base64 Encryption",
+        "raw_name": "CRYPTO - 200 - Base64 Encryption",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "hkcertctf2022/base64",
+        "exists": true
+      },
+      {
+        "id": "rogue",
+        "name": "Rogue Secret Assistant",
+        "raw_name": "CRYPTO - 250 - Rogue Secret Assistant",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "hkcertctf2022/rogue",
+        "exists": true
+      },
+      {
+        "id": "kingrps",
+        "name": "King of Rock, Paper, Scissors",
+        "raw_name": "CRYPTO - 500 - King of Rock, Paper, Scissors",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "hkcertctf2022/kingrps",
+        "exists": true
+      },
+      {
+        "id": "sdcard",
+        "name": "SD Card",
+        "raw_name": "FORENSICS - 50 - SD Card",
+        "type": "FORENSICS",
+        "raw_type": "FORENSICS",
+        "path": "hkcertctf2022/sdcard",
+        "exists": true
+      },
+      {
+        "id": "zonn",
+        "name": "Zoonn Recording",
+        "raw_name": "MISC - 55 - Zoonn Recording",
+        "type": "MISC",
+        "raw_type": "MISC",
+        "path": "hkcertctf2022/zonn",
+        "exists": true
+      },
+      {
+        "id": "locate",
+        "name": "Locate Me",
+        "raw_name": "MISC - 150 - Locate Me",
+        "type": "MISC",
+        "raw_type": "MISC",
+        "path": "hkcertctf2022/locate",
+        "exists": true
+      },
+      {
+        "id": "keyboard",
+        "name": "Tuning Keyboard v3",
+        "raw_name": "MISC - 314 - Tuning Keyboard v3",
+        "type": "MISC",
+        "raw_type": "MISC",
+        "path": "hkcertctf2022/keyboard",
+        "exists": true
+      }
+    ]
+  },
+  "hsctf2019": {
+    "id": "hsctf2019",
+    "name": "HSCTF 2019",
+    "path": "hsctf2019",
+    "challenges": [
+      {
+        "id": "byte",
+        "name": "A Byte",
+        "raw_name": "PWN - 179 - A Byte",
+        "type": "PWN",
+        "raw_type": "PWN",
+        "path": "hsctf2019/byte",
+        "exists": true
+      },
+      {
+        "id": "combo-chain-lite",
+        "name": "Combo Chain Lite",
+        "raw_name": "PWN - 245 - Combo Chain Lite",
+        "type": "PWN",
+        "raw_type": "PWN",
+        "path": "hsctf2019/combo-chain-lite",
+        "exists": true
+      },
+      {
+        "id": "combo-chain",
+        "name": "Combo Chain",
+        "raw_name": "PWN - 367 - Combo Chain",
+        "type": "PWN",
+        "raw_type": "PWN",
+        "path": "hsctf2019/combo-chain",
+        "exists": true
+      },
+      {
+        "id": "caesars-revenge",
+        "name": "Caesar's Revenge",
+        "raw_name": "PWN - 424 - Caesar's Revenge",
+        "type": "PWN",
+        "raw_type": "PWN",
+        "path": "hsctf2019/caesars-revenge",
+        "exists": true
+      },
+      {
+        "id": "caesars-revenge-wrapper",
+        "name": "Caesar's Revenge",
+        "raw_name": "PWN - 424 - Caesar's Revenge",
+        "type": "PWN",
+        "raw_type": "PWN",
+        "path": "hsctf2019/caesars-revenge-wrapper",
+        "exists": true
+      },
+      {
+        "id": "aria-writer",
+        "name": "Aria Writer",
+        "raw_name": "PWN - 542 - Aria Writer",
+        "type": "PWN",
+        "raw_type": "PWN",
+        "path": "hsctf2019/aria-writer",
+        "exists": true
+      },
+      {
+        "id": "license",
+        "name": "License",
+        "raw_name": "REV - 252 - License",
+        "type": "REV",
+        "raw_type": "REV",
+        "path": "hsctf2019/license",
+        "exists": true
+      },
+      {
+        "id": "daheck",
+        "name": "DaHeck",
+        "raw_name": "REV - 295 - DaHeck",
+        "type": "REV",
+        "raw_type": "REV",
+        "path": "hsctf2019/daheck",
+        "exists": true
+      },
+      {
+        "id": "virtualjava",
+        "name": "VirtualJava",
+        "raw_name": "REV - 357 - VirtualJava",
+        "type": "REV",
+        "raw_type": "REV",
+        "path": "hsctf2019/virtualjava",
+        "exists": true
+      },
+      {
+        "id": "forgotpassword",
+        "name": "Forgot Your Password?",
+        "raw_name": "REV - 465 - Forgot Your Password?",
+        "type": "REV",
+        "raw_type": "REV",
+        "path": "hsctf2019/forgotpassword",
+        "exists": true
+      },
+      {
+        "id": "the-quest",
+        "name": "The Quest",
+        "raw_name": "WEB - 102 - The Quest",
+        "type": "WEB",
+        "raw_type": "WEB",
+        "path": "hsctf2019/the-quest",
+        "exists": true
+      },
+      {
+        "id": "keith-logger",
+        "name": "Keith Logger",
+        "raw_name": "WEB - 216 - Keith Logger",
+        "type": "WEB",
+        "raw_type": "WEB",
+        "path": "hsctf2019/keith-logger",
+        "exists": true
+      },
+      {
+        "id": "a-lost-cause",
+        "name": "A Lost Cause",
+        "raw_name": "CRYPTO - 196 - A Lost Cause",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "hsctf2019/a-lost-cause",
+        "exists": true
+      },
+      {
+        "id": "welcome-to-crypto-land",
+        "name": "Welcome To Crypto Land",
+        "raw_name": "CRYPTO - 340 - Welcome To Crypto Land",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "hsctf2019/welcome-to-crypto-land",
+        "exists": true
+      },
+      {
+        "id": "slap",
+        "name": "Slap",
+        "raw_name": "FORENSICS - 108 - Slap",
+        "type": "FORENSICS",
+        "raw_type": "FORENSICS",
+        "path": "hsctf2019/slap",
+        "exists": true
+      },
+      {
+        "id": "fish",
+        "name": "Fish",
+        "raw_name": "FORENSICS - 235 - Fish",
+        "type": "FORENSICS",
+        "raw_type": "FORENSICS",
+        "path": "hsctf2019/fish",
+        "exists": true
+      },
+      {
+        "id": "verbose",
+        "name": "Verbose",
+        "raw_name": "MISC - 118 - Verbose",
+        "type": "MISC",
+        "raw_type": "MISC",
+        "path": "hsctf2019/verbose",
+        "exists": true
+      },
+      {
+        "id": "the-real-reversal",
+        "name": "The Real Reversal",
+        "raw_name": "MISC - 276 - The Real Reversal",
+        "type": "MISC",
+        "raw_type": "MISC",
+        "path": "hsctf2019/the-real-reversal",
+        "exists": true
+      },
+      {
+        "id": "hiddenflag",
+        "name": "Hidden Flag",
+        "raw_name": "MISC - 290 - Hidden Flag",
+        "type": "MISC",
+        "raw_type": "MISC",
+        "path": "hsctf2019/hiddenflag",
+        "exists": true
+      },
+      {
+        "id": "broken-repl",
+        "name": "Broken REPL",
+        "raw_name": "MISC - 411 - Broken REPL",
+        "type": "MISC",
+        "raw_type": "MISC",
+        "path": "hsctf2019/broken-repl",
+        "exists": true
+      }
+    ]
+  },
+  "hsctf2020": {
+    "id": "hsctf2020",
+    "name": "HSCTF 2020",
+    "path": "hsctf2020",
+    "challenges": [
+      {
+        "id": "apcs",
+        "name": "AP LAB Computer Science Principles",
+        "raw_name": "REV - 100 - AP LAB Computer Science Principles",
+        "type": "REV",
+        "raw_type": "REV",
+        "path": "hsctf2020/apcs",
+        "exists": true
+      },
+      {
+        "id": "apenglish",
+        "name": "AP LAB English Language",
+        "raw_name": "REV - 100 - AP LAB English Language",
+        "type": "REV",
+        "raw_type": "REV",
+        "path": "hsctf2020/apenglish",
+        "exists": true
+      },
+      {
+        "id": "xored",
+        "name": "XORed",
+        "raw_name": "CRYPTO - 100 - XORed",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "hsctf2020/xored",
+        "exists": true
+      },
+      {
+        "id": "unexpected",
+        "name": "Unexpected",
+        "raw_name": "CRYPTO - 100 - Unexpected",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "hsctf2020/unexpected",
+        "exists": true
+      },
+      {
+        "id": "comments",
+        "name": "Comments",
+        "raw_name": "FORENSICS - 100 - Comments",
+        "type": "FORENSICS",
+        "raw_type": "FORENSICS",
+        "path": "hsctf2020/comments",
+        "exists": true
+      },
+      {
+        "id": "mountains",
+        "name": "Meta Mountains",
+        "raw_name": "FORENSICS - Meta Mountains",
+        "type": "FORENSICS",
+        "raw_type": "FORENSICS",
+        "path": "hsctf2020/mountains",
+        "exists": true
+      },
+      {
+        "id": "primes",
+        "name": "Primes",
+        "raw_name": "MISC - 100 - Primes",
+        "type": "MISC",
+        "raw_type": "MISC",
+        "path": "hsctf2020/primes",
+        "exists": true
+      },
+      {
+        "id": "binaryword",
+        "name": "Binary Word Search",
+        "raw_name": "MISC - 223 - Binary Word Search",
+        "type": "MISC",
+        "raw_type": "MISC",
+        "path": "hsctf2020/binaryword",
+        "exists": true
+      },
+      {
+        "id": "pie",
+        "name": "Apple Pie",
+        "raw_name": "MISC - 319 - Apple Pie",
+        "type": "MISC",
+        "raw_type": "MISC",
+        "path": "hsctf2020/pie",
+        "exists": true
+      }
+    ]
+  },
+  "hsctf2021": {
+    "id": "hsctf2021",
+    "name": "HSCTF 2021",
+    "path": "hsctf2021",
+    "challenges": [
+      {
+        "id": "warmup",
+        "name": "warmup-rev",
+        "raw_name": "REV - 371 - warmup-rev",
+        "type": "REV",
+        "raw_type": "REV",
+        "path": "hsctf2021/warmup",
+        "exists": true
+      },
+      {
+        "id": "multidimensional",
+        "name": "Multidimensional",
+        "raw_name": "REV - 442 - Multidimensional",
+        "type": "REV",
+        "raw_type": "REV",
+        "path": "hsctf2021/multidimensional",
+        "exists": true
+      },
+      {
+        "id": "aptenodytes",
+        "name": "aptenodytes-forsteri",
+        "raw_name": "CRYPTO - 183 - aptenodytes-forsteri",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "hsctf2021/aptenodytes",
+        "exists": true
+      },
+      {
+        "id": "queen",
+        "name": "queen-of-the-hill",
+        "raw_name": "CRYPTO - 221 - queen-of-the-hill",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "hsctf2021/queen",
+        "exists": true
+      },
+      {
+        "id": "opisthocomus",
+        "name": "opisthocomus-hoazin",
+        "raw_name": "CRYPTO - 300 - opisthocomus-hoazin",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "hsctf2021/opisthocomus",
+        "exists": true
+      },
+      {
+        "id": "canis",
+        "name": "canis-lupus-familiaris-bernardus",
+        "raw_name": "CRYPTO - 456 - canis-lupus-familiaris-bernardus",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "hsctf2021/canis",
+        "exists": true
+      }
+    ]
+  },
+  "imaginaryctf2021": {
+    "id": "imaginaryctf2021",
+    "name": "ImaginaryCTF 2021",
+    "path": "imaginaryctf2021",
+    "challenges": [
+      {
+        "id": "linonophobia",
+        "name": "linonophobia",
+        "raw_name": "PWN - 200 - linonophobia",
+        "type": "PWN",
+        "raw_type": "PWN",
+        "path": "imaginaryctf2021/linonophobia",
+        "exists": true
+      },
+      {
+        "id": "inkaphobia",
+        "name": "Inkaphobia",
+        "raw_name": "PWN - 300 - Inkaphobia",
+        "type": "PWN",
+        "raw_type": "PWN",
+        "path": "imaginaryctf2021/inkaphobia",
+        "exists": true
+      },
+      {
+        "id": "gottagofast",
+        "name": "Gotta Go Fast",
+        "raw_name": "PWN - 400 - Gotta Go Fast",
+        "type": "PWN",
+        "raw_type": "PWN",
+        "path": "imaginaryctf2021/gottagofast",
+        "exists": true
+      },
+      {
+        "id": "notpwn",
+        "name": "It's Not Pwn, I Swear!",
+        "raw_name": "REV - 250 - It's Not Pwn, I Swear!",
+        "type": "REV",
+        "raw_type": "REV",
+        "path": "imaginaryctf2021/notpwn",
+        "exists": true
+      },
+      {
+        "id": "nothoughts",
+        "name": "Fewer Thoughts, Head Emptier",
+        "raw_name": "REV - 250 - Fewer Thoughts, Head Emptier",
+        "type": "REV",
+        "raw_type": "REV",
+        "path": "imaginaryctf2021/nothoughts",
+        "exists": true
+      },
+      {
+        "id": "foliage",
+        "name": "Foliage",
+        "raw_name": "REV - 400 - Foliage",
+        "type": "REV",
+        "raw_type": "REV",
+        "path": "imaginaryctf2021/foliage",
+        "exists": true
+      }
+    ]
+  },
+  "imaginaryctf2022": {
+    "id": "imaginaryctf2022",
+    "name": "ImaginaryCTF 2022",
+    "path": "imaginaryctf2022",
+    "challenges": [
+      {
+        "id": "fmtfun",
+        "name": "Format String Fun",
+        "raw_name": "PWN - 200 - Format String Fun",
+        "type": "PWN",
+        "raw_type": "PWN",
+        "path": "imaginaryctf2022/fmtfun",
+        "exists": true
+      },
+      {
+        "id": "desrever",
+        "name": "Desrever",
+        "raw_name": "REV - 100 - Desrever",
+        "type": "REV",
+        "raw_type": "REV",
+        "path": "imaginaryctf2022/desrever",
+        "exists": true
+      },
+      {
+        "id": "stream",
+        "name": "Stream",
+        "raw_name": "CRYPTO - 50 - Stream",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "imaginaryctf2022/stream",
+        "exists": true
+      },
+      {
+        "id": "emoji",
+        "name": "Emoji",
+        "raw_name": "CRYPTO - 50 - Emoji",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "imaginaryctf2022/emoji",
+        "exists": true
+      },
+      {
+        "id": "smoll",
+        "name": "Smoll",
+        "raw_name": "CRYPTO - 100 - Smoll",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "imaginaryctf2022/smoll",
+        "exists": true
+      },
+      {
+        "id": "secureencodinghex",
+        "name": "Secure Encoding Hex",
+        "raw_name": "CRYPTO - 150 - Secure Encoding Hex",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "imaginaryctf2022/secureencodinghex",
+        "exists": true
+      },
+      {
+        "id": "otp",
+        "name": "OTP",
+        "raw_name": "CRYPTO - 150 - OTP",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "imaginaryctf2022/otp",
+        "exists": true
+      },
+      {
+        "id": "hash",
+        "name": "Hash",
+        "raw_name": "CRYPTO - 150 - Hash",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "imaginaryctf2022/hash",
+        "exists": true
+      },
+      {
+        "id": "cbc",
+        "name": "CBC",
+        "raw_name": "CRYPTO - 200 - CBC",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "imaginaryctf2022/cbc",
+        "exists": true
+      },
+      {
+        "id": "livingwithoutexpectations",
+        "name": "Living Without Expectations",
+        "raw_name": "CRYPTO - 492 - Living Without Expectations",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "imaginaryctf2022/livingwithoutexpectations",
+        "exists": true
+      },
+      {
+        "id": "secureencoding",
+        "name": "Secure Encoding Base64",
+        "raw_name": "CRYPTO - 492 - Secure Encoding Base64",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "imaginaryctf2022/secureencoding",
+        "exists": true
+      },
+      {
+        "id": "poker",
+        "name": "Poker",
+        "raw_name": "CRYPTO - 495 - Poker",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "imaginaryctf2022/poker",
+        "exists": true
+      }
+    ]
+  },
+  "imaginaryctf2023": {
+    "id": "imaginaryctf2023",
+    "name": "ImaginaryCTF 2023",
+    "path": "imaginaryctf2023",
+    "challenges": [
+      {
+        "id": "chaos",
+        "name": "Chaos",
+        "raw_name": "REV - 100 - Chaos",
+        "type": "REV",
+        "raw_type": "REV",
+        "path": "imaginaryctf2023/chaos",
+        "exists": true
+      },
+      {
+        "id": "snailchecker",
+        "name": "Snailchecker",
+        "raw_name": "REV - 100 - Snailchecker",
+        "type": "REV",
+        "raw_type": "REV",
+        "path": "imaginaryctf2023/snailchecker",
+        "exists": true
+      },
+      {
+        "id": "scrambled",
+        "name": "Scrambled",
+        "raw_name": "REV - 359 - Scrambled",
+        "type": "REV",
+        "raw_type": "REV",
+        "path": "imaginaryctf2023/scrambled",
+        "exists": true
+      },
+      {
+        "id": "sheepish",
+        "name": "Sheepish",
+        "raw_name": "REV - 433 - Sheepish",
+        "type": "REV",
+        "raw_type": "REV",
+        "path": "imaginaryctf2023/sheepish",
+        "exists": true
+      },
+      {
+        "id": "rsa",
+        "name": "RSA",
+        "raw_name": "CRYPTO - 100 - RSA",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "imaginaryctf2023/rsa",
+        "exists": true
+      },
+      {
+        "id": "signer",
+        "name": "Signer",
+        "raw_name": "CRYPTO - 100 - Signer",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "imaginaryctf2023/signer",
+        "exists": true
+      },
+      {
+        "id": "emoticons",
+        "name": "Emoticons",
+        "raw_name": "CRYPTO - 100 - Emoticons",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "imaginaryctf2023/emoticons",
+        "exists": true
+      },
+      {
+        "id": "crypto",
+        "name": "FORENSICS - 458 - Crypto",
+        "raw_name": "FORENSICS - 458 - Crypto",
+        "type": "FORENSICS",
+        "raw_type": "FORENSICS",
+        "path": "imaginaryctf2023/crypto",
+        "exists": true
+      },
+      {
+        "id": "signpost",
+        "name": "Signpost",
+        "raw_name": "MISC - 100 - Signpost",
+        "type": "MISC",
+        "raw_type": "MISC",
+        "path": "imaginaryctf2023/signpost",
+        "exists": true
+      }
+    ]
+  },
+  "imaginaryctf2024": {
+    "id": "imaginaryctf2024",
+    "name": "ImaginaryCTF 2024",
+    "path": "imaginaryctf2024",
+    "challenges": [
+      {
+        "id": "bf",
+        "name": "bf",
+        "raw_name": "REV - 400 - bf",
+        "type": "REV",
+        "raw_type": "REV",
+        "path": "imaginaryctf2024/bf",
+        "exists": true
+      },
+      {
+        "id": "vokram",
+        "name": "Vokram",
+        "raw_name": "REV - 500 - Vokram",
+        "type": "REV",
+        "raw_type": "REV",
+        "path": "imaginaryctf2024/vokram",
+        "exists": true
+      },
+      {
+        "id": "base64",
+        "name": "base64",
+        "raw_name": "CRYPTO - 100 - base64",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "imaginaryctf2024/base64",
+        "exists": true
+      },
+      {
+        "id": "integrity",
+        "name": "Integrity",
+        "raw_name": "CRYPTO - 200 - Integrity",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "imaginaryctf2024/integrity",
+        "exists": true
+      }
+    ]
+  },
+  "irisctf2025": {
+    "id": "irisctf2025",
+    "name": "IrisCTF 2025",
+    "path": "irisctf2025",
+    "challenges": [
+      {
+        "id": "sqlate",
+        "name": "sqlate",
+        "raw_name": "PWN - 50 - sqlate",
+        "type": "PWN",
+        "raw_type": "PWN",
+        "path": "irisctf2025/sqlate",
+        "exists": true
+      },
+      {
+        "id": "ayes",
+        "name": "AYES",
+        "raw_name": "CRYPTO - 448 - AYES",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "irisctf2025/ayes",
+        "exists": true
+      },
+      {
+        "id": "winter",
+        "name": "Checking Out of Winter",
+        "raw_name": "OSINT - 50 - Checking Out of Winter",
+        "type": "OSINT",
+        "raw_type": "OSINT",
+        "path": "irisctf2025/winter",
+        "exists": true
+      },
+      {
+        "id": "dot",
+        "name": "dotdotdot",
+        "raw_name": "Radio Frequency - 50 - dotdotdot",
+        "type": "HARDWARE",
+        "raw_type": "Radio Frequency",
+        "path": "irisctf2025/dot",
+        "exists": true
+      }
+    ]
+  },
+  "isitdtuctf2024": {
+    "id": "isitdtuctf2024",
+    "name": "ISITDTU CTF 2024",
+    "path": "isitdtuctf2024",
+    "challenges": [
+      {
+        "id": "sign",
+        "name": "Sign",
+        "raw_name": "CRYPTO - Sign",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "isitdtuctf2024/sign",
+        "exists": true
+      },
+      {
+        "id": "mixer1",
+        "name": "Share Mixer 1",
+        "raw_name": "CRYPTO - Share Mixer 1",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "isitdtuctf2024/mixer1",
+        "exists": true
+      },
+      {
+        "id": "mixer2",
+        "name": "Share Mixer 2",
+        "raw_name": "CRYPTO - 100 - Share Mixer 2",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "isitdtuctf2024/mixer2",
+        "exists": true
+      },
+      {
+        "id": "random",
+        "name": "thats so random",
+        "raw_name": "CRYPTO - 463 - thats so random",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "isitdtuctf2024/random",
+        "exists": true
+      }
+    ]
+  },
+  "justctf2019": {
+    "id": "justctf2019",
+    "name": "justCTF2019",
+    "path": "justctf2019",
+    "challenges": [
+      {
+        "id": "phonebook",
+        "name": "Phonebook",
+        "raw_name": "PWN - 283 - Phonebook",
+        "type": "PWN",
+        "raw_type": "PWN",
+        "path": "justctf2019/phonebook",
+        "exists": true
+      },
+      {
+        "id": "shellcode",
+        "name": "Shellcode Executor PRO",
+        "raw_name": "PWN - 283 - Shellcode Executor PRO",
+        "type": "PWN",
+        "raw_type": "PWN",
+        "path": "justctf2019/shellcode",
+        "exists": true
+      },
+      {
+        "id": "atm",
+        "name": "ATM",
+        "raw_name": "PWN - 394 - ATM",
+        "type": "PWN",
+        "raw_type": "PWN",
+        "path": "justctf2019/atm",
+        "exists": true
+      },
+      {
+        "id": "safenotes",
+        "name": "Safe Notes",
+        "raw_name": "PWN - 500 - Safe Notes",
+        "type": "PWN",
+        "raw_type": "PWN",
+        "path": "justctf2019/safenotes",
+        "exists": true
+      },
+      {
+        "id": "fsmir",
+        "name": "FSMIR",
+        "raw_name": "REV - 152 - FSMIR",
+        "type": "REV",
+        "raw_type": "REV",
+        "path": "justctf2019/fsmir",
+        "exists": true
+      },
+      {
+        "id": "fsmir2",
+        "name": "FSMIR2",
+        "raw_name": "REV - 197 - FSMIR2",
+        "type": "REV",
+        "raw_type": "REV",
+        "path": "justctf2019/fsmir2",
+        "exists": true
+      },
+      {
+        "id": "changevm",
+        "name": "Change_VM",
+        "raw_name": "REV - 347 - Change_VM",
+        "type": "REV",
+        "raw_type": "REV",
+        "path": "justctf2019/changevm",
+        "exists": true
+      },
+      {
+        "id": "pandq",
+        "name": "p&q Service",
+        "raw_name": "CRYPTO - 453 -  p&q Service",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "justctf2019/pandq",
+        "exists": true
+      },
+      {
+        "id": "exponent",
+        "name": "RSA Exponent",
+        "raw_name": "MISC - 326 - RSA Exponent",
+        "type": "MISC",
+        "raw_type": "MISC",
+        "path": "justctf2019/exponent",
+        "exists": true
+      }
+    ]
+  },
+  "l3akctf2025": {
+    "id": "l3akctf2025",
+    "name": "L3akCTF 2025",
+    "path": "l3akctf2025",
+    "challenges": [
+      {
+        "id": "shirohero",
+        "name": "Shiro Hero",
+        "raw_name": "CRYTPO - 50 - Shiro Hero",
+        "type": "CRYPTO",
+        "raw_type": "CRYTPO",
+        "path": "l3akctf2025/shirohero",
+        "exists": true
+      },
+      {
+        "id": "basiclll",
+        "name": "Basic LLL",
+        "raw_name": "CRYTPO - 50 - Basic LLL",
+        "type": "CRYPTO",
+        "raw_type": "CRYTPO",
+        "path": "l3akctf2025/basiclll",
+        "exists": true
+      },
+      {
+        "id": "dumber",
+        "name": "Dumber",
+        "raw_name": "CRYTPO - 50 - Dumber",
+        "type": "CRYPTO",
+        "raw_type": "CRYTPO",
+        "path": "l3akctf2025/dumber",
+        "exists": true
+      },
+      {
+        "id": "magicoracle",
+        "name": "Magical Oracle",
+        "raw_name": "CRYTPO - 436 - Magical Oracle",
+        "type": "CRYPTO",
+        "raw_type": "CRYTPO",
+        "path": "l3akctf2025/magicoracle",
+        "exists": true
+      },
+      {
+        "id": "mildly",
+        "name": "Mildly Disastrous 5ecurity",
+        "raw_name": "Hashing - 50 - Mildly Disastrous 5ecurity",
+        "type": "CRYPTO",
+        "raw_type": "Hashing",
+        "path": "l3akctf2025/mildly",
+        "exists": true
+      },
+      {
+        "id": "strangetransmission",
+        "name": "Strange Transmission",
+        "raw_name": "Hardware-RF - 50 - Strange Transmission",
+        "type": "HARDWARE",
+        "raw_type": "Hardware-RF",
+        "path": "l3akctf2025/strangetransmission",
+        "exists": true
+      }
+    ]
+  },
+  "m0leconteaserctf2025": {
+    "id": "m0leconctfteaser2025",
+    "name": "m0leCon CTF Teaser 2025",
+    "path": "m0leconteaserctf2025",
+    "challenges": [
+      {
+        "id": "bootme2",
+        "name": "Boot Me 2",
+        "raw_name": "PWN - 424 - Boot Me 2",
+        "type": "PWN",
+        "raw_type": "PWN",
+        "path": "m0leconteaserctf2025/bootme2",
+        "exists": true
+      },
+      {
+        "id": "bootme",
+        "name": "Boot Me",
+        "raw_name": "REV - 232 - Boot Me",
+        "type": "REV",
+        "raw_type": "REV",
+        "path": "m0leconteaserctf2025/bootme",
+        "exists": true
+      },
+      {
+        "id": "whispers",
+        "name": "Whispers of Yesterday",
+        "raw_name": "REV - 367 - Whispers of Yesterday",
+        "type": "REV",
+        "raw_type": "REV",
+        "path": "m0leconteaserctf2025/whispers",
+        "exists": true
+      },
+      {
+        "id": "ptmcasino",
+        "name": "ptmCasino",
+        "raw_name": "WEB - 322 - ptmCasino",
+        "type": "WEB",
+        "raw_type": "WEB",
+        "path": "m0leconteaserctf2025/ptmcasino",
+        "exists": true
+      },
+      {
+        "id": "telegram",
+        "name": "Free Telegram App",
+        "raw_name": "WEB - 343 - Free Telegram App",
+        "type": "WEB",
+        "raw_type": "WEB",
+        "path": "m0leconteaserctf2025/telegram",
+        "exists": true
+      },
+      {
+        "id": "wolfram",
+        "name": "WalframSigma",
+        "raw_name": "WEB - 367 - WalframSigma",
+        "type": "WEB",
+        "raw_type": "WEB",
+        "path": "m0leconteaserctf2025/wolfram",
+        "exists": true
+      },
+      {
+        "id": "quadratic",
+        "name": "Quadratic Leak",
+        "raw_name": "CRYPTO - 50 - Quadratic Leak",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "m0leconteaserctf2025/quadratic",
+        "exists": true
+      },
+      {
+        "id": "ot",
+        "name": "Yet Another OT",
+        "raw_name": "CRYPTO - 127 - Yet Another OT",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "m0leconteaserctf2025/ot",
+        "exists": true
+      },
+      {
+        "id": "ecsign",
+        "name": "ECSign",
+        "raw_name": "CRYPTO - 154 - ECSign",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "m0leconteaserctf2025/ecsign",
+        "exists": true
+      },
+      {
+        "id": "talor",
+        "name": "Talor",
+        "raw_name": "CRYPTO - 244 - Talor",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "m0leconteaserctf2025/talor",
+        "exists": true
+      }
+    ]
+  },
+  "neverlan2019": {
+    "id": "neverlan2019",
+    "name": "NeverLAN CTF 2019",
+    "path": "neverlan2019",
+    "challenges": [
+      {
+        "id": "binary1",
+        "name": "Binary 1",
+        "raw_name": "BINARY - 100 - Binary 1",
+        "type": "PWN",
+        "raw_type": "BINARY",
+        "path": "neverlan2019/binary1",
+        "exists": true
+      },
+      {
+        "id": "alphabet",
+        "name": "Alphabet Soup",
+        "raw_name": "CRYPTO - Alphabet Soup",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "neverlan2019/alphabet",
+        "exists": true
+      },
+      {
+        "id": "feb14",
+        "name": "February 14th",
+        "raw_name": "CRYPTO - February 14th",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "neverlan2019/feb14",
+        "exists": true
+      },
+      {
+        "id": "bases",
+        "name": "Cover the BASEs",
+        "raw_name": "CRYPTO - Cover the BASEs",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "neverlan2019/bases",
+        "exists": true
+      },
+      {
+        "id": "oink",
+        "name": "Oink Oink",
+        "raw_name": "CRYPTO - Oink Oink",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "neverlan2019/oink",
+        "exists": true
+      },
+      {
+        "id": "zerocool",
+        "name": "Z3r0 C00l Bruh!",
+        "raw_name": "CRYPTO - 150 - Z3r0 C00l Bruh!",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "neverlan2019/zerocool",
+        "exists": true
+      },
+      {
+        "id": "keyz",
+        "name": "It's to KeyZ",
+        "raw_name": "RECON - 250 - It's to KeyZ",
+        "type": "OSINT",
+        "raw_type": "RECON",
+        "path": "neverlan2019/keyz",
+        "exists": true
+      }
+    ]
+  },
+  "noobzctf2023": {
+    "id": "noobzctf2023",
+    "name": "n00bzCTF 2023",
+    "path": "noobzctf2023",
+    "challenges": [
+      {
+        "id": "asm",
+        "name": "ASM",
+        "raw_name": "PWN - 489 - ASM",
+        "type": "PWN",
+        "raw_type": "PWN",
+        "path": "noobzctf2023/asm",
+        "exists": true
+      },
+      {
+        "id": "ezrev",
+        "name": "EZrev",
+        "raw_name": "REV - 372 - EZrev",
+        "type": "REV",
+        "raw_type": "REV",
+        "path": "noobzctf2023/ezrev",
+        "exists": true
+      },
+      {
+        "id": "mypin",
+        "name": "Mypin",
+        "raw_name": "REV - 460 - Mypin",
+        "type": "REV",
+        "raw_type": "REV",
+        "path": "noobzctf2023/mypin",
+        "exists": true
+      },
+      {
+        "id": "aes-1",
+        "name": "Aes-1",
+        "raw_name": "CRYPTO - 188 - Aes-1",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "noobzctf2023/aes-1",
+        "exists": true
+      },
+      {
+        "id": "maas",
+        "name": "MaaS",
+        "raw_name": "CRYPTO - 410 - MaaS",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "noobzctf2023/maas",
+        "exists": true
+      },
+      {
+        "id": "to-the-moon",
+        "name": "To the MOOON!",
+        "raw_name": "BLOCKCHAIN - 495 - To the MOOON!",
+        "type": "BLOCKCHAIN",
+        "raw_type": "BLOCKCHAIN",
+        "path": "noobzctf2023/to-the-moon",
+        "exists": true
+      }
+    ]
+  },
+  "patriotctf2022": {
+    "id": "patriotctf2022",
+    "name": "PatriotCTF 2022",
+    "path": "patriotctf2022",
+    "challenges": [
+      {
+        "id": "stringcheese",
+        "name": "StringCheese",
+        "raw_name": "REVERSE - StringCheese",
+        "type": "REV",
+        "raw_type": "REVERSE",
+        "path": "patriotctf2022/stringcheese",
+        "exists": true
+      },
+      {
+        "id": "crackme",
+        "name": "CrackMe",
+        "raw_name": "REVERSE - CrackMe",
+        "type": "REV",
+        "raw_type": "REVERSE",
+        "path": "patriotctf2022/crackme",
+        "exists": true
+      },
+      {
+        "id": "flowing",
+        "name": "Flowing",
+        "raw_name": "REVERSE - Flowing",
+        "type": "REV",
+        "raw_type": "REVERSE",
+        "path": "patriotctf2022/flowing",
+        "exists": true
+      },
+      {
+        "id": "goobf",
+        "name": "GoObf",
+        "raw_name": "REVERSE - GoObf",
+        "type": "REV",
+        "raw_type": "REVERSE",
+        "path": "patriotctf2022/goobf",
+        "exists": true
+      },
+      {
+        "id": "base64times10",
+        "name": "Base 64 Times 10",
+        "raw_name": "CRYPTO - Base 64 Times 10",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "patriotctf2022/base64times10",
+        "exists": true
+      },
+      {
+        "id": "twofifty",
+        "name": "TwoFifty",
+        "raw_name": "CRYPTO - 10 - TwoFifty",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "patriotctf2022/twofifty",
+        "exists": true
+      },
+      {
+        "id": "cowsay",
+        "name": "Cowsay",
+        "raw_name": "CRYPTO - 53 - Cowsay",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "patriotctf2022/cowsay",
+        "exists": true
+      },
+      {
+        "id": "cryptogod",
+        "name": "Cryptogod",
+        "raw_name": "CRYPTO - 498 - Cryptogod",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "patriotctf2022/cryptogod",
+        "exists": true
+      },
+      {
+        "id": "barry",
+        "name": "Barry",
+        "raw_name": "CRYPTO - 500 - Barry",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "patriotctf2022/barry",
+        "exists": true
+      },
+      {
+        "id": "extremlycoolbook",
+        "name": "Extremely Cool Book",
+        "raw_name": "CRYPTO - 500 - Extremely Cool Book",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "patriotctf2022/extremlycoolbook",
+        "exists": true
+      },
+      {
+        "id": "hike",
+        "name": "Hike",
+        "raw_name": "RECON - Hike",
+        "type": "OSINT",
+        "raw_type": "RECON",
+        "path": "patriotctf2022/hike",
+        "exists": true
+      },
+      {
+        "id": "bezier",
+        "name": "B\u00e9zier",
+        "raw_name": "FORENSICS - 399 - B\u00e9zier",
+        "type": "FORENSICS",
+        "raw_type": "FORENSICS",
+        "path": "patriotctf2022/bezier",
+        "exists": true
+      },
+      {
+        "id": "exfil",
+        "name": "Exfil",
+        "raw_name": "FORENSICS - 485 - Exfil",
+        "type": "FORENSICS",
+        "raw_type": "FORENSICS",
+        "path": "patriotctf2022/exfil",
+        "exists": true
+      },
+      {
+        "id": "greek",
+        "name": "It's All Greek to Me",
+        "raw_name": "MISC - It's All Greek to Me",
+        "type": "MISC",
+        "raw_type": "MISC",
+        "path": "patriotctf2022/greek",
+        "exists": true
+      }
+    ]
+  },
+  "patriotctf2023": {
+    "id": "patriotctf2023",
+    "name": "PatriotCTF 2023",
+    "path": "patriotctf2023",
+    "challenges": [
+      {
+        "id": "guessinggame",
+        "name": "Guessing Game",
+        "raw_name": "PWN - 100 - Guessing Game",
+        "type": "PWN",
+        "raw_type": "PWN",
+        "path": "patriotctf2023/guessinggame",
+        "exists": true
+      },
+      {
+        "id": "printshop",
+        "name": "Print Shop",
+        "raw_name": "PWN - 166 - Print Shop",
+        "type": "PWN",
+        "raw_type": "PWN",
+        "path": "patriotctf2023/printshop",
+        "exists": true
+      },
+      {
+        "id": "bookshelf",
+        "name": "Book Shelf",
+        "raw_name": "PWN - 166 - Book Shelf",
+        "type": "PWN",
+        "raw_type": "PWN",
+        "path": "patriotctf2023/bookshelf",
+        "exists": true
+      },
+      {
+        "id": "bookshelf2",
+        "name": "Book Shelf 2",
+        "raw_name": "PWN - 200 - Book Shelf 2",
+        "type": "PWN",
+        "raw_type": "PWN",
+        "path": "patriotctf2023/bookshelf2",
+        "exists": true
+      },
+      {
+        "id": "softshell",
+        "name": "Soft Shell",
+        "raw_name": "PWN - 494 - Soft Shell",
+        "type": "PWN",
+        "raw_type": "PWN",
+        "path": "patriotctf2023/softshell",
+        "exists": true
+      },
+      {
+        "id": "breakfastclub",
+        "name": "Breakfast Club",
+        "raw_name": "CRYPTO - 166 - Breakfast Club",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "patriotctf2023/breakfastclub",
+        "exists": true
+      },
+      {
+        "id": "flagfinder",
+        "name": "Flag Finder",
+        "raw_name": "MISC - 130 - Flag Finder",
+        "type": "MISC",
+        "raw_type": "MISC",
+        "path": "patriotctf2023/flagfinder",
+        "exists": true
+      }
+    ]
+  },
+  "picoctf2019": {
+    "id": "picoctf2019",
+    "name": "picoCTF 2019",
+    "path": "picoctf2019",
+    "challenges": [
+      {
+        "id": "messymalloc",
+        "name": "Messy Malloc",
+        "raw_name": "PWN - 300 - Messy Malloc",
+        "type": "PWN",
+        "raw_type": "PWN",
+        "path": "picoctf2019/messymalloc",
+        "exists": true
+      },
+      {
+        "id": "zerotohero",
+        "name": "Zero To Hero",
+        "raw_name": "PWN - 500 - Zero To Hero",
+        "type": "PWN",
+        "raw_type": "PWN",
+        "path": "picoctf2019/zerotohero",
+        "exists": true
+      },
+      {
+        "id": "sicecream",
+        "name": "Sice Cream",
+        "raw_name": "PWN - 500 - Sice Cream",
+        "type": "PWN",
+        "raw_type": "PWN",
+        "path": "picoctf2019/sicecream",
+        "exists": true
+      },
+      {
+        "id": "vaultdoor3",
+        "name": "Vault Door 3",
+        "raw_name": "REV - 200 - Vault Door 3",
+        "type": "REV",
+        "raw_type": "REV",
+        "path": "picoctf2019/vaultdoor3",
+        "exists": true
+      },
+      {
+        "id": "asm1",
+        "name": "asm1",
+        "raw_name": "REV - 200 - asm1",
+        "type": "REV",
+        "raw_type": "REV",
+        "path": "picoctf2019/asm1",
+        "exists": true
+      },
+      {
+        "id": "asm2",
+        "name": "asm2",
+        "raw_name": "REV - 250 - asm2",
+        "type": "REV",
+        "raw_type": "REV",
+        "path": "picoctf2019/asm2",
+        "exists": true
+      },
+      {
+        "id": "vaultdoor4",
+        "name": "Vault Door 4",
+        "raw_name": "REV - 250 - Vault Door 4",
+        "type": "REV",
+        "raw_type": "REV",
+        "path": "picoctf2019/vaultdoor4",
+        "exists": true
+      },
+      {
+        "id": "vaultdoor5",
+        "name": "Vault Door 5",
+        "raw_name": "REV - 300 - Vault Door 5",
+        "type": "REV",
+        "raw_type": "REV",
+        "path": "picoctf2019/vaultdoor5",
+        "exists": true
+      },
+      {
+        "id": "asm3",
+        "name": "asm3",
+        "raw_name": "REV - 300 - asm3",
+        "type": "REV",
+        "raw_type": "REV",
+        "path": "picoctf2019/asm3",
+        "exists": true
+      },
+      {
+        "id": "reversecipher",
+        "name": "Reverse Cipher",
+        "raw_name": "REV - 300 - Reverse Cipher",
+        "type": "REV",
+        "raw_type": "REV",
+        "path": "picoctf2019/reversecipher",
+        "exists": true
+      },
+      {
+        "id": "vaultdoor6",
+        "name": "Vault Door 6",
+        "raw_name": "REV - 350 - Vault Door 6",
+        "type": "REV",
+        "raw_type": "REV",
+        "path": "picoctf2019/vaultdoor6",
+        "exists": true
+      },
+      {
+        "id": "vaultdoor7",
+        "name": "Vault Door 7",
+        "raw_name": "REV - 400 - Vault Door 7",
+        "type": "REV",
+        "raw_type": "REV",
+        "path": "picoctf2019/vaultdoor7",
+        "exists": true
+      },
+      {
+        "id": "asm4",
+        "name": "asm4",
+        "raw_name": "REV - 400 - asm4",
+        "type": "REV",
+        "raw_type": "REV",
+        "path": "picoctf2019/asm4",
+        "exists": true
+      },
+      {
+        "id": "needforspeed",
+        "name": "Need For Speed",
+        "raw_name": "REV - 400 - Need For Speed",
+        "type": "REV",
+        "raw_type": "REV",
+        "path": "picoctf2019/needforspeed",
+        "exists": true
+      },
+      {
+        "id": "vaultdoor8",
+        "name": "Vault Door 8",
+        "raw_name": "REV - 400 - Vault Door 8",
+        "type": "REV",
+        "raw_type": "REV",
+        "path": "picoctf2019/vaultdoor8",
+        "exists": true
+      },
+      {
+        "id": "johnpollard",
+        "name": "John Pollard",
+        "raw_name": "REV - 500 - John Pollard",
+        "type": "REV",
+        "raw_type": "REV",
+        "path": "picoctf2019/johnpollard",
+        "exists": true
+      },
+      {
+        "id": "seedspring",
+        "name": "Seed Spring",
+        "raw_name": "RNG - 350 - Seed Spring",
+        "type": "CRYPTO",
+        "raw_type": "RNG",
+        "path": "picoctf2019/seedspring",
+        "exists": true
+      }
+    ]
+  },
+  "plaidctf": {
+    "id": "plaidctf",
+    "name": "PlaidCTF",
+    "path": "plaidctf",
+    "challenges": [
+      {
+        "id": "sandybox",
+        "name": "SandyBox",
+        "raw_name": "PWN - 200 - SandyBox",
+        "type": "PWN",
+        "raw_type": "PWN",
+        "path": "plaidctf/sandybox",
+        "exists": true
+      },
+      {
+        "id": "shop",
+        "name": "Shop",
+        "raw_name": "PWN - 200 - Shop",
+        "type": "PWN",
+        "raw_type": "PWN",
+        "path": "plaidctf/shop",
+        "exists": true
+      },
+      {
+        "id": "emojidb",
+        "name": "EmojiDB",
+        "raw_name": "PWN - 250 - EmojiDB",
+        "type": "PWN",
+        "raw_type": "PWN",
+        "path": "plaidctf/emojidb",
+        "exists": true
+      },
+      {
+        "id": "liars-and-cheats",
+        "name": "Liars And Cheats",
+        "raw_name": "PWN - 390 - Liars And Cheats",
+        "type": "PWN",
+        "raw_type": "PWN",
+        "path": "plaidctf/liars-and-cheats",
+        "exists": true
+      },
+      {
+        "id": "suffarring",
+        "name": "Suffarring",
+        "raw_name": "PWN - 500 - Suffarring",
+        "type": "PWN",
+        "raw_type": "PWN",
+        "path": "plaidctf/suffarring",
+        "exists": true
+      },
+      {
+        "id": "potassium",
+        "name": "Potassium",
+        "raw_name": "PWN - 800 - Potassium",
+        "type": "PWN",
+        "raw_type": "PWN",
+        "path": "plaidctf/potassium",
+        "exists": true
+      },
+      {
+        "id": "reee",
+        "name": "reee",
+        "raw_name": "REV - 150 - reee",
+        "type": "REV",
+        "raw_type": "REV",
+        "path": "plaidctf/reee",
+        "exists": true
+      }
+    ]
+  },
+  "r3ctf2024": {
+    "id": "r3ctf2024",
+    "name": "R3CTF/YUANHENGCTF 2024",
+    "path": "r3ctf2024",
+    "challenges": [
+      {
+        "id": "forbiddencontent",
+        "name": "pwn0win - Forbidden Content",
+        "raw_name": "PWN - 1000 - pwn0win - Forbidden Content",
+        "type": "PWN",
+        "raw_type": "PWN",
+        "path": "r3ctf2024/forbiddencontent",
+        "exists": true
+      },
+      {
+        "id": "simplestkernel",
+        "name": "pwn0win - The simplest kernel",
+        "raw_name": "PWN - 1000 - pwn0win - The simplest kernel",
+        "type": "PWN",
+        "raw_type": "PWN",
+        "path": "r3ctf2024/simplestkernel",
+        "exists": true
+      },
+      {
+        "id": "hackcam",
+        "name": "Hackcam",
+        "raw_name": "PWN - 1000 - Hackcam",
+        "type": "PWN",
+        "raw_type": "PWN",
+        "path": "r3ctf2024/hackcam",
+        "exists": true
+      },
+      {
+        "id": "scp",
+        "name": "S\ud835\udc6a\ud835\udc77-0\u03b5\u03b5",
+        "raw_name": "CRYPTO - 898 - S\ud835\udc6a\ud835\udc77-0\u03b5\u03b5",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "r3ctf2024/scp",
+        "exists": true
+      },
+      {
+        "id": "sparrow",
+        "name": "Sparrow",
+        "raw_name": "CRYPTO - 930 - Sparrow",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "r3ctf2024/sparrow",
+        "exists": true
+      },
+      {
+        "id": "dao",
+        "name": "DAO",
+        "raw_name": "BLOCKCHAIN - 930 - DAO",
+        "type": "BLOCKCHAIN",
+        "raw_type": "BLOCKCHAIN",
+        "path": "r3ctf2024/dao",
+        "exists": true
+      }
+    ]
+  },
+  "ritsec2019": {
+    "id": "ritsec2019",
+    "name": "ritsec2019",
+    "path": "ritsec2019",
+    "challenges": [
+      {
+        "id": "bottles",
+        "name": "999 Bottles",
+        "raw_name": "PWN - 110 - 999 Bottles",
+        "type": "PWN",
+        "raw_type": "PWN",
+        "path": "ritsec2019/bottles",
+        "exists": true
+      },
+      {
+        "id": "shiny",
+        "name": "Shiny",
+        "raw_name": "CRYPTO - 100 - Shiny",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "ritsec2019/shiny",
+        "exists": true
+      },
+      {
+        "id": "cleaners",
+        "name": "Take it to the cleaners",
+        "raw_name": "FORENSICS - 100 - Take it to the cleaners",
+        "type": "FORENSICS",
+        "raw_type": "FORENSICS",
+        "path": "ritsec2019/cleaners",
+        "exists": true
+      },
+      {
+        "id": "onion",
+        "name": "Onion Layer Encoding",
+        "raw_name": "MISC - 100 - Onion Layer Encoding",
+        "type": "MISC",
+        "raw_type": "MISC",
+        "path": "ritsec2019/onion",
+        "exists": true
+      }
+    ]
+  },
+  "sekaictf2022": {
+    "id": "sekaictf2022",
+    "name": "SekaiCTF 2022",
+    "path": "sekaictf2022",
+    "challenges": [
+      {
+        "id": "issues",
+        "name": "issues",
+        "raw_name": "issues",
+        "type": "MISC",
+        "raw_type": "",
+        "path": "sekaictf2022/issues",
+        "exists": true
+      },
+      {
+        "id": "qr",
+        "name": "QR",
+        "raw_name": "MISC - 484 - QR",
+        "type": "MISC",
+        "raw_type": "MISC",
+        "path": "sekaictf2022/qr",
+        "exists": true
+      },
+      {
+        "id": "game",
+        "name": "Game",
+        "raw_name": "Web - Game",
+        "type": "WEB",
+        "raw_type": "Web",
+        "path": "sekaictf2022/game",
+        "exists": true
+      }
+    ]
+  },
+  "sekaictf2023": {
+    "id": "sekaictf2023",
+    "name": "SekaiCTF 2023",
+    "path": "sekaictf2023",
+    "challenges": [
+      {
+        "id": "cosmic",
+        "name": "Cosmic",
+        "raw_name": "PWN - 100 - Cosmic",
+        "type": "PWN",
+        "raw_type": "PWN",
+        "path": "sekaictf2023/cosmic",
+        "exists": true
+      }
+    ]
+  },
+  "sekaictf2025": {
+    "id": "sekaictf2025",
+    "name": "SekaiCTF 2025",
+    "path": "sekaictf2025",
+    "challenges": [
+      {
+        "id": "myflask",
+        "name": "My Flask App",
+        "raw_name": "WEB - 100 - My Flask App",
+        "type": "WEB",
+        "raw_type": "WEB",
+        "path": "sekaictf2025/myflask",
+        "exists": true
+      },
+      {
+        "id": "ssss",
+        "name": "ssss",
+        "raw_name": "CRYPTO - 100 - ssss",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "sekaictf2025/ssss",
+        "exists": true
+      },
+      {
+        "id": "alterego",
+        "name": "Alter Ego",
+        "raw_name": "CRYPTO - 394 - Alter Ego",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "sekaictf2025/alterego",
+        "exists": true
+      },
+      {
+        "id": "unfairy",
+        "name": "unfairy-ring",
+        "raw_name": "CRYPTO - 500 - unfairy-ring",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "sekaictf2025/unfairy",
+        "exists": true
+      },
+      {
+        "id": "unfairyplusplus",
+        "name": "unfairy-ring++",
+        "raw_name": "CRYPTO - 500 - unfairy-ring++",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "sekaictf2025/unfairyplusplus",
+        "exists": true
+      }
+    ]
+  },
+  "tamuctf2024": {
+    "id": "tamuctf2024",
+    "name": "TAMUctf 2024",
+    "path": "tamuctf2024",
+    "challenges": [
+      {
+        "id": "confinement",
+        "name": "Confinement",
+        "raw_name": "PWN - Confinement",
+        "type": "PWN",
+        "raw_type": "PWN",
+        "path": "tamuctf2024/confinement",
+        "exists": true
+      },
+      {
+        "id": "adminpanel",
+        "name": "Admin-Panel",
+        "raw_name": "PWN - Admin-Panel",
+        "type": "PWN",
+        "raw_type": "PWN",
+        "path": "tamuctf2024/adminpanel",
+        "exists": true
+      },
+      {
+        "id": "criminal",
+        "name": "Criminal",
+        "raw_name": "CRYPTO - Criminal",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "tamuctf2024/criminal",
+        "exists": true
+      }
+    ]
+  },
+  "tastelessctf2021": {
+    "id": "tastelessctf2021",
+    "name": "TastelessCTF 2021",
+    "path": "tastelessctf2021",
+    "challenges": [
+      {
+        "id": "crybaby",
+        "name": "crybaby",
+        "raw_name": "CRYPTO - 492 - crybaby",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "tastelessctf2021/crybaby",
+        "exists": true
+      }
+    ]
+  },
+  "techcompfest2022": {
+    "id": "techcomfest2022",
+    "name": "TECHCOMFEST 2022",
+    "path": "techcompfest2022",
+    "challenges": [
+      {
+        "id": "python",
+        "name": "Yet Another Python SSTI Challenge",
+        "raw_name": "WEB - 310 - Yet Another Python SSTI Challenge",
+        "type": "WEB",
+        "raw_type": "WEB",
+        "path": "techcompfest2022/python",
+        "exists": true
+      }
+    ]
+  },
+  "uiuctf2022": {
+    "id": "uiuctf2022",
+    "name": "UIUCTF 2022",
+    "path": "uiuctf2022",
+    "challenges": [
+      {
+        "id": "oddshell",
+        "name": "Odd Shell",
+        "raw_name": "PWN - 500 - Odd Shell",
+        "type": "PWN",
+        "raw_type": "PWN",
+        "path": "uiuctf2022/oddshell",
+        "exists": true
+      },
+      {
+        "id": "art",
+        "name": "Pierated Art",
+        "raw_name": "REV - 75 - Pierated Art",
+        "type": "REV",
+        "raw_type": "REV",
+        "path": "uiuctf2022/art",
+        "exists": true
+      },
+      {
+        "id": "militarygradenc",
+        "name": "Military Grade Encryption",
+        "raw_name": "CRYPTO - 75 - Military Grade Encryption",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "uiuctf2022/militarygradenc",
+        "exists": true
+      },
+      {
+        "id": "asr",
+        "name": "asr",
+        "raw_name": "CRYPTO - 500 - asr",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "uiuctf2022/asr",
+        "exists": true
+      },
+      {
+        "id": "ecc",
+        "name": "Elliptic Clock Crypto",
+        "raw_name": "CRYPTO - 500 - Elliptic Clock Crypto",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "uiuctf2022/ecc",
+        "exists": true
+      }
+    ]
+  },
+  "uiuctf2023": {
+    "id": "uiuctf2023",
+    "name": "UIUCTF 2023",
+    "path": "uiuctf2023",
+    "challenges": [
+      {
+        "id": "chainmail",
+        "name": "Chainmail",
+        "raw_name": "PWN - 500 - Chainmail",
+        "type": "PWN",
+        "raw_type": "PWN",
+        "path": "uiuctf2023/chainmail",
+        "exists": true
+      },
+      {
+        "id": "rattler",
+        "name": "Rattler Read",
+        "raw_name": "PWN - 500 - Rattler Read",
+        "type": "PWN",
+        "raw_type": "PWN",
+        "path": "uiuctf2023/rattler",
+        "exists": true
+      },
+      {
+        "id": "fastcalc",
+        "name": "Fast Calculator",
+        "raw_name": "REV - 500 - Fast Calculator",
+        "type": "REV",
+        "raw_type": "REV",
+        "path": "uiuctf2023/fastcalc",
+        "exists": true
+      },
+      {
+        "id": "athome",
+        "name": "At Home",
+        "raw_name": "CRYPTO - 100 - At Home",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "uiuctf2023/athome",
+        "exists": true
+      },
+      {
+        "id": "groupproject",
+        "name": "Group Project",
+        "raw_name": "CRYPTO - 100 - Group Project",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "uiuctf2023/groupproject",
+        "exists": true
+      },
+      {
+        "id": "groupprojection",
+        "name": "Group Projection",
+        "raw_name": "CRYPTO - 100 - Group Projection",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "uiuctf2023/groupprojection",
+        "exists": true
+      },
+      {
+        "id": "morphing",
+        "name": "Morphing Time",
+        "raw_name": "CRYPTO - 100 - Morphing Time",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "uiuctf2023/morphing",
+        "exists": true
+      },
+      {
+        "id": "threetime",
+        "name": "Three-Time Pad",
+        "raw_name": "CRYPTO - 500 - Three-Time Pad",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "uiuctf2023/threetime",
+        "exists": true
+      },
+      {
+        "id": "explorer1",
+        "name": "Finding Artifacts 1",
+        "raw_name": "OSINT - 500 - Finding Artifacts 1",
+        "type": "OSINT",
+        "raw_type": "OSINT",
+        "path": "uiuctf2023/explorer1",
+        "exists": true
+      },
+      {
+        "id": "explorer2",
+        "name": "Finding Artifacts 2",
+        "raw_name": "OSINT - 500 - Finding Artifacts 2",
+        "type": "OSINT",
+        "raw_type": "OSINT",
+        "path": "uiuctf2023/explorer2",
+        "exists": true
+      },
+      {
+        "id": "explorer3",
+        "name": "What's for Dinner?",
+        "raw_name": "OSINT - 500 - What's for Dinner?",
+        "type": "OSINT",
+        "raw_type": "OSINT",
+        "path": "uiuctf2023/explorer3",
+        "exists": true
+      },
+      {
+        "id": "explorer4",
+        "name": "Jonah's Journal",
+        "raw_name": "OSINT - 500 - Jonah's Journal",
+        "type": "OSINT",
+        "raw_type": "OSINT",
+        "path": "uiuctf2023/explorer4",
+        "exists": true
+      },
+      {
+        "id": "explorer5",
+        "name": "First class mail",
+        "raw_name": "OSINT - 500 - First class mail",
+        "type": "OSINT",
+        "raw_type": "OSINT",
+        "path": "uiuctf2023/explorer5",
+        "exists": true
+      },
+      {
+        "id": "explorer6",
+        "name": "Finding Jonah?",
+        "raw_name": "OSINT - 500 - Finding Jonah?",
+        "type": "OSINT",
+        "raw_type": "OSINT",
+        "path": "uiuctf2023/explorer6",
+        "exists": true
+      }
+    ]
+  },
+  "uiuctf2024": {
+    "id": "uiuctf2024",
+    "name": "UIUCTF 2024",
+    "path": "uiuctf2024",
+    "challenges": [
+      {
+        "id": "syscalls",
+        "name": "Syscalls",
+        "raw_name": "PWN - 500 - Syscalls",
+        "type": "PWN",
+        "raw_type": "PWN",
+        "path": "uiuctf2024/syscalls",
+        "exists": true
+      },
+      {
+        "id": "determined",
+        "name": "Determined",
+        "raw_name": "CRYPTO - Determined",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "uiuctf2024/determined",
+        "exists": true
+      }
+    ]
+  },
+  "uoftctf2026": {
+    "id": "uoftctf2026",
+    "name": "UofTCTF 2026",
+    "path": "uoftctf2026",
+    "challenges": [
+      {
+        "id": "orca",
+        "name": "Orca",
+        "raw_name": "CRYPTO - 477 - Orca",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "uoftctf2026/orca",
+        "exists": true
+      }
+    ]
+  },
+  "utctf24": {
+    "id": "utctf2024",
+    "name": "UTCTF 2024",
+    "path": "utctf24",
+    "challenges": [
+      {
+        "id": "babyrsa",
+        "name": "baby rsa",
+        "raw_name": "CRYPTO - baby rsa",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "utctf24/babyrsa",
+        "exists": true
+      },
+      {
+        "id": "bitspieces",
+        "name": "bits and pieces",
+        "raw_name": "CRYPTO - bits and pieces",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "utctf24/bitspieces",
+        "exists": true
+      },
+      {
+        "id": "blsforgery",
+        "name": "blsforgery",
+        "raw_name": "CRYPTO - blsforgery",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "utctf24/blsforgery",
+        "exists": true
+      },
+      {
+        "id": "cryptordle",
+        "name": "cryptordle",
+        "raw_name": "CRYPTO - cryptordle",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "utctf24/cryptordle",
+        "exists": true
+      },
+      {
+        "id": "longcaesar",
+        "name": "long caesar",
+        "raw_name": "CRYPTO - long caesar",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "utctf24/longcaesar",
+        "exists": true
+      },
+      {
+        "id": "numbrrrs",
+        "name": "numbers go brrr",
+        "raw_name": "CRYPTO - numbers go brrr",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "utctf24/numbrrrs",
+        "exists": true
+      },
+      {
+        "id": "numbrrrs2",
+        "name": "numbers go brrr 2",
+        "raw_name": "CRYPTO - numbers go brrr 2",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "utctf24/numbrrrs2",
+        "exists": true
+      },
+      {
+        "id": "morse",
+        "name": "simple morse",
+        "raw_name": "CRYPTO - simple morse",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "utctf24/morse",
+        "exists": true
+      },
+      {
+        "id": "simplesig",
+        "name": "simple signature",
+        "raw_name": "CRYPTO - simple signature",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "utctf24/simplesig",
+        "exists": true
+      },
+      {
+        "id": "git",
+        "name": "git",
+        "raw_name": "FORENSICS - git",
+        "type": "FORENSICS",
+        "raw_type": "FORENSICS",
+        "path": "utctf24/git",
+        "exists": true
+      },
+      {
+        "id": "insanitycheck",
+        "name": "insanity check reimagined",
+        "raw_name": "FORENSICS - insanity check reimagined",
+        "type": "FORENSICS",
+        "raw_type": "FORENSICS",
+        "path": "utctf24/insanitycheck",
+        "exists": true
+      },
+      {
+        "id": "keyboard",
+        "name": "keyboard",
+        "raw_name": "FORENSICS - keyboard",
+        "type": "FORENSICS",
+        "raw_type": "FORENSICS",
+        "path": "utctf24/keyboard",
+        "exists": true
+      },
+      {
+        "id": "osint2",
+        "name": "FORENSICS - OSINT",
+        "raw_name": "FORENSICS - OSINT",
+        "type": "FORENSICS",
+        "raw_type": "FORENSICS",
+        "path": "utctf24/osint2",
+        "exists": true
+      },
+      {
+        "id": "wizardry",
+        "name": "wizardry",
+        "raw_name": "FORENSICS - wizardry",
+        "type": "FORENSICS",
+        "raw_type": "FORENSICS",
+        "path": "utctf24/wizardry",
+        "exists": true
+      },
+      {
+        "id": "ccv",
+        "name": "cvv",
+        "raw_name": "MISC - cvv",
+        "type": "MISC",
+        "raw_type": "MISC",
+        "path": "utctf24/ccv",
+        "exists": true
+      },
+      {
+        "id": "pes128",
+        "name": "PES 128",
+        "raw_name": "REV - PES 128",
+        "type": "REV",
+        "raw_type": "REV",
+        "path": "utctf24/pes128",
+        "exists": true
+      },
+      {
+        "id": "revbegin",
+        "name": "beginner",
+        "raw_name": "REV - beginner",
+        "type": "REV",
+        "raw_type": "REV",
+        "path": "utctf24/revbegin",
+        "exists": true
+      },
+      {
+        "id": "cookie",
+        "name": "cookie clicker",
+        "raw_name": "WEB - cookie clicker",
+        "type": "WEB",
+        "raw_type": "WEB",
+        "path": "utctf24/cookie",
+        "exists": true
+      },
+      {
+        "id": "merger",
+        "name": "mergers",
+        "raw_name": "WEB - mergers",
+        "type": "WEB",
+        "raw_type": "WEB",
+        "path": "utctf24/merger",
+        "exists": true
+      }
+    ]
+  },
+  "vsctf2022": {
+    "id": "vsctf2022",
+    "name": "vsCTF 2022",
+    "path": "vsctf2022",
+    "challenges": [
+      {
+        "id": "tuningtest",
+        "name": "Tuning Test",
+        "raw_name": "PWN - 488 - Tuning Test",
+        "type": "PWN",
+        "raw_type": "PWN",
+        "path": "vsctf2022/tuningtest",
+        "exists": true
+      },
+      {
+        "id": "ezorange",
+        "name": "EzOrange",
+        "raw_name": "PWN - 490 - EzOrange",
+        "type": "PWN",
+        "raw_type": "PWN",
+        "path": "vsctf2022/ezorange",
+        "exists": true
+      },
+      {
+        "id": "privatebank",
+        "name": "Private Bank",
+        "raw_name": "Private Bank",
+        "type": "MISC",
+        "raw_type": "",
+        "path": "vsctf2022/privatebank",
+        "exists": true
+      }
+    ]
+  },
+  "wtfctf2021": {
+    "id": "wtfctf2021",
+    "name": "wtfCTF 2021",
+    "path": "wtfctf2021",
+    "challenges": [
+      {
+        "id": "mom5m4g1c",
+        "name": "MoM5m4g1c",
+        "raw_name": "PWN - 100 - MoM5m4g1c",
+        "type": "PWN",
+        "raw_type": "PWN",
+        "path": "wtfctf2021/mom5m4g1c",
+        "exists": true
+      },
+      {
+        "id": "k3y",
+        "name": "k3Y",
+        "raw_name": "PWN - 150 - k3Y",
+        "type": "PWN",
+        "raw_type": "PWN",
+        "path": "wtfctf2021/k3y",
+        "exists": true
+      },
+      {
+        "id": "prison",
+        "name": "Prison",
+        "raw_name": "PWN - 506 - Prison",
+        "type": "PWN",
+        "raw_type": "PWN",
+        "path": "wtfctf2021/prison",
+        "exists": true
+      }
+    ]
+  },
+  "zh3r0ctf2021": {
+    "id": "zh3r0ctf2021",
+    "name": "Zh3r0 CTF V2",
+    "path": "zh3r0ctf2021",
+    "challenges": [
+      {
+        "id": "babyre",
+        "name": "BabyRE",
+        "raw_name": "REV - 100 - BabyRE",
+        "type": "REV",
+        "raw_type": "REV",
+        "path": "zh3r0ctf2021/babyre",
+        "exists": true
+      },
+      {
+        "id": "estr",
+        "name": "Eat Sleep Trace Repeat",
+        "raw_name": "REV - 365 - Eat Sleep Trace Repeat",
+        "type": "REV",
+        "raw_type": "REV",
+        "path": "zh3r0ctf2021/estr",
+        "exists": true
+      },
+      {
+        "id": "sabloom",
+        "name": "Sabloom Text 6",
+        "raw_name": "REV - 949 - Sabloom Text 6",
+        "type": "REV",
+        "raw_type": "REV",
+        "path": "zh3r0ctf2021/sabloom",
+        "exists": true
+      },
+      {
+        "id": "optimiseme",
+        "name": "OptimiseMe",
+        "raw_name": "REV - 983 - OptimiseMe",
+        "type": "REV",
+        "raw_type": "REV",
+        "path": "zh3r0ctf2021/optimiseme",
+        "exists": true
+      },
+      {
+        "id": "pyaz",
+        "name": "Pyaz",
+        "raw_name": "REV - 991 - Pyaz",
+        "type": "REV",
+        "raw_type": "REV",
+        "path": "zh3r0ctf2021/pyaz",
+        "exists": true
+      },
+      {
+        "id": "alicebobdave",
+        "name": "alice_bob_dave",
+        "raw_name": "CRYPTO - 100 - alice_bob_dave",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "zh3r0ctf2021/alicebobdave",
+        "exists": true
+      },
+      {
+        "id": "injection",
+        "name": "1n_jection",
+        "raw_name": "CRYPTO - 304 - 1n_jection",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "zh3r0ctf2021/injection",
+        "exists": true
+      },
+      {
+        "id": "twist",
+        "name": "Twist and Shout",
+        "raw_name": "CRYPTO - 718 - Twist and Shout",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "zh3r0ctf2021/twist",
+        "exists": true
+      },
+      {
+        "id": "bootleg",
+        "name": "b00tleg",
+        "raw_name": "CRYPTO - 775 - b00tleg",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "zh3r0ctf2021/bootleg",
+        "exists": true
+      },
+      {
+        "id": "numpymt",
+        "name": "import numpy as MT",
+        "raw_name": "CRYPTO - 930 - import numpy as MT",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "zh3r0ctf2021/numpymt",
+        "exists": true
+      },
+      {
+        "id": "mersenne",
+        "name": "Real Mersenne",
+        "raw_name": "CRYPTO - 949 - Real Mersenne",
+        "type": "CRYPTO",
+        "raw_type": "CRYPTO",
+        "path": "zh3r0ctf2021/mersenne",
+        "exists": true
+      },
+      {
+        "id": "cheater",
+        "name": "Cheater Mind",
+        "raw_name": "MISC - 997 - Cheater Mind",
+        "type": "MISC",
+        "raw_type": "MISC",
+        "path": "zh3r0ctf2021/cheater",
+        "exists": true
+      }
+    ]
+  }
+}
