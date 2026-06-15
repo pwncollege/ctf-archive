@@ -58,6 +58,7 @@ Please ensure that your code adheres to the following standards:
 - Follow the existing file heirarchy in the repository.
 - Write clear and concise comments where necessary.
 - Make sure to document the process in the `README.md`(which conatins editors notes), `REHOST.md`(conatins how to rehost the challenge), and `DESCRIPTION.md`(contains the description of the challenge from its original source).
+- If a checker expects the player to submit a wrapped flag string rather than a raw recovered value, document that expected format in the challenge `DESCRIPTION.md`.
 - Ensure your code is well-tested and passes all existing tests which includes that the challenge works as intended initially by the organizers. Make sure you find a way for the user to get the pwn.college flag which looks like `pwn.college{practice}`.
 
 ### Commit Messages
@@ -125,5 +126,6 @@ This would create a symlink and whenever flag.txt is called, the hacker gets the
     gcc -o flag_check flag_check.c
     ```
     Provide user with a note in `DESCRIPTION.md` that they need to get their flag checked by running `flag_check` using ```/challenge/flag_check``` to get the pwn.college flag.
+4. If the challenge expects a specific flag wrapper or prefix/suffix, include that exact expected format in `DESCRIPTION.md` so solvers know what the checker is validating.
 
     These were some basic ways to keep the authenticity of the archived challenge and still provide user a way to earn the completion of the challenge.
