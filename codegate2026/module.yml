@@ -1,0 +1,8 @@
+id: codegate2026
+name: Codegate CTF 2026 Preliminary
+
+challenges:
+  - id: greybox
+    name: REV - greybox
+  - id: welcomeflag
+    name: MISC - welcomeflag

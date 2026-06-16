@@ -1,6 +1,13 @@
 # REHOSTING
 
-Files can be found here: [BuckeyeCTF 2025](https://bctf-25-uploads.s3-us-east-2.amazonaws.com/950d53d8e08c897660fc8f1ebefb8e2fc357a03e76e3ded6eea567f78d2f5717/square_cipher.py)
-
 ## Challenge Setup
-This challenge just contains a `python` file which has dependencies on other files provided so having them run with the same shebang or with the same python should be enough to run the challenge without any issues.
+
+The challenge artifacts for this entry are stored outside the git repo at `../ctf-archive-external/buckeyectf2025/squarecipher/` relative to the `ctf-archive` repo root.
+Copy that bundle into the target deployment directory before launching the challenge. A typical pwn.college layout is `/challenge/squarecipher/`, but keep the copied file tree identical to the archived bundle.
+
+Artifacts in the external bundle:
+- `square_cipher`
+
+## Runtime Notes
+
+- After copying the bundle, mark any shipped launchers, scripts, or binaries executable if the original challenge expects direct execution.

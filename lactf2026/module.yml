@@ -1,0 +1,28 @@
+id: lactf2026
+name: LA CTF 2026
+
+challenges:
+  - id: theclock
+    name: CRYPTO - 500 - The Clock
+  - id: lazybigrams
+    name: CRYPTO - 344 - lazy-bigrams
+  - id: notsolazytrigrams
+    name: CRYPTO - 319 - not-so-lazy-trigrams
+  - id: sisyphus
+    name: CRYPTO - 500 - Sisyphus
+  - id: sixseven
+    name: CRYPTO - 314 - Six Seven
+  - id: sixsevenagain
+    name: CRYPTO - 408 - Six Seven Again
+  - id: clawcha
+    name: WEB - 194 - clawcha
+  - id: jobboard
+    name: WEB - 147 - job-board
+  - id: ooo
+    name: REV - 311 - ooo
+  - id: starlessc
+    name: REV - 350 - starless-c
+  - id: thefish
+    name: REV - 311 - the-fish
+  - id: lactf1986
+    name: REV - 331 - lactf-1986

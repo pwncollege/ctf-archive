@@ -1,0 +1,38 @@
+id: cybergame2026
+name: CyberGame 2026
+
+challenges:
+  - id: ch01-safeps
+    name: WEB - ch01-safeps
+  - id: ch03-layers
+    name: CRYPTO - ch03-layers
+  - id: ch06-elephant1
+    name: FORENSICS - ch06-elephant1
+  - id: ch07-letters
+    name: MALWARE - ch07-letters
+  - id: ch08-safeps2
+    name: WEB - ch08-safeps2
+  - id: ch12-xy
+    name: CRYPTO - ch12-xy
+  - id: ch17-description
+    name: OSINT - ch17-description
+  - id: ch18-rotted
+    name: CRYPTO - ch18-rotted
+  - id: ch23-plaintext
+    name: MALWARE - ch23-plaintext
+  - id: ch24-span
+    name: FORENSICS - ch24-span
+  - id: ch25-totrue
+    name: MALWARE - ch25-totrue
+  - id: ch27-sudoku
+    name: MALWARE - ch27-sudoku
+  - id: ch30-elephant2
+    name: FORENSICS - ch30-elephant2
+  - id: ch32-ecc
+    name: CRYPTO - ch32-ecc
+  - id: ch35-portable
+    name: FORENSICS - ch35-portable
+  - id: ch36-tables
+    name: FORENSICS - ch36-tables
+  - id: ch46-keypad
+    name: MALWARE - ch46-keypad

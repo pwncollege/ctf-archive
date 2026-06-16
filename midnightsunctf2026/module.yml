@@ -1,0 +1,18 @@
+id: midnightsunctf2026
+name: Midnight Sun CTF 2026 Quals
+
+challenges:
+  - id: chain
+    name: PWN - chain
+  - id: drop
+    name: PWN - drop
+  - id: riscal
+    name: REV - riscal
+  - id: speed-3
+    name: PWN - speed-3
+  - id: speed-4
+    name: PWN - speed-4
+  - id: speed-5
+    name: PWN - speed-5
+  - id: terminator
+    name: MISC - terminator
