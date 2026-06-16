@@ -1,6 +1,0 @@
-Flask==2.3.2
-Werkzeug==2.3.6
-flask-sqlalchemy==3.0.5
-flask-login==0.6.2
-werkzeug==2.3.6
-requests==2.31.0

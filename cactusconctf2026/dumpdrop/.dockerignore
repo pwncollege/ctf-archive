@@ -1,7 +1,0 @@
-node_modules
-npm-debug.log
-uploads/*
-.env
-.git
-.gitignore
-README.md

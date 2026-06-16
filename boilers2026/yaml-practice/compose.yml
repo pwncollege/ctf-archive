@@ -1,5 +1,0 @@
-services:
-  app:
-    build: .
-    ports:
-      - "18123:8000"

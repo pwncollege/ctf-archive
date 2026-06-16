@@ -1,5 +1,0 @@
-services:
-  githoarder:
-    build: .
-    ports:
-      - 1444:1337

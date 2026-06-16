@@ -1,6 +1,0 @@
-export default function(e,n,a,t,r){let l={init(){l.bcInit(),l.events()},bcInit(){["toggleProviderActiveIcon","isPaymentsEnabled","getPaymentsTogglesSelector"].forEach(e=>{t[e]=l[e]})},events(){},toggleProviderActiveIcon(e){var t=e.closest(".wpforms-panel-content-section").data("provider"),r=["wpforms-panel-field-"+t+"-enable-wrap","wpforms-panel-field-"+t+"-enable_one_time-wrap","wpforms-panel-field-"+t+"-enable_recurring-wrap"];if(t&&r.includes(e.attr("id"))){let n=!1;r.forEach(e=>{e=a("#"+e);e.length&&e.find("input").is(":checked")&&(n=!0)}),a(`.wpforms-panel-sidebar-section[data-section=${t}]`).find(".fa-check-circle-o").toggleClass("wpforms-hidden",!n)}},isPaymentsEnabled(){let e=!1;return a(t.getPaymentsTogglesSelector()).each(function(){if(a(this).prop("checked"))return!(e=!0)}),e},getPaymentsTogglesSelector(){return`.wpforms-panel-content-section-payment-toggle-one-time input,
-				.wpforms-panel-content-section-payment-toggle-recurring input,
-				#wpforms-panel-field-stripe-enable,
-				#wpforms-panel-field-paypal_standard-enable,
-				#wpforms-panel-field-authorize_net-enable,
-				#wpforms-panel-field-square-enable`}};return l}

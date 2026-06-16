@@ -1,8 +1,6 @@
 # REHOSTING
 
-Link to files: [CyberGame 2026](https://ctftime.org/event/3142)
+Files can be found here: [CyberGame 2026](https://ctftime.org/event/2569)
 
 ## Challenge Setup
-Use docker-compose.yaml (or the Dockerfile) to build and run the challenge; the flag is read from /flag.
-
-The service exposes a socat-wrapped PowerShell jail on TCP port 6666. A build-time `ARG TEST_FLAG` writes a placeholder flag to `/flag`; override it (or mount the real `/flag`) when hosting.
+This is a web/service challenge. It is deployed from a prebuilt pwn.college challenge image (built on `pwncollege/challenge-legacy`): the application is placed in `/challenge`, started at container init, and reads the flag from the root-only `/flag`. The container image is maintained separately from this archive entry; the original challenge source is not bundled here.

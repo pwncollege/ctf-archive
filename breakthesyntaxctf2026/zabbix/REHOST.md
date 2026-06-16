@@ -1,19 +1,6 @@
 # REHOSTING
 
-Link to files: [Break The Syntax CTF 2026](https://ctftime.org/event/2841)
+Files can be found here: [Break The Syntax CTF 2026](https://ctftime.org/event/2841)
 
 ## Challenge Setup
-Use docker-compose.yml to build the challenge.
-
-## Flag Setup
-The flag is read from `/flag` inside the `zabbix-db` container at init time
-(`challenge/99-inject-flag.sh`), base64-encoded, and stored in the
-"White Hats Gym" host (hostid 10516) description. A default test flag is
-baked into the image (`/flag`); mount or copy the real flag to `/flag` in the
-`zabbix-db` container to override it.
-
-## Notes
-- Official Zabbix 6.0.0 images are pulled from Docker Hub
-  (`zabbix/zabbix-server-mysql:ubuntu-6.0.0`,
-  `zabbix/zabbix-web-nginx-mysql:ubuntu-6.0.0`); only `zabbix-db` is built locally.
-- The frontend is exposed on port 8080.
+This is a web/service challenge. It is deployed from a prebuilt pwn.college challenge image (built on `pwncollege/challenge-legacy`): the application is placed in `/challenge`, started at container init, and reads the flag from the root-only `/flag`. The container image is maintained separately from this archive entry; the original challenge source is not bundled here.

@@ -1,9 +1,6 @@
 # REHOSTING
 
-Link to files: [Break The Syntax CTF 2026](https://ctftime.org/event/3137)
+Files can be found here: [Break The Syntax CTF 2026](https://ctftime.org/event/2841)
 
 ## Challenge Setup
-
-This challenge contains all files needed; use docker-compose.yml to build the setup.
-
-The flag is read from `/flag` at runtime by the superuser-only `/flag/` view. The image ships a default test flag (`BtSCTF{rehost_test_bugxxor}` from the bundled `flag` file); to deploy with the real flag, mount it over `/flag` (see the commented volume in `docker-compose.yml`).
+This is a web/service challenge. It is deployed from a prebuilt pwn.college challenge image (built on `pwncollege/challenge-legacy`): the application is placed in `/challenge`, started at container init, and reads the flag from the root-only `/flag`. The container image is maintained separately from this archive entry; the original challenge source is not bundled here.

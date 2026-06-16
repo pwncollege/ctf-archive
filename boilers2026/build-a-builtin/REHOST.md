@@ -1,6 +1,6 @@
 # REHOSTING
 
-Link to files: [b01lers CTF 2026](https://ctftime.org/event/3153)
+Files can be found here: [b01lers CTF 2026](https://ctftime.org/event/3153)
 
 ## Challenge Setup
-Use the Dockerfile (or docker-compose.yml) to build and run; the flag is read from /flag.
+This is a web/service challenge. It is deployed from a prebuilt pwn.college challenge image (built on `pwncollege/challenge-legacy`): the application is placed in `/challenge`, started at container init, and reads the flag from the root-only `/flag`. The container image is maintained separately from this archive entry; the original challenge source is not bundled here.
