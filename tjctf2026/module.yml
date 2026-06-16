@@ -6,6 +6,8 @@ challenges:
     name: CRYPTO - bit-leak
   - id: chained
     name: WEB - chained
+    visibility:
+      start: "2027-01-01T00:00:00-07:00"
   - id: check-the-fine-print
     name: FORENSICS - check-the-fine-print
   - id: crashout

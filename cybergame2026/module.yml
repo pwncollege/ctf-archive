@@ -4,6 +4,8 @@ name: CyberGame 2026
 challenges:
   - id: ch01-safeps
     name: WEB - ch01-safeps
+    visibility:
+      start: "2027-01-01T00:00:00-07:00"
   - id: ch03-layers
     name: CRYPTO - ch03-layers
   - id: ch06-elephant1
@@ -12,6 +14,8 @@ challenges:
     name: MALWARE - ch07-letters
   - id: ch08-safeps2
     name: WEB - ch08-safeps2
+    visibility:
+      start: "2027-01-01T00:00:00-07:00"
   - id: ch12-xy
     name: CRYPTO - ch12-xy
   - id: ch17-description

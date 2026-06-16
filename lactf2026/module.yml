@@ -18,6 +18,8 @@ challenges:
     name: WEB - 194 - clawcha
   - id: jobboard
     name: WEB - 147 - job-board
+    visibility:
+      start: "2027-01-01T00:00:00-07:00"
   - id: ooo
     name: REV - 311 - ooo
   - id: starlessc

@@ -4,16 +4,24 @@ name: Break The Syntax CTF 2026
 challenges:
   - id: bugxxor
     name: WEB - bugxxor
+    visibility:
+      start: "2027-01-01T00:00:00-07:00"
   - id: captcha
     name: WEB - captcha
+    visibility:
+      start: "2027-01-01T00:00:00-07:00"
   - id: cart-blanche
     name: WEB - cart-blanche
+    visibility:
+      start: "2027-01-01T00:00:00-07:00"
   - id: crabuoros
     name: REV - crabuoros
   - id: cursed
     name: MISC - cursed
   - id: far
     name: WEB - far
+    visibility:
+      start: "2027-01-01T00:00:00-07:00"
   - id: fcp
     name: REV - fcp
   - id: flagchecker
@@ -22,10 +30,14 @@ challenges:
     name: REV - my_first_game
   - id: pokecollector
     name: WEB - pokecollector
+    visibility:
+      start: "2027-01-01T00:00:00-07:00"
   - id: poni_barn
     name: PWN - poni_barn
   - id: seaShells
     name: WEB - seaShells
+    visibility:
+      start: "2027-01-01T00:00:00-07:00"
   - id: shellcode_1_11
     name: PWN - shellcode_1_11
   - id: shellcode_2_22
@@ -34,5 +46,9 @@ challenges:
     name: REV - stepping_stones
   - id: w
     name: WEB - w
+    visibility:
+      start: "2027-01-01T00:00:00-07:00"
   - id: zabbix
     name: WEB - zabbix
+    visibility:
+      start: "2027-01-01T00:00:00-07:00"

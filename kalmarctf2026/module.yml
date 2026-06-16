@@ -4,7 +4,11 @@ name: KalmarCTF 2026
 challenges:
   - id: customainer
     name: WEB - customainer
+    visibility:
+      start: "2027-01-01T00:00:00-07:00"
   - id: git-hoarder
     name: WEB - git-hoarder
+    visibility:
+      start: "2027-01-01T00:00:00-07:00"
   - id: rbg-plus
     name: CRYPTO - rbg-plus

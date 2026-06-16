@@ -8,5 +8,9 @@ challenges:
     name: CRYPTO - 460 - SpiralFloats
   - id: 4llD4y
     name: WEB - 50 - 4llD4y
+    visibility:
+      start: "2027-01-01T00:00:00-07:00"
   - id: smolweb
     name: WEB - 428 - Smol Web
+    visibility:
+      start: "2027-01-01T00:00:00-07:00"
