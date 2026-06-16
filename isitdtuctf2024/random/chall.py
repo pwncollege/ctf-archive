@@ -1,4 +1,4 @@
-#!/opt/pwn.college/python
+#!/usr/bin/exec-suid -- /run/dojo/bin/python3
 
 import random
 from secret import FLAG
