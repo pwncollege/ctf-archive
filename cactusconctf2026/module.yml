@@ -8,3 +8,5 @@ challenges:
     name: CRYPTO - 35 - Schwifty RSA
   - id: dumpdrop
     name: WEB - 65 - DumbDrop
+    visibility:
+      start: "2027-01-01T00:00:00-07:00"

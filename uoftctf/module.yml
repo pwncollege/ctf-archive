@@ -4,5 +4,9 @@ name: UofTCTF 2024
 challenges:
   - id: gamblersfallacy
     name: CRYPTO - 451 - Gambler's Fallacy
+    visibility:
+      start: "2027-01-01T00:00:00-07:00"
   - id: orca
     name: CRYPTO - 477 - Orca
+    visibility:
+      start: "2027-01-01T00:00:00-07:00"
