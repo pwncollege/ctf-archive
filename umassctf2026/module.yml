@@ -4,6 +4,8 @@ name: UMassCTF 2026
 challenges:
   - id: building-blocks-market
     name: WEB - building-blocks-market
+    visibility:
+      start: "2027-01-01T00:00:00-07:00"
   - id: click-here-for-free-bricks
     name: FORENSICS - click-here-for-free-bricks
   - id: deep-down
@@ -24,7 +26,11 @@ challenges:
     name: CRYPTO - the-accursed-lego-bin
   - id: the-block-city-times
     name: WEB - the-block-city-times
+    visibility:
+      start: "2027-01-01T00:00:00-07:00"
   - id: the-block-city-times-v2
     name: WEB - the-block-city-times-v2
+    visibility:
+      start: "2027-01-01T00:00:00-07:00"
   - id: we-have-at-home
     name: OSINT - we-have-at-home

@@ -8,9 +8,13 @@ challenges:
     name: REV - bike
   - id: build-a-builtin
     name: MISC - build-a-builtin
+    visibility:
+      start: "2027-01-01T00:00:00-07:00"
   - id: ecb-lasagna
     name: CRYPTO - ecb-lasagna
   - id: transmutation
     name: PWN - transmutation
   - id: yaml-practice
     name: WEB - yaml-practice
+    visibility:
+      start: "2027-01-01T00:00:00-07:00"
