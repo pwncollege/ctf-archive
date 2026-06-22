@@ -6,6 +6,8 @@ challenges:
     name: PWN - 200 - Guy de Bois 
   - id: spell
     name: PWN - 300 - Spell Caster
+  - id: echoes
+    name: WEB - 250 - Much more than echoes
   - id: basilisk64
     name: CRYPTO - 29 - Basilisk64
   - id: mouse
