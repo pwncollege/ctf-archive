@@ -8,12 +8,11 @@ challenges:
     name: REV - 449 - Adorable Encrypted Animal
   - id: shufflebox
     name: CRYPTO - 100 - Shufflebox
-  - id: myarraygenerator                        
+  - id: myarraygenerator
     name: CRYPTO - 200 - My Array Generator
   - id: babysfirstforensics
     name: FORENSICS - 100 - Baby's First Forensics
   - id: interceptedtransmission
-    name: MISC - 100 - Intercepted Transmissions   
+    name: MISC - 100 - Intercepted Transmissions
   - id: wackyreciepe
     name: MISC - 141 - Wacky Recipe
- 

@@ -10,16 +10,12 @@ challenges:
     name: EXPLOIT - 100 - minesweeper
   - id: ru1337
     name: EXPLOIT - 200 - ru1337
-    visibility: 
-      start: "2029-08-21T10:30:00-07:00"
+    required: false
   - id: updateserver
     name: EXPLOIT - 300 - Update Server
-    visibility: 
-      start: "2029-08-21T10:30:00-07:00"
+    required: false
   - id: proxy
     name: EXPLOIT - 400 - Proxy
-    visibility: 
-      start: "2029-08-21T10:30:00-07:00"
+    required: false
   - id: memcached
     name: EXPLOIT - 600 - memcached
-  

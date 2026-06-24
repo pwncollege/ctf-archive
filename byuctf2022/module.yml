@@ -9,9 +9,9 @@ challenges:
   - id: chicken
     name: REV - 439 - Chicken
   - id: shift
-    name: CRYPTO - 50 - Shifting Mindset 
+    name: CRYPTO - 50 - Shifting Mindset
   - id: truth
-    name: CRYPTO - 432 - Truth and Falsehood 
+    name: CRYPTO - 432 - Truth and Falsehood
   - id: ballgame
     name: CRYPTO - 498 - Take Me Out to the Ball Game
   - id: xqr
@@ -24,4 +24,3 @@ challenges:
     name: FORENSICS - 304 - Sticky Key
   - id: blue
     name: FORENSICS - 482 - Blue 3
-  

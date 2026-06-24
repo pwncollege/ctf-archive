@@ -8,8 +8,7 @@ challenges:
     name: PWN - 100 - presidential
   - id: bap
     name: PWN - 130 - Bap
-    visibility: 
-      start: "2029-08-21T10:30:00-07:00"
+    required: false
   - id: og
     name: PWN - 130 - og
   - id: leftright

@@ -3,7 +3,7 @@ name: Cyprus Cyber Security Challenge (CCSC) CTF 2020
 
 challenges:
   - id: guy
-    name: PWN - 200 - Guy de Bois 
+    name: PWN - 200 - Guy de Bois
   - id: spell
     name: PWN - 300 - Spell Caster
   - id: echoes

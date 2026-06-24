@@ -6,8 +6,7 @@ challenges:
     name: PWN - 500 - Odd Shell
   - id: art
     name: REV - 75 - Pierated Art
-    visibility: 
-      start: "2029-08-21T10:30:00-07:00"
+    required: false
   - id: militarygradenc
     name: CRYPTO - 75 - Military Grade Encryption
   - id: asr

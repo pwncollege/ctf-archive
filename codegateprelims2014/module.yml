@@ -15,8 +15,7 @@ challenges:
   - id: dodosandbox
     name: PWN - 600 - dodosandbox
     # image: prathamgupta36/ctf-archive:2.0
-    visibility: 
-      start: "2029-08-21T10:30:00-07:00"
+    required: false
   - id: crackme
     name: REV - 200 - dodoCrackme
   - id: automata

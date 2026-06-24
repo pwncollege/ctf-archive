@@ -14,8 +14,10 @@ challenges:
     name: BINARY - 500
   - id: forensics100
     name: FORENSICS - 100
+    required: false
   - id: forensics200
     name: FORENSICS - 200
+    required: false
   - id: forensics300
     name: FORENSICS - 300
   - id: vuln500

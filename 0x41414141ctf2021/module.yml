@@ -13,29 +13,26 @@ challenges:
   - id: x-and-or
     name: REV - 392 - X AND OR
   - id: ware
-    name: REV - 462 - Ware  
+    name: REV - 462 - Ware
   - id: wrongdownload
     name: REV - 475 - Wrong Download
   - id: hash
     name: REV - 479 - Hash
   - id: client
-    name: REV - 500 - cliBrowser  
+    name: REV - 500 - cliBrowser
   - id: factorize
     name: CRYPTO - 232 - Factorize
   - id: staple-aes
     name: CRYPTO - 445 - staple AES
-    visibility: 
-      start: "2029-08-21T10:30:00-07:00"
+    required: false
   - id: eazyrsa
     name: CRYPTO - 445 - Eazy RSA
   - id: wallet
     name: CRYPTO - 465 - Delegate Wallet
-    visibility: 
-      start: "2029-08-21T10:30:00-07:00"
+    required: false
   - id: soul
     name: CRYPTO - 500 - Soul's Permutation Network
-    visibility: 
-      start: "2029-08-21T10:30:00-07:00"
+    required: false
   - id: pyjail
     name: MISC - 437 - Pyjail
   - id: filereader

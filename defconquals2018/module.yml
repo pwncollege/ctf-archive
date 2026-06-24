@@ -1,8 +1,5 @@
-id: defconquals2018 
+id: defconquals2018
 name: DEF CON CTF Quals 2018
-
-visibility:
-  start: "2024-09-11T20:00:00-07:00"
 
 challenges:
   - id: www
@@ -13,7 +10,7 @@ challenges:
 
       Note that you can run the emulator yourself by copying down (with `rsync`) /opt/www/*.
 
-      You'll need to setup and configure `~/.previous/previous.cfg` locally to your setup. 
+      You'll need to setup and configure `~/.previous/previous.cfg` locally to your setup.
 
       ---
       Author: adamd

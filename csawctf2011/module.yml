@@ -6,8 +6,7 @@ challenges:
     name: REV - 200 - NET1
   - id: linux
     name: REV - 400 - Linux
-    visibility: 
-      start: "2029-08-21T10:30:00-07:00"
+    required: false
   - id: networking101
     name: WEB - 100 - Networking 101
   - id: net200
@@ -38,4 +37,3 @@ challenges:
     name: CRYPTO - 300 - 9
   - id: crypto10
     name: CRYPTO - 300 - 10
-  

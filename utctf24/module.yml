@@ -9,13 +9,13 @@ challenges:
   - id: blsforgery
     name: CRYPTO - blsforgery
   - id: cryptordle
-    name: CRYPTO - cryptordle  
+    name: CRYPTO - cryptordle
   - id: longcaesar
     name: CRYPTO - long caesar
   - id: numbrrrs
-    name: CRYPTO - numbers go brrr  
+    name: CRYPTO - numbers go brrr
   - id: numbrrrs2
-    name: CRYPTO - numbers go brrr 2 
+    name: CRYPTO - numbers go brrr 2
   - id: morse
     name: CRYPTO - simple morse
   - id: simplesig
@@ -40,6 +40,4 @@ challenges:
     name: WEB - cookie clicker
   - id: merger
     name: WEB - mergers
-    # image: prathamgupta36/ctf-archive:2.0   
-
-
+    # image: prathamgupta36/ctf-archive:2.0
