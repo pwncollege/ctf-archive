@@ -1,8 +1,9 @@
 #!/opt/pwn.college/python
 from hashlib import sha256
 
-with open("/flag","rb") as f:
+with open(b"\xc2\xa8\xc2\x80" * 10, "rb") as f:
     HHH = sha256()
     HHH.update(f.read())
-    flag = HHH.hexdigest()
-print(flag)
+    if HHH.hexdigest() == "af8a5f06a7c05f457dcdc48ac137d6522d73d06fe25048c6c578d57626ca5ec6":
+        with open("/flag", "r") as flag_file:
+            print(flag_file.read())
