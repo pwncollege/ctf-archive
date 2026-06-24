@@ -1,3 +1,4 @@
-#!/usr/bin/env bash-suid
-env -i -- chown www:www /flag
-env -i -- /bin/su www -c /opt/www/frontend.py
+#!/run/dojo/bin/exec-suid -- /bin/bash -p
+set -e
+env -i -- /bin/chown www:www /flag
+env -i -- /run/dojo/bin/sudo -u www /opt/www/frontend.py
