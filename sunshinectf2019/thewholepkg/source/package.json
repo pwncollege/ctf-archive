@@ -1,0 +1,16 @@
+{
+  "name": "Strategy_Vault",
+  "version": "1.0.0",
+  "description": "Stores my secret wrestling strategies",
+  "repository": "",
+  "main": "app.js",
+  "bin": "app.js",
+  "license": "",
+  "devDependencies": {
+    "crypto": "^1.0.1",
+    "readline-sync": "^1.4.9"
+  },
+  "pkg": {
+    "assets": ["files/*", "asciiart.txt"]
+  }
+}
