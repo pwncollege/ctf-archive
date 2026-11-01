@@ -1,16 +1,18 @@
 # REHOSTING
 
-Files can be found here: [Live CTF](https://ctftime.org/event/1441)
-
 ## Challenge Setup
-Static-artifact challenge. Copy the handout files and `flagCheck` into `/challenge/`, then make `flagCheck`
-setuid-root so it can read the root-only `/flag`:
 
-```
-chmod u+s /challenge/flagCheck
-```
+Copy the challenge files into the deployment directory. A typical pwn.college layout is `/challenge/uselessvm/`, but keep the copied file tree identical to the archived bundle.
 
-Ships both the Intel (`rust_vm_intel`) and Apple-silicon/ARM (`rust_vm_m1`) builds for dynamic analysis; the solution is architecture-independent.
+Artifacts:
+- `.flag.sha256`
+- `flagCheck`
+- `rust_vm_intel`
+- `rust_vm_m1`
 
-Solve the challenge to recover the flag, then run `/challenge/flagCheck` and enter it to print the
-pwn.college `/flag`.
+## Runtime Notes
+
+- Mark any shipped launchers, scripts, or binaries executable if the original challenge expects direct execution.
+- Install the static-flag helper (`flagCheck`) alongside the challenge files and make it setuid-root so it can read the root-only `/flag`: `chmod u+s /challenge/uselessvm/flagCheck`.
+- This is a static-artifact challenge, so publish the copied files for download / offline inspection instead of starting a long-running service.
+- This entry ships both an Intel build (`rust_vm_intel`) and an Apple-silicon/ARM build (`rust_vm_m1`); keep both alongside the challenge.

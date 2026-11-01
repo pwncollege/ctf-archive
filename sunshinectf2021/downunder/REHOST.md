@@ -1,16 +1,16 @@
 # REHOSTING
 
-Files can be found here: [Live CTF](https://ctftime.org/event/1441)
-
 ## Challenge Setup
-Static-artifact challenge. Copy the handout files and `flagCheck` into `/challenge/`, then make `flagCheck`
-setuid-root so it can read the root-only `/flag`:
 
-```
-chmod u+s /challenge/flagCheck
-```
+Copy the challenge files into the deployment directory. A typical pwn.college layout is `/challenge/downunder/`, but keep the copied file tree identical to the archived bundle.
 
-`DownUnder.gba` is a Game Boy Advance ROM; load it in an emulator such as mGBA. The flag is drawn off-screen, viewable via the emulator's map viewer.
+Artifacts:
+- `.flag.sha256`
+- `flagCheck`
+- `DownUnder.gba`
 
-Solve the challenge to recover the flag, then run `/challenge/flagCheck` and enter it to print the
-pwn.college `/flag`.
+## Runtime Notes
+
+- Mark any shipped launchers, scripts, or binaries executable if the original challenge expects direct execution.
+- Install the static-flag helper (`flagCheck`) alongside the challenge files and make it setuid-root so it can read the root-only `/flag`: `chmod u+s /challenge/downunder/flagCheck`.
+- This is a static-artifact challenge, so publish the copied files for download / offline inspection instead of starting a long-running service.
