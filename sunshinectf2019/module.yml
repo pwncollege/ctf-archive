@@ -18,3 +18,5 @@ challenges:
     name: REVERSING - 150 - Patches' Punches
   - id: smash
     name: REVERSING - 250 - Smash
+  - id: portfolio
+    name: WEB - 300 - Portfolio
