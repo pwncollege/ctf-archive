@@ -1,0 +1,10 @@
+id: sunshinectf2021
+name: SunshineCTF 2021
+
+challenges:
+  - id: mrrobot
+    name: CRYPTO - 10 - Mr Robot
+  - id: multipleexponents
+    name: CRYPTO - 100 - Multiple Exponents
+  - id: audiocrypto
+    name: CRYPTO - 250 - AudioCrypto
