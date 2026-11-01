@@ -1,5 +1,5 @@
-# ProcrastinatorProgrammer
-## I may have procrastinated.
+ProcrastinatorProgrammer
+I may have procrastinated.
 
 This may be a mistake.
 
@@ -9,7 +9,7 @@ But don't worry! The keys to the kingdom are split into three parts... you'll ne
 
 Flag will be given by our backend in the standard pwn.college flag format, but make sure you put all the pieces together!
 
-## Notes
+Notes
 
 Need help on your math? If so? ProcrastinatorProgrammer is _your_ buddy!
 
