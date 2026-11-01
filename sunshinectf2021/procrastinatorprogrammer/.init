@@ -1,0 +1,37 @@
+#!/bin/bash
+# runs as root at container start.
+# The flag is split into three slices; each slice is readable ONLY by its own
+# service user, so a foothold on one stage cannot read another stage's key.
+FLAG="$(cat /flag)"
+N=${#FLAG}
+A=$((N/3)); B=$((2*N/3))
+P1="${FLAG:0:$A}"
+P2="${FLAG:$A:$((B-A))}"
+P3="${FLAG:$B}"
+
+cd /challenge
+
+for u in ppsvc1 ppsvc2 ppsvc3; do
+  id "$u" >/dev/null 2>&1 || useradd -M "$u"
+done
+
+printf '%s' "$P1" > part1/key; chown ppsvc1:ppsvc1 part1/key; chmod 400 part1/key
+printf '%s' "$P2" > part2/key; chown ppsvc2:ppsvc2 part2/key; chmod 400 part2/key
+printf '%s' "$P3" > part3/key; chown ppsvc3:ppsvc3 part3/key; chmod 400 part3/key
+chmod 711 part1 part2 part3
+
+( cd /challenge/part1 && CHALLENGE_2_DOMAIN=localhost CHALLENGE_2_PORT=65001 \
+    nohup socat -T120 TCP-LISTEN:65000,fork,reuseaddr \
+    EXEC:"python3 server-challenge-1.py",su=ppsvc1,pty,ctty,echo=0,stderr \
+    >/tmp/pp1.log 2>&1 & )
+( cd /challenge/part2 && PREV_KEY="$P1" CHALLENGE_1_DOMAIN=localhost CHALLENGE_1_PORT=65000 \
+    CHALLENGE_3_DOMAIN=localhost CHALLENGE_3_PORT=65002 \
+    nohup socat -T120 TCP-LISTEN:65001,fork,reuseaddr \
+    EXEC:"python3 server-challenge-2.py",su=ppsvc2,pty,ctty,echo=0,stderr \
+    >/tmp/pp2.log 2>&1 & )
+( cd /challenge/part3 && PREV_KEY="$P2" CHALLENGE_2_DOMAIN=localhost CHALLENGE_2_PORT=65001 \
+    nohup socat -T120 TCP-LISTEN:65002,fork,reuseaddr \
+    EXEC:"python3 server-challenge-3.py",su=ppsvc3,pty,ctty,echo=0,stderr \
+    >/tmp/pp3.log 2>&1 & )
+
+rm -f /challenge/REHOST.md
