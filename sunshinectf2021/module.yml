@@ -16,3 +16,7 @@ challenges:
     name: MISC - 50 - DownUnder
   - id: typing
     name: MISC - 150 - typing
+  - id: chompfeed
+    name: REVERSING - 100 - ChompFeed
+  - id: webchallenge
+    name: REVERSING - 300 - WebChallenge
