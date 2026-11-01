@@ -6,11 +6,11 @@ challenges:
     name: CRYPTO - 50 - WelcomeCrypto
   - id: bigbad
     name: FORENSICS - 300 - Big Bad
-  - id: golly_gee_willikers
+  - id: golly-gee-willikers
     name: FORENSICS - 250 - Golly Gee Willikers
   - id: brainmeat
     name: MISC - 150 - Brainmeat
-  - id: middle_ocean
+  - id: middle-ocean
     name: MISC - 100 - Middle Ocean
   - id: thewholepkg
     name: REVERSING - 200 - The Whole Pkg
