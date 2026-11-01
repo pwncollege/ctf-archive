@@ -1,0 +1,11 @@
+#!/bin/bash
+# runs as root at container start.
+# The binary has a hard-coded loader path + RUNPATH; recreate it from the
+# shipped glibc 2.28 loader/libc so the unmodified binary runs correctly.
+mkdir -p /home/dynamic_type_librarii/lib
+cp -f /challenge/ld-linux-x86-64.so.2 /home/dynamic_type_librarii/lib/ld-2.28.so
+cp -f /challenge/libc.so.6           /home/dynamic_type_librarii/lib/libc.so.6
+chmod +x /challenge/dynamic_type_librarii /home/dynamic_type_librarii/lib/ld-2.28.so
+# serve as root so a successful exploit can read the root-only /flag
+nohup socat TCP-LISTEN:1337,reuseaddr,fork EXEC:"/challenge/dynamic_type_librarii" >/tmp/dtl.log 2>&1 &
+rm -f /challenge/REHOST.md

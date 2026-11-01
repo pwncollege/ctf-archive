@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="/index.css?">
+        <title>Emoji Browser</title>
+    </head>
+    <body>
+        <nav>
+            <div>
+                <h1>🌐 Emoji Browser</h1>
+            </div>
+        </nav>
+        <div class="content">
+            <div id="update"><b>New update!</b> 🚫🤖🚫</div>
+            <div id="emoji"></div>
+            <input type="text" onchange="livetype(this)" id="livetype" placeholder="🚩">
+            <p>Emoji icons sourced from Twitter's <a href="https://github.com/twitter/twemoji/tree/master/assets/svg" target="_blank">Twemoji</a> project.</p>
+        </div>
+    </body>
+    <script type="text/javascript">
+        function livetype(el) {
+            let value = "";
+            for (let i = 0; i < el.value.length; i+= 2) {
+                value += "-" + el.value.codePointAt(i).toString(16).toLowerCase();
+            }
+            value = value.substring(1);
+            // For some reason, %00 was on the original line. However, that caused some file-loading bugs, resulting
+            // in the .SVG files not loading properly. That was one reason why this challenge needed an emergency patch.
+            // Yep, totally intentional mistake. Didn't flub this whatsoever.
+            // 
+            // I think someone is confusing Python and horrible C code.
+            document.getElementById("emoji").style.backgroundImage = `url(/emoji/${value})`;
+            document.getElementById("emoji").title = value;
+        }
+    </script>
+</html>

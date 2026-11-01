@@ -1,0 +1,6 @@
+#!/bin/bash
+# runs as root at container start
+export FLAG="$(cat /flag)"
+chmod +x /challenge/flag-vault-1 2>/dev/null
+(cd /challenge && nohup ./flag-vault-1 >/tmp/flag-vault-1.log 2>&1 &)
+rm -f /challenge/REHOST.md
