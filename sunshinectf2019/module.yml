@@ -26,3 +26,5 @@ challenges:
     name: SCRIPTING - 150 - Time Warp
   - id: 16bitaes
     name: CRYPTO - 200 - 16-bit AES
+  - id: wrestlernamegenerator
+    name: WEB - 250 - Wrestler Name Generator

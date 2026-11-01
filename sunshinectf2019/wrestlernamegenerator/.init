@@ -1,0 +1,7 @@
+#!/bin/bash
+# runs as root at container start: provide FLAG via env, serve PHP on :80 with
+# multiple workers so the XXE self-SSRF (127.0.0.1/generate.php) is not blocked by
+# the single-threaded built-in server.
+export FLAG="$(cat /flag)"
+( cd /challenge && FLAG="$FLAG" PHP_CLI_SERVER_WORKERS=5 nohup php -S 0.0.0.0:80 >/tmp/namegen.log 2>&1 & )
+rm -f /challenge/REHOST.md
