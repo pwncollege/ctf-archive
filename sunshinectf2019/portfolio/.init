@@ -1,0 +1,5 @@
+#!/bin/bash
+# runs as root at container start: expose /flag to the app and launch Flask on :5000
+ln -sf /flag /challenge/flag.txt 2>/dev/null
+(cd /challenge && nohup python3 app.py >/tmp/portfolio.log 2>&1 &)
+rm -f /challenge/REHOST.md

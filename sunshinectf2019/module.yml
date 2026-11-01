@@ -1,0 +1,30 @@
+id: sunshinectf2019
+name: SunshineCTF 2019
+
+challenges:
+  - id: welcomecrypto
+    name: CRYPTO - 50 - WelcomeCrypto
+  - id: bigbad
+    name: FORENSICS - 300 - Big Bad
+  - id: golly-gee-willikers
+    name: FORENSICS - 250 - Golly Gee Willikers
+  - id: brainmeat
+    name: MISC - 150 - Brainmeat
+  - id: middle-ocean
+    name: MISC - 100 - Middle Ocean
+  - id: thewholepkg
+    name: REVERSING - 200 - The Whole Pkg
+  - id: patches-punches
+    name: REVERSING - 150 - Patches' Punches
+  - id: smash
+    name: REVERSING - 250 - Smash
+  - id: portfolio
+    name: WEB - 300 - Portfolio
+  - id: entryexam
+    name: SCRIPTING - 200 - Entry Exam
+  - id: timewarp
+    name: SCRIPTING - 150 - Time Warp
+  - id: 16bitaes
+    name: CRYPTO - 200 - 16-bit AES
+  - id: wrestlernamegenerator
+    name: WEB - 250 - Wrestler Name Generator

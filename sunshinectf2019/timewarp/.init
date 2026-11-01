@@ -1,0 +1,6 @@
+#!/bin/bash
+# runs as root at container start: expose /flag, build the service, serve on :19004 as root
+ln -sf /flag /challenge/flag.txt 2>/dev/null
+gcc -O2 -w /challenge/TimeWarp.c -o /challenge/timewarp 2>/dev/null
+(cd /challenge && nohup socat TCP-LISTEN:19004,reuseaddr,fork EXEC:./timewarp >/tmp/timewarp.log 2>&1 &)
+rm -f /challenge/REHOST.md
