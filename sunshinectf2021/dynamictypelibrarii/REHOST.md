@@ -15,5 +15,5 @@ Artifacts:
 ## Runtime Notes
 
 - The binary is linked against a hard-coded loader path (`/home/dynamic_type_librarii/lib/ld-2.28.so`) with a matching RUNPATH. The bundled `.init` runs as root at container start and recreates that path from the shipped `ld-linux-x86-64.so.2` and `libc.so.6`, so the original binary runs unmodified against its exact glibc 2.28.
-- `.init` then serves the binary over `socat` on `0.0.0.0:1337` as root, so a successful exploit runs with the privileges needed to read the root-only `/flag`.
+- `.init` then serves the binary over `socat` on `0.0.0.0:1337` as root, so the challenge runs with the privileges needed to read the root-only `/flag`.
 - `socat` is present in the base image; the container has no network, so nothing is installed at runtime.
