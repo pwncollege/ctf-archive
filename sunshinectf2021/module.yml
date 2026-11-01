@@ -22,3 +22,11 @@ challenges:
     name: REVERSING - 300 - WebChallenge
   - id: emoji-browser
     name: WEB - 100 - EmojiBrowser
+  - id: flag-vault-1
+    name: WEB - 150 - Flag Vault 1
+  - id: dynamictypelibrarii
+    name: PWN - 300 - DynamicTypeLibraRII
+  - id: procrastinatorprogrammer
+    name: SCRIPTING - 150 - ProcrastinatorProgrammer
+  - id: framed
+    name: MISC - 100 - framed
