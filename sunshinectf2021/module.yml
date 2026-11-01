@@ -8,3 +8,11 @@ challenges:
     name: CRYPTO - 100 - Multiple Exponents
   - id: audiocrypto
     name: CRYPTO - 250 - AudioCrypto
+  - id: imagerecovery
+    name: REVERSING - 200 - Image Recovery
+  - id: uselessvm
+    name: REVERSING - 400 - Useless VM
+  - id: downunder
+    name: MISC - 50 - DownUnder
+  - id: typing
+    name: MISC - 150 - typing
