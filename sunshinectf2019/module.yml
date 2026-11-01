@@ -24,3 +24,5 @@ challenges:
     name: SCRIPTING - 200 - Entry Exam
   - id: timewarp
     name: SCRIPTING - 150 - Time Warp
+  - id: 16bitaes
+    name: CRYPTO - 200 - 16-bit AES

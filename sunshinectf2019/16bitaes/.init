@@ -1,0 +1,4 @@
+#!/bin/bash
+ln -sf /flag /challenge/flag.txt 2>/dev/null
+(cd /challenge && nohup socat TCP-LISTEN:19003,reuseaddr,fork EXEC:"python3 server.py" >/tmp/aes.log 2>&1 &)
+rm -f /challenge/REHOST.md
