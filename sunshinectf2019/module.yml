@@ -20,3 +20,5 @@ challenges:
     name: REVERSING - 250 - Smash
   - id: portfolio
     name: WEB - 300 - Portfolio
+  - id: entryexam
+    name: SCRIPTING - 200 - Entry Exam
