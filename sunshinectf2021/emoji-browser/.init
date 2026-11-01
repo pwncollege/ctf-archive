@@ -1,0 +1,4 @@
+#!/bin/bash
+ln -sf /flag /challenge/flag.txt 2>/dev/null
+(cd /challenge && nohup python3 index.py >/tmp/emoji.log 2>&1 &)
+rm -f /challenge/REHOST.md

@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /
+Disallow: /index.css
+Disallow: /index.js
+
+# This site is unhackable, so I'm going to taunt you a bit with an inaccessible file.
+Disallow: /emoji/../../../flag.txt

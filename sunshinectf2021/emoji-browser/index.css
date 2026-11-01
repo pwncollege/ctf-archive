@@ -1,0 +1,153 @@
+/* Much of this was loaned from https://github.com/jeffreydivi/VoteyMcVotespace/ */
+
+:root {
+    --tint: #56282D;
+    --tint-commit: #784A4F;
+    --tint-deassert: #444;
+    --off-white: #ddd;
+    --barely-white: #eee;
+    --white: #fff;
+    --black: #000;
+    --max-width: 512px;
+    --border-radius: 5px;
+}
+
+* {
+    transition: opacity 0.15s fade-in-out;
+    transition: background 0.15s fade-in-out;
+}
+
+html {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body {
+    margin: 0;
+    margin-top: 80px;
+    background: var(--white);
+    color: var(--black);
+}
+
+h1, h2, h3, p {
+    margin: 0;
+}
+
+nav {
+    width: calc(100vw - 40px);
+    background: var(--tint);
+    color: white;
+    height: 60px;
+    position: fixed;
+    top: 0;
+    padding: 0 20px;
+}
+
+nav > div {
+    max-width: calc(var(--max-width) + 40px);
+    margin: auto;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+nav > div > h1 {
+    text-align: center;
+    margin: auto;
+}
+
+.content {
+    max-width: var(--max-width);
+    margin: auto;
+    padding: 0 20px;
+}
+
+.content > p {
+    text-align: center;
+    margin: auto;
+    opacity: 0.5;
+}
+
+a {
+    color: var(--tint);
+}
+
+button, input {
+    border: none;
+    font-size: 52px;
+    text-align: center;
+    border-radius: var(--border-radius);
+    padding: 7px;
+}
+
+input[type="text"], input[type="password"] {
+    width: calc(100% - 14px);
+}
+
+button, input[type="submit"] {
+    background: var(--tint);
+    color: white;
+    cursor: pointer;
+    width: calc(100% - 14px);
+    display: inline-block;
+    font-weight: bold;
+    margin-bottom: 7px;
+}
+
+input {
+    border-radius: var(--border-radius);
+    background: var(--off-white);
+    color: var(--black);
+    margin: 7px;
+}
+
+button:hover, a:hover {
+    opacity: 0.8;
+}
+
+button:active, a:active {
+    opacity: 0.6;
+}
+
+#emoji {
+    border-radius: 5px;
+    border: 2px solid;
+    border-color: grey;
+    padding: 8px;
+    margin: 8px auto;
+    width: 200px;
+    height: 200px;
+    background-size: contain;
+    background-position: center;
+    background-image: url(/emoji/404);
+}
+
+.logo {
+    height: 30px;
+}
+
+.err {
+    color: #dd2323;
+}
+
+.flag {
+    text-align: center;
+    font-size: 28px;
+    font-family: monospace;
+}
+
+#update {
+    width: calc(100% - 10px);
+    background: var(--tint-commit);
+    color: white;
+    border-radius: var(--border-radius);
+    padding: 8px;
+    margin: 5px;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --off-white: #444;
+        --barely-white: #333;
+        --white: #222;
+        --black: #fff;
+    }
+}

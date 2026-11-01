@@ -20,3 +20,5 @@ challenges:
     name: REVERSING - 100 - ChompFeed
   - id: webchallenge
     name: REVERSING - 300 - WebChallenge
+  - id: emoji-browser
+    name: WEB - 100 - EmojiBrowser
