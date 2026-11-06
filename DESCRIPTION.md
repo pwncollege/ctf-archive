@@ -6,6 +6,8 @@ The link to the github repo: https://github.com/pwncollege/ctf-archive
 
 These modules serve as a resource for cybersecurity enthusiasts, providing easy access to preserved challenges that have been featured in previous CTF events. Whether you are looking to hone your skills, prepare for upcoming competitions, or simply explore the rich history of CTF challenges, this archive offers a robust platform for your endeavors.
 
+<p><a href="/ctf-archive/search" style="display:inline-block;border:1px dashed #747474;color:#00a3e0;padding:6px 14px;border-radius:8px;text-decoration:none;font-size:.9rem;">Search challenges & build dojos</a></p>
+
 Explore the CTF Archive, where you can access, analyze, and learn from some of the most intriguing and educational challenges the cybersecurity community has encountered. 
 
 Happy learning and hacking!
