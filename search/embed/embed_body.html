@@ -1,0 +1,50 @@
+<div id="cs-root">
+  <a class="cs-back" href="/ctf-archive">&larr; Back to CTF Archive</a>
+  <div class="cs-head">
+    <h2 class="cs-title">Challenge Search &amp; Dojo Builder</h2>
+    <p class="cs-subtitle">Search by topic, choose how many you need, then build a <code>dojo.yml</code>. <span id="cs-stats"></span></p>
+  </div>
+
+  <div class="cs-search-row">
+    <label class="cs-count-field" title="How many challenges you need"><span>#</span><input id="cs-count" type="number" min="1" max="100" value="10" /></label>
+    <div class="cs-search-wrap">
+      <input id="cs-q" type="text" autocomplete="off" spellcheck="false" placeholder="Search a topic — cryptography, heap, xss…   (commas for several: heap,crypto,web)" />
+      <ul id="cs-suggest" class="cs-suggest"></ul>
+    </div>
+    <button id="cs-go" class="cs-btn cs-btn-go">Search</button>
+  </div>
+
+  <div id="cs-meta" class="cs-meta"></div>
+  <div id="cs-results" class="cs-accordion"></div>
+
+  <div id="cs-tray" class="cs-tray">
+    <div class="cs-tray-inner">
+      <div class="cs-tray-left">
+        <span class="cs-sel-count"><b id="cs-selcount">0</b> selected</span>
+        <details class="cs-opts">
+          <summary>options</summary>
+          <div class="cs-opts-grid">
+            <label>dojo id <input id="cs-dojoid" type="text" value="my-ctf-course" /></label>
+            <label>name <input id="cs-dojoname" type="text" value="My CTF Course" /></label>
+            <label>modules
+              <select id="cs-group">
+                <option value="topic">by topic</option>
+                <option value="category">by category</option>
+                <option value="single">single module</option>
+              </select>
+            </label>
+          </div>
+        </details>
+      </div>
+      <div class="cs-tray-right">
+        <button id="cs-preview" class="cs-btn cs-btn-ghost">Preview YAML</button>
+        <button id="cs-copy" class="cs-btn cs-btn-ghost">Copy</button>
+        <button id="cs-clear" class="cs-btn cs-btn-ghost">Clear</button>
+        <button id="cs-download" class="cs-btn cs-btn-go">⬇ dojo.yml</button>
+      </div>
+    </div>
+    <pre id="cs-yaml" class="cs-yaml cs-hidden"></pre>
+  </div>
+
+  <div id="cs-toast" class="cs-toast"></div>
+</div>
